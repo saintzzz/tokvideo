@@ -11,10 +11,25 @@ const VOICE = process.env.EDGE_TTS_VOICE ?? "vi-VN-NamMinhNeural";
 
 const publicDir = path.join(import.meta.dirname, "..", "public", "audio");
 
-const VIDEOS = [
-  { audioDir: publicDir, narration: giaCatLuongNarration },
-  { audioDir: path.join(publicDir, "churchill"), narration: churchillNarration },
-];
+const VIDEOS = {
+  "gia-cat-luong": { audioDir: publicDir, narration: giaCatLuongNarration },
+  churchill: {
+    audioDir: path.join(publicDir, "churchill"),
+    narration: churchillNarration,
+  },
+};
+
+// Pass one or more video ids as CLI args to generate only those.
+// With no args, generates every video (used for local dev).
+const requested = process.argv.slice(2);
+const ids = requested.length > 0 ? requested : Object.keys(VIDEOS);
+
+for (const id of ids) {
+  if (!VIDEOS[id]) {
+    console.error(`Unknown video id "${id}". Known ids: ${Object.keys(VIDEOS).join(", ")}`);
+    process.exit(1);
+  }
+}
 
 const synthesize = async (tts, outDir, key, text) => {
   const { audioStream } = tts.toStream(text);
@@ -34,7 +49,8 @@ const synthesize = async (tts, outDir, key, text) => {
 const tts = new MsEdgeTTS();
 await tts.setMetadata(VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
 
-for (const video of VIDEOS) {
+for (const id of ids) {
+  const video = VIDEOS[id];
   await mkdir(video.audioDir, { recursive: true });
   for (const [key, text] of Object.entries(video.narration)) {
     await synthesize(tts, video.audioDir, key, text);
