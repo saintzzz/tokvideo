@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed)"
         type: choice
-        options: [auto, all, gia-cat-luong, churchill]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates]
         default: auto
   push:
     branches: [main]
@@ -20,6 +20,7 @@ jobs:
     outputs:
       gia_cat_luong: ${{ steps.decide.outputs.gia_cat_luong }}
       churchill: ${{ steps.decide.outputs.churchill }}
+      hippocrates: ${{ steps.decide.outputs.hippocrates }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,6 +50,11 @@ jobs:
               - 'src/ChurchillComposition.tsx'
               - 'src/scenes-churchill/**'
               - 'src/narration.churchill.json'
+            hippocrates:
+              - 'src/HippocratesVideo.tsx'
+              - 'src/HippocratesComposition.tsx'
+              - 'src/scenes-hippocrates/**'
+              - 'src/narration.hippocrates.json'
 
       # On push: render only videos touched by this change (or every video
       # if a shared file changed). On a manual run: render everything unless
@@ -61,6 +67,7 @@ jobs:
           SHARED_CHANGED: ${{ steps.filter.outputs.shared }}
           GIA_CAT_LUONG_CHANGED: ${{ steps.filter.outputs.gia_cat_luong }}
           CHURCHILL_CHANGED: ${{ steps.filter.outputs.churchill }}
+          HIPPOCRATES_CHANGED: ${{ steps.filter.outputs.hippocrates }}
         run: |
           if [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
             if [ "$SHARED_CHANGED" = "true" ] || [ "$GIA_CAT_LUONG_CHANGED" = "true" ]; then
@@ -73,15 +80,27 @@ jobs:
             else
               echo "churchill=false" >> "$GITHUB_OUTPUT"
             fi
+            if [ "$SHARED_CHANGED" = "true" ] || [ "$HIPPOCRATES_CHANGED" = "true" ]; then
+              echo "hippocrates=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "hippocrates=false" >> "$GITHUB_OUTPUT"
+            fi
           elif [ "$VIDEO_INPUT" = "gia-cat-luong" ]; then
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "churchill" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=false" >> "$GITHUB_OUTPUT"
+          elif [ "$VIDEO_INPUT" = "hippocrates" ]; then
+            echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
+            echo "churchill=false" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=true" >> "$GITHUB_OUTPUT"
           else
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=true" >> "$GITHUB_OUTPUT"
           fi
 
   render-gia-cat-luong:
@@ -142,4 +161,34 @@ jobs:
         with:
           name: churchill-giao-tiep
           path: out/Churchill-GiaoTiep.mp4
+          retention-days: 30
+
+  render-hippocrates:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.hippocrates == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate voiceover (free Edge neural TTS, no API key)
+        run: npm run generate-voiceover:hippocrates
+
+      - name: Render video
+        run: npm run render:hippocrates
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hippocrates-dinh-duong
+          path: out/Hippocrates-DinhDuong.mp4
           retention-days: 30

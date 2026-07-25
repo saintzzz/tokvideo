@@ -23,3 +23,18 @@ export const CHURCHILL_FALLBACK_SECONDS = {
 } as const;
 
 export type ChurchillSceneKey = keyof typeof CHURCHILL_FALLBACK_SECONDS;
+
+export const HIPPOCRATES_FALLBACK_SECONDS = {
+  hook: 4,
+  quote: 8,
+  twist: 10,
+  cta: 5,
+} as const;
+
+export type HippocratesSceneKey = keyof typeof HIPPOCRATES_FALLBACK_SECONDS;
+
+// Crossfade length (frames) between scenes in videos that use
+// @remotion/transitions — each transition eats this many frames from both
+// the outgoing and incoming scene, so it must be subtracted when summing
+// scene durations into a composition's total duration.
+export const TRANSITION_FRAMES = 15;

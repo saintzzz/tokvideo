@@ -7,6 +7,14 @@ Nhiều video quảng cáo affiliate, mỗi video là 1 sách, định dạng 9:
 |---|---|---|
 | `src/GiaCatLuongVideo.tsx` | Tử Vi Luận Giải (Khải Tâm) | `GiaCatLuong-TuVi` |
 | `src/ChurchillVideo.tsx` | Nghệ Thuật Giao Tiếp Đỉnh Cao (Cốc Vũ) | `Churchill-GiaoTiep` |
+| `src/HippocratesVideo.tsx` | Liệu Pháp Dinh Dưỡng Cho Mọi Loại Bệnh (NewLife) | `Hippocrates-DinhDuong` |
+
+`Hippocrates-DinhDuong` dùng bộ hiệu ứng nâng cao hơn 2 video trước: chuyển cảnh
+crossfade (`@remotion/transitions`) thay vì cắt cứng, chữ kiểu kinetic typography
+(từng từ bay vào có làm mờ/nét), nền có hạt lá/hạt ngũ cốc/giọt nước trôi + bokeh,
+và nhân vật minh hoạ Hippocrates (không dùng ảnh thật để tránh rủi ro bản quyền —
+xem phần "Thêm video mới" bên dưới nếu muốn tái sử dụng các component này
+(`KineticText`, `DiseaseIconStrip`, `NutritionBackground`) cho sách khác.
 
 ## Giọng đọc (voiceover)
 

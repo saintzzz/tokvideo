@@ -10,6 +10,7 @@
     "@remotion/google-fonts": "^4.0.499",
     "@remotion/media-utils": "^4.0.499",
     "@remotion/tailwind-v4": "4.0.499",
+    "@remotion/transitions": "^4.0.499",
     "msedge-tts": "^2.0.7",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -32,9 +33,11 @@
     "generate-voiceover": "node scripts/generate-voiceover.mjs",
     "generate-voiceover:gia-cat-luong": "node scripts/generate-voiceover.mjs gia-cat-luong",
     "generate-voiceover:churchill": "node scripts/generate-voiceover.mjs churchill",
+    "generate-voiceover:hippocrates": "node scripts/generate-voiceover.mjs hippocrates",
     "render:gia-cat-luong": "remotion render GiaCatLuong-TuVi out/GiaCatLuong-TuVi.mp4",
     "render:churchill": "remotion render Churchill-GiaoTiep out/Churchill-GiaoTiep.mp4",
-    "render": "npm run render:gia-cat-luong && npm run render:churchill"
+    "render:hippocrates": "remotion render Hippocrates-DinhDuong out/Hippocrates-DinhDuong.mp4",
+    "render": "npm run render:gia-cat-luong && npm run render:churchill && npm run render:hippocrates"
   },
   "sideEffects": [
     "*.css"
