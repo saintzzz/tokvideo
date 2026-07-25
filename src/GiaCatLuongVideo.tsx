@@ -4,11 +4,11 @@ import { HookScene } from "./scenes/HookScene";
 import { QuoteScene } from "./scenes/QuoteScene";
 import { TwistScene } from "./scenes/TwistScene";
 import { CTAScene } from "./scenes/CTAScene";
-import { SceneKey } from "./timing";
+import { GiaCatLuongSceneKey } from "./timing";
 
 export type GiaCatLuongVideoProps = {
-  sceneDurations: Record<SceneKey, number>;
-  hasAudio: Record<SceneKey, boolean>;
+  sceneDurations: Record<GiaCatLuongSceneKey, number>;
+  hasAudio: Record<GiaCatLuongSceneKey, boolean>;
 };
 
 export const GiaCatLuongVideo: React.FC<GiaCatLuongVideoProps> = ({

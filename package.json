@@ -30,7 +30,9 @@
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
     "generate-voiceover": "node scripts/generate-voiceover.mjs",
-    "render": "remotion render GiaCatLuong-TuVi out/GiaCatLuong-TuVi.mp4"
+    "render:gia-cat-luong": "remotion render GiaCatLuong-TuVi out/GiaCatLuong-TuVi.mp4",
+    "render:churchill": "remotion render Churchill-GiaoTiep out/Churchill-GiaoTiep.mp4",
+    "render": "npm run render:gia-cat-luong && npm run render:churchill"
   },
   "sideEffects": [
     "*.css"

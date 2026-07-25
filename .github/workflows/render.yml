@@ -30,9 +30,11 @@ jobs:
       - name: Render video
         run: npm run render
 
-      - name: Upload video artifact
+      - name: Upload video artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: gia-cat-luong-tu-vi
-          path: out/GiaCatLuong-TuVi.mp4
+          name: tiktok-videos
+          path: |
+            out/GiaCatLuong-TuVi.mp4
+            out/Churchill-GiaoTiep.mp4
           retention-days: 30
