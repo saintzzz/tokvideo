@@ -24,10 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate voiceover (ElevenLabs)
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+      - name: Generate voiceover (free Edge neural TTS, no API key)
         run: npm run generate-voiceover
 
       - name: Render video

@@ -1,54 +1,38 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { createWriteStream } from "node:fs";
+import { mkdir } from "node:fs/promises";
 import path from "node:path";
+import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
 import narration from "../src/narration.json" with { type: "json" };
 
-const API_KEY = process.env.ELEVENLABS_API_KEY;
-const VOICE_ID = process.env.ELEVENLABS_VOICE_ID ?? "21m00Tcm4TlvDq8ikWAM"; // "Rachel" — override with a Vietnamese voice from the ElevenLabs Voice Library for best results
-const MODEL_ID = process.env.ELEVENLABS_MODEL_ID ?? "eleven_turbo_v2_5";
-
-if (!API_KEY) {
-  console.error(
-    "Missing ELEVENLABS_API_KEY. Set it as an environment variable (locally) or a repo secret (GitHub Actions)."
-  );
-  process.exit(1);
-}
+// Free Microsoft Edge "Read Aloud" voice, no API key required.
+// Other good Vietnamese options: "vi-VN-HoaiMyNeural" (female).
+const VOICE = process.env.EDGE_TTS_VOICE ?? "vi-VN-NamMinhNeural";
 
 const outDir = path.join(import.meta.dirname, "..", "public", "audio");
 
-const synthesize = async (key, text) => {
-  const res = await fetch(
-    `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
-    {
-      method: "POST",
-      headers: {
-        "xi-api-key": API_KEY,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        text,
-        model_id: MODEL_ID,
-        voice_settings: { stability: 0.5, similarity_boost: 0.75 },
-      }),
-    }
-  );
-
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(
-      `ElevenLabs request failed for "${key}": ${res.status} ${body}`
-    );
-  }
-
-  const buffer = Buffer.from(await res.arrayBuffer());
+const synthesize = async (tts, key, text) => {
+  const { audioStream } = tts.toStream(text);
   const outFile = path.join(outDir, `${key}.mp3`);
-  await writeFile(outFile, buffer);
-  console.log(`Wrote ${outFile} (${buffer.byteLength} bytes)`);
+
+  await new Promise((resolve, reject) => {
+    const write = createWriteStream(outFile);
+    audioStream.pipe(write);
+    write.on("finish", resolve);
+    write.on("error", reject);
+    audioStream.on("error", reject);
+  });
+
+  console.log(`Wrote ${outFile}`);
 };
 
 await mkdir(outDir, { recursive: true });
 
+const tts = new MsEdgeTTS();
+await tts.setMetadata(VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
+
 for (const [key, text] of Object.entries(narration)) {
-  await synthesize(key, text);
+  await synthesize(tts, key, text);
 }
 
+tts.close();
 console.log("Voiceover generation complete.");

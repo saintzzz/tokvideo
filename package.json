@@ -10,6 +10,7 @@
     "@remotion/google-fonts": "^4.0.499",
     "@remotion/media-utils": "^4.0.499",
     "@remotion/tailwind-v4": "4.0.499",
+    "msedge-tts": "^2.0.7",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.499",
