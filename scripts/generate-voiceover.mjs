@@ -5,6 +5,7 @@ import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
 import giaCatLuongNarration from "../src/narration.json" with { type: "json" };
 import churchillNarration from "../src/narration.churchill.json" with { type: "json" };
 import hippocratesNarration from "../src/narration.hippocrates.json" with { type: "json" };
+import ideverrayNarration from "../src/narration.ideverray.json" with { type: "json" };
 
 // Free Microsoft Edge "Read Aloud" voice, no API key required.
 // Other good Vietnamese options: "vi-VN-HoaiMyNeural" (female).
@@ -21,6 +22,10 @@ const VIDEOS = {
   hippocrates: {
     audioDir: path.join(publicDir, "hippocrates"),
     narration: hippocratesNarration,
+  },
+  ideverray: {
+    audioDir: path.join(publicDir, "ideverray"),
+    narration: ideverrayNarration,
   },
 };
 

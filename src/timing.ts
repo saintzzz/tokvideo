@@ -38,3 +38,12 @@ export type HippocratesSceneKey = keyof typeof HIPPOCRATES_FALLBACK_SECONDS;
 // the outgoing and incoming scene, so it must be subtracted when summing
 // scene durations into a composition's total duration.
 export const TRANSITION_FRAMES = 15;
+
+export const IDEVERRAY_FALLBACK_SECONDS = {
+  hook: 3,
+  reveal: 5,
+  showcase: 12,
+  cta: 5,
+} as const;
+
+export type IdeverraySceneKey = keyof typeof IDEVERRAY_FALLBACK_SECONDS;

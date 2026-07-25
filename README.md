@@ -1,13 +1,19 @@
-# TikTok videos — factory nhiều sách
+# TikTok videos — factory nhiều sản phẩm
 
-Nhiều video quảng cáo affiliate, mỗi video là 1 sách, định dạng 9:16 cho TikTok.
-4 scene mỗi video: Hook → Quote/Story → Twist → CTA giỏ hàng.
+Nhiều video quảng cáo affiliate, mỗi video là 1 sản phẩm, định dạng 9:16 cho TikTok.
+4 scene mỗi video: Hook → Quote/Story/Reveal → Twist/Showcase → CTA giỏ hàng.
 
-| Video | Sách | Composition id |
+| Video | Sản phẩm | Composition id |
 |---|---|---|
-| `src/GiaCatLuongVideo.tsx` | Tử Vi Luận Giải (Khải Tâm) | `GiaCatLuong-TuVi` |
-| `src/ChurchillVideo.tsx` | Nghệ Thuật Giao Tiếp Đỉnh Cao (Cốc Vũ) | `Churchill-GiaoTiep` |
-| `src/HippocratesVideo.tsx` | Liệu Pháp Dinh Dưỡng Cho Mọi Loại Bệnh (NewLife) | `Hippocrates-DinhDuong` |
+| `src/GiaCatLuongVideo.tsx` | Sách: Tử Vi Luận Giải (Khải Tâm) | `GiaCatLuong-TuVi` |
+| `src/ChurchillVideo.tsx` | Sách: Nghệ Thuật Giao Tiếp Đỉnh Cao (Cốc Vũ) | `Churchill-GiaoTiep` |
+| `src/HippocratesVideo.tsx` | Sách: Liệu Pháp Dinh Dưỡng Cho Mọi Loại Bệnh (NewLife) | `Hippocrates-DinhDuong` |
+| `src/IdeverrayVideo.tsx` | Áo: set áo đôi IDEVE LAZRY (IDeverRAY) | `Ideverray-AoDoi` |
+
+`Ideverray-AoDoi` là video đầu tiên dùng **ảnh sản phẩm thật** (do người bán tự
+chụp, không phải ảnh của bên thứ ba) thay vì minh hoạ — hiệu ứng Ken Burns
+(`KenBurnsImage`) zoom/pan chậm trên từng ảnh + scrim gradient để chữ luôn đọc
+rõ. Ảnh gốc nằm trong `public/images/ideverray/01.jpg`–`09.jpg`.
 
 `Hippocrates-DinhDuong` dùng bộ hiệu ứng nâng cao hơn 2 video trước: chuyển cảnh
 crossfade (`@remotion/transitions`) thay vì cắt cứng, chữ kiểu kinetic typography
