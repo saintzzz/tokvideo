@@ -1,0 +1,41 @@
+name: Render TikTok video
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths-ignore:
+      - "out/**"
+      - "README.md"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate voiceover (ElevenLabs)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+        run: npm run generate-voiceover
+
+      - name: Render video
+        run: npm run render
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gia-cat-luong-tu-vi
+          path: out/GiaCatLuong-TuVi.mp4
+          retention-days: 30
