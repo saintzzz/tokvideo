@@ -47,3 +47,12 @@ export const IDEVERRAY_FALLBACK_SECONDS = {
 } as const;
 
 export type IdeverraySceneKey = keyof typeof IDEVERRAY_FALLBACK_SECONDS;
+
+export const AMMUU_FALLBACK_SECONDS = {
+  hook: 4,
+  quote: 6,
+  twist: 8,
+  cta: 5,
+} as const;
+
+export type AmMuuSceneKey = keyof typeof AMMUU_FALLBACK_SECONDS;

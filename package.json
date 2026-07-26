@@ -36,11 +36,13 @@
     "generate-voiceover:churchill": "node scripts/generate-voiceover.mjs churchill",
     "generate-voiceover:hippocrates": "node scripts/generate-voiceover.mjs hippocrates",
     "generate-voiceover:ideverray": "node scripts/generate-voiceover.mjs ideverray",
+    "generate-voiceover:ammuu": "node scripts/generate-voiceover.mjs ammuu",
     "render:gia-cat-luong": "remotion render GiaCatLuong-TuVi out/GiaCatLuong-TuVi.mp4",
     "render:churchill": "remotion render Churchill-GiaoTiep out/Churchill-GiaoTiep.mp4",
     "render:hippocrates": "remotion render Hippocrates-DinhDuong out/Hippocrates-DinhDuong.mp4",
     "render:ideverray": "remotion render Ideverray-AoDoi out/Ideverray-AoDoi.mp4",
-    "render": "npm run render:gia-cat-luong && npm run render:churchill && npm run render:hippocrates && npm run render:ideverray"
+    "render:ammuu": "remotion render AmMuu-ChienLuoc out/AmMuu-ChienLuoc.mp4",
+    "render": "npm run render:gia-cat-luong && npm run render:churchill && npm run render:hippocrates && npm run render:ideverray && npm run render:ammuu"
   },
   "sideEffects": [
     "*.css"

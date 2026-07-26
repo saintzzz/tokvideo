@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed)"
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu]
         default: auto
   push:
     branches: [main]
@@ -22,6 +22,7 @@ jobs:
       churchill: ${{ steps.decide.outputs.churchill }}
       hippocrates: ${{ steps.decide.outputs.hippocrates }}
       ideverray: ${{ steps.decide.outputs.ideverray }}
+      ammuu: ${{ steps.decide.outputs.ammuu }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,6 +63,12 @@ jobs:
               - 'src/scenes-ideverray/**'
               - 'src/narration.ideverray.json'
               - 'public/images/ideverray/**'
+            ammuu:
+              - 'src/AmMuuVideo.tsx'
+              - 'src/AmMuuComposition.tsx'
+              - 'src/scenes-ammuu/**'
+              - 'src/narration.ammuu.json'
+              - 'public/images/ammuu/**'
 
       # On push: render only videos touched by this change (or every video
       # if a shared file changed). On a manual run: render everything unless
@@ -76,6 +83,7 @@ jobs:
           CHURCHILL_CHANGED: ${{ steps.filter.outputs.churchill }}
           HIPPOCRATES_CHANGED: ${{ steps.filter.outputs.hippocrates }}
           IDEVERRAY_CHANGED: ${{ steps.filter.outputs.ideverray }}
+          AMMUU_CHANGED: ${{ steps.filter.outputs.ammuu }}
         run: |
           if [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
             if [ "$SHARED_CHANGED" = "true" ] || [ "$GIA_CAT_LUONG_CHANGED" = "true" ]; then
@@ -98,31 +106,47 @@ jobs:
             else
               echo "ideverray=false" >> "$GITHUB_OUTPUT"
             fi
+            if [ "$SHARED_CHANGED" = "true" ] || [ "$AMMUU_CHANGED" = "true" ]; then
+              echo "ammuu=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "ammuu=false" >> "$GITHUB_OUTPUT"
+            fi
           elif [ "$VIDEO_INPUT" = "gia-cat-luong" ]; then
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
             echo "hippocrates=false" >> "$GITHUB_OUTPUT"
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
+            echo "ammuu=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "churchill" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
             echo "hippocrates=false" >> "$GITHUB_OUTPUT"
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
+            echo "ammuu=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "hippocrates" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
             echo "hippocrates=true" >> "$GITHUB_OUTPUT"
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
+            echo "ammuu=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "ideverray" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
             echo "hippocrates=false" >> "$GITHUB_OUTPUT"
             echo "ideverray=true" >> "$GITHUB_OUTPUT"
+            echo "ammuu=false" >> "$GITHUB_OUTPUT"
+          elif [ "$VIDEO_INPUT" = "ammuu" ]; then
+            echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
+            echo "churchill=false" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=false" >> "$GITHUB_OUTPUT"
+            echo "ideverray=false" >> "$GITHUB_OUTPUT"
+            echo "ammuu=true" >> "$GITHUB_OUTPUT"
           else
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
             echo "hippocrates=true" >> "$GITHUB_OUTPUT"
             echo "ideverray=true" >> "$GITHUB_OUTPUT"
+            echo "ammuu=true" >> "$GITHUB_OUTPUT"
           fi
 
   render-gia-cat-luong:
@@ -243,4 +267,34 @@ jobs:
         with:
           name: ideverray-ao-doi
           path: out/Ideverray-AoDoi.mp4
+          retention-days: 30
+
+  render-ammuu:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.ammuu == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate voiceover (free Edge neural TTS, no API key)
+        run: npm run generate-voiceover:ammuu
+
+      - name: Render video
+        run: npm run render:ammuu
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ammuu-chien-luoc
+          path: out/AmMuu-ChienLuoc.mp4
           retention-days: 30
