@@ -30,14 +30,14 @@ export const HookScene: React.FC<{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 80px",
+          padding: "0 50px",
         }}
       >
         <KineticText
           text="Nhìn như một bó hoa hồng... nhưng KHÔNG PHẢI!"
           startFrame={5}
           stagger={4}
-          fontSize={54}
+          fontSize={64}
           fontFamily={fonts.sans}
           fontWeight={800}
           color="#FFFFFF"

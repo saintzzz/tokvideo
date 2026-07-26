@@ -12,6 +12,10 @@ type KineticTextProps = {
   highlightColor?: string;
   highlightWords?: string[];
   align?: "center" | "left";
+  /** "color" just tints the word; "chip" wraps it in a solid rounded
+   * background pill — reads much bigger/bolder on a small phone screen. */
+  highlightStyle?: "color" | "chip";
+  highlightTextColor?: string;
 };
 
 // Per-word reveal: blur-to-focus + rise + scale, staggered — reads as far
@@ -22,11 +26,13 @@ export const KineticText: React.FC<KineticTextProps> = ({
   stagger = 4,
   fontSize,
   fontFamily,
-  fontWeight = 700,
+  fontWeight = 800,
   color = "#F5E6C8",
   highlightColor = "#E3B23C",
   highlightWords = [],
   align = "center",
+  highlightStyle = "chip",
+  highlightTextColor = "#1a1206",
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -38,7 +44,7 @@ export const KineticText: React.FC<KineticTextProps> = ({
         display: "flex",
         flexWrap: "wrap",
         justifyContent: align === "center" ? "center" : "flex-start",
-        gap: `0 ${fontSize * 0.22}px`,
+        gap: `${fontSize * 0.18}px ${fontSize * 0.24}px`,
       }}
     >
       {words.map((word, i) => {
@@ -59,6 +65,8 @@ export const KineticText: React.FC<KineticTextProps> = ({
           word.toLowerCase().includes(h.toLowerCase())
         );
 
+        const useChip = isHighlight && highlightStyle === "chip";
+
         return (
           <span
             key={i}
@@ -70,7 +78,18 @@ export const KineticText: React.FC<KineticTextProps> = ({
               fontFamily,
               fontWeight,
               fontSize,
-              color: isHighlight ? highlightColor : color,
+              lineHeight: 1.15,
+              color: useChip
+                ? highlightTextColor
+                : isHighlight
+                  ? highlightColor
+                  : color,
+              backgroundColor: useChip ? highlightColor : "transparent",
+              borderRadius: useChip ? fontSize * 0.22 : 0,
+              padding: useChip ? `${fontSize * 0.06}px ${fontSize * 0.18}px` : 0,
+              boxShadow: useChip
+                ? `0 ${fontSize * 0.08}px ${fontSize * 0.3}px rgba(0,0,0,0.35)`
+                : "none",
             }}
           >
             {word}

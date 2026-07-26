@@ -9,6 +9,7 @@ import {
 } from "remotion";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { ScrimOverlay } from "../components/ScrimOverlay";
+import { BuyNowPointer } from "../components/BuyNowPointer";
 import { fonts } from "../fonts";
 
 export const CTAScene: React.FC<{
@@ -113,28 +114,23 @@ export const CTAScene: React.FC<{
         >
           <div
             style={{
+              display: "inline-block",
               fontFamily: fonts.sans,
               fontWeight: 800,
-              fontSize: 46,
+              fontSize: 58,
               color: "#FFFFFF",
-              textShadow: "0 4px 20px rgba(0,0,0,0.6)",
+              backgroundColor: "#FF3B7F",
+              borderRadius: 18,
+              padding: "10px 30px",
+              boxShadow: "0 10px 30px rgba(255,59,127,0.5)",
             }}
           >
-            Chốt đơn ngay ↓
-          </div>
-          <div
-            style={{
-              marginTop: 6,
-              fontFamily: fonts.sans,
-              fontSize: 22,
-              color: "#FFE3EE",
-              textShadow: "0 2px 10px rgba(0,0,0,0.6)",
-            }}
-          >
-            Số lượng có hạn
+            CHỐT ĐƠN NGAY
           </div>
         </div>
       </div>
+
+      <BuyNowPointer startFrame={15} />
 
       <div
         style={{

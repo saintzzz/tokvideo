@@ -27,17 +27,17 @@ export const QuoteScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 30,
-          padding: "0 70px",
+          gap: 26,
+          padding: "0 50px",
         }}
       >
-        <HippocratesSilhouette scale={0.6} />
+        <HippocratesSilhouette scale={1.4} isSpeaking={hasAudio} />
 
         <KineticText
           text="“Hãy để thức ăn là thuốc của bạn, và thuốc là thức ăn của bạn.”"
           startFrame={5}
           stagger={4}
-          fontSize={54}
+          fontSize={58}
           fontFamily={fonts.serif}
           fontWeight={700}
           highlightWords={["thức", "ăn", "thuốc"]}
@@ -47,7 +47,7 @@ export const QuoteScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           style={{
             opacity: attributionOpacity,
             fontFamily: fonts.serif,
-            fontSize: 30,
+            fontSize: 34,
             color: "#7CB342",
             letterSpacing: 4,
           }}

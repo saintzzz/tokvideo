@@ -42,18 +42,18 @@ export const TwistScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 40,
-          padding: "0 70px",
+          gap: 36,
+          padding: "0 50px",
         }}
       >
         <KineticText
-          text="Hơn 500 công thức dinh dưỡng chuẩn y khoa, cho từng loại bệnh cụ thể:"
+          text="Hơn 500 công thức dinh dưỡng, chia theo từng nhu cầu sức khoẻ:"
           startFrame={0}
           stagger={3}
-          fontSize={38}
+          fontSize={46}
           fontFamily={fonts.sans}
-          fontWeight={700}
-          highlightWords={["500", "chuẩn", "y", "khoa"]}
+          fontWeight={800}
+          highlightWords={["500", "nhu", "cầu", "sức", "khoẻ"]}
         />
 
         <DiseaseIconStrip startFrame={45} />
@@ -64,7 +64,7 @@ export const TwistScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
             opacity: coverOpacity,
           }}
         >
-          <NutritionBookCover scale={0.5} />
+          <NutritionBookCover scale={0.62} />
         </div>
       </div>
     </NutritionBackground>

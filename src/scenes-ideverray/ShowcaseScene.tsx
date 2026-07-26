@@ -69,12 +69,12 @@ const Slide: React.FC<{
           style={{
             display: "inline-block",
             fontFamily: fonts.sans,
-            fontWeight: 700,
-            fontSize: 38,
+            fontWeight: 800,
+            fontSize: 46,
             color: "#FFFFFF",
-            backgroundColor: "rgba(0,0,0,0.35)",
-            borderRadius: 16,
-            padding: "10px 26px",
+            backgroundColor: "rgba(0,0,0,0.45)",
+            borderRadius: 18,
+            padding: "14px 30px",
           }}
         >
           {caption}

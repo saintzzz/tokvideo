@@ -88,9 +88,9 @@ export const NutritionBookCover: React.FC<{ scale?: number }> = ({
           lineHeight: 1.6,
         }}
       >
-        Hơn 500 công thức chuẩn y khoa
+        Hơn 500 công thức dinh dưỡng
         <br />
-        cho từng loại bệnh
+        theo từng nhu cầu sức khoẻ
       </div>
     </div>
   );

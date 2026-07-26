@@ -51,7 +51,7 @@ export const HookScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 90px",
+          padding: "0 55px",
         }}
       >
         <div
@@ -61,15 +61,26 @@ export const HookScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
             textAlign: "center",
             fontFamily: fonts.sans,
             fontWeight: 800,
-            fontSize: 58,
+            fontSize: 66,
             lineHeight: 1.3,
             color: "#F5E6C8",
             textShadow: "0 4px 24px rgba(0,0,0,0.6)",
           }}
         >
           Một người phụ nữ từng nói ông nên bị{" "}
-          <span style={{ color: "#E3B23C" }}>đầu độc</span>. Câu trả lời của
-          ông khiến cả nước Anh bật cười.
+          <span
+            style={{
+              display: "inline-block",
+              color: "#1a1206",
+              backgroundColor: "#E3B23C",
+              borderRadius: 16,
+              padding: "2px 18px",
+              boxShadow: "0 6px 20px rgba(0,0,0,0.35)",
+            }}
+          >
+            đầu độc
+          </span>
+          . Câu trả lời của ông khiến cả nước Anh bật cười.
         </div>
       </div>
     </SceneBackground>

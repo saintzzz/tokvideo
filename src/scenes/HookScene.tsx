@@ -30,7 +30,7 @@ export const HookScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 90px",
+          padding: "0 55px",
         }}
       >
         <div
@@ -40,15 +40,26 @@ export const HookScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
             textAlign: "center",
             fontFamily: fonts.sans,
             fontWeight: 800,
-            fontSize: 64,
+            fontSize: 70,
             lineHeight: 1.25,
             color: "#F5E6C8",
             textShadow: "0 4px 24px rgba(0,0,0,0.6)",
           }}
         >
           Người thông minh nhất{" "}
-          <span style={{ color: "#E3B23C" }}>Tam Quốc</span> từng nói câu này
-          — trước khi thua trận
+          <span
+            style={{
+              display: "inline-block",
+              color: "#1a1206",
+              backgroundColor: "#E3B23C",
+              borderRadius: 16,
+              padding: "2px 18px",
+              boxShadow: "0 6px 20px rgba(0,0,0,0.35)",
+            }}
+          >
+            Tam Quốc
+          </span>{" "}
+          từng nói câu này — trước khi thua trận
         </div>
       </div>
     </SceneBackground>

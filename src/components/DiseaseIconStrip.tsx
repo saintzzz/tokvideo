@@ -22,8 +22,8 @@ export const DiseaseIconStrip: React.FC<{ startFrame?: number }> = ({
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        gap: 16,
-        maxWidth: 800,
+        gap: 20,
+        maxWidth: 950,
       }}
     >
       {ITEMS.map((item, i) => {
@@ -43,20 +43,20 @@ export const DiseaseIconStrip: React.FC<{ startFrame?: number }> = ({
               transform: `scale(${scale})`,
               display: "flex",
               alignItems: "center",
-              gap: 8,
-              backgroundColor: "rgba(124, 179, 66, 0.16)",
-              border: "1.5px solid rgba(124, 179, 66, 0.5)",
+              gap: 12,
+              backgroundColor: "rgba(124, 179, 66, 0.22)",
+              border: "2px solid rgba(124, 179, 66, 0.7)",
               borderRadius: 999,
-              padding: "10px 20px",
+              padding: "16px 28px",
             }}
           >
-            <span style={{ fontSize: 24 }}>{item.icon}</span>
+            <span style={{ fontSize: 36 }}>{item.icon}</span>
             <span
               style={{
                 fontFamily: fonts.sans,
-                fontWeight: 600,
-                fontSize: 20,
-                color: "#E9F2E2",
+                fontWeight: 700,
+                fontSize: 28,
+                color: "#F2FAEC",
               }}
             >
               {item.label}

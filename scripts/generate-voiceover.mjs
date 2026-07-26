@@ -11,6 +11,15 @@ import ideverrayNarration from "../src/narration.ideverray.json" with { type: "j
 // Other good Vietnamese options: "vi-VN-HoaiMyNeural" (female).
 const VOICE = process.env.EDGE_TTS_VOICE ?? "vi-VN-NamMinhNeural";
 
+// Punchier "ad read" delivery instead of flat narration: a bit faster,
+// a bit brighter/louder. Override per-run with env vars if a specific
+// video needs a calmer read.
+const PROSODY = {
+  rate: process.env.TTS_RATE ?? "+14%",
+  pitch: process.env.TTS_PITCH ?? "+4%",
+  volume: process.env.TTS_VOLUME ?? "+15%",
+};
+
 const publicDir = path.join(import.meta.dirname, "..", "public", "audio");
 
 const VIDEOS = {
@@ -42,7 +51,7 @@ for (const id of ids) {
 }
 
 const synthesize = async (tts, outDir, key, text) => {
-  const { audioStream } = tts.toStream(text);
+  const { audioStream } = tts.toStream(text, PROSODY);
   const outFile = path.join(outDir, `${key}.mp3`);
 
   await new Promise((resolve, reject) => {

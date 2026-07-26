@@ -41,8 +41,8 @@ export const HookScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 36,
-          padding: "0 80px",
+          gap: 30,
+          padding: "0 50px",
         }}
       >
         <div
@@ -51,14 +51,14 @@ export const HookScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
             opacity: silhouetteOpacity,
           }}
         >
-          <HippocratesSilhouette scale={0.85} />
+          <HippocratesSilhouette scale={1.7} isSpeaking={hasAudio} />
         </div>
 
         <KineticText
           text="Hơn 2.000 năm trước, cha đẻ của y học hiện đại từng nói một câu vẫn còn nguyên giá trị."
           startFrame={0}
           stagger={3}
-          fontSize={46}
+          fontSize={56}
           fontFamily={fonts.sans}
           fontWeight={800}
           highlightWords={["y", "học", "hiện", "đại"]}

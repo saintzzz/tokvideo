@@ -9,6 +9,7 @@ import {
 } from "remotion";
 import { SceneBackground } from "../components/SceneBackground";
 import { BookCover } from "../components/BookCover";
+import { BuyNowPointer } from "../components/BuyNowPointer";
 import { fonts } from "../fonts";
 
 export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
@@ -45,7 +46,7 @@ export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
         }}
       >
         <div style={{ transform: `scale(${coverScale})` }}>
-          <BookCover scale={0.72} />
+          <BookCover scale={0.92} />
         </div>
 
         <div
@@ -57,26 +58,33 @@ export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
         >
           <div
             style={{
+              display: "inline-block",
               fontFamily: fonts.sans,
               fontWeight: 800,
-              fontSize: 46,
-              color: "#F5E6C8",
+              fontSize: 58,
+              color: "#241a10",
+              backgroundColor: "#E3B23C",
+              borderRadius: 18,
+              padding: "10px 30px",
+              boxShadow: "0 10px 30px rgba(227,178,60,0.45)",
             }}
           >
-            Xem ngay trong giỏ hàng ↓
+            XEM NGAY GIỎ HÀNG
           </div>
           <div
             style={{
-              marginTop: 10,
+              marginTop: 14,
               fontFamily: fonts.serif,
               fontSize: 28,
-              color: "#E3B23C",
+              color: "#F5E6C8",
             }}
           >
             Tử Vi Luận Giải — Khải Tâm
           </div>
         </div>
       </div>
+
+      <BuyNowPointer startFrame={15} />
 
       <div
         style={{

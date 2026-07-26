@@ -44,20 +44,20 @@ const Bubble: React.FC<{
     >
       <div
         style={{
-          maxWidth: 620,
-          backgroundColor: "rgba(20, 28, 50, 0.75)",
-          border: `2px solid ${accent}`,
-          borderRadius: 20,
-          padding: "22px 28px",
+          maxWidth: 700,
+          backgroundColor: "rgba(20, 28, 50, 0.8)",
+          border: `3px solid ${accent}`,
+          borderRadius: 24,
+          padding: "26px 32px",
         }}
       >
         <div
           style={{
             fontFamily: fonts.sans,
-            fontWeight: 700,
-            fontSize: 22,
+            fontWeight: 800,
+            fontSize: 26,
             color: accent,
-            marginBottom: 8,
+            marginBottom: 10,
           }}
         >
           {speaker}
@@ -65,7 +65,7 @@ const Bubble: React.FC<{
         <div
           style={{
             fontFamily: fonts.serif,
-            fontSize: 30,
+            fontSize: 36,
             color: "#F5E6C8",
             lineHeight: 1.4,
           }}

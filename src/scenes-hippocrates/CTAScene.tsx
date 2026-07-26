@@ -9,6 +9,7 @@ import {
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
 import { NutritionBookCover } from "../components/NutritionBookCover";
+import { BuyNowPointer } from "../components/BuyNowPointer";
 import { fonts } from "../fonts";
 
 export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
@@ -44,11 +45,11 @@ export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 34,
+          gap: 30,
         }}
       >
         <div style={{ transform: `scale(${coverScale})` }}>
-          <NutritionBookCover scale={0.72} />
+          <NutritionBookCover scale={0.92} />
         </div>
 
         <div
@@ -60,20 +61,25 @@ export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
         >
           <div
             style={{
+              display: "inline-block",
               fontFamily: fonts.sans,
               fontWeight: 800,
-              fontSize: 46,
-              color: "#F3EFE3",
+              fontSize: 60,
+              color: "#0e150d",
+              backgroundColor: "#7CB342",
+              borderRadius: 18,
+              padding: "10px 30px",
+              boxShadow: "0 10px 30px rgba(124,179,66,0.45)",
             }}
           >
-            Xem ngay trong giỏ hàng ↓
+            XEM NGAY GIỎ HÀNG
           </div>
           <div
             style={{
-              marginTop: 10,
+              marginTop: 14,
               fontFamily: fonts.serif,
-              fontSize: 26,
-              color: "#7CB342",
+              fontSize: 30,
+              color: "#F3EFE3",
             }}
           >
             Liệu Pháp Dinh Dưỡng Cho Mọi Loại Bệnh
@@ -81,20 +87,31 @@ export const CTAScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
         </div>
       </div>
 
+      <BuyNowPointer startFrame={15} />
+
       <div
         style={{
           position: "absolute",
-          bottom: 48,
+          bottom: 44,
           left: 0,
           right: 0,
           textAlign: "center",
           opacity: discOpacity,
-          fontFamily: fonts.sans,
-          fontSize: 20,
-          color: "#9db08f",
         }}
       >
-        #quangcao #andungsongkhoe #dinhduong
+        <div style={{ fontFamily: fonts.sans, fontSize: 20, color: "#9db08f" }}>
+          #quangcao #andungsongkhoe #dinhduong
+        </div>
+        <div
+          style={{
+            marginTop: 4,
+            fontFamily: fonts.sans,
+            fontSize: 15,
+            color: "#6b7a63",
+          }}
+        >
+          Sách tham khảo dinh dưỡng, không thay thế chỉ định của bác sĩ
+        </div>
       </div>
     </NutritionBackground>
   );

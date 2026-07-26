@@ -41,7 +41,7 @@ export const RevealScene: React.FC<{
           text="Set áo đôi IDEVE LAZRY"
           startFrame={0}
           stagger={4}
-          fontSize={58}
+          fontSize={68}
           fontFamily={fonts.sans}
           fontWeight={800}
           color="#FFFFFF"
@@ -52,7 +52,7 @@ export const RevealScene: React.FC<{
           text="Tặng kèm hộp quà hình bó hoa cực độc đáo"
           startFrame={20}
           stagger={2}
-          fontSize={30}
+          fontSize={34}
           fontFamily={fonts.sans}
           fontWeight={600}
           color="#F0E6EA"

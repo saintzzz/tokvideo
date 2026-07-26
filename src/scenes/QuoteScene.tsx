@@ -54,7 +54,7 @@ export const QuoteScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 80px",
+          padding: "0 50px",
         }}
       >
         <div
@@ -115,7 +115,7 @@ export const QuoteScene: React.FC<{ hasAudio: boolean }> = ({ hasAudio }) => {
             marginTop: 28,
             opacity: translationOpacity,
             fontFamily: fonts.sans,
-            fontSize: 26,
+            fontSize: 30,
             color: "#B9C3D9",
             textAlign: "center",
             maxWidth: 700,
