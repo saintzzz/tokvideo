@@ -179,6 +179,34 @@ dùng thật (khác với gói Claude subscription cá nhân) — nên kiểm tr
 ở https://console.anthropic.com/ sau vài lần chạy đầu để biết chi phí thực
 tế trước khi yên tâm để chạy dài hạn.
 
+### Avatar và banner kênh
+
+Nhân vật host sẵn có (`HealerSilhouette` cho VI, `GrandmaHostSilhouette` cho
+EN) được crop cận mặt, đặt trong khung tròn màu theo bộ nhận diện riêng của
+từng kênh — `src/AvatarComposition.tsx` (avatar vuông 800x800, dùng làm
+profile picture) và `src/BannerComposition.tsx` (banner 2560x1440, có tên
+kênh + tagline, nằm gọn trong vùng an toàn 1546x423 mà YouTube đảm bảo hiện
+trên mọi thiết bị).
+
+```console
+npx remotion still Avatar-vi out/avatar-vi.png
+npx remotion still Avatar-en out/avatar-en.png
+npx remotion still Banner-vi out/banner-vi.png
+npx remotion still Banner-en out/banner-en.png
+```
+
+**Banner: tự động qua API** — `node scripts/set-channel-banner.mjs --locale=vi --image=out/banner-vi.png`
+(và `--locale=en` cho kênh còn lại), dùng `channelBanners.insert` +
+`channels.update`. Lưu ý `channels.update` thay THẾ TOÀN BỘ phần
+`brandingSettings`, không merge — script đã tự đọc settings hiện tại rồi
+merge trước khi gửi lại (gửi thiếu sẽ bị lỗi 400 "Required" khó hiểu).
+
+**Avatar/profile picture: KHÔNG có API** — đã xác nhận 2026-08-23, YouTube
+Data API không có endpoint nào để upload ảnh đại diện kênh (chỉ có API cho
+banner và watermark). Phải tự vào YouTube Studio → Customization →
+Branding → Picture để upload tay 2 file `avatar-vi.png` / `avatar-en.png`
+ở trên, một lần duy nhất (hoặc mỗi khi muốn đổi).
+
 ### Tương tác cộng đồng tự động
 
 Hai workflow riêng, cùng cơ chế `claude -p` + prompt file như job viết tập
