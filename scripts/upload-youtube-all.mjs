@@ -2,9 +2,17 @@ import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 
-// Uploads every rendered Suc Khoe episode found under
+// Uploads specific rendered Suc Khoe episodes found under
 // src/suckhoe/episodes/ — mirrors scripts/render-suckhoe.mjs's discovery
 // so a new episode needs no changes here either.
+//
+// Deliberately requires explicit slugs (or --all) rather than defaulting
+// to "every episode" — a no-args call here uploaded the entire back
+// catalog as new public videos with no check against published.json,
+// which fired for real from CI on 2026-08-22 (9 episodes went public in
+// ~30 seconds). The queue-based scripts/publish-next-suckhoe.mjs is the
+// only script that should run unattended; this one is for a human
+// deliberately choosing which episode(s) to (re-)upload by hand.
 const episodesDir = path.join(
   import.meta.dirname,
   "..",
@@ -17,7 +25,18 @@ const slugs = (await readdir(episodesDir))
   .map((f) => f.replace(/\.json$/, ""));
 
 const requested = process.argv.slice(2);
-const targets = requested.length > 0 ? requested : slugs;
+
+if (requested.length === 0) {
+  console.error(
+    "Usage: node scripts/upload-youtube-all.mjs <slug> [<slug> ...] | --all\n" +
+      "Refuses to run with no arguments — pass explicit slugs, or --all to " +
+      "deliberately upload every episode (this WILL re-upload episodes " +
+      "already published via the queue, as new duplicate videos)."
+  );
+  process.exit(1);
+}
+
+const targets = requested.includes("--all") ? slugs : requested;
 
 for (const slug of targets) {
   if (!slugs.includes(slug)) {

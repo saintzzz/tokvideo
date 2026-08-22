@@ -4,10 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       video:
-        description: "Which video to render (leave as auto on push to only render what changed)"
+        description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, channel-report]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, channel-report, set-video-privacy]
         default: auto
+      privacy_status:
+        description: "set-video-privacy only: private, public, or unlisted"
+        type: choice
+        options: [private, public, unlisted]
+        default: private
+      video_ids:
+        description: "set-video-privacy only: space-separated YouTube video IDs"
+        type: string
+        default: ""
   push:
     branches: [main]
     paths-ignore:
@@ -199,9 +208,14 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=true" >> "$GITHUB_OUTPUT"
-          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ]; then
-            # Only publish-next-suckhoe (gated on this input directly)
-            # should run — none of the render-* jobs.
+          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ]; then
+            # These are each gated directly on their own input value in
+            # their own job — none of the render-* jobs should run. A
+            # missing branch here previously fell through to the
+            # all-true `else` below, which is exactly the class of bug
+            # that caused the 2026-08-22 mass-upload incident elsewhere
+            # in this file — do not let a new dispatch choice go
+            # unhandled here again.
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
             echo "hippocrates=false" >> "$GITHUB_OUTPUT"
@@ -397,18 +411,17 @@ jobs:
           path: out/SucKhoe-*.mp4
           retention-days: 30
 
-      # No-op (logs and exits 0) until YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET
-      # / YOUTUBE_REFRESH_TOKEN are added as repo secrets — see
-      # scripts/youtube-get-refresh-token.mjs for how to generate them.
-      # Uploads as "private" by default (YOUTUBE_PRIVACY_STATUS repo
-      # variable overrides this) — someone reviews and publishes by hand.
-      - name: Upload to YouTube (private by default)
-        env:
-          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          YOUTUBE_PRIVACY_STATUS: ${{ vars.YOUTUBE_PRIVACY_STATUS }}
-        run: npm run upload-youtube:suckhoe
+      # Deliberately does NOT upload to YouTube. This job renders every
+      # episode for review on ANY push touching src/suckhoe/** — including
+      # every automated daily-content-writer commit. It used to also run
+      # `upload-youtube:suckhoe` (uploads ALL episodes unconditionally, no
+      # check against published.json) here, which meant every new-episode
+      # push re-uploaded the entire back catalog as new public videos. That
+      # fired for real on 2026-08-22: 9 episodes went public within ~30s,
+      # stopped only by YouTube's own daily upload-quota limit. The ONLY
+      # path that is allowed to upload to YouTube is publish-next-suckhoe
+      # below — it's queue-gated (checks published.json) and rate-limited
+      # to one episode per schedule tick. Do not re-add an upload step here.
 
   # Every 4 hours (see the schedule trigger above): publish exactly the
   # next un-published episode and commit the updated queue state back to
@@ -485,3 +498,28 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: npm run channel-report
+
+  # Manual incident-response tool, dispatch-only — set specific existing
+  # videos private/public/unlisted by ID. See scripts/set-video-privacy.mjs.
+  set-video-privacy:
+    if: github.event.inputs.video == 'set-video-privacy'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set video privacy
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: node scripts/set-video-privacy.mjs ${{ github.event.inputs.privacy_status }} ${{ github.event.inputs.video_ids }}
