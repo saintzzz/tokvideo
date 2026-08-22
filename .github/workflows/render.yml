@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, channel-report, set-video-privacy]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -37,6 +37,12 @@ on:
     # has zero track record. Revisit upward once real view/retention data
     # (channel-report.mjs, once wired up) shows the audience wants more.
     - cron: "0 */4 * * *"
+    # Every 6 hours (4/day) — same idea, for the separate English-market
+    # channel (locale "en" episodes, own queue/credentials). Started even
+    # more conservatively than the Vietnamese channel's 6/day since it has
+    # zero track record at all. See scripts/publish-next-suckhoe.mjs
+    # --locale=en.
+    - cron: "0 */6 * * *"
     # Once daily — pulls real channel/video stats (subscribers, views,
     # watch time, per-video performance) into the job log via
     # scripts/channel-report.mjs, so cadence/content decisions have actual
@@ -208,7 +214,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=true" >> "$GITHUB_OUTPUT"
-          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ]; then
+          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ]; then
             # These are each gated directly on their own input value in
             # their own job — none of the render-* jobs should run. A
             # missing branch here previously fell through to the
@@ -435,6 +441,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # Shared with publish-next-suckhoe-en: both commit+push
+    # src/suckhoe/published.json, and their schedules coincide at 00:00 and
+    # 12:00 UTC (every 4h vs every 6h) — same concurrency group serializes
+    # them instead of racing two separate checkouts on the same push.
+    concurrency:
+      group: suckhoe-publish-queue
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -471,6 +483,55 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published.json
           git diff --staged --quiet || git commit -m "Mark next Suc Khoe episode as published [skip ci]"
+          git push
+
+  # Every 6 hours (see the schedule trigger above): same as
+  # publish-next-suckhoe but for the separate English-market channel
+  # (locale "en" episodes, own queue position within published.json, own
+  # credentials). See scripts/publish-next-suckhoe.mjs --locale=en.
+  publish-next-suckhoe-en:
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 */6 * * *') || github.event.inputs.video == 'suckhoe-en-publish-next'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: suckhoe-publish-queue
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish next queued episode (English channel)
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
+          YOUTUBE_EN_PRIVACY_STATUS: ${{ vars.YOUTUBE_EN_PRIVACY_STATUS }}
+        run: npm run publish-next:suckhoe-en
+
+      - name: Upload rendered video artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: suckhoe-en-published-${{ github.run_number }}
+          path: out/SucKhoe-*.mp4
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Commit updated publish queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/published.json
+          git diff --staged --quiet || git commit -m "Mark next Suc Khoe (EN) episode as published [skip ci]"
           git push
 
   # Once daily (see the schedule trigger above): print real channel/video

@@ -171,6 +171,31 @@ dùng thật (khác với gói Claude subscription cá nhân) — nên kiểm tr
 ở https://console.anthropic.com/ sau vài lần chạy đầu để biết chi phí thực
 tế trước khi yên tâm để chạy dài hạn.
 
+### Kênh tiếng Anh (thị trường nước ngoài)
+
+Cùng codebase, 1 kênh YouTube riêng, nội dung home remedies theo văn hoá
+phương Tây (không dịch từ tiếng Việt). Kỹ thuật:
+
+- Mỗi episode JSON thêm field `"locale": "en"` (bỏ trống hoặc `"vi"` =
+  kênh Việt như cũ) — xem `src/suckhoe/types.ts` và các file `en-*.json`
+  trong `src/suckhoe/episodes/` làm ví dụ. Slug tiếng Anh luôn có tiền tố
+  `en-` để dễ phân biệt trong cùng 1 thư mục.
+- Nhân vật host riêng (`GrandmaHostSilhouette`, không dùng chung với nhân
+  vật "bà lang" của kênh Việt vì khăn/áo kiểu Việt sẽ lệch với nội dung
+  phương Tây), giọng đọc tiếng Anh qua `msedge-tts` (voice mặc định
+  `en-US-JennyNeural`, đổi bằng biến `EDGE_TTS_VOICE_EN`) — vẫn miễn phí,
+  không tốn thêm chi phí.
+- Hàng đợi đăng bài **tách riêng** khỏi kênh Việt dù nằm chung 1 file
+  `published.json`: `npm run publish-next:suckhoe-en` chỉ xét các episode
+  có `locale: "en"`. Lịch đăng 6 giờ/lần (4 video/ngày) — thận trọng hơn cả
+  kênh Việt vì kênh này chưa có lịch sử gì cả.
+- Cần secret riêng `YOUTUBE_EN_REFRESH_TOKEN` (dùng lại `YOUTUBE_CLIENT_ID`
+  / `YOUTUBE_CLIENT_SECRET` cũ, chỉ refresh token là khác vì gắn với tài
+  khoản Google khác) và có thể thêm variable `YOUTUBE_EN_PRIVACY_STATUS`
+  riêng (mặc định `private` giống kênh Việt nếu không đặt).
+- `daily-content-writer.yml` đã được cập nhật để tự viết thêm cả episode
+  tiếng Anh (3-5 episode/lần) song song với tiếng Việt, cùng 1 lần chạy.
+
 ## Chỉnh sửa nội dung
 
 - Lời thoại/giọng đọc: `src/narration*.json` (nhớ chạy lại `npm run generate-voiceover`

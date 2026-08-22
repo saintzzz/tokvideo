@@ -20,12 +20,22 @@ import laTrauKhongRua from "./la-trau-khong-rua.json";
 import muoiHotRangChuomVai from "./muoi-hot-rang-chuom-vai.json";
 import nuocLaOi from "./nuoc-la-oi.json";
 import sucMiengNuocMuoiAm from "./suc-mieng-nuoc-muoi-am.json";
+import enHoneyLemonTea from "./en-honey-lemon-tea.json";
+import enGingerTea from "./en-ginger-tea.json";
+import enWarmMilkHoney from "./en-warm-milk-honey.json";
+import enOatmealBath from "./en-oatmeal-bath.json";
+import enChickenSoup from "./en-chicken-soup.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
 // import it here, and add it to this list. scripts/generate-voiceover.mjs
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
+//
+// English-market episodes (locale: "en", slug prefixed `en-`) publish
+// through a separate channel/queue — see scripts/publish-next-suckhoe.mjs
+// --locale=en. They live in this same array/directory; the locale field
+// is what routes them, not a separate file tree.
 export const EPISODES: SucKhoeEpisode[] = [
   gungMatOng,
   chanhDaoMatOng,
@@ -49,4 +59,9 @@ export const EPISODES: SucKhoeEpisode[] = [
   muoiHotRangChuomVai,
   nuocLaOi,
   sucMiengNuocMuoiAm,
+  enHoneyLemonTea,
+  enGingerTea,
+  enWarmMilkHoney,
+  enOatmealBath,
+  enChickenSoup,
 ] as SucKhoeEpisode[];

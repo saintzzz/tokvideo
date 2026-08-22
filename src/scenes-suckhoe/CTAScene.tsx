@@ -8,7 +8,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
-import { HealerSilhouette } from "../components/HealerSilhouette";
+import { HostSilhouette } from "../components/HostSilhouette";
 import { SubscribePointer } from "../components/SubscribePointer";
 import { fonts } from "../fonts";
 import { SucKhoeEpisode } from "../suckhoe/types";
@@ -53,7 +53,7 @@ export const CTAScene: React.FC<{
         }}
       >
         <div style={{ transform: `scale(${healerScale})` }}>
-          <HealerSilhouette scale={1.4} isSpeaking={hasAudio} />
+          <HostSilhouette locale={episode.locale} scale={1.4} isSpeaking={hasAudio} />
         </div>
 
         <div
@@ -76,7 +76,7 @@ export const CTAScene: React.FC<{
               boxShadow: "0 10px 30px rgba(124,179,66,0.45)",
             }}
           >
-            THEO DÕI KÊNH
+            {episode.locale === "en" ? "FOLLOW FOR MORE" : "THEO DÕI KÊNH"}
           </div>
         </div>
       </div>
@@ -101,7 +101,9 @@ export const CTAScene: React.FC<{
             color: "#9db08f",
           }}
         >
-          Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ
+          {episode.locale === "en"
+            ? "Traditional folk wisdom, not medical advice"
+            : "Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ"}
         </div>
         {episode.caution ? (
           <div

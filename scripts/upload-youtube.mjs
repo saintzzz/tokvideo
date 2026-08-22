@@ -52,18 +52,32 @@ const episode = episodeModule.default;
 
 const videoPath = path.join(import.meta.dirname, "..", "out", `SucKhoe-${slug}.mp4`);
 
+const isEn = episode.locale === "en";
+
 const title = `${episode.channelTitle} #Shorts`;
-const description = [
-  episode.remedy,
-  "",
-  "Cách làm:",
-  ...episode.steps.map((step, i) => `${i + 1}. ${step}`),
-  "",
-  "Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ.",
-  episode.caution ?? "",
-  "",
-  "#suckhoe #meodangian #shorts",
-].join("\n");
+const description = isEn
+  ? [
+      episode.remedy,
+      "",
+      "How to:",
+      ...episode.steps.map((step, i) => `${i + 1}. ${step}`),
+      "",
+      "Shared as traditional folk wisdom, not medical advice — talk to a doctor for any real health concern.",
+      episode.caution ?? "",
+      "",
+      "#homeremedies #folkwisdom #shorts",
+    ].join("\n")
+  : [
+      episode.remedy,
+      "",
+      "Cách làm:",
+      ...episode.steps.map((step, i) => `${i + 1}. ${step}`),
+      "",
+      "Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ.",
+      episode.caution ?? "",
+      "",
+      "#suckhoe #meodangian #shorts",
+    ].join("\n");
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
@@ -78,7 +92,9 @@ const res = await youtube.videos.insert({
     snippet: {
       title,
       description,
-      tags: ["suckhoe", "meodangian", "shorts"],
+      tags: isEn
+        ? ["homeremedies", "folkwisdom", "shorts"]
+        : ["suckhoe", "meodangian", "shorts"],
       categoryId: "26", // Howto & Style
     },
     status: {

@@ -8,7 +8,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
-import { HealerSilhouette } from "../components/HealerSilhouette";
+import { HostSilhouette } from "../components/HostSilhouette";
 import { KineticText } from "../components/KineticText";
 import { fonts } from "../fonts";
 import { SucKhoeEpisode } from "../suckhoe/types";
@@ -55,7 +55,7 @@ export const HookScene: React.FC<{
             opacity: silhouetteOpacity,
           }}
         >
-          <HealerSilhouette scale={1.6} isSpeaking={hasAudio} />
+          <HostSilhouette locale={episode.locale} scale={1.6} isSpeaking={hasAudio} />
         </div>
 
         <KineticText

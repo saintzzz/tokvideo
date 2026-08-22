@@ -1,7 +1,7 @@
 import React from "react";
 import { Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
-import { HealerSilhouette } from "../components/HealerSilhouette";
+import { HostSilhouette } from "../components/HostSilhouette";
 import { KineticText } from "../components/KineticText";
 import { fonts } from "../fonts";
 import { SucKhoeEpisode } from "../suckhoe/types";
@@ -35,7 +35,7 @@ export const RemedyScene: React.FC<{
           padding: "0 55px",
         }}
       >
-        <HealerSilhouette scale={1.1} isSpeaking={hasAudio} />
+        <HostSilhouette locale={episode.locale} scale={1.1} isSpeaking={hasAudio} />
 
         <KineticText
           text={episode.ingredientName}

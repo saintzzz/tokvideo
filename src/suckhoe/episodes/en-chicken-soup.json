@@ -1,0 +1,14 @@
+{
+  "slug": "en-chicken-soup",
+  "locale": "en",
+  "channelTitle": "Coming down with something? Grandma's chicken soup",
+  "hook": "Feeling a cold coming on? Grandma always had one answer: a big bowl of chicken soup.",
+  "ingredientName": "Chicken soup",
+  "remedy": "Chicken soup is one of the oldest comfort remedies in the book — the warm broth and steam are soothing when you're stuffy or run down, which is probably why it's been a sickbed staple for generations.",
+  "steps": [
+    "Simmer chicken, carrots, celery, and onion in broth for about an hour",
+    "Season with salt, pepper, and a bit of fresh garlic",
+    "Serve it hot and sip the broth slowly while it's steaming"
+  ],
+  "cta": "Follow along for more old-school home remedies"
+}

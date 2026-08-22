@@ -34,20 +34,40 @@ const SUCKHOE_EPISODES = await Promise.all(
 
 // Spoken narration is derived from the same structured content the on
 // screen text uses, so there is only one place to edit per episode.
-const buildSucKhoeNarration = (episode) => ({
-  hook: episode.hook,
-  remedy: episode.remedy,
-  steps: `Cách làm rất đơn giản. ${episode.steps
-    .map((step, i) => `Bước ${i + 1}, ${step}`)
-    .join(". ")}.`,
-  cta: episode.caution
-    ? `${episode.cta}. Lưu ý, ${episode.caution.toLowerCase()}.`
-    : episode.cta,
-});
+// locale routes to different connector phrasing — "en" episodes are
+// written in English from the start (culturally-appropriate Western home
+// remedies, not translations), so their narration needs English
+// connectors too, not just a different TTS voice.
+const buildSucKhoeNarration = (episode) => {
+  if (episode.locale === "en") {
+    return {
+      hook: episode.hook,
+      remedy: episode.remedy,
+      steps: `Here's all it takes. ${episode.steps
+        .map((step, i) => `Step ${i + 1}, ${step}`)
+        .join(". ")}.`,
+      cta: episode.caution
+        ? `${episode.cta}. One quick note: ${episode.caution.toLowerCase()}.`
+        : episode.cta,
+    };
+  }
+  return {
+    hook: episode.hook,
+    remedy: episode.remedy,
+    steps: `Cách làm rất đơn giản. ${episode.steps
+      .map((step, i) => `Bước ${i + 1}, ${step}`)
+      .join(". ")}.`,
+    cta: episode.caution
+      ? `${episode.cta}. Lưu ý, ${episode.caution.toLowerCase()}.`
+      : episode.cta,
+  };
+};
 
-// Free Microsoft Edge "Read Aloud" voice, no API key required.
+// Free Microsoft Edge "Read Aloud" voices, no API key required.
 // Other good Vietnamese options: "vi-VN-HoaiMyNeural" (female).
-const VOICE = process.env.EDGE_TTS_VOICE ?? "vi-VN-NamMinhNeural";
+// Other good English options: "en-US-AriaNeural", "en-GB-SoniaNeural".
+const VOICE_VI = process.env.EDGE_TTS_VOICE ?? "vi-VN-NamMinhNeural";
+const VOICE_EN = process.env.EDGE_TTS_VOICE_EN ?? "en-US-JennyNeural";
 
 // Punchier "ad read" delivery instead of flat narration: a bit faster,
 // a bit brighter/louder. Override per-run with env vars if a specific
@@ -84,6 +104,7 @@ for (const episode of SUCKHOE_EPISODES) {
   VIDEOS[`suckhoe-${episode.slug}`] = {
     audioDir: path.join(publicDir, "suckhoe", episode.slug),
     narration: buildSucKhoeNarration(episode),
+    voice: episode.locale === "en" ? VOICE_EN : VOICE_VI,
   };
 }
 
@@ -113,10 +134,10 @@ for (const id of ids) {
 // in a row), leaving a 0-byte mp3 behind. Opening a fresh connection per
 // request and verifying the file actually has bytes — with a couple of
 // retries — has been reliable in practice.
-const synthesizeOnce = async (outFile, text) => {
+const synthesizeOnce = async (outFile, text, voice) => {
   const tts = new MsEdgeTTS();
   try {
-    await tts.setMetadata(VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
+    await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
     const { audioStream } = tts.toStream(text, PROSODY);
 
     await new Promise((resolve, reject) => {
@@ -133,12 +154,12 @@ const synthesizeOnce = async (outFile, text) => {
 
 const MAX_ATTEMPTS = 3;
 
-const synthesize = async (outDir, key, text) => {
+const synthesize = async (outDir, key, text, voice) => {
   const outFile = path.join(outDir, `${key}.mp3`);
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      await synthesizeOnce(outFile, text);
+      await synthesizeOnce(outFile, text, voice);
       const { size } = await stat(outFile);
       if (size > 0) {
         console.log(`Wrote ${outFile}`);
@@ -157,7 +178,7 @@ for (const id of ids) {
   const video = VIDEOS[id];
   await mkdir(video.audioDir, { recursive: true });
   for (const [key, text] of Object.entries(video.narration)) {
-    await synthesize(video.audioDir, key, text);
+    await synthesize(video.audioDir, key, text, video.voice ?? VOICE_VI);
   }
 }
 

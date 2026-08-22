@@ -101,7 +101,7 @@ export const StepsScene: React.FC<{
             color: "#7CB342",
           }}
         >
-          Cách làm
+          {episode.locale === "en" ? "How to" : "Cách làm"}
         </div>
 
         {episode.steps.map((step, i) => (
