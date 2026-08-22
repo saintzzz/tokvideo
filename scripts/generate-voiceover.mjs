@@ -1,5 +1,5 @@
 import { createWriteStream } from "node:fs";
-import { mkdir, readdir } from "node:fs/promises";
+import { mkdir, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
@@ -108,31 +108,57 @@ for (const id of ids) {
   }
 }
 
-const synthesize = async (tts, outDir, key, text) => {
-  const { audioStream } = tts.toStream(text, PROSODY);
-  const outFile = path.join(outDir, `${key}.mp3`);
+// The underlying WebSocket to Microsoft's endpoint sometimes drops mid
+// stream on a long-lived connection (seen in practice after ~10+ requests
+// in a row), leaving a 0-byte mp3 behind. Opening a fresh connection per
+// request and verifying the file actually has bytes — with a couple of
+// retries — has been reliable in practice.
+const synthesizeOnce = async (outFile, text) => {
+  const tts = new MsEdgeTTS();
+  try {
+    await tts.setMetadata(VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
+    const { audioStream } = tts.toStream(text, PROSODY);
 
-  await new Promise((resolve, reject) => {
-    const write = createWriteStream(outFile);
-    audioStream.pipe(write);
-    write.on("finish", resolve);
-    write.on("error", reject);
-    audioStream.on("error", reject);
-  });
-
-  console.log(`Wrote ${outFile}`);
+    await new Promise((resolve, reject) => {
+      const write = createWriteStream(outFile);
+      audioStream.pipe(write);
+      write.on("finish", resolve);
+      write.on("error", reject);
+      audioStream.on("error", reject);
+    });
+  } finally {
+    tts.close();
+  }
 };
 
-const tts = new MsEdgeTTS();
-await tts.setMetadata(VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
+const MAX_ATTEMPTS = 3;
+
+const synthesize = async (outDir, key, text) => {
+  const outFile = path.join(outDir, `${key}.mp3`);
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      await synthesizeOnce(outFile, text);
+      const { size } = await stat(outFile);
+      if (size > 0) {
+        console.log(`Wrote ${outFile}`);
+        return;
+      }
+      console.warn(`${outFile} came back empty (attempt ${attempt}/${MAX_ATTEMPTS}), retrying...`);
+    } catch (err) {
+      console.warn(`${outFile} failed (attempt ${attempt}/${MAX_ATTEMPTS}): ${err.message}`);
+    }
+  }
+
+  throw new Error(`Failed to synthesize ${outFile} after ${MAX_ATTEMPTS} attempts`);
+};
 
 for (const id of ids) {
   const video = VIDEOS[id];
   await mkdir(video.audioDir, { recursive: true });
   for (const [key, text] of Object.entries(video.narration)) {
-    await synthesize(tts, video.audioDir, key, text);
+    await synthesize(video.audioDir, key, text);
   }
 }
 
-tts.close();
 console.log("Voiceover generation complete.");
