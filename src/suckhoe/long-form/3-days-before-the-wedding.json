@@ -2,53 +2,68 @@
   "slug": "3-days-before-the-wedding",
   "locale": "en",
   "title": "3 Days Before the Wedding: Do Grandma's Home Remedies Actually Work?",
-  "description": "With exactly three days until her wedding, Emma's family keeps hitting one small health hiccup after another — and every time, Grandma reaches for the same old home remedy. Emma, a nursing student, can't help fact-checking each one on her phone. Which ones actually hold up to real research, and which are just old wives' tales? We check all four, plus debunk two popular ones at the end.",
+  "description": "With exactly three days until her wedding, Emma's family keeps hitting one small health hiccup after another, and every time, Grandma reaches for the same old home remedy. Emma, a nursing student, fact-checks each one on the spot. Honey and lemon, ginger, chicken soup, oatmeal, which ones actually hold up to real research, and which are just old wives' tales? Watch to the end to find out.",
   "beats": [
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Exactly three days until Emma's wedding. But one by one, everyone in the house keeps running into small health problems — right when nobody has time for them."
+      "text": "Does honey actually cure a sore throat?",
+      "caption": "Does honey cure a sore throat?"
     },
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "And every single time, Grandma reaches for the same old home remedy she's used for as long as Emma can remember."
+      "text": "Or is that just something grandmas say?",
+      "caption": "Or just something grandmas say?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "text": "Three days before Emma's wedding, her family hit four health hiccups in a row.",
+      "caption": "3 days, 4 health hiccups"
     },
     {
       "speaker": "granddaughter",
       "scene": "hook",
-      "text": "I'm finishing up nursing school, so every time Grandma hands me one of her remedies, I can't help asking: is there actually science behind this, or is it just something families say?"
+      "text": "I'm a nursing student, so every time Grandma hands me a remedy, I fact-check it on the spot.",
+      "caption": "I fact-check every single one"
     },
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Over the next three days, we're going to check four of Grandma's go-to remedies — honey and lemon for a sore throat, ginger for motion sickness, chicken soup for a cold, and an oatmeal bath for itchy skin. Which ones are backed by real research, and which ones aren't? Stick around to the end."
+      "text": "Honey for a sore throat. Ginger for motion sickness. Chicken soup for a cold. Oatmeal for a rash. Four remedies. Which ones are real, and which ones aren't? Stick around to find out.",
+      "caption": "4 remedies. Real or not? Stick around."
     },
 
     {
       "speaker": "narrator",
       "scene": "kitchen",
-      "text": "Three days out. Emma wakes up with a scratchy, raw throat after standing outside all afternoon double-checking the guest list."
+      "text": "That morning, Emma woke up with a scratchy, raw throat.",
+      "caption": "Morning one, Emma's throat is raw"
     },
     {
       "speaker": "grandma",
       "scene": "kitchen",
-      "text": "Oh honey, your voice sounds rough. Let me make you some warm water with honey and lemon, you'll feel better in no time."
+      "text": "Oh honey, your voice sounds rough. Let me make you some warm water with honey and lemon.",
+      "caption": "\"Let me make honey and lemon\""
     },
     {
       "speaker": "granddaughter",
       "scene": "kitchen",
-      "text": "You've been making me this exact thing since I was little. But Grandma, be honest — how does honey and lemon actually help a sore throat?"
+      "text": "Grandma, be honest, how does honey and lemon actually help a sore throat?",
+      "caption": "\"How does honey actually help?\""
     },
     {
       "speaker": "grandma",
       "scene": "kitchen",
-      "text": "I have no idea, sweetheart, my mother did it and it worked, so I kept doing it. You're the nursing student, you look it up."
+      "text": "I have no idea, sweetheart. My mother did it, so I kept doing it. You look it up.",
+      "caption": "\"No idea, you look it up\""
     },
     {
       "speaker": "granddaughter",
       "scene": "kitchen",
-      "text": "Okay, let me check. Oh, this is actually real. Honey produces a natural antibacterial compound called hydrogen peroxide, through an enzyme reaction with the moisture in it. Combined with its soothing, coating texture, that's genuinely calming to an irritated throat.",
+      "text": "Honey produces a real antibacterial compound called hydrogen peroxide, through an enzyme reaction with moisture. That's genuinely calming to an irritated throat.",
+      "caption": "Honey makes real antibacterial compounds",
       "factReveal": {
         "diagram": "honeylemon",
         "verdict": "confirmed",
@@ -58,38 +73,45 @@
     {
       "speaker": "grandma",
       "scene": "kitchen",
-      "text": "So I've been doing it right this whole time? I really thought I was just guessing."
+      "text": "So I've been doing it right this whole time? I really thought I was just guessing.",
+      "caption": "\"So I was right this whole time?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "kitchen",
-      "text": "Nope, this one's legit, Grandma. One point for you."
+      "text": "One point for you, Grandma. But the next one is where it gets interesting.",
+      "caption": "1 point. Next one gets interesting."
     },
 
     {
       "speaker": "narrator",
       "scene": "car",
-      "text": "That afternoon, the whole family piles into the car to check out the venue, over an hour away. Halfway there, Emma's little cousin in the back seat starts looking green."
+      "text": "That afternoon, the family piled into the car to check out the venue.",
+      "caption": "That afternoon, off to the venue"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "car",
+      "text": "Halfway there, Emma's little cousin started looking green.",
+      "caption": "Halfway there, cousin turns green"
     },
     {
       "speaker": "grandma",
       "scene": "car",
-      "text": "Oh no, she's getting carsick. I always keep a little fresh ginger in my bag for exactly this — chew on this, sweetie, you'll settle right down."
+      "text": "I always keep fresh ginger in my bag for exactly this. Chew on this, sweetie.",
+      "caption": "\"Chew this ginger, sweetie\""
     },
     {
       "speaker": "granddaughter",
       "scene": "car",
-      "text": "You really do carry ginger everywhere. Grandma, does it actually stop motion sickness, or is it just the strong taste distracting her stomach?"
-    },
-    {
-      "speaker": "grandma",
-      "scene": "car",
-      "text": "Honestly, I always assumed it was just the strong taste. I don't know the actual mechanism."
+      "text": "Does ginger actually stop motion sickness, or is it just the strong taste distracting her?",
+      "caption": "\"Does ginger really stop it?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "car",
-      "text": "Let me look this one up too. Oh wow, this is a good one. Ginger contains a compound called gingerol, which blocks a receptor in the gut that would otherwise send nausea signals to the brain. There have actually been clinical trials on this — people given ginger extract before traveling had noticeably less motion sickness than people who didn't.",
+      "text": "Ginger contains gingerol, which blocks a gut receptor that sends nausea signals to the brain. There are real clinical trials on this.",
+      "caption": "Gingerol blocks nausea signals",
       "factReveal": {
         "diagram": "ginger-en",
         "verdict": "confirmed",
@@ -99,43 +121,45 @@
     {
       "speaker": "grandma",
       "scene": "car",
-      "text": "And here I thought it was just a taste thing. There's actual science behind this?"
+      "text": "And here I thought it was just a taste thing. There's actual science behind this?",
+      "caption": "\"Actual science behind this?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "car",
-      "text": "There really is, Grandma. Two for two."
+      "text": "Two for two, Grandma. But tonight's remedy is the one I've always doubted most.",
+      "caption": "2/2. Tonight's is the one I doubt most."
     },
 
     {
       "speaker": "narrator",
       "scene": "bedroom",
-      "text": "That night, after a day of running errands, Emma lies in bed with a scratchy throat turning into something worse — the first signs of a cold coming on, right on schedule for the worst possible timing."
+      "text": "That night, after a long day, Emma's scratchy throat turned into something worse.",
+      "caption": "That night, a cold sets in"
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Grandma, I think I'm actually getting sick, not just a sore throat anymore. Stuffy, achy, the whole thing."
+      "text": "Grandma, I think I'm actually getting sick now. Stuffy, achy, all of it.",
+      "caption": "\"I think I'm actually sick\""
     },
     {
       "speaker": "grandma",
       "scene": "bedroom",
-      "text": "Let me make you a big pot of chicken soup, just like always. You'll feel human again by morning."
+      "text": "Let me make you a big pot of chicken soup, just like always.",
+      "caption": "\"Chicken soup, just like always\""
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Okay, this one I've always been the most skeptical of. It just feels like comfort food, not actual medicine."
-    },
-    {
-      "speaker": "grandma",
-      "scene": "bedroom",
-      "text": "Go ahead, doubt your grandmother's soup, see what happens."
+      "text": "This one I've always been skeptical of. It just feels like comfort food, not medicine.",
+      "caption": "\"Feels like comfort food, not medicine\""
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Okay, actually — there's a real study on this. Researchers at a university medical center tested chicken soup against white blood cells that cause cold symptoms, and found it actually slowed down their movement, which may be why it eases congestion. It's a modest effect, not a cure, but it's a real, measured effect.",
+      "text": "Researchers actually tested chicken soup against the white blood cells that cause cold symptoms, and it slowed them down. A real, measured effect.",
+      "caption": "Soup really does slow cold symptoms",
       "factReveal": {
         "diagram": "chickensoup",
         "verdict": "confirmed",
@@ -145,33 +169,39 @@
     {
       "speaker": "grandma",
       "scene": "bedroom",
-      "text": "Three for three. I told you my kitchen is basically a pharmacy."
+      "text": "Three for three. My kitchen is basically a pharmacy at this point.",
+      "caption": "3/3! My kitchen is a pharmacy"
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Okay, I did not expect to be agreeing with you this much today."
+      "text": "I did not expect to agree with you this much. But tomorrow is the real test.",
+      "caption": "Tomorrow is the real test"
     },
 
     {
       "speaker": "narrator",
       "scene": "dressing-room",
-      "text": "Wedding morning. While doing a final fitting, Emma's arm breaks out in an itchy red rash, probably from the new fabric or a new lotion."
+      "text": "Wedding morning. During the final fitting, Emma's arm broke out in an itchy red rash.",
+      "caption": "Wedding morning, an itchy rash appears"
     },
     {
       "speaker": "grandma",
       "scene": "dressing-room",
-      "text": "Don't panic, let me run and grind up some plain oats for a quick bath soak, that always calms my skin right down."
+      "text": "Don't panic, let me grind up some plain oats for a quick bath soak.",
+      "caption": "\"A quick oatmeal soak will help\""
     },
     {
       "speaker": "granddaughter",
       "scene": "dressing-room",
-      "text": "We're an hour from the ceremony and you're already thinking about oatmeal. Classic. Is this one actually backed by anything, or is it just an old comfort thing?"
+      "text": "We're an hour from the ceremony and you're already thinking oatmeal. Classic. Is this one real?",
+      "caption": "\"Is oatmeal even real medicine?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "dressing-room",
-      "text": "Let me check while the oats grind. Oh — this one's actually recognized by dermatologists. Compounds in oats called avenanthramides calm inflammation and itching at a cellular level, and it's considered effective enough that it's an FDA-recognized skin protectant, not just folklore.",
+      "text": "Compounds in oats called avenanthramides calm inflammation and itching. It's actually an FDA-recognized skin protectant, not just folklore.",
+      "caption": "Oats are FDA-recognized for skin",
       "factReveal": {
         "diagram": "oatmeal",
         "verdict": "confirmed",
@@ -181,43 +211,56 @@
     {
       "speaker": "grandma",
       "scene": "dressing-room",
-      "text": "Four for four. I have to say, I'm a little proud of myself right now."
+      "text": "Four for four. I'm a little proud of myself right now.",
+      "caption": "4/4! All four remedies checked out"
     },
     {
       "speaker": "granddaughter",
       "scene": "dressing-room",
-      "text": "Honestly? So am I, on your behalf."
+      "text": "Don't get too proud yet. Not every home remedy gets off this easy.",
+      "caption": "But not every remedy gets off this easy"
     },
 
     {
       "speaker": "narrator",
       "scene": "wedding-hall",
-      "text": "The ceremony went off without a hitch. Emma's voice was clear again, her cousin never got sick in the car again, the cold never fully set in, and the rash had calmed down well before the first photo."
+      "text": "The ceremony went off without a hitch. Everyone was healthy, the rash long gone.",
+      "caption": "The ceremony goes off perfectly"
     },
     {
       "speaker": "grandma",
       "scene": "wedding-hall",
-      "text": "See? Old remedies, still holding up just fine."
+      "text": "See? Old remedies, still holding up just fine.",
+      "caption": "\"Old remedies still hold up\""
     },
     {
       "speaker": "granddaughter",
       "scene": "wedding-hall",
-      "text": "I'll give you that, Grandma. But I'll also say — not every home remedy holds up like yours did. Things like apple cider vinegar for digestion, or Epsom salt baths for sore muscles, I looked into those too, and the actual evidence is pretty thin. Mostly word of mouth, not real clinical support."
+      "text": "I'll give you that. But apple cider vinegar for digestion, or Epsom salt for sore muscles? The actual evidence there is pretty thin, mostly just word of mouth.",
+      "caption": "ACV and Epsom salt: pretty thin evidence",
+      "factReveal": {
+        "diagram": "mythbust",
+        "verdict": "unproven",
+        "citation": "Current evidence for apple cider vinegar improving digestion and for magnesium absorption through Epsom salt baths remains weak, largely anecdotal"
+      }
     },
     {
       "speaker": "grandma",
       "scene": "wedding-hall",
-      "text": "Well, that's exactly why I need a nursing-school granddaughter around, to help me sort out which ones to trust and which ones to just let go of."
+      "text": "That's exactly why I need a nursing-school granddaughter, to sort out which ones to trust.",
+      "caption": "\"Need you to sort out which to trust\""
     },
     {
       "speaker": "granddaughter",
       "scene": "wedding-hall",
-      "text": "Exactly. Folk wisdom is genuinely worth something, but it's worth double-checking against real science — and for anything serious, always see an actual doctor."
+      "text": "Folk wisdom is genuinely worth something, but double-check it against real science, and see an actual doctor for anything serious.",
+      "caption": "Double-check it. See a doctor if serious."
     },
     {
       "speaker": "grandma",
       "scene": "wedding-hall",
-      "text": "If you enjoyed this one, follow along for more of us fact-checking home remedies together. Who knows, maybe your family's favorite trick is up next."
+      "text": "Follow along for more of us fact-checking home remedies. Maybe your family's favorite trick is next.",
+      "caption": "Follow for more fact-checked remedies"
     }
   ]
 }

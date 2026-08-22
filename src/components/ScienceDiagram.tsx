@@ -11,7 +11,8 @@ export type DiagramKey =
   | "honeylemon"
   | "chickensoup"
   | "oatmeal"
-  | "mythbust";
+  | "mythbust"
+  | "mythbust-vi";
 
 type Step = { icon: "hex" | "molecule" | "bacteria" | "gate" | "stomach" | "skin" | "cell" | "bottle" | "x"; label: string };
 
@@ -84,6 +85,13 @@ const DIAGRAMS: Record<DiagramKey, { steps: Step[]; verdict: "confirmed" | "unpr
     steps: [
       { icon: "bottle", label: "Apple cider vinegar / Epsom salt" },
       { icon: "x", label: "Not enough evidence" },
+    ],
+    verdict: "unproven",
+  },
+  "mythbust-vi": {
+    steps: [
+      { icon: "bottle", label: "Giấm táo / Muối Epsom" },
+      { icon: "x", label: "Chưa đủ bằng chứng" },
     ],
     verdict: "unproven",
   },

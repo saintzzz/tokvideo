@@ -132,7 +132,7 @@ export const DialogueScene: React.FC<{
             padding: isNarrator ? 0 : "14px 28px",
           }}
         >
-          {beat.text}
+          {beat.caption ?? beat.text}
         </div>
       </div>
       </div>

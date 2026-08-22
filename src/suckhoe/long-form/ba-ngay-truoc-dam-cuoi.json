@@ -1,54 +1,69 @@
 {
   "slug": "ba-ngay-truoc-dam-cuoi",
   "locale": "vi",
-  "title": "3 Ngày Trước Đám Cưới, Bà Ngoại Chữa Cả Nhà Bằng Mẹo Dân Gian — Có Thật Sự Đúng Khoa Học?",
-  "description": "Ba ngày trước đám cưới của Trang, cả nhà lần lượt gặp sự cố sức khoẻ nhỏ, và bà ngoại lôi ra đúng 4 mẹo dân gian quen thuộc để cứu nguy. Trang, sinh viên điều dưỡng, vừa thương bà vừa tò mò: liệu những mẹo này có thật sự có cơ sở khoa học, hay chỉ là lời đồn truyền miệng? Video kiểm chứng lần lượt cả 4 mẹo bằng nghiên cứu thật.",
+  "title": "3 Ngày Trước Đám Cưới, Bà Kiểm Chứng 4 Mẹo Dân Gian Bằng Khoa Học",
+  "description": "Ba ngày trước đám cưới của Trang, cả nhà lần lượt gặp sự cố sức khoẻ nhỏ, và bà ngoại lôi ra đúng 4 mẹo dân gian quen thuộc để cứu nguy. Trang, sinh viên điều dưỡng, tra cứu ngay từng mẹo. Mật ong, gừng, nghệ mật ong, diếp cá, cái nào có cơ sở khoa học thật, cái nào chỉ là lời đồn? Xem hết video để biết.",
   "beats": [
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Còn đúng ba ngày nữa là đám cưới của Trang. Nhưng trong nhà, hết người này đến người kia gặp sự cố sức khoẻ, nhỏ thôi, nhưng đúng lúc chẳng ai muốn."
+      "text": "Mật ong trị được đau họng?",
+      "caption": "Mật ong trị đau họng?"
     },
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Và mỗi lần như vậy, bà ngoại lại lôi ra một mẹo dân gian quen thuộc từ hồi Trang còn nhỏ xíu."
+      "text": "Hay chỉ là chuyện bà hay kể lại thôi?",
+      "caption": "Sự thật, hay chỉ là lời đồn?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "text": "Ba ngày trước đám cưới của Trang, cả nhà lần lượt trúng bốn sự cố sức khoẻ nhỏ.",
+      "caption": "3 ngày, 4 sự cố sức khoẻ"
     },
     {
       "speaker": "granddaughter",
       "scene": "hook",
-      "text": "Con là sinh viên điều dưỡng năm cuối, nên lần nào bà đưa mẹo ra là con cũng tò mò một câu: cái này có thật sự có cơ sở không bà, hay chỉ là ông bà mình nói vậy thôi?"
+      "text": "Tôi là sinh viên điều dưỡng. Mỗi lần bà đưa mẹo, tôi đều tra thử xem có đúng khoa học không.",
+      "caption": "Tôi luôn tra thử có đúng không"
     },
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Trong ba ngày tới, chúng ta sẽ cùng đi qua bốn mẹo dân gian nhà Trang dùng: mật ong trị đau họng, gừng chống say xe, nghệ mật ong dịu dạ dày, và diếp cá cho da nổi mẩn. Mẹo nào có nghiên cứu khoa học đứng sau, mẹo nào chỉ là lời truyền miệng, xem đến cuối sẽ rõ."
+      "text": "Mật ong trị họng. Gừng chống say xe. Nghệ mật ong dịu dạ dày. Diếp cá cho da nổi mẩn. Bốn mẹo, cái nào đúng, cái nào chỉ là lời đồn? Xem hết video sẽ rõ.",
+      "caption": "4 mẹo. Đúng hay sai? Xem hết sẽ rõ."
     },
 
     {
       "speaker": "narrator",
       "scene": "kitchen",
-      "text": "Ngày thứ ba trước đám cưới. Buổi sáng, Trang thức dậy với cổ họng rát, giọng khàn hẳn đi vì hôm qua đứng ngoài nắng cả buổi để thử soát danh sách khách mời."
+      "text": "Sáng đó, Trang thức dậy với cổ họng rát, giọng khàn hẳn đi.",
+      "caption": "Sáng sớm, giọng Trang khàn hẳn"
     },
     {
       "speaker": "grandma",
       "scene": "kitchen",
-      "text": "Trời đất, giọng con sao vậy? Còn ba ngày nữa là cưới rồi, để bà pha cho con ly nước ấm với mật ong với chanh, uống vô là dịu liền à."
+      "text": "Trời đất, giọng con sao vậy? Để bà pha cho con ly nước ấm với mật ong với chanh.",
+      "caption": "\"Để bà pha mật ong chanh cho con\""
     },
     {
       "speaker": "granddaughter",
       "scene": "kitchen",
-      "text": "Dạ bà, hồi nhỏ con đau họng lúc nào bà cũng pha cái này cho con hết. Nhưng mà bà ơi, con hỏi thiệt, mật ong với chanh làm sao mà hết đau họng được vậy?"
+      "text": "Bà ơi, con hỏi thiệt, mật ong với chanh làm sao mà hết đau họng được vậy?",
+      "caption": "\"Mật ong làm sao hết đau họng?\""
     },
     {
       "speaker": "grandma",
       "scene": "kitchen",
-      "text": "Ơ, bà đâu có biết, hồi xưa mẹ bà chỉ vậy thì bà làm vậy thôi. Con học điều dưỡng, con tra thử coi có đúng không."
+      "text": "Bà đâu có biết, mẹ bà chỉ vậy thì bà làm vậy thôi. Con tra thử coi có đúng không.",
+      "caption": "\"Con tra thử coi có đúng không\""
     },
     {
       "speaker": "granddaughter",
       "scene": "kitchen",
-      "text": "Để con tra thử. À, có nè bà. Mật ong thật ra tự nó tạo ra một chất kháng khuẩn tên là hydro peroxide, nhờ một loại enzyme trong mật ong phản ứng với nước. Chất này với tính chất hút ẩm của mật ong giúp làm dịu và giảm viêm ở niêm mạc họng.",
+      "text": "Mật ong tự tạo ra một chất kháng khuẩn tên là hydro peroxide, nhờ một loại enzyme phản ứng với nước. Chất này giúp làm dịu và giảm viêm ở niêm mạc họng.",
+      "caption": "Mật ong tự tạo chất kháng khuẩn",
       "factReveal": {
         "diagram": "honey",
         "verdict": "confirmed",
@@ -58,38 +73,45 @@
     {
       "speaker": "grandma",
       "scene": "kitchen",
-      "text": "Ơ vậy là bà làm đúng luôn hả? Bà tưởng bà chỉ đoán mò thôi chứ."
+      "text": "Vậy là bà làm đúng luôn hả? Bà tưởng bà chỉ đoán mò thôi chứ.",
+      "caption": "\"Vậy là bà làm đúng thật à?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "kitchen",
-      "text": "Dạ đúng đó bà, cái này có nghiên cứu đàng hoàng luôn. Mẹo đầu tiên, bà ăn một điểm."
+      "text": "Đúng đó bà. Mẹo đầu tiên, bà ăn một điểm. Nhưng mẹo tiếp theo mới thật sự bất ngờ.",
+      "caption": "1 điểm cho bà. Còn mẹo sau?"
     },
 
     {
       "speaker": "narrator",
       "scene": "car",
-      "text": "Trưa hôm đó, cả nhà chở nhau đi xem lại địa điểm tổ chức tiệc, cách nhà hơn một tiếng chạy xe. Vừa qua được nửa đường thì em họ của Trang, ngồi ghế sau, mặt bắt đầu tái mét."
+      "text": "Trưa hôm đó, cả nhà lên xe đi xem địa điểm tổ chức tiệc.",
+      "caption": "Trưa đó, cả nhà lên xe đi xem tiệc"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "car",
+      "text": "Vừa qua nửa đường, em họ của Trang bắt đầu say xe.",
+      "caption": "Nửa đường, em họ Trang say xe"
     },
     {
       "speaker": "grandma",
       "scene": "car",
-      "text": "Trời, con nhỏ say xe rồi kìa. Bà có để sẵn miếng gừng tươi trong túi nè, con ngậm miếng này là đỡ liền à."
+      "text": "Bà có sẵn miếng gừng tươi trong túi nè, con ngậm miếng này là đỡ liền à.",
+      "caption": "\"Ngậm gừng vào, đỡ liền\""
     },
     {
       "speaker": "granddaughter",
       "scene": "car",
-      "text": "Bà lúc nào cũng thủ sẵn gừng trong túi vậy đó. Mà bà ơi, gừng chống say xe kiểu gì vậy, có phải chỉ vì nó cay nồng nồng nên đánh lạc hướng cái bụng không?"
-    },
-    {
-      "speaker": "grandma",
-      "scene": "car",
-      "text": "Bà nghĩ chắc vậy đó, chứ bà đâu rành mấy chuyện cơ chế cơ chiếc."
+      "text": "Gừng chống say xe kiểu gì vậy bà, có phải chỉ vì nó cay nồng đánh lạc hướng cái bụng không?",
+      "caption": "\"Gừng chống say xe kiểu gì?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "car",
-      "text": "Để con tra thử coi có nghiên cứu nào không nha. Ồ, có nè bà, cái này thú vị lắm. Trong gừng có một chất tên là gingerol, chất này giúp ngăn một loại thụ thể trong đường ruột không gửi tín hiệu buồn nôn lên não. Người ta còn thử nghiệm lâm sàng đàng hoàng, cho người say xe uống chiết xuất gừng trước khi đi, kết quả là giảm hẳn triệu chứng so với người không uống.",
+      "text": "Trong gừng có chất gingerol, giúp chặn một thụ thể trong ruột không gửi tín hiệu buồn nôn lên não. Có cả thử nghiệm lâm sàng đàng hoàng luôn.",
+      "caption": "Gingerol chặn tín hiệu buồn nôn",
       "factReveal": {
         "diagram": "ginger",
         "verdict": "confirmed",
@@ -99,43 +121,45 @@
     {
       "speaker": "grandma",
       "scene": "car",
-      "text": "Vậy mà bà tưởng đơn giản là do nó cay thôi chứ. Hoá ra khoa học người ta nghiên cứu kỹ dữ vậy luôn hả."
+      "text": "Bà tưởng đơn giản là do nó cay thôi chứ. Khoa học nghiên cứu kỹ dữ vậy luôn hả.",
+      "caption": "\"Khoa học kỹ vậy luôn hả?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "car",
-      "text": "Dạ, mẹo thứ hai, bà lại đúng nữa rồi. Hai trên hai luôn đó bà."
+      "text": "Hai trên hai rồi bà. Nhưng tối nay mới tới lượt mẹo mà con nghi ngờ nhất.",
+      "caption": "2/2. Tối nay tới mẹo con nghi ngờ nhất"
     },
 
     {
       "speaker": "narrator",
       "scene": "bedroom",
-      "text": "Tối hôm đó, sau một ngày chạy tới chạy lui lo chuyện đám cưới, Trang nằm trằn trọc, bụng cứ ấm ách khó chịu vì lo lắng với lại ăn uống thất thường mấy ngày nay."
+      "text": "Tối đó, sau một ngày chạy tới chạy lui, Trang nằm trằn trọc vì bụng ấm ách khó chịu.",
+      "caption": "Tối đó, bụng Trang ấm ách"
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Bà ơi, con thấy đau dạ dày âm ỉ á, chắc tại mấy bữa nay con lo quá nên ăn uống bậy bạ."
+      "text": "Bà ơi, con thấy đau dạ dày âm ỉ, chắc tại mấy bữa nay ăn uống bậy bạ.",
+      "caption": "\"Con đau dạ dày âm ỉ\""
     },
     {
       "speaker": "grandma",
       "scene": "bedroom",
-      "text": "Để bà lấy hũ viên nghệ mật ong bà làm sẵn cho con. Con uống vài viên trước khi ngủ, sáng mai đỡ à."
+      "text": "Để bà lấy hũ viên nghệ mật ong bà làm sẵn. Con uống vài viên trước khi ngủ.",
+      "caption": "\"Uống viên nghệ mật ong đi\""
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Cái này là con tò mò nhất nè bà, vì nghệ với mật ong nghe có vẻ chỉ để cho đẹp da thôi chứ đâu liên quan gì tới dạ dày."
-    },
-    {
-      "speaker": "grandma",
-      "scene": "bedroom",
-      "text": "Vậy hả, con tra thử coi sao."
+      "text": "Cái này con tò mò nhất, vì nghệ mật ong nghe có vẻ chỉ để đẹp da thôi chứ.",
+      "caption": "\"Nghệ mật ong đâu liên quan dạ dày?\""
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Bà ơi, cái này hoá ra nghiên cứu nhiều lắm luôn. Trong nghệ có curcumin, chất này giúp bảo vệ niêm mạc dạ dày, chống viêm. Con còn thấy có một thử nghiệm nhỏ so sánh curcumin với thuốc giảm tiết axit dạ dày loại thường được bác sĩ kê, kết quả là hiệu quả giảm triệu chứng khó tiêu gần tương đương nhau. Tất nhiên nghiên cứu còn nhỏ, cần làm thêm, nhưng hướng đi là có thật.",
+      "text": "Trong nghệ có curcumin, giúp bảo vệ niêm mạc dạ dày, chống viêm. Có thử nghiệm còn so sánh nó với thuốc giảm tiết axit dạ dày, hiệu quả gần tương đương.",
+      "caption": "Curcumin bảo vệ niêm mạc dạ dày",
       "factReveal": {
         "diagram": "turmeric",
         "verdict": "confirmed",
@@ -145,33 +169,39 @@
     {
       "speaker": "grandma",
       "scene": "bedroom",
-      "text": "Ba mẹo rồi mà mẹo nào cũng có cơ sở hết trơn. Bà bắt đầu thấy tự hào về bà rồi à nha."
+      "text": "Ba mẹo rồi, mẹo nào cũng có cơ sở hết trơn. Bà bắt đầu tự hào về bà rồi à nha.",
+      "caption": "3/3! Bà tự hào về bà quá"
     },
     {
       "speaker": "granddaughter",
       "scene": "bedroom",
-      "text": "Con cũng bất ngờ á bà, tưởng đâu học điều dưỡng xong về là con phải sửa lưng bà vụ mẹo dân gian, ai ngờ toàn phải gật đầu."
+      "text": "Con cũng bất ngờ á bà. Nhưng sáng mai mới là thử thách lớn nhất.",
+      "caption": "Sáng mai mới là thử thách lớn nhất"
     },
 
     {
       "speaker": "narrator",
       "scene": "dressing-room",
-      "text": "Sáng ngày cưới, lúc đang thử lại áo dài lần cuối, cánh tay Trang bỗng nổi mẩn đỏ, ngứa râm ran, chắc do vải mới hoặc phấn trang điểm lạ."
+      "text": "Sáng ngày cưới, lúc thử áo dài lần cuối, cánh tay Trang bỗng nổi mẩn đỏ, ngứa râm ran.",
+      "caption": "Sáng cưới, tay Trang nổi mẩn"
     },
     {
       "speaker": "grandma",
       "scene": "dressing-room",
-      "text": "Thôi chết, để bà chạy đi hái ít lá diếp cá rửa sạch, giã ra đắp lên chỗ ngứa cho con, đỡ liền à, khỏi lo."
+      "text": "Để bà chạy đi hái ít lá diếp cá, giã ra đắp lên chỗ ngứa cho con.",
+      "caption": "\"Đắp diếp cá lên là hết\""
     },
     {
       "speaker": "granddaughter",
       "scene": "dressing-room",
-      "text": "Bà ơi, sắp vô lễ rồi mà bà vẫn nhớ vụ diếp cá, hay thiệt. Mà lần này chắc bà thắng chắc luôn, vì diếp cá con nghe đồn là thần dược của các bà các mẹ."
+      "text": "Sắp vô lễ rồi mà bà vẫn nhớ vụ diếp cá. Lần này chắc bà thắng chắc luôn.",
+      "caption": "\"Lần này chắc bà thắng luôn\""
     },
     {
       "speaker": "granddaughter",
       "scene": "dressing-room",
-      "text": "Để con tra lẹ trong lúc chờ diếp cá. À có nè, diếp cá có mấy hoạt chất kháng khuẩn, kháng viêm được nghiên cứu khá rõ, được dùng nhiều trong y học cổ truyền ở cả vùng mình lẫn nhiều nước châu Á. Với mẩn ngứa nhẹ ngoài da như vầy thì tính kháng viêm của nó thật sự có giúp ích.",
+      "text": "Diếp cá có hoạt chất kháng khuẩn, kháng viêm được nghiên cứu khá rõ. Với mẩn ngứa nhẹ ngoài da như vầy, nó thật sự có giúp ích.",
+      "caption": "Diếp cá kháng khuẩn, kháng viêm",
       "factReveal": {
         "diagram": "fishmint",
         "verdict": "confirmed",
@@ -181,43 +211,56 @@
     {
       "speaker": "grandma",
       "scene": "dressing-room",
-      "text": "Bốn mẹo, bốn mẹo đều có cơ sở hết. Bà nói thiệt, bà cũng không ngờ luôn."
+      "text": "Bốn mẹo, bốn mẹo đều có cơ sở hết. Bà cũng không ngờ luôn đó.",
+      "caption": "4/4! Cả 4 mẹo đều đúng"
     },
     {
       "speaker": "granddaughter",
       "scene": "dressing-room",
-      "text": "Con cũng vậy á bà. Con cứ nghĩ chắc phải có cái nào bà nói sai, ai ngờ đâu."
+      "text": "Nhưng đừng vội mừng. Không phải mẹo dân gian nào cũng may mắn như vầy đâu bà.",
+      "caption": "Nhưng không phải mẹo nào cũng vậy"
     },
 
     {
       "speaker": "narrator",
       "scene": "wedding-hall",
-      "text": "Buổi lễ diễn ra suôn sẻ. Giọng Trang đã trong trở lại, em họ không còn say xe, bụng dạ ai cũng ổn, và vết mẩn đỏ đã dịu hẳn trước giờ chụp ảnh."
+      "text": "Buổi lễ diễn ra suôn sẻ. Giọng Trang trong trở lại, ai cũng khoẻ, vết mẩn đã dịu hẳn.",
+      "caption": "Lễ cưới suôn sẻ, ai cũng khoẻ"
     },
     {
       "speaker": "grandma",
       "scene": "wedding-hall",
-      "text": "Con thấy chưa, mấy cái mẹo của bà tuy cũ nhưng vẫn còn xài tốt lắm à nha."
+      "text": "Con thấy chưa, mấy cái mẹo của bà tuy cũ nhưng vẫn còn xài tốt lắm à nha.",
+      "caption": "\"Mẹo cũ của bà vẫn tốt mà\""
     },
     {
       "speaker": "granddaughter",
       "scene": "wedding-hall",
-      "text": "Dạ con công nhận bà luôn. Nhưng mà con cũng nói thiệt, không phải mẹo dân gian nào cũng có cơ sở như vầy đâu bà. Ví dụ giấm táo trị khó tiêu hay ngâm nước muối Epsom giảm đau nhức, con tra thấy khoa học vẫn chưa chứng minh được rõ ràng, chủ yếu là do người ta đồn truyền tai nhau thôi."
+      "text": "Con công nhận bà luôn. Nhưng giấm táo trị khó tiêu, hay ngâm nước muối Epsom giảm đau nhức, con tra thấy khoa học vẫn chưa chứng minh được rõ ràng, chủ yếu do đồn miệng thôi.",
+      "caption": "Giấm táo, muối Epsom, chưa rõ ràng",
+      "factReveal": {
+        "diagram": "mythbust-vi",
+        "verdict": "unproven",
+        "citation": "Bằng chứng khoa học cho giấm táo hỗ trợ tiêu hoá và hấp thụ magie qua da khi ngâm muối Epsom hiện còn rất yếu, chủ yếu dựa trên truyền miệng"
+      }
     },
     {
       "speaker": "grandma",
       "scene": "wedding-hall",
-      "text": "Vậy nên mới cần đứa cháu học điều dưỡng như con, để lọc giùm bà cái nào nên tin, cái nào nên hỏi bác sĩ cho chắc."
+      "text": "Vậy nên mới cần đứa cháu học điều dưỡng như con, để lọc giùm bà cái nào nên tin.",
+      "caption": "\"Cần cháu lọc giùm bà cái nào tin\""
     },
     {
       "speaker": "granddaughter",
       "scene": "wedding-hall",
-      "text": "Dạ đúng rồi bà. Kinh nghiệm dân gian là quý thật, nhưng cứ kiểm chứng lại bằng khoa học trước khi tin hẳn, và cái nào nghiêm trọng thì vẫn phải đi khám bác sĩ à nha bà."
+      "text": "Kinh nghiệm dân gian là quý thật, nhưng cứ kiểm chứng bằng khoa học trước khi tin hẳn. Cái nào nghiêm trọng thì vẫn phải đi khám bác sĩ à nha.",
+      "caption": "Cứ kiểm chứng trước khi tin"
     },
     {
       "speaker": "grandma",
       "scene": "wedding-hall",
-      "text": "Nếu bạn thấy video này hữu ích, nhớ theo dõi kênh để cùng bà cháu mình kiểm chứng thêm nhiều mẹo dân gian khác nhé. Ai biết đâu mẹo nhà bạn cũng sắp lên sóng."
+      "text": "Theo dõi kênh để cùng bà cháu mình kiểm chứng thêm nhiều mẹo dân gian khác nhé. Biết đâu mẹo nhà bạn cũng sắp lên sóng.",
+      "caption": "Theo dõi để xem thêm mẹo được kiểm chứng"
     }
   ]
 }
