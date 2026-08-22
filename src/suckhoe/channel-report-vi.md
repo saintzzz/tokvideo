@@ -7,22 +7,26 @@ Total videos: 30
 
 ## Last 28 days (channel-wide)
 
-(Analytics query failed: YouTube Analytics API has not been used in project 1091975850136 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubeanalytics.googleapis.com/overview?project=1091975850136 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. — likely too little data yet for a brand-new channel, or the token needs the yt-analytics.readonly scope.)
+Views: 4
+Watch time (minutes): 0
+Subscribers gained: 0
+Subscribers lost: 1
+Net subscriber change: -1
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
 | Đau dạ dày âm ỉ, dân gian có mẹo hay #Shorts | 8 | 2 | 0 | 2026-08-22 |
-| Khó ngủ chân lạnh, dân gian có mẹo hay #Shorts | 984 | 14 | 0 | 2026-08-22 |
+| Khó ngủ chân lạnh, dân gian có mẹo hay #Shorts | 976 | 14 | 0 | 2026-08-22 |
 | Mỏi vai gáy, đau lưng, dân gian có mẹo hay #Shorts | 4 | 0 | 0 | 2026-08-22 |
 | Ngứa da, rôm sảy, dân gian có mẹo hay #Shorts | 1 | 0 | 0 | 2026-08-22 |
 | Đau nhức xương khớp, dân gian có mẹo hay #Shorts | 4 | 0 | 0 | 2026-08-22 |
 | Táo bón, khó đi ngoài, dân gian có mẹo hay #Shorts | 2 | 0 | 0 | 2026-08-22 |
 | Ho dai dẳng, dân gian có mẹo hay #Shorts | 2 | 0 | 0 | 2026-08-22 |
-| Mới chớm cảm, dân gian có mẹo hay #Shorts | 5 | 0 | 0 | 2026-08-22 |
+| Mới chớm cảm, dân gian có mẹo hay #Shorts | 9 | 0 | 0 | 2026-08-22 |
 | Uể oải mỗi sáng, dân gian có mẹo hay #Shorts | 855 | 10 | 0 | 2026-08-22 |
-| Ho có đờm, rát họng, dân gian có mẹo hay #Shorts | 115 | 1 | 0 | 2026-08-22 |
+| Ho có đờm, rát họng, dân gian có mẹo hay #Shorts | 91 | 1 | 0 | 2026-08-22 |
 | Rụng tóc, nhiều gàu, dân gian có mẹo hay #Shorts | 116 | 3 | 0 | 2026-08-22 |
 | "Stubborn Guy" vs. The Mountain: Cliffside Shelter Build with Big Black 🐕 | 71 | 0 | 0 | 2026-01-03 |
 | The Swedish "Duckbill": A Unique Tarp Shelter Build (No Talking) 🇸🇪 | 4 | 0 | 0 | 2026-01-03 |
