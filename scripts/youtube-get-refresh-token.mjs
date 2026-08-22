@@ -46,11 +46,14 @@ const authUrl = oauth2Client.generateAuthUrl({
   access_type: "offline",
   prompt: "consent",
   scope: [
-    "https://www.googleapis.com/auth/youtube.upload",
-    // Read-only channel/video stats + Analytics API access, so
-    // scripts/channel-report.mjs can pull real subscriber/view/retention
-    // numbers instead of guessing at cadence and content decisions.
-    "https://www.googleapis.com/auth/youtube.readonly",
+    // Full manage scope, not just youtube.upload — videos.update (used by
+    // scripts/set-video-privacy.mjs, our incident-response tool) needs
+    // more than upload-only. Confirmed the hard way on 2026-08-22: an
+    // upload-only token got "insufficient authentication scopes" trying
+    // to privatize videos during a live incident.
+    "https://www.googleapis.com/auth/youtube",
+    // Analytics API is a separate scope regardless — needed by
+    // scripts/channel-report.mjs for real subscriber/view/retention data.
     "https://www.googleapis.com/auth/yt-analytics.readonly",
   ],
 });

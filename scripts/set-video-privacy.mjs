@@ -34,6 +34,8 @@ const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
+let failures = 0;
+
 for (const videoId of videoIds) {
   try {
     await youtube.videos.update({
@@ -45,6 +47,15 @@ for (const videoId of videoIds) {
     });
     console.log(`${videoId}: set to ${privacyStatus}`);
   } catch (err) {
+    failures += 1;
     console.error(`${videoId}: FAILED - ${err.message ?? err}`);
   }
+}
+
+// Exit nonzero if anything failed — a run that "succeeds" in CI while
+// every single update silently failed (e.g. insufficient token scope) is
+// exactly how the 2026-08-22 incident stayed unnoticed as long as it did.
+if (failures > 0) {
+  console.error(`${failures}/${videoIds.length} update(s) failed.`);
+  process.exit(1);
 }
