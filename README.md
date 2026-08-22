@@ -135,11 +135,11 @@ giọng đọc, render, upload, rồi tự commit lại file trạng thái — k
 trùng tập cũ. Hết tập trong hàng đợi thì tự log "không có tập mới" và không
 làm gì, tự chạy tiếp khi có tập mới được thêm vào.
 
-Nhịp này đã được giảm từ 2h/tập (12/ngày) xuống 4h/tập xuống ngay từ đầu vì
-đây là kênh mới đăng nội dung dựng theo khuôn mẫu (giọng TTS + nhân vật hoạt
-hình lặp lại), lại có lịch sử bị strike trên TikTok — tần suất quá cao là
-đúng loại tín hiệu "spam/mass-produced" mà YouTube chủ động hạn chế phân
-phối. 6/ngày vẫn đủ đăng đều mỗi ngày để có dữ liệu, với rủi ro thấp hơn.
+Nhịp này đã được giảm từ 2h/tập (12/ngày) xuống 4h/tập ngay từ đầu vì đây là
+kênh mới đăng nội dung dựng theo khuôn mẫu (giọng TTS + nhân vật hoạt hình
+lặp lại), lại có lịch sử bị strike trên TikTok — tần suất quá cao là đúng
+loại tín hiệu "spam/mass-produced" mà YouTube chủ động hạn chế phân phối.
+6/ngày vẫn đủ đăng đều mỗi ngày để có dữ liệu, với rủi ro thấp hơn.
 
 ⚠️ **Lưu ý rủi ro:** vẫn nên theo dõi YouTube Studio (Content → trạng thái
 từng video, mục Copyright/Community Guidelines) sau vài ngày đầu để phát
@@ -154,6 +154,22 @@ video mới nhất — xem trong log của job đó trên tab Actions, hoặc ch
 + `yt-analytics.readonly`, chạy lại bước 4 ở trên nếu token cũ chỉ có quyền
 upload). Không commit số liệu vào repo — đây là dữ liệu đọc, không phải
 trạng thái pipeline.
+
+### Tự động viết thêm tập mới mỗi ngày
+
+Workflow `.github/workflows/daily-content-writer.yml` chạy 1 lần/ngày
+(20:00 UTC), gọi Claude Code CLI để tự nghiên cứu và viết thêm 8-12 tập mới
+vào `src/suckhoe/episodes/`, đăng ký vào `index.ts`, rồi tự commit/push —
+giữ hàng đợi không bao giờ cạn. Chạy trên GitHub Actions thay vì máy local
+vì máy Windows ở đây có chính sách bảo mật (Application Control) chặn các
+tiến trình do Task Scheduler khởi chạy — cùng loại giới hạn đã buộc phải
+chuyển việc render/đăng video ra CI trước đó.
+
+Không tự chạy nếu chưa có secret `ANTHROPIC_API_KEY` (repo Settings →
+Secrets and variables → Actions). Đây dùng API key trả tiền theo lượng
+dùng thật (khác với gói Claude subscription cá nhân) — nên kiểm tra usage
+ở https://console.anthropic.com/ sau vài lần chạy đầu để biết chi phí thực
+tế trước khi yên tâm để chạy dài hạn.
 
 ## Chỉnh sửa nội dung
 
