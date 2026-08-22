@@ -36,9 +36,16 @@ try {
     }
 
     Set-Location $repoPath
-    $prompt = Get-Content -Raw -Path $promptPath
 
-    claude -p $prompt `
+    # Pipe the prompt via stdin instead of passing it as a `-p <value>`
+    # command-line argument. Confirmed live on 2026-08-22: launched via
+    # Task Scheduler, the long multi-line prompt text arrived at claude
+    # truncated mid-sentence, while the identical `-p $prompt` form worked
+    # fine run directly — a command-line-length/encoding quirk specific to
+    # how Task Scheduler creates the process. `claude -p` (no positional
+    # argument) reads the prompt from stdin when it isn't a TTY, which
+    # sidesteps the command-line argument path entirely.
+    Get-Content -Raw -Path $promptPath | claude -p `
         --allowedTools "Bash,Read,Write,Edit,Glob,Grep" `
         --dangerously-skip-permissions `
         2>&1 | Add-Content -Path $logPath
