@@ -57,6 +57,17 @@ const PRIVACY_STATUS = process.env.YOUTUBE_LONG_PRIVACY_STATUS || "private";
 
 const videoPath = path.join(import.meta.dirname, "..", "out", `SucKhoeLong-${slug}.mp4`);
 
+// YouTube rejects the whole upload with a generic "invalid or empty video
+// title" error if the title exceeds 100 characters — confirmed live on
+// 2026-08-22 (a 108-char title silently killed an otherwise-successful
+// render/upload). Fail loudly and early instead of burning another full
+// render on a title that was always going to be rejected.
+if ([...episode.title].length > 100) {
+  console.error(
+    `Episode title is ${[...episode.title].length} characters, over YouTube's 100-char limit: "${episode.title}"`
+  );
+  process.exit(1);
+}
 const title = episode.title;
 const description = isEn
   ? [
