@@ -18,4 +18,18 @@ export type SucKhoeEpisode = {
    * scripts/publish-next-suckhoe.mjs.
    */
   locale?: "vi" | "en";
+  /**
+   * Topic grouping for YouTube playlists — after a successful upload,
+   * scripts/upload-youtube.mjs adds the video to the matching playlist
+   * (see src/suckhoe/playlist-map.json for the category → playlist ID
+   * mapping, one map per locale). Grouping related videos into playlists
+   * encourages longer watch sessions, which the algorithm rewards.
+   * Vietnamese categories: "ho-cam-hong", "tieu-hoa", "giac-ngu",
+   * "dau-nhuc-met-moi", "da-toc-lam-dep". English: "en-cold-throat",
+   * "en-sleep-relax", "en-skin-beauty", "en-digestion". Adding a new
+   * category requires creating the playlist and adding it to
+   * playlist-map.json — an episode whose category isn't in the map is
+   * uploaded normally, just not added to any playlist.
+   */
+  category?: string;
 };

@@ -1,6 +1,7 @@
 import { createReadStream } from "node:fs";
 import path from "node:path";
 import { google } from "googleapis";
+import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 
 // Uploads one rendered Suc Khoe episode to YouTube. Needs
 // YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN in the
@@ -114,3 +115,30 @@ const res = await youtube.videos.insert({
 
 console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
 console.log(`(episode JSON: ${episodePath})`);
+
+// Add the video to its topic playlist, if it has a category and that
+// category has a playlist mapped for this locale — groups related videos
+// together, which encourages longer watch sessions (the algorithm rewards
+// that). Never fails the upload over this: a missing category/playlist
+// mapping just means the video isn't added to one, logged and moved on.
+const localeKey = isEn ? "en" : "vi";
+const playlistId = episode.category ? playlistMap[localeKey]?.[episode.category] : undefined;
+
+if (playlistId) {
+  try {
+    await youtube.playlistItems.insert({
+      part: ["snippet"],
+      requestBody: {
+        snippet: {
+          playlistId,
+          resourceId: { kind: "youtube#video", videoId: res.data.id },
+        },
+      },
+    });
+    console.log(`Added to playlist ${playlistId} (category: ${episode.category})`);
+  } catch (err) {
+    console.error(`Failed to add to playlist ${playlistId}: ${err.message ?? err}`);
+  }
+} else if (episode.category) {
+  console.log(`No playlist mapped for category "${episode.category}" (locale ${localeKey}) — skipping.`);
+}
