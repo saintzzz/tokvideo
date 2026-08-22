@@ -25,6 +25,7 @@ import enGingerTea from "./en-ginger-tea.json";
 import enWarmMilkHoney from "./en-warm-milk-honey.json";
 import enOatmealBath from "./en-oatmeal-bath.json";
 import enChickenSoup from "./en-chicken-soup.json";
+import nuocRauMa from "./nuoc-rau-ma.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -64,4 +65,5 @@ export const EPISODES: SucKhoeEpisode[] = [
   enWarmMilkHoney,
   enOatmealBath,
   enChickenSoup,
+  nuocRauMa,
 ] as SucKhoeEpisode[];
