@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed)"
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next]
         default: auto
   push:
     branches: [main]
@@ -182,6 +182,15 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=true" >> "$GITHUB_OUTPUT"
+          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ]; then
+            # Only publish-next-suckhoe (gated on this input directly)
+            # should run — none of the render-* jobs.
+            echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
+            echo "churchill=false" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=false" >> "$GITHUB_OUTPUT"
+            echo "ideverray=false" >> "$GITHUB_OUTPUT"
+            echo "ammuu=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe=false" >> "$GITHUB_OUTPUT"
           else
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
@@ -390,7 +399,7 @@ jobs:
   # and re-renders every episode for review — this one advances the queue
   # by exactly one.
   publish-next-suckhoe:
-    if: github.event_name == 'schedule'
+    if: github.event_name == 'schedule' || github.event.inputs.video == 'suckhoe-publish-next'
     runs-on: ubuntu-latest
     permissions:
       contents: write
