@@ -109,6 +109,40 @@ Shorts (khoảng 78% chiều cao màn hình, bên trái) — vị trí ước l�
 hiện tại, nên kiểm tra lại nếu YouTube đổi giao diện. Link affiliate (nếu có)
 để trong phần mô tả video khi đăng, không gắn được vào trong video như TikTok.
 
+### Đăng tự động lên YouTube
+
+**Bước duy nhất phải làm bằng tay** (cần đăng nhập Google, không thể tự động hoá):
+
+1. https://console.cloud.google.com/ → tạo project → bật **YouTube Data API v3**.
+2. APIs & Services → Credentials → Create Credentials → OAuth client ID → loại
+   **Desktop app**.
+3. Trong client đó, thêm đúng Authorized redirect URI: `http://localhost:8080`
+4. Chạy: `YOUTUBE_CLIENT_ID=... YOUTUBE_CLIENT_SECRET=... npm run youtube-get-refresh-token`
+   → mở link in ra, đăng nhập đúng tài khoản Google của kênh, đồng ý quyền.
+5. Script in ra 1 refresh token. Vào repo GitHub → Settings → Secrets and
+   variables → Actions, thêm 3 **secrets**: `YOUTUBE_CLIENT_ID`,
+   `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN`.
+6. (Tuỳ chọn) Thêm **repository variable** `YOUTUBE_PRIVACY_STATUS` = `public`
+   nếu muốn đăng công khai tự động ngay. Không đặt thì mặc định `private` —
+   video lên kênh nhưng phải tự vào YouTube Studio duyệt rồi mới public.
+
+Sau khi có đủ 3 secret, mọi lần render `suckhoe` trên CI đều tự upload.
+
+**Đăng theo lịch (mỗi 2 giờ 1 tập):** workflow có `schedule` cron chạy mỗi 2h,
+tự lấy **tập kế tiếp chưa đăng** (theo thứ tự alphabet trong
+`src/suckhoe/episodes/`, lưu trạng thái ở `src/suckhoe/published.json`), sinh
+giọng đọc, render, upload, rồi tự commit lại file trạng thái — không đăng
+trùng tập cũ. Hết tập trong hàng đợi thì tự log "không có tập mới" và không
+làm gì, tự chạy tiếp khi có tập mới được thêm vào.
+
+⚠️ **Lưu ý rủi ro:** đăng nhiều video/ngày với cùng 1 khuôn mẫu (giọng TTS +
+nhân vật hoạt hình lặp lại) trên kênh mới là tín hiệu spam rõ với YouTube —
+kênh có thể bị giảm phân phối hoặc bị xét duyệt gắt hơn thay vì tăng trưởng.
+Nên theo dõi YouTube Studio (Content → trạng thái từng video, mục Copyright/
+Community Guidelines) sau vài ngày đầu để phát hiện sớm nếu bị hạn chế, và
+điều chỉnh lại `cron` trong `render.yml` (giãn ra 6h, 12h, hoặc 1 lần/ngày)
+nếu thấy dấu hiệu bị giảm reach.
+
 ## Chỉnh sửa nội dung
 
 - Lời thoại/giọng đọc: `src/narration*.json` (nhớ chạy lại `npm run generate-voiceover`

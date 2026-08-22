@@ -11,6 +11,7 @@
     "@remotion/media-utils": "^4.0.499",
     "@remotion/tailwind-v4": "4.0.499",
     "@remotion/transitions": "^4.0.499",
+    "googleapis": "^176.0.0",
     "msedge-tts": "^2.0.7",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -44,7 +45,11 @@
     "render:ideverray": "remotion render Ideverray-AoDoi out/Ideverray-AoDoi.mp4",
     "render:ammuu": "remotion render AmMuu-ChienLuoc out/AmMuu-ChienLuoc.mp4",
     "render:suckhoe": "node scripts/render-suckhoe.mjs",
-    "render": "npm run render:gia-cat-luong && npm run render:churchill && npm run render:hippocrates && npm run render:ideverray && npm run render:ammuu && npm run render:suckhoe"
+    "render": "npm run render:gia-cat-luong && npm run render:churchill && npm run render:hippocrates && npm run render:ideverray && npm run render:ammuu && npm run render:suckhoe",
+    "youtube-get-refresh-token": "node scripts/youtube-get-refresh-token.mjs",
+    "upload-youtube:suckhoe": "node scripts/upload-youtube-all.mjs",
+    "publish:suckhoe": "npm run generate-voiceover:suckhoe && npm run render:suckhoe && npm run upload-youtube:suckhoe",
+    "publish-next:suckhoe": "node scripts/publish-next-suckhoe.mjs"
   },
   "sideEffects": [
     "*.css"

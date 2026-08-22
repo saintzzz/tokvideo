@@ -13,9 +13,15 @@ on:
     paths-ignore:
       - "out/**"
       - "README.md"
+  schedule:
+    # Every 2 hours — publishes exactly the next un-published Suc Khoe
+    # episode (see scripts/publish-next-suckhoe.mjs). Does nothing to the
+    # other 5 product videos; those only render on push/manual dispatch.
+    - cron: "0 */2 * * *"
 
 jobs:
   detect-changes:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     outputs:
       gia_cat_luong: ${{ steps.decide.outputs.gia_cat_luong }}
@@ -93,7 +99,17 @@ jobs:
           AMMUU_CHANGED: ${{ steps.filter.outputs.ammuu }}
           SUCKHOE_CHANGED: ${{ steps.filter.outputs.suckhoe }}
         run: |
-          if [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            # The scheduled tick only drives publish-next-suckhoe (its own
+            # job, gated on event_name == 'schedule' directly) — none of
+            # the push/manual-dispatch render jobs should fire here.
+            echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
+            echo "churchill=false" >> "$GITHUB_OUTPUT"
+            echo "hippocrates=false" >> "$GITHUB_OUTPUT"
+            echo "ideverray=false" >> "$GITHUB_OUTPUT"
+            echo "ammuu=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
             if [ "$SHARED_CHANGED" = "true" ] || [ "$GIA_CAT_LUONG_CHANGED" = "true" ]; then
               echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             else
@@ -354,3 +370,64 @@ jobs:
           name: suckhoe-episodes
           path: out/SucKhoe-*.mp4
           retention-days: 30
+
+      # No-op (logs and exits 0) until YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET
+      # / YOUTUBE_REFRESH_TOKEN are added as repo secrets — see
+      # scripts/youtube-get-refresh-token.mjs for how to generate them.
+      # Uploads as "private" by default (YOUTUBE_PRIVACY_STATUS repo
+      # variable overrides this) — someone reviews and publishes by hand.
+      - name: Upload to YouTube (private by default)
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_PRIVACY_STATUS: ${{ vars.YOUTUBE_PRIVACY_STATUS }}
+        run: npm run upload-youtube:suckhoe
+
+  # Every 2 hours (see the schedule trigger above): publish exactly the
+  # next un-published episode and commit the updated queue state back to
+  # the repo. Separate from render-suckhoe, which is push/manual-triggered
+  # and re-renders every episode for review — this one advances the queue
+  # by exactly one.
+  publish-next-suckhoe:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish next queued episode
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_PRIVACY_STATUS: ${{ vars.YOUTUBE_PRIVACY_STATUS }}
+        run: npm run publish-next:suckhoe
+
+      - name: Upload rendered video artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: suckhoe-published-${{ github.run_number }}
+          path: out/SucKhoe-*.mp4
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Commit updated publish queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/published.json
+          git diff --staged --quiet || git commit -m "Mark next Suc Khoe episode as published [skip ci]"
+          git push
