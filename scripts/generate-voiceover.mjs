@@ -78,6 +78,25 @@ const PROSODY = {
   volume: process.env.TTS_VOLUME ?? "+15%",
 };
 
+// Long-form (~20 min) episodes have multiple recurring characters in one
+// video, so each needs its own voice/delivery rather than one voice for
+// the whole thing. Vietnamese Edge TTS only has one realistic female
+// voice, so grandma vs. granddaughter are differentiated by prosody
+// (rate/pitch) on the same voice; English has more voices available, so
+// the granddaughter gets a genuinely different voice there.
+const LONG_FORM_VOICES = {
+  vi: {
+    narrator: { voice: VOICE_VI, prosody: { rate: "+0%", pitch: "+0%", volume: "+10%" } },
+    grandma: { voice: VOICE_VI, prosody: { rate: "+8%", pitch: "-2%", volume: "+15%" } },
+    granddaughter: { voice: VOICE_VI, prosody: { rate: "+16%", pitch: "+10%", volume: "+15%" } },
+  },
+  en: {
+    narrator: { voice: "en-US-GuyNeural", prosody: { rate: "+0%", pitch: "+0%", volume: "+10%" } },
+    grandma: { voice: VOICE_EN, prosody: { rate: "+6%", pitch: "-2%", volume: "+15%" } },
+    granddaughter: { voice: "en-US-AriaNeural", prosody: { rate: "+12%", pitch: "+4%", volume: "+15%" } },
+  },
+};
+
 const publicDir = path.join(import.meta.dirname, "..", "public", "audio");
 
 const VIDEOS = {
@@ -108,18 +127,63 @@ for (const episode of SUCKHOE_EPISODES) {
   };
 }
 
+// Long-form (~20 min) episodes — each beat of dialogue is its own audio
+// file (beat-<index>.mp3), voiced according to which recurring character
+// speaks it. Unlike the Shorts above, narration entries here are
+// {text, voice, prosody} objects (per-beat voice), not plain strings.
+const longFormDir = path.join(
+  import.meta.dirname,
+  "..",
+  "src",
+  "suckhoe",
+  "long-form"
+);
+const longFormFiles = (await readdir(longFormDir)).filter(
+  (f) => f.endsWith(".json")
+);
+const LONG_FORM_EPISODES = await Promise.all(
+  longFormFiles.map(async (file) => {
+    const url = pathToFileURL(path.join(longFormDir, file));
+    const mod = await import(url, { with: { type: "json" } });
+    return mod.default;
+  })
+);
+
+for (const episode of LONG_FORM_EPISODES) {
+  const voices = LONG_FORM_VOICES[episode.locale] ?? LONG_FORM_VOICES.vi;
+  const narration = {};
+  episode.beats.forEach((beat, i) => {
+    const { voice, prosody } = voices[beat.speaker] ?? voices.narrator;
+    narration[`beat-${i}`] = { text: beat.text, voice, prosody };
+  });
+  VIDEOS[`suckhoe-long-${episode.slug}`] = {
+    audioDir: path.join(publicDir, "suckhoe-long", episode.slug),
+    narration,
+  };
+}
+
 // Pass one or more video ids as CLI args to generate only those. The bare
-// id "suckhoe" expands to every "suckhoe-<slug>" episode, so CI doesn't
-// need updating when a new episode is added. With no args, generates
-// every video (used for local dev).
+// id "suckhoe" expands to every "suckhoe-<slug>" Short episode (NOT the
+// long-form ones — those are ~20 minutes each and far too expensive to
+// bundle into the "render everything for review" path unnoticed), so CI
+// doesn't need updating when a new episode is added. "suckhoe-long"
+// expands to every long-form episode. With no args, generates every video
+// (used for local dev — this DOES include long-form, since that's an
+// explicit, deliberate local run).
 const requested = process.argv.slice(2);
 const ids =
   requested.length > 0
-    ? requested.flatMap((id) =>
-        id === "suckhoe"
-          ? Object.keys(VIDEOS).filter((key) => key.startsWith("suckhoe-"))
-          : [id]
-      )
+    ? requested.flatMap((id) => {
+        if (id === "suckhoe") {
+          return Object.keys(VIDEOS).filter(
+            (key) => key.startsWith("suckhoe-") && !key.startsWith("suckhoe-long-")
+          );
+        }
+        if (id === "suckhoe-long") {
+          return Object.keys(VIDEOS).filter((key) => key.startsWith("suckhoe-long-"));
+        }
+        return [id];
+      })
     : Object.keys(VIDEOS);
 
 for (const id of ids) {
@@ -134,11 +198,11 @@ for (const id of ids) {
 // in a row), leaving a 0-byte mp3 behind. Opening a fresh connection per
 // request and verifying the file actually has bytes — with a couple of
 // retries — has been reliable in practice.
-const synthesizeOnce = async (outFile, text, voice) => {
+const synthesizeOnce = async (outFile, text, voice, prosody) => {
   const tts = new MsEdgeTTS();
   try {
     await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
-    const { audioStream } = tts.toStream(text, PROSODY);
+    const { audioStream } = tts.toStream(text, prosody);
 
     await new Promise((resolve, reject) => {
       const write = createWriteStream(outFile);
@@ -154,12 +218,12 @@ const synthesizeOnce = async (outFile, text, voice) => {
 
 const MAX_ATTEMPTS = 3;
 
-const synthesize = async (outDir, key, text, voice) => {
+const synthesize = async (outDir, key, text, voice, prosody) => {
   const outFile = path.join(outDir, `${key}.mp3`);
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      await synthesizeOnce(outFile, text, voice);
+      await synthesizeOnce(outFile, text, voice, prosody);
       const { size } = await stat(outFile);
       if (size > 0) {
         console.log(`Wrote ${outFile}`);
@@ -177,8 +241,15 @@ const synthesize = async (outDir, key, text, voice) => {
 for (const id of ids) {
   const video = VIDEOS[id];
   await mkdir(video.audioDir, { recursive: true });
-  for (const [key, text] of Object.entries(video.narration)) {
-    await synthesize(video.audioDir, key, text, video.voice ?? VOICE_VI);
+  for (const [key, entry] of Object.entries(video.narration)) {
+    // Long-form entries are {text, voice, prosody} objects (per-beat
+    // voice); every other video's narration is a plain string sharing the
+    // video-level voice and the global PROSODY.
+    const isPerBeatEntry = typeof entry === "object" && entry !== null;
+    const text = isPerBeatEntry ? entry.text : entry;
+    const voice = isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI;
+    const prosody = isPerBeatEntry ? entry.prosody : PROSODY;
+    await synthesize(video.audioDir, key, text, voice, prosody);
   }
 }
 

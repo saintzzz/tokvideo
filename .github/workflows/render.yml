@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -17,6 +17,11 @@ on:
         description: "set-video-privacy only: space-separated YouTube video IDs"
         type: string
         default: ""
+      long_form_slug:
+        description: "suckhoe-long only: which long-form episode slug to generate/render/upload"
+        type: choice
+        options: [ba-ngay-truoc-dam-cuoi, 3-days-before-the-wedding]
+        default: ba-ngay-truoc-dam-cuoi
   push:
     branches: [main]
     paths-ignore:
@@ -251,7 +256,7 @@ jobs:
             # Manual "render all suckhoe" dispatch — deliberately full,
             # not diffed.
             echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
-          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ] || [ "$VIDEO_INPUT" = "release-shelved-suckhoe" ]; then
+          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ] || [ "$VIDEO_INPUT" = "release-shelved-suckhoe" ] || [ "$VIDEO_INPUT" = "suckhoe-long" ]; then
             # These are each gated directly on their own input value in
             # their own job — none of the render-* jobs should run. A
             # missing branch here previously fell through to the
@@ -715,3 +720,49 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: node scripts/set-video-privacy.mjs ${{ github.event.inputs.privacy_status }} ${{ github.event.inputs.video_ids }}
+
+  # Experimental long-form (~20 min, landscape) format — a single
+  # continuous story per episode, testing viewer interest ahead of
+  # eventually building this out once the channel is YPP-eligible.
+  # Manual/dispatch-only, not on any schedule — generates voiceover,
+  # renders, and uploads (private by default) exactly one long-form
+  # episode by slug. See src/suckhoe/long-form/.
+  suckhoe-long:
+    if: github.event.inputs.video == 'suckhoe-long'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate voiceover for this episode
+        run: node scripts/generate-voiceover.mjs suckhoe-long-${{ github.event.inputs.long_form_slug }}
+
+      - name: Render episode
+        run: node scripts/render-suckhoe-long.mjs ${{ github.event.inputs.long_form_slug }}
+
+      - name: Upload video artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: suckhoe-long-${{ github.event.inputs.long_form_slug }}
+          path: out/SucKhoeLong-*.mp4
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Upload to YouTube (private by default)
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
+          YOUTUBE_LONG_PRIVACY_STATUS: ${{ vars.YOUTUBE_LONG_PRIVACY_STATUS }}
+        run: node scripts/upload-youtube-long.mjs ${{ github.event.inputs.long_form_slug }}
