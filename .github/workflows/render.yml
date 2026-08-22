@@ -62,6 +62,8 @@ jobs:
       ideverray: ${{ steps.decide.outputs.ideverray }}
       ammuu: ${{ steps.decide.outputs.ammuu }}
       suckhoe: ${{ steps.decide.outputs.suckhoe }}
+      suckhoe_shared: ${{ steps.decide.outputs.suckhoe_shared }}
+      suckhoe_episode_files: ${{ steps.filter.outputs.suckhoe_episodes_files }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -71,6 +73,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: filter
         with:
+          list-files: shell
           filters: |
             shared:
               - 'src/components/**'
@@ -108,12 +111,22 @@ jobs:
               - 'src/scenes-ammuu/**'
               - 'src/narration.ammuu.json'
               - 'public/images/ammuu/**'
-            suckhoe:
+            # Split in two so a push that only adds/edits episode JSON files
+            # (the common case — daily-writer commits, manually adding an
+            # episode) renders ONLY those episodes, not the whole back
+            # catalog. A change to shared suckhoe code (scenes, the render
+            # script, the episode type) affects every suckhoe video's
+            # output, so that still triggers a full re-render — correctly.
+            # (src/components/** is covered by the top-level "shared" filter
+            # above, which already forces a full render of all 6 videos.)
+            suckhoe_shared:
               - 'src/SucKhoeVideo.tsx'
               - 'src/SucKhoeComposition.tsx'
               - 'src/scenes-suckhoe/**'
-              - 'src/suckhoe/**'
               - 'scripts/render-suckhoe.mjs'
+              - 'src/suckhoe/types.ts'
+            suckhoe_episodes:
+              - 'src/suckhoe/episodes/*.json'
 
       # On push: render only videos touched by this change (or every video
       # if a shared file changed). On a manual run: render everything unless
@@ -129,7 +142,8 @@ jobs:
           HIPPOCRATES_CHANGED: ${{ steps.filter.outputs.hippocrates }}
           IDEVERRAY_CHANGED: ${{ steps.filter.outputs.ideverray }}
           AMMUU_CHANGED: ${{ steps.filter.outputs.ammuu }}
-          SUCKHOE_CHANGED: ${{ steps.filter.outputs.suckhoe }}
+          SUCKHOE_SHARED_CHANGED: ${{ steps.filter.outputs.suckhoe_shared }}
+          SUCKHOE_EPISODES_CHANGED: ${{ steps.filter.outputs.suckhoe_episodes }}
         run: |
           if [ "$EVENT_NAME" = "schedule" ]; then
             # The scheduled tick only drives publish-next-suckhoe (its own
@@ -141,6 +155,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
             if [ "$SHARED_CHANGED" = "true" ] || [ "$GIA_CAT_LUONG_CHANGED" = "true" ]; then
               echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
@@ -167,10 +182,15 @@ jobs:
             else
               echo "ammuu=false" >> "$GITHUB_OUTPUT"
             fi
-            if [ "$SHARED_CHANGED" = "true" ] || [ "$SUCKHOE_CHANGED" = "true" ]; then
+            if [ "$SHARED_CHANGED" = "true" ] || [ "$SUCKHOE_SHARED_CHANGED" = "true" ] || [ "$SUCKHOE_EPISODES_CHANGED" = "true" ]; then
               echo "suckhoe=true" >> "$GITHUB_OUTPUT"
             else
               echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            fi
+            if [ "$SHARED_CHANGED" = "true" ] || [ "$SUCKHOE_SHARED_CHANGED" = "true" ]; then
+              echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
             fi
           elif [ "$VIDEO_INPUT" = "gia-cat-luong" ]; then
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
@@ -179,6 +199,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "churchill" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
@@ -186,6 +207,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "hippocrates" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
@@ -193,6 +215,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "ideverray" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
@@ -200,6 +223,7 @@ jobs:
             echo "ideverray=true" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "ammuu" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
@@ -207,6 +231,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=true" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "suckhoe" ]; then
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
@@ -214,6 +239,9 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=true" >> "$GITHUB_OUTPUT"
+            # Manual "render all suckhoe" dispatch — deliberately full,
+            # not diffed.
+            echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
           elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ]; then
             # These are each gated directly on their own input value in
             # their own job — none of the render-* jobs should run. A
@@ -228,6 +256,7 @@ jobs:
             echo "ideverray=false" >> "$GITHUB_OUTPUT"
             echo "ammuu=false" >> "$GITHUB_OUTPUT"
             echo "suckhoe=false" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=false" >> "$GITHUB_OUTPUT"
           else
             echo "gia_cat_luong=true" >> "$GITHUB_OUTPUT"
             echo "churchill=true" >> "$GITHUB_OUTPUT"
@@ -235,6 +264,7 @@ jobs:
             echo "ideverray=true" >> "$GITHUB_OUTPUT"
             echo "ammuu=true" >> "$GITHUB_OUTPUT"
             echo "suckhoe=true" >> "$GITHUB_OUTPUT"
+            echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
           fi
 
   render-gia-cat-luong:
@@ -404,11 +434,64 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate voiceover for every episode (free Edge neural TTS, no API key)
-        run: npm run generate-voiceover:suckhoe
+      # Renders only the episode(s) that actually changed in this push
+      # when possible, instead of the whole back catalog — a plain
+      # daily-writer commit adding a couple of episodes used to trigger a
+      # full re-render of all 27+ episodes every time, which is what made
+      # the 2026-08-22 incident's review job take 29+ minutes (and hang).
+      # Falls back to rendering everything when a shared suckhoe file
+      # changed (scenes, render script, episode type) — that legitimately
+      # affects every episode's output — or on a manual "suckhoe" dispatch.
+      - name: Determine which episodes changed
+        id: targets
+        env:
+          SUCKHOE_SHARED: ${{ needs.detect-changes.outputs.suckhoe_shared }}
+          EPISODE_FILES: ${{ needs.detect-changes.outputs.suckhoe_episode_files }}
+        run: |
+          if [ "$SUCKHOE_SHARED" = "true" ] || [ -z "$EPISODE_FILES" ]; then
+            echo "mode=all" >> "$GITHUB_OUTPUT"
+            echo "Rendering every episode (shared suckhoe file changed, or no specific episode file list available)."
+          else
+            slugs=""
+            ids=""
+            for f in $EPISODE_FILES; do
+              # Skip files that no longer exist (e.g. a deleted/renamed
+              # episode) — nothing to render for those, and passing a slug
+              # with no matching file would just error out downstream.
+              if [ -f "$f" ]; then
+                slug=$(basename "$f" .json)
+                slugs="$slugs $slug"
+                ids="$ids suckhoe-$slug"
+              fi
+            done
+            if [ -z "$slugs" ]; then
+              echo "mode=none" >> "$GITHUB_OUTPUT"
+              echo "All changed episode files were deletions — nothing to render."
+            else
+              echo "mode=partial" >> "$GITHUB_OUTPUT"
+              echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
+              echo "ids=$ids" >> "$GITHUB_OUTPUT"
+              echo "Rendering only the changed episode(s): $slugs"
+            fi
+          fi
 
-      - name: Render every episode
-        run: npm run render:suckhoe
+      - name: Generate voiceover for the affected episode(s) (free Edge neural TTS, no API key)
+        if: steps.targets.outputs.mode != 'none'
+        run: |
+          if [ "${{ steps.targets.outputs.mode }}" = "all" ]; then
+            npm run generate-voiceover:suckhoe
+          else
+            node scripts/generate-voiceover.mjs ${{ steps.targets.outputs.ids }}
+          fi
+
+      - name: Render the affected episode(s)
+        if: steps.targets.outputs.mode != 'none'
+        run: |
+          if [ "${{ steps.targets.outputs.mode }}" = "all" ]; then
+            npm run render:suckhoe
+          else
+            node scripts/render-suckhoe.mjs ${{ steps.targets.outputs.slugs }}
+          fi
 
       - name: Upload video artifacts
         uses: actions/upload-artifact@v4
@@ -416,6 +499,7 @@ jobs:
           name: suckhoe-episodes
           path: out/SucKhoe-*.mp4
           retention-days: 30
+          if-no-files-found: ignore
 
       # Deliberately does NOT upload to YouTube. This job renders every
       # episode for review on ANY push touching src/suckhoe/** — including
