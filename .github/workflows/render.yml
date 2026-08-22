@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed)"
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, channel-report]
         default: auto
   push:
     branches: [main]
@@ -14,10 +14,27 @@ on:
       - "out/**"
       - "README.md"
   schedule:
-    # Every 2 hours — publishes exactly the next un-published Suc Khoe
-    # episode (see scripts/publish-next-suckhoe.mjs). Does nothing to the
-    # other 5 product videos; those only render on push/manual dispatch.
-    - cron: "0 */2 * * *"
+    # Every 4 hours (6/day) — publishes exactly the next un-published Suc
+    # Khoe episode (see scripts/publish-next-suckhoe.mjs). Does nothing to
+    # the other 5 product videos; those only render on push/manual dispatch.
+    #
+    # Dialed down from every 2h (12/day): this is a brand-new channel
+    # publishing fully templated, AI-scripted content, on an account with a
+    # prior TikTok strike history — a high-frequency identical-format cadence
+    # is exactly the "repetitive/mass-produced" pattern YouTube's spam
+    # policies actively suppress in recommendations. 6/day still gives daily
+    # fresh content and plenty of shots at finding what resonates, with
+    # meaningfully lower throttling/strike risk while the channel is new and
+    # has zero track record. Revisit upward once real view/retention data
+    # (channel-report.mjs, once wired up) shows the audience wants more.
+    - cron: "0 */4 * * *"
+    # Once daily — pulls real channel/video stats (subscribers, views,
+    # watch time, per-video performance) into the job log via
+    # scripts/channel-report.mjs, so cadence/content decisions have actual
+    # data behind them instead of guesswork. No-ops harmlessly until the
+    # YOUTUBE_* secrets carry a token with the readonly/analytics scopes
+    # (see scripts/youtube-get-refresh-token.mjs).
+    - cron: "0 0 * * *"
 
 jobs:
   detect-changes:
@@ -393,13 +410,15 @@ jobs:
           YOUTUBE_PRIVACY_STATUS: ${{ vars.YOUTUBE_PRIVACY_STATUS }}
         run: npm run upload-youtube:suckhoe
 
-  # Every 2 hours (see the schedule trigger above): publish exactly the
+  # Every 4 hours (see the schedule trigger above): publish exactly the
   # next un-published episode and commit the updated queue state back to
   # the repo. Separate from render-suckhoe, which is push/manual-triggered
   # and re-renders every episode for review — this one advances the queue
-  # by exactly one.
+  # by exactly one. github.event.schedule carries which cron fired, so this
+  # only reacts to its own schedule now that channel-report shares the
+  # 'schedule' event too.
   publish-next-suckhoe:
-    if: github.event_name == 'schedule' || github.event.inputs.video == 'suckhoe-publish-next'
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 */4 * * *') || github.event.inputs.video == 'suckhoe-publish-next'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -440,3 +459,29 @@ jobs:
           git add src/suckhoe/published.json
           git diff --staged --quiet || git commit -m "Mark next Suc Khoe episode as published [skip ci]"
           git push
+
+  # Once daily (see the schedule trigger above): print real channel/video
+  # stats to the job log. Deliberately not committed to the repo — this is
+  # a read, not state — read it via the Actions UI or the GitHub API.
+  channel-report:
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 0 * * *') || github.event.inputs.video == 'channel-report'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pull channel + video stats
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: npm run channel-report

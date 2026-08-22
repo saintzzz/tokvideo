@@ -128,20 +128,32 @@ hiện tại, nên kiểm tra lại nếu YouTube đổi giao diện. Link affil
 
 Sau khi có đủ 3 secret, mọi lần render `suckhoe` trên CI đều tự upload.
 
-**Đăng theo lịch (mỗi 2 giờ 1 tập):** workflow có `schedule` cron chạy mỗi 2h,
-tự lấy **tập kế tiếp chưa đăng** (theo thứ tự alphabet trong
+**Đăng theo lịch (mỗi 4 giờ 1 tập, 6 tập/ngày):** workflow có `schedule` cron
+chạy mỗi 4h, tự lấy **tập kế tiếp chưa đăng** (theo thứ tự alphabet trong
 `src/suckhoe/episodes/`, lưu trạng thái ở `src/suckhoe/published.json`), sinh
 giọng đọc, render, upload, rồi tự commit lại file trạng thái — không đăng
 trùng tập cũ. Hết tập trong hàng đợi thì tự log "không có tập mới" và không
 làm gì, tự chạy tiếp khi có tập mới được thêm vào.
 
-⚠️ **Lưu ý rủi ro:** đăng nhiều video/ngày với cùng 1 khuôn mẫu (giọng TTS +
-nhân vật hoạt hình lặp lại) trên kênh mới là tín hiệu spam rõ với YouTube —
-kênh có thể bị giảm phân phối hoặc bị xét duyệt gắt hơn thay vì tăng trưởng.
-Nên theo dõi YouTube Studio (Content → trạng thái từng video, mục Copyright/
-Community Guidelines) sau vài ngày đầu để phát hiện sớm nếu bị hạn chế, và
-điều chỉnh lại `cron` trong `render.yml` (giãn ra 6h, 12h, hoặc 1 lần/ngày)
-nếu thấy dấu hiệu bị giảm reach.
+Nhịp này đã được giảm từ 2h/tập (12/ngày) xuống 4h/tập xuống ngay từ đầu vì
+đây là kênh mới đăng nội dung dựng theo khuôn mẫu (giọng TTS + nhân vật hoạt
+hình lặp lại), lại có lịch sử bị strike trên TikTok — tần suất quá cao là
+đúng loại tín hiệu "spam/mass-produced" mà YouTube chủ động hạn chế phân
+phối. 6/ngày vẫn đủ đăng đều mỗi ngày để có dữ liệu, với rủi ro thấp hơn.
+
+⚠️ **Lưu ý rủi ro:** vẫn nên theo dõi YouTube Studio (Content → trạng thái
+từng video, mục Copyright/Community Guidelines) sau vài ngày đầu để phát
+hiện sớm nếu bị hạn chế, và điều chỉnh lại `cron` trong `render.yml` (giãn ra
+6h, 12h, hoặc 1 lần/ngày) nếu thấy dấu hiệu bị giảm reach — hoặc tăng lại
+nhịp nếu số liệu cho thấy kênh chịu được tần suất cao hơn.
+
+**Theo dõi số liệu kênh:** job `channel-report` chạy mỗi ngày (00:00 UTC),
+in ra số subscriber/view/watch-time 28 ngày gần nhất và bảng hiệu suất các
+video mới nhất — xem trong log của job đó trên tab Actions, hoặc chạy tay
+`npm run channel-report` (cần refresh token có thêm quyền `youtube.readonly`
++ `yt-analytics.readonly`, chạy lại bước 4 ở trên nếu token cũ chỉ có quyền
+upload). Không commit số liệu vào repo — đây là dữ liệu đọc, không phải
+trạng thái pipeline.
 
 ## Chỉnh sửa nội dung
 

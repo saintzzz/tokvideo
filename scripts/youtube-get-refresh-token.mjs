@@ -18,6 +18,12 @@ import { google } from "googleapis";
 //    account, approve. The script prints a refresh token; save it as the
 //    GitHub secret YOUTUBE_REFRESH_TOKEN (along with YOUTUBE_CLIENT_ID and
 //    YOUTUBE_CLIENT_SECRET as their own secrets).
+//
+// Already have a refresh token from before? Run this again and replace the
+// GitHub secret — the scopes below now also include read-only channel/video
+// stats + YouTube Analytics, needed for scripts/channel-report.mjs. A token
+// issued under the old upload-only scope will fail on those calls with a
+// 403 (insufficient scope) until you re-run this and update the secret.
 
 const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
 const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
@@ -39,7 +45,14 @@ const oauth2Client = new google.auth.OAuth2(
 const authUrl = oauth2Client.generateAuthUrl({
   access_type: "offline",
   prompt: "consent",
-  scope: ["https://www.googleapis.com/auth/youtube.upload"],
+  scope: [
+    "https://www.googleapis.com/auth/youtube.upload",
+    // Read-only channel/video stats + Analytics API access, so
+    // scripts/channel-report.mjs can pull real subscriber/view/retention
+    // numbers instead of guessing at cadence and content decisions.
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/yt-analytics.readonly",
+  ],
 });
 
 console.log("\nOpen this URL, log into the YOUTUBE CHANNEL's Google account, and approve:\n");

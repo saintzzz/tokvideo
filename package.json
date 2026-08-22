@@ -49,7 +49,8 @@
     "youtube-get-refresh-token": "node scripts/youtube-get-refresh-token.mjs",
     "upload-youtube:suckhoe": "node scripts/upload-youtube-all.mjs",
     "publish:suckhoe": "npm run generate-voiceover:suckhoe && npm run render:suckhoe && npm run upload-youtube:suckhoe",
-    "publish-next:suckhoe": "node scripts/publish-next-suckhoe.mjs"
+    "publish-next:suckhoe": "node scripts/publish-next-suckhoe.mjs",
+    "channel-report": "node scripts/channel-report.mjs"
   },
   "sideEffects": [
     "*.css"
