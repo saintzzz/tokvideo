@@ -34,7 +34,12 @@ if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
   process.exit(0);
 }
 
-const PRIVACY_STATUS = process.env.YOUTUBE_PRIVACY_STATUS ?? "private";
+// `||` on purpose, not `??`: an unset GitHub Actions `vars.*` reference
+// evaluates to "" (empty string), not undefined, so `??` alone lets an
+// empty string through — which YouTube's API then rejects outright
+// (confirmed live on 2026-08-22: YOUTUBE_EN_PRIVACY_STATUS wasn't set yet,
+// came through as "", and the upload failed with a 400 on privacy_status).
+const PRIVACY_STATUS = process.env.YOUTUBE_PRIVACY_STATUS || "private";
 
 const episodePath = path.join(
   import.meta.dirname,
