@@ -1,0 +1,31 @@
+You are running the comment outreach growth tactic for the "Suc Khoe" YouTube Shorts channels in this repo — a Vietnamese folk home-remedy channel and a separate English-market home-remedies channel. The idea: leave a SMALL number of genuine, specific, non-promotional comments on OTHER creators' videos that are actually relevant to our content, to build visibility the legitimate way. The user has explicitly authorized this to run autonomously, on the condition that every comment stays genuine, specific to that video's actual content, and non-promotional — no exceptions, no "check out my channel", no links, no generic praise that could've been copy-pasted anywhere.
+
+STRICT CAPS (do not exceed, this is a low-volume tactic by design):
+- At most ONE new comment per locale per run (one Vietnamese, one English — two total, never more).
+- Never comment on a video already logged in src/suckhoe/comment-outreach-log.json.
+- If you cannot find a video that clears the relevance + brand-safety bar below, post ZERO comments for that locale this run and say so. Never lower the bar to hit the cap.
+
+FIRST, read src/suckhoe/comment-outreach-log.json if it exists (a JSON array of `{videoId, locale, date}` objects). Treat it as an empty array if it doesn't exist yet.
+
+FOR EACH LOCALE:
+
+1. Search with a query relevant to our content, varying it run to run so you don't keep circling the same handful of videos — pick a query themed around whatever remedy/topic is prominent in recent episodes (check src/suckhoe/episodes/ for inspiration), e.g. for Vietnamese: "mẹo dân gian sức khỏe", "mẹo trị ho dân gian", "chữa đau dạ dày tại nhà"; for English: "grandma home remedies", "old fashioned home remedies", "natural cold remedy". Run:
+   `node scripts/youtube-search-similar.mjs --locale=vi --query="..."`
+2. From the results, shortlist 2-3 candidates NOT already in the log that look both topically relevant AND brand-safe: prefer established, reputable sources (hospitals, doctors, well-known health channels) or clearly good-faith creators. AVOID sensationalist/clickbait titles (e.g. "BANNED... Doctors HATE this", absolute-cure claims, anything that reads as misinformation) — commenting there reflects on us too.
+3. Fetch full details for your shortlist to write something genuinely specific, not just title-based:
+   `node scripts/youtube-search-similar.mjs --locale=vi --video-ids=id1,id2,id3`
+4. Pick the ONE best candidate. Write a genuine, specific comment (2-4 sentences) that:
+   - References something concrete from THAT video's actual title/description (not a generic template).
+   - Adds a real, relevant fact or observation — draw on the same kind of real research already in this codebase (e.g. honey's glucose oxidase / hydrogen peroxide mechanism, ginger's gingerol blocking 5-HT3 receptors for nausea, turmeric/curcumin protecting the stomach lining, colloidal oatmeal's avenanthramides) when it's actually relevant to that video's topic — never fabricate a mechanism or citation you're not confident is real.
+   - Is written in the SAME language as the target video (Vietnamese or English).
+   - Has NO em dashes ("—"), no links, no "check out my channel" or any self-promotion, natural conversational tone — read it back and ask "would this look identical if I'd left it on 50 other videos?" — if yes, rewrite it to be more specific to this one.
+5. Write the comment to a temp file and post it:
+   `node scripts/youtube-post-comment.mjs --locale=vi --video-id=<id> --text-file=/tmp/outreach-vi.txt`
+6. Append `{videoId, locale, date}` to comment-outreach-log.json (get today's date via `date -u +%F` in Bash — do not guess it). Create the file with `[]` first if it doesn't exist.
+
+AFTER both locales:
+- Run `git pull --rebase` first.
+- Stage ONLY src/suckhoe/comment-outreach-log.json, commit with a message noting which video(s) got a comment (or that a locale was skipped and why), and push directly to `main`.
+- Do NOT touch any other file.
+
+Quality and restraint matter more than hitting the cap. Zero comments this run is a perfectly good outcome if nothing cleared the bar.

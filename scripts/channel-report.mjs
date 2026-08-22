@@ -1,18 +1,29 @@
 import { google } from "googleapis";
+import { writeFile } from "node:fs/promises";
+import path from "node:path";
 
 // Pulls real channel + per-video performance data so cadence/content
 // decisions are evidence-based instead of guesswork. Run via CI (see the
 // channel-report job in .github/workflows/render.yml) or locally once you
 // have YOUTUBE_* env vars set.
 //
-// Needs a refresh token issued with the youtube.readonly and
-// yt-analytics.readonly scopes (see scripts/youtube-get-refresh-token.mjs) —
-// an upload-only token will fail here with a 403.
+// Needs a refresh token issued with the youtube.force-ssl (or plain
+// youtube) and yt-analytics.readonly scopes (see
+// scripts/youtube-get-refresh-token.mjs) — an upload-only token will fail
+// here with a 403.
+//
+// Usage: node scripts/channel-report.mjs [--locale=vi|en] — defaults to
+// "vi". Also writes the report to src/suckhoe/channel-report-<locale>.md
+// so scripts/daily-content-writer-prompt.txt can read real performance
+// data before deciding what to write next, instead of guessing.
+
+const localeArg = process.argv.find((arg) => arg.startsWith("--locale="));
+const locale = localeArg ? localeArg.split("=")[1] : "vi";
 
 const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN } = {
   CLIENT_ID: process.env.YOUTUBE_CLIENT_ID,
   CLIENT_SECRET: process.env.YOUTUBE_CLIENT_SECRET,
-  REFRESH_TOKEN: process.env.YOUTUBE_REFRESH_TOKEN,
+  REFRESH_TOKEN: locale === "en" ? process.env.YOUTUBE_EN_REFRESH_TOKEN : process.env.YOUTUBE_REFRESH_TOKEN,
 };
 
 if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
@@ -147,7 +158,12 @@ async function main() {
     lines.push("");
   }
 
-  console.log(lines.join("\n"));
+  const report = lines.join("\n");
+  console.log(report);
+
+  const outPath = path.join(import.meta.dirname, "..", "src", "suckhoe", `channel-report-${locale}.md`);
+  await writeFile(outPath, report + "\n");
+  console.log(`\n(written to ${outPath})`);
 }
 
 await main();

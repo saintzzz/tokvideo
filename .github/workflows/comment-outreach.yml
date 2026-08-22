@@ -1,0 +1,62 @@
+name: Suc Khoe comment outreach
+
+# Leaves a SMALL number of genuine, specific, non-promotional comments on
+# other creators' relevant videos — a legitimate visibility tactic,
+# explicitly authorized to run autonomously by the channel owner
+# (2026-08-23) on condition every comment stays genuine and low-volume.
+# See scripts/comment-outreach-prompt.txt for the actual rules (caps,
+# brand-safety bar, what disqualifies a candidate).
+#
+# Deliberately NOT daily — capped at one comment per locale per run in the
+# prompt already, and a 3-day cadence keeps total volume low (roughly
+# 10/month per channel) rather than looking automated/spammy. No-ops
+# harmlessly until ANTHROPIC_API_KEY is set. Also needs
+# YOUTUBE_REFRESH_TOKEN / YOUTUBE_EN_REFRESH_TOKEN issued with the
+# youtube.force-ssl scope (see scripts/youtube-get-refresh-token.mjs).
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 13 */3 * *"
+
+jobs:
+  comment-outreach:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run comment outreach job
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "Skipping: ANTHROPIC_API_KEY secret not set."
+            exit 0
+          fi
+          claude -p "$(cat scripts/comment-outreach-prompt.txt)" \
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep" \
+            --dangerously-skip-permissions

@@ -148,12 +148,20 @@ hiện sớm nếu bị hạn chế, và điều chỉnh lại `cron` trong `ren
 nhịp nếu số liệu cho thấy kênh chịu được tần suất cao hơn.
 
 **Theo dõi số liệu kênh:** job `channel-report` chạy mỗi ngày (00:00 UTC),
-in ra số subscriber/view/watch-time 28 ngày gần nhất và bảng hiệu suất các
-video mới nhất — xem trong log của job đó trên tab Actions, hoặc chạy tay
-`npm run channel-report` (cần refresh token có thêm quyền `youtube.readonly`
-+ `yt-analytics.readonly`, chạy lại bước 4 ở trên nếu token cũ chỉ có quyền
-upload). Không commit số liệu vào repo — đây là dữ liệu đọc, không phải
-trạng thái pipeline.
+cho cả 2 kênh (VI dùng `YOUTUBE_REFRESH_TOKEN`, EN dùng
+`YOUTUBE_EN_REFRESH_TOKEN`), ghi ra `src/suckhoe/channel-report-vi.md` và
+`channel-report-en.md` rồi tự commit — số subscriber/view/watch-time 28
+ngày gần nhất và bảng hiệu suất các video mới nhất. Ghi ra file (thay vì
+chỉ log) để job viết tập mới (`daily-content-writer.yml`) đọc lại được,
+ưu tiên viết thêm chủ đề đang có hiệu suất tốt. Chạy tay bằng
+`npm run channel-report -- --locale=vi` (hoặc `--locale=en`) — cần refresh
+token có thêm quyền `youtube.force-ssl` + `yt-analytics.readonly`, chạy
+lại bước 4 ở trên nếu token cũ chỉ có quyền upload.
+
+**Tags/hashtags mỗi video:** `upload-youtube.mjs` tự thêm 5-8 tag và 4-5
+hashtag theo `category` của tập (map trong chính file đó) thay vì chỉ 3 tag
+chung chung như trước — theo khuyến nghị 2026 để thuật toán nhận diện chủ
+đề chính xác hơn (xem comment trong file để biết map đầy đủ).
 
 ### Tự động viết thêm tập mới mỗi ngày
 
@@ -170,6 +178,31 @@ Secrets and variables → Actions). Đây dùng API key trả tiền theo lượ
 dùng thật (khác với gói Claude subscription cá nhân) — nên kiểm tra usage
 ở https://console.anthropic.com/ sau vài lần chạy đầu để biết chi phí thực
 tế trước khi yên tâm để chạy dài hạn.
+
+### Tương tác cộng đồng tự động
+
+Hai workflow riêng, cùng cơ chế `claude -p` + prompt file như job viết tập
+mới ở trên (Claude tự đọc/ghi/commit qua Bash, không phải script cứng —
+cần thật sự đọc nội dung để viết được câu trả lời/comment genuine):
+
+- **`reply-comments.yml`** (1 lần/ngày, 09:00 UTC): trả lời comment mới trên
+  chính video của kênh — an toàn tuyệt đối (chỉ nói chuyện với khán giả của
+  mình), lại là tín hiệu thuật toán thật (YouTube tính hội thoại qua lại
+  dưới video là dấu hiệu cộng đồng gắn kết). Rule chi tiết:
+  `scripts/reply-comments-prompt.txt`. Log các comment đã trả lời:
+  `src/suckhoe/replied-comments-log.json`.
+- **`comment-outreach.yml`** (mỗi 3 ngày, 13:00 UTC): để lại tối đa 1 comment
+  MỖI kênh mỗi lần chạy, trên video của kênh KHÁC thật sự liên quan nội dung
+  — không quảng cáo, không link, phải cụ thể theo đúng nội dung video đó.
+  Được chủ kênh xác nhận cho chạy tự động (2026-08-23), với điều kiện giữ
+  đúng các rule trong `scripts/comment-outreach-prompt.txt` (số lượng thấp,
+  genuine, không hạ chuẩn để cố đạt đủ số). Log video đã comment:
+  `src/suckhoe/comment-outreach-log.json`.
+
+Cả 2 job cần refresh token có quyền `youtube.force-ssl` (quyền quản lý cũ
+`youtube` KHÔNG đủ để post comment — xác nhận thực tế 2026-08-23, lỗi
+"insufficient authentication scopes"). Chạy lại bước 4 ở mục "Đăng tự động
+lên YouTube" phía trên nếu token hiện tại chưa có quyền này, cho CẢ 2 kênh.
 
 ### Kênh tiếng Anh (thị trường nước ngoài)
 

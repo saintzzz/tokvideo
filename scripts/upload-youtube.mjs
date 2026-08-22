@@ -60,6 +60,48 @@ const videoPath = path.join(import.meta.dirname, "..", "out", `SucKhoe-${slug}.m
 
 const isEn = episode.locale === "en";
 
+// Per-category extra keywords — layered on top of the 3 always-on base
+// tags/hashtags. Research on Shorts discoverability (2026-08-23): the
+// algorithm uses tags as a "confidence score" signal for topic matching
+// and rewards 5-8 relevant tags over a bare 2-3; hashtags work best at
+// 3-5 including one niche-specific one, not just #shorts + brand tags.
+// Keyed by src/suckhoe/playlist-map.json's category slugs — a missing/
+// unmapped category just falls back to the base set, never fails.
+const CATEGORY_KEYWORDS = {
+  "ho-cam-hong": { tags: ["trị ho", "cảm cúm", "viêm họng"], hashtag: "meoho" },
+  "tieu-hoa": { tags: ["tiêu hóa", "đau bụng", "khó tiêu"], hashtag: "tieuhoa" },
+  "giac-ngu": { tags: ["mất ngủ", "giấc ngủ ngon"], hashtag: "giacngu" },
+  "dau-nhuc-met-moi": { tags: ["đau nhức", "mệt mỏi"], hashtag: "daunhuc" },
+  "da-toc-lam-dep": { tags: ["làm đẹp", "dưỡng da", "chăm sóc tóc"], hashtag: "lamdep" },
+  "en-cold-throat": { tags: ["cold remedy", "sore throat", "cough relief"], hashtag: "coldremedy" },
+  "en-sleep-relax": { tags: ["better sleep", "sleep aid", "relaxation"], hashtag: "sleepremedy" },
+  "en-skin-beauty": { tags: ["skincare", "skin remedy", "natural beauty"], hashtag: "skincare" },
+  "en-digestion": { tags: ["digestive health", "upset stomach", "digestion tips"], hashtag: "digestivehealth" },
+};
+const categoryInfo = CATEGORY_KEYWORDS[episode.category];
+
+function buildTags() {
+  const base = isEn
+    ? ["homeremedies", "folkwisdom", "shorts"]
+    : ["suckhoe", "meodangian", "shorts"];
+  const ingredientTags = episode.ingredientName
+    .split(/,| và | and |\//i)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const tags = [...base, ...ingredientTags, ...(categoryInfo?.tags ?? [])];
+  return [...new Set(tags)].slice(0, 8);
+}
+
+function buildHashtagLine() {
+  const base = isEn
+    ? ["#homeremedies", "#folkwisdom", "#shorts"]
+    : ["#suckhoe", "#meodangian", "#shorts"];
+  const extra = [categoryInfo ? `#${categoryInfo.hashtag}` : null, isEn ? "#naturalremedies" : "#meovat"].filter(
+    Boolean
+  );
+  return [...base, ...extra].join(" ");
+}
+
 const title = `${episode.channelTitle} #Shorts`;
 const description = isEn
   ? [
@@ -71,7 +113,7 @@ const description = isEn
       "Shared as traditional folk wisdom, not medical advice — talk to a doctor for any real health concern.",
       episode.caution ?? "",
       "",
-      "#homeremedies #folkwisdom #shorts",
+      buildHashtagLine(),
     ].join("\n")
   : [
       episode.remedy,
@@ -82,7 +124,7 @@ const description = isEn
       "Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ.",
       episode.caution ?? "",
       "",
-      "#suckhoe #meodangian #shorts",
+      buildHashtagLine(),
     ].join("\n");
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
@@ -98,9 +140,7 @@ const res = await youtube.videos.insert({
     snippet: {
       title,
       description,
-      tags: isEn
-        ? ["homeremedies", "folkwisdom", "shorts"]
-        : ["suckhoe", "meodangian", "shorts"],
+      tags: buildTags(),
       categoryId: "26", // Howto & Style
     },
     status: {

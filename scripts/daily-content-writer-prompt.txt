@@ -4,6 +4,7 @@ FIRST, read these files to understand the exact format and rules before writing 
 - src/suckhoe/types.ts (the SucKhoeEpisode shape: slug, channelTitle, hook, ingredientName, remedy, steps, caution?, cta, locale?)
 - src/suckhoe/episodes/index.ts and a few existing files in src/suckhoe/episodes/*.json — both a Vietnamese one (no `locale` field, or `"locale": "vi"`) and an English one (`"locale": "en"`, slug prefixed `en-`) for tone/length reference
 - The "Kênh Suc Khoe" section of README.md (compliance rules)
+- src/suckhoe/channel-report-vi.md and src/suckhoe/channel-report-en.md, IF they exist (written daily by the channel-report job — best-effort, skip silently if missing or if the "Most recent videos" table isn't there yet, e.g. a brand-new channel with too little data). When present, look at the per-video view/like/comment counts: lean toward writing more episodes in the ingredient/category territory of whatever is visibly landing best, and be more cautious about repeating a format that's visibly flat across several entries. This is a soft signal, not a hard rule — never skip an otherwise good, compliant, non-duplicate topic just because the report doesn't mention it yet.
 
 Each run, add 8 to 12 new Vietnamese episodes AND 3 to 5 new English episodes — two independent batches, not translations of each other.
 
