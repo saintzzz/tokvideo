@@ -24,6 +24,16 @@ import { google } from "googleapis";
 // stats + YouTube Analytics, needed for scripts/channel-report.mjs. A token
 // issued under the old upload-only scope will fail on those calls with a
 // 403 (insufficient scope) until you re-run this and update the secret.
+//
+// 2026-08-23: added youtube.force-ssl. Manage-only scope covers uploads,
+// metadata, playlists, and privacy changes, but NOT posting or moderating
+// comments (commentThreads.insert) — confirmed the hard way when the
+// comment-outreach growth tactic failed with "insufficient authentication
+// scopes" on a manage-scope token. force-ssl is the superset (manage +
+// comments/moderation + ratings + subscriptions), requested once here so we
+// don't hit a third scope wall later. Run this for BOTH channels (VI and
+// EN are separate Google accounts) and update both YOUTUBE_REFRESH_TOKEN
+// and YOUTUBE_EN_REFRESH_TOKEN secrets.
 
 const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
 const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
@@ -46,12 +56,13 @@ const authUrl = oauth2Client.generateAuthUrl({
   access_type: "offline",
   prompt: "consent",
   scope: [
-    // Full manage scope, not just youtube.upload — videos.update (used by
-    // scripts/set-video-privacy.mjs, our incident-response tool) needs
-    // more than upload-only. Confirmed the hard way on 2026-08-22: an
-    // upload-only token got "insufficient authentication scopes" trying
-    // to privatize videos during a live incident.
-    "https://www.googleapis.com/auth/youtube",
+    // Superset of "https://www.googleapis.com/auth/youtube" — everything
+    // that scope covers (uploads, metadata, playlists, privacy changes)
+    // PLUS posting/moderating comments, ratings, and subscriptions.
+    // Requesting the broad scope once instead of the narrow one so a new
+    // use case (comment outreach, liking a video, etc.) doesn't need yet
+    // another re-auth round later.
+    "https://www.googleapis.com/auth/youtube.force-ssl",
     // Analytics API is a separate scope regardless — needed by
     // scripts/channel-report.mjs for real subscriber/view/retention data.
     "https://www.googleapis.com/auth/yt-analytics.readonly",
