@@ -10,6 +10,16 @@ import chanhMatOngSang from "./chanh-mat-ong-sang.json";
 import nuocEpCaRot from "./nuoc-ep-ca-rot.json";
 import rauDiepCa from "./rau-diep-ca.json";
 import chaoHanhLa from "./chao-hanh-la.json";
+import laLotXao from "./la-lot-xao.json";
+import ngamChanGung from "./ngam-chan-gung.json";
+import boKetGoiDau from "./bo-ket-goi-dau.json";
+import khoaiLangLuoc from "./khoai-lang-luoc.json";
+import trungChienNgaiCuu from "./trung-chien-ngai-cuu.json";
+import nuocDinhLang from "./nuoc-dinh-lang.json";
+import laTrauKhongRua from "./la-trau-khong-rua.json";
+import muoiHotRangChuomVai from "./muoi-hot-rang-chuom-vai.json";
+import nuocLaOi from "./nuoc-la-oi.json";
+import sucMiengNuocMuoiAm from "./suc-mieng-nuoc-muoi-am.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -29,4 +39,14 @@ export const EPISODES: SucKhoeEpisode[] = [
   nuocEpCaRot,
   rauDiepCa,
   chaoHanhLa,
+  laLotXao,
+  ngamChanGung,
+  boKetGoiDau,
+  khoaiLangLuoc,
+  trungChienNgaiCuu,
+  nuocDinhLang,
+  laTrauKhongRua,
+  muoiHotRangChuomVai,
+  nuocLaOi,
+  sucMiengNuocMuoiAm,
 ] as SucKhoeEpisode[];
