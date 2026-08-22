@@ -1,5 +1,5 @@
 import React from "react";
-import { Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { Audio, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { LongFormSceneBackground, SceneName } from "./LongFormSceneBackground";
 import { HostSilhouette } from "../components/HostSilhouette";
 import { GranddaughterSilhouette } from "../components/GranddaughterSilhouette";
@@ -13,6 +13,7 @@ export const DialogueScene: React.FC<{
   hasAudio: boolean;
 }> = ({ beat, locale, audioSrc, hasAudio }) => {
   const frame = useCurrentFrame();
+  const { fps, durationInFrames } = useVideoConfig();
   const captionOpacity = interpolate(frame, [0, 10], [0, 1], {
     extrapolateRight: "clamp",
   });
@@ -22,9 +23,26 @@ export const DialogueScene: React.FC<{
   const granddaughterSpeaking = hasAudio && beat.speaker === "granddaughter";
   const granddaughterChecking = beat.speaker === "granddaughter" && !!beat.factReveal;
 
+  // Cheap "camera" — a slow, continuous push-in across the beat instead of
+  // a static locked-off shot. Each beat is its own Sequence, so `frame`
+  // and `durationInFrames` are already scoped to just this beat.
+  const cameraScale = interpolate(frame, [0, durationInFrames], [1, 1.035], {
+    extrapolateRight: "clamp",
+  });
+
+  // A brief excited "pop" on whoever is about to reveal the research
+  // behind a remedy — cheaper than full gesture rigging, but reads as a
+  // reaction instead of a static pose.
+  const excitementPop = beat.factReveal
+    ? spring({ frame, fps, config: { damping: 8, mass: 0.5 }, durationInFrames: 18 })
+    : 0;
+  const excitementScale = 1 + excitementPop * 0.08;
+
   return (
     <LongFormSceneBackground scene={beat.scene as SceneName}>
       {audioSrc ? <Audio src={staticFile(audioSrc)} /> : null}
+
+      <div style={{ position: "absolute", inset: 0, transform: `scale(${cameraScale})` }}>
 
       {!isNarrator ? (
         <div
@@ -41,17 +59,43 @@ export const DialogueScene: React.FC<{
           <div
             style={{
               opacity: beat.speaker === "grandma" ? 1 : 0.45,
-              transform: `scale(${beat.speaker === "grandma" ? 1 : 0.88})`,
+              transform: `scale(${(beat.speaker === "grandma" ? 1 : 0.88) * (beat.speaker === "grandma" ? excitementScale : 1)})`,
             }}
           >
+            {beat.speaker === "grandma" && beat.factReveal ? (
+              <div
+                style={{
+                  position: "absolute",
+                  width: 260,
+                  height: 260,
+                  borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(255,224,130,0.5) 0%, rgba(255,224,130,0) 70%)",
+                  opacity: excitementPop,
+                  transform: "translate(-40px, -40px)",
+                }}
+              />
+            ) : null}
             <HostSilhouette locale={locale} scale={1.5} isSpeaking={hostSpeaking} />
           </div>
           <div
             style={{
               opacity: beat.speaker === "granddaughter" ? 1 : 0.45,
-              transform: `scale(${beat.speaker === "granddaughter" ? 1 : 0.88})`,
+              transform: `scale(${(beat.speaker === "granddaughter" ? 1 : 0.88) * (beat.speaker === "granddaughter" ? excitementScale : 1)})`,
             }}
           >
+            {beat.speaker === "granddaughter" && beat.factReveal ? (
+              <div
+                style={{
+                  position: "absolute",
+                  width: 260,
+                  height: 260,
+                  borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(255,224,130,0.5) 0%, rgba(255,224,130,0) 70%)",
+                  opacity: excitementPop,
+                  transform: "translate(-40px, -40px)",
+                }}
+              />
+            ) : null}
             <GranddaughterSilhouette
               scale={1.4}
               isSpeaking={granddaughterSpeaking}
@@ -90,6 +134,7 @@ export const DialogueScene: React.FC<{
         >
           {beat.text}
         </div>
+      </div>
       </div>
     </LongFormSceneBackground>
   );
