@@ -4,6 +4,7 @@ import { ChurchillComposition } from "./ChurchillComposition";
 import { HippocratesComposition } from "./HippocratesComposition";
 import { IdeverrayComposition } from "./IdeverrayComposition";
 import { AmMuuComposition } from "./AmMuuComposition";
+import { SucKhoeCompositions } from "./SucKhoeComposition";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ export const RemotionRoot: React.FC = () => {
       <HippocratesComposition />
       <IdeverrayComposition />
       <AmMuuComposition />
+      <SucKhoeCompositions />
     </>
   );
 };

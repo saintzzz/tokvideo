@@ -9,6 +9,11 @@ Nhiều video quảng cáo affiliate, mỗi video là 1 sản phẩm, định d�
 | `src/ChurchillVideo.tsx` | Sách: Nghệ Thuật Giao Tiếp Đỉnh Cao (Cốc Vũ) | `Churchill-GiaoTiep` |
 | `src/HippocratesVideo.tsx` | Sách: Liệu Pháp Dinh Dưỡng Cho Mọi Loại Bệnh (NewLife) | `Hippocrates-DinhDuong` |
 | `src/IdeverrayVideo.tsx` | Áo: set áo đôi IDEVE LAZRY (IDeverRAY) | `Ideverray-AoDoi` |
+| `src/AmMuuVideo.tsx` | Sách: Thuyết Âm Mưu / Thuyết Dương Mưu (Mặc Am, SBOOKS) | `AmMuu-ChienLuoc` |
+
+Ngoài ra có **kênh YouTube Shorts riêng** ("Suc Khoe" — mẹo dân gian từ thức ăn,
+đồ uống), khác hẳn 5 video trên vì đây không phải quảng cáo 1 sản phẩm mà là
+nhiều tập của cùng 1 kênh. Xem mục "Kênh Suc Khoe" bên dưới.
 
 `Ideverray-AoDoi` là video đầu tiên dùng **ảnh sản phẩm thật** (do người bán tự
 chụp, không phải ảnh của bên thứ ba) thay vì minh hoạ — hiệu ứng Ken Burns
@@ -63,6 +68,46 @@ thì cả hai video đều render lại vì đều bị ảnh hưởng.
 4. Thêm `render:<ten>` + `generate-voiceover:<ten>` vào `package.json`.
 5. Thêm entry `<ten>` vào `filters` (`gia_cat_luong`/`churchill` block) và một job
    `render-<ten>` mới trong `.github/workflows/render.yml`.
+
+## Kênh Suc Khoe (YouTube Shorts, mẹo dân gian)
+
+Khác với 5 video trên (mỗi video = 1 sản phẩm, viết tay từng scene), kênh này
+là **1 hệ thống chung** cho nhiều tập theo thời gian — thêm tập mới chỉ cần
+thêm 1 file nội dung, không cần viết code.
+
+**Quy tắc bắt buộc cho mọi tập** (nội dung sức khoẻ bị YouTube kiểm soát rất
+chặt, dễ bị gỡ/phạt kênh nếu sai):
+- Luôn khẳng định là "kinh nghiệm dân gian" / "theo quan niệm dân gian", không
+  dùng từ "chữa bệnh", "trị bệnh", "thay thuốc"
+- Luôn có dòng disclaimer "không thay thế ý kiến bác sĩ" ở CTA scene (đã có sẵn
+  trong `CTAScene.tsx`, không cần thêm)
+- Ghi rõ cảnh báo riêng của nguyên liệu nếu có (vd mật ong với trẻ dưới 1 tuổi)
+  vào trường `caution`
+
+**Thêm tập mới:**
+1. Tạo file `src/suckhoe/episodes/<slug>.json` theo đúng field trong
+   `src/suckhoe/types.ts` (`hook`, `ingredientName`, `remedy`, `steps`, `cta`,
+   `caution` tuỳ chọn).
+2. Thêm 1 dòng import vào `src/suckhoe/episodes/index.ts`.
+3. Xong — composition `SucKhoe-<slug>`, voiceover, và job render trên CI đều tự
+   nhận file mới, không cần sửa gì khác (script sinh voiceover và script render
+   tự quét thư mục `episodes/`).
+
+```console
+npm run generate-voiceover:suckhoe   # sinh giọng đọc cho MỌI tập
+npm run render:suckhoe               # render MỌI tập
+node scripts/render-suckhoe.mjs gung-mat-ong   # chỉ 1 tập
+```
+
+**Nhân vật host:** `HealerSilhouette` — bà lang minh hoạ, miệng mấp máy khi có
+giọng đọc (kỹ thuật giống `HippocratesSilhouette`), dùng xuyên suốt kênh để tạo
+nhận diện thương hiệu.
+
+**CTA khác TikTok:** kênh này lên YouTube Shorts, không có thẻ giỏ hàng gắn sẵn
+như TikTok Shop. `SubscribePointer` trỏ vào vùng nút Subscribe của YouTube
+Shorts (khoảng 78% chiều cao màn hình, bên trái) — vị trí ước lượng theo UI
+hiện tại, nên kiểm tra lại nếu YouTube đổi giao diện. Link affiliate (nếu có)
+để trong phần mô tả video khi đăng, không gắn được vào trong video như TikTok.
 
 ## Chỉnh sửa nội dung
 

@@ -1,12 +1,49 @@
 import { createWriteStream } from "node:fs";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readdir } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
 import giaCatLuongNarration from "../src/narration.json" with { type: "json" };
 import churchillNarration from "../src/narration.churchill.json" with { type: "json" };
 import hippocratesNarration from "../src/narration.hippocrates.json" with { type: "json" };
 import ideverrayNarration from "../src/narration.ideverray.json" with { type: "json" };
 import ammuuNarration from "../src/narration.ammuu.json" with { type: "json" };
+
+// Suc Khoe (health channel) episodes — each is its own video id
+// (`suckhoe-<slug>`), its own audio subfolder, and its own JSON file
+// under src/suckhoe/episodes/. Adding a new episode is just adding a new
+// JSON file there — this reads the directory instead of a hardcoded list,
+// so nothing here needs to change.
+const episodesDir = path.join(
+  import.meta.dirname,
+  "..",
+  "src",
+  "suckhoe",
+  "episodes"
+);
+const episodeFiles = (await readdir(episodesDir)).filter((f) =>
+  f.endsWith(".json")
+);
+const SUCKHOE_EPISODES = await Promise.all(
+  episodeFiles.map(async (file) => {
+    const url = pathToFileURL(path.join(episodesDir, file));
+    const mod = await import(url, { with: { type: "json" } });
+    return mod.default;
+  })
+);
+
+// Spoken narration is derived from the same structured content the on
+// screen text uses, so there is only one place to edit per episode.
+const buildSucKhoeNarration = (episode) => ({
+  hook: episode.hook,
+  remedy: episode.remedy,
+  steps: `Cách làm rất đơn giản. ${episode.steps
+    .map((step, i) => `Bước ${i + 1}, ${step}`)
+    .join(". ")}.`,
+  cta: episode.caution
+    ? `${episode.cta}. Lưu ý, ${episode.caution.toLowerCase()}.`
+    : episode.cta,
+});
 
 // Free Microsoft Edge "Read Aloud" voice, no API key required.
 // Other good Vietnamese options: "vi-VN-HoaiMyNeural" (female).
@@ -43,10 +80,26 @@ const VIDEOS = {
   },
 };
 
-// Pass one or more video ids as CLI args to generate only those.
-// With no args, generates every video (used for local dev).
+for (const episode of SUCKHOE_EPISODES) {
+  VIDEOS[`suckhoe-${episode.slug}`] = {
+    audioDir: path.join(publicDir, "suckhoe", episode.slug),
+    narration: buildSucKhoeNarration(episode),
+  };
+}
+
+// Pass one or more video ids as CLI args to generate only those. The bare
+// id "suckhoe" expands to every "suckhoe-<slug>" episode, so CI doesn't
+// need updating when a new episode is added. With no args, generates
+// every video (used for local dev).
 const requested = process.argv.slice(2);
-const ids = requested.length > 0 ? requested : Object.keys(VIDEOS);
+const ids =
+  requested.length > 0
+    ? requested.flatMap((id) =>
+        id === "suckhoe"
+          ? Object.keys(VIDEOS).filter((key) => key.startsWith("suckhoe-"))
+          : [id]
+      )
+    : Object.keys(VIDEOS);
 
 for (const id of ids) {
   if (!VIDEOS[id]) {

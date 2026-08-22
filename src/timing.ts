@@ -56,3 +56,12 @@ export const AMMUU_FALLBACK_SECONDS = {
 } as const;
 
 export type AmMuuSceneKey = keyof typeof AMMUU_FALLBACK_SECONDS;
+
+export const SUCKHOE_FALLBACK_SECONDS = {
+  hook: 4,
+  remedy: 6,
+  steps: 10,
+  cta: 5,
+} as const;
+
+export type SucKhoeSceneKey = keyof typeof SUCKHOE_FALLBACK_SECONDS;
