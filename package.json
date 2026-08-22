@@ -51,7 +51,8 @@
     "publish:suckhoe": "npm run generate-voiceover:suckhoe && npm run render:suckhoe && npm run upload-youtube:suckhoe",
     "publish-next:suckhoe": "node scripts/publish-next-suckhoe.mjs --locale=vi",
     "publish-next:suckhoe-en": "node scripts/publish-next-suckhoe.mjs --locale=en",
-    "channel-report": "node scripts/channel-report.mjs"
+    "channel-report": "node scripts/channel-report.mjs",
+    "release-shelved:suckhoe": "node scripts/release-shelved-video.mjs"
   },
   "sideEffects": [
     "*.css"

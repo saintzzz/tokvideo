@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -50,6 +50,15 @@ on:
     # YOUTUBE_* secrets carry a token with the readonly/analytics scopes
     # (see scripts/youtube-get-refresh-token.mjs).
     - cron: "0 0 * * *"
+    # Three times daily — releases exactly one shelved (privated) video
+    # back to public, so the 7 legitimate episodes caught by the
+    # 2026-08-22 mass-upload incident get out to the audience gradually
+    # instead of staying privately shelved forever, without dumping them
+    # all back to public at once and recreating the exact same problem.
+    # No-ops harmlessly once src/suckhoe/shelved-videos.json is empty —
+    # never remove this trigger expecting it to matter only temporarily,
+    # it's a permanent safety valve for any future batch that needs it.
+    - cron: "0 2,10,18 * * *"
 
 jobs:
   detect-changes:
@@ -242,7 +251,7 @@ jobs:
             # Manual "render all suckhoe" dispatch — deliberately full,
             # not diffed.
             echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
-          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ]; then
+          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ] || [ "$VIDEO_INPUT" = "release-shelved-suckhoe" ]; then
             # These are each gated directly on their own input value in
             # their own job — none of the render-* jobs should run. A
             # missing branch here previously fell through to the
@@ -616,6 +625,44 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published.json
           git diff --staged --quiet || git commit -m "Mark next Suc Khoe (EN) episode as published [skip ci]"
+          git push
+
+  # Three times daily (see the schedule trigger above): release exactly
+  # one shelved/privated video back to public. See
+  # scripts/release-shelved-video.mjs and src/suckhoe/shelved-videos.json.
+  release-shelved-suckhoe:
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 2,10,18 * * *') || github.event.inputs.video == 'release-shelved-suckhoe'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: suckhoe-publish-queue
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Release next shelved video
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: npm run release-shelved:suckhoe
+
+      - name: Commit updated shelf
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/shelved-videos.json
+          git diff --staged --quiet || git commit -m "Release next shelved Suc Khoe video [skip ci]"
           git push
 
   # Once daily (see the schedule trigger above): print real channel/video
