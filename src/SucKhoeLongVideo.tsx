@@ -32,12 +32,19 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
           );
         }
         const beat = episode.beats[segment.beatIndex];
+        // A visual "reset" cue right where a new scene/act begins — a
+        // quick flash + zoom-punch instead of the usual slow push-in.
+        // Acts run roughly 45-70s each, comfortably within the 30-90s
+        // window retention research recommends for pattern interrupts.
+        const previousBeat = episode.beats[segment.beatIndex - 1];
+        const isSceneStart = segment.beatIndex === 0 || previousBeat?.scene !== beat.scene;
         return (
           <Series.Sequence key={i} durationInFrames={segment.durationInFrames}>
             <DialogueScene
               beat={beat}
               locale={episode.locale}
               hasAudio={segment.hasAudio}
+              isSceneStart={isSceneStart}
               audioSrc={
                 segment.hasAudio
                   ? `audio/suckhoe-long/${episode.slug}/beat-${segment.beatIndex}.mp3`

@@ -3,6 +3,7 @@ import { Audio, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig
 import { LongFormSceneBackground, SceneName } from "./LongFormSceneBackground";
 import { HostSilhouette } from "../components/HostSilhouette";
 import { GranddaughterSilhouette } from "../components/GranddaughterSilhouette";
+import { KineticText } from "../components/KineticText";
 import { fonts } from "../fonts";
 import { LongFormBeat } from "../suckhoe/long-form/types";
 
@@ -11,12 +12,10 @@ export const DialogueScene: React.FC<{
   locale: "vi" | "en";
   audioSrc?: string;
   hasAudio: boolean;
-}> = ({ beat, locale, audioSrc, hasAudio }) => {
+  isSceneStart: boolean;
+}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
-  const captionOpacity = interpolate(frame, [0, 10], [0, 1], {
-    extrapolateRight: "clamp",
-  });
 
   const isNarrator = beat.speaker === "narrator";
   const hostSpeaking = hasAudio && beat.speaker === "grandma";
@@ -38,11 +37,23 @@ export const DialogueScene: React.FC<{
     : 0;
   const excitementScale = 1 + excitementPop * 0.08;
 
+  // Pattern interrupt: a quick flash + zoom-punch right as a new
+  // scene/act begins, instead of just the usual slow push-in — retention
+  // research recommends a visual "reset" roughly every 30-90s, and acts
+  // here run in that range naturally.
+  const sceneStartPunch = isSceneStart
+    ? spring({ frame, fps, config: { damping: 12, mass: 0.4 }, durationInFrames: 14 })
+    : 0;
+  const punchScale = 1 + interpolate(sceneStartPunch, [0, 1], [0.06, 0]);
+  const flashOpacity = isSceneStart
+    ? interpolate(frame, [0, 3, 14], [0.55, 0.55, 0], { extrapolateRight: "clamp" })
+    : 0;
+
   return (
     <LongFormSceneBackground scene={beat.scene as SceneName}>
       {audioSrc ? <Audio src={staticFile(audioSrc)} /> : null}
 
-      <div style={{ position: "absolute", inset: 0, transform: `scale(${cameraScale})` }}>
+      <div style={{ position: "absolute", inset: 0, transform: `scale(${cameraScale * punchScale})` }}>
 
       {!isNarrator ? (
         <div
@@ -110,32 +121,44 @@ export const DialogueScene: React.FC<{
           position: "absolute",
           left: 0,
           right: 0,
-          bottom: isNarrator ? undefined : 30,
-          top: isNarrator ? "45%" : undefined,
+          top: "16%",
           display: "flex",
           justifyContent: "center",
-          padding: "0 220px",
-          opacity: captionOpacity,
+          padding: "0 180px",
         }}
       >
         <div
           style={{
-            fontFamily: fonts.sans,
-            fontWeight: isNarrator ? 700 : 600,
-            fontSize: isNarrator ? 46 : 32,
-            lineHeight: 1.4,
-            color: "#F2FAEC",
-            textAlign: "center",
-            textShadow: "0 2px 12px rgba(0,0,0,0.6)",
-            backgroundColor: isNarrator ? "transparent" : "rgba(14,21,13,0.55)",
-            borderRadius: 16,
-            padding: isNarrator ? 0 : "14px 28px",
+            backgroundColor: isNarrator ? "transparent" : "rgba(14,21,13,0.6)",
+            borderRadius: 20,
+            padding: isNarrator ? 0 : "18px 36px",
+            boxShadow: isNarrator ? "none" : "0 10px 30px rgba(0,0,0,0.4)",
           }}
         >
-          {beat.caption ?? beat.text}
+          <KineticText
+            key={beat.caption ?? beat.text}
+            text={beat.caption ?? beat.text}
+            fontSize={isNarrator ? 58 : 46}
+            fontFamily={fonts.sans}
+            fontWeight={800}
+            color="#F2FAEC"
+            highlightColor="#7CB342"
+            highlightStyle="chip"
+            stagger={2}
+          />
         </div>
       </div>
       </div>
+
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "#fff",
+          opacity: flashOpacity,
+          pointerEvents: "none",
+        }}
+      />
     </LongFormSceneBackground>
   );
 };
