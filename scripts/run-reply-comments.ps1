@@ -38,7 +38,7 @@ try {
     Set-Location $repoPath
 
     # Task Scheduler processes don't inherit the YOUTUBE_* secrets a
-    # GitHub Actions job would get via `env:` — load them from a local,
+    # GitHub Actions job would get via `env:`, load them from a local,
     # gitignored file instead (scripts/.env.youtube.local). Confirmed
     # missing live on 2026-08-23: the job correctly refused to fabricate
     # credentials and just reported it couldn't proceed.
@@ -51,7 +51,7 @@ try {
         }
         Add-Content -Path $logPath -Value "Loaded YouTube credentials from $envFile"
     } else {
-        Add-Content -Path $logPath -Value "WARNING: $envFile not found — YouTube API calls will fail."
+        Add-Content -Path $logPath -Value "WARNING: $envFile not found, YouTube API calls will fail."
     }
 
     Get-Content -Raw -Path $promptPath | claude -p `

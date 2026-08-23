@@ -3,7 +3,7 @@
 # leave a small number of genuine comments on relevant third-party videos,
 # then exits. Logs to comment-outreach.log next to this script.
 #
-# Mirrors scripts/run-daily-content-writer.ps1's proven pattern exactly —
+# Mirrors scripts/run-daily-content-writer.ps1's proven pattern exactly,
 # see that file's comments for why (stdin-piped prompt, defensive
 # try/catch logging).
 
@@ -35,7 +35,7 @@ try {
     Set-Location $repoPath
 
     # Task Scheduler processes don't inherit the YOUTUBE_* secrets a
-    # GitHub Actions job would get via `env:` — load them from a local,
+    # GitHub Actions job would get via `env:`, load them from a local,
     # gitignored file instead (scripts/.env.youtube.local).
     $envFile = Join-Path $PSScriptRoot ".env.youtube.local"
     if (Test-Path $envFile) {
@@ -46,7 +46,7 @@ try {
         }
         Add-Content -Path $logPath -Value "Loaded YouTube credentials from $envFile"
     } else {
-        Add-Content -Path $logPath -Value "WARNING: $envFile not found — YouTube API calls will fail."
+        Add-Content -Path $logPath -Value "WARNING: $envFile not found, YouTube API calls will fail."
     }
 
     Get-Content -Raw -Path $promptPath | claude -p `
