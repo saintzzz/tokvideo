@@ -20,3 +20,7 @@ scripts/comment-outreach.log
 # processes don't inherit any secrets set for a GitHub Actions job. Never
 # commit this — same 4 values as the GitHub secrets of the same name.
 scripts/.env.youtube.local
+
+# Rendered frames/video from the Blender proof-of-concept scripts under
+# blender/ — regenerate by running the script, same convention as out/.
+blender/out
