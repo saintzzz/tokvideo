@@ -152,7 +152,7 @@ cho cả 2 kênh (VI dùng `YOUTUBE_REFRESH_TOKEN`, EN dùng
 `YOUTUBE_EN_REFRESH_TOKEN`), ghi ra `src/suckhoe/channel-report-vi.md` và
 `channel-report-en.md` rồi tự commit — số subscriber/view/watch-time 28
 ngày gần nhất và bảng hiệu suất các video mới nhất. Ghi ra file (thay vì
-chỉ log) để job viết tập mới (`daily-content-writer.yml`) đọc lại được,
+chỉ log) để job viết tập mới (Task Scheduler, xem mục dưới) đọc lại được,
 ưu tiên viết thêm chủ đề đang có hiệu suất tốt. Chạy tay bằng
 `npm run channel-report -- --locale=vi` (hoặc `--locale=en`) — cần refresh
 token có thêm quyền `youtube.force-ssl` + `yt-analytics.readonly`, chạy
@@ -163,21 +163,52 @@ hashtag theo `category` của tập (map trong chính file đó) thay vì chỉ 
 chung chung như trước — theo khuyến nghị 2026 để thuật toán nhận diện chủ
 đề chính xác hơn (xem comment trong file để biết map đầy đủ).
 
-### Tự động viết thêm tập mới mỗi ngày
+### Tự động viết + tương tác nội dung — chạy qua Windows Task Scheduler
 
-Workflow `.github/workflows/daily-content-writer.yml` chạy 1 lần/ngày
-(20:00 UTC), gọi Claude Code CLI để tự nghiên cứu và viết thêm 8-12 tập mới
-vào `src/suckhoe/episodes/`, đăng ký vào `index.ts`, rồi tự commit/push —
-giữ hàng đợi không bao giờ cạn. Chạy trên GitHub Actions thay vì máy local
-vì máy Windows ở đây có chính sách bảo mật (Application Control) chặn các
-tiến trình do Task Scheduler khởi chạy — cùng loại giới hạn đã buộc phải
-chuyển việc render/đăng video ra CI trước đó.
+Ba việc cần Claude thật sự "suy nghĩ" (đọc nội dung, viết câu trả lời/comment
+genuine, không phải script cứng) chạy qua **Task Scheduler trên máy local**,
+gọi thẳng Claude Code CLI đã đăng nhập sẵn (`claude -p`) — dùng đúng gói
+Claude hiện có, KHÔNG cần API key trả phí riêng:
 
-Không tự chạy nếu chưa có secret `ANTHROPIC_API_KEY` (repo Settings →
-Secrets and variables → Actions). Đây dùng API key trả tiền theo lượng
-dùng thật (khác với gói Claude subscription cá nhân) — nên kiểm tra usage
-ở https://console.anthropic.com/ sau vài lần chạy đầu để biết chi phí thực
-tế trước khi yên tâm để chạy dài hạn.
+| Task Scheduler task | Tần suất | Script | Prompt |
+|---|---|---|---|
+| `SucKhoeDailyContentWriter` | 1 lần/ngày, 8h sáng | `scripts/run-daily-content-writer.ps1` | `scripts/daily-content-writer-prompt.txt` |
+| `SucKhoeReplyComments` | 1 lần/ngày, 16h | `scripts/run-reply-comments.ps1` | `scripts/reply-comments-prompt.txt` |
+| `SucKhoeCommentOutreach` | mỗi 3 ngày, 20h | `scripts/run-comment-outreach.ps1` | `scripts/comment-outreach-prompt.txt` |
+
+**Reply-comments:** trả lời comment mới trên chính video của kênh — an toàn
+tuyệt đối (chỉ nói chuyện với khán giả của mình), lại là tín hiệu thuật
+toán thật (YouTube tính hội thoại qua lại dưới video là dấu hiệu cộng đồng
+gắn kết). Log các comment đã trả lời: `src/suckhoe/replied-comments-log.json`.
+
+**Comment-outreach:** để lại tối đa 1 comment MỖI kênh mỗi lần chạy, trên
+video của kênh KHÁC thật sự liên quan nội dung — không quảng cáo, không
+link, phải cụ thể theo đúng nội dung video đó. Được chủ kênh xác nhận cho
+chạy tự động (2026-08-23), với điều kiện giữ đúng rule trong
+`comment-outreach-prompt.txt` (số lượng thấp, genuine, không hạ chuẩn để
+cố đạt đủ số). Log video đã comment: `src/suckhoe/comment-outreach-log.json`.
+
+**Vì sao Task Scheduler chứ không phải GitHub Actions:** một chính sách bảo
+mật Windows trên máy này từng chặn im lặng các process do `schtasks` khởi
+chạy (không log, không lỗi, không gì cả) — đó là lý do render/upload video
+đã chuyển hẳn sang CI từ trước. Nhưng khi thử lại kỹ hơn cho việc viết nội
+dung (2026-08-23), hoá ra vấn đề thật không phải bị chặn hoàn toàn, mà là
+2 lỗi khác: (1) script gốc không ghi log gì cả nên nhìn như "không chạy",
+và (2) prompt dài nhiều dòng truyền qua tham số dòng lệnh `-p "..."` bị
+Task Scheduler cắt cụt giữa chừng. Sửa cả 2 (ghi log đầy đủ mọi bước +
+try/catch, và đổi sang pipe prompt qua stdin: `Get-Content -Raw | claude -p`
+thay vì truyền làm argument) thì chạy ổn định thật — đã xác nhận nhiều lần
+liên tiếp thành công. **Bài học: đừng vội kết luận "bị nền tảng chặn cứng"
+khi mới chỉ thấy im lặng/không log — luôn thêm logging trước khi đổi kiến
+trúc.** GitHub Actions chỉ nên dùng cho việc không cần Claude "suy nghĩ"
+(render, upload, publish-next, channel-report) — những việc đó vẫn ở CI
+như cũ, không đổi.
+
+**Credential cho 2 job liên quan YouTube** (reply-comments, comment-outreach):
+Task Scheduler không tự có `YOUTUBE_*` như GitHub Actions secrets — 2 script
+`.ps1` tự đọc từ `scripts/.env.youtube.local` (gitignore, tự tạo 1 lần với
+đúng 4 biến `YOUTUBE_CLIENT_ID`/`_SECRET`/`_REFRESH_TOKEN`/`_EN_REFRESH_TOKEN`
+giống hệt giá trị trong GitHub Secrets) trước khi gọi `claude`.
 
 ### Avatar và banner kênh
 
@@ -207,28 +238,8 @@ banner và watermark). Phải tự vào YouTube Studio → Customization →
 Branding → Picture để upload tay 2 file `avatar-vi.png` / `avatar-en.png`
 ở trên, một lần duy nhất (hoặc mỗi khi muốn đổi).
 
-### Tương tác cộng đồng tự động
-
-Hai workflow riêng, cùng cơ chế `claude -p` + prompt file như job viết tập
-mới ở trên (Claude tự đọc/ghi/commit qua Bash, không phải script cứng —
-cần thật sự đọc nội dung để viết được câu trả lời/comment genuine):
-
-- **`reply-comments.yml`** (1 lần/ngày, 09:00 UTC): trả lời comment mới trên
-  chính video của kênh — an toàn tuyệt đối (chỉ nói chuyện với khán giả của
-  mình), lại là tín hiệu thuật toán thật (YouTube tính hội thoại qua lại
-  dưới video là dấu hiệu cộng đồng gắn kết). Rule chi tiết:
-  `scripts/reply-comments-prompt.txt`. Log các comment đã trả lời:
-  `src/suckhoe/replied-comments-log.json`.
-- **`comment-outreach.yml`** (mỗi 3 ngày, 13:00 UTC): để lại tối đa 1 comment
-  MỖI kênh mỗi lần chạy, trên video của kênh KHÁC thật sự liên quan nội dung
-  — không quảng cáo, không link, phải cụ thể theo đúng nội dung video đó.
-  Được chủ kênh xác nhận cho chạy tự động (2026-08-23), với điều kiện giữ
-  đúng các rule trong `scripts/comment-outreach-prompt.txt` (số lượng thấp,
-  genuine, không hạ chuẩn để cố đạt đủ số). Log video đã comment:
-  `src/suckhoe/comment-outreach-log.json`.
-
-Cả 2 job cần refresh token có quyền `youtube.force-ssl` (quyền quản lý cũ
-`youtube` KHÔNG đủ để post comment — xác nhận thực tế 2026-08-23, lỗi
+Cả 2 job comment cần refresh token có quyền `youtube.force-ssl` (quyền quản
+lý cũ `youtube` KHÔNG đủ để post comment — xác nhận thực tế 2026-08-23, lỗi
 "insufficient authentication scopes"). Chạy lại bước 4 ở mục "Đăng tự động
 lên YouTube" phía trên nếu token hiện tại chưa có quyền này, cho CẢ 2 kênh.
 
@@ -254,8 +265,9 @@ phương Tây (không dịch từ tiếng Việt). Kỹ thuật:
   / `YOUTUBE_CLIENT_SECRET` cũ, chỉ refresh token là khác vì gắn với tài
   khoản Google khác) và có thể thêm variable `YOUTUBE_EN_PRIVACY_STATUS`
   riêng (mặc định `private` giống kênh Việt nếu không đặt).
-- `daily-content-writer.yml` đã được cập nhật để tự viết thêm cả episode
-  tiếng Anh (3-5 episode/lần) song song với tiếng Việt, cùng 1 lần chạy.
+- `SucKhoeDailyContentWriter` (Task Scheduler, xem mục trên) viết thêm cả
+  episode tiếng Anh (3-5 episode/lần) song song với tiếng Việt, cùng 1 lần
+  chạy.
 
 ## Chỉnh sửa nội dung
 
