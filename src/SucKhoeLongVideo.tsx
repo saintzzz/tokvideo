@@ -19,15 +19,30 @@ export type SucKhoeLongVideoProps = {
 // remedy. New episodes are added as content
 // (src/suckhoe/long-form/*.json), not as new scene code.
 export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, segments }) => {
+  // Retention research (2026-08-23): numbered-list/countdown framing ("Top
+  // N", "5 mẹo được kiểm chứng") measurably keeps viewers watching to see
+  // every item — once you commit to a count, leaving before the end feels
+  // like missing something. The episode already checks a fixed number of
+  // remedies one by one; this just makes that count EXPLICIT on screen
+  // instead of implicit, via a "Mẹo N/total" badge on each diagram reveal.
+  const totalFactReveals = episode.beats.filter((b) => b.factReveal).length;
+  let factRevealSeen = 0;
+
   return (
     <Series>
       {segments.map((segment, i) => {
         if (segment.type === "diagram") {
           const beat = episode.beats[segment.beatIndex];
           if (!beat.factReveal) return null;
+          factRevealSeen += 1;
           return (
             <Series.Sequence key={i} durationInFrames={segment.durationInFrames}>
-              <DiagramScene diagram={beat.factReveal.diagram} locale={episode.locale} />
+              <DiagramScene
+                diagram={beat.factReveal.diagram}
+                locale={episode.locale}
+                factRevealIndex={factRevealSeen}
+                factRevealTotal={totalFactReveals}
+              />
             </Series.Sequence>
           );
         }
