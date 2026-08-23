@@ -38,6 +38,19 @@ export const HealerSilhouette: React.FC<{
   const eyebrowLift = isSpeaking ? interpolate(Math.sin(frame * 0.2), [-1, 1], [0, -3]) : 0;
   const objectBob = isSpeaking ? Math.sin(frame * 0.25) * 2 : 0;
 
+  // Two more classic principles, cheap to fake without a physics engine:
+  // - "breathing" idle motion (a slow whole-body rise/fall) so she never
+  //   reads as frozen during the many frames she isn't the one talking.
+  // - follow-through: the headscarf's OWN rotation lags a few frames
+  //   behind the head's, then slightly overshoots before settling, rather
+  //   than being welded rigidly to the skull. Computed as the delta
+  //   between a phase-delayed headTilt and the live one, then applied on
+  //   top of the (already headTilt-rotated) parent group — net effect,
+  //   the scarf's absolute rotation IS the delayed value.
+  const breathe = Math.sin(frame * 0.08) * 1.2;
+  const headTiltDelayed = Math.sin((frame - 5) * 0.15) * (isSpeaking ? 2.5 : 0.5) * 1.15;
+  const scarfLagDelta = headTiltDelayed - headTilt;
+
   const w = 340 * scale;
   const h = 340 * scale;
 
@@ -47,7 +60,7 @@ export const HealerSilhouette: React.FC<{
         width: w,
         height: h,
         position: "relative",
-        transform: `rotate(${sway}deg)`,
+        transform: `rotate(${sway}deg) translateY(${breathe}px)`,
       }}
     >
       <svg width={w} height={h} viewBox="0 0 340 340">
@@ -66,15 +79,18 @@ export const HealerSilhouette: React.FC<{
         <g transform={`rotate(${headTilt} 170 150)`}>
           <ellipse cx="170" cy="150" rx="90" ry="95" fill="#EFC090" />
 
-          {/* headscarf (khan mo qua style) */}
-          <path
-            d="M 78 130 Q 80 55 170 50 Q 260 55 262 130 Q 240 95 170 92 Q 100 95 78 130 Z"
-            fill="#6b4a2a"
-          />
-          <path
-            d="M 240 105 Q 268 130 250 168 L 232 150 Q 246 128 228 112 Z"
-            fill="#6b4a2a"
-          />
+          {/* headscarf (khan mo qua style) — rotates a few frames behind
+              the head instead of being welded to it (follow-through) */}
+          <g transform={`rotate(${scarfLagDelta} 170 100)`}>
+            <path
+              d="M 78 130 Q 80 55 170 50 Q 260 55 262 130 Q 240 95 170 92 Q 100 95 78 130 Z"
+              fill="#6b4a2a"
+            />
+            <path
+              d="M 240 105 Q 268 130 250 168 L 232 150 Q 246 128 228 112 Z"
+              fill="#6b4a2a"
+            />
+          </g>
 
           {/* eyebrows — lift slightly while talking, like emphasis */}
           <g transform={`translate(0 ${eyebrowLift})`}>

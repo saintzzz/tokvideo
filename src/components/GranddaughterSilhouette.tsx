@@ -39,6 +39,12 @@ export const GranddaughterSilhouette: React.FC<{
   const eyebrowLift = isSpeaking ? interpolate(Math.sin(frame * 0.22), [-1, 1], [0, -3]) : 0;
   const phoneBob = isSpeaking || checkingPhone ? Math.sin(frame * 0.25) * 2 : 0;
 
+  // Breathing idle + loose-hair-strand follow-through, same technique as
+  // HealerSilhouette.tsx.
+  const breathe = Math.sin(frame * 0.09) * 1.1;
+  const headTiltDelayed = Math.sin((frame - 4) * 0.16) * (isSpeaking ? 2.5 : 0.5) * 1.15;
+  const hairLagDelta = headTiltDelayed - headTilt;
+
   const w = 320 * scale;
   const h = 320 * scale;
 
@@ -48,7 +54,7 @@ export const GranddaughterSilhouette: React.FC<{
         width: w,
         height: h,
         position: "relative",
-        transform: `rotate(${sway}deg)`,
+        transform: `rotate(${sway}deg) translateY(${breathe}px)`,
       }}
     >
       <svg width={w} height={h} viewBox="0 0 320 320">
@@ -62,13 +68,18 @@ export const GranddaughterSilhouette: React.FC<{
         <g transform={`rotate(${headTilt} 160 138)`}>
           <ellipse cx="160" cy="138" rx="82" ry="88" fill="#F2D3AC" />
 
-          {/* hair, tied back with a few loose strands */}
+          {/* hair top, moves rigidly with the head */}
           <path
             d="M 78 120 Q 76 48 160 42 Q 244 48 242 120 Q 236 78 160 74 Q 84 78 78 120 Z"
             fill="#3a2a1f"
           />
-          <path d="M 78 118 Q 66 160 78 200 L 92 190 Q 82 150 90 116 Z" fill="#3a2a1f" />
-          <path d="M 242 118 Q 254 160 242 200 L 228 190 Q 238 150 230 116 Z" fill="#3a2a1f" />
+
+          {/* loose strands — lag a few frames behind (follow-through),
+              like real hair swinging rather than being glued on */}
+          <g transform={`rotate(${hairLagDelta} 160 100)`}>
+            <path d="M 78 118 Q 66 160 78 200 L 92 190 Q 82 150 90 116 Z" fill="#3a2a1f" />
+            <path d="M 242 118 Q 254 160 242 200 L 228 190 Q 238 150 230 116 Z" fill="#3a2a1f" />
+          </g>
 
           {/* eyebrows — lift slightly while talking */}
           <g transform={`translate(0 ${eyebrowLift})`}>

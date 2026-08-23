@@ -38,6 +38,12 @@ export const GrandmaHostSilhouette: React.FC<{
   const eyebrowLift = isSpeaking ? interpolate(Math.sin(frame * 0.2), [-1, 1], [0, -3]) : 0;
   const objectBob = isSpeaking ? Math.sin(frame * 0.25) * 2 : 0;
 
+  // Breathing idle + hair-bun follow-through, same technique as
+  // HealerSilhouette.tsx (see there for the reasoning).
+  const breathe = Math.sin(frame * 0.08) * 1.2;
+  const headTiltDelayed = Math.sin((frame - 5) * 0.15) * (isSpeaking ? 2.5 : 0.5) * 1.15;
+  const hairLagDelta = headTiltDelayed - headTilt;
+
   const w = 340 * scale;
   const h = 340 * scale;
 
@@ -47,7 +53,7 @@ export const GrandmaHostSilhouette: React.FC<{
         width: w,
         height: h,
         position: "relative",
-        transform: `rotate(${sway}deg)`,
+        transform: `rotate(${sway}deg) translateY(${breathe}px)`,
       }}
     >
       <svg width={w} height={h} viewBox="0 0 340 340">
@@ -67,12 +73,14 @@ export const GrandmaHostSilhouette: React.FC<{
         <g transform={`rotate(${headTilt} 170 150)`}>
           <ellipse cx="170" cy="150" rx="88" ry="93" fill="#F0D2AE" />
 
-          {/* grey hair bun */}
-          <path
-            d="M 85 130 Q 82 55 170 48 Q 258 55 255 130 Q 250 90 170 85 Q 90 90 85 130 Z"
-            fill="#D8D4D0"
-          />
-          <circle cx="170" cy="58" r="22" fill="#D8D4D0" />
+          {/* grey hair bun — lags a few frames behind the head (follow-through) */}
+          <g transform={`rotate(${hairLagDelta} 170 90)`}>
+            <path
+              d="M 85 130 Q 82 55 170 48 Q 258 55 255 130 Q 250 90 170 85 Q 90 90 85 130 Z"
+              fill="#D8D4D0"
+            />
+            <circle cx="170" cy="58" r="22" fill="#D8D4D0" />
+          </g>
 
           {/* eyebrows — lift slightly while talking */}
           <g transform={`translate(0 ${eyebrowLift})`}>

@@ -19,8 +19,8 @@
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Three days before Emma's wedding, her family hit four health hiccups in a row.",
-      "caption": "3 days, 4 health hiccups"
+      "text": "Three days before Emma's wedding, her family hit five health hiccups in a row.",
+      "caption": "3 days, 5 health hiccups"
     },
     {
       "speaker": "granddaughter",
@@ -31,8 +31,8 @@
     {
       "speaker": "narrator",
       "scene": "hook",
-      "text": "Honey for a sore throat. Ginger for motion sickness. Chicken soup for a cold. Oatmeal for a rash. Four remedies. Which ones are real, and which ones aren't? Stick around to find out.",
-      "caption": "4 remedies. Real or not? Stick around."
+      "text": "Honey for a sore throat. Ginger for motion sickness. Chicken soup for a cold. Oatmeal for a rash. And one more that's a bit controversial. Five remedies. Which ones are real, and which ones aren't? Stick around to find out.",
+      "caption": "5 remedies. Real or not? Stick around."
     },
 
     {
@@ -212,7 +212,7 @@
       "speaker": "grandma",
       "scene": "dressing-room",
       "text": "Four for four. I'm a little proud of myself right now.",
-      "caption": "4/4! All four remedies checked out"
+      "caption": "4 for 4 so far!"
     },
     {
       "speaker": "granddaughter",
