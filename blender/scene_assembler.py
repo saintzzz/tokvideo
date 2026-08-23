@@ -28,7 +28,13 @@ import bpy
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gp_character import build_character  # noqa: E402
-from characters import BA_TU_PARTS, BA_TU_SKIN, MAI_PARTS, MAI_SKIN  # noqa: E402
+from characters import (  # noqa: E402
+    BA_TU_PARTS, BA_TU_SKIN,
+    MAI_PARTS, MAI_SKIN,
+    CO_SAU_PARTS, CO_SAU_SKIN,
+    CHU_BAY_PARTS, CHU_BAY_SKIN,
+    BE_TOM_PARTS, BE_TOM_SKIN,
+)
 from backgrounds import build_location, BUILDERS  # noqa: E402
 from actions import get_pose  # noqa: E402
 from talking_mouth import jaw_scale  # noqa: E402
@@ -41,6 +47,9 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHARACTER_REGISTRY = {
     "ba_tu": (BA_TU_PARTS, BA_TU_SKIN, 1.0),
     "mai": (MAI_PARTS, MAI_SKIN, 0.85),
+    "co_sau": (CO_SAU_PARTS, CO_SAU_SKIN, 0.98),
+    "chu_bay": (CHU_BAY_PARTS, CHU_BAY_SKIN, 1.0),
+    "be_tom": (BE_TOM_PARTS, BE_TOM_SKIN, 0.55),
 }
 
 # Left-to-right slot x-offsets for however many characters share a beat.
@@ -49,7 +58,7 @@ SLOT_X = {
     2: [-1.0, 1.0],
     3: [-1.6, 0.0, 1.6],
     4: [-2.2, -0.7, 0.7, 2.2],
-    5: [-2.6, -1.3, 0.0, 1.3, 2.6],
+    5: [-2.3, -1.15, 0.0, 1.15, 2.3],
 }
 
 
@@ -60,7 +69,10 @@ def _setup_scene(resolution=(960, 540)):
 
     camera_data = bpy.data.cameras.new("Cam")
     camera_data.type = "ORTHO"
-    camera_data.ortho_scale = 5.5
+    # Wide enough for a 5-person group beat (SLOT_X[5]) without clipping
+    # anyone at the frame edge — a real production would vary this per
+    # shot (close-up vs. wide), fixed here for now.
+    camera_data.ortho_scale = 6.5
     cam = bpy.data.objects.new("Cam", camera_data)
     cam.location = (0, -10, 1.2)
     cam.rotation_euler = (math.radians(90), 0, 0)

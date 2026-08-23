@@ -103,3 +103,76 @@ MAI_PARTS = {
     "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.07, 0.035, 0.018), "color": (0.6, 0.3, 0.28, 1.0)}],
 }
 MAI_PARTS.update(_limb_parts(MAI_SKIN, MAI_TOP))
+
+
+# --- Co Sau (neighbor, runs the breakfast stall) --------------------------
+CO_SAU_SKIN = (0.88, 0.72, 0.56, 1.0)
+CO_SAU_APRON = (0.85, 0.6, 0.25, 1.0)
+CO_SAU_HAIR = (0.18, 0.12, 0.09, 1.0)
+CO_SAU_DARK = (0.22, 0.14, 0.08, 1.0)
+
+CO_SAU_PARTS = {
+    "spine": [{"points": oval_points(0, 1.18, 0.29, 0.31), "color": CO_SAU_APRON, "radius": 0.02}],
+    "neck": [{"points": capsule_points(BONE_SPEC["neck"]["head"], BONE_SPEC["neck"]["tail"], 0.09), "color": CO_SAU_SKIN}],
+    "head": [
+        {"points": oval_points(0, _HEAD_CZ, 0.17, 0.18), "color": CO_SAU_SKIN, "radius": 0.02},
+        {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.03, 0.035), "color": (1, 1, 1, 1)},
+        {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.03, 0.035), "color": (1, 1, 1, 1)},
+        {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.015, 0.018), "color": CO_SAU_DARK},
+        {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.015, 0.018), "color": CO_SAU_DARK},
+        # hair pulled back in a low bun, a headscarf knot at the back
+        {"points": oval_points(0, _HEAD_CZ + 0.15, 0.17, 0.09), "color": CO_SAU_HAIR},
+        {"points": oval_points(0, _HEAD_CZ + 0.24, 0.06, 0.05), "color": (0.9, 0.75, 0.3, 1.0)},
+    ],
+    "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.04, 0.02), "color": (0.55, 0.28, 0.2, 1.0)}],
+}
+CO_SAU_PARTS.update(_limb_parts(CO_SAU_SKIN, CO_SAU_APRON))
+
+
+# --- Chu Bay (neighbor, retired, plays chess) -----------------------------
+CHU_BAY_SKIN = (0.86, 0.7, 0.55, 1.0)
+CHU_BAY_SHIRT = (0.55, 0.58, 0.5, 1.0)
+CHU_BAY_HAIR = (0.85, 0.84, 0.8, 1.0)
+CHU_BAY_DARK = (0.2, 0.13, 0.09, 1.0)
+
+CHU_BAY_PARTS = {
+    "spine": [{"points": oval_points(0, 1.19, 0.3, 0.3), "color": CHU_BAY_SHIRT, "radius": 0.02}],
+    "neck": [{"points": capsule_points(BONE_SPEC["neck"]["head"], BONE_SPEC["neck"]["tail"], 0.09), "color": CHU_BAY_SKIN}],
+    "head": [
+        {"points": oval_points(0, _HEAD_CZ, 0.17, 0.18), "color": CHU_BAY_SKIN, "radius": 0.02},
+        {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.028, 0.03), "color": (1, 1, 1, 1)},
+        {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.028, 0.03), "color": (1, 1, 1, 1)},
+        {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.014, 0.016), "color": CHU_BAY_DARK},
+        {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.014, 0.016), "color": CHU_BAY_DARK},
+        # white/grey hair, receding — just a thin band, not a full cap
+        {"points": oval_points(0, _HEAD_CZ + 0.16, 0.17, 0.05), "color": CHU_BAY_HAIR},
+        # mustache
+        {"points": oval_points(0, _HEAD_CZ - 0.055, 0.05, 0.016), "color": CHU_BAY_HAIR},
+    ],
+    "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.038, 0.018), "color": (0.5, 0.26, 0.2, 1.0)}],
+}
+CHU_BAY_PARTS.update(_limb_parts(CHU_BAY_SKIN, CHU_BAY_SHIRT))
+
+
+# --- Be Tom (neighbor's child, 7 years old) -------------------------------
+BE_TOM_SKIN = (0.94, 0.78, 0.62, 1.0)
+BE_TOM_SHIRT = (0.9, 0.45, 0.3, 1.0)
+BE_TOM_HAIR = (0.12, 0.08, 0.06, 1.0)
+BE_TOM_DARK = (0.2, 0.13, 0.09, 1.0)
+
+BE_TOM_PARTS = {
+    "spine": [{"points": oval_points(0, 1.2, 0.2, 0.22), "color": BE_TOM_SHIRT, "radius": 0.02}],
+    "neck": [{"points": capsule_points(BONE_SPEC["neck"]["head"], BONE_SPEC["neck"]["tail"], 0.07), "color": BE_TOM_SKIN}],
+    "head": [
+        # kids get a proportionally BIGGER head relative to body — a
+        # standard cartoon shorthand for reading as young at a glance.
+        {"points": oval_points(0, _HEAD_CZ, 0.19, 0.19), "color": BE_TOM_SKIN, "radius": 0.02},
+        {"points": oval_points(-0.065, _HEAD_CZ + 0.02, 0.032, 0.036), "color": (1, 1, 1, 1)},
+        {"points": oval_points(0.065, _HEAD_CZ + 0.02, 0.032, 0.036), "color": (1, 1, 1, 1)},
+        {"points": oval_points(-0.065, _HEAD_CZ + 0.02, 0.016, 0.02), "color": BE_TOM_DARK},
+        {"points": oval_points(0.065, _HEAD_CZ + 0.02, 0.016, 0.02), "color": BE_TOM_DARK},
+        {"points": oval_points(0, _HEAD_CZ + 0.16, 0.19, 0.09), "color": BE_TOM_HAIR},
+    ],
+    "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.07, 0.04, 0.02), "color": (0.65, 0.35, 0.3, 1.0)}],
+}
+BE_TOM_PARTS.update(_limb_parts(BE_TOM_SKIN, BE_TOM_SHIRT))
