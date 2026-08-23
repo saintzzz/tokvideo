@@ -162,6 +162,60 @@ for (const episode of LONG_FORM_EPISODES) {
   };
 }
 
+// "Nha Ba Tu" animated-film series (src/animated-film/) — a much larger
+// cast than the long-form dialogue pairs above, but Edge TTS only has one
+// realistic Vietnamese voice per gender, so every character is
+// differentiated by prosody (rate/pitch/volume) on top of just 2 base
+// voices, same technique as LONG_FORM_VOICES.
+const ANIMATED_FILM_VOICES = {
+  narrator: { voice: VOICE_VI, prosody: { rate: "+0%", pitch: "+0%", volume: "+10%" } },
+  ba_tu: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "-6%", pitch: "-4%", volume: "+12%" } },
+  mai: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+10%", pitch: "+8%", volume: "+14%" } },
+  huy: { voice: VOICE_VI, prosody: { rate: "+2%", pitch: "-2%", volume: "+12%" } },
+  co_sau: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+6%", pitch: "+2%", volume: "+16%" } },
+  chu_bay: { voice: VOICE_VI, prosody: { rate: "-10%", pitch: "-8%", volume: "+12%" } },
+  be_tom: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+18%", pitch: "+18%", volume: "+14%" } },
+  bac_si_long: { voice: VOICE_VI, prosody: { rate: "-2%", pitch: "+0%", volume: "+10%" } },
+  y_ta_hoa: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+4%", pitch: "-2%", volume: "+12%" } },
+  chi_ngoc: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+8%", pitch: "+4%", volume: "+12%" } },
+};
+
+const animatedFilmDir = path.join(
+  import.meta.dirname,
+  "..",
+  "src",
+  "animated-film",
+  "episodes"
+);
+let ANIMATED_FILM_EPISODES = [];
+try {
+  const animatedFilmFiles = (await readdir(animatedFilmDir)).filter((f) =>
+    f.endsWith(".json")
+  );
+  ANIMATED_FILM_EPISODES = await Promise.all(
+    animatedFilmFiles.map(async (file) => {
+      const url = pathToFileURL(path.join(animatedFilmDir, file));
+      const mod = await import(url, { with: { type: "json" } });
+      return { slug: file.replace(/\.json$/, ""), ...mod.default };
+    })
+  );
+} catch {
+  // Directory doesn't exist yet if no episode script has been written.
+}
+
+for (const episode of ANIMATED_FILM_EPISODES) {
+  const narration = {};
+  episode.beats.forEach((beat, i) => {
+    const { voice, prosody } =
+      ANIMATED_FILM_VOICES[beat.speaker] ?? ANIMATED_FILM_VOICES.narrator;
+    narration[`beat-${i}`] = { text: beat.text, voice, prosody };
+  });
+  VIDEOS[`animated-film-${episode.slug}`] = {
+    audioDir: path.join(publicDir, "animated-film", episode.slug),
+    narration,
+  };
+}
+
 // Pass one or more video ids as CLI args to generate only those. The bare
 // id "suckhoe" expands to every "suckhoe-<slug>" Short episode (NOT the
 // long-form ones — those are ~20 minutes each and far too expensive to
@@ -181,6 +235,9 @@ const ids =
         }
         if (id === "suckhoe-long") {
           return Object.keys(VIDEOS).filter((key) => key.startsWith("suckhoe-long-"));
+        }
+        if (id === "animated-film") {
+          return Object.keys(VIDEOS).filter((key) => key.startsWith("animated-film-"));
         }
         return [id];
       })
