@@ -3,7 +3,7 @@
 Channel: Bà Lang Mách Mẹo
 Subscribers: 252
 Total views: 4556
-Total videos: 31
+Total videos: 32
 
 ## Last 28 days (channel-wide)
 
@@ -18,15 +18,15 @@ Net subscriber change: -1
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
 | Đau dạ dày âm ỉ, dân gian có mẹo hay #Shorts | 8 | 2 | 0 | 2026-08-22 |
-| Khó ngủ chân lạnh, dân gian có mẹo hay #Shorts | 1002 | 14 | 0 | 2026-08-22 |
+| Khó ngủ chân lạnh, dân gian có mẹo hay #Shorts | 1004 | 14 | 0 | 2026-08-22 |
 | Mỏi vai gáy, đau lưng, dân gian có mẹo hay #Shorts | 4 | 0 | 0 | 2026-08-22 |
 | Ngứa da, rôm sảy, dân gian có mẹo hay #Shorts | 1 | 0 | 0 | 2026-08-22 |
 | Đau nhức xương khớp, dân gian có mẹo hay #Shorts | 4 | 0 | 0 | 2026-08-22 |
-| Táo bón, khó đi ngoài, dân gian có mẹo hay #Shorts | 2 | 0 | 0 | 2026-08-22 |
+| Táo bón, khó đi ngoài, dân gian có mẹo hay #Shorts | 99 | 0 | 0 | 2026-08-22 |
 | Ho dai dẳng, dân gian có mẹo hay #Shorts | 94 | 0 | 0 | 2026-08-22 |
 | Mới chớm cảm, dân gian có mẹo hay #Shorts | 121 | 0 | 0 | 2026-08-22 |
 | Uể oải mỗi sáng, dân gian có mẹo hay #Shorts | 864 | 10 | 0 | 2026-08-22 |
-| Ho có đờm, rát họng, dân gian có mẹo hay #Shorts | 148 | 4 | 0 | 2026-08-22 |
+| Ho có đờm, rát họng, dân gian có mẹo hay #Shorts | 174 | 4 | 0 | 2026-08-22 |
 | Rụng tóc, nhiều gàu, dân gian có mẹo hay #Shorts | 116 | 3 | 0 | 2026-08-22 |
 | "Stubborn Guy" vs. The Mountain: Cliffside Shelter Build with Big Black 🐕 | 71 | 0 | 0 | 2026-01-03 |
 | The Swedish "Duckbill": A Unique Tarp Shelter Build (No Talking) 🇸🇪 | 4 | 0 | 0 | 2026-01-03 |
