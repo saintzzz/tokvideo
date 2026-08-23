@@ -148,8 +148,15 @@ def render_preview(episode_path, out_dir=None):
         slots = SLOT_X.get(len(present), SLOT_X[min(len(present), 5)])
         for slot_x, char_name in zip(slots, present):
             char = built_characters[char_name]
-            char.arm_obj.location = (slot_x, 0, 0)
             rotations, root_offset = get_pose(beat["action"], 1.0)
+            # Combine the left/right slot with any action-driven root
+            # offset (walk_in/walk_out/sit_down/stand_up) via ONE direct
+            # assignment — see gp_character.py's pose() comment on why
+            # this must be a direct set, not routed through pose()'s
+            # keyframed root_location param.
+            offset_x = root_offset.get("x", 0.0) if root_offset else 0.0
+            offset_z = root_offset.get("z", 0.0) if root_offset else 0.0
+            char.arm_obj.location = (slot_x + offset_x, 0, offset_z)
             is_speaking = char_name == beat["speaker"]
             char.pose(
                 i,

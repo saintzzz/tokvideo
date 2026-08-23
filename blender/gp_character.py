@@ -177,11 +177,28 @@ class Character:
             pbone.scale = scale
             pbone.keyframe_insert(data_path="scale", frame=frame)
 
+        # Direct assignment, NOT keyframed — confirmed the hard way
+        # (2026-08-24) that keyframing arm_obj's own location/rotation
+        # while a child GP object both is parented to it AND targets it
+        # via a GREASE_PENCIL_ARMATURE modifier produces correct data at
+        # the evaluated-depsgraph level (verified via
+        # evaluated_get()/matrix_world) but does NOT reliably show up
+        # across multiple sequential `frame_set()` + `render.render()`
+        # calls in one script run — two renders at different frames came
+        # back visually identical despite the depsgraph-evaluated point
+        # positions genuinely differing between them. Direct assignment
+        # right before each render (the same pattern scene_assembler.py
+        # already uses for its slot_x left/right placement, which WAS
+        # confirmed visually correct) sidesteps whatever this is. This
+        # means whole-character movement (this parameter) must be set
+        # freshly immediately before each individual frame's render call
+        # — it will NOT work correctly if keyframed once per frame across
+        # a whole timeline and then rendered later via a single
+        # `bpy.ops.render.render(animation=True)` batch call, unlike bone
+        # rotations/scales above (those ARE confirmed reliable keyframed).
         if root_location is not None:
             self.arm_obj.location = root_location
-            self.arm_obj.keyframe_insert(data_path="location", frame=frame)
         self.arm_obj.rotation_euler = (0, math.radians(root_rotation_deg), 0)
-        self.arm_obj.keyframe_insert(data_path="rotation_euler", frame=frame)
 
 
 def _make_single_color_material(name, color):
