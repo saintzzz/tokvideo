@@ -249,6 +249,19 @@ def build_character(name, parts, skin_color, origin=(0.0, 0.0, 0.0), scale=1.0):
         mod = gp_obj.modifiers.new(name="Armature", type="GREASE_PENCIL_ARMATURE")
         mod.object = arm_obj
         mod.use_vertex_groups = True
+
+        # Parent every GP object to the armature so moving/rotating
+        # `arm_obj` (whole-character placement/staging, or the
+        # `root_location`/`root_rotation_deg` params below) actually moves
+        # the visible mesh. An Armature MODIFIER alone only deforms via
+        # bone pose (rotation/scale) — it does NOT make the deformed
+        # result follow the armature OBJECT's own transform unless the
+        # mesh is parented to it. Confirmed the hard way (2026-08-24):
+        # setting `character.arm_obj.location` to stage two characters
+        # side by side did nothing visible — both stayed stacked at the
+        # origin — until this parenting was added.
+        gp_obj.parent = arm_obj
+        gp_obj.matrix_parent_inverse = arm_obj.matrix_world.inverted()
         gp_objs.append(gp_obj)
 
     return Character(name, gp_objs, arm_obj)
