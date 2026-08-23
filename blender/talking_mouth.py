@@ -25,8 +25,18 @@ def mouth_open_amount(frame, is_speaking):
 
 
 def jaw_scale(frame, is_speaking, min_scale=0.6, max_scale=2.4):
-    """Maps mouth_open_amount to a Z-scale factor for the "jaw" bone —
-    below 1.0 when closed (thin line), above 1.0 when open wide."""
+    """Maps mouth_open_amount to a scale factor for the "jaw" bone's
+    LOCAL Y AXIS — below 1.0 when closed (thin line), above 1.0 when open
+    wide. Local Y, not Z: the jaw bone points straight up (world Z) by
+    rest construction, and a pose bone's local Y axis is always its own
+    head-to-tail direction regardless of align_roll — so local Y here IS
+    world Z (vertical, the mouth's real height axis). The 3rd component
+    (local Z, aligned to world Y/depth by build_armature's align_roll)
+    scales a dimension every mouth point has exactly zero extent on, so
+    scaling it does literally nothing — an earlier version scaled that
+    component by mistake and the "visible mouth movement" in that build
+    was almost certainly something else being misread, not this.
+    """
     amount = mouth_open_amount(frame, is_speaking)
-    z = min_scale + (max_scale - min_scale) * amount
-    return (1.0, 1.0, z)
+    y = min_scale + (max_scale - min_scale) * amount
+    return (1.0, y, 1.0)

@@ -79,6 +79,23 @@ def build_armature(name, origin=(0.0, 0.0, 0.0), scale=1.0):
         if spec["parent"]:
             edit_bones[bone_name].parent = edit_bones[spec["parent"]]
             edit_bones[bone_name].use_connect = False
+        # Every bone's head/tail lie in the flat XZ plane (y=0) this whole
+        # rig draws in — Blender's default roll (0) for a newly-created
+        # bone picks local X/Z somewhat arbitrarily relative to that
+        # plane, which means the bone's own local axes generally do NOT
+        # line up with "rotate within the drawing plane" at all. Confirmed
+        # empirically (2026-08-24): rotating a diagonal limb bone around
+        # its default local Y (=the bone's own head-to-tail direction) is
+        # essentially a no-op rotation (a twist around its own length,
+        # invisible for a flat capsule) — every "stir_pot"/"wave"/"hug"
+        # pose looked identical to idle until this was found. Explicitly
+        # aligning every bone's local Z axis to world Y (the one axis
+        # perpendicular to the whole rig's drawing plane) makes local Z
+        # the TRUE in-plane rotation axis for every bone regardless of
+        # its own diagonal orientation — verified via direct tail-position
+        # readback (rotating around local Z after this alignment moves
+        # the tail with exactly zero world-Y/depth component).
+        edit_bones[bone_name].align_roll((0, 1, 0))
     bpy.ops.object.mode_set(mode="OBJECT")
     bpy.context.view_layer.objects.active = prev_active
 
@@ -151,7 +168,8 @@ class Character:
         for bone_name, degrees in rotations_deg.items():
             pbone = pbones[bone_name]
             pbone.rotation_mode = "XYZ"
-            pbone.rotation_euler = (0, math.radians(degrees), 0)
+            # Local Z, not Y — see build_armature's align_roll comment.
+            pbone.rotation_euler = (0, 0, math.radians(degrees))
             pbone.keyframe_insert(data_path="rotation_euler", frame=frame)
 
         for bone_name, scale in (scales or {}).items():
