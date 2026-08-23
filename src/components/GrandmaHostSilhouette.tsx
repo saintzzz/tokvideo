@@ -30,6 +30,14 @@ export const GrandmaHostSilhouette: React.FC<{
 
   const steamWiggle = Math.sin(frame * 0.15) * 4;
 
+  // Cheap "more alive" pass (2026-08-23) — see HealerSilhouette.tsx for
+  // why this is a head-tilt/eyebrow/prop-bob approach rather than a new
+  // gesturing arm (both hands are already implied on the centered mixing
+  // bowl, so a third arm would look anatomically wrong).
+  const headTilt = Math.sin(frame * 0.15) * (isSpeaking ? 2.5 : 0.5);
+  const eyebrowLift = isSpeaking ? interpolate(Math.sin(frame * 0.2), [-1, 1], [0, -3]) : 0;
+  const objectBob = isSpeaking ? Math.sin(frame * 0.25) * 2 : 0;
+
   const w = 340 * scale;
   const h = 340 * scale;
 
@@ -55,76 +63,83 @@ export const GrandmaHostSilhouette: React.FC<{
         {/* neck */}
         <rect x="150" y="205" width="40" height="45" fill="#E8C4A0" />
 
-        {/* head */}
-        <ellipse cx="170" cy="150" rx="88" ry="93" fill="#F0D2AE" />
+        {/* head + face, tilting independently of body sway */}
+        <g transform={`rotate(${headTilt} 170 150)`}>
+          <ellipse cx="170" cy="150" rx="88" ry="93" fill="#F0D2AE" />
 
-        {/* grey hair bun */}
-        <path
-          d="M 85 130 Q 82 55 170 48 Q 258 55 255 130 Q 250 90 170 85 Q 90 90 85 130 Z"
-          fill="#D8D4D0"
-        />
-        <circle cx="170" cy="58" r="22" fill="#D8D4D0" />
+          {/* grey hair bun */}
+          <path
+            d="M 85 130 Q 82 55 170 48 Q 258 55 255 130 Q 250 90 170 85 Q 90 90 85 130 Z"
+            fill="#D8D4D0"
+          />
+          <circle cx="170" cy="58" r="22" fill="#D8D4D0" />
 
-        {/* eyebrows */}
-        <path
-          d="M 118 112 Q 136 104 156 110"
-          stroke="#9a9490"
-          strokeWidth="5"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 184 110 Q 204 104 222 112"
-          stroke="#9a9490"
-          strokeWidth="5"
-          fill="none"
-          strokeLinecap="round"
-        />
+          {/* eyebrows — lift slightly while talking */}
+          <g transform={`translate(0 ${eyebrowLift})`}>
+            <path
+              d="M 118 112 Q 136 104 156 110"
+              stroke="#9a9490"
+              strokeWidth="5"
+              fill="none"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 184 110 Q 204 104 222 112"
+              stroke="#9a9490"
+              strokeWidth="5"
+              fill="none"
+              strokeLinecap="round"
+            />
+          </g>
 
-        {/* glasses */}
-        <circle cx="140" cy="132" r="22" fill="none" stroke="#5a4a3a" strokeWidth="3.5" />
-        <circle cx="200" cy="132" r="22" fill="none" stroke="#5a4a3a" strokeWidth="3.5" />
-        <path d="M 162 132 L 178 132" stroke="#5a4a3a" strokeWidth="3.5" />
+          {/* glasses */}
+          <circle cx="140" cy="132" r="22" fill="none" stroke="#5a4a3a" strokeWidth="3.5" />
+          <circle cx="200" cy="132" r="22" fill="none" stroke="#5a4a3a" strokeWidth="3.5" />
+          <path d="M 162 132 L 178 132" stroke="#5a4a3a" strokeWidth="3.5" />
 
-        {/* eyes */}
-        <ellipse cx="140" cy="132" rx="13" ry={eyeRy} fill="#FFFFFF" />
-        <ellipse cx="200" cy="132" rx="13" ry={eyeRy} fill="#FFFFFF" />
-        {blinkAmount > 0.5 ? (
-          <>
-            <circle cx="141" cy="133" r="6" fill="#5a4a3a" />
-            <circle cx="201" cy="133" r="6" fill="#5a4a3a" />
-          </>
-        ) : null}
+          {/* eyes */}
+          <ellipse cx="140" cy="132" rx="13" ry={eyeRy} fill="#FFFFFF" />
+          <ellipse cx="200" cy="132" rx="13" ry={eyeRy} fill="#FFFFFF" />
+          {blinkAmount > 0.5 ? (
+            <>
+              <circle cx="141" cy="133" r="6" fill="#5a4a3a" />
+              <circle cx="201" cy="133" r="6" fill="#5a4a3a" />
+            </>
+          ) : null}
 
-        {/* rosy cheeks */}
-        <ellipse cx="115" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
-        <ellipse cx="225" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
+          {/* rosy cheeks */}
+          <ellipse cx="115" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
+          <ellipse cx="225" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
 
-        {/* nose */}
-        <path
-          d="M 170 122 Q 178 152 170 162 Q 164 165 159 160"
-          stroke="#C99A64"
-          strokeWidth="4.5"
-          fill="none"
-          strokeLinecap="round"
-        />
+          {/* nose */}
+          <path
+            d="M 170 122 Q 178 152 170 162 Q 164 165 159 160"
+            stroke="#C99A64"
+            strokeWidth="4.5"
+            fill="none"
+            strokeLinecap="round"
+          />
 
-        {/* mouth */}
-        <ellipse cx="170" cy="188" rx={mouthRx} ry={mouthRy} fill="#8a4a3a" />
+          {/* mouth */}
+          <ellipse cx="170" cy="188" rx={mouthRx} ry={mouthRy} fill="#8a4a3a" />
+        </g>
 
-        {/* mixing bowl + wooden spoon, held lower center */}
-        <ellipse cx="170" cy="250" rx="32" ry="16" fill="#EAEAEA" />
-        <path d="M 142 250 Q 170 268 198 250 L 193 260 Q 170 274 147 260 Z" fill="#CFCFCF" />
-        <rect
-          x="165"
-          y="200"
-          width="9"
-          height="48"
-          rx="4.5"
-          fill="#a08a68"
-          transform="rotate(-12 170 224)"
-        />
-        <ellipse cx="196" cy="204" rx="9" ry="13" fill="#a08a68" transform="rotate(-12 196 204)" />
+        {/* mixing bowl + wooden spoon, held lower center — bobs slightly
+            while talking */}
+        <g transform={`translate(0 ${objectBob})`}>
+          <ellipse cx="170" cy="250" rx="32" ry="16" fill="#EAEAEA" />
+          <path d="M 142 250 Q 170 268 198 250 L 193 260 Q 170 274 147 260 Z" fill="#CFCFCF" />
+          <rect
+            x="165"
+            y="200"
+            width="9"
+            height="48"
+            rx="4.5"
+            fill="#a08a68"
+            transform="rotate(-12 170 224)"
+          />
+          <ellipse cx="196" cy="204" rx="9" ry="13" fill="#a08a68" transform="rotate(-12 196 204)" />
+        </g>
       </svg>
 
       {/* kitchen steam */}

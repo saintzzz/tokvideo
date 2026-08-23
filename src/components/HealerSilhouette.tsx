@@ -27,6 +27,17 @@ export const HealerSilhouette: React.FC<{
 
   const steamWiggle = Math.sin(frame * 0.15) * 4;
 
+  // Cheap "more alive" pass (2026-08-23, user asked for more lively
+  // animation): a full limb-rig is out of scope for this SVG-based
+  // character (both hands are already implied busy on the centered
+  // mortar/pestle — adding a third gesturing arm would look anatomically
+  // wrong), so the win instead is a head-only micro-nod (independent of
+  // the existing whole-body sway), an eyebrow lift while talking, and the
+  // held object bobbing slightly, as if it's moving with her gestures.
+  const headTilt = Math.sin(frame * 0.15) * (isSpeaking ? 2.5 : 0.5);
+  const eyebrowLift = isSpeaking ? interpolate(Math.sin(frame * 0.2), [-1, 1], [0, -3]) : 0;
+  const objectBob = isSpeaking ? Math.sin(frame * 0.25) * 2 : 0;
+
   const w = 340 * scale;
   const h = 340 * scale;
 
@@ -50,73 +61,81 @@ export const HealerSilhouette: React.FC<{
         {/* neck */}
         <rect x="150" y="205" width="40" height="45" fill="#E3B27C" />
 
-        {/* head */}
-        <ellipse cx="170" cy="150" rx="90" ry="95" fill="#EFC090" />
+        {/* head + face, tilting independently of the body sway for a
+            "nodding while talking" read instead of one stiff block */}
+        <g transform={`rotate(${headTilt} 170 150)`}>
+          <ellipse cx="170" cy="150" rx="90" ry="95" fill="#EFC090" />
 
-        {/* headscarf (khan mo qua style) */}
-        <path
-          d="M 78 130 Q 80 55 170 50 Q 260 55 262 130 Q 240 95 170 92 Q 100 95 78 130 Z"
-          fill="#6b4a2a"
-        />
-        <path
-          d="M 240 105 Q 268 130 250 168 L 232 150 Q 246 128 228 112 Z"
-          fill="#6b4a2a"
-        />
+          {/* headscarf (khan mo qua style) */}
+          <path
+            d="M 78 130 Q 80 55 170 50 Q 260 55 262 130 Q 240 95 170 92 Q 100 95 78 130 Z"
+            fill="#6b4a2a"
+          />
+          <path
+            d="M 240 105 Q 268 130 250 168 L 232 150 Q 246 128 228 112 Z"
+            fill="#6b4a2a"
+          />
 
-        {/* eyebrows */}
-        <path
-          d="M 118 112 Q 136 102 156 110"
-          stroke="#4a3320"
-          strokeWidth="6"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 184 110 Q 204 102 222 112"
-          stroke="#4a3320"
-          strokeWidth="6"
-          fill="none"
-          strokeLinecap="round"
-        />
+          {/* eyebrows — lift slightly while talking, like emphasis */}
+          <g transform={`translate(0 ${eyebrowLift})`}>
+            <path
+              d="M 118 112 Q 136 102 156 110"
+              stroke="#4a3320"
+              strokeWidth="6"
+              fill="none"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 184 110 Q 204 102 222 112"
+              stroke="#4a3320"
+              strokeWidth="6"
+              fill="none"
+              strokeLinecap="round"
+            />
+          </g>
 
-        {/* eyes */}
-        <ellipse cx="140" cy="130" rx="15" ry={eyeRy} fill="#FFFFFF" />
-        <ellipse cx="200" cy="130" rx="15" ry={eyeRy} fill="#FFFFFF" />
-        {blinkAmount > 0.5 ? (
-          <>
-            <circle cx="141" cy="132" r="6.5" fill="#3a2a1a" />
-            <circle cx="201" cy="132" r="6.5" fill="#3a2a1a" />
-          </>
-        ) : null}
+          {/* eyes */}
+          <ellipse cx="140" cy="130" rx="15" ry={eyeRy} fill="#FFFFFF" />
+          <ellipse cx="200" cy="130" rx="15" ry={eyeRy} fill="#FFFFFF" />
+          {blinkAmount > 0.5 ? (
+            <>
+              <circle cx="141" cy="132" r="6.5" fill="#3a2a1a" />
+              <circle cx="201" cy="132" r="6.5" fill="#3a2a1a" />
+            </>
+          ) : null}
 
-        {/* rosy cheeks */}
-        <ellipse cx="115" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
-        <ellipse cx="225" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
+          {/* rosy cheeks */}
+          <ellipse cx="115" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
+          <ellipse cx="225" cy="168" rx="14" ry="9" fill="#E38A6E" opacity="0.4" />
 
-        {/* nose */}
-        <path
-          d="M 170 122 Q 178 152 170 162 Q 164 165 159 160"
-          stroke="#C99A64"
-          strokeWidth="4.5"
-          fill="none"
-          strokeLinecap="round"
-        />
+          {/* nose */}
+          <path
+            d="M 170 122 Q 178 152 170 162 Q 164 165 159 160"
+            stroke="#C99A64"
+            strokeWidth="4.5"
+            fill="none"
+            strokeLinecap="round"
+          />
 
-        {/* mouth */}
-        <ellipse cx="170" cy="188" rx={mouthRx} ry={mouthRy} fill="#8a4a3a" />
+          {/* mouth */}
+          <ellipse cx="170" cy="188" rx={mouthRx} ry={mouthRy} fill="#8a4a3a" />
+        </g>
 
-        {/* mortar and pestle, held lower center */}
-        <ellipse cx="170" cy="248" rx="30" ry="14" fill="#8a7355" />
-        <path d="M 145 248 Q 170 264 195 248 L 191 256 Q 170 268 149 256 Z" fill="#6b5a40" />
-        <rect
-          x="165"
-          y="205"
-          width="10"
-          height="45"
-          rx="5"
-          fill="#a08a68"
-          transform="rotate(-12 170 227)"
-        />
+        {/* mortar and pestle, held lower center — bobs slightly while
+            talking so it reads as part of the gesture, not a static prop */}
+        <g transform={`translate(0 ${objectBob})`}>
+          <ellipse cx="170" cy="248" rx="30" ry="14" fill="#8a7355" />
+          <path d="M 145 248 Q 170 264 195 248 L 191 256 Q 170 268 149 256 Z" fill="#6b5a40" />
+          <rect
+            x="165"
+            y="205"
+            width="10"
+            height="45"
+            rx="5"
+            fill="#a08a68"
+            transform="rotate(-12 170 227)"
+          />
+        </g>
       </svg>
 
       {/* herbal steam */}
