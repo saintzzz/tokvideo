@@ -38,13 +38,19 @@ $tasks = @(
         Script = "run-comment-outreach.ps1"
         Time = "20:00"
         DaysInterval = 3
+    },
+    @{
+        Name = "AnimatedFilmEpisodeWriter"
+        Script = "run-animated-episode-writer.ps1"
+        Time = "10:00"
+        DaysInterval = 2
     }
 )
 
 foreach ($t in $tasks) {
     $scriptPath = Join-Path $repoRoot "scripts\$($t.Script)"
     if (-not (Test-Path $scriptPath)) {
-        Write-Warning "Skipping $($t.Name) — script not found at $scriptPath"
+        Write-Warning "Skipping $($t.Name), script not found at $scriptPath"
         continue
     }
 

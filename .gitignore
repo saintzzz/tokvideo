@@ -13,6 +13,7 @@ public/audio
 scripts/daily-content-writer.log
 scripts/reply-comments.log
 scripts/comment-outreach.log
+scripts/animated-episode-writer.log
 
 # Local-only YouTube API credentials for the Task Scheduler-run scripts
 # (scripts/run-reply-comments.ps1, run-comment-outreach.ps1) — loaded into

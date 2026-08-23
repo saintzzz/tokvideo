@@ -66,6 +66,7 @@ diện theo vị trí clone, không hardcode máy cũ):
 | `SucKhoeDailyContentWriter` | Hằng ngày 8:00 sáng | `run-daily-content-writer.ps1` |
 | `SucKhoeReplyComments` | Hằng ngày 4:00 chiều | `run-reply-comments.ps1` |
 | `SucKhoeCommentOutreach` | Mỗi 3 ngày, 8:00 tối | `run-comment-outreach.ps1` |
+| `AnimatedFilmEpisodeWriter` | Mỗi 2 ngày, 10:00 sáng | `run-animated-episode-writer.ps1` |
 
 Kiểm tra sau khi chạy: `Get-ScheduledTask | Where-Object { $_.TaskName -like 'SucKhoe*' }`
 
