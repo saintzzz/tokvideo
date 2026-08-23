@@ -1,0 +1,120 @@
+{
+  "title": "Nhà Bà Tư",
+  "format": "2D animated series, ~20 minutes/episode, Blender Grease Pencil (armature-rigged characters, see blender/gp_character.py)",
+  "locale": "vi",
+  "premise": "Một xóm nhỏ xoay quanh nhà Bà Tư — nơi kinh nghiệm dân gian và kiến thức y khoa hiện đại va chạm, tranh luận, rồi cuối cùng học cách đi cùng nhau. Mỗi tập là một câu chuyện đời thường ấm áp, có thật, cài vào đó một kiến thức khoa học chuẩn xác về thực phẩm/thảo dược tự nhiên — không phải minh họa khô khan, mà là một phần của mâu thuẫn và cảm xúc trong tập đó.",
+  "tone": "Ấm áp, hài hước nhẹ, đôi lúc lắng đọng — giống 'Về Nhà Đi Con' pha 'Bí Mật Vườn Táo', không kịch tính hóa bệnh tật, không gây hoang mang y tế.",
+  "compliance": "Kế thừa nguyên tắc đã áp dụng cho kênh Suc Khoe: luôn khung remedies là 'kinh nghiệm dân gian', không phải 'chữa bệnh'/'trị bệnh'; nhân vật bác sĩ/y tá luôn là người có tiếng nói cuối cùng về y khoa; không có tập nào để nhân vật từ chối điều trị y tế thật để dùng mẹo dân gian thay thế.",
+
+  "characters": {
+    "main": [
+      {
+        "name": "Bà Tư",
+        "age": 68,
+        "role": "Bà nội, trung tâm cảm xúc của cả nhà, giữ 'kho' kinh nghiệm dân gian truyền đời. Ấm áp nhưng cứng đầu, đôi khi tin mẹo hơn tin bác sĩ — nguồn xung đột chính xuyên suốt mùa 1.",
+        "voice_note": "Tên trùng với host đã dùng ở kênh Shorts (đồng bộ thương hiệu 2 track)."
+      },
+      {
+        "name": "Mai",
+        "age": 24,
+        "role": "Cháu gái, sinh viên điều dưỡng năm cuối rồi thành y tá mới ra trường trong mùa 1. Cầu nối giữa bà và y học hiện đại, luôn tra cứu/kiểm chứng mẹo của bà bằng kiến thức thật. Nhân vật góc nhìn chính (POV) của khán giả.",
+        "arc": "Từ rụt rè, sợ sai, đến tự tin đứng vững chuyên môn — kể cả khi phải nói ngược lại bà mình."
+      },
+      {
+        "name": "Huy",
+        "age": 45,
+        "role": "Con trai Bà Tư, bố Mai. Nhân viên văn phòng ở một công ty logistics, đại diện cho lối sống hiện đại: ngồi bàn giấy cả ngày, ăn uống qua loa, mất ngủ vì stress công việc.",
+        "arc": "Từ phớt lờ sức khỏe bản thân đến chủ động thay đổi — tuyến truyện 'công ty' của cả series."
+      }
+    ],
+    "supporting": [
+      {
+        "name": "Cô Sáu",
+        "role": "Hàng xóm sát vách, bán hàng ăn sáng đầu ngõ. Thân với Bà Tư nhưng hay 'cạnh tranh ngầm' xem mẹo nhà ai hay hơn. Nguồn của rất nhiều tập về thực phẩm/lên men/ẩm thực dân gian."
+      },
+      {
+        "name": "Chú Bảy",
+        "role": "Hàng xóm về hưu, hay ngồi đánh cờ đầu ngõ với các cụ khác. Tin đủ thứ lời đồn sức khỏe trên mạng — nhân vật 'mythbust' chính, đôi khi đúng, đôi khi sai, không bao giờ đoán trước được."
+      },
+      {
+        "name": "Bé Tôm",
+        "age": 7,
+        "role": "Cháu hàng xóm, hay chơi với Mai hồi nhỏ giờ quấn Bà Tư. Nguồn của các tập nhẹ nhàng, hài hước, kiến thức phù hợp trẻ em (ăn uống, vệ sinh, giấc ngủ)."
+      },
+      {
+        "name": "Bác sĩ Long",
+        "role": "Bạn học cũ của con gái Bà Tư (đã mất, backstory nhẹ), bác sĩ nội khoa ở bệnh viện quận, coi Bà Tư như người nhà. Tiếng nói y khoa đáng tin cậy, không bao giờ bị viết thành phản diện — chỉ đôi khi 'khó ưa' vì thẳng thắn."
+      },
+      {
+        "name": "Y tá Hoa",
+        "role": "Y tá trưởng ca của Mai tại bệnh viện, người hướng dẫn (mentor) nghiêm khắc nhưng công bằng. Nguồn xung đột nghề nghiệp + trưởng thành của Mai."
+      },
+      {
+        "name": "Chị Ngọc",
+        "role": "Đồng nghiệp thân nhất của Huy ở công ty, làm việc cuồng (workaholic), ban đầu cười nhạo việc Huy 'sống lành mạnh hơn', dần trở thành người thay đổi cùng — tuyến phụ 'công ty'."
+      }
+    ]
+  },
+
+  "season_arc": {
+    "overarching_thread": "Bà Tư dần có dấu hiệu mệt, chóng mặt, quên nhẹ (chapter 1-2) -> đi khám phát hiện huyết áp cao nhẹ + tiền tiểu đường (chapter 3, một chẩn đoán rất phổ biến, không giật gân) -> cả nhà cùng bà điều chỉnh lối sống thật (ăn uống, vận động, ngủ, giảm cô đơn) trong khi vẫn giữ những mẹo dân gian AN TOÀN như một phần hỗ trợ, không thay thế điều trị -> có một giai đoạn bà chán nản bỏ cuộc (chapter 6) -> kết thúc mùa bằng buổi tái khám cho kết quả cải thiện thật + một buổi họp mặt xóm gắn kết mọi tuyến nhân vật (chapter 8).",
+    "secondary_threads": [
+      "Mai: từ sinh viên thực tập sợ sai đến y tá tự tin, có một tập phải đối đầu quan điểm với chính bà mình trước mặt bác sĩ Long.",
+      "Huy: burnout công ty -> thay đổi thói quen bàn giấy -> ảnh hưởng ngược lại giúp Chị Ngọc cũng thay đổi.",
+      "Bé Tôm lớn lên một chút qua các tập, từ 'trẻ con phá' thành người biết nhắc người lớn uống nước/ngủ đúng giờ (mảng hài + ấm áp)."
+    ],
+    "chapters": [
+      { "n": 1, "episodes": "1-5", "title": "Xóm Nhỏ", "beat": "Giới thiệu thế giới, cả dàn nhân vật, những dấu hiệu mệt mỏi đầu tiên của Bà Tư (đóng khung như đời thường, không giật gân)." },
+      { "n": 2, "episodes": "6-10", "title": "Ca Trực Đầu Tiên", "beat": "Mai bắt đầu đi làm ở bệnh viện, va chạm với Y tá Hoa; Huy càng ngày càng đuối vì công việc." },
+      { "n": 3, "episodes": "11-15", "title": "Kết Quả Khám", "beat": "Bà Tư đi khám định kỳ, phát hiện huyết áp cao nhẹ/tiền tiểu đường; cả nhà bắt đầu hành trình thay đổi." },
+      { "n": 4, "episodes": "16-20", "title": "Bàn Giấy", "beat": "Tuyến công ty của Huy lên cao trào — burnout, rồi bắt đầu đổi thói quen (đứng dậy đi lại, ăn trưa tử tế, ngủ đủ)." },
+      { "n": 5, "episodes": "21-25", "title": "Chuyện Xóm", "beat": "Các tập nhẹ nhàng hơn: Cô Sáu, Chú Bảy, Bé Tôm — hài hước, kiến thức thực phẩm/lối sống đa dạng, xen giữa mạch chính để nhịp phim không bị nặng." },
+      { "n": 6, "episodes": "26-30", "title": "Bỏ Cuộc", "beat": "Bà Tư nản, quay lại thói quen cũ; căng thẳng trong gia đình; Mai phải học cách vừa là cháu vừa là người làm y tế trong chính nhà mình." },
+      { "n": 7, "episodes": "31-35", "title": "Gượng Dậy", "beat": "Cả xóm cùng động viên Bà Tư quay lại; các tuyến phụ hội tụ (Chị Ngọc, Bé Tôm, Chú Bảy đều góp một tay theo cách riêng)." },
+      { "n": 8, "episodes": "36-40", "title": "Tái Khám", "beat": "Kết quả tái khám cải thiện thật; buổi họp mặt xóm khép lại mùa, thông điệp: kinh nghiệm dân gian + y học hiện đại + tình thân, không cái nào thay được cái nào." }
+    ]
+  },
+
+  "episodes": [
+    { "n": 1, "title": "Nồi Cháo Đầu Ngõ", "chapter": 1, "synopsis": "Giới thiệu Bà Tư, Mai, xóm nhỏ qua một buổi sáng thường nhật ở quán Cô Sáu.", "fact_focus": "Mật ong có hoạt chất kháng khuẩn thật (glucose oxidase -> hydrogen peroxide), hỗ trợ dịu cổ họng.", "verdict": "confirmed" },
+    { "n": 2, "title": "Bài Kiểm Tra Của Mai", "chapter": 1, "synopsis": "Mai ôn thi tốt nghiệp điều dưỡng, Bà Tư tiếp sức bằng gừng — Mai giải thích cơ chế thật.", "fact_focus": "Gingerol trong gừng ức chế thụ thể gây buồn nôn — có bằng chứng lâm sàng.", "verdict": "confirmed" },
+    { "n": 3, "title": "Chú Bảy Và Cây Cờ Tướng", "chapter": 1, "synopsis": "Chú Bảy khoe 'bí quyết' nghệ ngâm rượu chữa bách bệnh, Bà Tư và Mai vào cuộc kiểm chứng.", "fact_focus": "Curcumin trong nghệ có kháng viêm thật nhưng hấp thu kém nếu không có chất béo/tiêu đen — 'bí quyết' của chú Bảy chỉ đúng một nửa.", "verdict": "nuanced" },
+    { "n": 4, "title": "Bé Tôm Không Chịu Ăn Rau", "chapter": 1, "synopsis": "Bé Tôm kén ăn, cả xóm góp mẹo, Mai giải thích vì sao rau xanh thực sự quan trọng.", "fact_focus": "Nitrat tự nhiên trong rau lá xanh hỗ trợ điều hòa huyết áp.", "verdict": "confirmed" },
+    { "n": 5, "title": "Bà Tư Quên Chìa Khóa", "chapter": 1, "synopsis": "Lần đầu tiên Bà Tư có dấu hiệu đãng trí nhẹ — cả nhà cười xòa nhưng Mai để tâm.", "fact_focus": "Giấc ngủ đủ và sâu giúp củng cố trí nhớ — thiếu ngủ mãn tính là yếu tố nguy cơ thật.", "verdict": "confirmed" },
+    { "n": 6, "title": "Ca Trực Đầu Tiên", "chapter": 2, "synopsis": "Mai chính thức đi làm, gặp Y tá Hoa nghiêm khắc, một ca bệnh nhân lớn tuổi khiến Mai chột dạ nghĩ đến bà mình.", "fact_focus": "Bổ sung kẽm hỗ trợ chức năng miễn dịch — phổ biến trong hải sản, thịt.", "verdict": "confirmed" },
+    { "n": 7, "title": "Deadline Của Huy", "chapter": 2, "synopsis": "Huy thức trắng đêm chạy deadline, uống cà phê thay cơm — Chị Ngọc cùng cảnh ngộ.", "fact_focus": "Mất nước nhẹ đã đủ ảnh hưởng khả năng tập trung — hydrat hóa là 'thuốc' bị đánh giá thấp nhất.", "verdict": "confirmed" },
+    { "n": 8, "title": "Cô Sáu Bán Sữa Chua", "chapter": 2, "synopsis": "Cô Sáu thử bán thêm sữa chua tự làm, tranh luận với khách về công dụng.", "fact_focus": "Probiotic trong sữa chua/thực phẩm lên men hỗ trợ hệ vi sinh đường ruột — không phải 'thuốc tiên' như quảng cáo.", "verdict": "nuanced" },
+    { "n": 9, "title": "Bác Sĩ Long Ghé Nhà", "chapter": 2, "synopsis": "Bác sĩ Long ghé thăm, khuyên Bà Tư nên đi khám định kỳ — Bà Tư trì hoãn.", "fact_focus": "Cá béo (omega-3 EPA/DHA) hỗ trợ tim mạch — bằng chứng nhất quán qua nhiều nghiên cứu.", "verdict": "confirmed" },
+    { "n": 10, "title": "Tô Canh Rau Má", "chapter": 2, "synopsis": "Bà Tư nấu canh rau má trị 'nóng trong người' cho Bé Tôm bị nhiệt miệng.", "fact_focus": "Rau má (centella asiatica) có bằng chứng hỗ trợ lành vết thương ngoài da — dùng uống trong để 'giải nhiệt' thì chưa có bằng chứng rõ.", "verdict": "nuanced" },
+    { "n": 11, "title": "Kết Quả Khám", "chapter": 3, "synopsis": "Bà Tư đi khám định kỳ theo lời Mai — bác sĩ Long thông báo huyết áp cao nhẹ và tiền tiểu đường.", "fact_focus": "Kali (chuối, khoai lang) hỗ trợ điều hòa huyết áp cùng với giảm muối.", "verdict": "confirmed" },
+    { "n": 12, "title": "Bà Tư Giận Dỗi", "chapter": 3, "synopsis": "Bà Tư phản ứng tiêu cực với chẩn đoán, cho rằng mình vẫn khỏe — mâu thuẫn với Mai.", "fact_focus": "Chất xơ (ngũ cốc nguyên hạt, đậu) hỗ trợ kiểm soát đường huyết và cholesterol.", "verdict": "confirmed" },
+    { "n": 13, "title": "Thực Đơn Mới", "chapter": 3, "synopsis": "Cả nhà cùng lên thực đơn mới cho Bà Tư — Cô Sáu góp ý món ăn dân dã phù hợp.", "fact_focus": "Đậu đen giàu chất xơ, đạm thực vật — 'thải độc' là quảng cáo quá đà nhưng lợi ích thật (no lâu, ổn định đường huyết) thì có.", "verdict": "nuanced" },
+    { "n": 14, "title": "Đi Bộ Buổi Sáng", "chapter": 3, "synopsis": "Mai rủ Bà Tư đi bộ mỗi sáng, Chú Bảy tham gia cho vui rồi nghiện lúc nào không hay.", "fact_focus": "Vận động đều đặn là một trong những can thiệp hiệu quả nhất cho huyết áp — 'vận động là thuốc'.", "verdict": "confirmed" },
+    { "n": 15, "title": "Cây Kim Ngân Trước Nhà", "chapter": 3, "synopsis": "Chú Bảy khoe nước kim ngân hoa 'mát gan giải độc' — Mai và bác sĩ Long giải thích thực tế.", "fact_focus": "Nhiều loại trà thảo mộc dân gian (kim ngân, atiso) thiếu bằng chứng lâm sàng vững chắc cho công dụng 'giải độc gan' — gan tự đào thải, không cần 'giải độc' bằng thảo dược.", "verdict": "myth" },
+    { "n": 16, "title": "Đau Lưng Của Huy", "chapter": 4, "synopsis": "Huy đau lưng vì ngồi cả ngày, thử đủ mẹo dân gian trước khi chịu đi khám.", "fact_focus": "Tư thế ngồi và vận động giữa giờ (ergonomics) ảnh hưởng trực tiếp đến đau lưng văn phòng — một dạng 'thuốc tự nhiên' phi thực phẩm.", "verdict": "confirmed" },
+    { "n": 17, "title": "Họp Nhóm Lúc Nửa Đêm", "chapter": 4, "synopsis": "Công ty Huy có dự án gấp, cả team thức khuya liên tục — Chị Ngọc kiệt sức.", "fact_focus": "Magie (hạt, các loại đậu, socola đen) liên quan đến chất lượng giấc ngủ và chuột rút cơ.", "verdict": "confirmed" },
+    { "n": 18, "title": "Bữa Trưa Qua Loa", "chapter": 4, "synopsis": "Huy toàn ăn trưa bằng mì gói ở bàn làm việc — Mai mang cơm nhà đến 'can thiệp'.", "fact_focus": "Ăn nhiều muối/thực phẩm chế biến sẵn liên quan đến huyết áp cao — nối lại chủ đề khám của Bà Tư.", "verdict": "confirmed" },
+    { "n": 19, "title": "Chị Ngọc Ngã Bệnh", "chapter": 4, "synopsis": "Chị Ngọc kiệt sức đổ bệnh thật, phải nghỉ — hồi chuông cảnh tỉnh cho cả team, kể cả Huy.", "fact_focus": "Vitamin D từ ánh nắng liên quan đến sức khỏe xương và tâm trạng — dân văn phòng ít ra nắng là nhóm nguy cơ thật.", "verdict": "confirmed" },
+    { "n": 20, "title": "Huy Đứng Dậy", "chapter": 4, "synopsis": "Huy bắt đầu đổi thói quen thật sự — đứng dậy đi lại, ăn trưa tử tế, về nhà đúng giờ hơn.", "fact_focus": "Sắt (thịt bò, gan) — Huy hay mệt mỏi vì thiếu sắt nhẹ do ăn uống qua loa nhiều tháng liền, được Mai phát hiện.", "verdict": "confirmed" },
+    { "n": 21, "title": "Hội Chợ Đầu Ngõ", "chapter": 5, "synopsis": "Xóm tổ chức hội chợ nhỏ, Cô Sáu và Bà Tư 'thi' món ăn — không khí vui nhộn, ít kịch tính.", "fact_focus": "Tỏi (allicin) có tính kháng khuẩn nhẹ và bằng chứng hỗ trợ tim mạch khi dùng đều đặn trong ăn uống.", "verdict": "confirmed" },
+    { "n": 22, "title": "Chanh Muối Của Chú Bảy", "chapter": 5, "synopsis": "Chú Bảy khoe công thức 'chanh muối thần thánh' chống say nắng.", "fact_focus": "Chanh muối bù được điện giải cơ bản (natri) nhưng không có gì 'thần thánh' hơn nước + điện giải thông thường — hiệu quả thật nhưng bị thần thánh hóa.", "verdict": "nuanced" },
+    { "n": 23, "title": "Bé Tôm Bị Trầy Gối", "chapter": 5, "synopsis": "Bé Tôm ngã xe đạp, cả xóm mỗi người một mẹo — Mai dạy cách sơ cứu đúng.", "fact_focus": "Rửa vết thương bằng nước sạch/nước muối sinh lý quan trọng hơn bất kỳ loại lá đắp nào — một số lá dân gian đắp trực tiếp có nguy cơ nhiễm trùng.", "verdict": "myth" },
+    { "n": 24, "title": "Trà Hoa Cúc Buổi Tối", "chapter": 5, "synopsis": "Bà Tư mất ngủ vì lo nghĩ, Mai pha trà hoa cúc thay vì thuốc ngủ.", "fact_focus": "Trà hoa cúc có bằng chứng an thần nhẹ, hỗ trợ thư giãn trước khi ngủ.", "verdict": "confirmed" },
+    { "n": 25, "title": "Cá Kho Của Cô Sáu", "chapter": 5, "synopsis": "Cô Sáu đãi cả xóm món cá kho 'gia truyền', câu chuyện xoay quanh nguồn gốc món ăn và dinh dưỡng.", "fact_focus": "Cá là nguồn đạm nạc và omega-3 tốt hơn nhiều loại thịt chế biến sẵn khác.", "verdict": "confirmed" },
+    { "n": 26, "title": "Bà Tư Bỏ Cuộc", "chapter": 6, "synopsis": "Sau một đợt mệt mỏi vì thay đổi thói quen, Bà Tư nản và quay lại nếp cũ — mâu thuẫn với Mai lên đỉnh điểm.", "fact_focus": "Thay đổi hành vi sức khỏe lâu dài là chuyện khó — 'tái nghiện' thói quen cũ là điều bình thường, không phải thất bại tuyệt đối (khung nhẹ nhàng, không phán xét).", "verdict": "context" },
+    { "n": 27, "title": "Mai Và Y Tá Hoa", "chapter": 6, "synopsis": "Mai phải đối mặt cảm giác bất lực khi không giúp được chính bà mình, Y tá Hoa cho một bài học nghề nghiệp.", "fact_focus": "Căng thẳng mãn tính ảnh hưởng thật đến huyết áp và giấc ngủ — không chỉ là cảm giác 'yếu đuối'.", "verdict": "confirmed" },
+    { "n": 28, "title": "Chú Bảy An Ủi", "chapter": 6, "synopsis": "Chú Bảy, người hay sai về khoa học, lại là người an ủi Bà Tư đúng lúc nhất bằng tình bạn hàng xóm.", "fact_focus": "Kết nối xã hội (bạn bè, hàng xóm) là yếu tố bảo vệ sức khỏe tâm lý và tim mạch được nghiên cứu thật ở người lớn tuổi.", "verdict": "confirmed" },
+    { "n": 29, "title": "Bữa Cơm Im Lặng", "chapter": 6, "synopsis": "Một bữa cơm gia đình căng thẳng, không ai nói ra nhưng ai cũng lo cho Bà Tư.", "fact_focus": "Ăn cùng gia đình đều đặn liên quan đến thói quen ăn uống lành mạnh hơn ở mọi lứa tuổi.", "verdict": "confirmed" },
+    { "n": 30, "title": "Huy Nói Chuyện Với Mẹ", "chapter": 6, "synopsis": "Huy — người từng phớt lờ sức khỏe bản thân — giờ là người thuyết phục mẹ quay lại đúng cách, từ chính trải nghiệm của mình.", "fact_focus": "Quay lại kết nối chủ đề sắt/omega-3/vận động đã học ở chapter 4 — Huy dùng chính câu chuyện bản thân để thuyết phục, không giảng đạo.", "verdict": "recap" },
+    { "n": 31, "title": "Gượng Dậy", "chapter": 7, "synopsis": "Bà Tư đồng ý thử lại, lần này với sự hỗ trợ của cả xóm chứ không chỉ Mai một mình.", "fact_focus": "Đường trong máu ổn định hơn khi ăn đủ chất xơ trước tinh bột trong bữa ăn — mẹo thực hành nhỏ, dễ áp dụng.", "verdict": "confirmed" },
+    { "n": 32, "title": "Chị Ngọc Trở Lại", "chapter": 7, "synopsis": "Chị Ngọc sau đợt ốm đã thay đổi thật sự, giờ thành người truyền cảm hứng ngược lại cho Huy và cả team.", "fact_focus": "Giấc ngủ đủ 7-8 tiếng liên quan đến hiệu suất làm việc tốt hơn về lâu dài — phản bác văn hóa 'thức khuya để năng suất'.", "verdict": "confirmed" },
+    { "n": 33, "title": "Bé Tôm Nhắc Uống Nước", "chapter": 7, "synopsis": "Bé Tôm, học được từ Mai, giờ đi nhắc cả xóm uống nước — chi tiết hài hước ấm áp.", "fact_focus": "Tổng hợp lại lợi ích hydrat hóa đã nói ở tập 7 — nhắc lại qua góc nhìn trẻ con cho dễ nhớ.", "verdict": "recap" },
+    { "n": 34, "title": "Cô Sáu Đổi Món", "chapter": 7, "synopsis": "Cô Sáu thêm món ít muối, nhiều rau vào thực đơn quán sáng dành riêng cho 'khách như Bà Tư'.", "fact_focus": "Giảm muối từ từ giúp vị giác thích nghi mà không cảm thấy 'nhạt nhẽo' — mẹo thực hành dinh dưỡng thật.", "verdict": "confirmed" },
+    { "n": 35, "title": "Buổi Tối Trước Tái Khám", "chapter": 7, "synopsis": "Cả nhà hồi hộp trước ngày Bà Tư tái khám — một tập lắng đọng, ít thoại nhiều cảm xúc.", "fact_focus": "Củng cố thông điệp: thay đổi lối sống cần thời gian (thường 3 tháng để thấy rõ trên xét nghiệm) — quản lý kỳ vọng thực tế.", "verdict": "context" },
+    { "n": 36, "title": "Tái Khám", "chapter": 8, "synopsis": "Bà Tư tái khám — bác sĩ Long thông báo huyết áp và đường huyết đã cải thiện rõ rệt.", "fact_focus": "Tổng kết: thay đổi lối sống (ăn, vận động, ngủ, giảm stress) có thể cải thiện chỉ số thật, đo lường được — không phải cảm tính.", "verdict": "confirmed" },
+    { "n": 37, "title": "Bà Tư Cảm Ơn Cả Xóm", "chapter": 8, "synopsis": "Bà Tư nhận ra mình không tự làm được một mình — cảm ơn từng người đã âm thầm giúp đỡ.", "fact_focus": "Nhấn lại yếu tố kết nối xã hội (đã nói ở tập 28) như một phần thật sự của 'đơn thuốc' sức khỏe người lớn tuổi.", "verdict": "recap" },
+    { "n": 38, "title": "Mai Ra Trường Chính Thức", "chapter": 8, "synopsis": "Mai được Y tá Hoa công nhận đã trưởng thành trong nghề — khép lại tuyến truyện cá nhân của Mai.", "fact_focus": "Một tập thiên về cảm xúc nghề nghiệp hơn là một fact mới — có thể lồng một fact nhẹ về chăm sóc bản thân cho nhân viên y tế (ngủ đủ, ăn đúng bữa dù trực đêm).", "verdict": "confirmed" },
+    { "n": 39, "title": "Huy Và Chị Ngọc Đề Xuất", "chapter": 8, "synopsis": "Huy và Chị Ngọc đề xuất công ty đổi giờ nghỉ trưa/khu vực vận động — khép lại tuyến công ty.", "fact_focus": "Nghỉ giải lao ngắn định kỳ trong ngày làm việc giúp giảm mỏi mắt, mỏi cơ, cải thiện tập trung.", "verdict": "confirmed" },
+    { "n": 40, "title": "Họp Mặt Đầu Ngõ", "chapter": 8, "synopsis": "Cả xóm họp mặt ăn mừng, mọi tuyến nhân vật hội tụ trong một bữa tiệc ấm áp — kết mùa 1.", "fact_focus": "Tổng kết chủ đề toàn series: kinh nghiệm dân gian, y học hiện đại, và tình thân — không cái nào một mình là đủ, cả ba cùng nhau mới là 'phương thuốc' bền vững.", "verdict": "theme" }
+  ]
+}
