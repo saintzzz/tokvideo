@@ -28,26 +28,29 @@ on:
       - "out/**"
       - "README.md"
   schedule:
-    # Every 4 hours (6/day) — publishes exactly the next un-published Suc
-    # Khoe episode (see scripts/publish-next-suckhoe.mjs). Does nothing to
-    # the other 5 product videos; those only render on push/manual dispatch.
+    # 7 fixed times/day, chosen by the channel owner (2026-08-23) to land on
+    # actual Vietnamese audience viewing windows instead of an even every-4h
+    # spread: 10h, 11h, 15h, 16h, 21h, 22h, 23h Vietnam time (UTC+7, no DST)
+    # = 03, 04, 08, 09, 14, 15, 16 UTC. Publishes exactly the next
+    # un-published Suc Khoe episode (see scripts/publish-next-suckhoe.mjs).
+    # Does nothing to the other 5 product videos; those only render on
+    # push/manual dispatch.
     #
-    # Dialed down from every 2h (12/day): this is a brand-new channel
-    # publishing fully templated, AI-scripted content, on an account with a
-    # prior TikTok strike history — a high-frequency identical-format cadence
-    # is exactly the "repetitive/mass-produced" pattern YouTube's spam
-    # policies actively suppress in recommendations. 6/day still gives daily
-    # fresh content and plenty of shots at finding what resonates, with
-    # meaningfully lower throttling/strike risk while the channel is new and
-    # has zero track record. Revisit upward once real view/retention data
-    # (channel-report.mjs, once wired up) shows the audience wants more.
-    - cron: "0 */4 * * *"
-    # Every 6 hours (4/day) — same idea, for the separate English-market
-    # channel (locale "en" episodes, own queue/credentials). Started even
-    # more conservatively than the Vietnamese channel's 6/day since it has
-    # zero track record at all. See scripts/publish-next-suckhoe.mjs
-    # --locale=en.
-    - cron: "0 */6 * * *"
+    # Previously an even "every 4h" (6/day) spread, dialed down from every
+    # 2h (12/day) over spam-pattern concerns on a brand-new, previously-
+    # TikTok-struck channel — that reasoning still holds, this just moves
+    # the same ~daily volume onto real peak-viewing hours instead of an
+    # arbitrary clock-aligned cadence.
+    - cron: "0 3,4,8,9,14,15,16 * * *"
+    # Same idea for the separate English-market channel (locale "en"
+    # episodes, own queue/credentials), targeted at US Eastern Time as the
+    # default reference for a broad English-speaking audience: 8h, 9h,
+    # 13h, 14h, 19h, 20h, 21h ET = 12, 13, 17, 18, 23, 0, 1 UTC (EDT,
+    # UTC-4). NOTE: US DST shifts this by 1h — during EST (UTC-5, roughly
+    # Nov-Mar) these times land an hour later in ET than intended; shift
+    # the hour list by -1 (or +1, however you want to think about it) if
+    # that matters enough to bother with twice a year.
+    - cron: "0 0,1,12,13,17,18,23 * * *"
     # Once daily — pulls real channel/video stats (subscribers, views,
     # watch time, per-video performance) into the job log via
     # scripts/channel-report.mjs, so cadence/content decisions have actual
@@ -535,13 +538,14 @@ jobs:
   # only reacts to its own schedule now that channel-report shares the
   # 'schedule' event too.
   publish-next-suckhoe:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 */4 * * *') || github.event.inputs.video == 'suckhoe-publish-next'
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 3,4,8,9,14,15,16 * * *') || github.event.inputs.video == 'suckhoe-publish-next'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    # Shared with publish-next-suckhoe-en: both commit+push
-    # src/suckhoe/published.json, and their schedules coincide at 00:00 and
-    # 12:00 UTC (every 4h vs every 6h) — same concurrency group serializes
+    # Shared with publish-next-suckhoe-en and release-shelved-suckhoe: all
+    # three commit+push src/suckhoe/*.json, and their fixed-hour schedules
+    # don't overlap each other by design (2026-08-23) but channel-report's
+    # 00:00 UTC daily run still can — same concurrency group serializes
     # them instead of racing two separate checkouts on the same push.
     concurrency:
       group: suckhoe-publish-queue
@@ -588,7 +592,7 @@ jobs:
   # (locale "en" episodes, own queue position within published.json, own
   # credentials). See scripts/publish-next-suckhoe.mjs --locale=en.
   publish-next-suckhoe-en:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 */6 * * *') || github.event.inputs.video == 'suckhoe-en-publish-next'
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 0,1,12,13,17,18,23 * * *') || github.event.inputs.video == 'suckhoe-en-publish-next'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -678,6 +682,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # 00:00 UTC coincides with the English publish schedule's 0h slot
+    # (2026-08-23 fixed-hour reschedule) — same concurrency group as the
+    # publish jobs so they serialize instead of racing a push to main.
+    concurrency:
+      group: suckhoe-publish-queue
     steps:
       - name: Checkout
         uses: actions/checkout@v4
