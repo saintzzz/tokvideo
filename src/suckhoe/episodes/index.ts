@@ -42,6 +42,21 @@ import enBakingSodaPaste from "./en-baking-soda-paste.json";
 import enColdTeaBags from "./en-cold-tea-bags.json";
 import enEpsomSaltSoak from "./en-epsom-salt-soak.json";
 import enPeppermintTea from "./en-peppermint-tea.json";
+import traTimSen from "./tra-tim-sen.json";
+import cheHatSenLongNhan from "./che-hat-sen-long-nhan.json";
+import ruouGungXoaKhop from "./ruou-gung-xoa-khop.json";
+import nuocEpCuDen from "./nuoc-ep-cu-den.json";
+import traGaoLutRang from "./tra-gao-lut-rang.json";
+import traVoQuyt from "./tra-vo-quyt.json";
+import nuocLaHanQua from "./nuoc-la-han-qua.json";
+import xongLaGiaiCam from "./xong-la-giai-cam.json";
+import laKinhGioiTamRomSam from "./la-kinh-gioi-tam-rom-sam.json";
+import nuocDauDenRang from "./nuoc-dau-den-rang.json";
+import enChamomileTea from "./en-chamomile-tea.json";
+import enSaltwaterGargle from "./en-saltwater-gargle.json";
+import enWitchHazelToner from "./en-witch-hazel-toner.json";
+import enWarmLemonWater from "./en-warm-lemon-water.json";
+import enCloveOilToothache from "./en-clove-oil-toothache.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -98,4 +113,19 @@ export const EPISODES: SucKhoeEpisode[] = [
   enColdTeaBags,
   enEpsomSaltSoak,
   enPeppermintTea,
+  traTimSen,
+  cheHatSenLongNhan,
+  ruouGungXoaKhop,
+  nuocEpCuDen,
+  traGaoLutRang,
+  traVoQuyt,
+  nuocLaHanQua,
+  xongLaGiaiCam,
+  laKinhGioiTamRomSam,
+  nuocDauDenRang,
+  enChamomileTea,
+  enSaltwaterGargle,
+  enWitchHazelToner,
+  enWarmLemonWater,
+  enCloveOilToothache,
 ] as SucKhoeEpisode[];
