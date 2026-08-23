@@ -6,6 +6,31 @@ import { GranddaughterSilhouette } from "../components/GranddaughterSilhouette";
 import { KineticText } from "../components/KineticText";
 import { fonts } from "../fonts";
 import { LongFormBeat } from "../suckhoe/long-form/types";
+import { makeRig } from "../theatre-rig";
+
+// A real animator's "squash, anticipate, overshoot, settle" curve for the
+// reveal-moment reaction, authored as plain keyframe data via
+// src/theatre-rig.ts (Theatre.js under the hood) instead of a generic
+// spring() — a spring always eases the same way regardless of shape; this
+// gives an actual directed gesture (brief dip before the pop reads as
+// "gathering to react," not just a bounce). One shared rig instance for
+// every DialogueScene, keyed by local seconds-from-reveal-start.
+const REVEAL_RIG = makeRig("suckhoe-long-dialogue", "reveal", {
+  reveal: {
+    scale: [
+      { time: 0, value: 1 },
+      { time: 0.12, value: 0.95 },
+      { time: 0.32, value: 1.1 },
+      { time: 0.55, value: 1 },
+    ],
+    glow: [
+      { time: 0, value: 0 },
+      { time: 0.15, value: 0.15 },
+      { time: 0.35, value: 1 },
+      { time: 0.75, value: 0 },
+    ],
+  },
+});
 
 export const DialogueScene: React.FC<{
   beat: LongFormBeat;
@@ -29,13 +54,12 @@ export const DialogueScene: React.FC<{
     extrapolateRight: "clamp",
   });
 
-  // A brief excited "pop" on whoever is about to reveal the research
-  // behind a remedy — cheaper than full gesture rigging, but reads as a
-  // reaction instead of a static pose.
-  const excitementPop = beat.factReveal
-    ? spring({ frame, fps, config: { damping: 8, mass: 0.5 }, durationInFrames: 18 })
-    : 0;
-  const excitementScale = 1 + excitementPop * 0.08;
+  // A brief excited reaction on whoever is about to reveal the research
+  // behind a remedy — squash, overshoot, settle, from REVEAL_RIG above,
+  // instead of a generic spring bounce.
+  const reveal = REVEAL_RIG.at(frame, fps).reveal;
+  const excitementPop = beat.factReveal ? reveal.glow : 0;
+  const excitementScale = beat.factReveal ? reveal.scale : 1;
 
   // Pattern interrupt: a quick flash + zoom-punch right as a new
   // scene/act begins, instead of just the usual slow push-in — retention
