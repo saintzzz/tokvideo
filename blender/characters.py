@@ -70,10 +70,13 @@ BA_TU_PARTS = {
         {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.03, 0.035), "color": (1, 1, 1, 1)},
         {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.015, 0.018), "color": BA_TU_DARK},
         {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.015, 0.018), "color": BA_TU_DARK},
-        {"points": oval_points(0, _HEAD_CZ - 0.08, 0.04, 0.02), "color": (0.55, 0.28, 0.24, 1.0)},
         # grey hair bun, sits above the head silhouette
         {"points": oval_points(0, _HEAD_CZ + 0.22, 0.09, 0.08), "color": (0.82, 0.8, 0.78, 1.0)},
     ],
+    # mouth — its own bone ("jaw") so talking can stretch it open/closed
+    # via bone scale (see gp_character.Character.pose's `scales` param)
+    # instead of being welded rigidly to the rest of the face.
+    "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.04, 0.02), "color": (0.55, 0.28, 0.24, 1.0)}],
 }
 BA_TU_PARTS.update(_limb_parts(BA_TU_SKIN, BA_TU_CARDIGAN))
 
@@ -93,10 +96,10 @@ MAI_PARTS = {
         {"points": oval_points(0.055, _HEAD_CZ + 0.02, 0.028, 0.032), "color": (1, 1, 1, 1)},
         {"points": oval_points(-0.055, _HEAD_CZ + 0.02, 0.014, 0.016), "color": MAI_DARK},
         {"points": oval_points(0.055, _HEAD_CZ + 0.02, 0.014, 0.016), "color": MAI_DARK},
-        {"points": oval_points(0, _HEAD_CZ - 0.07, 0.035, 0.018), "color": (0.6, 0.3, 0.28, 1.0)},
         # hair — a rounded cap over the top plus a ponytail puff at the back
         {"points": oval_points(0, _HEAD_CZ + 0.14, 0.16, 0.1), "color": MAI_HAIR},
         {"points": oval_points(-0.16, _HEAD_CZ + 0.05, 0.06, 0.09), "color": MAI_HAIR},
     ],
+    "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.07, 0.035, 0.018), "color": (0.6, 0.3, 0.28, 1.0)}],
 }
 MAI_PARTS.update(_limb_parts(MAI_SKIN, MAI_TOP))

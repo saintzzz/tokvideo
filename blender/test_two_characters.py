@@ -19,6 +19,7 @@ import bpy
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gp_character import build_character  # noqa: E402
 from characters import BA_TU_PARTS, BA_TU_SKIN, MAI_PARTS, MAI_SKIN  # noqa: E402
+from talking_mouth import jaw_scale  # noqa: E402
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRAMES_DIR = os.path.join(REPO_ROOT, "blender", "out", "two_char_frames")
@@ -58,18 +59,26 @@ mai = build_character("Mai", MAI_PARTS, MAI_SKIN, origin=(0.9, 0, 0), scale=0.85
 
 for f in range(TOTAL_FRAMES):
     t = f / FPS
+    # Ba Tu speaks for the first half, Mai for the second — proves the
+    # jaw-scale talking animation is independent per character and
+    # correctly silent when a character isn't the one speaking (a beat
+    # where one person listens with a closed mouth while the other talks
+    # is the overwhelmingly common case across ep-01's 90 beats).
+    ba_tu_speaking = t < 1.5
+    mai_speaking = t >= 1.5
+
     ba_tu.pose(f, {
         "spine": math.sin(t * 2.0) * 1.2,
         "head": 8 + math.sin(t * 1.5) * 4,
         "upperarm_L": 6, "forearm_L": -8,
         "upperarm_R": -18 + math.sin(t * 3) * 6, "forearm_R": 30,
-    })
+    }, scales={"jaw": jaw_scale(f, ba_tu_speaking)})
     mai.pose(f, {
         "spine": math.sin(t * 2.3 + 1) * 1.4,
         "head": -10 + math.sin(t * 1.8) * 5,
         "upperarm_L": 10, "forearm_L": -20,
         "upperarm_R": -8, "forearm_R": 6,
-    })
+    }, scales={"jaw": jaw_scale(f, mai_speaking)})
 
 print("TWO_CHAR_POSED:", TOTAL_FRAMES)
 

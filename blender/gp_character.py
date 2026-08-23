@@ -36,6 +36,12 @@ BONE_SPEC = {
     "spine": {"head": (0, 0, 1.05), "tail": (0, 0, 1.35), "parent": "hips"},
     "neck": {"head": (0, 0, 1.35), "tail": (0, 0, 1.45), "parent": "spine"},
     "head": {"head": (0, 0, 1.45), "tail": (0, 0, 1.75), "parent": "neck"},
+    # A tiny bone right at the mouth, NOT for rotation — talking is
+    # animated by keyframing this bone's Z-SCALE (see Character.pose's
+    # `scales` param), stretching the mouth shape open/closed like the
+    # SVG track's useMouthOpenAmount, instead of needing two swapped mouth
+    # shapes per character.
+    "jaw": {"head": (0, 0, 1.52), "tail": (0, 0, 1.58), "parent": "head"},
     "shoulder_L": {"head": (0, 0, 1.32), "tail": (0.18, 0, 1.28), "parent": "spine"},
     "upperarm_L": {"head": (0.18, 0, 1.28), "tail": (0.3, 0, 1.02), "parent": "shoulder_L"},
     "forearm_L": {"head": (0.3, 0, 1.02), "tail": (0.38, 0, 0.8), "parent": "upperarm_L"},
@@ -129,7 +135,7 @@ class Character:
         self.gp_obj = gp_objs[0] if gp_objs else None  # back-compat convenience
         self.arm_obj = arm_obj
 
-    def pose(self, frame, rotations_deg, root_location=None, root_rotation_deg=0.0):
+    def pose(self, frame, rotations_deg, root_location=None, root_rotation_deg=0.0, scales=None):
         """Keyframe this character's bone rotations (degrees, Y axis) at
         `frame`. `rotations_deg` is a dict of {bone_name: degrees}; bones
         not mentioned hold their previous keyframed value (standard
@@ -137,6 +143,9 @@ class Character:
         changed for this pose. `root_location`/`root_rotation_deg` move
         the whole character (walking, standing up, etc.) via the armature
         object's own transform, independent of the internal bone chain.
+        `scales` is an optional dict of {bone_name: (sx, sy, sz)} — used
+        for the "jaw" bone's talking animation (stretch the mouth shape
+        open/closed via Z-scale) but works on any bone.
         """
         pbones = self.arm_obj.pose.bones
         for bone_name, degrees in rotations_deg.items():
@@ -144,6 +153,11 @@ class Character:
             pbone.rotation_mode = "XYZ"
             pbone.rotation_euler = (0, math.radians(degrees), 0)
             pbone.keyframe_insert(data_path="rotation_euler", frame=frame)
+
+        for bone_name, scale in (scales or {}).items():
+            pbone = pbones[bone_name]
+            pbone.scale = scale
+            pbone.keyframe_insert(data_path="scale", frame=frame)
 
         if root_location is not None:
             self.arm_obj.location = root_location
