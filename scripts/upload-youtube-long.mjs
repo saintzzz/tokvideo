@@ -3,6 +3,7 @@ import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { google } from "googleapis";
+import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 
 // Uploads one rendered long-form Suc Khoe episode. Manual/dispatch-only —
 // NOT part of the automated Shorts publish queue. Regular long-form video,
@@ -117,3 +118,31 @@ const res = await youtube.videos.insert({
 });
 
 console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
+
+// Add to the dedicated "long-form" playlist, same pattern as the Shorts
+// upload script (scripts/upload-youtube.mjs) — this was missing entirely
+// until 2026-08-23 (caught when the user asked why the long-form test
+// upload never showed up in a playlist). Never fails the upload over
+// this: a missing/unmapped playlist just means the video isn't added to
+// one, logged and moved on.
+const localeKey = isEn ? "en" : "vi";
+const playlistId = playlistMap[localeKey]?.["long-form"];
+
+if (playlistId) {
+  try {
+    await youtube.playlistItems.insert({
+      part: ["snippet"],
+      requestBody: {
+        snippet: {
+          playlistId,
+          resourceId: { kind: "youtube#video", videoId: res.data.id },
+        },
+      },
+    });
+    console.log(`Added to playlist ${playlistId} (long-form)`);
+  } catch (err) {
+    console.error(`Failed to add to playlist ${playlistId}: ${err.message ?? err}`);
+  }
+} else {
+  console.log(`No "long-form" playlist mapped for locale "${localeKey}" — skipping.`);
+}
