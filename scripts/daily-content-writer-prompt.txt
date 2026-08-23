@@ -6,6 +6,8 @@ FIRST, read these files to understand the exact format and rules before writing 
 - The "Kênh Suc Khoe" section of README.md (compliance rules)
 - src/suckhoe/channel-report-vi.md and src/suckhoe/channel-report-en.md, IF they exist (written daily by the channel-report job — best-effort, skip silently if missing or if the "Most recent videos" table isn't there yet, e.g. a brand-new channel with too little data). When present, look at the per-video view/like/comment counts: lean toward writing more episodes in the ingredient/category territory of whatever is visibly landing best, and be more cautious about repeating a format that's visibly flat across several entries. This is a soft signal, not a hard rule — never skip an otherwise good, compliant, non-duplicate topic just because the report doesn't mention it yet.
 
+STRATEGIC PRIORITY (2026-08-23, based on real per-video data, not guesswork): the VI channel's first real batch showed roughly 1000x variance between best and worst performers. Sleep problems (khó ngủ, ngủ chập chờn), morning fatigue/low energy (uể oải, mệt mỏi buổi sáng), and cold/cough/sore throat (ho, cảm, rát họng) are dramatically outperforming everything else (800-1000+ views vs 1-10 for joint pain, skin/rash, and general body-ache topics). Until new data says otherwise: aim roughly 60-70% of each Vietnamese batch at these three proven categories (varying ingredient/format within them so it doesn't feel repetitive), and treat joint-pain/skin/general-ache topics as a minority (20-30%) exploratory slice rather than an equal-weight category. Re-read the latest channel-report before each run and adjust this split as real data changes it — this is a live, evolving priority, not a fixed rule to blindly follow forever.
+
 Each run, add 8 to 12 new Vietnamese episodes AND 3 to 5 new English episodes — two independent batches, not translations of each other.
 
 === VIETNAMESE EPISODES ===
@@ -39,6 +41,7 @@ This matters for avoiding YouTube's "repetitive/mass-produced content" spam sign
 1. Pick a slug per the language-specific rules above.
 2. Create `src/suckhoe/episodes/<slug>.json` with all required fields (include `"locale": "en"` for English ones; Vietnamese ones can omit `locale` or set it to `"vi"`, both work identically).
 3. Add the corresponding import + array entry to `src/suckhoe/episodes/index.ts` (follow the exact existing pattern).
+4. `cta` field: this is SPOKEN as the closing line of the video (see scripts/generate-voiceover.mjs), not just filler. Found 2026-08-23: videos with 1000+ views were getting ZERO comments — a generic "follow the channel" close doesn't invite a response. Instead, end with a genuine, specific question tied to THIS episode's remedy that a viewer could answer in one line (e.g. "Nhà bạn có hay làm mẹo này không, hay có cách nào khác hay hơn? Comment cho mình biết nhé" / "Have you tried this one, or do you have a different trick for it? Let me know in the comments"). Vary the exact phrasing episode to episode — don't paste the same sentence everywhere, that reads as fake. Still keep it warm/natural, still fold in the `caution` note when present (same as before), no em dashes.
 
 AFTER writing all new episodes:
 - Run `npx tsc --noEmit` from the repo root and fix any type errors before proceeding (it must pass cleanly — this project has strict TypeScript).
