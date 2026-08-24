@@ -91,6 +91,21 @@ BA_TU_PARTS = {
     "neck": [{"points": capsule_points(BONE_SPEC["neck"]["head"], BONE_SPEC["neck"]["tail"], 0.09), "color": BA_TU_SKIN}],
     "head": [
         {"points": oval_points(0, _HEAD_CZ, 0.17, 0.19), "color": BA_TU_SKIN, "radius": 0.02},
+        # Hair drawn FIRST (right after the base head oval, before any
+        # face feature) so it always sits BEHIND the face in draw order —
+        # a real bug hit while matching this to the approved model sheet
+        # (blender/ba-tu-concept.html): hair defined AFTER the face and
+        # reaching down toward eye level covered the eyes/nose entirely,
+        # since later shapes render closer to camera (see gp_character's
+        # y_depth comment). Kept well above eyebrow height (_HEAD_CZ +
+        # 0.065) except right at the head's own side edge, so there's no
+        # overlap left to worry about either way.
+        {"points": oval_points(0, _HEAD_CZ + 0.21, 0.145, 0.06), "color": BA_TU_HAIR},
+        {"points": oval_points(0.02, _HEAD_CZ + 0.18, 0.11, 0.03), "color": BA_TU_HAIR_SHADOW, "outline": False},
+        {"points": oval_points(0.15, _HEAD_CZ + 0.15, 0.06, 0.06), "color": BA_TU_HAIR},
+        {"points": oval_points(0.15, _HEAD_CZ + 0.12, 0.05, 0.025), "color": BA_TU_HAIR_SHADOW, "outline": False},
+        {"points": capsule_points((-0.155, 0, _HEAD_CZ + 0.15), (-0.145, 0, _HEAD_CZ + 0.06), 0.016), "color": BA_TU_HAIR},
+        {"points": capsule_points((-0.13, 0, _HEAD_CZ + 0.13), (-0.12, 0, _HEAD_CZ + 0.08), 0.01), "color": BA_TU_HAIR},
         # subtle jaw/cheek shadow along the lower edge for a touch of form
         {"points": oval_points(0, _HEAD_CZ - 0.1, 0.15, 0.09), "color": BA_TU_SKIN_SHADOW, "radius": 0.02, "outline": False},
         # rosy cheeks (age-appropriate blush, not a childlike pink)
@@ -119,12 +134,6 @@ BA_TU_PARTS = {
         # smile lines beside the mouth — small parenthesis shapes
         {"points": capsule_points((-0.07, 0, _HEAD_CZ - 0.06), (-0.06, 0, _HEAD_CZ - 0.1), 0.008), "color": BA_TU_SKIN_SHADOW, "outline": False},
         {"points": capsule_points((0.06, 0, _HEAD_CZ - 0.1), (0.07, 0, _HEAD_CZ - 0.06), 0.008), "color": BA_TU_SKIN_SHADOW, "outline": False},
-        # hair bun with a shaded underside, plus two escaped wisps for
-        # texture instead of one flat blob
-        {"points": oval_points(0, _HEAD_CZ + 0.22, 0.09, 0.08), "color": BA_TU_HAIR},
-        {"points": oval_points(0, _HEAD_CZ + 0.18, 0.08, 0.04), "color": BA_TU_HAIR_SHADOW, "outline": False},
-        {"points": capsule_points((-0.13, 0, _HEAD_CZ + 0.14), (-0.16, 0, _HEAD_CZ + 0.04), 0.012), "color": BA_TU_HAIR},
-        {"points": capsule_points((0.14, 0, _HEAD_CZ + 0.15), (0.17, 0, _HEAD_CZ + 0.07), 0.012), "color": BA_TU_HAIR},
     ],
     # mouth — its own bone ("jaw") so talking can stretch it open/closed
     # via bone scale (see gp_character.Character.pose's `scales` param)
@@ -147,6 +156,38 @@ for _side, _fore_bone, _hand_bone, _hand_pos in [
     BA_TU_PARTS[_hand_bone].append(
         {"points": oval_points(_hand_pos[0] + _thumb_dx, _hand_pos[2] + 0.02, 0.02, 0.028), "color": BA_TU_SKIN, "outline": False}
     )
+
+# Lower body (2026-08-24) — the channel owner correctly caught that Ba Tu
+# had no legs at all, reading as floating instead of standing. An
+# ankle-length A-line skirt (assigned to "hips", a rigid garment that
+# doesn't need to flex per-leg) plus visible ankles and simple house
+# slippers at each foot bone, matching blender/ba-tu-concept.html.
+BA_TU_SKIRT = (0.49, 0.42, 0.33, 1.0)
+BA_TU_SKIRT_SHADOW = (0.37, 0.32, 0.25, 1.0)
+BA_TU_PARTS["hips"] = [
+    {
+        "points": [
+            (-0.24, 0, 0.85), (0.24, 0, 0.85),
+            (0.34, 0, 0.5), (0.32, 0, 0.16),
+            (0, 0, 0.13), (-0.32, 0, 0.16), (-0.34, 0, 0.5),
+        ],
+        "color": BA_TU_SKIRT,
+    },
+    # fold-line shadows, break up the flat A-line silhouette
+    {"points": capsule_points((-0.14, 0, 0.75), (-0.19, 0, 0.25), 0.03), "color": BA_TU_SKIRT_SHADOW, "outline": False},
+    {"points": capsule_points((0.05, 0, 0.78), (0.06, 0, 0.2), 0.025), "color": BA_TU_SKIRT_SHADOW, "outline": False},
+]
+for _side, _shin_bone, _foot_bone in [("L", "shin_L", "foot_L"), ("R", "shin_R", "foot_R")]:
+    _shin_tail = BONE_SPEC[_shin_bone]["tail"]
+    _foot_tail = BONE_SPEC[_foot_bone]["tail"]
+    # a sliver of visible ankle between the skirt hem and the slipper
+    BA_TU_PARTS[_shin_bone] = [
+        {"points": oval_points(_shin_tail[0], _shin_tail[2] + 0.08, 0.035, 0.09), "color": BA_TU_SKIN}
+    ]
+    # simple house slipper
+    BA_TU_PARTS[_foot_bone] = [
+        {"points": oval_points(_foot_tail[0], 0.02, 0.05, 0.03), "color": BA_TU_CARDIGAN_SHADOW}
+    ]
 
 
 # --- Mai (granddaughter, nursing student) ---------------------------------
