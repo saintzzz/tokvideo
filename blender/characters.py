@@ -56,6 +56,76 @@ def _limb_parts(skin, sleeve):
     }
 
 
+def _skirt_lower_body(skin, garment, garment_shadow, shoe_color, waist_z=0.85, hem_z=0.16, flare=0.32):
+    """A skirt/dress-style lower body: one merged garment shape on
+    "hips" (doesn't need to flex per-leg) plus a visible-ankle sliver and
+    a simple shoe at each foot bone. `hem_z` controls skirt length
+    (lower = longer); `flare` controls how much wider the hem is than
+    the waist (an A-line silhouette)."""
+    parts = {
+        "hips": [
+            {
+                "points": [
+                    (-0.22, 0, waist_z), (0.22, 0, waist_z),
+                    (flare, 0, (waist_z + hem_z) / 2), (flare - 0.02, 0, hem_z + 0.03),
+                    (0, 0, hem_z), (-(flare - 0.02), 0, hem_z + 0.03), (-flare, 0, (waist_z + hem_z) / 2),
+                ],
+                "color": garment,
+            },
+            {"points": capsule_points((-0.12, 0, waist_z - 0.1), (-0.17, 0, hem_z + 0.1), 0.028), "color": garment_shadow, "outline": False},
+            {"points": capsule_points((0.05, 0, waist_z - 0.07), (0.06, 0, hem_z + 0.04), 0.022), "color": garment_shadow, "outline": False},
+        ],
+    }
+    for shin_bone, foot_bone in [("shin_L", "foot_L"), ("shin_R", "foot_R")]:
+        shin_tail = BONE_SPEC[shin_bone]["tail"]
+        foot_tail = BONE_SPEC[foot_bone]["tail"]
+        parts[shin_bone] = [
+            {"points": oval_points(shin_tail[0], shin_tail[2] + max(0.02, hem_z - shin_tail[2] + 0.02), 0.032, max(0.03, (hem_z - shin_tail[2]) / 2 + 0.05)), "color": skin}
+        ]
+        parts[foot_bone] = [
+            {"points": oval_points(foot_tail[0], 0.02, 0.05, 0.03), "color": shoe_color}
+        ]
+    return parts
+
+
+def _pants_lower_body(skin, pants, pants_shadow, shoe_color, ankle_z=0.15):
+    """A trousers-style lower body: each leg gets its own tapered
+    pant-leg shape (thigh + shin bones), since — unlike a skirt — the
+    two legs are visually separate. `ankle_z` controls pant length
+    (higher = shorter, e.g. for shorts on a child character; bare shin
+    below the hem uses `skin`)."""
+    parts = {}
+    for side, thigh_bone, shin_bone, foot_bone in [
+        ("L", "thigh_L", "shin_L", "foot_L"),
+        ("R", "thigh_R", "shin_R", "foot_R"),
+    ]:
+        thigh_head = BONE_SPEC[thigh_bone]["head"]
+        thigh_tail = BONE_SPEC[thigh_bone]["tail"]
+        shin_tail = BONE_SPEC[shin_bone]["tail"]
+        foot_tail = BONE_SPEC[foot_bone]["tail"]
+
+        parts[thigh_bone] = [
+            {"points": capsule_points(thigh_head, thigh_tail, 0.13), "color": pants},
+            {"points": capsule_points((thigh_head[0], 0, thigh_head[2] - 0.05), (thigh_tail[0], 0, thigh_tail[2]), 0.035), "color": pants_shadow, "outline": False},
+        ]
+        if ankle_z > shin_tail[2]:
+            # pant leg ends above the ankle (shorts) — bare shin below
+            hem_z = ankle_z
+            parts[shin_bone] = [
+                {"points": capsule_points((shin_tail[0], 0, BONE_SPEC[shin_bone]["head"][2]), (shin_tail[0], 0, hem_z), 0.11), "color": pants},
+                {"points": oval_points(shin_tail[0], shin_tail[2] + 0.05, 0.032, 0.09), "color": skin},
+            ]
+        else:
+            parts[shin_bone] = [
+                {"points": capsule_points(BONE_SPEC[shin_bone]["head"], shin_tail, 0.1), "color": pants},
+                {"points": capsule_points((BONE_SPEC[shin_bone]["head"][0], 0, BONE_SPEC[shin_bone]["head"][2] - 0.03), (shin_tail[0], 0, shin_tail[2]), 0.028), "color": pants_shadow, "outline": False},
+            ]
+        parts[foot_bone] = [
+            {"points": oval_points(foot_tail[0], 0.02, 0.05, 0.03), "color": shoe_color}
+        ]
+    return parts
+
+
 # --- Ba Tu (grandmother) --------------------------------------------------
 # First-pass version of this character used ~6 shapes total (one oval per
 # body part) — cheap to build but reads as a placeholder, not a drawn
@@ -212,6 +282,11 @@ MAI_PARTS = {
     "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.07, 0.035, 0.018), "color": (0.6, 0.3, 0.28, 1.0)}],
 }
 MAI_PARTS.update(_limb_parts(MAI_SKIN, MAI_TOP))
+# Modern casual pants + simple flats — young nursing student, not the
+# long skirt an older character like Ba Tu wears.
+MAI_PANTS = (0.3, 0.35, 0.4, 1.0)
+MAI_PANTS_SHADOW = (0.22, 0.26, 0.31, 1.0)
+MAI_PARTS.update(_pants_lower_body(MAI_SKIN, MAI_PANTS, MAI_PANTS_SHADOW, shoe_color=(0.9, 0.85, 0.8, 1.0)))
 
 
 # --- Co Sau (neighbor, runs the breakfast stall) --------------------------
@@ -236,6 +311,11 @@ CO_SAU_PARTS = {
     "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.04, 0.02), "color": (0.55, 0.28, 0.2, 1.0)}],
 }
 CO_SAU_PARTS.update(_limb_parts(CO_SAU_SKIN, CO_SAU_APRON))
+# Long everyday skirt + simple sandals — runs a breakfast stall, on her
+# feet all morning.
+CO_SAU_SKIRT = (0.42, 0.36, 0.3, 1.0)
+CO_SAU_SKIRT_SHADOW = (0.32, 0.27, 0.22, 1.0)
+CO_SAU_PARTS.update(_skirt_lower_body(CO_SAU_SKIN, CO_SAU_SKIRT, CO_SAU_SKIRT_SHADOW, shoe_color=(0.75, 0.6, 0.25, 1.0), hem_z=0.18))
 
 
 # --- Chu Bay (neighbor, retired, plays chess) -----------------------------
@@ -261,6 +341,11 @@ CHU_BAY_PARTS = {
     "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.038, 0.018), "color": (0.5, 0.26, 0.2, 1.0)}],
 }
 CHU_BAY_PARTS.update(_limb_parts(CHU_BAY_SKIN, CHU_BAY_SHIRT))
+# Simple trousers + sandals — retired neighbor, plays chess at the
+# alley's edge all day.
+CHU_BAY_PANTS = (0.42, 0.44, 0.4, 1.0)
+CHU_BAY_PANTS_SHADOW = (0.32, 0.34, 0.3, 1.0)
+CHU_BAY_PARTS.update(_pants_lower_body(CHU_BAY_SKIN, CHU_BAY_PANTS, CHU_BAY_PANTS_SHADOW, shoe_color=(0.55, 0.42, 0.3, 1.0)))
 
 
 # --- Be Tom (neighbor's child, 7 years old) -------------------------------
@@ -285,3 +370,8 @@ BE_TOM_PARTS = {
     "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.07, 0.04, 0.02), "color": (0.65, 0.35, 0.3, 1.0)}],
 }
 BE_TOM_PARTS.update(_limb_parts(BE_TOM_SKIN, BE_TOM_SHIRT))
+# Shorts (ankle_z well above the ankle, per _pants_lower_body's docstring)
+# + sandals — a 7-year-old who plays soccer in the alley, not long pants.
+BE_TOM_SHORTS = (0.35, 0.5, 0.55, 1.0)
+BE_TOM_SHORTS_SHADOW = (0.25, 0.38, 0.42, 1.0)
+BE_TOM_PARTS.update(_pants_lower_body(BE_TOM_SKIN, BE_TOM_SHORTS, BE_TOM_SHORTS_SHADOW, shoe_color=(0.8, 0.3, 0.25, 1.0), ankle_z=0.3))
