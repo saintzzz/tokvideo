@@ -1,4 +1,5 @@
 import ep01NoiChaoDauNgo from "./ep-01-noi-chao-dau-ngo.json";
+import ep02BaiKiemTraCuaMai from "./ep-02-bai-kiem-tra-cua-mai.json";
 import { AnimatedFilmEpisode } from "../types";
 
 // Add a new episode: create `episodes/ep-<n hai chữ số>-<slug>.json` with the
@@ -6,4 +7,5 @@ import { AnimatedFilmEpisode } from "../types";
 // same pattern as src/suckhoe/episodes/index.ts.
 export const EPISODES: AnimatedFilmEpisode[] = [
   ep01NoiChaoDauNgo,
+  ep02BaiKiemTraCuaMai,
 ] as AnimatedFilmEpisode[];
