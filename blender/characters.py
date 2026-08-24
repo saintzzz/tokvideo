@@ -375,3 +375,48 @@ BE_TOM_PARTS.update(_limb_parts(BE_TOM_SKIN, BE_TOM_SHIRT))
 BE_TOM_SHORTS = (0.35, 0.5, 0.55, 1.0)
 BE_TOM_SHORTS_SHADOW = (0.25, 0.38, 0.42, 1.0)
 BE_TOM_PARTS.update(_pants_lower_body(BE_TOM_SKIN, BE_TOM_SHORTS, BE_TOM_SHORTS_SHADOW, shoe_color=(0.8, 0.3, 0.25, 1.0), ankle_z=0.3))
+
+
+# --- Huy (Ba Tu's son, Mai's father, office worker) -----------------------
+# Needed starting episode 2 (checked series-bible.json's cast against the
+# episode's actual characters_present before building this blind — he's
+# the only character episode 2 needs that didn't already exist).
+HUY_SKIN = (0.87, 0.71, 0.55, 1.0)
+HUY_SKIN_SHADOW = (0.76, 0.6, 0.45, 1.0)
+HUY_SHIRT = (0.75, 0.78, 0.8, 1.0)  # pale blue-grey office shirt
+HUY_SHIRT_SHADOW = (0.62, 0.66, 0.68, 1.0)
+HUY_HAIR = (0.15, 0.11, 0.08, 1.0)
+HUY_DARK = (0.2, 0.13, 0.09, 1.0)
+
+HUY_PARTS = {
+    "spine": [
+        {"points": oval_points(0, 1.19, 0.29, 0.31), "color": HUY_SHIRT, "radius": 0.02},
+        # collared shirt placket, a thin vertical line down the front
+        {"points": capsule_points((0, 0, 1.44), (0, 0, 0.98), 0.012), "color": HUY_SHIRT_SHADOW, "outline": False},
+    ],
+    "neck": [{"points": capsule_points(BONE_SPEC["neck"]["head"], BONE_SPEC["neck"]["tail"], 0.09), "color": HUY_SKIN}],
+    "head": [
+        {"points": oval_points(0, _HEAD_CZ, 0.165, 0.18), "color": HUY_SKIN, "radius": 0.02},
+        # short, slightly messy office hair — drawn immediately after the
+        # base head oval and BEFORE all face features, so its y_depth stays
+        # behind the eyes (later-listed shapes render closer to camera; a
+        # hair block listed after the eyes would cover them, as happened
+        # with Ba Tu's first draft this same session).
+        {"points": oval_points(0, _HEAD_CZ + 0.16, 0.15, 0.05), "color": HUY_HAIR},
+        {"points": oval_points(-0.14, _HEAD_CZ + 0.13, 0.05, 0.05), "color": HUY_HAIR},
+        {"points": oval_points(0.14, _HEAD_CZ + 0.13, 0.05, 0.05), "color": HUY_HAIR},
+        # under-eye shadow — office worker who doesn't sleep enough,
+        # a running theme for this character across the season
+        {"points": oval_points(0, _HEAD_CZ - 0.02, 0.14, 0.07), "color": HUY_SKIN_SHADOW, "outline": False},
+        {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.028, 0.032), "color": (1, 1, 1, 1)},
+        {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.028, 0.032), "color": (1, 1, 1, 1)},
+        {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.014, 0.016), "color": HUY_DARK},
+        {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.014, 0.016), "color": HUY_DARK},
+    ],
+    "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.04, 0.02), "color": (0.55, 0.28, 0.22, 1.0)}],
+}
+HUY_PARTS.update(_limb_parts(HUY_SKIN, HUY_SHIRT))
+# Office slacks + simple dress shoes.
+HUY_PANTS = (0.28, 0.28, 0.32, 1.0)
+HUY_PANTS_SHADOW = (0.2, 0.2, 0.24, 1.0)
+HUY_PARTS.update(_pants_lower_body(HUY_SKIN, HUY_PANTS, HUY_PANTS_SHADOW, shoe_color=(0.15, 0.13, 0.12, 1.0)))

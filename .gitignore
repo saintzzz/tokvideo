@@ -31,7 +31,8 @@ scripts/.env.github.local
 scripts/catchup-publish.log
 scripts/animated-film-pipeline.log
 blender/.render-lock.json
-blender/ep*_full_render.log
+blender/ep*_render.log
+blender/__pycache__
 
 # Rendered frames/video from the Blender proof-of-concept scripts under
 # blender/ — regenerate by running the script, same convention as out/.

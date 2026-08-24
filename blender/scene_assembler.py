@@ -34,6 +34,7 @@ from characters import (  # noqa: E402
     CO_SAU_PARTS, CO_SAU_SKIN,
     CHU_BAY_PARTS, CHU_BAY_SKIN,
     BE_TOM_PARTS, BE_TOM_SKIN,
+    HUY_PARTS, HUY_SKIN,
 )
 from backgrounds import build_location, BUILDERS, PROP_ANCHORS  # noqa: E402
 from actions import get_pose  # noqa: E402
@@ -53,6 +54,7 @@ CHARACTER_REGISTRY = {
     "co_sau": (CO_SAU_PARTS, CO_SAU_SKIN, 0.98),
     "chu_bay": (CHU_BAY_PARTS, CHU_BAY_SKIN, 1.0),
     "be_tom": (BE_TOM_PARTS, BE_TOM_SKIN, 0.55),
+    "huy": (HUY_PARTS, HUY_SKIN, 1.0),
 }
 
 # Left-to-right slot x-offsets for however many characters share a beat.
