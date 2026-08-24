@@ -29,6 +29,9 @@ scripts/.env.youtube.local
 # only to saintzzz/tokvideo.
 scripts/.env.github.local
 scripts/catchup-publish.log
+scripts/animated-film-pipeline.log
+blender/.render-lock.json
+blender/ep*_full_render.log
 
 # Rendered frames/video from the Blender proof-of-concept scripts under
 # blender/ — regenerate by running the script, same convention as out/.
