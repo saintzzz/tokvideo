@@ -1,6 +1,19 @@
 {
-  "scripted": [1, 2],
+  "scripted": [
+    1,
+    2
+  ],
   "voiced": [],
-  "rendered": [],
-  "published": []
+  "rendered": [
+    1
+  ],
+  "published": [
+    {
+      "episode": 1,
+      "slug": "ep-01-noi-chao-dau-ngo",
+      "videoId": "kWCUbuHKxZo",
+      "uploadedAt": "2026-08-24T08:46:14.213Z",
+      "approvedAt": null
+    }
+  ]
 }

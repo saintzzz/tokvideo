@@ -56,6 +56,11 @@ $hourlyTasks = @(
         Name = "SucKhoePublishCatchup"
         Script = "run-check-catchup-publish.ps1"
         RepeatMinutes = 60
+    },
+    @{
+        Name = "AnimatedFilmPipeline"
+        Script = "run-animated-film-pipeline.ps1"
+        RepeatMinutes = 60
     }
 )
 

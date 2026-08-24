@@ -41,7 +41,7 @@ function isPidRunning(pid) {
 async function checkApprovals(produced) {
   const { YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN } = process.env;
   if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
-    console.log("YouTube credentials not set — skipping approval check.");
+    console.log("YouTube credentials not set, skipping approval check.");
     return false;
   }
   const oauth2Client = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
@@ -57,7 +57,7 @@ async function checkApprovals(produced) {
       console.log(`[episode ${entry.episode}] videoId=${entry.videoId} privacyStatus=${status}`);
       if (status === "public") {
         entry.approvedAt = new Date().toISOString();
-        console.log(`[episode ${entry.episode}] APPROVED (channel owner made it public) — clear to continue.`);
+        console.log(`[episode ${entry.episode}] APPROVED (channel owner made it public), clear to continue.`);
         changed = true;
       }
     } catch (err) {
@@ -79,7 +79,7 @@ if (existsSync(lockPath)) {
     process.exit(0);
   }
 
-  console.log(`Render process for episode ${lock.episode} has exited — muxing and uploading.`);
+  console.log(`Render process for episode ${lock.episode} has exited, muxing and uploading.`);
   await new Promise((resolve) => {
     const child = spawn("node", ["scripts/animated-film-mux-upload.mjs", String(lock.episode)], {
       cwd: repoRoot,
@@ -98,14 +98,14 @@ if (dirty) writeFileSync(producedPath, JSON.stringify(produced, null, 2) + "\n")
 
 // --- Decide whether to start the next episode -----------------------------
 if (existsSync(lockPath)) {
-  console.log("A render just started or is queued — nothing more to do this tick.");
+  console.log("A render just started or is queued, nothing more to do this tick.");
   process.exit(0);
 }
 
 const publishedList = produced.published || [];
 const latestPublished = publishedList[publishedList.length - 1];
 if (latestPublished && !latestPublished.approvedAt) {
-  console.log(`Episode ${latestPublished.episode} is uploaded but not yet approved (still private) — waiting.`);
+  console.log(`Episode ${latestPublished.episode} is uploaded but not yet approved (still private), waiting.`);
   process.exit(0);
 }
 
@@ -119,7 +119,7 @@ const renderedSet = new Set(produced.rendered || []);
 const nextEpisode = scriptedEpisodes.find((n) => !renderedSet.has(n));
 
 if (nextEpisode === undefined) {
-  console.log("No new scripted episode ready to render yet — waiting on AnimatedFilmEpisodeWriter.");
+  console.log("No new scripted episode ready to render yet, waiting on AnimatedFilmEpisodeWriter.");
   process.exit(0);
 }
 
