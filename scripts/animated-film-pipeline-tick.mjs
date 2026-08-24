@@ -1,5 +1,5 @@
 import { spawn } from "node:child_process";
-import { existsSync, readFileSync, readdirSync, writeFileSync, unlinkSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync, unlinkSync, openSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
@@ -151,10 +151,20 @@ const pythonExpr = [
   `render_full(r'${path.join(episodesDir, episodeFile)}', out_dir=r'${outDir}')`,
 ].join("\n");
 
+// Spawn blenderExe DIRECTLY, not via a "cmd.exe /c ... > logPath 2>&1"
+// wrapper — confirmed the hard way (2026-08-24) that Node's argv-array
+// spawn of cmd.exe mis-quotes the first argument when it contains
+// spaces (blenderExe lives under "C:\Program Files\..."), so cmd.exe
+// re-parses it as "'C:\Program'  is not recognized..." and the render
+// never actually starts. A plain array of args passed straight to the
+// real executable doesn't go through that extra re-parsing step, and
+// the log redirect is done via a real file descriptor instead of shell
+// syntax.
+const logFd = openSync(logPath, "a");
 const child = spawn(
-  "cmd.exe",
-  ["/c", blenderExe, "-b", "--python-expr", pythonExpr, ">", logPath, "2>&1"],
-  { cwd: repoRoot, detached: true, stdio: "ignore", windowsHide: true }
+  blenderExe,
+  ["-b", "--python-expr", pythonExpr],
+  { cwd: repoRoot, detached: true, stdio: ["ignore", logFd, logFd], windowsHide: true }
 );
 child.unref();
 
