@@ -137,12 +137,19 @@ const res = await youtube.videos.insert({
 const videoId = res.data.id;
 console.log(`Uploaded (private): https://youtube.com/watch?v=${videoId}`);
 
-// 4. Record in produced.json.
+// 4. Record in produced.json. Replace any existing entry for this
+// episode rather than appending — a re-render (e.g. after a visual
+// fix) re-runs this script for an episode number already in
+// `published`, and blindly pushing would leave two YouTube video IDs
+// tracked for the same episode (the exact duplicate-upload mistake
+// from earlier this project). The caller is responsible for cleaning
+// up the old video on YouTube itself (delete or leave private) —
+// this only keeps the local bookkeeping to one entry per episode.
 const producedPath = path.join(repoRoot, "src", "animated-film", "produced.json");
 const produced = JSON.parse(await readFile(producedPath, "utf8"));
 produced.rendered = produced.rendered || [];
 if (!produced.rendered.includes(episodeNum)) produced.rendered.push(episodeNum);
-produced.published = produced.published || [];
+produced.published = (produced.published || []).filter((e) => e.episode !== episodeNum);
 produced.published.push({
   episode: episodeNum,
   slug,

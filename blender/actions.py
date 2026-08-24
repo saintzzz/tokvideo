@@ -9,16 +9,20 @@ seconds into that action the current frame is. The scene assembler calls
 `ACTIONS[beat["action"]](t)`, merges the result under the baseline idle
 sway, and passes it straight to `character.pose(frame, pose)`.
 
-Two known simplifications, worth fixing later rather than silently
-pretending they're not there:
-  - Characters only have upper-body art so far (characters.py draws no
-    thigh/shin/foot shapes) — walk_in/walk_out therefore move the whole
-    character via root_location (a slide + bob), not a real leg
-    walk-cycle. Fine for now since most of ep-01 is seated/standing
-    conversation; will look flat once an episode needs someone actually
-    walking across a wide shot.
-  - sit_down/stand_up are root_location height changes for the same
-    reason (no legs to bend at the knee yet).
+One known simplification, worth fixing later rather than silently
+pretending it's not there:
+  - sit_down/stand_up are still root_location height changes rather
+    than a real bend at hip/knee — a viewer would need to see it seated
+    from an angle where the leg fold reads clearly before that's worth
+    building; standing-up/sitting-down is usually a quick beat where a
+    height change alone reads fine.
+
+walk_in/walk_out used to be a root_location slide with no leg motion at
+all (characters.py had no thigh/shin/foot shapes when this file was
+first written). Now that every character has real lower-body art
+(_pants_lower_body / _skirt_lower_body), they drive an actual
+alternating leg swing + knee bend + counter-swinging arms, not just a
+translated statue — see walk_in/walk_out below.
 """
 
 import math
@@ -194,23 +198,48 @@ def stand_up(t):
     return {"spine": -2 * (1 - settle), "head": 0, **BASE_ARMS}, {"z": -0.25 * (1 - settle)}
 
 
+STRIDE_HZ = 3.0  # one full left-right stride cycle per ~1/3 second
+
+
+def _walk_cycle(t):
+    """Shared leg/arm swing for walk_in/walk_out — a real alternating
+    stride using the thigh/shin bones (see this module's docstring),
+    not a slide. Thighs swing opposite phase (scissor), shins bend more
+    on the forward-swinging leg (a lift, not a stiff pendulum), and
+    arms counter-swing opposite their same-side leg the way an actual
+    gait does. Returns just the rotations dict — callers add spine/head
+    sway and the root offset on top."""
+    phase = t * STRIDE_HZ * 2 * math.pi
+    thigh_swing = math.sin(phase) * 22
+    # Knee bends most while that leg is swinging forward (front half of
+    # its own cycle), stays nearly straight on the back/plant half —
+    # cos-shaped lift gated to the forward swing only.
+    knee_l = max(0.0, math.sin(phase)) * 30
+    knee_r = max(0.0, math.sin(phase + math.pi)) * 30
+    bob = abs(math.sin(phase)) * 0.05
+    return {
+        "thigh_L": thigh_swing,
+        "shin_L": -knee_l,
+        "thigh_R": -thigh_swing,
+        "shin_R": -knee_r,
+        "upperarm_L": 6 - thigh_swing * 0.5,
+        "forearm_L": -8,
+        "upperarm_R": -6 + thigh_swing * 0.5,
+        "forearm_R": 8,
+        "spine": math.sin(phase) * 2.5,
+        "head": math.sin(phase) * 1.5,
+    }, bob
+
+
 def walk_in(t, direction=1):
     settle = min(1.0, t / 1.2)
-    bob = abs(math.sin(t * 6.0)) * 0.04
-    return {
-        "spine": math.sin(t * 6.0) * 3,
-        "head": 0,
-        **BASE_ARMS,
-    }, {"x": (1 - settle) * -0.6 * direction, "z": bob}
+    rotations, bob = _walk_cycle(t)
+    return rotations, {"x": (1 - settle) * -0.6 * direction, "z": bob}
 
 
 def walk_out(t, direction=1):
-    bob = abs(math.sin(t * 6.0)) * 0.04
-    return {
-        "spine": math.sin(t * 6.0) * 3,
-        "head": 0,
-        **BASE_ARMS,
-    }, {"x": t * 0.6 * direction, "z": bob}
+    rotations, bob = _walk_cycle(t)
+    return rotations, {"x": t * 0.6 * direction, "z": bob}
 
 
 # Actions that also move the character's root (a tuple of
