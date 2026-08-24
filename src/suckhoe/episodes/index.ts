@@ -57,6 +57,20 @@ import enSaltwaterGargle from "./en-saltwater-gargle.json";
 import enWitchHazelToner from "./en-witch-hazel-toner.json";
 import enWarmLemonWater from "./en-warm-lemon-water.json";
 import enCloveOilToothache from "./en-clove-oil-toothache.json";
+import traLacTien from "./tra-lac-tien.json";
+import xoaDauDuaChanTruocKhiNgu from "./xoa-dau-dua-chan-truoc-khi-ngu.json";
+import nuocMiaGung from "./nuoc-mia-gung.json";
+import traSaGung from "./tra-sa-gung.json";
+import chaoTrungTiaTo from "./chao-trung-tia-to.json";
+import cuCaiHapMatOng from "./cu-cai-hap-mat-ong.json";
+import traCamThao from "./tra-cam-thao.json";
+import ngaiCuuRuouChuomKhop from "./ngai-cuu-ruou-chuom-khop.json";
+import laKheNauNuocTam from "./la-khe-nau-nuoc-tam.json";
+import muoiGungRangChuomBung from "./muoi-gung-rang-chuom-bung.json";
+import enElderberrySyrup from "./en-elderberry-syrup.json";
+import enBakingSodaHeartburn from "./en-baking-soda-heartburn.json";
+import enRawHoneyMinorCuts from "./en-raw-honey-minor-cuts.json";
+import enPeppermintOilHeadache from "./en-peppermint-oil-headache.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -128,4 +142,18 @@ export const EPISODES: SucKhoeEpisode[] = [
   enWitchHazelToner,
   enWarmLemonWater,
   enCloveOilToothache,
+  traLacTien,
+  xoaDauDuaChanTruocKhiNgu,
+  nuocMiaGung,
+  traSaGung,
+  chaoTrungTiaTo,
+  cuCaiHapMatOng,
+  traCamThao,
+  ngaiCuuRuouChuomKhop,
+  laKheNauNuocTam,
+  muoiGungRangChuomBung,
+  enElderberrySyrup,
+  enBakingSodaHeartburn,
+  enRawHoneyMinorCuts,
+  enPeppermintOilHeadache,
 ] as SucKhoeEpisode[];
