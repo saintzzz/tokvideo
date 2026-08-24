@@ -102,7 +102,7 @@ def build_armature(name, origin=(0.0, 0.0, 0.0), scale=1.0):
     return arm_obj
 
 
-def _add_filled_stroke(drawing, points, radius=0.02):
+def _add_filled_stroke(drawing, points, radius=0.02, fill_id=1, y_depth=0.0):
     """points: list of (x, y, z) tuples forming a closed polygon.
 
     Always writes material_index=0 — this is only ever called on a GP
@@ -115,13 +115,37 @@ def _add_filled_stroke(drawing, points, radius=0.02):
     material 0's color). Per-stroke `fill_color` has the same problem, so
     neither Python-level property is a usable workaround; one material
     per GP object is the only combination confirmed to render correctly.
+
+    `fill_id` distinguishes independent shapes for Blender's own
+    bookkeeping; harmless to leave at the default when nothing overlaps.
+    It does NOT fix the bug below, despite an earlier version of this
+    docstring claiming it would — recorded here so nobody re-tries it.
+
+    `y_depth` is the actual fix for that bug: two Grease Pencil shapes
+    sitting at the EXACT SAME world-space Y (this whole rig draws at
+    y=0) and overlapping in screen space — a nose shadow inside a face,
+    a small detail oval inside a bigger one, even across TWO SEPARATE
+    objects/layers/colors — render as a HOLE (fully transparent) at the
+    smaller/later shape instead of an opaque shape on top. Confirmed via
+    three isolated tests (2026-08-24): same drawing with distinct
+    fill_ids still holed; two fully separate GP objects/layers still
+    holed; the SAME setup with the inner shape's object moved to
+    `y=-0.02` (a hair closer to the camera, which sits at y=-10 in every
+    scene in this codebase — see backgrounds.py's depth-sign note)
+    rendered correctly solid. This is a same-depth z-fighting artifact
+    in this Blender build's EEVEE-Next GP path, not a fill-rule or
+    fill_id issue. `y_depth` shifts this stroke's points to
+    `y = -y_depth` (more positive `y_depth` = closer to camera);
+    build_character assigns a tiny increasing value per shape in
+    drawing order so later (visually "on top") shapes never tie a
+    same-depth shape drawn earlier.
     """
     n = len(points)
     drawing.add_strokes([n])
     stroke = drawing.strokes[-1]
     stroke.cyclic = True
     stroke.fill_opacity = 1.0
-    stroke.fill_id = 1
+    stroke.fill_id = fill_id
     stroke.material_index = 0
     pos_attr = drawing.attributes["position"]
     radius_attr = drawing.attributes.get("radius") or drawing.attributes.new(
@@ -129,7 +153,7 @@ def _add_filled_stroke(drawing, points, radius=0.02):
     )
     start = len(pos_attr.data) - n
     for i, p in enumerate(points):
-        pos_attr.data[start + i].vector = p
+        pos_attr.data[start + i].vector = (p[0], p[1] - y_depth, p[2])
         radius_attr.data[start + i].value = radius
     return stroke, list(range(start, start + n))
 
@@ -201,11 +225,22 @@ class Character:
         self.arm_obj.rotation_euler = (0, math.radians(root_rotation_deg), 0)
 
 
-def _make_single_color_material(name, color):
+def _make_single_color_material(name, color, outline=True):
+    """`outline=False` is for soft-shading detail shapes (a shadow patch,
+    a blush, a crease) that are meant to blend into a larger same-color
+    area with no visible seam. Found the hard way (2026-08-24): every GP
+    stroke draws its own outline (the material's darker `color`, distinct
+    from `fill_color`) even where its fill exactly matches the shape
+    behind it — a small detail shape sitting on a bigger fill of the same
+    color still shows its own dark outline ring on top, reading as a
+    "donut" artifact instead of a smooth shaded patch. Structural shapes
+    (eyebrows, pupils, clothing trim) still want their outline — this is
+    only for shapes meant to disappear into the surface they're shading.
+    """
     mat = bpy.data.materials.new(name)
     bpy.data.materials.create_gpencil_data(mat)
     mat.grease_pencil.show_fill = True
-    mat.grease_pencil.show_stroke = True
+    mat.grease_pencil.show_stroke = outline
     mat.grease_pencil.fill_style = "SOLID"
     mat.grease_pencil.fill_color = color
     mat.grease_pencil.color = tuple(c * 0.6 for c in color[:3]) + (1.0,)
@@ -228,25 +263,34 @@ def build_character(name, parts, skin_color, origin=(0.0, 0.0, 0.0), scale=1.0):
     arm_obj = build_armature(name, origin=origin, scale=scale)
 
     # Group every shape by its resolved color first, so each color gets
-    # exactly one GP object with exactly one material.
+    # exactly one GP object with exactly one material. Also assign each
+    # shape a GLOBAL draw-order index (across every bone/color, in the
+    # order `parts` lists them) — this becomes its y_depth below, so
+    # shapes defined later (visually "on top", by convention in every
+    # characters.py entry) never sit at the exact same depth as an
+    # earlier same-drawing-or-not shape they overlap. See
+    # _add_filled_stroke's docstring for why that matters.
     by_color = {}
+    draw_order = 0
     for bone_name, shapes in parts.items():
         for shape in shapes:
             fill_color = shape.get("color", skin_color) if isinstance(shape, dict) else skin_color
             points = shape["points"] if isinstance(shape, dict) else shape
             radius = shape.get("radius", 0.015) if isinstance(shape, dict) else 0.015
-            key = tuple(round(c, 4) for c in fill_color)
-            by_color.setdefault(key, []).append((bone_name, points, radius))
+            outline = shape.get("outline", True) if isinstance(shape, dict) else True
+            key = (tuple(round(c, 4) for c in fill_color), outline)
+            by_color.setdefault(key, []).append((bone_name, points, radius, draw_order))
+            draw_order += 1
 
     gp_objs = []
-    for color_index, (color, entries) in enumerate(by_color.items()):
+    for color_index, ((color, outline), entries) in enumerate(by_color.items()):
         gp_data = bpy.data.grease_pencils.new(f"{name}_GP_{color_index}")
         gp_obj = bpy.data.objects.new(f"{name}_GP_{color_index}", gp_data)
         gp_obj.location = origin
         gp_obj.scale = (scale, scale, scale)
         bpy.context.collection.objects.link(gp_obj)
         gp_data.materials.append(
-            _make_single_color_material(f"{name}_Mat_{color_index}", color)
+            _make_single_color_material(f"{name}_Mat_{color_index}", color, outline=outline)
         )
 
         layer = gp_data.layers.new(f"{name}_part_{color_index}")
@@ -254,11 +298,19 @@ def build_character(name, parts, skin_color, origin=(0.0, 0.0, 0.0), scale=1.0):
         frame0 = layer.frames.new(0)
         drawing = frame0.drawing
 
-        for bone_name, points, radius in entries:
+        for shape_index, (bone_name, points, radius, order) in enumerate(entries):
             vg = gp_obj.vertex_groups.get(bone_name) or gp_obj.vertex_groups.new(
                 name=bone_name
             )
-            stroke, indices = _add_filled_stroke(drawing, points, radius)
+            # y_depth: tiny per-shape increment in GLOBAL draw order (see
+            # the comment above by_color) so no two overlapping shapes
+            # ever tie at the exact same depth — the actual fix for the
+            # same-depth hole bug (see _add_filled_stroke's docstring).
+            # fill_id (+1, own-drawing-unique) kept too — harmless, and
+            # correct Blender bookkeeping even though it isn't the fix.
+            stroke, indices = _add_filled_stroke(
+                drawing, points, radius, fill_id=shape_index + 1, y_depth=order * 0.0005
+            )
             drawing.vertex_group_assign(
                 vgroup_name=bone_name, indices_ptr=indices, weight=1.0
             )

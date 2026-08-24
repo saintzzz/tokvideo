@@ -132,6 +132,19 @@ BUILDERS = {
     "quan_co_sau": build_quan_co_sau,
 }
 
+# Where a character should actually stand for an action tied to a
+# specific prop in the background — fixes a real staging bug (2026-08-24,
+# caught by the channel owner watching the render): stir_pot was using
+# the same generic left-right slot layout as every other action, so Ba Tu
+# ended up floating in the middle of the room instead of standing at the
+# counter next to the pot she's supposedly stirring. Keyed by
+# (location, action); the scene assembler falls back to the generic slot
+# layout for any (location, action) not listed here.
+PROP_ANCHORS = {
+    ("nha_ba_tu", "stir_pot"): -1.7,  # matches bg_counter/bg_pot's x in build_nha_ba_tu
+    ("quan_co_sau", "stir_pot"): 0.5,  # matches bg_stall/bg_pan's x in build_quan_co_sau
+}
+
 
 def build_location(location_name):
     builder = BUILDERS.get(location_name)

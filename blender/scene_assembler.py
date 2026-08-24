@@ -35,7 +35,7 @@ from characters import (  # noqa: E402
     CHU_BAY_PARTS, CHU_BAY_SKIN,
     BE_TOM_PARTS, BE_TOM_SKIN,
 )
-from backgrounds import build_location, BUILDERS  # noqa: E402
+from backgrounds import build_location, BUILDERS, PROP_ANCHORS  # noqa: E402
 from actions import get_pose  # noqa: E402
 from talking_mouth import jaw_scale  # noqa: E402
 from audio_utils import get_duration_seconds  # noqa: E402
@@ -96,6 +96,14 @@ def _setup_scene(resolution=(960, 540)):
     scene.render.resolution_x = resolution[0]
     scene.render.resolution_y = resolution[1]
     scene.render.image_settings.file_format = "PNG"
+    # Default is 64. This scene has no soft shadows/GI/reflections to
+    # denoise (flat Emission backgrounds, layer.use_lights=False on every
+    # character) — samples only refine hard-edge anti-aliasing here, which
+    # fully converges far below the default. Confirmed via a direct 64-
+    # vs-8 side-by-side (still frame AND a 48-frame motion clip, checked
+    # for temporal flicker too) with the channel owner before lowering
+    # this — pixel-identical, ~2.8x faster.
+    scene.eevee.taa_render_samples = 8
     return scene
 
 
@@ -111,6 +119,29 @@ def _build_all_locations(location_names):
         else:
             location_objs[loc] = []
     return location_objs
+
+
+def _positions_for_beat(location, action, present, speaker):
+    """Returns (x_positions, character_names) for this beat. If the
+    (location, action) pair has a prop anchor (see backgrounds.PROP_
+    ANCHORS), the acting character (the speaker — the schema has no
+    separate "actor" field, and in practice the one performing a prop-
+    tied action is the one talking about it) is placed AT the prop;
+    everyone else present gets the normal slot layout, shifted clear of
+    the anchor so they don't stack on top of it. Otherwise, everyone
+    just gets the generic left-right slot layout."""
+    anchor_x = PROP_ANCHORS.get((location, action))
+    if anchor_x is None or speaker not in present:
+        slots = SLOT_X.get(len(present), SLOT_X[min(len(present), 5)]) if present else []
+        return slots, present
+
+    others = [c for c in present if c != speaker]
+    other_slots = SLOT_X.get(len(others), SLOT_X[min(len(others), 5)]) if others else []
+    # Push everyone else to the right of the anchor, spaced out from there
+    # rather than centered on the room — they're gathered around whoever
+    # is at the stove/counter, not standing independently of them.
+    shifted = [anchor_x + 1.1 + i * 0.9 for i in range(len(others))]
+    return [anchor_x] + shifted, [speaker] + others
 
 
 def _set_active_location(location_objs, active_name):
@@ -160,8 +191,9 @@ def render_preview(episode_path, out_dir=None):
 
         _set_active_location(location_objs, beat["location"])
 
-        slots = SLOT_X.get(len(present), SLOT_X[min(len(present), 5)])
-        for slot_x, char_name in zip(slots, present):
+        for slot_x, char_name in zip(
+            *_positions_for_beat(beat["location"], beat["action"], present, beat["speaker"])
+        ):
             char = built_characters[char_name]
             rotations, root_offset = get_pose(beat["action"], 1.0)
             # Combine the left/right slot with any action-driven root
@@ -262,11 +294,13 @@ def render_full(episode_path, out_dir=None, beat_limit=None, start_beat=0):
             for obj in char.gp_objs:
                 obj.hide_render = name not in present
 
-        slots = SLOT_X.get(len(present), SLOT_X[min(len(present), 5)]) if present else []
+        slots, ordered_present = _positions_for_beat(
+            beat["location"], beat["action"], present, beat["speaker"]
+        )
 
         for f_local in range(n_frames):
             t = f_local / FPS
-            for slot_x, char_name in zip(slots, present):
+            for slot_x, char_name in zip(slots, ordered_present):
                 char = built_characters[char_name]
                 rotations, root_offset = get_pose(beat["action"], t)
                 offset_x = root_offset.get("x", 0.0) if root_offset else 0.0

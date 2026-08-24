@@ -57,21 +57,74 @@ def _limb_parts(skin, sleeve):
 
 
 # --- Ba Tu (grandmother) --------------------------------------------------
+# First-pass version of this character used ~6 shapes total (one oval per
+# body part) — cheap to build but reads as a placeholder, not a drawn
+# character. This version is deliberately much more worked: layered
+# clothing (collar, waist tie, fold lines, cuffs), an actual hand shape
+# (palm + thumb, not one blob), age-appropriate face detail (brow,
+# under-eye crease, smile lines, nose shadow), and individual hair
+# strands instead of one bun blob. Every shape is still just an oval/
+# capsule polygon (no new drawing primitive), the difference is
+# investing real time in HOW MANY of them combine into the silhouette.
 BA_TU_SKIN = (0.95, 0.83, 0.68, 1.0)
+BA_TU_SKIN_SHADOW = (0.86, 0.72, 0.58, 1.0)
 BA_TU_CARDIGAN = (0.72, 0.35, 0.4, 1.0)
+BA_TU_CARDIGAN_SHADOW = (0.6, 0.27, 0.32, 1.0)
+BA_TU_BLOUSE = (0.88, 0.82, 0.7, 1.0)
+BA_TU_HAIR = (0.82, 0.8, 0.78, 1.0)
+BA_TU_HAIR_SHADOW = (0.68, 0.66, 0.64, 1.0)
 BA_TU_DARK = (0.25, 0.16, 0.1, 1.0)
+BA_TU_BLUSH = (0.85, 0.55, 0.5, 0.55)
 
 BA_TU_PARTS = {
-    "spine": [{"points": oval_points(0, 1.18, 0.28, 0.32), "color": BA_TU_CARDIGAN, "radius": 0.02}],
+    "spine": [
+        {"points": oval_points(0, 1.18, 0.28, 0.32), "color": BA_TU_CARDIGAN, "radius": 0.02},
+        # blouse peeking through the collar
+        {"points": oval_points(0, 1.34, 0.11, 0.09), "color": BA_TU_BLOUSE},
+        # V-neck collar trim, drawn as a thin crescent over the cardigan
+        {"points": [(-0.16, 0, 1.42), (0, 0, 1.24), (0.16, 0, 1.42), (0.1, 0, 1.4), (0, 0, 1.3), (-0.1, 0, 1.4)], "color": BA_TU_CARDIGAN_SHADOW, "outline": False},
+        # waist tie-knot, a small accent low on the torso
+        {"points": oval_points(0, 0.98, 0.05, 0.045), "color": BA_TU_CARDIGAN_SHADOW, "outline": False},
+        # a fold-line shadow along one side, breaks up the flat oval
+        {"points": capsule_points((0.14, 0, 1.28), (0.1, 0, 1.02), 0.035), "color": BA_TU_CARDIGAN_SHADOW, "outline": False},
+    ],
     "neck": [{"points": capsule_points(BONE_SPEC["neck"]["head"], BONE_SPEC["neck"]["tail"], 0.09), "color": BA_TU_SKIN}],
     "head": [
         {"points": oval_points(0, _HEAD_CZ, 0.17, 0.19), "color": BA_TU_SKIN, "radius": 0.02},
+        # subtle jaw/cheek shadow along the lower edge for a touch of form
+        {"points": oval_points(0, _HEAD_CZ - 0.1, 0.15, 0.09), "color": BA_TU_SKIN_SHADOW, "radius": 0.02, "outline": False},
+        # rosy cheeks (age-appropriate blush, not a childlike pink)
+        {"points": oval_points(-0.1, _HEAD_CZ - 0.04, 0.035, 0.025), "color": BA_TU_BLUSH, "outline": False},
+        {"points": oval_points(0.1, _HEAD_CZ - 0.04, 0.035, 0.025), "color": BA_TU_BLUSH, "outline": False},
+        # eyebrows — thin arched shapes, not just implied by eye position
+        {"points": capsule_points((-0.09, 0, _HEAD_CZ + 0.065), (-0.03, 0, _HEAD_CZ + 0.075), 0.018), "color": BA_TU_DARK},
+        {"points": capsule_points((0.03, 0, _HEAD_CZ + 0.075), (0.09, 0, _HEAD_CZ + 0.065), 0.018), "color": BA_TU_DARK},
+        # eye whites
         {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.03, 0.035), "color": (1, 1, 1, 1)},
         {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.03, 0.035), "color": (1, 1, 1, 1)},
+        # under-eye crease — a hairline arc, the single detail that reads
+        # as "elderly" more than any other on this face. Drawn OUTSIDE the
+        # eye white's own footprint (lower z-offset) so it doesn't overlap
+        # the eye itself and get mistaken for eyelid/closed-eye shading.
+        {"points": capsule_points((-0.095, 0, _HEAD_CZ - 0.015), (-0.03, 0, _HEAD_CZ - 0.025), 0.007), "color": BA_TU_SKIN_SHADOW, "outline": False},
+        {"points": capsule_points((0.03, 0, _HEAD_CZ - 0.025), (0.095, 0, _HEAD_CZ - 0.015), 0.007), "color": BA_TU_SKIN_SHADOW, "outline": False},
+        # pupils with a tiny highlight dot each, so the eyes catch light
         {"points": oval_points(-0.06, _HEAD_CZ + 0.02, 0.015, 0.018), "color": BA_TU_DARK},
         {"points": oval_points(0.06, _HEAD_CZ + 0.02, 0.015, 0.018), "color": BA_TU_DARK},
-        # grey hair bun, sits above the head silhouette
-        {"points": oval_points(0, _HEAD_CZ + 0.22, 0.09, 0.08), "color": (0.82, 0.8, 0.78, 1.0)},
+        {"points": oval_points(-0.065, _HEAD_CZ + 0.027, 0.005, 0.006), "color": (1, 1, 1, 1), "outline": False},
+        {"points": oval_points(0.055, _HEAD_CZ + 0.027, 0.005, 0.006), "color": (1, 1, 1, 1), "outline": False},
+        # nose — a soft shadow shape instead of just a line, reads better
+        # at this silhouette scale than a stroke would
+        {"points": oval_points(0, _HEAD_CZ - 0.03, 0.018, 0.03), "color": BA_TU_SKIN_SHADOW, "outline": False},
+        # smile lines beside the mouth — small parenthesis shapes
+        {"points": capsule_points((-0.07, 0, _HEAD_CZ - 0.06), (-0.06, 0, _HEAD_CZ - 0.1), 0.008), "color": BA_TU_SKIN_SHADOW, "outline": False},
+        {"points": capsule_points((0.06, 0, _HEAD_CZ - 0.1), (0.07, 0, _HEAD_CZ - 0.06), 0.008), "color": BA_TU_SKIN_SHADOW, "outline": False},
+        # hair bun with a shaded underside, plus two escaped wisps for
+        # texture instead of one flat blob
+        {"points": oval_points(0, _HEAD_CZ + 0.22, 0.09, 0.08), "color": BA_TU_HAIR},
+        {"points": oval_points(0, _HEAD_CZ + 0.18, 0.08, 0.04), "color": BA_TU_HAIR_SHADOW, "outline": False},
+        {"points": capsule_points((-0.13, 0, _HEAD_CZ + 0.14), (-0.16, 0, _HEAD_CZ + 0.04), 0.012), "color": BA_TU_HAIR},
+        {"points": capsule_points((0.14, 0, _HEAD_CZ + 0.15), (0.17, 0, _HEAD_CZ + 0.07), 0.012), "color": BA_TU_HAIR},
     ],
     # mouth — its own bone ("jaw") so talking can stretch it open/closed
     # via bone scale (see gp_character.Character.pose's `scales` param)
@@ -79,6 +132,21 @@ BA_TU_PARTS = {
     "jaw": [{"points": oval_points(0, _HEAD_CZ - 0.08, 0.04, 0.02), "color": (0.55, 0.28, 0.24, 1.0)}],
 }
 BA_TU_PARTS.update(_limb_parts(BA_TU_SKIN, BA_TU_CARDIGAN))
+# Cuff bands where sleeve meets skin, and a real hand shape (palm +
+# thumb) instead of one plain oval — added on top of _limb_parts' base
+# shapes rather than replacing them.
+for _side, _fore_bone, _hand_bone, _hand_pos in [
+    ("L", "forearm_L", "hand_L", BONE_SPEC["hand_L"]["tail"]),
+    ("R", "forearm_R", "hand_R", BONE_SPEC["hand_R"]["tail"]),
+]:
+    _fore_head = BONE_SPEC[_fore_bone]["head"]
+    BA_TU_PARTS[_fore_bone].append(
+        {"points": oval_points(_fore_head[0], _fore_head[2], 0.055, 0.03), "color": BA_TU_CARDIGAN_SHADOW}
+    )
+    _thumb_dx = -0.03 if _side == "L" else 0.03
+    BA_TU_PARTS[_hand_bone].append(
+        {"points": oval_points(_hand_pos[0] + _thumb_dx, _hand_pos[2] + 0.02, 0.02, 0.028), "color": BA_TU_SKIN, "outline": False}
+    )
 
 
 # --- Mai (granddaughter, nursing student) ---------------------------------
