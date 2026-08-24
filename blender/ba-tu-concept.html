@@ -1,0 +1,276 @@
+<title>Ba Tu Model Sheet</title>
+<style>
+  :root {
+    --bg: #f6efe3;
+    --panel: #fffbf3;
+    --line: #d9cdb8;
+    --ink: #3a2f27;
+    --ink-dim: #8a7c6a;
+    --accent: #c2703f;
+    --skin: #f2d3ad;
+    --skin-shadow: #e0b98a;
+    --cardigan: #b85966;
+    --cardigan-dark: #99424e;
+    --hair: #d7d3ce;
+    --hair-dark: #b3aea8;
+    --skirt: #7d6a54;
+    --skirt-dark: #5f5140;
+    --serif: 'Fraunces', Georgia, serif;
+    --label: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+    --sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #211c17;
+      --panel: #2b2420;
+      --line: #4a4038;
+      --ink: #f0e6d8;
+      --ink-dim: #a89a86;
+      --accent: #e0935f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #211c17;
+    --panel: #2b2420;
+    --line: #4a4038;
+    --ink: #f0e6d8;
+    --ink-dim: #a89a86;
+    --accent: #e0935f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    margin: 0;
+    padding: 3rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  header { text-align: center; max-width: 680px; }
+  .eyebrow {
+    font-family: var(--label);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+  }
+  header p { color: var(--ink-dim); line-height: 1.6; margin: 0; font-size: 1rem; }
+
+  .sheet {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: minmax(260px, 420px) minmax(220px, 320px);
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 980px;
+    width: 100%;
+  }
+  @media (max-width: 760px) {
+    .sheet { grid-template-columns: 1fr; justify-items: center; }
+  }
+  figure { margin: 0; }
+  figure svg { width: 100%; height: auto; display: block; }
+  figcaption {
+    text-align: center;
+    font-family: var(--label);
+    font-size: 0.75rem;
+    color: var(--ink-dim);
+    letter-spacing: 0.04em;
+    margin-top: 0.6rem;
+  }
+
+  .notes { display: flex; flex-direction: column; gap: 1.6rem; }
+  .note-group h2 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+  .note-group p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-dim);
+  }
+  .swatches { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+  .swatch {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--label);
+    font-size: 0.72rem;
+    color: var(--ink-dim);
+  }
+  .swatch .chip {
+    width: 20px; height: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--line);
+    flex-shrink: 0;
+  }
+
+  .fix-list {
+    background: var(--bg);
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+  }
+  .fix-list h2 { color: var(--accent); }
+  .fix-list ul { margin: 0; padding-left: 1.1rem; font-size: 0.88rem; line-height: 1.6; color: var(--ink); }
+
+  footer {
+    font-family: var(--label);
+    font-size: 0.78rem;
+    color: var(--ink-dim);
+    text-align: center;
+    max-width: 600px;
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<header>
+  <p class="eyebrow">Nha Ba Tu &middot; Character Model Sheet</p>
+  <h1>Ba Tu</h1>
+  <p>Ban thiet ke lai, ve tay bang vector (khong qua AI-generate anh) &mdash; de duyet truoc khi dung lai trong Blender cho dung thiet ke nay. Sua 2 loi da bi chi ra: co chan/dung vung tren san, va toc duoc ve tu nhien hon.</p>
+</header>
+
+<div class="sheet">
+  <figure>
+    <svg viewBox="0 0 420 620" xmlns="http://www.w3.org/2000/svg">
+      <!-- ground shadow -->
+      <ellipse cx="210" cy="600" rx="95" ry="14" fill="#000" opacity="0.08"/>
+
+      <!-- LEGS + FEET (drawn first, behind the skirt hem) -->
+      <path d="M 178 470 Q 174 530 172 560 L 168 592 L 190 592 L 194 560 Q 197 525 200 470 Z" fill="var(--skin-shadow)"/>
+      <path d="M 232 470 Q 236 530 238 560 L 242 592 L 220 592 L 216 560 Q 213 525 210 470 Z" fill="var(--skin-shadow)"/>
+      <!-- house slippers -->
+      <path d="M 160 588 Q 158 600 168 604 L 200 604 Q 206 600 202 590 L 190 588 Z" fill="var(--cardigan-dark)"/>
+      <path d="M 250 588 Q 252 600 242 604 L 210 604 Q 204 600 208 590 L 220 588 Z" fill="var(--cardigan-dark)"/>
+
+      <!-- SKIRT (wide, ankle-length, gives real ground contact) -->
+      <path d="M 148 430
+               Q 140 480 130 555
+               Q 128 575 145 578
+               L 275 578
+               Q 292 575 290 555
+               Q 280 480 272 430
+               Q 250 448 210 448
+               Q 170 448 148 430 Z" fill="var(--skirt)"/>
+      <!-- skirt fold lines, break up the flat fill -->
+      <path d="M 175 452 Q 168 505 158 565" stroke="var(--skirt-dark)" stroke-width="3" fill="none" opacity="0.55" stroke-linecap="round"/>
+      <path d="M 210 452 Q 208 510 205 570" stroke="var(--skirt-dark)" stroke-width="3" fill="none" opacity="0.55" stroke-linecap="round"/>
+      <path d="M 245 452 Q 252 505 262 565" stroke="var(--skirt-dark)" stroke-width="3" fill="none" opacity="0.55" stroke-linecap="round"/>
+
+      <!-- TORSO / CARDIGAN -->
+      <path d="M 150 300
+               Q 130 330 128 380
+               Q 126 415 148 435
+               Q 175 452 210 452
+               Q 245 452 272 435
+               Q 294 415 292 380
+               Q 290 330 270 300
+               Q 250 288 210 288
+               Q 170 288 150 300 Z" fill="var(--cardigan)"/>
+      <!-- blouse peeking at collar -->
+      <path d="M 186 296 Q 210 320 234 296 L 226 330 Q 210 340 194 330 Z" fill="#f3e7d3"/>
+      <!-- collar trim -->
+      <path d="M 178 292 Q 210 326 242 292" stroke="var(--cardigan-dark)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- waist tie -->
+      <ellipse cx="210" cy="404" rx="10" ry="8" fill="var(--cardigan-dark)"/>
+      <!-- fold shadow -->
+      <path d="M 250 316 Q 262 360 254 404" stroke="var(--cardigan-dark)" stroke-width="10" fill="none" opacity="0.35" stroke-linecap="round"/>
+
+      <!-- ARMS -->
+      <path d="M 148 310 Q 110 330 98 380 Q 92 405 102 415 L 118 405 Q 112 385 122 358 Q 132 335 158 320 Z" fill="var(--cardigan)"/>
+      <path d="M 272 310 Q 310 330 322 380 Q 328 405 318 415 L 302 405 Q 308 385 298 358 Q 288 335 262 320 Z" fill="var(--cardigan)"/>
+      <!-- cuffs -->
+      <ellipse cx="102" cy="411" rx="13" ry="9" fill="var(--cardigan-dark)" transform="rotate(-25 102 411)"/>
+      <ellipse cx="318" cy="411" rx="13" ry="9" fill="var(--cardigan-dark)" transform="rotate(25 318 411)"/>
+      <!-- hands -->
+      <ellipse cx="98" cy="424" rx="13" ry="16" fill="var(--skin)"/>
+      <ellipse cx="88" cy="418" rx="7" ry="9" fill="var(--skin)"/>
+      <ellipse cx="322" cy="424" rx="13" ry="16" fill="var(--skin)"/>
+      <ellipse cx="332" cy="418" rx="7" ry="9" fill="var(--skin)"/>
+
+      <!-- NECK -->
+      <rect x="192" y="256" width="36" height="40" rx="10" fill="var(--skin)"/>
+
+      <!-- HEAD -->
+      <ellipse cx="210" cy="200" rx="68" ry="76" fill="var(--skin)"/>
+      <!-- jaw shadow -->
+      <ellipse cx="210" cy="240" rx="52" ry="30" fill="var(--skin-shadow)" opacity="0.5"/>
+
+      <!-- HAIR: neat low bun + smooth swept-back top, soft wisps -->
+      <path d="M 146 176
+               Q 140 108 210 96
+               Q 280 108 274 176
+               Q 268 140 210 132
+               Q 152 140 146 176 Z" fill="var(--hair)"/>
+      <path d="M 210 132 Q 250 138 264 168" stroke="var(--hair-dark)" stroke-width="6" fill="none" opacity="0.6" stroke-linecap="round"/>
+      <!-- low bun at the back/side -->
+      <ellipse cx="268" cy="196" rx="26" ry="24" fill="var(--hair)"/>
+      <ellipse cx="268" cy="204" rx="22" ry="14" fill="var(--hair-dark)" opacity="0.7"/>
+      <!-- soft escaped wisps -->
+      <path d="M 148 168 Q 130 200 138 240" stroke="var(--hair)" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M 158 156 Q 144 178 148 206" stroke="var(--hair)" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+      <!-- FACE -->
+      <ellipse cx="180" cy="196" rx="9" ry="10" fill="#fff"/>
+      <ellipse cx="240" cy="196" rx="9" ry="10" fill="#fff"/>
+      <circle cx="181" cy="198" r="4.5" fill="#4a3222"/>
+      <circle cx="239" cy="198" r="4.5" fill="#4a3222"/>
+      <circle cx="183" cy="195" r="1.4" fill="#fff"/>
+      <circle cx="241" cy="195" r="1.4" fill="#fff"/>
+      <path d="M 166 178 Q 180 168 196 176" stroke="#6b5644" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M 224 176 Q 240 168 254 178" stroke="#6b5644" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M 165 190 Q 178 186 192 190" stroke="var(--skin-shadow)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M 228 190 Q 242 186 255 190" stroke="var(--skin-shadow)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <ellipse cx="168" cy="222" rx="12" ry="8" fill="#e0836a" opacity="0.35"/>
+      <ellipse cx="252" cy="222" rx="12" ry="8" fill="#e0836a" opacity="0.35"/>
+      <path d="M 210 202 Q 216 222 210 232 Q 206 234 202 231" stroke="var(--skin-shadow)" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 192 246 Q 210 258 228 246" stroke="#8a4a3a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M 188 240 Q 186 250 190 256" stroke="var(--skin-shadow)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="M 232 240 Q 234 250 230 256" stroke="var(--skin-shadow)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    </svg>
+    <figcaption>Front view &middot; idle stance</figcaption>
+  </figure>
+
+  <div class="notes">
+    <div class="note-group">
+      <h2>Bang mau</h2>
+      <div class="swatches">
+        <span class="swatch"><span class="chip" style="background:#f2d3ad"></span>da</span>
+        <span class="swatch"><span class="chip" style="background:#b85966"></span>ao len</span>
+        <span class="swatch"><span class="chip" style="background:#7d6a54"></span>vay</span>
+        <span class="swatch"><span class="chip" style="background:#d7d3ce"></span>toc</span>
+      </div>
+    </div>
+    <div class="note-group">
+      <h2>Ty le</h2>
+      <p>Dau ~1/5 chieu cao co the (kieu hoat hinh de doc bieu cam), chan chiem gan nua chieu cao &mdash; dung tren san thuc su, khong con lo lung.</p>
+    </div>
+    <div class="fix-list">
+      <h2>Da sua so voi ban Blender truoc</h2>
+      <ul>
+        <li>Them vay dai + chan + dep &mdash; dung vung tren san</li>
+        <li>Toc ve lai: mai mem xuoi, bui toc thap gon, vai soi toc bay tu nhien (khong con hinh trong)</li>
+        <li>Duong net dung bezier cong mem, khong con hinh oval/capsule cung nhac</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>Day la thiet ke tham khao (vector, ve tay) &mdash; sau khi ban duyet, se dung lai chinh xac theo thiet ke nay trong Blender bang gp_character.py.</footer>

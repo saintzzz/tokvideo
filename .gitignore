@@ -22,6 +22,14 @@ scripts/animated-episode-writer.log
 # commit this — same 4 values as the GitHub secrets of the same name.
 scripts/.env.youtube.local
 
+# Local-only GitHub PAT for scripts/check-and-catchup-publish.mjs (needs
+# Actions:write to trigger workflow_dispatch as a safety net when
+# GitHub's own cron schedule silently misses a publish tick). Never
+# commit — same token as stored in Claude's persistent memory, scoped
+# only to saintzzz/tokvideo.
+scripts/.env.github.local
+scripts/catchup-publish.log
+
 # Rendered frames/video from the Blender proof-of-concept scripts under
 # blender/ — regenerate by running the script, same convention as out/.
 blender/out

@@ -47,6 +47,18 @@ $tasks = @(
     }
 )
 
+# Hourly tasks — separate list since they need a repeating-interval
+# trigger (New-ScheduledTaskTrigger has no -Hourly mode; the standard
+# PowerShell pattern for "every N minutes/hours forever" is a one-time
+# trigger with a repetition interval and an indefinite duration).
+$hourlyTasks = @(
+    @{
+        Name = "SucKhoePublishCatchup"
+        Script = "run-check-catchup-publish.ps1"
+        RepeatMinutes = 60
+    }
+)
+
 foreach ($t in $tasks) {
     $scriptPath = Join-Path $repoRoot "scripts\$($t.Script)"
     if (-not (Test-Path $scriptPath)) {
@@ -71,6 +83,37 @@ foreach ($t in $tasks) {
         -Principal $principal -Settings $settings | Out-Null
 
     Write-Host "Registered $($t.Name): daily at $($t.Time), every $($t.DaysInterval) day(s) -> $scriptPath"
+}
+
+foreach ($t in $hourlyTasks) {
+    $scriptPath = Join-Path $repoRoot "scripts\$($t.Script)"
+    if (-not (Test-Path $scriptPath)) {
+        Write-Warning "Skipping $($t.Name), script not found at $scriptPath"
+        continue
+    }
+
+    $existing = Get-ScheduledTask -TaskName $t.Name -ErrorAction SilentlyContinue
+    if ($existing) {
+        Write-Host "Removing existing task $($t.Name) to recreate it..."
+        Unregister-ScheduledTask -TaskName $t.Name -Confirm:$false
+    }
+
+    $action = New-ScheduledTaskAction -Execute "powershell.exe" `
+        -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
+    # [TimeSpan]::MaxValue overflows Task Scheduler's XML duration
+    # schema (confirmed live: "value ... out of range" on registration).
+    # A 10-year duration is effectively indefinite for this purpose.
+    $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) `
+        -RepetitionInterval (New-TimeSpan -Minutes $t.RepeatMinutes) `
+        -RepetitionDuration (New-TimeSpan -Days 3650)
+    $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive
+    $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable `
+        -DontStopOnIdleEnd -ExecutionTimeLimit (New-TimeSpan -Minutes 10)
+
+    Register-ScheduledTask -TaskName $t.Name -Action $action -Trigger $trigger `
+        -Principal $principal -Settings $settings | Out-Null
+
+    Write-Host "Registered $($t.Name): every $($t.RepeatMinutes) minute(s) -> $scriptPath"
 }
 
 Write-Host ""
