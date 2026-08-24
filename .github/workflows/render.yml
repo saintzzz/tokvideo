@@ -28,29 +28,26 @@ on:
       - "out/**"
       - "README.md"
   schedule:
-    # 7 fixed times/day, chosen by the channel owner (2026-08-23) to land on
-    # actual Vietnamese audience viewing windows instead of an even every-4h
-    # spread: 10h, 11h, 15h, 16h, 21h, 22h, 23h Vietnam time (UTC+7, no DST)
-    # = 03, 04, 08, 09, 14, 15, 16 UTC. Publishes exactly the next
-    # un-published Suc Khoe episode (see scripts/publish-next-suckhoe.mjs).
-    # Does nothing to the other 5 product videos; those only render on
-    # push/manual dispatch.
-    #
-    # Previously an even "every 4h" (6/day) spread, dialed down from every
-    # 2h (12/day) over spam-pattern concerns on a brand-new, previously-
-    # TikTok-struck channel — that reasoning still holds, this just moves
-    # the same ~daily volume onto real peak-viewing hours instead of an
-    # arbitrary clock-aligned cadence.
-    - cron: "0 3,4,8,9,14,15,16 * * *"
-    # Same idea for the separate English-market channel (locale "en"
-    # episodes, own queue/credentials), targeted at US Eastern Time as the
-    # default reference for a broad English-speaking audience: 8h, 9h,
-    # 13h, 14h, 19h, 20h, 21h ET = 12, 13, 17, 18, 23, 0, 1 UTC (EDT,
-    # UTC-4). NOTE: US DST shifts this by 1h — during EST (UTC-5, roughly
-    # Nov-Mar) these times land an hour later in ET than intended; shift
-    # the hour list by -1 (or +1, however you want to think about it) if
-    # that matters enough to bother with twice a year.
-    - cron: "0 0,1,12,13,17,18,23 * * *"
+    # Cut from 7/day to 3/day (2026-08-25) — channel-report.mjs showed
+    # both Suc Khoe channels' views collapsing to near-zero starting
+    # 2026-08-23, the exact day this went from an evenly-spread 6/day to
+    # 7/day *clustered into back-to-back hours* (03,04 / 08,09 /
+    # 14,15,16 UTC — three uploads within a single 2h window). Landing
+    # multiple Shorts within an hour or two of each other from the same
+    # channel is a well-known trigger for YouTube's spam/reduced-
+    # distribution classifier, on top of this channel already having
+    # one prior mass-upload incident (2026-08-22, see the shelved-video
+    # trigger below). The peak-hour targeting intent is kept, but now
+    # one upload per peak window instead of two, and every slot is at
+    # least 5h from the next: 10h, 16h, 22h Vietnam time (UTC+7, no DST)
+    # = 03, 09, 15 UTC.
+    - cron: "0 3,9,15 * * *"
+    # Same fix for the English-market channel — was also 7/day clustered
+    # (00,01 / 12,13 / 17,18 / 23 UTC) and showed the identical
+    # views-collapse pattern from 2026-08-23. Now one upload per peak
+    # window, each slot >=5h from the next: 8h, 14h, 20h ET = 12, 18, 0
+    # UTC (EDT, UTC-4; shifts 1h during EST, Nov-Mar).
+    - cron: "0 0,12,18 * * *"
     # Once daily — pulls real channel/video stats (subscribers, views,
     # watch time, per-video performance) into the job log via
     # scripts/channel-report.mjs, so cadence/content decisions have actual
@@ -538,7 +535,7 @@ jobs:
   # only reacts to its own schedule now that channel-report shares the
   # 'schedule' event too.
   publish-next-suckhoe:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 3,4,8,9,14,15,16 * * *') || github.event.inputs.video == 'suckhoe-publish-next'
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 3,9,15 * * *') || github.event.inputs.video == 'suckhoe-publish-next'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -592,7 +589,7 @@ jobs:
   # (locale "en" episodes, own queue position within published.json, own
   # credentials). See scripts/publish-next-suckhoe.mjs --locale=en.
   publish-next-suckhoe-en:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 0,1,12,13,17,18,23 * * *') || github.event.inputs.video == 'suckhoe-en-publish-next'
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 0,12,18 * * *') || github.event.inputs.video == 'suckhoe-en-publish-next'
     runs-on: ubuntu-latest
     permissions:
       contents: write

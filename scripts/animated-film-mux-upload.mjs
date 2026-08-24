@@ -19,10 +19,13 @@ import { google } from "googleapis";
 //   4. records the result in src/suckhoe/../src/animated-film/produced.json
 //
 // Usage: node scripts/animated-film-mux-upload.mjs <episode-number> [frames-dir-override]
-// The override exists only because episode 1's render was kicked off by
-// hand before this pipeline existed, into blender/out/ep01_full_v2
-// instead of the standard blender/out/ep01_full this script (and every
-// episode from 2 onward, via animated-film-pipeline-tick.mjs) expects.
+// The override is for any one-off manual render into a non-standard
+// output directory (episode 1 needed this twice: once for its
+// original hand-started render before this pipeline existed, and
+// again for the re-render after the joint/walk-cycle visual fixes,
+// both since cleaned up) — every episode rendered through the normal
+// path (animated-film-pipeline-tick.mjs) lands in the standard
+// blender/out/ep<NN>_full and needs no override.
 
 const repoRoot = path.join(import.meta.dirname, "..");
 const FFMPEG = path.join(repoRoot, "node_modules", "@remotion", "compositor-win32-x64-msvc", "ffmpeg.exe");

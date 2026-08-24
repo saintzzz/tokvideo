@@ -33,7 +33,13 @@ const repoRoot = path.join(import.meta.dirname, "..");
 // VI publishes ~every 3-5h (7 slots/day); EN ~every 4-6h (7 slots/day,
 // spread across a different set of hours). A gap past these thresholds
 // is not explainable by normal scheduling jitter alone.
-const THRESHOLD_HOURS = { vi: 6, en: 8 };
+// Both channels moved from 7 crons/day to 3/day, spaced 6h/6h/12h apart
+// (2026-08-25, see .github/workflows/render.yml's schedule comment —
+// the old 7/day *clustered* cadence coincided with a views collapse on
+// both channels). Threshold needs to clear the longest legitimate gap
+// (12h) with room to spare, or this safety net would fire mid-gap and
+// silently recreate the over-posting problem it exists to catch.
+const THRESHOLD_HOURS = { vi: 14, en: 14 };
 
 const published = JSON.parse(
   await readFile(path.join(repoRoot, "src", "suckhoe", "published.json"), "utf8")
