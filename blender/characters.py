@@ -45,14 +45,21 @@ _HEAD_CZ = (BONE_SPEC["head"]["head"][2] + BONE_SPEC["head"]["tail"][2]) / 2
 
 def _limb_parts(skin, sleeve):
     """Both arms (shoulder-elbow-wrist), the part every character needs —
-    shared helper so Ba Tu/Mai/future characters don't repeat this."""
+    shared helper so Ba Tu/Mai/future characters don't repeat this.
+
+    Only the upperarm segment keeps its outline. Forearm and hand are
+    "outline": False so they read as one continuous limb instead of
+    three separately-ringed capsules — the visible-ball-joint look a
+    real viewer flagged in episode 1 (every shoulder/elbow/wrist showed
+    its own dark ring, like a jointed wooden mannequin, nothing like
+    the smooth concept art)."""
     return {
         "upperarm_L": [{"points": capsule_points(BONE_SPEC["upperarm_L"]["head"], BONE_SPEC["upperarm_L"]["tail"], 0.11), "color": sleeve}],
-        "forearm_L": [{"points": capsule_points(BONE_SPEC["forearm_L"]["head"], BONE_SPEC["forearm_L"]["tail"], 0.09), "color": skin}],
-        "hand_L": [{"points": oval_points(BONE_SPEC["hand_L"]["tail"][0], BONE_SPEC["hand_L"]["tail"][2], 0.045, 0.05), "color": skin}],
+        "forearm_L": [{"points": capsule_points(BONE_SPEC["forearm_L"]["head"], BONE_SPEC["forearm_L"]["tail"], 0.09), "color": skin, "outline": False}],
+        "hand_L": [{"points": oval_points(BONE_SPEC["hand_L"]["tail"][0], BONE_SPEC["hand_L"]["tail"][2], 0.045, 0.05), "color": skin, "outline": False}],
         "upperarm_R": [{"points": capsule_points(BONE_SPEC["upperarm_R"]["head"], BONE_SPEC["upperarm_R"]["tail"], 0.11), "color": sleeve}],
-        "forearm_R": [{"points": capsule_points(BONE_SPEC["forearm_R"]["head"], BONE_SPEC["forearm_R"]["tail"], 0.09), "color": skin}],
-        "hand_R": [{"points": oval_points(BONE_SPEC["hand_R"]["tail"][0], BONE_SPEC["hand_R"]["tail"][2], 0.045, 0.05), "color": skin}],
+        "forearm_R": [{"points": capsule_points(BONE_SPEC["forearm_R"]["head"], BONE_SPEC["forearm_R"]["tail"], 0.09), "color": skin, "outline": False}],
+        "hand_R": [{"points": oval_points(BONE_SPEC["hand_R"]["tail"][0], BONE_SPEC["hand_R"]["tail"][2], 0.045, 0.05), "color": skin, "outline": False}],
     }
 
 
@@ -79,11 +86,13 @@ def _skirt_lower_body(skin, garment, garment_shadow, shoe_color, waist_z=0.85, h
     for shin_bone, foot_bone in [("shin_L", "foot_L"), ("shin_R", "foot_R")]:
         shin_tail = BONE_SPEC[shin_bone]["tail"]
         foot_tail = BONE_SPEC[foot_bone]["tail"]
+        # outline False on both — see _limb_parts' comment on why joint
+        # segments no longer get their own ring.
         parts[shin_bone] = [
-            {"points": oval_points(shin_tail[0], shin_tail[2] + max(0.02, hem_z - shin_tail[2] + 0.02), 0.032, max(0.03, (hem_z - shin_tail[2]) / 2 + 0.05)), "color": skin}
+            {"points": oval_points(shin_tail[0], shin_tail[2] + max(0.02, hem_z - shin_tail[2] + 0.02), 0.032, max(0.03, (hem_z - shin_tail[2]) / 2 + 0.05)), "color": skin, "outline": False}
         ]
         parts[foot_bone] = [
-            {"points": oval_points(foot_tail[0], 0.02, 0.05, 0.03), "color": shoe_color}
+            {"points": oval_points(foot_tail[0], 0.02, 0.05, 0.03), "color": shoe_color, "outline": False}
         ]
     return parts
 
@@ -106,22 +115,37 @@ def _pants_lower_body(skin, pants, pants_shadow, shoe_color, ankle_z=0.15):
 
         parts[thigh_bone] = [
             {"points": capsule_points(thigh_head, thigh_tail, 0.13), "color": pants},
-            {"points": capsule_points((thigh_head[0], 0, thigh_head[2] - 0.05), (thigh_tail[0], 0, thigh_tail[2]), 0.035), "color": pants_shadow, "outline": False},
+            # Stops short of the knee — two same-color outline:False
+            # shapes merge into one fill, and even a shared *endpoint*
+            # still overlaps (each capsule's round end-cap covers a full
+            # disc around that point), punching a hole there (even-odd
+            # rule). A real gap, not just a non-overlapping touch, is
+            # what actually avoids it — the shin's shadow capsule below
+            # is pulled back to match, leaving a small ungapped sliver
+            # at the knee where the plain pants color shows through
+            # instead (unnoticeable, unlike the hole it replaces).
+            {"points": capsule_points((thigh_head[0], 0, thigh_head[2] - 0.05), (thigh_tail[0], 0, thigh_tail[2] + 0.02), 0.035), "color": pants_shadow, "outline": False},
         ]
+        # outline False below the knee — see _limb_parts' comment; only
+        # the thigh (the limb's proximal segment) keeps a ring, so the
+        # leg reads as one continuous shape instead of stacked joints.
         if ankle_z > shin_tail[2]:
             # pant leg ends above the ankle (shorts) — bare shin below
             hem_z = ankle_z
             parts[shin_bone] = [
-                {"points": capsule_points((shin_tail[0], 0, BONE_SPEC[shin_bone]["head"][2]), (shin_tail[0], 0, hem_z), 0.11), "color": pants},
-                {"points": oval_points(shin_tail[0], shin_tail[2] + 0.05, 0.032, 0.09), "color": skin},
+                {"points": capsule_points((shin_tail[0], 0, BONE_SPEC[shin_bone]["head"][2]), (shin_tail[0], 0, hem_z), 0.11), "color": pants, "outline": False},
+                {"points": oval_points(shin_tail[0], shin_tail[2] + 0.05, 0.032, 0.09), "color": skin, "outline": False},
             ]
         else:
             parts[shin_bone] = [
-                {"points": capsule_points(BONE_SPEC[shin_bone]["head"], shin_tail, 0.1), "color": pants},
-                {"points": capsule_points((BONE_SPEC[shin_bone]["head"][0], 0, BONE_SPEC[shin_bone]["head"][2] - 0.03), (shin_tail[0], 0, shin_tail[2]), 0.028), "color": pants_shadow, "outline": False},
+                {"points": capsule_points(BONE_SPEC[shin_bone]["head"], shin_tail, 0.1), "color": pants, "outline": False},
+                # starts just below the knee — see the thigh shadow's
+                # comment above on why a real gap (not just a touching
+                # endpoint) is needed to avoid the even-odd hole.
+                {"points": capsule_points((BONE_SPEC[shin_bone]["head"][0], 0, BONE_SPEC[shin_bone]["head"][2] - 0.02), shin_tail, 0.028), "color": pants_shadow, "outline": False},
             ]
         parts[foot_bone] = [
-            {"points": oval_points(foot_tail[0], 0.02, 0.05, 0.03), "color": shoe_color}
+            {"points": oval_points(foot_tail[0], 0.02, 0.05, 0.03), "color": shoe_color, "outline": False}
         ]
     return parts
 
