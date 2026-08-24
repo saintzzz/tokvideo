@@ -67,6 +67,15 @@ diện theo vị trí clone, không hardcode máy cũ):
 | `SucKhoeReplyComments` | Hằng ngày 4:00 chiều | `run-reply-comments.ps1` |
 | `SucKhoeCommentOutreach` | Mỗi 3 ngày, 8:00 tối | `run-comment-outreach.ps1` |
 | `AnimatedFilmEpisodeWriter` | Mỗi 2 ngày, 10:00 sáng | `run-animated-episode-writer.ps1` |
+| `SucKhoePublishCatchup` | Mỗi giờ | `run-check-catchup-publish.ps1` |
+
+`SucKhoePublishCatchup` cần thêm `scripts/.env.github.local` (gitignore,
+1 dòng `GITHUB_TOKEN=<PAT có quyền Actions:write cho saintzzz/tokvideo>`)
+— đây là lưới an toàn cho một lỗi thật đã gặp: lịch `schedule` của GitHub
+Actions có thể âm thầm bỏ lỡ một lượt chạy khi nhiều cron trong cùng
+workflow rơi gần giờ nhau. Task này kiểm tra `src/suckhoe/published.json`
+mỗi giờ, nếu một kênh (VI/EN) trễ quá ngưỡng bình thường thì tự gọi
+`workflow_dispatch` để đăng bù.
 
 Kiểm tra sau khi chạy: `Get-ScheduledTask | Where-Object { $_.TaskName -like 'SucKhoe*' }`
 
