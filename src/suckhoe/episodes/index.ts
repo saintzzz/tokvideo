@@ -71,6 +71,38 @@ import enElderberrySyrup from "./en-elderberry-syrup.json";
 import enBakingSodaHeartburn from "./en-baking-soda-heartburn.json";
 import enRawHoneyMinorCuts from "./en-raw-honey-minor-cuts.json";
 import enPeppermintOilHeadache from "./en-peppermint-oil-headache.json";
+import goiLaDinhLang from "./goi-la-dinh-lang.json";
+import suaNongMatOngTruocNgu from "./sua-nong-mat-ong-truoc-ngu.json";
+import nuocLaSenTuoi from "./nuoc-la-sen-tuoi.json";
+import chanhMuoiPhaNuocAm from "./chanh-muoi-pha-nuoc-am.json";
+import chuoiHapMatOng from "./chuoi-hap-mat-ong.json";
+import laBacHaXongMui from "./la-bac-ha-xong-mui.json";
+import voBuoiNgamDuongPhen from "./vo-buoi-ngam-duong-phen.json";
+import laTrauKhongSucHong from "./la-trau-khong-suc-hong.json";
+import nuocEpTaoMatOng from "./nuoc-ep-tao-mat-ong.json";
+import laOiNonNhaiSong from "./la-oi-non-nhai-song.json";
+import hatChiaNuocAm from "./hat-chia-nuoc-am.json";
+import laLotDapChan from "./la-lot-dap-chan.json";
+import enHoneyCinnamonMorning from "./en-honey-cinnamon-morning.json";
+import enVicksVaporubChest from "./en-vicks-vaporub-chest.json";
+import enGarlicHoneyCold from "./en-garlic-honey-cold.json";
+import enBananaBeforeBed from "./en-banana-before-bed.json";
+import enWarmSaltwaterFootSoak from "./en-warm-saltwater-foot-soak.json";
+import enCucumberSlicesPuffyEyes from "./en-cucumber-slices-puffy-eyes.json";
+import enOatmealPorridgeCold from "./en-oatmeal-porridge-cold.json";
+import enTurmericGoldenMilk from "./en-turmeric-golden-milk.json";
+import enLavenderSachetSleep from "./en-lavender-sachet-sleep.json";
+import enWarmCompressStye from "./en-warm-compress-stye.json";
+import enCoconutOilPulling from "./en-coconut-oil-pulling.json";
+import enAloeVeraSunburn from "./en-aloe-vera-sunburn.json";
+import enMeatTenderizerBeeSting from "./en-meat-tenderizer-bee-sting.json";
+import enWarmCompressEarache from "./en-warm-compress-earache.json";
+import enHoneyFaceMask from "./en-honey-face-mask.json";
+import enMustardPowderFootSoak from "./en-mustard-powder-foot-soak.json";
+import enCrackersForNausea from "./en-crackers-for-nausea.json";
+import enWarmTowelNeckTension from "./en-warm-towel-neck-tension.json";
+import enFlatGingerAleStomach from "./en-flat-ginger-ale-stomach.json";
+import enSteamBowlCongestion from "./en-steam-bowl-congestion.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -156,4 +188,36 @@ export const EPISODES: SucKhoeEpisode[] = [
   enBakingSodaHeartburn,
   enRawHoneyMinorCuts,
   enPeppermintOilHeadache,
+  goiLaDinhLang,
+  suaNongMatOngTruocNgu,
+  nuocLaSenTuoi,
+  chanhMuoiPhaNuocAm,
+  chuoiHapMatOng,
+  laBacHaXongMui,
+  voBuoiNgamDuongPhen,
+  laTrauKhongSucHong,
+  nuocEpTaoMatOng,
+  laOiNonNhaiSong,
+  hatChiaNuocAm,
+  laLotDapChan,
+  enHoneyCinnamonMorning,
+  enVicksVaporubChest,
+  enGarlicHoneyCold,
+  enBananaBeforeBed,
+  enWarmSaltwaterFootSoak,
+  enCucumberSlicesPuffyEyes,
+  enOatmealPorridgeCold,
+  enTurmericGoldenMilk,
+  enLavenderSachetSleep,
+  enWarmCompressStye,
+  enCoconutOilPulling,
+  enAloeVeraSunburn,
+  enMeatTenderizerBeeSting,
+  enWarmCompressEarache,
+  enHoneyFaceMask,
+  enMustardPowderFootSoak,
+  enCrackersForNausea,
+  enWarmTowelNeckTension,
+  enFlatGingerAleStomach,
+  enSteamBowlCongestion,
 ] as SucKhoeEpisode[];
