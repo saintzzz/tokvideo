@@ -5,7 +5,8 @@
   ],
   "voiced": [],
   "rendered": [
-    1
+    1,
+    2
   ],
   "published": [
     {
@@ -13,6 +14,13 @@
       "slug": "ep-01-noi-chao-dau-ngo",
       "videoId": "96Rf5yxvImQ",
       "uploadedAt": "2026-08-24T17:27:51.309Z",
+      "approvedAt": null
+    },
+    {
+      "episode": 2,
+      "slug": "ep-02-bai-kiem-tra-cua-mai",
+      "videoId": "Ly5dEkkH-50",
+      "uploadedAt": "2026-08-24T23:50:18.773Z",
       "approvedAt": null
     }
   ]
