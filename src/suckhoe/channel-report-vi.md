@@ -1,4 +1,4 @@
-# Channel report — 2026-08-24
+# Channel report — 2026-08-25
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 252
@@ -7,16 +7,17 @@ Total videos: 24
 
 ## Last 28 days (channel-wide)
 
-Views: 3
-Watch time (minutes): 0
-Subscribers gained: 0
+Views: 2363
+Watch time (minutes): 209
+Subscribers gained: 1
 Subscribers lost: 0
-Net subscriber change: 0
+Net subscriber change: 1
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Bài Kiểm Tra Của Mai | Nhà Bà Tư - Tập 2 | 0 | 0 | 0 | 2026-08-24 |
 | Nồi Cháo Đầu Ngõ | Nhà Bà Tư - Tập 1 | 1 | 0 | 0 | 2026-08-24 |
 | Đau bụng kinh khó chịu, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-08-24 |
 | Trẻ nổi rôm sảy, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-08-24 |
@@ -27,9 +28,9 @@ Net subscriber change: 0
 | Đau nhức răng, dân gian có mẹo hay #Shorts | 1 | 0 | 0 | 2026-08-24 |
 | Nhức đầu, chóng mặt, dân gian có mẹo hay #Shorts | 1 | 1 | 0 | 2026-08-24 |
 | Ho kéo dài chưa dứt, dân gian có mẹo hay #Shorts | 1 | 1 | 0 | 2026-08-24 |
-| Gót chân khô nứt nẻ, dân gian có mẹo hay #Shorts | 3 | 1 | 0 | 2026-08-23 |
+| Gót chân khô nứt nẻ, dân gian có mẹo hay #Shorts | 5 | 1 | 0 | 2026-08-23 |
 | 3 Ngày Trước Đám Cưới, Bà Kiểm Chứng 5 Mẹo Dân Gian Bằng Khoa Học | 5 | 1 | 0 | 2026-08-23 |
-| Hay bị chuột rút, dân gian có mẹo hay #Shorts | 2 | 1 | 0 | 2026-08-23 |
+| Hay bị chuột rút, dân gian có mẹo hay #Shorts | 4 | 1 | 0 | 2026-08-23 |
 | Ngủ chập chờn hay mơ, dân gian có mẹo hay #Shorts | 1 | 1 | 0 | 2026-08-23 |
 | Đau dạ dày âm ỉ, dân gian có mẹo hay #Shorts | 8 | 2 | 0 | 2026-08-22 |
 | Khó ngủ chân lạnh, dân gian có mẹo hay #Shorts | 998 | 14 | 0 | 2026-08-22 |
@@ -41,5 +42,4 @@ Net subscriber change: 0
 | Mới chớm cảm, dân gian có mẹo hay #Shorts | 120 | 0 | 0 | 2026-08-22 |
 | Uể oải mỗi sáng, dân gian có mẹo hay #Shorts | 864 | 10 | 0 | 2026-08-22 |
 | Ho có đờm, rát họng, dân gian có mẹo hay #Shorts | 218 | 5 | 0 | 2026-08-22 |
-| Rụng tóc, nhiều gàu, dân gian có mẹo hay #Shorts | 105 | 3 | 0 | 2026-08-22 |
 
