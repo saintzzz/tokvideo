@@ -224,5 +224,15 @@
   "la-oi-non-nhai-song": {
     "publishedAt": "2026-08-27T13:20:04.244Z",
     "locale": "vi"
+  },
+  "la-trau-khong-suc-hong": {
+    "publishedAt": "2026-08-27T15:04:27.833Z",
+    "locale": "vi",
+    "note": "Uploaded successfully (videoId pnrGK-18v94) but this commit failed to push - the workflow_dispatch run started 5 minutes before the git-pull-rebase race fix landed. Reconstructed by hand from the job log."
+  },
+  "en-egg-yolk-hair-mask": {
+    "publishedAt": "2026-08-27T15:08:18.232Z",
+    "locale": "en",
+    "note": "Uploaded successfully (videoId aVNdIyEX4W0) but this commit failed to push - same race as la-trau-khong-suc-hong above. Reconstructed by hand from the job log."
   }
 }
