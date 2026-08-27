@@ -110,6 +110,14 @@ import enCastorOilPack from "./en-castor-oil-pack.json";
 import enEggYolkHairMask from "./en-egg-yolk-hair-mask.json";
 import enFennelSeedTea from "./en-fennel-seed-tea.json";
 import enPrunesConstipation from "./en-prunes-constipation.json";
+import nuocLaVong from "./nuoc-la-vong.json";
+import laHungChanhHapMatOng from "./la-hung-chanh-hap-mat-ong.json";
+import nuocDuongThotNotGung from "./nuoc-duong-thot-not-gung.json";
+import ruouHatGacXoaBop from "./ruou-hat-gac-xoa-bop.json";
+import matOngYenMachDapMat from "./mat-ong-yen-mach-dap-mat.json";
+import enRosemaryScalpOil from "./en-rosemary-scalp-oil.json";
+import enOnionSyrupCough from "./en-onion-syrup-cough.json";
+import enBlackstrapMolassesEnergy from "./en-blackstrap-molasses-energy.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -234,4 +242,12 @@ export const EPISODES: SucKhoeEpisode[] = [
   enEggYolkHairMask,
   enFennelSeedTea,
   enPrunesConstipation,
+  nuocLaVong,
+  laHungChanhHapMatOng,
+  nuocDuongThotNotGung,
+  ruouHatGacXoaBop,
+  matOngYenMachDapMat,
+  enRosemaryScalpOil,
+  enOnionSyrupCough,
+  enBlackstrapMolassesEnergy,
 ] as SucKhoeEpisode[];
