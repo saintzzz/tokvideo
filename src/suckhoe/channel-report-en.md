@@ -1,22 +1,25 @@
-# Channel report — 2026-08-26
+# Channel report — 2026-08-27
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 170
-Total videos: 22
+Total views: 172
+Total videos: 25
 
 ## Last 28 days (channel-wide)
 
-Views: 117
-Watch time (minutes): 26
+Views: 174
+Watch time (minutes): 43
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
-## Most recent 22 videos
+## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Queasy stomach in the morning? Grandma June keeps these by the bed #Shorts | 0 | 0 | 0 | 2026-08-26 |
+| The oil Grandma June warms up when her knees ache #Shorts | 0 | 0 | 0 | 2026-08-26 |
+| Grandma June swishes a spoonful of this before she brushes #Shorts | 0 | 0 | 0 | 2026-08-26 |
 | The bedtime snack Grandma June never skips #Shorts | 0 | 0 | 0 | 2026-08-25 |
 | That plant on Grandma June's windowsill isn't just decoration #Shorts | 0 | 0 | 0 | 2026-08-25 |
 | Skin irritated? Grandma's witch hazel trick #Shorts | 6 | 0 | 0 | 2026-08-24 |
@@ -31,7 +34,7 @@ Net subscriber change: 0
 | Itchy, irritated skin? Try the oatmeal soak #Shorts | 4 | 0 | 0 | 2026-08-23 |
 | Scratchy throat? Grandma's go-to fix #Shorts | 11 | 0 | 0 | 2026-08-23 |
 | Sore muscles? Grandma's Epsom salt soak #Shorts | 7 | 0 | 0 | 2026-08-23 |
-| Toothache acting up? Grandma's clove oil trick #Shorts | 20 | 0 | 0 | 2026-08-23 |
+| Toothache acting up? Grandma's clove oil trick #Shorts | 21 | 0 | 0 | 2026-08-23 |
 | Wired at bedtime? Grandma's chamomile tea #Shorts | 1 | 0 | 0 | 2026-08-23 |
 | Puffy eyes? Grandma's tea bag trick #Shorts | 10 | 0 | 0 | 2026-08-23 |
 | Itchy bug bite? Grandma's baking soda paste #Shorts | 13 | 1 | 0 | 2026-08-22 |
