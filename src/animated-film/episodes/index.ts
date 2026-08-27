@@ -1,5 +1,6 @@
 import ep01NoiChaoDauNgo from "./ep-01-noi-chao-dau-ngo.json";
 import ep02BaiKiemTraCuaMai from "./ep-02-bai-kiem-tra-cua-mai.json";
+import ep03ChuBayVaCayCoTuong from "./ep-03-chu-bay-va-cay-co-tuong.json";
 import { AnimatedFilmEpisode } from "../types";
 
 // Add a new episode: create `episodes/ep-<n hai chữ số>-<slug>.json` with the
@@ -8,4 +9,5 @@ import { AnimatedFilmEpisode } from "../types";
 export const EPISODES: AnimatedFilmEpisode[] = [
   ep01NoiChaoDauNgo,
   ep02BaiKiemTraCuaMai,
+  ep03ChuBayVaCayCoTuong,
 ] as AnimatedFilmEpisode[];
