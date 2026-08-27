@@ -49,7 +49,24 @@ const res = await youtube.commentThreads.list({
   textFormat: "plainText",
 });
 
-for (const thread of res.data.items ?? []) {
+// Filter out the channel's OWN comments (2026-08-27 finding: this channel
+// is a repurposed 12-year-old account with a prior life as a bushcraft/
+// camping channel — allThreadsRelatedToChannelId returns that channel's
+// FULL comment history, not just comments on its current videos, so
+// dozens of old self-authored promotional comments from Dec 2025/Jan
+// 2026 on OTHER channels' videos completely buried any real audience
+// comments on actual Suc Khoe content under "order: time"). Comparing
+// authorChannelId against our own resolved channelId is robust to
+// content/handle changes, unlike matching on display name or topic.
+const threads = (res.data.items ?? []).filter(
+  (thread) => thread.snippet.topLevelComment.snippet.authorChannelId?.value !== channelId
+);
+
+if (threads.length === 0) {
+  console.log("No genuine audience comments found (only this channel's own historical comments on other videos).");
+}
+
+for (const thread of threads) {
   const top = thread.snippet.topLevelComment.snippet;
   const oneLine = top.textDisplay.replace(/\s+/g, " ").trim();
   console.log(
