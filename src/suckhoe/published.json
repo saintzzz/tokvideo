@@ -234,5 +234,9 @@
     "publishedAt": "2026-08-27T15:08:18.232Z",
     "locale": "en",
     "note": "Uploaded successfully (videoId aVNdIyEX4W0) but this commit failed to push - same race as la-trau-khong-suc-hong above. Reconstructed by hand from the job log."
+  },
+  "la-hung-chanh-hap-mat-ong": {
+    "publishedAt": "2026-08-27T15:33:21.355Z",
+    "locale": "vi"
   }
 }
