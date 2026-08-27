@@ -54,7 +54,12 @@ on:
     # data behind them instead of guesswork. No-ops harmlessly until the
     # YOUTUBE_* secrets carry a token with the readonly/analytics scopes
     # (see scripts/youtube-get-refresh-token.mjs).
-    - cron: "0 0 * * *"
+    #
+    # Minute offset :40 (2026-08-27) for the same reason as the
+    # release-shelved cron above — this shares the 0h slot with the EN
+    # publish cron and landing on the exact same minute made a stale-
+    # checkout push race more likely.
+    - cron: "40 0 * * *"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -63,7 +68,18 @@ on:
     # No-ops harmlessly once src/suckhoe/shelved-videos.json is empty —
     # never remove this trigger expecting it to matter only temporarily,
     # it's a permanent safety valve for any future batch that needs it.
-    - cron: "0 2,10,18 * * *"
+    #
+    # Minute offset :20 (2026-08-27), not :00 — this shares the 18h slot
+    # with the EN publish cron below, and even though both are in the
+    # same suckhoe-publish-queue concurrency group, landing on the exact
+    # same minute meant this job's checkout could occasionally beat the
+    # replication of the other job's just-landed commit by a couple
+    # seconds, rejecting this job's own (usually no-op) push — confirmed
+    # from two real job failures 2026-08-25/26. Fixed at the root with
+    # `git pull --rebase` before every push in this concurrency group
+    # (see each job's commit step); the offset is extra insurance to cut
+    # how often they queue back to back at all.
+    - cron: "20 2,10,18 * * *"
 
 jobs:
   detect-changes:
@@ -582,6 +598,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published.json
           git diff --staged --quiet || git commit -m "Mark next Suc Khoe episode as published [skip ci]"
+          git pull --rebase
           git push
 
   # Every 6 hours (see the schedule trigger above): same as
@@ -631,13 +648,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published.json
           git diff --staged --quiet || git commit -m "Mark next Suc Khoe (EN) episode as published [skip ci]"
+          git pull --rebase
           git push
 
   # Three times daily (see the schedule trigger above): release exactly
   # one shelved/privated video back to public. See
   # scripts/release-shelved-video.mjs and src/suckhoe/shelved-videos.json.
   release-shelved-suckhoe:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 2,10,18 * * *') || github.event.inputs.video == 'release-shelved-suckhoe'
+    if: (github.event_name == 'schedule' && github.event.schedule == '20 2,10,18 * * *') || github.event.inputs.video == 'release-shelved-suckhoe'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -669,13 +687,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/shelved-videos.json
           git diff --staged --quiet || git commit -m "Release next shelved Suc Khoe video [skip ci]"
+          git pull --rebase
           git push
 
   # Once daily (see the schedule trigger above): print real channel/video
   # stats to the job log. Deliberately not committed to the repo — this is
   # a read, not state — read it via the Actions UI or the GitHub API.
   channel-report:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 0 * * *') || github.event.inputs.video == 'channel-report'
+    if: (github.event_name == 'schedule' && github.event.schedule == '40 0 * * *') || github.event.inputs.video == 'channel-report'
     runs-on: ubuntu-latest
     permissions:
       contents: write
