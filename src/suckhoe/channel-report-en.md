@@ -2,8 +2,8 @@
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 172
-Total videos: 25
+Total views: 173
+Total videos: 27
 
 ## Last 28 days (channel-wide)
 
@@ -17,6 +17,8 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Before fancy hair masks, Grandma June cracked open an egg #Shorts | 0 | 0 | 0 | 2026-08-27 |
+| 3 minutes, 2 cucumber slices, and puffy eyes calm right down #Shorts | 3 | 1 | 0 | 2026-08-27 |
 | Queasy stomach in the morning? Grandma June keeps these by the bed #Shorts | 0 | 0 | 0 | 2026-08-26 |
 | The oil Grandma June warms up when her knees ache #Shorts | 0 | 0 | 0 | 2026-08-26 |
 | Grandma June swishes a spoonful of this before she brushes #Shorts | 0 | 0 | 0 | 2026-08-26 |
@@ -40,6 +42,4 @@ Net subscriber change: 0
 | Itchy bug bite? Grandma's baking soda paste #Shorts | 13 | 1 | 0 | 2026-08-22 |
 | 3 Days Before the Wedding: Do Grandma's Home Remedies Actually Work? | 1 | 0 | 0 | 2026-08-22 |
 | Upset stomach? Grandma's apple cider vinegar trick #Shorts | 1 | 0 | 0 | 2026-08-22 |
-| Queasy stomach? Try grandma's ginger tea #Shorts | 7 | 0 | 0 | 2026-08-22 |
-| Coming down with something? Grandma's chicken soup #Shorts | 51 | 0 | 0 | 2026-08-22 |
 
