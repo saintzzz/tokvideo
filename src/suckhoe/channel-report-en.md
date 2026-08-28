@@ -1,13 +1,13 @@
-# Channel report — 2026-08-27
+# Channel report — 2026-08-28
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 173
-Total videos: 27
+Total views: 177
+Total videos: 30
 
 ## Last 28 days (channel-wide)
 
-Views: 174
+Views: 176
 Watch time (minutes): 43
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,8 +17,11 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Grandma June keeps a jar of these seeds by the stove #Shorts | 0 | 0 | 0 | 2026-08-28 |
+| Grandma June keeps a jar of these seeds by the stove #Shorts | 0 | 0 | 0 | 2026-08-28 |
+| A spoonful of this dark syrup was grandma's answer to feeling run down #Shorts | 0 | 0 | 0 | 2026-08-27 |
 | Before fancy hair masks, Grandma June cracked open an egg #Shorts | 0 | 0 | 0 | 2026-08-27 |
-| 3 minutes, 2 cucumber slices, and puffy eyes calm right down #Shorts | 3 | 1 | 0 | 2026-08-27 |
+| 3 minutes, 2 cucumber slices, and puffy eyes calm right down #Shorts | 4 | 1 | 0 | 2026-08-27 |
 | Queasy stomach in the morning? Grandma June keeps these by the bed #Shorts | 0 | 0 | 0 | 2026-08-26 |
 | The oil Grandma June warms up when her knees ache #Shorts | 0 | 0 | 0 | 2026-08-26 |
 | Grandma June swishes a spoonful of this before she brushes #Shorts | 0 | 0 | 0 | 2026-08-26 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | Toothache acting up? Grandma's clove oil trick #Shorts | 21 | 0 | 0 | 2026-08-23 |
 | Wired at bedtime? Grandma's chamomile tea #Shorts | 1 | 0 | 0 | 2026-08-23 |
 | Puffy eyes? Grandma's tea bag trick #Shorts | 10 | 0 | 0 | 2026-08-23 |
-| Itchy bug bite? Grandma's baking soda paste #Shorts | 13 | 1 | 0 | 2026-08-22 |
-| 3 Days Before the Wedding: Do Grandma's Home Remedies Actually Work? | 1 | 0 | 0 | 2026-08-22 |
-| Upset stomach? Grandma's apple cider vinegar trick #Shorts | 1 | 0 | 0 | 2026-08-22 |
 
