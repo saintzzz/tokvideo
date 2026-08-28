@@ -1,12 +1,15 @@
 {
   "scripted": [
     1,
-    2
+    2,
+    3,
+    4
   ],
   "voiced": [],
   "rendered": [
     1,
-    2
+    2,
+    3
   ],
   "published": [
     {
@@ -22,6 +25,13 @@
       "videoId": "Ly5dEkkH-50",
       "uploadedAt": "2026-08-24T23:50:18.773Z",
       "approvedAt": "2026-08-27T15:01:21.851Z"
+    },
+    {
+      "episode": 3,
+      "slug": "ep-03-chu-bay-va-cay-co-tuong",
+      "videoId": "uZWAO1BDNcQ",
+      "uploadedAt": "2026-08-27T17:48:51.410Z",
+      "approvedAt": "2026-08-28T11:20:59.401Z"
     }
   ]
 }
