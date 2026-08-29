@@ -1,13 +1,13 @@
-# Channel report — 2026-08-28
+# Channel report — 2026-08-29
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 177
-Total videos: 30
+Total videos: 32
 
 ## Last 28 days (channel-wide)
 
-Views: 176
+Views: 177
 Watch time (minutes): 43
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,6 +17,8 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| A splinter that won't budge? Grandma June reaches for a slice of bread, not tweezers #Shorts | 0 | 0 | 0 | 2026-08-29 |
+| A splinter that won't budge? Grandma June reaches for a slice of bread, not tweezers #Shorts | 1 | 0 | 0 | 2026-08-28 |
 | Grandma June keeps a jar of these seeds by the stove #Shorts | 0 | 0 | 0 | 2026-08-28 |
 | Grandma June keeps a jar of these seeds by the stove #Shorts | 0 | 0 | 0 | 2026-08-28 |
 | A spoonful of this dark syrup was grandma's answer to feeling run down #Shorts | 0 | 0 | 0 | 2026-08-27 |
@@ -40,6 +42,4 @@ Net subscriber change: 0
 | Scratchy throat? Grandma's go-to fix #Shorts | 11 | 0 | 0 | 2026-08-23 |
 | Sore muscles? Grandma's Epsom salt soak #Shorts | 7 | 0 | 0 | 2026-08-23 |
 | Toothache acting up? Grandma's clove oil trick #Shorts | 21 | 0 | 0 | 2026-08-23 |
-| Wired at bedtime? Grandma's chamomile tea #Shorts | 1 | 0 | 0 | 2026-08-23 |
-| Puffy eyes? Grandma's tea bag trick #Shorts | 10 | 0 | 0 | 2026-08-23 |
 
