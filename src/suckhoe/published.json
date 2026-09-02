@@ -261,5 +261,9 @@
     "publishedAt": "2026-08-28T21:43:07Z",
     "locale": "en",
     "note": "Uploaded 3 times (E4DxyN7m3u0, U9g2Pjy3VVE, 3XqvxvT00Zo) - same OAuth-token-expiry commit-failure pattern as com-ruou-nep-cam above. Kept E4DxyN7m3u0 (earliest, has real view history), privatized the other 2."
+  },
+  "en-cranberry-juice-bladder": {
+    "publishedAt": "2026-09-02T11:02:45.871Z",
+    "locale": "en"
   }
 }
