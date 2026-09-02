@@ -125,6 +125,18 @@ import nuocVoGaoGoiDau from "./nuoc-vo-gao-goi-dau.json";
 import enBreadPoulticeSplinter from "./en-bread-poultice-splinter.json";
 import enCranberryJuiceBladder from "./en-cranberry-juice-bladder.json";
 import enRiceSockWarmCompress from "./en-rice-sock-warm-compress.json";
+import caoXoaDauTram from "./cao-xoa-dau-tram.json";
+import botSanDayPhaChanh from "./bot-san-day-pha-chanh.json";
+import nuocVoi from "./nuoc-voi.json";
+import nuocEpDuaTieuHoa from "./nuoc-ep-dua-tieu-hoa.json";
+import tiaToDapMun from "./tia-to-dap-mun.json";
+import nuocEpCaChuaMatOng from "./nuoc-ep-ca-chua-mat-ong.json";
+import enPotatoSlicesPuffyEyes from "./en-potato-slices-puffy-eyes.json";
+import enPickleJuiceCramps from "./en-pickle-juice-cramps.json";
+import enOatmealPastePoisonIvy from "./en-oatmeal-paste-poison-ivy.json";
+import enBlackTeaBagToothache from "./en-black-tea-bag-toothache.json";
+import enButtermilkSunburn from "./en-buttermilk-sunburn.json";
+import enMilkToastSickDay from "./en-milk-toast-sick-day.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -264,4 +276,16 @@ export const EPISODES: SucKhoeEpisode[] = [
   enBreadPoulticeSplinter,
   enCranberryJuiceBladder,
   enRiceSockWarmCompress,
+  caoXoaDauTram,
+  botSanDayPhaChanh,
+  nuocVoi,
+  nuocEpDuaTieuHoa,
+  tiaToDapMun,
+  nuocEpCaChuaMatOng,
+  enPotatoSlicesPuffyEyes,
+  enPickleJuiceCramps,
+  enOatmealPastePoisonIvy,
+  enBlackTeaBagToothache,
+  enButtermilkSunburn,
+  enMilkToastSickDay,
 ] as SucKhoeEpisode[];
