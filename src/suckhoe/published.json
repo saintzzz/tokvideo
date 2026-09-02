@@ -248,7 +248,18 @@
     "locale": "vi"
   },
   "com-ruou-nep-cam": {
-    "publishedAt": "2026-09-02T10:44:35.654Z",
-    "locale": "vi"
+    "publishedAt": "2026-08-28T14:44:52Z",
+    "locale": "vi",
+    "note": "Uploaded 5 times (videoIds D4vAOMPJUiY, EczG-ghmpQU, aeSvW5QJD_Y, 3_JQ9ZQi7Bk, LXn6zQVLwO8) between 2026-08-28 and 2026-09-02 - every run's commit-to-published.json step failed (intermittent OAuth token expiry, see youtube-get-refresh-token.mjs's 2026-09-02 note) so the queue kept re-selecting this same episode as 'next'. Kept D4vAOMPJUiY (earliest, has real view history), privatized the other 4. publishedAt backdated to the kept video's real upload time."
+  },
+  "en-fennel-seed-tea": {
+    "publishedAt": "2026-08-28T08:32:51Z",
+    "locale": "en",
+    "note": "Uploaded twice (zrfA4Ex_OSQ, OUf_T0kY-mI) - same OAuth-token-expiry commit-failure pattern as com-ruou-nep-cam above. Kept zrfA4Ex_OSQ (earliest), privatized OUf_T0kY-mI."
+  },
+  "en-bread-poultice-splinter": {
+    "publishedAt": "2026-08-28T21:43:07Z",
+    "locale": "en",
+    "note": "Uploaded 3 times (E4DxyN7m3u0, U9g2Pjy3VVE, 3XqvxvT00Zo) - same OAuth-token-expiry commit-failure pattern as com-ruou-nep-cam above. Kept E4DxyN7m3u0 (earliest, has real view history), privatized the other 2."
   }
 }
