@@ -137,6 +137,26 @@ import enOatmealPastePoisonIvy from "./en-oatmeal-paste-poison-ivy.json";
 import enBlackTeaBagToothache from "./en-black-tea-bag-toothache.json";
 import enButtermilkSunburn from "./en-buttermilk-sunburn.json";
 import enMilkToastSickDay from "./en-milk-toast-sick-day.json";
+import enVicksOnFeetCough from "./en-vicks-on-feet-cough.json";
+import enWarmSockTreatmentFever from "./en-warm-sock-treatment-fever.json";
+import enBakingSodaBathItchySkin from "./en-baking-soda-bath-itchy-skin.json";
+import enOliveOilEardrops from "./en-olive-oil-eardrops.json";
+import enSalineNasalRinse from "./en-saline-nasal-rinse.json";
+import enCornstarchHeatRash from "./en-cornstarch-heat-rash.json";
+import enWholeClovesNausea from "./en-whole-cloves-nausea.json";
+import enHomemadeHoneyLemonDrops from "./en-homemade-honey-lemon-drops.json";
+import enWarmCompressSinusPressure from "./en-warm-compress-sinus-pressure.json";
+import enCayenneGargleSoreThroat from "./en-cayenne-gargle-sore-throat.json";
+import enGingerCompressCramps from "./en-ginger-compress-cramps.json";
+import enMintLeavesFreshBreath from "./en-mint-leaves-fresh-breath.json";
+import enNutmegWarmMilkSleep from "./en-nutmeg-warm-milk-sleep.json";
+import enSugarSpoonfulHiccups from "./en-sugar-spoonful-hiccups.json";
+import enCabbageLeavesBreastEngorgement from "./en-cabbage-leaves-breast-engorgement.json";
+import enHydrogenPeroxideEarWax from "./en-hydrogen-peroxide-ear-wax.json";
+import enCastorOilBellyButton from "./en-castor-oil-belly-button.json";
+import enEucalyptusOilSteamShower from "./en-eucalyptus-oil-steam-shower.json";
+import enWarmCompressSwollenGlands from "./en-warm-compress-swollen-glands.json";
+import enHoneyBurnRelief from "./en-honey-burn-relief.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -288,4 +308,24 @@ export const EPISODES: SucKhoeEpisode[] = [
   enBlackTeaBagToothache,
   enButtermilkSunburn,
   enMilkToastSickDay,
+  enVicksOnFeetCough,
+  enWarmSockTreatmentFever,
+  enBakingSodaBathItchySkin,
+  enOliveOilEardrops,
+  enSalineNasalRinse,
+  enCornstarchHeatRash,
+  enWholeClovesNausea,
+  enHomemadeHoneyLemonDrops,
+  enWarmCompressSinusPressure,
+  enCayenneGargleSoreThroat,
+  enGingerCompressCramps,
+  enMintLeavesFreshBreath,
+  enNutmegWarmMilkSleep,
+  enSugarSpoonfulHiccups,
+  enCabbageLeavesBreastEngorgement,
+  enHydrogenPeroxideEarWax,
+  enCastorOilBellyButton,
+  enEucalyptusOilSteamShower,
+  enWarmCompressSwollenGlands,
+  enHoneyBurnRelief,
 ] as SucKhoeEpisode[];
