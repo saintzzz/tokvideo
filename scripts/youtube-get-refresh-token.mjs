@@ -34,6 +34,22 @@ import { google } from "googleapis";
 // don't hit a third scope wall later. Run this for BOTH channels (VI and
 // EN are separate Google accounts) and update both YOUTUBE_REFRESH_TOKEN
 // and YOUTUBE_EN_REFRESH_TOKEN secrets.
+//
+// 2026-09-02: both refresh tokens died with GaxiosError invalid_grant /
+// "Token has been expired or revoked" — 57% of scheduled publish runs
+// failed for ~5 days (2026-08-28 onward) before this was caught. Root
+// cause: a Google Cloud OAuth consent screen left in "Testing" publishing
+// status issues refresh tokens that hard-expire after 7 days, no matter
+// how often they're used — re-running this script only buys another 7
+// days. THE ACTUAL FIX: in Google Cloud Console -> APIs & Services ->
+// OAuth consent screen, check "Publishing status" for the project behind
+// YOUTUBE_CLIENT_ID/SECRET. If it says "Testing", move it to "In
+// production" (no Google verification review is required to do this for
+// an app requesting only YouTube scopes under 100 users — verification is
+// a separate, optional step). Do this once and the 7-day expiry stops
+// recurring. If it already says "In production" and this still happened,
+// something else revoked the token (manually, or a Google account
+// security event) and only re-running this script fixes it.
 
 const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
 const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
