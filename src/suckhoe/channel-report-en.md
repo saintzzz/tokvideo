@@ -1,14 +1,14 @@
-# Channel report — 2026-09-03
+# Channel report — 2026-09-04
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 223
-Total videos: 37
+Total views: 226
+Total videos: 40
 
 ## Last 28 days (channel-wide)
 
-Views: 222
-Watch time (minutes): 47
+Views: 229
+Watch time (minutes): 48
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
@@ -17,7 +17,10 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| The fridge-door trick for sunburn Grandma June swears by #Shorts | 0 | 0 | 0 | 2026-09-03 |
+| A spicy pepper for a sore throat? Sounds backwards, but wait #Shorts | 0 | 0 | 0 | 2026-09-04 |
+| Grandma June's oddest bedtime habit actually has a real name #Shorts | 2 | 0 | 0 | 2026-09-03 |
+| New moms have been doing this in the fridge for generations #Shorts | 2 | 0 | 0 | 2026-09-03 |
+| The fridge-door trick for sunburn Grandma June swears by #Shorts | 1 | 0 | 0 | 2026-09-03 |
 | What's in Grandma June's tea cabinet that isn't for drinking? #Shorts | 0 | 0 | 0 | 2026-09-02 |
 | One box from the baking aisle, and it's not for cookies #Shorts | 0 | 0 | 0 | 2026-09-02 |
 | What's in Grandma June's morning warm-up drink? #Shorts | 0 | 0 | 0 | 2026-09-02 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | That plant on Grandma June's windowsill isn't just decoration #Shorts | 0 | 0 | 0 | 2026-08-25 |
 | Skin irritated? Grandma's witch hazel trick #Shorts | 6 | 0 | 0 | 2026-08-24 |
 | Can't sleep? Grandma's bedtime trick #Shorts | 1 | 0 | 0 | 2026-08-24 |
-| Sluggish stomach? Grandma's morning ritual #Shorts | 3 | 1 | 0 | 2026-08-24 |
-| Sore throat creeping in? Grandma's salt gargle #Shorts | 12 | 0 | 0 | 2026-08-24 |
-| Small scrape or cut? Grandma June's honey trick #Shorts | 1 | 0 | 0 | 2026-08-24 |
 
