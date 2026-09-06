@@ -168,6 +168,17 @@ import dauMuUThoaDa from "./dau-mu-u-thoa-da.json";
 import enSlipperyElmTea from "./en-slippery-elm-tea.json";
 import enBarleyWater from "./en-barley-water.json";
 import enMayonnaiseHairMask from "./en-mayonnaise-hair-mask.json";
+import taoDoKyTuNgamMatOng from "./tao-do-ky-tu-ngam-mat-ong.json";
+import traAtiso from "./tra-atiso.json";
+import laXuongSongVatNuoc from "./la-xuong-song-vat-nuoc.json";
+import trungGaDanhGungDuong from "./trung-ga-danh-gung-duong.json";
+import chuoiHotNgamRuou from "./chuoi-hot-ngam-ruou.json";
+import toiSongPhongCam from "./toi-song-phong-cam.json";
+import tinhDauBuoiGoiDau from "./tinh-dau-buoi-goi-dau.json";
+import keoGungMatOngNgamHo from "./keo-gung-mat-ong-ngam-ho.json";
+import enHotToddyCold from "./en-hot-toddy-cold.json";
+import enMustardPlasterChest from "./en-mustard-plaster-chest.json";
+import enFrozenPeasBruise from "./en-frozen-peas-bruise.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -350,4 +361,15 @@ export const EPISODES: SucKhoeEpisode[] = [
   enSlipperyElmTea,
   enBarleyWater,
   enMayonnaiseHairMask,
+  taoDoKyTuNgamMatOng,
+  traAtiso,
+  laXuongSongVatNuoc,
+  trungGaDanhGungDuong,
+  chuoiHotNgamRuou,
+  toiSongPhongCam,
+  tinhDauBuoiGoiDau,
+  keoGungMatOngNgamHo,
+  enHotToddyCold,
+  enMustardPlasterChest,
+  enFrozenPeasBruise,
 ] as SucKhoeEpisode[];
