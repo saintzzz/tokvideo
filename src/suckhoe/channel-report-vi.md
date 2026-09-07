@@ -1,9 +1,9 @@
-# Channel report — 2026-09-06
+# Channel report — 2026-09-07
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 252
 Total views: 3012
-Total videos: 60
+Total videos: 63
 
 ## Last 28 days (channel-wide)
 
@@ -17,6 +17,9 @@ Net subscriber change: 1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-06 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-06 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-06 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-06 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-05 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-05 |
@@ -39,7 +42,4 @@ Net subscriber change: 1
 | 99% pha bột sắn dây sai cách mà không biết, Bà Tư chỉ luôn #Shorts | 0 | 0 | 0 | 2026-09-02 |
 | Da thâm sạm sau mụn, dân gian có mẹo hay #Shorts | 1 | 0 | 0 | 2026-09-02 |
 | Đau nhức khớp gối, dân gian có mẹo hay #Shorts | 2 | 0 | 0 | 2026-09-02 |
-| Long nhãn ngâm mật ong 2 tuần, Bà Tư lấy ra ăn mỗi tối trước khi ngủ #Shorts | 2 | 0 | 0 | 2026-09-02 |
-| Đau nhức khớp gối, dân gian có mẹo hay #Shorts | 7 | 0 | 0 | 2026-08-28 |
-| Da mặt xỉn màu, khô ráp, Bà Tư có hay đắp mặt nạ này không? #Shorts | 0 | 0 | 0 | 2026-08-28 |
 
