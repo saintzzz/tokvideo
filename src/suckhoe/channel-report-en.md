@@ -1,13 +1,13 @@
-# Channel report — 2026-09-08
+# Channel report — 2026-09-09
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 233
-Total videos: 59
+Total videos: 62
 
 ## Last 28 days (channel-wide)
 
-Views: 250
+Views: 251
 Watch time (minutes): 52
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,6 +17,9 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-09 |
+| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-08 |
+| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-08 |
 | Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-08 |
 | Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-07 |
 | Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-07 |
@@ -37,9 +40,6 @@ Net subscriber change: 0
 | Summers at Grandma June's house always smelled like this powder #Shorts | 0 | 0 | 0 | 2026-09-04 |
 | Summers at Grandma June's house always smelled like this powder #Shorts | 0 | 0 | 0 | 2026-09-04 |
 | A spicy pepper for a sore throat? Sounds backwards, but wait #Shorts | 0 | 0 | 0 | 2026-09-04 |
-| Grandma June's oddest bedtime habit actually has a real name #Shorts | 4 | 0 | 0 | 2026-09-03 |
+| Grandma June's oddest bedtime habit actually has a real name #Shorts | 7 | 0 | 0 | 2026-09-03 |
 | New moms have been doing this in the fridge for generations #Shorts | 3 | 0 | 0 | 2026-09-03 |
-| The fridge-door trick for sunburn Grandma June swears by #Shorts | 1 | 0 | 0 | 2026-09-03 |
-| What's in Grandma June's tea cabinet that isn't for drinking? #Shorts | 0 | 0 | 0 | 2026-09-02 |
-| One box from the baking aisle, and it's not for cookies #Shorts | 0 | 0 | 0 | 2026-09-02 |
 

@@ -1,9 +1,9 @@
-# Channel report — 2026-09-08
+# Channel report — 2026-09-09
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 251
 Total views: 3012
-Total videos: 66
+Total videos: 69
 
 ## Last 28 days (channel-wide)
 
@@ -17,6 +17,9 @@ Net subscriber change: 1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-08 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-08 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-08 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-07 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-07 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-07 |
@@ -39,7 +42,4 @@ Net subscriber change: 1
 | Sáng nào cũng mệt lử, bà ngoại ở quê hay pha thứ nước này uống ấm bụng #Shorts | 0 | 0 | 0 | 2026-09-04 |
 | Nắng nóng mệt mỏi, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-04 |
 | Mệt mỏi mất sức, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-03 |
-| Tóc bạc sớm khô xơ, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-03 |
-| Da cháy nắng, rát đỏ, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-03 |
-| Con hắt hơi sổ mũi, mẹ nào cũng có sẵn lọ này trong nhà #Shorts | 0 | 0 | 0 | 2026-09-02 |
 
