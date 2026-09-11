@@ -179,6 +179,16 @@ import keoGungMatOngNgamHo from "./keo-gung-mat-ong-ngam-ho.json";
 import enHotToddyCold from "./en-hot-toddy-cold.json";
 import enMustardPlasterChest from "./en-mustard-plaster-chest.json";
 import enFrozenPeasBruise from "./en-frozen-peas-bruise.json";
+import traHoaNhai from "./tra-hoa-nhai.json";
+import toiHapMatOng from "./toi-hap-mat-ong.json";
+import gungNuongPhaNuocAm from "./gung-nuong-pha-nuoc-am.json";
+import nuocSamBiDao from "./nuoc-sam-bi-dao.json";
+import hatTieuDenMatOng from "./hat-tieu-den-mat-ong.json";
+import reTrinhNuNgamRuou from "./re-trinh-nu-ngam-ruou.json";
+import dauDuaUToc from "./dau-dua-u-toc.json";
+import enValerianRootTea from "./en-valerian-root-tea.json";
+import enSageTeaGargle from "./en-sage-tea-gargle.json";
+import enCarawaySeedTea from "./en-caraway-seed-tea.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -372,4 +382,14 @@ export const EPISODES: SucKhoeEpisode[] = [
   enHotToddyCold,
   enMustardPlasterChest,
   enFrozenPeasBruise,
+  traHoaNhai,
+  toiHapMatOng,
+  gungNuongPhaNuocAm,
+  nuocSamBiDao,
+  hatTieuDenMatOng,
+  reTrinhNuNgamRuou,
+  dauDuaUToc,
+  enValerianRootTea,
+  enSageTeaGargle,
+  enCarawaySeedTea,
 ] as SucKhoeEpisode[];
