@@ -189,6 +189,12 @@ import dauDuaUToc from "./dau-dua-u-toc.json";
 import enValerianRootTea from "./en-valerian-root-tea.json";
 import enSageTeaGargle from "./en-sage-tea-gargle.json";
 import enCarawaySeedTea from "./en-caraway-seed-tea.json";
+import hongBiNgamDuongPhen from "./hong-bi-ngam-duong-phen.json";
+import traHatMuong from "./tra-hat-muong.json";
+import dangSamTaoDo from "./dang-sam-tao-do.json";
+import nuocMeNgamDuong from "./nuoc-me-ngam-duong.json";
+import enPassionflowerTea from "./en-passionflower-tea.json";
+import enFeverfewTea from "./en-feverfew-tea.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -392,4 +398,10 @@ export const EPISODES: SucKhoeEpisode[] = [
   enValerianRootTea,
   enSageTeaGargle,
   enCarawaySeedTea,
+  hongBiNgamDuongPhen,
+  traHatMuong,
+  dangSamTaoDo,
+  nuocMeNgamDuong,
+  enPassionflowerTea,
+  enFeverfewTea,
 ] as SucKhoeEpisode[];
