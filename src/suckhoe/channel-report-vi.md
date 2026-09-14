@@ -1,13 +1,13 @@
-# Channel report — 2026-09-13
+# Channel report — 2026-09-14
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 251
 Total views: 3026
-Total videos: 93
+Total videos: 96
 
 ## Last 28 days (channel-wide)
 
-Views: 3027
+Views: 3030
 Watch time (minutes): 280
 Subscribers gained: 1
 Subscribers lost: 1
@@ -17,14 +17,17 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-13 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-13 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-13 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-12 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-12 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-12 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 2 | 0 | 0 | 2026-09-11 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-11 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-11 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-11 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-11 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-11 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-11 |
+| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-11 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-11 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-11 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-11 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-10 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-10 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-09 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 1 | 0 | 0 | 2026-09-09 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-09 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-08 |
 
