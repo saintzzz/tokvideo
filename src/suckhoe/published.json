@@ -348,5 +348,15 @@
     "locale": "vi",
     "note": "Uploaded successfully but the commit step never ran (same artifact-storage-quota incident as nuoc-duong-thot-not-gung above). Re-uploaded 49x total over 10 days before this was caught; 48 duplicates set private, kept oA2GGoFrc0o public."
   },
-  "_note_ngai-cuu-ruou-chuom-khop": "Found during the 2026-09-15 cleanup: an older orphaned public upload of this same slug also existed (videoId os1eKdw0YE4, published 2026-08-28T11:24:42Z, 7 views) - predates this file's own entry for the slug below. Kept os1eKdw0YE4 public (more views) and set the newer C2RYQvDLOyU (this file's tracked upload) private instead, to avoid the two duplicates competing."
+  "_note_ngai-cuu-ruou-chuom-khop": "Found during the 2026-09-15 cleanup: an older orphaned public upload of this same slug also existed (videoId os1eKdw0YE4, published 2026-08-28T11:24:42Z, 7 views) - predates this file's own entry for the slug below. Kept os1eKdw0YE4 public (more views) and set the newer C2RYQvDLOyU (this file's tracked upload) private instead, to avoid the two duplicates competing.",
+  "en-cornstarch-heat-rash": {
+    "publishedAt": "2026-09-04T15:39:06Z",
+    "locale": "en",
+    "note": "Uploaded successfully but the commit step never ran (GitHub Actions artifact-storage-quota incident, 2026-09-04 to 2026-09-15 - see .github/workflows/render.yml). Re-uploaded 4x total before this was caught; 3 duplicates set private, kept Dkh84uTL0BU public."
+  },
+  "en-barley-water": {
+    "publishedAt": "2026-09-05T10:55:28Z",
+    "locale": "en",
+    "note": "Uploaded successfully but the commit step never ran (same artifact-storage-quota incident as en-cornstarch-heat-rash above). Re-uploaded 51x total over 10 days before this was caught; 50 duplicates set private, kept RM84u1QxPXA public."
+  }
 }
