@@ -358,5 +358,9 @@
     "publishedAt": "2026-09-05T10:55:28Z",
     "locale": "en",
     "note": "Uploaded successfully but the commit step never ran (same artifact-storage-quota incident as en-cornstarch-heat-rash above). Re-uploaded 51x total over 10 days before this was caught; 50 duplicates set private, kept RM84u1QxPXA public."
+  },
+  "chuoi-hot-ngam-ruou": {
+    "publishedAt": "2026-09-15T17:12:18.208Z",
+    "locale": "vi"
   }
 }
