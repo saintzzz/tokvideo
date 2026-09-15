@@ -322,10 +322,11 @@ jobs:
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: gia-cat-luong-tu-vi
           path: out/GiaCatLuong-TuVi.mp4
-          retention-days: 30
+          retention-days: 7
 
   render-churchill:
     needs: detect-changes
@@ -352,10 +353,11 @@ jobs:
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: churchill-giao-tiep
           path: out/Churchill-GiaoTiep.mp4
-          retention-days: 30
+          retention-days: 7
 
   render-hippocrates:
     needs: detect-changes
@@ -382,10 +384,11 @@ jobs:
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: hippocrates-dinh-duong
           path: out/Hippocrates-DinhDuong.mp4
-          retention-days: 30
+          retention-days: 7
 
   render-ideverray:
     needs: detect-changes
@@ -412,10 +415,11 @@ jobs:
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: ideverray-ao-doi
           path: out/Ideverray-AoDoi.mp4
-          retention-days: 30
+          retention-days: 7
 
   render-ammuu:
     needs: detect-changes
@@ -442,10 +446,11 @@ jobs:
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: ammuu-chien-luoc
           path: out/AmMuu-ChienLuoc.mp4
-          retention-days: 30
+          retention-days: 7
 
   render-suckhoe:
     needs: detect-changes
@@ -525,10 +530,11 @@ jobs:
 
       - name: Upload video artifacts
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: suckhoe-episodes
           path: out/SucKhoe-*.mp4
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: ignore
 
       # Deliberately does NOT upload to YouTube. This job renders every
@@ -583,13 +589,24 @@ jobs:
           YOUTUBE_PRIVACY_STATUS: ${{ vars.YOUTUBE_PRIVACY_STATUS }}
         run: npm run publish-next:suckhoe
 
+      # continue-on-error (2026-09-15 incident): this repo hit its GitHub
+      # Actions artifact storage quota, and this step's failure was
+      # silently blocking the "Commit updated publish queue" step below
+      # it - the YouTube upload above had already succeeded, but with
+      # the job stopped here, published.json never got updated, so the
+      # NEXT run picked the exact same "next" episode again. That looped
+      # for 10 days and produced 49 duplicate public uploads of one
+      # episode before anyone noticed. This artifact is a debugging
+      # convenience, not something that should ever be able to block
+      # real pipeline state - never let it become a hard failure again.
       - name: Upload rendered video artifact
         if: always()
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: suckhoe-published-${{ github.run_number }}
           path: out/SucKhoe-*.mp4
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: ignore
 
       - name: Commit updated publish queue
@@ -636,10 +653,11 @@ jobs:
       - name: Upload rendered video artifact
         if: always()
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: suckhoe-en-published-${{ github.run_number }}
           path: out/SucKhoe-*.mp4
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: ignore
 
       - name: Commit updated publish queue
@@ -799,10 +817,11 @@ jobs:
       - name: Upload video artifact
         if: always()
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: suckhoe-long-${{ github.event.inputs.long_form_slug }}
           path: out/SucKhoeLong-*.mp4
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: ignore
 
       - name: Upload to YouTube (private by default)
