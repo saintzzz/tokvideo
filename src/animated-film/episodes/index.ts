@@ -6,6 +6,7 @@ import ep05BaTuQuenChiaKhoa from "./ep-05-ba-tu-quen-chia-khoa.json";
 import ep06CaTrucDauTien from "./ep-06-ca-truc-dau-tien.json";
 import ep07DeadlineCuaHuy from "./ep-07-deadline-cua-huy.json";
 import ep08CoSauBanSuaChua from "./ep-08-co-sau-ban-sua-chua.json";
+import ep09BacSiLongGheNha from "./ep-09-bac-si-long-ghe-nha.json";
 import { AnimatedFilmEpisode } from "../types";
 
 // Add a new episode: create `episodes/ep-<n hai chữ số>-<slug>.json` with the
@@ -20,4 +21,5 @@ export const EPISODES: AnimatedFilmEpisode[] = [
   ep06CaTrucDauTien,
   ep07DeadlineCuaHuy,
   ep08CoSauBanSuaChua,
+  ep09BacSiLongGheNha,
 ] as AnimatedFilmEpisode[];
