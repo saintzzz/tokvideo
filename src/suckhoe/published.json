@@ -337,5 +337,16 @@
   "nuoc-dua": {
     "publishedAt": "2026-09-04T07:37:28.605Z",
     "locale": "vi"
-  }
+  },
+  "nuoc-duong-thot-not-gung": {
+    "publishedAt": "2026-09-04T13:03:18Z",
+    "locale": "vi",
+    "note": "Uploaded successfully but the commit step never ran (GitHub Actions artifact-storage-quota incident, 2026-09-04 to 2026-09-15 - see .github/workflows/render.yml). Re-uploaded 4x total before this was caught; 3 duplicates (hDsiS5Rn080, xAnHeOZl0G4, 5-1rNCjDRvI) set private, kept xzfq3vZdHmE public."
+  },
+  "cam-nuong-muoi": {
+    "publishedAt": "2026-09-05T10:51:47Z",
+    "locale": "vi",
+    "note": "Uploaded successfully but the commit step never ran (same artifact-storage-quota incident as nuoc-duong-thot-not-gung above). Re-uploaded 49x total over 10 days before this was caught; 48 duplicates set private, kept oA2GGoFrc0o public."
+  },
+  "_note_ngai-cuu-ruou-chuom-khop": "Found during the 2026-09-15 cleanup: an older orphaned public upload of this same slug also existed (videoId os1eKdw0YE4, published 2026-08-28T11:24:42Z, 7 views) - predates this file's own entry for the slug below. Kept os1eKdw0YE4 public (more views) and set the newer C2RYQvDLOyU (this file's tracked upload) private instead, to avoid the two duplicates competing."
 }
