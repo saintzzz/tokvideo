@@ -195,6 +195,15 @@ import dangSamTaoDo from "./dang-sam-tao-do.json";
 import nuocMeNgamDuong from "./nuoc-me-ngam-duong.json";
 import enPassionflowerTea from "./en-passionflower-tea.json";
 import enFeverfewTea from "./en-feverfew-tea.json";
+import toiLenMenMuoi from "./toi-len-men-muoi.json";
+import hanhTimNgamMatOngCamLanh from "./hanh-tim-ngam-mat-ong-cam-lanh.json";
+import bapCaiMuoiChuaTieuHoa from "./bap-cai-muoi-chua-tieu-hoa.json";
+import gungChanhMatOngPhaDungThuTu from "./gung-chanh-mat-ong-pha-dung-thu-tu.json";
+import muopDangPhoiKhoHopTra from "./muop-dang-phoi-kho-hop-tra.json";
+import queMatOngSangAmBung from "./que-mat-ong-sang-am-bung.json";
+import enFermentedGarlicJar from "./en-fermented-garlic-jar.json";
+import enBoneBrothJointComfort from "./en-bone-broth-joint-comfort.json";
+import enOatStrawTeaCalm from "./en-oat-straw-tea-calm.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -404,4 +413,13 @@ export const EPISODES: SucKhoeEpisode[] = [
   nuocMeNgamDuong,
   enPassionflowerTea,
   enFeverfewTea,
+  toiLenMenMuoi,
+  hanhTimNgamMatOngCamLanh,
+  bapCaiMuoiChuaTieuHoa,
+  gungChanhMatOngPhaDungThuTu,
+  muopDangPhoiKhoHopTra,
+  queMatOngSangAmBung,
+  enFermentedGarlicJar,
+  enBoneBrothJointComfort,
+  enOatStrawTeaCalm,
 ] as SucKhoeEpisode[];
