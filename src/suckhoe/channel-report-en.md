@@ -1,9 +1,9 @@
-# Channel report — 2026-09-15
+# Channel report — 2026-09-16
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 231
-Total videos: 92
+Total videos: 43
 
 ## Last 28 days (channel-wide)
 
@@ -13,33 +13,7 @@ Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
-## Most recent 25 videos
+## Recent videos
 
-| Title | Views | Likes | Comments | Published |
-|---|---|---|---|---|
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-15 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-14 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-14 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-14 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-13 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-13 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-13 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-12 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-12 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-12 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-11 |
+(Failed to fetch: The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.)
 
