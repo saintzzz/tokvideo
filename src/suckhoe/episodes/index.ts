@@ -147,6 +147,11 @@ import muopDangPhoiKhoHopTra from "./muop-dang-phoi-kho-hop-tra.json";
 import enFermentedGarlicJar from "./en-fermented-garlic-jar.json";
 import enBoneBrothJointComfort from "./en-bone-broth-joint-comfort.json";
 import enOatStrawTeaCalm from "./en-oat-straw-tea-calm.json";
+import laHungQueHapMatOng from "./la-hung-que-hap-mat-ong.json";
+import traCheVang from "./tra-che-vang.json";
+import laTrauKhongHoAmBungTre from "./la-trau-khong-ho-am-bung-tre.json";
+import enSauerkrautBrineDigestion from "./en-sauerkraut-brine-digestion.json";
+import enHorehoundTeaCough from "./en-horehound-tea-cough.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -334,4 +339,9 @@ export const EPISODES: SucKhoeEpisode[] = [
   enRiceWaterHairRinse,
   enApplesauceUpsetTummy,
   enCucumberEyeCompress,
+  laHungQueHapMatOng,
+  traCheVang,
+  laTrauKhongHoAmBungTre,
+  enSauerkrautBrineDigestion,
+  enHorehoundTeaCough,
 ] as SucKhoeEpisode[];
