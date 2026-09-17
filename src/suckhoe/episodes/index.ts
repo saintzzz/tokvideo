@@ -152,6 +152,21 @@ import traCheVang from "./tra-che-vang.json";
 import laTrauKhongHoAmBungTre from "./la-trau-khong-ho-am-bung-tre.json";
 import enSauerkrautBrineDigestion from "./en-sauerkraut-brine-digestion.json";
 import enHorehoundTeaCough from "./en-horehound-tea-cough.json";
+import phatThuNgamMatOng from "./phat-thu-ngam-mat-ong.json";
+import xaCanNgamHo from "./xa-can-ngam-ho.json";
+import traKimNganHoa from "./tra-kim-ngan-hoa.json";
+import chaoGaHamGung from "./chao-ga-ham-gung.json";
+import nuocMatMiaGungAm from "./nuoc-mat-mia-gung-am.json";
+import traNuTamThat from "./tra-nu-tam-that.json";
+import khanAmDapMatTruocNgu from "./khan-am-dap-mat-truoc-ngu.json";
+import traCuBinhVoi from "./tra-cu-binh-voi.json";
+import traBoCongAnh from "./tra-bo-cong-anh.json";
+import botDauXanhDapMun from "./bot-dau-xanh-dap-mun.json";
+import suaChuaDapMatTrangDa from "./sua-chua-dap-mat-trang-da.json";
+import enFireCider from "./en-fire-cider.json";
+import enHopsPillowTea from "./en-hops-pillow-tea.json";
+import enDandelionRootCoffee from "./en-dandelion-root-coffee.json";
+import enPlantainLeafPoultice from "./en-plantain-leaf-poultice.json";
 import { SucKhoeEpisode } from "../types";
 
 // Add a new episode: create `episodes/<slug>.json` with the same shape,
@@ -344,4 +359,19 @@ export const EPISODES: SucKhoeEpisode[] = [
   laTrauKhongHoAmBungTre,
   enSauerkrautBrineDigestion,
   enHorehoundTeaCough,
+  phatThuNgamMatOng,
+  xaCanNgamHo,
+  traKimNganHoa,
+  chaoGaHamGung,
+  nuocMatMiaGungAm,
+  traNuTamThat,
+  khanAmDapMatTruocNgu,
+  traCuBinhVoi,
+  traBoCongAnh,
+  botDauXanhDapMun,
+  suaChuaDapMatTrangDa,
+  enFireCider,
+  enHopsPillowTea,
+  enDandelionRootCoffee,
+  enPlantainLeafPoultice,
 ] as SucKhoeEpisode[];
