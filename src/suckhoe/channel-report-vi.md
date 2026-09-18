@@ -1,13 +1,13 @@
-# Channel report — 2026-09-17
+# Channel report — 2026-09-18
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 251
 Total views: 3015
-Total videos: 56
+Total videos: 67
 
 ## Last 28 days (channel-wide)
 
-Views: 3030
+Views: 3032
 Watch time (minutes): 280
 Subscribers gained: 1
 Subscribers lost: 1
@@ -17,10 +17,21 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Ăn dứa xong thấy dễ tiêu hơn hẳn, hóa ra là có lý do khoa học #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Trưa hè mệt lử, Bà Tư hay ép một ly nước củ sen cho tỉnh táo lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Người xanh xao thiếu sức, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Mắt mỏi da xạm, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| 5 phút mỗi sáng, Bà Tư không bao giờ bỏ qua ly nước này #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Một ly nước ép bắp cải mỗi sáng, ông bà xưa tin bụng dạ nhẹ nhõm hẳn #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Trằn trọc khó ngủ, Bà Tư có hay pha loại nước chua ngọt này không? #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Không phải mướp đắng tươi, Bà Tư phơi khô rồi mới hãm trà uống #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Hấp lê cho đường phèn vào đầu tiên là sai bước, Bà Tư chỉnh lại cách này #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Loại lá mọc đầy ngoài chợ, ít ai ngờ giã lấy nước lại dịu cổ họng vậy #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Canh lửa sai một chút là hỏng cả mẻ, Bà Tư nấu kẹo gừng ho kiểu này #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Mùa hồng bì về, Bà Tư lại ngâm sẵn một hũ để dành cho cháu ho #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Ho khan mãi không dứt, Bà Tư có hay chấm mật ong với thứ gia vị cay này? #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Cảm lạnh vừa mới nhen, Bà Tư có một hũ hành tím ngâm sẵn trong bếp #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than #Shorts | 0 | 0 | 0 | 2026-09-17 |
+| Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than #Shorts | 1 | 0 | 0 | 2026-09-17 |
 | 99% pha trà gừng chanh mật ong sai thứ tự, Bà Tư luôn làm ngược lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Da tay chân nứt nẻ mùa hanh khô, Bà Tư có hay thoa loại dầu này không? #Shorts | 0 | 0 | 0 | 2026-09-16 |
 | Không cần hấp dầu tiệm tốn tiền, một loại dầu bếp nhà nào cũng có #Shorts | 0 | 0 | 0 | 2026-09-16 |
@@ -31,15 +42,4 @@ Net subscriber change: 0
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-05 |
 | Bé Tôm Không Chịu Ăn Rau | Nhà Bà Tư - Tập 4 | 1 | 0 | 0 | 2026-09-05 |
 | Liên Quân Mobile live | 2 | 0 | 0 | 2026-09-04 |
-| Sáng nào cũng mệt lử, bà ngoại ở quê hay pha thứ nước này uống ấm bụng #Shorts | 0 | 0 | 0 | 2026-09-04 |
-| Nắng nóng mệt mỏi, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-04 |
-| Mệt mỏi mất sức, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-03 |
-| Tóc bạc sớm khô xơ, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-03 |
-| Da cháy nắng, rát đỏ, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-03 |
-| Con hắt hơi sổ mũi, mẹ nào cũng có sẵn lọ này trong nhà #Shorts | 0 | 0 | 0 | 2026-09-02 |
-| 99% pha bột sắn dây sai cách mà không biết, Bà Tư chỉ luôn #Shorts | 0 | 0 | 0 | 2026-09-02 |
-| Da thâm sạm sau mụn, dân gian có mẹo hay #Shorts | 1 | 0 | 0 | 2026-09-02 |
-| Long nhãn ngâm mật ong 2 tuần, Bà Tư lấy ra ăn mỗi tối trước khi ngủ #Shorts | 3 | 0 | 0 | 2026-09-02 |
-| Đau nhức khớp gối, dân gian có mẹo hay #Shorts | 7 | 0 | 0 | 2026-08-28 |
-| Chú Bảy Và Cây Cờ Tướng | Nhà Bà Tư - Tập 3 | 1 | 0 | 0 | 2026-08-28 |
 
