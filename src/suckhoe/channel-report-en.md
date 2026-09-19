@@ -1,13 +1,13 @@
-# Channel report — 2026-09-18
+# Channel report — 2026-09-19
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 233
-Total videos: 63
+Total videos: 66
 
 ## Last 28 days (channel-wide)
 
-Views: 258
+Views: 259
 Watch time (minutes): 52
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,6 +17,9 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| That little brown bottle in Grandma June's cabinet isn't just for cuts #Shorts | 0 | 0 | 0 | 2026-09-19 |
+| Grandma June's cold-night fix wasn't cough syrup, it was this warm mug #Shorts | 0 | 0 | 0 | 2026-09-18 |
+| Grandma June's five-minute face mask, straight from the pantry #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Touched a hot pan? Grandma June skips the ice completely #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Before store-bought cough drops, this is what grandmothers made #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | Grandma June's shower smells different when someone's stuffy #Shorts | 0 | 0 | 0 | 2026-09-16 |
 | Forget the fancy collagen powder, Grandma June just simmered bones on the stove #Shorts | 0 | 0 | 0 | 2026-09-16 |
 | Stomach feeling bloated after dinner? Grandma June has a seed for that #Shorts | 2 | 0 | 0 | 2026-09-15 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-10 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-09 |
-| Grandma June always kept a jug of this cloudy water in the icebox #Shorts | 0 | 0 | 0 | 2026-09-09 |
 

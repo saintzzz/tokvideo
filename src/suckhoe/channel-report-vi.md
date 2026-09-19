@@ -1,9 +1,9 @@
-# Channel report — 2026-09-18
+# Channel report — 2026-09-19
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 251
-Total views: 3015
-Total videos: 67
+Total views: 3016
+Total videos: 70
 
 ## Last 28 days (channel-wide)
 
@@ -17,6 +17,9 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Đau bụng đi ngoài, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-18 |
+| Ho khan rát họng, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-18 |
+| Sáng nào cũng uể oải? Bà Tư gợi ý ly nước ép này #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Ăn dứa xong thấy dễ tiêu hơn hẳn, hóa ra là có lý do khoa học #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Trưa hè mệt lử, Bà Tư hay ép một ly nước củ sen cho tỉnh táo lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Người xanh xao thiếu sức, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-17 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | 3 lát đẳng sâm, vài quả táo đỏ, Bà Tư hãm một ấm trà uống cả buổi sáng #Shorts | 0 | 0 | 0 | 2026-09-15 |
 | Đau lưng nhức mỏi, Bà Tư có hay nhấp một chén rượu ngâm này không? #Shorts | 0 | 0 | 0 | 2026-09-15 |
 | Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-15 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-05 |
-| Bé Tôm Không Chịu Ăn Rau | Nhà Bà Tư - Tập 4 | 1 | 0 | 0 | 2026-09-05 |
-| Liên Quân Mobile live | 2 | 0 | 0 | 2026-09-04 |
 
