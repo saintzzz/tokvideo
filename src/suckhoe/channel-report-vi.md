@@ -1,22 +1,25 @@
-# Channel report — 2026-09-19
+# Channel report — 2026-09-20
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 251
 Total views: 3016
-Total videos: 70
+Total videos: 73
 
 ## Last 28 days (channel-wide)
 
-Views: 3032
-Watch time (minutes): 280
-Subscribers gained: 1
+Views: 673
+Watch time (minutes): 71
+Subscribers gained: 0
 Subscribers lost: 1
-Net subscriber change: 0
+Net subscriber change: -1
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Dậy sớm mà người cứ lừ đừ, Bà Tư hay pha ấm nước này uống #Shorts | 0 | 0 | 0 | 2026-09-19 |
+| Uống một ngụm nước lá này trước khi ngủ, Bà Tư bảo dễ vào giấc hơn hẳn #Shorts | 0 | 0 | 0 | 2026-09-19 |
+| Trưa hè oi bức, Bà Tư hay nấu nồi nước lá sen này #Shorts | 0 | 0 | 0 | 2026-09-19 |
 | Đau bụng đi ngoài, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Ho khan rát họng, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Sáng nào cũng uể oải? Bà Tư gợi ý ly nước ép này #Shorts | 0 | 0 | 0 | 2026-09-18 |
@@ -34,12 +37,9 @@ Net subscriber change: 0
 | Mùa hồng bì về, Bà Tư lại ngâm sẵn một hũ để dành cho cháu ho #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Ho khan mãi không dứt, Bà Tư có hay chấm mật ong với thứ gia vị cay này? #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Cảm lạnh vừa mới nhen, Bà Tư có một hũ hành tím ngâm sẵn trong bếp #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than #Shorts | 1 | 0 | 0 | 2026-09-17 |
+| Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | 99% pha trà gừng chanh mật ong sai thứ tự, Bà Tư luôn làm ngược lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Da tay chân nứt nẻ mùa hanh khô, Bà Tư có hay thoa loại dầu này không? #Shorts | 0 | 0 | 0 | 2026-09-16 |
 | Không cần hấp dầu tiệm tốn tiền, một loại dầu bếp nhà nào cũng có #Shorts | 0 | 0 | 0 | 2026-09-16 |
 | Mua men vi sinh làm gì, Bà Tư chỉ ăn một ít dưa bắp cải muối mỗi bữa #Shorts | 0 | 0 | 0 | 2026-09-16 |
-| 3 lát đẳng sâm, vài quả táo đỏ, Bà Tư hãm một ấm trà uống cả buổi sáng #Shorts | 0 | 0 | 0 | 2026-09-15 |
-| Đau lưng nhức mỏi, Bà Tư có hay nhấp một chén rượu ngâm này không? #Shorts | 0 | 0 | 0 | 2026-09-15 |
-| Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này #Shorts | 0 | 0 | 0 | 2026-09-15 |
 
