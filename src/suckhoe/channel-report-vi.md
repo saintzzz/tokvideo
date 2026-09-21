@@ -1,14 +1,14 @@
-# Channel report — 2026-09-20
+# Channel report — 2026-09-21
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 251
-Total views: 3016
-Total videos: 73
+Total views: 3015
+Total videos: 76
 
 ## Last 28 days (channel-wide)
 
-Views: 673
-Watch time (minutes): 71
+Views: 160
+Watch time (minutes): 36
 Subscribers gained: 0
 Subscribers lost: 1
 Net subscriber change: -1
@@ -17,6 +17,9 @@ Net subscriber change: -1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Nóng trong người, nổi mụn, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-20 |
+| Mệt mỏi thiếu sức sống, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-20 |
+| Bụng ậm ạch khó tiêu, Bà Tư có hay pha nước me ngâm đường này không? #Shorts | 0 | 0 | 0 | 2026-09-20 |
 | Dậy sớm mà người cứ lừ đừ, Bà Tư hay pha ấm nước này uống #Shorts | 0 | 0 | 0 | 2026-09-19 |
 | Uống một ngụm nước lá này trước khi ngủ, Bà Tư bảo dễ vào giấc hơn hẳn #Shorts | 0 | 0 | 0 | 2026-09-19 |
 | Trưa hè oi bức, Bà Tư hay nấu nồi nước lá sen này #Shorts | 0 | 0 | 0 | 2026-09-19 |
@@ -39,7 +42,4 @@ Net subscriber change: -1
 | Cảm lạnh vừa mới nhen, Bà Tư có một hũ hành tím ngâm sẵn trong bếp #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | 99% pha trà gừng chanh mật ong sai thứ tự, Bà Tư luôn làm ngược lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Da tay chân nứt nẻ mùa hanh khô, Bà Tư có hay thoa loại dầu này không? #Shorts | 0 | 0 | 0 | 2026-09-16 |
-| Không cần hấp dầu tiệm tốn tiền, một loại dầu bếp nhà nào cũng có #Shorts | 0 | 0 | 0 | 2026-09-16 |
-| Mua men vi sinh làm gì, Bà Tư chỉ ăn một ít dưa bắp cải muối mỗi bữa #Shorts | 0 | 0 | 0 | 2026-09-16 |
 
