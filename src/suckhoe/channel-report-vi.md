@@ -1,14 +1,14 @@
-# Channel report — 2026-09-21
+# Channel report — 2026-09-22
 
 Channel: Bà Lang Mách Mẹo
-Subscribers: 251
+Subscribers: 250
 Total views: 3015
-Total videos: 76
+Total videos: 78
 
 ## Last 28 days (channel-wide)
 
-Views: 160
-Watch time (minutes): 36
+Views: 141
+Watch time (minutes): 31
 Subscribers gained: 0
 Subscribers lost: 1
 Net subscriber change: -1
@@ -17,6 +17,8 @@ Net subscriber change: -1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Nước vo gạo đừng đổ đi, Bà Tư giữ lại gội đầu #Shorts | 0 | 0 | 0 | 2026-09-21 |
+| Một nồi nước sâm bí đao nấu sẵn, Bà Tư để dành uống mát cả tuần #Shorts | 0 | 0 | 0 | 2026-09-21 |
 | Nóng trong người, nổi mụn, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-20 |
 | Mệt mỏi thiếu sức sống, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-20 |
 | Bụng ậm ạch khó tiêu, Bà Tư có hay pha nước me ngâm đường này không? #Shorts | 0 | 0 | 0 | 2026-09-20 |
@@ -40,6 +42,4 @@ Net subscriber change: -1
 | Mùa hồng bì về, Bà Tư lại ngâm sẵn một hũ để dành cho cháu ho #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Ho khan mãi không dứt, Bà Tư có hay chấm mật ong với thứ gia vị cay này? #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Cảm lạnh vừa mới nhen, Bà Tư có một hũ hành tím ngâm sẵn trong bếp #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| 99% pha trà gừng chanh mật ong sai thứ tự, Bà Tư luôn làm ngược lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
 

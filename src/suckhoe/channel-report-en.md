@@ -1,14 +1,14 @@
-# Channel report — 2026-09-21
+# Channel report — 2026-09-22
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 233
-Total videos: 72
+Total videos: 75
 
 ## Last 28 days (channel-wide)
 
-Views: 143
-Watch time (minutes): 26
+Views: 84
+Watch time (minutes): 9
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
@@ -17,6 +17,9 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| The plant Grandma June steeps has nothing to do with oatmeal #Shorts | 0 | 0 | 0 | 2026-09-22 |
+| Not turmeric this time - the spice in Grandma June's bedtime milk #Shorts | 0 | 0 | 0 | 2026-09-21 |
+| Feeling a chill coming on? Grandma June heads for the mustard tin #Shorts | 0 | 0 | 0 | 2026-09-21 |
 | Before chest rubs came in a little blue jar, families mixed this paste #Shorts | 0 | 0 | 0 | 2026-09-21 |
 | Grandma June never chews gum before a visit, she does this instead #Shorts | 0 | 0 | 0 | 2026-09-20 |
 | Before soup, this was grandma's actual sick-day food #Shorts | 0 | 0 | 0 | 2026-09-20 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Grandma June never bought an ice pack, she just opened the freezer #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Grandma June never bought an ice pack, she just opened the freezer #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Grandma June never bought an ice pack, she just opened the freezer #Shorts | 0 | 0 | 0 | 2026-09-17 |
 
