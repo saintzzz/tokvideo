@@ -1,14 +1,14 @@
-# Channel report — 2026-09-22
+# Channel report — 2026-09-23
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 250
 Total views: 3015
-Total videos: 78
+Total videos: 81
 
 ## Last 28 days (channel-wide)
 
-Views: 141
-Watch time (minutes): 31
+Views: 116
+Watch time (minutes): 24
 Subscribers gained: 0
 Subscribers lost: 1
 Net subscriber change: -1
@@ -17,6 +17,9 @@ Net subscriber change: -1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Khàn tiếng, ho khan, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-22 |
+| Chân ra mồ hôi có mùi, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-22 |
+| Trước khi có trà túi lọc, người Việt uống thứ nước này mỗi ngày #Shorts | 0 | 0 | 0 | 2026-09-22 |
 | Nước vo gạo đừng đổ đi, Bà Tư giữ lại gội đầu #Shorts | 0 | 0 | 0 | 2026-09-21 |
 | Một nồi nước sâm bí đao nấu sẵn, Bà Tư để dành uống mát cả tuần #Shorts | 0 | 0 | 0 | 2026-09-21 |
 | Nóng trong người, nổi mụn, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-20 |
@@ -39,7 +42,4 @@ Net subscriber change: -1
 | Hấp lê cho đường phèn vào đầu tiên là sai bước, Bà Tư chỉnh lại cách này #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Loại lá mọc đầy ngoài chợ, ít ai ngờ giã lấy nước lại dịu cổ họng vậy #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Canh lửa sai một chút là hỏng cả mẻ, Bà Tư nấu kẹo gừng ho kiểu này #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Mùa hồng bì về, Bà Tư lại ngâm sẵn một hũ để dành cho cháu ho #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Ho khan mãi không dứt, Bà Tư có hay chấm mật ong với thứ gia vị cay này? #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Cảm lạnh vừa mới nhen, Bà Tư có một hũ hành tím ngâm sẵn trong bếp #Shorts | 0 | 0 | 0 | 2026-09-17 |
 

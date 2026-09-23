@@ -1,13 +1,13 @@
-# Channel report — 2026-09-22
+# Channel report — 2026-09-23
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 233
-Total videos: 75
+Total videos: 78
 
 ## Last 28 days (channel-wide)
 
-Views: 84
+Views: 82
 Watch time (minutes): 9
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,6 +17,9 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| What's a bottle of olive oil doing on Grandma June's nightstand? #Shorts | 0 | 0 | 0 | 2026-09-23 |
+| Grandma June's other go-to when a cold hits, besides soup #Shorts | 0 | 0 | 0 | 2026-09-22 |
+| Most people reach for the wrong thing first with an itchy rash #Shorts | 0 | 0 | 0 | 2026-09-22 |
 | The plant Grandma June steeps has nothing to do with oatmeal #Shorts | 0 | 0 | 0 | 2026-09-22 |
 | Not turmeric this time - the spice in Grandma June's bedtime milk #Shorts | 0 | 0 | 0 | 2026-09-21 |
 | Feeling a chill coming on? Grandma June heads for the mustard tin #Shorts | 0 | 0 | 0 | 2026-09-21 |
@@ -31,9 +34,6 @@ Net subscriber change: 0
 | Grandma June's five-minute face mask, straight from the pantry #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Touched a hot pan? Grandma June skips the ice completely #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Before store-bought cough drops, this is what grandmothers made #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
