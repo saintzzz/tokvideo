@@ -12,6 +12,7 @@ import { HostSilhouette } from "../components/HostSilhouette";
 import { SubscribePointer } from "../components/SubscribePointer";
 import { fonts } from "../fonts";
 import { SucKhoeEpisode } from "../suckhoe/types";
+import { themeForEpisode } from "../suckhoe/themes";
 
 export const CTAScene: React.FC<{
   episode: SucKhoeEpisode;
@@ -19,6 +20,7 @@ export const CTAScene: React.FC<{
 }> = ({ episode, hasAudio }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const theme = themeForEpisode(episode);
 
   const healerSpring = spring({ frame, fps, config: { damping: 13, mass: 0.6 } });
   const healerScale = interpolate(healerSpring, [0, 1], [0.75, 1]);
@@ -36,7 +38,9 @@ export const CTAScene: React.FC<{
   });
 
   return (
-    <NutritionBackground>
+    <NutritionBackground theme={theme}>
+      <Audio src={staticFile("sfx/whoosh.mp3")} volume={0.35} />
+      <Audio src={staticFile("sfx/chime.mp3")} volume={0.3} startFrom={10} />
       {hasAudio ? (
         <Audio src={staticFile(`audio/suckhoe/${episode.slug}/cta.mp3`)} />
       ) : null}
@@ -70,10 +74,10 @@ export const CTAScene: React.FC<{
               fontWeight: 800,
               fontSize: 50,
               color: "#0e150d",
-              backgroundColor: "#7CB342",
+              backgroundColor: theme.accent,
               borderRadius: 18,
               padding: "10px 30px",
-              boxShadow: "0 10px 30px rgba(124,179,66,0.45)",
+              boxShadow: `0 10px 30px ${theme.accent}73`,
             }}
           >
             {episode.locale === "en" ? "FOLLOW FOR MORE" : "THEO DÕI KÊNH"}
@@ -98,7 +102,8 @@ export const CTAScene: React.FC<{
           style={{
             fontFamily: fonts.sans,
             fontSize: 18,
-            color: "#9db08f",
+            color: theme.ink,
+            opacity: 0.65,
           }}
         >
           {episode.locale === "en"
@@ -111,7 +116,8 @@ export const CTAScene: React.FC<{
               marginTop: 4,
               fontFamily: fonts.sans,
               fontSize: 18,
-              color: "#9db08f",
+              color: theme.ink,
+              opacity: 0.65,
             }}
           >
             {episode.caution}

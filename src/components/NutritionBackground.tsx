@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import type { SceneTheme } from "../suckhoe/themes";
 
 const seededRandom = (seed: number) => {
   const x = Math.sin(seed * 999.71) * 43758.5453;
@@ -53,10 +54,18 @@ const Shape: React.FC<{ shape: Particle["shape"]; size: number; hue: number }> =
   );
 };
 
-export const NutritionBackground: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const NutritionBackground: React.FC<{
+  children: React.ReactNode;
+  theme?: SceneTheme;
+}> = ({ children, theme }) => {
   const frame = useCurrentFrame();
+  const t = theme ?? {
+    bg: ["#1c2b1a", "#0e150d", "#060906"] as [string, string, string],
+    accent: "#7CB342",
+    ink: "#F2FAEC",
+    bokeh: "rgba(120,200,120,0.28)",
+    particleHue: 90,
+  };
 
   const particles = useMemo<Particle[]>(() => {
     const shapes: Particle["shape"][] = ["leaf", "grain", "drop"];
@@ -67,15 +76,14 @@ export const NutritionBackground: React.FC<{ children: React.ReactNode }> = ({
       drift: seededRandom(i * 4.1 + 17) * 40 - 20,
       rotationSpeed: seededRandom(i * 5.3 + 23) * 2 - 1,
       shape: shapes[i % shapes.length],
-      hue: 90 + seededRandom(i * 6.7 + 29) * 40,
+      hue: t.particleHue + seededRandom(i * 6.7 + 29) * 40,
     }));
-  }, []);
+  }, [t.particleHue]);
 
   return (
     <AbsoluteFill
       style={{
-        background:
-          "radial-gradient(ellipse at 50% 0%, #1c2b1a 0%, #0e150d 55%, #060906 100%)",
+        background: `radial-gradient(ellipse at 50% 0%, ${t.bg[0]} 0%, ${t.bg[1]} 55%, ${t.bg[2]} 100%)`,
       }}
     >
       {/* bokeh */}
@@ -94,8 +102,7 @@ export const NutritionBackground: React.FC<{ children: React.ReactNode }> = ({
               width: bsize,
               height: bsize,
               borderRadius: "50%",
-              background:
-                "radial-gradient(circle, rgba(120,200,120,0.28) 0%, rgba(120,200,120,0) 70%)",
+              background: `radial-gradient(circle, ${t.bokeh} 0%, rgba(0,0,0,0) 70%)`,
               filter: "blur(4px)",
               opacity: 0.5 + pulse,
               transform: "translate(-50%, -50%)",

@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-09-23T18:05:34.117Z",
+  "locales": {
+    "vi": {
+      "videos": 25,
+      "matched": 25,
+      "categories": [
+        {
+          "category": "ho-cam-hong",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 5,
+          "avgViews": 0
+        },
+        {
+          "category": "da-toc-lam-dep",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 4,
+          "avgViews": 0
+        },
+        {
+          "category": "tieu-hoa",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 6,
+          "avgViews": 0
+        },
+        {
+          "category": "dau-nhuc-met-moi",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 7,
+          "avgViews": 0
+        },
+        {
+          "category": "giac-ngu",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 3,
+          "avgViews": 0
+        }
+      ]
+    },
+    "en": {
+      "videos": 25,
+      "matched": 25,
+      "categories": [
+        {
+          "category": "en-cold-throat",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 7,
+          "avgViews": 0
+        },
+        {
+          "category": "en-skin-beauty",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 5,
+          "avgViews": 0
+        },
+        {
+          "category": "en-sleep-relax",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 3,
+          "avgViews": 0
+        },
+        {
+          "category": "en-digestion",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "n": 10,
+          "avgViews": 0
+        }
+      ]
+    }
+  }
+}

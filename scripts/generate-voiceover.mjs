@@ -1,8 +1,10 @@
 import { createWriteStream } from "node:fs";
-import { mkdir, readdir, stat } from "node:fs/promises";
+import { mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
+import { withRetry } from "./lib/retry.mjs";
+import { probeDurationSeconds, sanityCheckAudio } from "./lib/audio-probe.mjs";
 import giaCatLuongNarration from "../src/narration.json" with { type: "json" };
 import churchillNarration from "../src/narration.churchill.json" with { type: "json" };
 import hippocratesNarration from "../src/narration.hippocrates.json" with { type: "json" };
@@ -273,26 +275,123 @@ const synthesizeOnce = async (outFile, text, voice, prosody) => {
   }
 };
 
-const MAX_ATTEMPTS = 3;
+// Fallback voices per locale when the primary is unhealthy — msedge-tts
+// is an unofficial endpoint, individual voices can disappear or degrade.
+// Voice pools are ordered; a voice that fails the healthcheck below is
+// swapped for the next candidate for THIS RUN ONLY (no config mutation).
+const FALLBACK_VOICES = {
+  vi: ["vi-VN-NamMinhNeural", "vi-VN-HoaiMyNeural"],
+  en: ["en-US-JennyNeural", "en-US-AriaNeural", "en-US-GuyNeural"],
+};
+const localeOfVoice = (voice) => (voice.startsWith("vi-") ? "vi" : "en");
+
+// voice -> working substitute, filled by the healthcheck pass below.
+const voiceSubstitutions = new Map();
+const resolveVoice = (voice) => voiceSubstitutions.get(voice) ?? voice;
 
 const synthesize = async (outDir, key, text, voice, prosody) => {
   const outFile = path.join(outDir, `${key}.mp3`);
 
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    try {
+  await withRetry(
+    async () => {
       await synthesizeOnce(outFile, text, voice, prosody);
-      const { size } = await stat(outFile);
-      if (size > 0) {
-        console.log(`Wrote ${outFile}`);
-        return;
+      const check = sanityCheckAudio(outFile);
+      if (!check.ok) {
+        throw new Error(`sanity check failed: ${check.reason}`);
       }
-      console.warn(`${outFile} came back empty (attempt ${attempt}/${MAX_ATTEMPTS}), retrying...`);
-    } catch (err) {
-      console.warn(`${outFile} failed (attempt ${attempt}/${MAX_ATTEMPTS}): ${err.message}`);
+      console.log(`Wrote ${outFile}`);
+    },
+    { attempts: 3, baseMs: 1500, label: `tts ${key}` }
+  ).catch((err) => {
+    throw new Error(`Failed to synthesize ${outFile}: ${err.message}`);
+  });
+};
+
+// Healthcheck every distinct voice the run needs: one short synthesis
+// each. A voice that fails gets swapped to the next candidate in its
+// locale pool; if the whole pool fails we abort loudly — that means the
+// TTS endpoint itself is down and every file would come out broken.
+const healthcheckVoices = async () => {
+  const needed = new Set();
+  for (const id of ids) {
+    const video = VIDEOS[id];
+    for (const entry of Object.values(video.narration)) {
+      const isPerBeatEntry = typeof entry === "object" && entry !== null;
+      needed.add(isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI);
     }
   }
 
-  throw new Error(`Failed to synthesize ${outFile} after ${MAX_ATTEMPTS} attempts`);
+  const probeFile = path.join(publicDir, ".voice-healthcheck.mp3");
+  for (const voice of needed) {
+    let healthy = false;
+    try {
+      await withRetry(
+        () => synthesizeOnce(probeFile, "kiểm tra giọng đọc.", voice, { rate: "+0%", pitch: "+0%", volume: "+0%" }),
+        { attempts: 2, baseMs: 1000, label: `healthcheck ${voice}` }
+      );
+      healthy = sanityCheckAudio(probeFile).ok;
+    } catch {
+      healthy = false;
+    }
+
+    if (healthy) continue;
+
+    const pool = FALLBACK_VOICES[localeOfVoice(voice)] ?? [];
+    let swapped = null;
+    for (const candidate of pool) {
+      if (candidate === voice || needed.has(candidate) && voiceSubstitutions.get(candidate)) continue;
+      try {
+        await withRetry(
+          () => synthesizeOnce(probeFile, "voice check.", candidate, { rate: "+0%", pitch: "+0%", volume: "+0%" }),
+          { attempts: 2, baseMs: 1000, label: `fallback ${candidate}` }
+        );
+        if (sanityCheckAudio(probeFile).ok) {
+          swapped = candidate;
+          break;
+        }
+      } catch { /* try next candidate */ }
+    }
+    if (!swapped) {
+      throw new Error(
+        `TTS voice "${voice}" is unhealthy and every fallback in the "${localeOfVoice(voice)}" pool failed too — the msedge-tts endpoint is likely down. Aborting rather than writing broken audio.`
+      );
+    }
+    console.warn(`Voice "${voice}" unhealthy — substituting "${swapped}" for this run`);
+    voiceSubstitutions.set(voice, swapped);
+  }
+};
+
+await healthcheckVoices();
+
+// ── Karaoke caption emission (Q-03) ───────────────────────────────
+// Word timings are allocated proportionally across the real mp3
+// duration — see docs/ARCHITECTURE.md D1. Written next to the audio in
+// public/captions/<videoId>/<scene>.json for KaraokeCaption to fetch.
+const writeCaptions = async (videoId, key, text, durationSec) => {
+  const words = text.split(/\s+/).filter(Boolean);
+  if (!words.length || !durationSec) return;
+  // 92% of the clip is spoken words; the rest is leading/trailing breath.
+  const budget = durationSec * 0.92;
+  const lead = durationSec * 0.04;
+  const weights = words.map((w) => {
+    // Longer words take longer; sentence-ending punctuation adds a pause.
+    const pause = /[.!?,;:…—]$/.test(w) ? 2.5 : 0;
+    return Math.max(w.replace(/[^\p{L}\p{N}]/gu, "").length, 1) + pause;
+  });
+  const total = weights.reduce((a, b) => a + b, 0);
+  let t = lead;
+  const timed = words.map((w, i) => {
+    const dur = (weights[i] / total) * budget;
+    const entry = { w, start: +t.toFixed(3), end: +(t + dur).toFixed(3) };
+    t += dur;
+    return entry;
+  });
+  const dir = path.join(publicDir, "captions", videoId);
+  await mkdir(dir, { recursive: true });
+  await writeFile(
+    path.join(dir, `${key}.json`),
+    JSON.stringify({ durationSec: +durationSec.toFixed(3), words: timed }, null, 1)
+  );
 };
 
 for (const id of ids) {
@@ -304,9 +403,11 @@ for (const id of ids) {
     // video-level voice and the global PROSODY.
     const isPerBeatEntry = typeof entry === "object" && entry !== null;
     const text = isPerBeatEntry ? entry.text : entry;
-    const voice = isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI;
+    const voice = resolveVoice(isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI);
     const prosody = isPerBeatEntry ? entry.prosody : PROSODY;
     await synthesize(video.audioDir, key, text, voice, prosody);
+    const dur = probeDurationSeconds(path.join(video.audioDir, `${key}.mp3`));
+    if (dur) await writeCaptions(id, key, text, dur);
   }
 }
 

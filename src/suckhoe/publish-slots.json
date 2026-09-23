@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-09-23T18:05:34.390Z",
+  "samples": 43,
+  "note": "data-driven",
+  "slotsUTC": [
+    5,
+    6,
+    7
+  ],
+  "buckets": [
+    {
+      "hourUTC": 5,
+      "publishes": 1,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 6,
+      "publishes": 1,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 7,
+      "publishes": 3,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 8,
+      "publishes": 5,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 9,
+      "publishes": 1,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 10,
+      "publishes": 1,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 11,
+      "publishes": 1,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 12,
+      "publishes": 2,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 13,
+      "publishes": 4,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 16,
+      "publishes": 2,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 18,
+      "publishes": 2,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 20,
+      "publishes": 4,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 2,
+      "publishes": 6,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 15,
+      "publishes": 4,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 17,
+      "publishes": 4,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 19,
+      "publishes": 1,
+      "avgViews": 0
+    },
+    {
+      "hourUTC": 21,
+      "publishes": 1,
+      "avgViews": 0
+    }
+  ]
+}

@@ -1,0 +1,1035 @@
+{
+  "generatedAt": "2026-09-23T18:05:34.277Z",
+  "variants": {
+    "bap-cai-muoi-chua-tieu-hoa": [
+      "Mua men vi sinh làm gì, Bà Tư chỉ ăn một ít dưa bắp cải muối mỗi bữa",
+      "Bà Tư mách: Bắp cải muối chua (dưa bắp cải)",
+      "Mẹo Bắp cải muối chua (dưa bắp cải) xưa nay ai cũng cần"
+    ],
+    "bo-ket-goi-dau": [
+      "Rụng tóc, nhiều gàu, dân gian có mẹo hay",
+      "Bà Tư mách: Quả bồ kết",
+      "Mẹo Quả bồ kết xưa nay ai cũng cần"
+    ],
+    "bot-san-day-pha-chanh": [
+      "99% pha bột sắn dây sai cách mà không biết, Bà Tư chỉ luôn",
+      "Bà Tư mách: Bột sắn dây và chanh",
+      "Mẹo Bột sắn dây và chanh xưa nay ai cũng cần"
+    ],
+    "cam-nuong-muoi": [
+      "Nửa đêm cháu ho khan, Bà Tư ra bếp nướng một quả cam như thế này",
+      "Bà Tư mách: Cam và muối",
+      "Mẹo Cam và muối xưa nay ai cũng cần"
+    ],
+    "cao-xoa-dau-tram": [
+      "Con hắt hơi sổ mũi, mẹ nào cũng có sẵn lọ này trong nhà",
+      "Bà Tư mách: Dầu tràm",
+      "Mẹo Dầu tràm xưa nay ai cũng cần"
+    ],
+    "chanh-dao-mat-ong": [
+      "Ho có đờm, rát họng, dân gian có mẹo hay",
+      "Bà Tư mách: Chanh đào và mật ong",
+      "Mẹo Chanh đào và mật ong xưa nay ai cũng cần"
+    ],
+    "chanh-mat-ong-sang": [
+      "Uể oải mỗi sáng, dân gian có mẹo hay",
+      "Bà Tư mách: Chanh và mật ong",
+      "Mẹo Chanh và mật ong xưa nay ai cũng cần"
+    ],
+    "chanh-muoi-pha-nuoc-am": [
+      "Rát họng mới chớm, đừng vội uống thuốc, thử cách này trước",
+      "Bà Tư mách: Chanh muối (chanh ngâm muối lâu năm)",
+      "Mẹo Chanh muối (chanh ngâm muối lâu năm) xưa nay ai cũng cần"
+    ],
+    "chao-hanh-la": [
+      "Mới chớm cảm, dân gian có mẹo hay",
+      "Bà Tư mách: Cháo trắng và hành lá",
+      "Mẹo Cháo trắng và hành lá xưa nay ai cũng cần"
+    ],
+    "chao-trung-tia-to": [
+      "Mới chớm cảm người ớn lạnh, dân gian có mẹo hay",
+      "Bà Tư mách: Trứng gà và lá tía tô",
+      "Mẹo Trứng gà và lá tía tô xưa nay ai cũng cần"
+    ],
+    "che-hat-sen-long-nhan": [
+      "Ngủ chập chờn hay mơ, dân gian có mẹo hay",
+      "Bà Tư mách: Hạt sen và long nhãn",
+      "Mẹo Hạt sen và long nhãn xưa nay ai cũng cần"
+    ],
+    "chuoi-chin-chuot-rut": [
+      "Hay bị chuột rút, dân gian có mẹo hay",
+      "Bà Tư mách: Chuối chín",
+      "Mẹo Chuối chín xưa nay ai cũng cần"
+    ],
+    "chuoi-hap-mat-ong": [
+      "Chuối hấp mật ong, món ông bà xưa hay làm khi ho húng hắng",
+      "Bà Tư mách: Chuối chín và mật ong",
+      "Mẹo Chuối chín và mật ong xưa nay ai cũng cần"
+    ],
+    "chuoi-hot-ngam-ruou": [
+      "Đau lưng nhức mỏi, Bà Tư có hay nhấp một chén rượu ngâm này không?",
+      "Bà Tư mách: Chuối hột ngâm rượu",
+      "Mẹo Chuối hột ngâm rượu xưa nay ai cũng cần"
+    ],
+    "com-ruou-nep-cam": [
+      "Bà Tư ăn gì mỗi sáng để đỡ mệt, đỡ uể oải?",
+      "Bà Tư mách: Cơm rượu nếp cẩm",
+      "Mẹo Cơm rượu nếp cẩm xưa nay ai cũng cần"
+    ],
+    "cu-cai-hap-mat-ong": [
+      "Ho kéo dài chưa dứt, dân gian có mẹo hay",
+      "Bà Tư mách: Củ cải trắng và mật ong",
+      "Mẹo Củ cải trắng và mật ong xưa nay ai cũng cần"
+    ],
+    "dang-sam-tao-do": [
+      "3 lát đẳng sâm, vài quả táo đỏ, Bà Tư hãm một ấm trà uống cả buổi sáng",
+      "Bà Tư mách: Trà đẳng sâm táo đỏ",
+      "Mẹo Trà đẳng sâm táo đỏ xưa nay ai cũng cần"
+    ],
+    "dau-dua-nut-got-chan": [
+      "Gót chân khô nứt nẻ, dân gian có mẹo hay",
+      "Bà Tư mách: Dầu dừa",
+      "Mẹo Dầu dừa xưa nay ai cũng cần"
+    ],
+    "dau-dua-u-toc": [
+      "Không cần hấp dầu tiệm tốn tiền, một loại dầu bếp nhà nào cũng có",
+      "Bà Tư mách: Dầu dừa",
+      "Mẹo Dầu dừa xưa nay ai cũng cần"
+    ],
+    "dau-gio-xoa-thai-duong": [
+      "Nhức đầu, chóng mặt, dân gian có mẹo hay",
+      "Bà Tư mách: Dầu gió",
+      "Mẹo Dầu gió xưa nay ai cũng cần"
+    ],
+    "dau-mu-u-thoa-da": [
+      "Da tay chân nứt nẻ mùa hanh khô, Bà Tư có hay thoa loại dầu này không?",
+      "Bà Tư mách: Dầu mù u",
+      "Mẹo Dầu mù u xưa nay ai cũng cần"
+    ],
+    "dinh-huong-dau-rang": [
+      "Đau nhức răng, dân gian có mẹo hay",
+      "Bà Tư mách: Đinh hương",
+      "Mẹo Đinh hương xưa nay ai cũng cần"
+    ],
+    "du-du-chin-tieu-hoa": [
+      "Tiêu hoá kém, dân gian có mẹo hay",
+      "Bà Tư mách: Đu đủ chín",
+      "Mẹo Đu đủ chín xưa nay ai cũng cần"
+    ],
+    "dua-chuot-dap-mat": [
+      "Mắt mỏi thâm quầng, dân gian có mẹo hay",
+      "Bà Tư mách: Dưa chuột",
+      "Mẹo Dưa chuột xưa nay ai cũng cần"
+    ],
+    "en-aloe-vera-sunburn": [
+      "That plant on Grandma June's windowsill isn't just decoration",
+      "Grandma June's Fresh aloe vera gel trick",
+      "The Fresh aloe vera gel remedy your grandma knew"
+    ],
+    "en-apple-cider-vinegar": [
+      "Upset stomach? Grandma's apple cider vinegar trick",
+      "Grandma June's Apple cider vinegar trick",
+      "The Apple cider vinegar remedy your grandma knew"
+    ],
+    "en-baking-soda-bath-itchy-skin": [
+      "One box from the baking aisle, and it's not for cookies",
+      "Grandma June's Baking soda trick",
+      "The Baking soda remedy your grandma knew"
+    ],
+    "en-baking-soda-heartburn": [
+      "Heartburn acting up? Grandma June's baking soda fix",
+      "Grandma June's Baking soda trick",
+      "The Baking soda remedy your grandma knew"
+    ],
+    "en-baking-soda-paste": [
+      "Itchy bug bite? Grandma's baking soda paste",
+      "Grandma June's Baking soda trick",
+      "The Baking soda remedy your grandma knew"
+    ],
+    "en-banana-before-bed": [
+      "The bedtime snack Grandma June never skips",
+      "Grandma June's Ripe banana trick",
+      "The Ripe banana remedy your grandma knew"
+    ],
+    "en-barley-water": [
+      "Grandma June always kept a jug of this cloudy water in the icebox",
+      "Grandma June's Barley water trick",
+      "The Barley water remedy your grandma knew"
+    ],
+    "en-black-tea-bag-toothache": [
+      "What's in Grandma June's tea cabinet that isn't for drinking?",
+      "Grandma June's Black tea bag trick",
+      "The Black tea bag remedy your grandma knew"
+    ],
+    "en-blackstrap-molasses-energy": [
+      "A spoonful of this dark syrup was grandma's answer to feeling run down",
+      "Grandma June's Blackstrap molasses trick",
+      "The Blackstrap molasses remedy your grandma knew"
+    ],
+    "en-bone-broth-joint-comfort": [
+      "Forget the fancy collagen powder, Grandma June just simmered bones on the stove",
+      "Grandma June's Slow-simmered bone broth trick",
+      "The Slow-simmered bone broth remedy your grandma knew"
+    ],
+    "en-bread-poultice-splinter": [
+      "A splinter that won't budge? Grandma June reaches for a slice of bread, not tweezers",
+      "Grandma June's Warm bread poultice trick",
+      "The Warm bread poultice remedy your grandma knew"
+    ],
+    "en-buttermilk-sunburn": [
+      "The fridge-door trick for sunburn Grandma June swears by",
+      "Grandma June's Cold buttermilk trick",
+      "The Cold buttermilk remedy your grandma knew"
+    ],
+    "en-cabbage-leaves-breast-engorgement": [
+      "New moms have been doing this in the fridge for generations",
+      "Grandma June's Chilled cabbage leaves trick",
+      "The Chilled cabbage leaves remedy your grandma knew"
+    ],
+    "en-caraway-seed-tea": [
+      "Stomach feeling bloated after dinner? Grandma June has a seed for that",
+      "Grandma June's Caraway seed tea trick",
+      "The Caraway seed tea remedy your grandma knew"
+    ],
+    "en-castor-oil-belly-button": [
+      "Grandma June's oddest bedtime habit actually has a real name",
+      "Grandma June's Castor oil trick",
+      "The Castor oil remedy your grandma knew"
+    ],
+    "en-castor-oil-pack": [
+      "The oil Grandma June warms up when her knees ache",
+      "Grandma June's Castor oil trick",
+      "The Castor oil remedy your grandma knew"
+    ],
+    "en-cayenne-gargle-sore-throat": [
+      "A spicy pepper for a sore throat? Sounds backwards, but wait",
+      "Grandma June's Cayenne pepper and warm water trick",
+      "The Cayenne pepper and warm water remedy your grandma knew"
+    ],
+    "en-chamomile-tea": [
+      "Wired at bedtime? Grandma's chamomile tea",
+      "Grandma June's Chamomile tea trick",
+      "The Chamomile tea remedy your grandma knew"
+    ],
+    "en-chicken-soup": [
+      "Coming down with something? Grandma's chicken soup",
+      "Grandma June's Chicken soup trick",
+      "The Chicken soup remedy your grandma knew"
+    ],
+    "en-clove-oil-toothache": [
+      "Toothache acting up? Grandma's clove oil trick",
+      "Grandma June's Clove oil trick",
+      "The Clove oil remedy your grandma knew"
+    ],
+    "en-coconut-oil-pulling": [
+      "Grandma June swishes a spoonful of this before she brushes",
+      "Grandma June's Coconut oil trick",
+      "The Coconut oil remedy your grandma knew"
+    ],
+    "en-cold-tea-bags": [
+      "Puffy eyes? Grandma's tea bag trick",
+      "Grandma June's Chilled tea bags trick",
+      "The Chilled tea bags remedy your grandma knew"
+    ],
+    "en-cornstarch-heat-rash": [
+      "Summers at Grandma June's house always smelled like this powder",
+      "Grandma June's Cornstarch trick",
+      "The Cornstarch remedy your grandma knew"
+    ],
+    "en-crackers-for-nausea": [
+      "Queasy stomach in the morning? Grandma June keeps these by the bed",
+      "Grandma June's Plain crackers trick",
+      "The Plain crackers remedy your grandma knew"
+    ],
+    "en-cranberry-juice-bladder": [
+      "Grandma June's fridge always has a bottle of this tart red juice",
+      "Grandma June's Unsweetened cranberry juice trick",
+      "The Unsweetened cranberry juice remedy your grandma knew"
+    ],
+    "en-cucumber-slices-puffy-eyes": [
+      "3 minutes, 2 cucumber slices, and puffy eyes calm right down",
+      "Grandma June's Chilled cucumber trick",
+      "The Chilled cucumber remedy your grandma knew"
+    ],
+    "en-egg-yolk-hair-mask": [
+      "Before fancy hair masks, Grandma June cracked open an egg",
+      "Grandma June's Egg yolk trick",
+      "The Egg yolk remedy your grandma knew"
+    ],
+    "en-elderberry-syrup": [
+      "Feeling a cold coming on? Grandma June's elderberry syrup",
+      "Grandma June's Elderberry syrup trick",
+      "The Elderberry syrup remedy your grandma knew"
+    ],
+    "en-epsom-salt-soak": [
+      "Sore muscles? Grandma's Epsom salt soak",
+      "Grandma June's Epsom salt trick",
+      "The Epsom salt remedy your grandma knew"
+    ],
+    "en-eucalyptus-oil-steam-shower": [
+      "Grandma June's shower smells different when someone's stuffy",
+      "Grandma June's Eucalyptus essential oil trick",
+      "The Eucalyptus essential oil remedy your grandma knew"
+    ],
+    "en-fennel-seed-tea": [
+      "Grandma June keeps a jar of these seeds by the stove",
+      "Grandma June's Fennel seeds trick",
+      "The Fennel seeds remedy your grandma knew"
+    ],
+    "en-fermented-garlic-jar": [
+      "Most people steep garlic in honey overnight, Grandma June lets hers ferment for weeks",
+      "Grandma June's Salt-fermented garlic trick",
+      "The Salt-fermented garlic remedy your grandma knew"
+    ],
+    "en-feverfew-tea": [
+      "A tiny daisy-like leaf Grandma June reaches for when a headache creeps in",
+      "Grandma June's Feverfew tea trick",
+      "The Feverfew tea remedy your grandma knew"
+    ],
+    "en-flat-ginger-ale-stomach": [
+      "Why Grandma June leaves the soda open on the counter overnight",
+      "Grandma June's Flat ginger ale trick",
+      "The Flat ginger ale remedy your grandma knew"
+    ],
+    "en-frozen-peas-bruise": [
+      "Grandma June never bought an ice pack, she just opened the freezer",
+      "Grandma June's Frozen peas (cold compress) trick",
+      "The Frozen peas (cold compress) remedy your grandma knew"
+    ],
+    "en-garlic-honey-cold": [
+      "Feel a cold sneaking up? Grandma June steeps this overnight",
+      "Grandma June's Raw garlic and honey trick",
+      "The Raw garlic and honey remedy your grandma knew"
+    ],
+    "en-ginger-compress-cramps": [
+      "Not a tea this time - Grandma June wears her ginger instead",
+      "Grandma June's Fresh ginger trick",
+      "The Fresh ginger remedy your grandma knew"
+    ],
+    "en-ginger-tea": [
+      "Queasy stomach? Try grandma's ginger tea",
+      "Grandma June's Fresh ginger trick",
+      "The Fresh ginger remedy your grandma knew"
+    ],
+    "en-homemade-honey-lemon-drops": [
+      "Before store-bought cough drops, this is what grandmothers made",
+      "Grandma June's Honey and lemon juice trick",
+      "The Honey and lemon juice remedy your grandma knew"
+    ],
+    "en-honey-burn-relief": [
+      "Touched a hot pan? Grandma June skips the ice completely",
+      "Grandma June's Raw honey trick",
+      "The Raw honey remedy your grandma knew"
+    ],
+    "en-honey-cinnamon-morning": [
+      "What's in Grandma June's morning warm-up drink?",
+      "Grandma June's Honey and cinnamon trick",
+      "The Honey and cinnamon remedy your grandma knew"
+    ],
+    "en-honey-face-mask": [
+      "Grandma June's five-minute face mask, straight from the pantry",
+      "Grandma June's Raw honey trick",
+      "The Raw honey remedy your grandma knew"
+    ],
+    "en-honey-lemon-tea": [
+      "Scratchy throat? Grandma's go-to fix",
+      "Grandma June's Honey and lemon trick",
+      "The Honey and lemon remedy your grandma knew"
+    ],
+    "en-hot-toddy-cold": [
+      "Grandma June's cold-night fix wasn't cough syrup, it was this warm mug",
+      "Grandma June's Hot toddy (whiskey, honey, lemon) trick",
+      "The Hot toddy (whiskey, honey, lemon) remedy your grandma knew"
+    ],
+    "en-hydrogen-peroxide-ear-wax": [
+      "That little brown bottle in Grandma June's cabinet isn't just for cuts",
+      "Grandma June's Diluted hydrogen peroxide trick",
+      "The Diluted hydrogen peroxide remedy your grandma knew"
+    ],
+    "en-lavender-sachet-sleep": [
+      "Why Grandma June keeps a little cloth pouch under her pillow",
+      "Grandma June's Dried lavender trick",
+      "The Dried lavender remedy your grandma knew"
+    ],
+    "en-mayonnaise-hair-mask": [
+      "The secret to soft hair in Grandma June's day was sitting in the fridge",
+      "Grandma June's Mayonnaise trick",
+      "The Mayonnaise remedy your grandma knew"
+    ],
+    "en-meat-tenderizer-bee-sting": [
+      "The kitchen shelf trick for a bee sting Grandma June swears by",
+      "Grandma June's Meat tenderizer powder trick",
+      "The Meat tenderizer powder remedy your grandma knew"
+    ],
+    "en-milk-toast-sick-day": [
+      "Before soup, this was grandma's actual sick-day food",
+      "Grandma June's Toasted bread and warm milk trick",
+      "The Toasted bread and warm milk remedy your grandma knew"
+    ],
+    "en-mint-leaves-fresh-breath": [
+      "Grandma June never chews gum before a visit, she does this instead",
+      "Grandma June's Fresh mint leaves trick",
+      "The Fresh mint leaves remedy your grandma knew"
+    ],
+    "en-mustard-plaster-chest": [
+      "Before chest rubs came in a little blue jar, families mixed this paste",
+      "Grandma June's Mustard plaster (dry mustard paste) trick",
+      "The Mustard plaster (dry mustard paste) remedy your grandma knew"
+    ],
+    "en-mustard-powder-foot-soak": [
+      "Feeling a chill coming on? Grandma June heads for the mustard tin",
+      "Grandma June's Dry mustard powder trick",
+      "The Dry mustard powder remedy your grandma knew"
+    ],
+    "en-nutmeg-warm-milk-sleep": [
+      "Not turmeric this time - the spice in Grandma June's bedtime milk",
+      "Grandma June's Nutmeg and warm milk trick",
+      "The Nutmeg and warm milk remedy your grandma knew"
+    ],
+    "en-oat-straw-tea-calm": [
+      "The plant Grandma June steeps has nothing to do with oatmeal",
+      "Grandma June's Oat straw tea trick",
+      "The Oat straw tea remedy your grandma knew"
+    ],
+    "en-oatmeal-bath": [
+      "Itchy, irritated skin? Try the oatmeal soak",
+      "Grandma June's Plain oats trick",
+      "The Plain oats remedy your grandma knew"
+    ],
+    "en-oatmeal-paste-poison-ivy": [
+      "Most people reach for the wrong thing first with an itchy rash",
+      "Grandma June's Ground oats (colloidal oatmeal) trick",
+      "The Ground oats (colloidal oatmeal) remedy your grandma knew"
+    ],
+    "en-oatmeal-porridge-cold": [
+      "Grandma June's other go-to when a cold hits, besides soup",
+      "Grandma June's Oats trick",
+      "The Oats remedy your grandma knew"
+    ],
+    "en-olive-oil-eardrops": [
+      "What's a bottle of olive oil doing on Grandma June's nightstand?",
+      "Grandma June's Olive oil trick",
+      "The Olive oil remedy your grandma knew"
+    ],
+    "en-onion-syrup-cough": [
+      "One vegetable, some sugar, and a spoonful eases a nagging cough, grandma's way",
+      "Grandma June's Onion and sugar syrup trick",
+      "The Onion and sugar syrup remedy your grandma knew"
+    ],
+    "en-passionflower-tea": [
+      "Chamomile gets the credit, but this vine flower was Grandma June's real bedtime tea",
+      "Grandma June's Passionflower tea trick",
+      "The Passionflower tea remedy your grandma knew"
+    ],
+    "en-peppermint-oil-headache": [
+      "Tension headache? Grandma June's peppermint trick",
+      "Grandma June's Peppermint oil trick",
+      "The Peppermint oil remedy your grandma knew"
+    ],
+    "en-peppermint-tea": [
+      "Bloated after a big meal? Grandma's peppermint tea",
+      "Grandma June's Peppermint tea trick",
+      "The Peppermint tea remedy your grandma knew"
+    ],
+    "en-pickle-juice-cramps": [
+      "Why athletes keep a jar of this in their gym bag",
+      "Grandma June's Pickle juice trick",
+      "The Pickle juice remedy your grandma knew"
+    ],
+    "en-potato-slices-puffy-eyes": [
+      "Forget cucumbers - Grandma June reaches for this instead",
+      "Grandma June's Chilled raw potato trick",
+      "The Chilled raw potato remedy your grandma knew"
+    ],
+    "en-prunes-constipation": [
+      "The dried fruit Grandma June always kept on the counter",
+      "Grandma June's Prunes (dried plums) trick",
+      "The Prunes (dried plums) remedy your grandma knew"
+    ],
+    "en-raw-honey-minor-cuts": [
+      "Small scrape or cut? Grandma June's honey trick",
+      "Grandma June's Raw honey trick",
+      "The Raw honey remedy your grandma knew"
+    ],
+    "en-rice-sock-warm-compress": [
+      "That sock in Grandma June's microwave isn't laundry, it's her heating pad",
+      "Grandma June's Warm rice sock trick",
+      "The Warm rice sock remedy your grandma knew"
+    ],
+    "en-rosemary-scalp-oil": [
+      "Every Sunday night, Grandma June warms a little of this oil into her scalp",
+      "Grandma June's Rosemary oil trick",
+      "The Rosemary oil remedy your grandma knew"
+    ],
+    "en-sage-tea-gargle": [
+      "Most people gargle salt water for a sore throat, Grandma June reaches for this leaf",
+      "Grandma June's Sage tea gargle trick",
+      "The Sage tea gargle remedy your grandma knew"
+    ],
+    "en-saline-nasal-rinse": [
+      "The two-ingredient mix behind every nasal rinse bottle",
+      "Grandma June's Salt and warm water trick",
+      "The Salt and warm water remedy your grandma knew"
+    ],
+    "en-saltwater-gargle": [
+      "Sore throat creeping in? Grandma's salt gargle",
+      "Grandma June's Warm salt water trick",
+      "The Warm salt water remedy your grandma knew"
+    ],
+    "en-slippery-elm-tea": [
+      "Long before cough drops existed, this bark tea was Grandma June's fallback",
+      "Grandma June's Slippery elm bark tea trick",
+      "The Slippery elm bark tea remedy your grandma knew"
+    ],
+    "en-steam-bowl-congestion": [
+      "A bowl of hot water and a towel, Grandma June's stuffy-nose fix",
+      "Grandma June's Hot water and a towel trick",
+      "The Hot water and a towel remedy your grandma knew"
+    ],
+    "en-sugar-spoonful-hiccups": [
+      "The one-ingredient hiccup fix that's been passed down forever",
+      "Grandma June's Sugar trick",
+      "The Sugar remedy your grandma knew"
+    ],
+    "en-turmeric-golden-milk": [
+      "The golden drink Grandma June makes when her joints act up",
+      "Grandma June's Turmeric and warm milk trick",
+      "The Turmeric and warm milk remedy your grandma knew"
+    ],
+    "en-valerian-root-tea": [
+      "Grandma June's nightcap tea isn't chamomile, and it's stronger than you'd think",
+      "Grandma June's Valerian root tea trick",
+      "The Valerian root tea remedy your grandma knew"
+    ],
+    "en-vicks-on-feet-cough": [
+      "Forget the chest - Grandma June rubs this somewhere else",
+      "Grandma June's Menthol vapor rub trick",
+      "The Menthol vapor rub remedy your grandma knew"
+    ],
+    "en-vicks-vaporub-chest": [
+      "That little blue jar in Grandma June's medicine cabinet",
+      "Grandma June's Menthol vapor rub trick",
+      "The Menthol vapor rub remedy your grandma knew"
+    ],
+    "en-warm-compress-earache": [
+      "An ache deep in the ear? Grandma June warms up a towel first",
+      "Grandma June's A warm towel or heating pad trick",
+      "The A warm towel or heating pad remedy your grandma knew"
+    ],
+    "en-warm-compress-sinus-pressure": [
+      "That heavy feeling behind your eyes? Grandma June has a two-minute fix",
+      "Grandma June's A warm, damp towel trick",
+      "The A warm, damp towel remedy your grandma knew"
+    ],
+    "en-warm-compress-stye": [
+      "A sore, swollen eyelid? Grandma June reaches for a warm cloth first",
+      "Grandma June's Warm water and a clean cloth trick",
+      "The Warm water and a clean cloth remedy your grandma knew"
+    ],
+    "en-warm-compress-swollen-glands": [
+      "That tender spot under your jaw? Grandma June has a two-minute trick",
+      "Grandma June's A warm, damp cloth trick",
+      "The A warm, damp cloth remedy your grandma knew"
+    ],
+    "en-warm-lemon-water": [
+      "Sluggish stomach? Grandma's morning ritual",
+      "Grandma June's Warm lemon water trick",
+      "The Warm lemon water remedy your grandma knew"
+    ],
+    "en-warm-milk-honey": [
+      "Can't sleep? Grandma's bedtime trick",
+      "Grandma June's Warm milk and honey trick",
+      "The Warm milk and honey remedy your grandma knew"
+    ],
+    "en-warm-saltwater-foot-soak": [
+      "Tired feet after a long day? Grandma June's basin trick",
+      "Grandma June's Warm water and salt trick",
+      "The Warm water and salt remedy your grandma knew"
+    ],
+    "en-warm-sock-treatment-fever": [
+      "Wet socks to fight a fever? Sounds backwards, but hear Grandma June out",
+      "Grandma June's Cotton socks and cool water trick",
+      "The Cotton socks and cool water remedy your grandma knew"
+    ],
+    "en-warm-towel-neck-tension": [
+      "Long day at the desk? Grandma June's neck trick takes 2 minutes",
+      "Grandma June's A warm, damp towel trick",
+      "The A warm, damp towel remedy your grandma knew"
+    ],
+    "en-whole-cloves-nausea": [
+      "Cloves aren't just for toothaches, Grandma June has another use",
+      "Grandma June's Whole cloves trick",
+      "The Whole cloves remedy your grandma knew"
+    ],
+    "en-witch-hazel-toner": [
+      "Skin irritated? Grandma's witch hazel trick",
+      "Grandma June's Witch hazel trick",
+      "The Witch hazel remedy your grandma knew"
+    ],
+    "goi-la-dinh-lang": [
+      "Vì sao người xưa hay lót lá đinh lăng dưới gối?",
+      "Bà Tư mách: Lá đinh lăng",
+      "Mẹo Lá đinh lăng xưa nay ai cũng cần"
+    ],
+    "gung-chanh-mat-ong-pha-dung-thu-tu": [
+      "99% pha trà gừng chanh mật ong sai thứ tự, Bà Tư luôn làm ngược lại",
+      "Bà Tư mách: Trà gừng, chanh, mật ong",
+      "Mẹo Trà gừng, chanh, mật ong xưa nay ai cũng cần"
+    ],
+    "gung-mat-ong": [
+      "Ho dai dẳng, dân gian có mẹo hay",
+      "Bà Tư mách: Gừng và mật ong",
+      "Mẹo Gừng và mật ong xưa nay ai cũng cần"
+    ],
+    "gung-nuong-pha-nuoc-am": [
+      "Trời trở lạnh là Bà Tư lại vùi vài củ gừng vào bếp than",
+      "Bà Tư mách: Gừng nướng",
+      "Mẹo Gừng nướng xưa nay ai cũng cần"
+    ],
+    "gung-say-xe": [
+      "Say tàu xe, dân gian có mẹo hay",
+      "Bà Tư mách: Gừng tươi",
+      "Mẹo Gừng tươi xưa nay ai cũng cần"
+    ],
+    "hanh-tim-ngam-mat-ong-cam-lanh": [
+      "Cảm lạnh vừa mới nhen, Bà Tư có một hũ hành tím ngâm sẵn trong bếp",
+      "Bà Tư mách: Hành tím ngâm mật ong",
+      "Mẹo Hành tím ngâm mật ong xưa nay ai cũng cần"
+    ],
+    "hat-chia-nuoc-am": [
+      "Hạt chia ngâm nước ấm, mẹo đơn giản cho bụng dạ nhẹ nhàng",
+      "Bà Tư mách: Hạt chia",
+      "Mẹo Hạt chia xưa nay ai cũng cần"
+    ],
+    "hat-tieu-den-mat-ong": [
+      "Ho khan mãi không dứt, Bà Tư có hay chấm mật ong với thứ gia vị cay này?",
+      "Bà Tư mách: Hạt tiêu đen và mật ong",
+      "Mẹo Hạt tiêu đen và mật ong xưa nay ai cũng cần"
+    ],
+    "hong-bi-ngam-duong-phen": [
+      "Mùa hồng bì về, Bà Tư lại ngâm sẵn một hũ để dành cho cháu ho",
+      "Bà Tư mách: Hồng bì ngâm đường phèn",
+      "Mẹo Hồng bì ngâm đường phèn xưa nay ai cũng cần"
+    ],
+    "keo-gung-mat-ong-ngam-ho": [
+      "Canh lửa sai một chút là hỏng cả mẻ, Bà Tư nấu kẹo gừng ho kiểu này",
+      "Bà Tư mách: Gừng và mật ong (kẹo ngậm)",
+      "Mẹo Gừng và mật ong (kẹo ngậm) xưa nay ai cũng cần"
+    ],
+    "khoai-lang-luoc": [
+      "Táo bón, khó đi ngoài, dân gian có mẹo hay",
+      "Bà Tư mách: Khoai lang",
+      "Mẹo Khoai lang xưa nay ai cũng cần"
+    ],
+    "la-bac-ha-xong-mui": [
+      "Nghẹt mũi khó chịu? Bà Tư có cách xông lá bạc hà này",
+      "Bà Tư mách: Lá bạc hà tươi",
+      "Mẹo Lá bạc hà tươi xưa nay ai cũng cần"
+    ],
+    "la-he-hap-mat-ong": [
+      "Bé ho húng hắng cả đêm, Bà Tư hay hấp thứ lá này với mật ong",
+      "Bà Tư mách: Lá hẹ và mật ong",
+      "Mẹo Lá hẹ và mật ong xưa nay ai cũng cần"
+    ],
+    "la-hung-chanh-hap-mat-ong": [
+      "Chỉ hấp 15 phút, lá này Bà Tư hay dùng mỗi khi cháu ho",
+      "Bà Tư mách: Lá húng chanh và mật ong",
+      "Mẹo Lá húng chanh và mật ong xưa nay ai cũng cần"
+    ],
+    "la-khe-nau-nuoc-tam": [
+      "Da nổi mẩn ngứa, dân gian có mẹo hay",
+      "Bà Tư mách: Lá khế",
+      "Mẹo Lá khế xưa nay ai cũng cần"
+    ],
+    "la-kinh-gioi-tam-rom-sam": [
+      "Trẻ nổi rôm sảy, dân gian có mẹo hay",
+      "Bà Tư mách: Lá kinh giới",
+      "Mẹo Lá kinh giới xưa nay ai cũng cần"
+    ],
+    "la-lot-dap-chan": [
+      "Đi nhiều mỏi chân, Bà Tư có mẹo đắp lá lốt này",
+      "Bà Tư mách: Lá lốt",
+      "Mẹo Lá lốt xưa nay ai cũng cần"
+    ],
+    "la-lot-xao": [
+      "Đau nhức xương khớp, dân gian có mẹo hay",
+      "Bà Tư mách: Lá lốt",
+      "Mẹo Lá lốt xưa nay ai cũng cần"
+    ],
+    "la-oi-non-nhai-song": [
+      "Bụng cồn cào khó chịu, ông bà xưa hay nhai thứ này",
+      "Bà Tư mách: Lá ổi non",
+      "Mẹo Lá ổi non xưa nay ai cũng cần"
+    ],
+    "la-trau-khong-rua": [
+      "Ngứa da, rôm sảy, dân gian có mẹo hay",
+      "Bà Tư mách: Lá trầu không",
+      "Mẹo Lá trầu không xưa nay ai cũng cần"
+    ],
+    "la-trau-khong-suc-hong": [
+      "Lá trầu không đâu chỉ để têm trầu, súc miệng cũng hay",
+      "Bà Tư mách: Lá trầu không",
+      "Mẹo Lá trầu không xưa nay ai cũng cần"
+    ],
+    "la-xuong-song-vat-nuoc": [
+      "Loại lá mọc đầy ngoài chợ, ít ai ngờ giã lấy nước lại dịu cổ họng vậy",
+      "Bà Tư mách: Lá xương sông",
+      "Mẹo Lá xương sông xưa nay ai cũng cần"
+    ],
+    "le-hap-duong-phen": [
+      "Hấp lê cho đường phèn vào đầu tiên là sai bước, Bà Tư chỉnh lại cách này",
+      "Bà Tư mách: Lê và đường phèn",
+      "Mẹo Lê và đường phèn xưa nay ai cũng cần"
+    ],
+    "long-nhan-ngam-mat-ong": [
+      "Long nhãn ngâm mật ong 2 tuần, Bà Tư lấy ra ăn mỗi tối trước khi ngủ",
+      "Bà Tư mách: Long nhãn ngâm mật ong",
+      "Mẹo Long nhãn ngâm mật ong xưa nay ai cũng cần"
+    ],
+    "mat-ong-yen-mach-dap-mat": [
+      "Da mặt xỉn màu, khô ráp, Bà Tư có hay đắp mặt nạ này không?",
+      "Bà Tư mách: Mật ong và bột yến mạch",
+      "Mẹo Mật ong và bột yến mạch xưa nay ai cũng cần"
+    ],
+    "muoi-gung-rang-chuom-bung": [
+      "Đau bụng kinh khó chịu, dân gian có mẹo hay",
+      "Bà Tư mách: Muối hột và gừng",
+      "Mẹo Muối hột và gừng xưa nay ai cũng cần"
+    ],
+    "muoi-hot-rang-chuom-vai": [
+      "Mỏi vai gáy, đau lưng, dân gian có mẹo hay",
+      "Bà Tư mách: Muối hột",
+      "Mẹo Muối hột xưa nay ai cũng cần"
+    ],
+    "muop-dang-phoi-kho-hop-tra": [
+      "Không phải mướp đắng tươi, Bà Tư phơi khô rồi mới hãm trà uống",
+      "Bà Tư mách: Trà mướp đắng phơi khô",
+      "Mẹo Trà mướp đắng phơi khô xưa nay ai cũng cần"
+    ],
+    "ngai-cuu-ruou-chuom-khop": [
+      "Đau nhức khớp gối, dân gian có mẹo hay",
+      "Bà Tư mách: Lá ngải cứu và rượu trắng",
+      "Mẹo Lá ngải cứu và rượu trắng xưa nay ai cũng cần"
+    ],
+    "ngam-chan-gung": [
+      "Khó ngủ chân lạnh, dân gian có mẹo hay",
+      "Bà Tư mách: Gừng và nước ấm",
+      "Mẹo Gừng và nước ấm xưa nay ai cũng cần"
+    ],
+    "nghe-mat-ong": [
+      "Đau dạ dày âm ỉ, dân gian có mẹo hay",
+      "Bà Tư mách: Tinh bột nghệ và mật ong",
+      "Mẹo Tinh bột nghệ và mật ong xưa nay ai cũng cần"
+    ],
+    "nghe-tuoi-dap-da": [
+      "Da thâm sạm sau mụn, dân gian có mẹo hay",
+      "Bà Tư mách: Nghệ tươi",
+      "Mẹo Nghệ tươi xưa nay ai cũng cần"
+    ],
+    "nha-dam-lam-diu-da": [
+      "Da cháy nắng, rát đỏ, dân gian có mẹo hay",
+      "Bà Tư mách: Nha đam (lô hội)",
+      "Mẹo Nha đam (lô hội) xưa nay ai cũng cần"
+    ],
+    "nuoc-chanh-day": [
+      "Trằn trọc khó ngủ, Bà Tư có hay pha loại nước chua ngọt này không?",
+      "Bà Tư mách: Chanh dây (chanh leo) và mật ong",
+      "Mẹo Chanh dây (chanh leo) và mật ong xưa nay ai cũng cần"
+    ],
+    "nuoc-dau-den-rang": [
+      "Tóc bạc sớm khô xơ, dân gian có mẹo hay",
+      "Bà Tư mách: Đậu đen rang",
+      "Mẹo Đậu đen rang xưa nay ai cũng cần"
+    ],
+    "nuoc-dinh-lang": [
+      "Mệt mỏi mất sức, dân gian có mẹo hay",
+      "Bà Tư mách: Rễ đinh lăng",
+      "Mẹo Rễ đinh lăng xưa nay ai cũng cần"
+    ],
+    "nuoc-dua": [
+      "Nắng nóng mệt mỏi, dân gian có mẹo hay",
+      "Bà Tư mách: Nước dừa tươi",
+      "Mẹo Nước dừa tươi xưa nay ai cũng cần"
+    ],
+    "nuoc-duong-thot-not-gung": [
+      "Sáng nào cũng mệt lử, bà ngoại ở quê hay pha thứ nước này uống ấm bụng",
+      "Bà Tư mách: Đường thốt nốt và gừng",
+      "Mẹo Đường thốt nốt và gừng xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-bap-cai": [
+      "Một ly nước ép bắp cải mỗi sáng, ông bà xưa tin bụng dạ nhẹ nhõm hẳn",
+      "Bà Tư mách: Bắp cải",
+      "Mẹo Bắp cải xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-ca-chua-mat-ong": [
+      "5 phút mỗi sáng, Bà Tư không bao giờ bỏ qua ly nước này",
+      "Bà Tư mách: Cà chua và mật ong",
+      "Mẹo Cà chua và mật ong xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-ca-rot": [
+      "Mắt mỏi da xạm, dân gian có mẹo hay",
+      "Bà Tư mách: Cà rốt",
+      "Mẹo Cà rốt xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-cu-den": [
+      "Người xanh xao thiếu sức, dân gian có mẹo hay",
+      "Bà Tư mách: Củ dền",
+      "Mẹo Củ dền xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-cu-sen": [
+      "Trưa hè mệt lử, Bà Tư hay ép một ly nước củ sen cho tỉnh táo lại",
+      "Bà Tư mách: Củ sen",
+      "Mẹo Củ sen xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-dua-tieu-hoa": [
+      "Ăn dứa xong thấy dễ tiêu hơn hẳn, hóa ra là có lý do khoa học",
+      "Bà Tư mách: Dứa (thơm)",
+      "Mẹo Dứa (thơm) xưa nay ai cũng cần"
+    ],
+    "nuoc-ep-tao-mat-ong": [
+      "Sáng nào cũng uể oải? Bà Tư gợi ý ly nước ép này",
+      "Bà Tư mách: Táo tươi và mật ong",
+      "Mẹo Táo tươi và mật ong xưa nay ai cũng cần"
+    ],
+    "nuoc-la-han-qua": [
+      "Ho khan rát họng, dân gian có mẹo hay",
+      "Bà Tư mách: La hán quả",
+      "Mẹo La hán quả xưa nay ai cũng cần"
+    ],
+    "nuoc-la-oi": [
+      "Đau bụng đi ngoài, dân gian có mẹo hay",
+      "Bà Tư mách: Lá ổi non",
+      "Mẹo Lá ổi non xưa nay ai cũng cần"
+    ],
+    "nuoc-la-sen-tuoi": [
+      "Trưa hè oi bức, Bà Tư hay nấu nồi nước lá sen này",
+      "Bà Tư mách: Lá sen tươi",
+      "Mẹo Lá sen tươi xưa nay ai cũng cần"
+    ],
+    "nuoc-la-vong": [
+      "Uống một ngụm nước lá này trước khi ngủ, Bà Tư bảo dễ vào giấc hơn hẳn",
+      "Bà Tư mách: Lá vông nem",
+      "Mẹo Lá vông nem xưa nay ai cũng cần"
+    ],
+    "nuoc-long-nhan-tao-do": [
+      "Dậy sớm mà người cứ lừ đừ, Bà Tư hay pha ấm nước này uống",
+      "Bà Tư mách: Long nhãn khô và táo đỏ",
+      "Mẹo Long nhãn khô và táo đỏ xưa nay ai cũng cần"
+    ],
+    "nuoc-me-ngam-duong": [
+      "Bụng ậm ạch khó tiêu, Bà Tư có hay pha nước me ngâm đường này không?",
+      "Bà Tư mách: Nước me ngâm đường",
+      "Mẹo Nước me ngâm đường xưa nay ai cũng cần"
+    ],
+    "nuoc-mia-gung": [
+      "Mệt mỏi thiếu sức sống, dân gian có mẹo hay",
+      "Bà Tư mách: Nước mía và gừng",
+      "Mẹo Nước mía và gừng xưa nay ai cũng cần"
+    ],
+    "nuoc-rau-ma": [
+      "Nóng trong người, nổi mụn, dân gian có mẹo hay",
+      "Bà Tư mách: Rau má",
+      "Mẹo Rau má xưa nay ai cũng cần"
+    ],
+    "nuoc-sam-bi-dao": [
+      "Một nồi nước sâm bí đao nấu sẵn, Bà Tư để dành uống mát cả tuần",
+      "Bà Tư mách: Nước sâm bí đao",
+      "Mẹo Nước sâm bí đao xưa nay ai cũng cần"
+    ],
+    "nuoc-vo-gao-goi-dau": [
+      "Nước vo gạo đừng đổ đi, Bà Tư giữ lại gội đầu",
+      "Bà Tư mách: Nước vo gạo",
+      "Mẹo Nước vo gạo xưa nay ai cũng cần"
+    ],
+    "nuoc-voi": [
+      "Trước khi có trà túi lọc, người Việt uống thứ nước này mỗi ngày",
+      "Bà Tư mách: Lá vối",
+      "Mẹo Lá vối xưa nay ai cũng cần"
+    ],
+    "phen-chua-khu-mui-chan": [
+      "Chân ra mồ hôi có mùi, dân gian có mẹo hay",
+      "Bà Tư mách: Phèn chua",
+      "Mẹo Phèn chua xưa nay ai cũng cần"
+    ],
+    "quat-hap-duong-phen": [
+      "Khàn tiếng, ho khan, dân gian có mẹo hay",
+      "Bà Tư mách: Quất và đường phèn",
+      "Mẹo Quất và đường phèn xưa nay ai cũng cần"
+    ],
+    "quat-ngam-mat-ong": [
+      "Trong bếp nhà Bà Tư lúc nào cũng có một hũ quất ngâm mật ong, để làm gì vậy?",
+      "Bà Tư mách: Quất (tắc) ngâm mật ong",
+      "Mẹo Quất (tắc) ngâm mật ong xưa nay ai cũng cần"
+    ],
+    "que-mat-ong-sang-am-bung": [
+      "Mỗi sáng dậy, Bà Tư uống một ly nước ấm pha bột quế mật ong",
+      "Bà Tư mách: Bột quế và mật ong",
+      "Mẹo Bột quế và mật ong xưa nay ai cũng cần"
+    ],
+    "rau-diep-ca": [
+      "Nóng trong người, dân gian có mẹo hay",
+      "Bà Tư mách: Rau diếp cá",
+      "Mẹo Rau diếp cá xưa nay ai cũng cần"
+    ],
+    "re-trinh-nu-ngam-ruou": [
+      "Không phải rượu gừng, thứ Bà Tư xoa bóp mỗi khi đau khớp gối là rễ cây này",
+      "Bà Tư mách: Rễ cây trinh nữ (cây xấu hổ) ngâm rượu",
+      "Mẹo Rễ cây trinh nữ (cây xấu hổ) ngâm rượu xưa nay ai cũng cần"
+    ],
+    "ruou-gung-xoa-khop": [
+      "Đau khớp khi trời lạnh, dân gian có mẹo hay",
+      "Bà Tư mách: Rượu gừng",
+      "Mẹo Rượu gừng xưa nay ai cũng cần"
+    ],
+    "ruou-hat-gac-xoa-bop": [
+      "Đau nhức khi trở trời, trong nhà Bà Tư luôn có sẵn lọ rượu hạt gấc này",
+      "Bà Tư mách: Hạt gấc ngâm rượu",
+      "Mẹo Hạt gấc ngâm rượu xưa nay ai cũng cần"
+    ],
+    "sua-nong-mat-ong-truoc-ngu": [
+      "Một ly sữa ấm mật ong trước khi ngủ, ông bà mình hay làm vậy",
+      "Bà Tư mách: Sữa tươi và mật ong",
+      "Mẹo Sữa tươi và mật ong xưa nay ai cũng cần"
+    ],
+    "suc-mieng-nuoc-muoi-am": [
+      "Rát họng, viêm họng, dân gian có mẹo hay",
+      "Bà Tư mách: Muối và nước ấm",
+      "Mẹo Muối và nước ấm xưa nay ai cũng cần"
+    ],
+    "tao-do-ky-tu-ngam-mat-ong": [
+      "Ngâm từ tuần trước, tối nay Bà Tư mới mở hũ táo đỏ kỷ tử này ra",
+      "Bà Tư mách: Táo đỏ và kỷ tử ngâm mật ong",
+      "Mẹo Táo đỏ và kỷ tử ngâm mật ong xưa nay ai cũng cần"
+    ],
+    "tia-to-dap-mun": [
+      "Đắp mặt nạ đắt tiền hoài mà mụn không hết? Thử lá vườn nhà xem",
+      "Bà Tư mách: Lá tía tô",
+      "Mẹo Lá tía tô xưa nay ai cũng cần"
+    ],
+    "tia-to-gung": [
+      "Cảm lạnh sổ mũi, dân gian có mẹo hay",
+      "Bà Tư mách: Lá tía tô và gừng",
+      "Mẹo Lá tía tô và gừng xưa nay ai cũng cần"
+    ],
+    "tinh-dau-buoi-goi-dau": [
+      "Tóc rụng từng mảng, Bà Tư chỉ dùng đúng một loại tinh dầu này",
+      "Bà Tư mách: Tinh dầu bưởi",
+      "Mẹo Tinh dầu bưởi xưa nay ai cũng cần"
+    ],
+    "toi-hap-mat-ong": [
+      "Đa số ngâm tỏi mật ong để cả tép sống cả tuần, Bà Tư hấp chín trước",
+      "Bà Tư mách: Tỏi hấp mật ong",
+      "Mẹo Tỏi hấp mật ong xưa nay ai cũng cần"
+    ],
+    "toi-len-men-muoi": [
+      "Đa số ngâm tỏi mật ong, Bà Tư lại để tỏi lên men muối cả tháng trời",
+      "Bà Tư mách: Tỏi lên men muối",
+      "Mẹo Tỏi lên men muối xưa nay ai cũng cần"
+    ],
+    "toi-ngam-giam": [
+      "Đừng chỉ ngâm tỏi mật ong mãi, Bà Tư còn có hũ tỏi ngâm giấm này nữa",
+      "Bà Tư mách: Tỏi ngâm giấm",
+      "Mẹo Tỏi ngâm giấm xưa nay ai cũng cần"
+    ],
+    "toi-ngam-mat-ong": [
+      "Hay cảm vặt khi trời lạnh, dân gian có mẹo hay",
+      "Bà Tư mách: Tỏi và mật ong",
+      "Mẹo Tỏi và mật ong xưa nay ai cũng cần"
+    ],
+    "toi-song-phong-cam": [
+      "Chờ cảm rồi mới lo là muộn, Bà Tư nhai tỏi sống phòng bệnh từ trước",
+      "Bà Tư mách: Tỏi sống",
+      "Mẹo Tỏi sống xưa nay ai cũng cần"
+    ],
+    "tra-atiso": [
+      "Trưa nào uể oải, Bà Tư chỉ pha đúng một loại trà này thôi",
+      "Bà Tư mách: Bông atiso khô",
+      "Mẹo Bông atiso khô xưa nay ai cũng cần"
+    ],
+    "tra-bac-ha": [
+      "Đầy bụng khó tiêu, dân gian có mẹo hay",
+      "Bà Tư mách: Lá bạc hà",
+      "Mẹo Lá bạc hà xưa nay ai cũng cần"
+    ],
+    "tra-cam-thao": [
+      "Khàn giọng rát cổ, dân gian có mẹo hay",
+      "Bà Tư mách: Cam thảo",
+      "Mẹo Cam thảo xưa nay ai cũng cần"
+    ],
+    "tra-gao-lut-rang": [
+      "Bụng ậm ạch khó chịu, dân gian có mẹo hay",
+      "Bà Tư mách: Gạo lứt rang",
+      "Mẹo Gạo lứt rang xưa nay ai cũng cần"
+    ],
+    "tra-hat-muong": [
+      "Hạt muồng không rang trước khi hãm là phí cả vị thơm, Bà Tư luôn làm bước này",
+      "Bà Tư mách: Trà hạt muồng (thảo quyết minh)",
+      "Mẹo Trà hạt muồng (thảo quyết minh) xưa nay ai cũng cần"
+    ],
+    "tra-hoa-cuc": [
+      "Trằn trọc khó ngủ, dân gian có mẹo hay",
+      "Bà Tư mách: Hoa cúc khô",
+      "Mẹo Hoa cúc khô xưa nay ai cũng cần"
+    ],
+    "tra-hoa-nhai": [
+      "Mỗi tối trước khi ngủ, Bà Tư có một ấm trà nhỏ ít ai để ý",
+      "Bà Tư mách: Trà hoa nhài",
+      "Mẹo Trà hoa nhài xưa nay ai cũng cần"
+    ],
+    "tra-la-dau-tam": [
+      "Loại lá hái ngay trong vườn, ông bà xưa hãm uống mỗi tối để dễ ngủ hơn",
+      "Bà Tư mách: Lá dâu tằm khô",
+      "Mẹo Lá dâu tằm khô xưa nay ai cũng cần"
+    ],
+    "tra-lac-tien": [
+      "Ngủ không ngon giấc, dân gian có mẹo hay",
+      "Bà Tư mách: Lá lạc tiên (chùm bao)",
+      "Mẹo Lá lạc tiên (chùm bao) xưa nay ai cũng cần"
+    ],
+    "tra-sa-gung": [
+      "Uể oải thiếu năng lượng, dân gian có mẹo hay",
+      "Bà Tư mách: Sả và gừng",
+      "Mẹo Sả và gừng xưa nay ai cũng cần"
+    ],
+    "tra-tim-sen": [
+      "Ngủ không sâu giấc, dân gian có mẹo hay",
+      "Bà Tư mách: Tim sen (tâm sen)",
+      "Mẹo Tim sen (tâm sen) xưa nay ai cũng cần"
+    ],
+    "tra-vo-quyt": [
+      "Đầy hơi sau khi ăn, dân gian có mẹo hay",
+      "Bà Tư mách: Vỏ quýt khô (trần bì)",
+      "Mẹo Vỏ quýt khô (trần bì) xưa nay ai cũng cần"
+    ],
+    "tra-xanh-rua-mat": [
+      "Mặt nổi mụn li ti khó chịu, ông bà xưa hay rửa bằng nước lá này",
+      "Bà Tư mách: Lá trà xanh tươi",
+      "Mẹo Lá trà xanh tươi xưa nay ai cũng cần"
+    ],
+    "trung-chien-ngai-cuu": [
+      "Người lạnh, tuần hoàn kém, dân gian có mẹo hay",
+      "Bà Tư mách: Trứng gà và lá ngải cứu",
+      "Mẹo Trứng gà và lá ngải cứu xưa nay ai cũng cần"
+    ],
+    "trung-ga-danh-gung-duong": [
+      "Mệt lả người, Bà Tư không pha cà phê mà đánh một ly trứng gừng này",
+      "Bà Tư mách: Trứng gà, gừng và đường nâu",
+      "Mẹo Trứng gà, gừng và đường nâu xưa nay ai cũng cần"
+    ],
+    "vo-buoi-ngam-duong-phen": [
+      "Đừng vứt vỏ bưởi, Bà Tư có cách dùng hay lắm",
+      "Bà Tư mách: Vỏ bưởi và đường phèn",
+      "Mẹo Vỏ bưởi và đường phèn xưa nay ai cũng cần"
+    ],
+    "xoa-dau-dua-chan-truoc-khi-ngu": [
+      "Khó ngủ trằn trọc, dân gian có mẹo hay",
+      "Bà Tư mách: Dầu dừa hoặc dầu tràm",
+      "Mẹo Dầu dừa hoặc dầu tràm xưa nay ai cũng cần"
+    ],
+    "xong-la-giai-cam": [
+      "Cảm lạnh người ê ẩm, dân gian có mẹo hay",
+      "Bà Tư mách: Lá xông (sả, gừng, lá bưởi, hương nhu)",
+      "Mẹo Lá xông (sả, gừng, lá bưởi, hương nhu) xưa nay ai cũng cần"
+    ]
+  }
+}

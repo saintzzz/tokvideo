@@ -1,7 +1,9 @@
 import { createReadStream } from "node:fs";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
+import { withRetry } from "./lib/retry.mjs";
 
 // Uploads one rendered Suc Khoe episode to YouTube. Needs
 // YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN in the
@@ -55,6 +57,36 @@ const episodeModule = await import(
   { with: { type: "json" } }
 );
 const episode = episodeModule.default;
+
+// ── Publish-state dedupe (R-05) ───────────────────────────────────
+// published.json is the queue ledger. Entries may be legacy plain
+// strings ("<timestamp>") or objects {publishedAt, locale, videoId}.
+// A recorded videoId means this slug already lives on the channel —
+// re-uploading it is exactly the duplicate-upload bug that hit the EN
+// channel on 2026-09-17, so we refuse.
+const publishedPath = path.join(
+  import.meta.dirname, "..", "src", "suckhoe", "published.json"
+);
+const readPublished = async () => {
+  try {
+    const raw = JSON.parse(await readFile(publishedPath, "utf8"));
+    // Normalize legacy string values in memory (file normalized on write).
+    return Object.fromEntries(
+      Object.entries(raw).map(([k, v]) => [k, typeof v === "string" ? { publishedAt: v } : v])
+    );
+  } catch {
+    return {};
+  }
+};
+
+const published = await readPublished();
+const existing = published[slug];
+if (existing?.videoId) {
+  console.log(
+    `Skipping upload: "${slug}" already uploaded as https://youtube.com/watch?v=${existing.videoId} (published.json)`
+  );
+  process.exit(0);
+}
 
 const videoPath = path.join(import.meta.dirname, "..", "out", `SucKhoe-${slug}.mp4`);
 
@@ -132,29 +164,82 @@ oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
+// Second dedupe layer: if the state file lost the record (missed commit,
+// force-pushed history), check the channel for an existing upload with
+// the exact same title before inserting. Costs one search.list call —
+// worth it to never double-upload.
+const dupeCheck = await youtube.search.list({
+  part: ["id", "snippet"],
+  forMine: true,
+  type: ["video"],
+  q: episode.channelTitle,
+  maxResults: 5,
+});
+const dupe = (dupeCheck.data.items ?? []).find(
+  (item) => item.snippet?.title === title
+);
+if (dupe) {
+  const videoId = dupe.id.videoId;
+  console.log(`Skipping upload: identical title already on channel: https://youtube.com/watch?v=${videoId}`);
+  published[slug] = {
+    ...(existing ?? {}),
+    publishedAt: existing?.publishedAt ?? new Date().toISOString(),
+    locale: isEn ? "en" : "vi",
+    videoId,
+  };
+  await writeFile(publishedPath, JSON.stringify(published, null, 2) + "\n");
+  console.log(`Recorded existing videoId in ${publishedPath}`);
+  process.exit(0);
+}
+
 console.log(`Uploading ${videoPath} as "${title}" (privacyStatus=${PRIVACY_STATUS})`);
 
-const res = await youtube.videos.insert({
-  part: ["snippet", "status"],
-  requestBody: {
-    snippet: {
-      title,
-      description,
-      tags: buildTags(),
-      categoryId: "26", // Howto & Style
+const res = await withRetry(
+  () =>
+    youtube.videos.insert({
+      part: ["snippet", "status"],
+      requestBody: {
+        snippet: {
+          title,
+          description,
+          tags: buildTags(),
+          categoryId: "26", // Howto & Style
+        },
+        status: {
+          privacyStatus: PRIVACY_STATUS,
+          selfDeclaredMadeForKids: false,
+        },
+      },
+      media: {
+        body: createReadStream(videoPath),
+      },
+    }),
+  {
+    attempts: 3,
+    baseMs: 5000,
+    label: "videos.insert",
+    // Quota exhaustion and permission errors are terminal — retrying
+    // them just burns time. Only transient failures retry.
+    retryOn: (err) => {
+      const reason = err?.errors?.[0]?.reason ?? "";
+      return !/quotaExceeded|forbidden|insufficientPermissions|invalid_grant/i.test(reason);
     },
-    status: {
-      privacyStatus: PRIVACY_STATUS,
-      selfDeclaredMadeForKids: false,
-    },
-  },
-  media: {
-    body: createReadStream(videoPath),
-  },
-});
+  }
+);
 
 console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
 console.log(`(episode JSON: ${episodePath})`);
+
+// Record the authoritative videoId immediately — the queue ledger is
+// idempotent at the API boundary now, not just at the slug level.
+published[slug] = {
+  ...(existing ?? {}),
+  publishedAt: existing?.publishedAt ?? new Date().toISOString(),
+  locale: isEn ? "en" : "vi",
+  videoId: res.data.id,
+};
+await writeFile(publishedPath, JSON.stringify(published, null, 2) + "\n");
+console.log(`Recorded videoId in ${publishedPath}`);
 
 // Add the video to its topic playlist, if it has a category and that
 // category has a playlist mapped for this locale — groups related videos

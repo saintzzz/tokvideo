@@ -44,6 +44,18 @@ $tasks = @(
         Script = "run-animated-episode-writer.ps1"
         Time = "10:00"
         DaysInterval = 2
+    },
+    @{
+        Name = "SucKhoeAutomationHealth"
+        Script = "run-health-check.ps1"
+        Time = "23:00"
+        DaysInterval = 1
+    },
+    @{
+        Name = "SucKhoeWeeklyStrategy"
+        Script = "run-strategy-report.ps1"
+        Time = "09:00"
+        DaysInterval = 7
     }
 )
 

@@ -32,4 +32,17 @@ export type SucKhoeEpisode = {
    * uploaded normally, just not added to any playlist.
    */
   category?: string;
+  /**
+   * Optional hook intro style — when omitted, the style rotates
+   * deterministically by slug hash so consecutive uploads never share
+   * the same opening pattern (see HookScene + docs/CHANNEL-STRATEGY.md).
+   */
+  hookStyle?: "question" | "statement" | "countdown" | "pov";
+  /**
+   * Optional real/AI ingredient photos (paths under public/, e.g.
+   * "images/suckhoe/<slug>/01.jpg"). When present, RemedyScene and
+   * StepsScene render them with the Ken Burns effect instead of the
+   * abstract icon visuals. Files must exist — validate-episodes checks.
+   */
+  images?: string[];
 };

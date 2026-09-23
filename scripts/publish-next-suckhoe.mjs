@@ -42,12 +42,17 @@ const slugs = episodes
 
 let published = {};
 try {
-  published = JSON.parse(await readFile(publishedPath, "utf8"));
+  const raw = JSON.parse(await readFile(publishedPath, "utf8"));
+  // Normalize legacy plain-string values ("<timestamp>") into objects so
+  // the videoId dedupe in upload-youtube.mjs works uniformly.
+  published = Object.fromEntries(
+    Object.entries(raw).map(([k, v]) => [k, typeof v === "string" ? { publishedAt: v } : v])
+  );
 } catch {
   // no file yet, or unreadable — treat as nothing published
 }
 
-const next = slugs.find((slug) => !published[slug]);
+const next = slugs.find((slug) => !published[slug]?.publishedAt && !published[slug]?.videoId);
 
 if (!next) {
   console.log(
@@ -97,6 +102,13 @@ if (!process.env.YOUTUBE_CLIENT_ID || !process.env.YOUTUBE_CLIENT_SECRET || !ref
   process.exit(0);
 }
 
-published[next] = { publishedAt: new Date().toISOString(), locale };
-await writeFile(publishedPath, JSON.stringify(published, null, 2) + "\n");
-console.log(`Recorded ${next} in ${publishedPath}`);
+// upload-youtube.mjs records the authoritative {publishedAt, videoId}
+// right after a successful insert — only fill in a bare entry here when
+// it somehow didn't (older script versions, manual upload paths).
+if (!published[next]?.videoId) {
+  published[next] = { ...(published[next] ?? {}), publishedAt: new Date().toISOString(), locale };
+  await writeFile(publishedPath, JSON.stringify(published, null, 2) + "\n");
+  console.log(`Recorded ${next} in ${publishedPath}`);
+} else {
+  console.log(`${next} already recorded with videoId ${published[next].videoId} — nothing to write`);
+}
