@@ -8,7 +8,8 @@ import {
   useVideoConfig,
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
-import { HostSilhouette } from "../components/HostSilhouette";
+import { BaTuCharacter } from "../components/BaTuCharacter";
+import { CinematicCamera } from "../components/CinematicCamera";
 import { KineticText } from "../components/KineticText";
 import { fonts } from "../fonts";
 import { SucKhoeEpisode } from "../suckhoe/types";
@@ -143,38 +144,41 @@ export const HookScene: React.FC<{
 
       <IntroEffect style={hookStyle} accent={theme.accent} />
 
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 30,
-          padding: "0 50px",
-        }}
-      >
+      <CinematicCamera move="push">
         <div
           style={{
-            transform: `scale(${silhouetteScale})`,
-            opacity: silhouetteOpacity,
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            gap: 30,
+            padding: "0 50px",
+            paddingBottom: 260,
           }}
         >
-          <HostSilhouette locale={episode.locale} scale={1.6} isSpeaking={hasAudio} />
-        </div>
+          <div
+            style={{
+              transform: `scale(${silhouetteScale})`,
+              opacity: silhouetteOpacity,
+            }}
+          >
+            <BaTuCharacter scale={0.95} isSpeaking={hasAudio} />
+          </div>
 
-        <KineticText
-          text={episode.hook}
-          startFrame={0}
-          stagger={3}
-          fontSize={52}
-          fontFamily={fonts.sans}
-          fontWeight={800}
-          color={theme.ink}
-          highlightColor={theme.accent}
-        />
-      </div>
+          <KineticText
+            text={episode.hook}
+            startFrame={0}
+            stagger={3}
+            fontSize={52}
+            fontFamily={fonts.sans}
+            fontWeight={800}
+            color={theme.ink}
+            highlightColor={theme.accent}
+          />
+        </div>
+      </CinematicCamera>
     </NutritionBackground>
   );
 };

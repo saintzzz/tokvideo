@@ -8,7 +8,8 @@ import {
   useVideoConfig,
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
-import { HostSilhouette } from "../components/HostSilhouette";
+import { BaTuCharacter } from "../components/BaTuCharacter";
+import { CinematicCamera } from "../components/CinematicCamera";
 import { SubscribePointer } from "../components/SubscribePointer";
 import { fonts } from "../fonts";
 import { SucKhoeEpisode } from "../suckhoe/types";
@@ -45,20 +46,21 @@ export const CTAScene: React.FC<{
         <Audio src={staticFile(`audio/suckhoe/${episode.slug}/cta.mp3`)} />
       ) : null}
 
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 28,
-        }}
-      >
-        <div style={{ transform: `scale(${healerScale})` }}>
-          <HostSilhouette locale={episode.locale} scale={1.4} isSpeaking={hasAudio} />
-        </div>
+      <CinematicCamera move="pull">
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 28,
+          }}
+        >
+          <div style={{ transform: `scale(${healerScale})` }}>
+            <BaTuCharacter scale={0.78} isSpeaking={hasAudio} />
+          </div>
 
         <div
           style={{
@@ -83,7 +85,8 @@ export const CTAScene: React.FC<{
             {episode.locale === "en" ? "FOLLOW FOR MORE" : "THEO DÕI KÊNH"}
           </div>
         </div>
-      </div>
+        </div>
+      </CinematicCamera>
 
       <SubscribePointer startFrame={15} />
 

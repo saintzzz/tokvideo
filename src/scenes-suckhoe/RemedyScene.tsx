@@ -8,7 +8,8 @@ import {
   useVideoConfig,
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
-import { HostSilhouette } from "../components/HostSilhouette";
+import { BaTuCharacter } from "../components/BaTuCharacter";
+import { CinematicCamera } from "../components/CinematicCamera";
 import { KineticText } from "../components/KineticText";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { KaraokeCaption } from "../components/KaraokeCaption";
@@ -44,19 +45,20 @@ export const RemedyScene: React.FC<{
         </AbsoluteFill>
       ) : null}
 
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 26,
-          padding: "0 55px",
-        }}
-      >
-        <HostSilhouette locale={episode.locale} scale={1.1} isSpeaking={hasAudio} />
+      <CinematicCamera move="drift-right">
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 26,
+            padding: "0 55px",
+          }}
+        >
+          <BaTuCharacter scale={0.62} isSpeaking={hasAudio} />
 
         <KineticText
           text={episode.ingredientName}
@@ -84,7 +86,8 @@ export const RemedyScene: React.FC<{
         >
           {episode.remedy}
         </div>
-      </div>
+        </div>
+      </CinematicCamera>
 
       <KaraokeCaption
         videoId={`suckhoe-${episode.slug}`}

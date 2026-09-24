@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import type { SceneTheme } from "../suckhoe/themes";
+import { GodRays } from "./GodRays";
 
 const seededRandom = (seed: number) => {
   const x = Math.sin(seed * 999.71) * 43758.5453;
@@ -17,7 +18,16 @@ type Particle = {
   hue: number;
 };
 
-const PARTICLE_COUNT = 16;
+const PARTICLE_COUNT = 24;
+
+// Parallax depth layers (docs/CINEMATIC-UPGRADE.md): one shared travel
+// driver, three planes at different rates + a blurred foreground plane
+// faking depth of field. Layer index 0=back, 1=mid, 2=front.
+const LAYERS = [
+  { sizeMul: 0.6, speedMul: 0.45, opacityMul: 0.5, blur: 1 },
+  { sizeMul: 1.0, speedMul: 1.0, opacityMul: 1.0, blur: 0 },
+  { sizeMul: 1.7, speedMul: 1.9, opacityMul: 0.85, blur: 3 },
+];
 
 const Shape: React.FC<{ shape: Particle["shape"]; size: number; hue: number }> = ({
   shape,
@@ -111,18 +121,22 @@ export const NutritionBackground: React.FC<{
         );
       })}
 
-      {/* floating particles */}
+      <GodRays accent={t.accent} />
+
+      {/* floating particles in 3 parallax depth layers */}
       {particles.map((p, i) => {
-        const travel = ((frame * p.speed + i * 37) % 140) - 20;
+        const layer = LAYERS[i % LAYERS.length];
+        const travel = ((frame * p.speed * layer.speedMul + i * 37) % 140) - 20;
         const y = 105 - travel;
-        const x = p.x + Math.sin(frame * 0.02 + i) * (p.drift / 10);
+        const x = p.x + Math.sin(frame * 0.02 + i) * (p.drift / 10) * layer.speedMul;
         const rotate = frame * p.rotationSpeed;
-        const opacity = interpolate(
-          y,
-          [-10, 10, 90, 105],
-          [0, 1, 1, 0],
-          { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-        );
+        const opacity =
+          interpolate(
+            y,
+            [-10, 10, 90, 105],
+            [0, 1, 1, 0],
+            { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+          ) * layer.opacityMul;
 
         return (
           <div
@@ -133,9 +147,10 @@ export const NutritionBackground: React.FC<{
               top: `${y}%`,
               opacity,
               transform: `rotate(${rotate}deg)`,
+              filter: layer.blur ? `blur(${layer.blur}px)` : undefined,
             }}
           >
-            <Shape shape={p.shape} size={p.size} hue={p.hue} />
+            <Shape shape={p.shape} size={p.size * layer.sizeMul} hue={p.hue} />
           </div>
         );
       })}

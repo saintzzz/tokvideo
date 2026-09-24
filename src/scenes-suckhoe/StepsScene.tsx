@@ -10,6 +10,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
+import { CinematicCamera } from "../components/CinematicCamera";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { KaraokeCaption } from "../components/KaraokeCaption";
 import { fonts } from "../fonts";
@@ -112,18 +113,19 @@ export const StepsScene: React.FC<{
         </Sequence>
       ))}
 
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "center",
-          gap: 40,
-          padding: "0 90px",
-        }}
-      >
+      <CinematicCamera move="drift-left">
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            justifyContent: "center",
+            gap: 40,
+            padding: "0 90px",
+          }}
+        >
         <div
           style={{
             fontFamily: fonts.sans,
@@ -138,7 +140,8 @@ export const StepsScene: React.FC<{
         {episode.steps.map((step, i) => (
           <StepRow key={i} index={i} text={step} startFrame={i * STEP_STAGGER} theme={theme} />
         ))}
-      </div>
+        </div>
+      </CinematicCamera>
 
       <KaraokeCaption
         videoId={`suckhoe-${episode.slug}`}
