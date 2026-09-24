@@ -11,6 +11,7 @@ import {
 } from "remotion";
 import { NutritionBackground } from "../components/NutritionBackground";
 import { CinematicCamera } from "../components/CinematicCamera";
+import { KitchenBackdrop } from "../components/KitchenBackdrop";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { KaraokeCaption } from "../components/KaraokeCaption";
 import { fonts } from "../fonts";
@@ -96,6 +97,8 @@ export const StepsScene: React.FC<{
       {hasAudio ? (
         <Audio src={staticFile(`audio/suckhoe/${episode.slug}/steps.mp3`)} />
       ) : null}
+
+      <KitchenBackdrop accent={theme.accent} />
 
       {/* ingredient imagery cycling behind the step list (Q-05) */}
       {images.map((img, i) => (

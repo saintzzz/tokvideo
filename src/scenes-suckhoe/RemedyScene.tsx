@@ -10,6 +10,8 @@ import {
 import { NutritionBackground } from "../components/NutritionBackground";
 import { BaTuCharacter } from "../components/BaTuCharacter";
 import { CinematicCamera } from "../components/CinematicCamera";
+import { KitchenBackdrop } from "../components/KitchenBackdrop";
+import { IngredientArt } from "../components/IngredientArt";
 import { KineticText } from "../components/KineticText";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { KaraokeCaption } from "../components/KaraokeCaption";
@@ -45,6 +47,8 @@ export const RemedyScene: React.FC<{
         </AbsoluteFill>
       ) : null}
 
+      <KitchenBackdrop accent={theme.accent} />
+
       <CinematicCamera move="drift-right">
         <div
           style={{
@@ -58,7 +62,29 @@ export const RemedyScene: React.FC<{
             padding: "0 55px",
           }}
         >
-          <BaTuCharacter scale={0.62} isSpeaking={hasAudio} />
+          {/* storybook beat: Ba Tu presents the ingredient on the counter */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+              gap: 60,
+              width: "100%",
+            }}
+          >
+            <BaTuCharacter scale={0.6} isSpeaking={hasAudio} gesture="present" />
+            <div
+              style={{
+                padding: "30px 34px 18px",
+                borderRadius: 28,
+                background: "rgba(0,0,0,0.3)",
+                border: `3px solid ${theme.accent}55`,
+                boxShadow: `0 18px 50px rgba(0,0,0,0.4), inset 0 0 60px ${theme.accent}22`,
+              }}
+            >
+              <IngredientArt ingredientName={episode.ingredientName} size={230} />
+            </div>
+          </div>
 
         <KineticText
           text={episode.ingredientName}

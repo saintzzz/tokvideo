@@ -35,7 +35,9 @@ const mouthOpenAmount = (frame: number, isSpeaking: boolean): number => {
 export const BaTuCharacter: React.FC<{
   scale?: number;
   isSpeaking?: boolean;
-}> = ({ scale = 1, isSpeaking = false }) => {
+  /** "present" raises her right arm toward the on-screen ingredient. */
+  gesture?: "idle" | "present";
+}> = ({ scale = 1, isSpeaking = false, gesture = "idle" }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -56,9 +58,13 @@ export const BaTuCharacter: React.FC<{
   const headTilt = isSpeaking ? Math.sin(frame * 0.11) * 1.2 : 0;
   const headNod = isSpeaking ? Math.sin(frame * 0.35) * 2 : 0;
 
-  // arm sway — gentle pendulum, opposite phase
+  // arm sway — gentle pendulum, opposite phase; "present" pins the
+  // right arm up toward the prop she's showing off
   const armL = 2.5 * Math.sin(frame * 0.07);
-  const armR = 2.5 * Math.sin(frame * 0.07 + Math.PI);
+  const armR =
+    gesture === "present"
+      ? -58 + 2.5 * Math.sin(frame * 0.07 + Math.PI)
+      : 2.5 * Math.sin(frame * 0.07 + Math.PI);
 
   return (
     <div style={{ transform: `scale(${scale})`, transformOrigin: "bottom center" }}>
