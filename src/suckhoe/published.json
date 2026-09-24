@@ -348,7 +348,9 @@
     "locale": "vi",
     "note": "Uploaded successfully but the commit step never ran (same artifact-storage-quota incident as nuoc-duong-thot-not-gung above). Re-uploaded 49x total over 10 days before this was caught; 48 duplicates set private, kept oA2GGoFrc0o public."
   },
-  "_note_ngai-cuu-ruou-chuom-khop": "Found during the 2026-09-15 cleanup: an older orphaned public upload of this same slug also existed (videoId os1eKdw0YE4, published 2026-08-28T11:24:42Z, 7 views) - predates this file's own entry for the slug below. Kept os1eKdw0YE4 public (more views) and set the newer C2RYQvDLOyU (this file's tracked upload) private instead, to avoid the two duplicates competing.",
+  "_note_ngai-cuu-ruou-chuom-khop": {
+    "publishedAt": "Found during the 2026-09-15 cleanup: an older orphaned public upload of this same slug also existed (videoId os1eKdw0YE4, published 2026-08-28T11:24:42Z, 7 views) - predates this file's own entry for the slug below. Kept os1eKdw0YE4 public (more views) and set the newer C2RYQvDLOyU (this file's tracked upload) private instead, to avoid the two duplicates competing."
+  },
   "en-cornstarch-heat-rash": {
     "publishedAt": "2026-09-04T15:39:06Z",
     "locale": "en",
@@ -602,5 +604,9 @@
   "en-onion-syrup-cough": {
     "publishedAt": "2026-09-23T15:58:22.464Z",
     "locale": "en"
+  },
+  "chao-trang-khoai-lang": {
+    "publishedAt": "2026-09-24T01:44:20.557Z",
+    "locale": "vi"
   }
 }
