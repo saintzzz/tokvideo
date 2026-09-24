@@ -321,6 +321,7 @@ const healthcheckVoices = async () => {
     }
   }
 
+  await mkdir(publicDir, { recursive: true });
   const probeFile = path.join(publicDir, ".voice-healthcheck.mp3");
   for (const voice of needed) {
     let healthy = false;
@@ -386,7 +387,7 @@ const writeCaptions = async (videoId, key, text, durationSec) => {
     t += dur;
     return entry;
   });
-  const dir = path.join(publicDir, "captions", videoId);
+  const dir = path.join(import.meta.dirname, "..", "public", "captions", videoId);
   await mkdir(dir, { recursive: true });
   await writeFile(
     path.join(dir, `${key}.json`),
