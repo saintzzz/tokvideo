@@ -1,22 +1,25 @@
-# Channel report — 2026-09-23
+# Channel report — 2026-09-24
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 250
 Total views: 3015
-Total videos: 81
+Total videos: 84
 
 ## Last 28 days (channel-wide)
 
-Views: 116
-Watch time (minutes): 24
+Views: 92
+Watch time (minutes): 19
 Subscribers gained: 0
-Subscribers lost: 1
-Net subscriber change: -1
+Subscribers lost: 2
+Net subscriber change: -2
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Bụng dạ khó chịu? Bát cháo quen thuộc của các cụ #Shorts | 0 | 0 | 0 | 2026-09-24 |
+| Mỗi sáng dậy, Bà Tư uống một ly nước ấm pha bột quế mật ong #Shorts | 0 | 0 | 0 | 2026-09-23 |
+| Trong bếp nhà Bà Tư lúc nào cũng có một hũ quất ngâm mật ong, để làm gì vậy? #Shorts | 0 | 0 | 0 | 2026-09-23 |
 | Khàn tiếng, ho khan, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-22 |
 | Chân ra mồ hôi có mùi, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-22 |
 | Trước khi có trà túi lọc, người Việt uống thứ nước này mỗi ngày #Shorts | 0 | 0 | 0 | 2026-09-22 |
@@ -39,7 +42,4 @@ Net subscriber change: -1
 | Một ly nước ép bắp cải mỗi sáng, ông bà xưa tin bụng dạ nhẹ nhõm hẳn #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Trằn trọc khó ngủ, Bà Tư có hay pha loại nước chua ngọt này không? #Shorts | 0 | 0 | 0 | 2026-09-17 |
 | Không phải mướp đắng tươi, Bà Tư phơi khô rồi mới hãm trà uống #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Hấp lê cho đường phèn vào đầu tiên là sai bước, Bà Tư chỉnh lại cách này #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Loại lá mọc đầy ngoài chợ, ít ai ngờ giã lấy nước lại dịu cổ họng vậy #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Canh lửa sai một chút là hỏng cả mẻ, Bà Tư nấu kẹo gừng ho kiểu này #Shorts | 0 | 0 | 0 | 2026-09-17 |
 
