@@ -184,6 +184,20 @@ import enTartCherryJuiceSleep from "./en-tart-cherry-juice-sleep.json";
 import enRiceWaterHairRinse from "./en-rice-water-hair-rinse.json";
 import enApplesauceUpsetTummy from "./en-applesauce-upset-tummy.json";
 import enCucumberEyeCompress from "./en-cucumber-eye-compress.json";
+import traHoaNhai from "./tra-hoa-nhai.json";
+import traHatMuongRang from "./tra-hat-muong-rang.json";
+import rauDiepCaVatNuoc from "./rau-diep-ca-vat-nuoc.json";
+import traCamThao from "./tra-cam-thao.json";
+import traAtiso from "./tra-atiso.json";
+import canhTrungGaNgaiCuu from "./canh-trung-ga-ngai-cuu.json";
+import nuocLaDua from "./nuoc-la-dua.json";
+import duDuXanhHamChanGio from "./du-du-xanh-ham-chan-gio.json";
+import voChuoiXanhChuaNgua from "./vo-chuoi-xanh-chua-ngua.json";
+import enSlipperyElmTea from "./en-slippery-elm-tea.json";
+import enPruneJuiceConstipation from "./en-prune-juice-constipation.json";
+import enThymeTeaCough from "./en-thyme-tea-cough.json";
+import enPassionflowerTeaSleep from "./en-passionflower-tea-sleep.json";
+import enCalendulaSalveCuts from "./en-calendula-salve-cuts.json";
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
 //
@@ -374,4 +388,18 @@ export const EPISODES: SucKhoeEpisode[] = [
   enHopsPillowTea,
   enDandelionRootCoffee,
   enPlantainLeafPoultice,
+  traHoaNhai,
+  traHatMuongRang,
+  rauDiepCaVatNuoc,
+  traCamThao,
+  traAtiso,
+  canhTrungGaNgaiCuu,
+  nuocLaDua,
+  duDuXanhHamChanGio,
+  voChuoiXanhChuaNgua,
+  enSlipperyElmTea,
+  enPruneJuiceConstipation,
+  enThymeTeaCough,
+  enPassionflowerTeaSleep,
+  enCalendulaSalveCuts,
 ] as SucKhoeEpisode[];
