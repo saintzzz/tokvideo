@@ -1,13 +1,13 @@
-# Channel report — 2026-09-24
+# Channel report — 2026-09-26
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 233
-Total videos: 81
+Total views: 236
+Total videos: 86
 
 ## Last 28 days (channel-wide)
 
-Views: 81
+Views: 77
 Watch time (minutes): 9
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,6 +17,11 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| The same plant that flavors your beer was Grandma June's bedtime secret #Shorts | 0 | 0 | 0 | 2026-09-26 |
+| Most people just drink apple cider vinegar straight, Grandma June ferments hers for weeks #Shorts | 0 | 0 | 0 | 2026-09-25 |
+| Forget your morning coffee, Grandma June roasted this weed from the yard instead #Shorts | 0 | 0 | 0 | 2026-09-25 |
+| 3 things in your fridge Grandma June uses for tired eyes #Shorts | 0 | 0 | 0 | 2026-09-25 |
+| Forget the medicine cabinet, Grandma June reaches for this flower first #Shorts | 0 | 0 | 0 | 2026-09-25 |
 | Scratchy throat at night? Grandma June's spoonful trick #Shorts | 0 | 0 | 0 | 2026-09-24 |
 | Stomach feeling off? Grandma June's gentle go-to #Shorts | 0 | 0 | 0 | 2026-09-24 |
 | One vegetable, some sugar, and a spoonful eases a nagging cough, grandma's way #Shorts | 0 | 0 | 0 | 2026-09-23 |
@@ -37,9 +42,4 @@ Net subscriber change: 0
 | Grandma June's five-minute face mask, straight from the pantry #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Touched a hot pan? Grandma June skips the ice completely #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Before store-bought cough drops, this is what grandmothers made #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Not a tea this time - Grandma June wears her ginger instead #Shorts | 0 | 0 | 0 | 2026-09-17 |
 
