@@ -18,10 +18,9 @@ on:
         type: string
         default: ""
       long_form_slug:
-        description: "suckhoe-long only: which long-form episode slug to generate/render/upload"
-        type: choice
-        options: [ba-ngay-truoc-dam-cuoi, 3-days-before-the-wedding]
-        default: ba-ngay-truoc-dam-cuoi
+        description: "suckhoe-long only: which long-form episode slug to generate/render/upload (any slug in src/suckhoe/long-form/)"
+        type: string
+        default: "kiem-hon-thuc-tinh-tap-01"
   push:
     branches: [main]
     paths-ignore:
