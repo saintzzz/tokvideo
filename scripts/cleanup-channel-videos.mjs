@@ -44,10 +44,13 @@ oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
 // Keep set: videoIds belonging to CURRENT episode files only.
+const episodeFiles = (await readdir(episodesDir)).filter((f) => f.endsWith(".json"));
 const currentSlugs = new Set(
-  (await readdir(episodesDir)).filter((f) => f.endsWith(".json")).map((f) => {
-    return JSON.parse(await readFile(path.join(episodesDir, f), "utf8")).slug;
-  })
+  await Promise.all(
+    episodeFiles.map(
+      async (f) => JSON.parse(await readFile(path.join(episodesDir, f), "utf8")).slug
+    )
+  )
 );
 const published = Object.fromEntries(
   Object.entries(JSON.parse(await readFile(publishedPath, "utf8"))).map(([k, v]) => [
