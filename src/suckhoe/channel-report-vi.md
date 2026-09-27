@@ -1,14 +1,14 @@
-# Channel report — 2026-09-26
+# Channel report — 2026-09-27
 
 Channel: Bà Lang Mách Mẹo
 Subscribers: 250
-Total views: 3021
-Total videos: 88
+Total views: 3027
+Total videos: 91
 
 ## Last 28 days (channel-wide)
 
-Views: 58
-Watch time (minutes): 12
+Views: 49
+Watch time (minutes): 10
 Subscribers gained: 0
 Subscribers lost: 2
 Net subscriber change: -2
@@ -17,12 +17,15 @@ Net subscriber change: -2
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Chỉ cần 3 phút mỗi tối, Bà Tư có mẹo giúp dễ ngủ hơn từ một chiếc khăn ấm #Shorts | 1 | 1 | 0 | 2026-09-26 |
+| Nhiều người hấp sai cách nên húng chanh mất công dụng #Shorts | 1 | 1 | 0 | 2026-09-26 |
+| Không phải thuốc bổ khớp, Bà Tư tin vào nồi canh này hơn #Shorts | 0 | 0 | 0 | 2026-09-26 |
 | Bát chè tối giúp Bà Tư ngủ ngon suốt mấy chục năm #Shorts | 2 | 1 | 0 | 2026-09-25 |
 | Hễ trong người thấy uể oải, Bà Tư lại bắc nồi cháo gà hầm gừng này lên #Shorts | 2 | 1 | 0 | 2026-09-25 |
 | Thức khuya xong đau đầu mệt lử, Bà Tư có mẹo canh này #Shorts | 1 | 1 | 0 | 2026-09-25 |
 | Mụn viêm mà cứ nặn tay hoài, Bà Tư chỉ đắp mặt một loại bột này #Shorts | 0 | 0 | 0 | 2026-09-25 |
 | Bụng dạ khó chịu? Bát cháo quen thuộc của các cụ #Shorts | 5 | 1 | 0 | 2026-09-24 |
-| Mỗi sáng dậy, Bà Tư uống một ly nước ấm pha bột quế mật ong #Shorts | 0 | 0 | 0 | 2026-09-23 |
+| Mỗi sáng dậy, Bà Tư uống một ly nước ấm pha bột quế mật ong #Shorts | 1 | 0 | 0 | 2026-09-23 |
 | Trong bếp nhà Bà Tư lúc nào cũng có một hũ quất ngâm mật ong, để làm gì vậy? #Shorts | 0 | 0 | 0 | 2026-09-23 |
 | Khàn tiếng, ho khan, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-22 |
 | Chân ra mồ hôi có mùi, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-22 |
@@ -39,7 +42,4 @@ Net subscriber change: -2
 | Ho khan rát họng, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Sáng nào cũng uể oải? Bà Tư gợi ý ly nước ép này #Shorts | 0 | 0 | 0 | 2026-09-18 |
 | Ăn dứa xong thấy dễ tiêu hơn hẳn, hóa ra là có lý do khoa học #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Trưa hè mệt lử, Bà Tư hay ép một ly nước củ sen cho tỉnh táo lại #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Người xanh xao thiếu sức, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-17 |
-| Mắt mỏi da xạm, dân gian có mẹo hay #Shorts | 0 | 0 | 0 | 2026-09-17 |
 

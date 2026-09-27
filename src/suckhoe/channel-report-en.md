@@ -1,14 +1,14 @@
-# Channel report — 2026-09-26
+# Channel report — 2026-09-27
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 236
-Total videos: 86
+Total videos: 89
 
 ## Last 28 days (channel-wide)
 
-Views: 77
-Watch time (minutes): 9
+Views: 60
+Watch time (minutes): 7
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
@@ -17,7 +17,10 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| The same plant that flavors your beer was Grandma June's bedtime secret #Shorts | 0 | 0 | 0 | 2026-09-26 |
+| You've probably pulled this weed out of your garden, Grandma June kept it on purpose #Shorts | 0 | 0 | 0 | 2026-09-27 |
+| Can't switch your mind off at bedtime? Grandma June steeps this vine #Shorts | 0 | 0 | 0 | 2026-09-26 |
+| Think mint invented the cough drop? Grandma June says think again #Shorts | 0 | 0 | 0 | 2026-09-26 |
+| The same plant that flavors your beer was Grandma June's bedtime secret #Shorts | 1 | 0 | 0 | 2026-09-26 |
 | Most people just drink apple cider vinegar straight, Grandma June ferments hers for weeks #Shorts | 0 | 0 | 0 | 2026-09-25 |
 | Forget your morning coffee, Grandma June roasted this weed from the yard instead #Shorts | 0 | 0 | 0 | 2026-09-25 |
 | 3 things in your fridge Grandma June uses for tired eyes #Shorts | 0 | 0 | 0 | 2026-09-25 |
@@ -39,7 +42,4 @@ Net subscriber change: 0
 | Why Grandma June keeps a little cloth pouch under her pillow #Shorts | 0 | 0 | 0 | 2026-09-19 |
 | That little brown bottle in Grandma June's cabinet isn't just for cuts #Shorts | 0 | 0 | 0 | 2026-09-19 |
 | Grandma June's cold-night fix wasn't cough syrup, it was this warm mug #Shorts | 0 | 0 | 0 | 2026-09-18 |
-| Grandma June's five-minute face mask, straight from the pantry #Shorts | 0 | 0 | 0 | 2026-09-18 |
-| Touched a hot pan? Grandma June skips the ice completely #Shorts | 0 | 0 | 0 | 2026-09-18 |
-| Before store-bought cough drops, this is what grandmothers made #Shorts | 0 | 0 | 0 | 2026-09-17 |
 
