@@ -25,7 +25,7 @@ Lý do chiến lược:
 - `publish-next-suckhoe.mjs` chạy `cleanup-channel-videos.mjs` TRƯỚC khi publish mới: liệt kê toàn bộ video trên kênh qua uploads playlist, `videos.delete` tất cả video KHÔNG nằm trong keep list.
 - Keep list = videoId trong `published.json` thuộc episode slug còn tồn tại trong `episodes/` - tức chỉ truyện series sống sót.
 - Quota: `videos.delete` = 50 units, ~180 video ~9k/10k units/ngày - nếu hết quota giữa chừng, tick sau resume (idempotent, video đã xóa không xuất hiện lại trong listing).
-- `pending-cleanup.json` được xóa local sau khi xong; file trong repo tồn tại vĩnh viễn như guard - mọi video lạ xuất hiện sau này sẽ bị sweep ở tick tiếp theo.
+- `pending-cleanup.json` tồn tại vĩnh viễn trong repo như guard - mọi video lạ xuất hiện sau này sẽ bị sweep ở tick tiếp theo. Script KHÔNG ghi flag file (workflow chỉ stage published.json, dirty tree làm hỏng git pull --rebase cuối job).
 
 ## Rủi ro đã cân nhắc
 

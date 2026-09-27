@@ -27,7 +27,6 @@ const locale = localeArg ? localeArg.split("=")[1] : "vi";
 const root = path.join(import.meta.dirname, "..");
 const episodesDir = path.join(root, "src", "suckhoe", "episodes");
 const publishedPath = path.join(root, "src", "suckhoe", "published.json");
-const flagPath = path.join(root, "src", "suckhoe", "pending-cleanup.json");
 
 const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN } = {
   CLIENT_ID: process.env.YOUTUBE_CLIENT_ID,
@@ -134,16 +133,9 @@ for (const video of allVideos) {
 await writeFile(publishedPath, JSON.stringify(published, null, 2) + "\n");
 console.log(`Cleanup: ${deleted} deleted, ${kept} kept, ${failed} failed${quotaHit ? " (quota — will resume)" : ""}.`);
 
-// Clear this locale's flag only when the sweep finished — the flag lives
-// in the repo so this is best-effort; repeated runs are idempotent
-// anyway because deleted videos simply never reappear in the listing.
-if (!quotaHit) {
-  try {
-    const flag = JSON.parse(await readFile(flagPath, "utf8"));
-    delete flag[locale];
-    await writeFile(flagPath, JSON.stringify(flag, null, 2) + "\n");
-    console.log(`Cleared pending-cleanup flag for locale "${locale}".`);
-  } catch {
-    // flag file already gone — fine
-  }
-}
+// The flag file deliberately stays in the repo as a permanent guard:
+// each publish tick re-sweeps so any stray non-story upload that ever
+// lands on the channel gets removed. Every run is idempotent — deleted
+// videos simply never reappear in the uploads listing. Do NOT write to
+// the flag file here: the workflow only stages published.json, and a
+// dirty working tree breaks its `git pull --rebase` at the end.
