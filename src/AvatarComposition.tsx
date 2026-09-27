@@ -1,9 +1,8 @@
 import React from "react";
 import { AbsoluteFill, Composition } from "remotion";
-import { HealerSilhouette } from "./components/HealerSilhouette";
-import { GrandmaHostSilhouette } from "./components/GrandmaHostSilhouette";
+import { BaTuCharacter } from "./components/BaTuCharacter";
 
-// Channel avatars (profile pictures) for both Suc Khoe channels, plus the
+// Channel avatars (profile pictures) for both story channels, plus the
 // CharacterBadge building block also reused by BannerComposition.tsx for
 // the channel banner. Rendered as still frames with `npx remotion still`,
 // not part of the video pipeline. YouTube crops the profile picture to a
@@ -15,21 +14,18 @@ import { GrandmaHostSilhouette } from "./components/GrandmaHostSilhouette";
 // uploaded by hand once via YouTube Studio > Customization > Branding >
 // Picture.
 //
-// Crop math: each mascot's own SVG viewBox is 0..340. CharacterBadge takes
-// a crop box in that same coordinate space and scales+positions it to
-// fill a `size`x`size` circle exactly, via an overflow:hidden wrapper —
-// precise crop instead of eyeballing a transform on the whole 340x340
-// component. Cropped tight to "top of headscarf/hair" through "chin"
-// (excludes neck/collar/held object entirely) — a first pass that
-// included the collar had the held prop (mortar, mixing spoon) bleed into
-// frame looking like a stray mark near the mouth. A tight face-only crop
-// also matches the actual bar: an avatar shows at 48x48px in most UI, so
-// face fill matters far more than visible context.
-const CROP_X: [number, number] = [77, 264];
-const CROP_Y: [number, number] = [8, 195];
+// After the story pivot both channels share one mascot: Bà Tư / Grandma
+// June (BaTuCharacter, viewBox 0..420x620). The face is an ellipse at
+// cx 210, cy ~200 (rx 68 / ry 76) with the hair bun at ~268,196 and the
+// hair line topping out at y ~96 — the crop below is "top of hair"
+// through "chin" (excludes neck/collar/storybook entirely) because an
+// avatar shows at 48x48px in most UI, so face fill matters far more
+// than visible context.
+const CROP_X: [number, number] = [115, 285];
+const CROP_Y: [number, number] = [90, 280];
 
 export const AVATAR_STYLES = {
-  vi: { bgFrom: "#F6E3C4", bgTo: "#3E5A32", ringColor: "#EFC090" },
+  vi: { bgFrom: "#F6E3C4", bgTo: "#5c3a20", ringColor: "#EFC090" },
   en: { bgFrom: "#FBEBD9", bgTo: "#8a4a52", ringColor: "#F0D2AE" },
 } as const;
 
@@ -85,20 +81,21 @@ export const CharacterBadge: React.FC<{
 
 const CANVAS = 800;
 
-// Vietnamese channel: "bà lang" herbalist — headscarf, warm green ao ba ba.
+// Vietnamese channel avatar — Bà Tư's face on a warm hearth-amber badge.
 export const AvatarVI: React.FC = () => (
   <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", backgroundColor: AVATAR_STYLES.vi.bgTo }}>
     <CharacterBadge size={CANVAS} {...AVATAR_STYLES.vi}>
-      <HealerSilhouette scale={1} isSpeaking={false} />
+      <BaTuCharacter scale={1} isSpeaking={false} showBun={false} />
     </CharacterBadge>
   </AbsoluteFill>
 );
 
-// English channel: grandmotherly figure — grey hair bun, glasses, cardigan.
+// English channel avatar — same mascot (Grandma June), rosier badge so
+// the two channels aren't pixel-identical siblings.
 export const AvatarEN: React.FC = () => (
   <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", backgroundColor: AVATAR_STYLES.en.bgTo }}>
     <CharacterBadge size={CANVAS} {...AVATAR_STYLES.en}>
-      <GrandmaHostSilhouette scale={1} isSpeaking={false} />
+      <BaTuCharacter scale={1} isSpeaking={false} showBun={false} />
     </CharacterBadge>
   </AbsoluteFill>
 );

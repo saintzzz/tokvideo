@@ -38,7 +38,10 @@ export const BaTuCharacter: React.FC<{
   /** "present" raises her right arm toward the on-screen ingredient;
    *  "book" has her holding an open storybook with both hands. */
   gesture?: "idle" | "present" | "book";
-}> = ({ scale = 1, isSpeaking = false, gesture = "idle" }) => {
+  /** Avatar face crops hide the bun — at badge size it reads as a stray
+   *  blob over the cheek instead of side hair. */
+  showBun?: boolean;
+}> = ({ scale = 1, isSpeaking = false, gesture = "idle", showBun = true }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -167,8 +170,12 @@ export const BaTuCharacter: React.FC<{
           {/* hair: swept top + low bun + wisps */}
           <path d="M 146 176 Q 140 108 210 96 Q 280 108 274 176 Q 268 140 210 132 Q 152 140 146 176 Z" fill={HAIR} />
           <path d="M 210 132 Q 250 138 264 168" stroke={HAIR_DARK} strokeWidth="6" fill="none" opacity="0.6" strokeLinecap="round" />
-          <ellipse cx="268" cy="196" rx="26" ry="24" fill={HAIR} />
-          <ellipse cx="268" cy="204" rx="22" ry="14" fill={HAIR_DARK} opacity="0.7" />
+          {showBun ? (
+            <>
+              <ellipse cx="268" cy="196" rx="26" ry="24" fill={HAIR} />
+              <ellipse cx="268" cy="204" rx="22" ry="14" fill={HAIR_DARK} opacity="0.7" />
+            </>
+          ) : null}
           <path d="M 148 168 Q 130 200 138 240" stroke={HAIR} strokeWidth="7" fill="none" strokeLinecap="round" />
           <path d="M 158 156 Q 144 178 148 206" stroke={HAIR} strokeWidth="5" fill="none" strokeLinecap="round" />
 
