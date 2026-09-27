@@ -1,7 +1,21 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 
-export type SceneName = "hook" | "kitchen" | "car" | "bedroom" | "dressing-room" | "wedding-hall";
+export type SceneName =
+  | "hook"
+  | "kitchen"
+  | "car"
+  | "bedroom"
+  | "dressing-room"
+  | "wedding-hall"
+  | "sect-mountain"
+  | "cultivation-cave"
+  | "battlefield"
+  | "arena"
+  | "forest-night"
+  | "throne-hall"
+  | "cliff-edge"
+  | "village-dusk";
 
 const GRADIENTS: Record<SceneName, [string, string]> = {
   hook: ["#1a2a1f", "#0c140e"],
@@ -10,6 +24,14 @@ const GRADIENTS: Record<SceneName, [string, string]> = {
   bedroom: ["#241a36", "#0e0a1a"],
   "dressing-room": ["#3a1a2e", "#160a12"],
   "wedding-hall": ["#3a2a12", "#1a1206"],
+  "sect-mountain": ["#2a3a52", "#0e1622"],
+  "cultivation-cave": ["#1e1430", "#0a0614"],
+  battlefield: ["#3d1d1a", "#160a08"],
+  arena: ["#402a10", "#160e06"],
+  "forest-night": ["#12281e", "#060f0b"],
+  "throne-hall": ["#3a1030", "#12060e"],
+  "cliff-edge": ["#22303e", "#0a1016"],
+  "village-dusk": ["#3a2414", "#140c06"],
 };
 
 const seededRandom = (seed: number) => {
@@ -106,6 +128,127 @@ const SceneMotif: React.FC<{ scene: SceneName; frame: number }> = ({ scene, fram
           const y = 900 - Math.sin(t * Math.PI) * 640;
           return <circle key={i} cx={x} cy={y} r={10} fill="#ffe9b0" opacity={opacity * 1.3} />;
         })}
+      </svg>
+    );
+  }
+  // Xianxia story sets — same flat-silhouette language as the original
+  // motifs; each is a quick readable "where are we" beat, not a painted
+  // matte.
+  if (scene === "sect-mountain") {
+    const cloud = (frame * 0.15) % 400;
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* layered peaks + a floating sword-sect silhouette */}
+        <path d="M 0 1080 L 320 620 L 560 900 L 760 500 L 1080 1080 Z" fill="#8fb0d8" opacity={opacity} />
+        <path d="M 700 1080 L 1020 420 L 1240 720 L 1440 380 L 1700 1080 Z" fill="#a8c4e4" opacity={opacity * 0.8} />
+        <path d="M 1440 380 L 1440 260 L 1420 260 L 1440 200 L 1460 260 L 1440 260 Z" fill="#cfe0f2" opacity={opacity * 1.4} />
+        <rect x={300 + cloud} y="180" width="340" height="26" rx="13" fill="#fff" opacity={opacity * 0.7} />
+        <rect x={1100 - cloud * 0.6} y="300" width="260" height="20" rx="10" fill="#fff" opacity={opacity * 0.5} />
+      </svg>
+    );
+  }
+  if (scene === "cultivation-cave") {
+    const glowPulse = 0.1 + 0.06 * Math.sin(frame * 0.06);
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* cave arch + glowing formation circle on the floor */}
+        <path d="M 300 1080 Q 300 200 960 180 Q 1620 200 1620 1080" fill="none" stroke="#9a86c8" strokeWidth="26" opacity={opacity} />
+        <ellipse cx="960" cy="900" rx="300" ry="60" fill="none" stroke="#c9a8ff" strokeWidth="10" opacity={glowPulse * 2} />
+        <ellipse cx="960" cy="900" rx="200" ry="40" fill="none" stroke="#c9a8ff" strokeWidth="6" opacity={glowPulse * 2} />
+        <circle cx="960" cy="900" r="14" fill="#e0ccff" opacity={glowPulse * 3} />
+      </svg>
+    );
+  }
+  if (scene === "battlefield") {
+    const ember = (frame * 1.2) % 300;
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* torn banners + spears + rising embers */}
+        <path d="M 400 950 L 400 420 L 560 470 L 400 520 Z" fill="#e07a5a" opacity={opacity * 1.6} />
+        <path d="M 1500 950 L 1500 380 L 1360 440 L 1500 480 Z" fill="#e07a5a" opacity={opacity} />
+        {Array.from({ length: 7 }).map((_, i) => (
+          <path key={i} d={`M ${520 + i * 140} 980 L ${500 + i * 140} ${560 - (i % 3) * 60}`} stroke="#c8b0a0" strokeWidth="10" opacity={opacity} />
+        ))}
+        {Array.from({ length: 10 }).map((_, i) => {
+          const x = seededRandom(i + 90) * 1920;
+          const y = 900 - ((ember + i * 80) % 700);
+          return <circle key={i} cx={x} cy={y} r="5" fill="#ffb066" opacity={opacity * 2} />;
+        })}
+      </svg>
+    );
+  }
+  if (scene === "arena") {
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* ring platform + banner poles + crowd tier */}
+        <ellipse cx="960" cy="880" rx="640" ry="110" fill="#e8c88a" opacity={opacity} />
+        <ellipse cx="960" cy="880" rx="480" ry="80" fill="none" stroke="#b8905a" strokeWidth="10" opacity={opacity} />
+        <rect x="280" y="300" width="18" height="480" fill="#c8a068" opacity={opacity} />
+        <rect x="1620" y="300" width="18" height="480" fill="#c8a068" opacity={opacity} />
+        <path d="M 298 310 L 480 340 L 298 370 Z" fill="#d8b878" opacity={opacity * 1.4} />
+        <path d="M 1620 310 L 1440 340 L 1620 370 Z" fill="#d8b878" opacity={opacity * 1.4} />
+        <rect x="0" y="120" width="1920" height="90" fill="#a88858" opacity={opacity * 0.7} />
+      </svg>
+    );
+  }
+  if (scene === "forest-night") {
+    const fireflyDrift = frame * 0.5;
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* tree trunks + moon + drifting fireflies */}
+        <circle cx="1560" cy="200" r="80" fill="#dce8f8" opacity={opacity * 1.6} />
+        {Array.from({ length: 9 }).map((_, i) => (
+          <rect key={i} x={80 + i * 220} y="120" width={34 + (i % 3) * 14} height="960" fill="#4a7a62" opacity={opacity * 0.9} />
+        ))}
+        {Array.from({ length: 12 }).map((_, i) => {
+          const x = (seededRandom(i + 140) * 1920 + Math.sin((frame + i * 30) * 0.04) * 40 + fireflyDrift) % 1920;
+          const y = 300 + seededRandom(i + 190) * 500 + Math.cos((frame + i * 50) * 0.03) * 30;
+          return <circle key={i} cx={x} cy={y} r="6" fill="#d8ffb0" opacity={opacity * 2.2} />;
+        })}
+      </svg>
+    );
+  }
+  if (scene === "throne-hall") {
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* columns + elevated throne silhouette + long carpet */}
+        <rect x="0" y="700" width="1920" height="380" fill="#4a1840" opacity={opacity * 0.8} />
+        <rect x="880" y="940" width="160" height="140" fill="#c04a8a" opacity={opacity * 0.6} />
+        {[280, 620, 1300, 1640].map((x) => (
+          <rect key={x} x={x} y="160" width="70" height="560" fill="#8a4a78" opacity={opacity} />
+        ))}
+        <path d="M 900 700 L 900 420 L 960 380 L 1020 420 L 1020 700 Z" fill="#b05a98" opacity={opacity * 1.2} />
+        <path d="M 930 420 L 960 330 L 990 420 Z" fill="#d87ab8" opacity={opacity * 1.3} />
+      </svg>
+    );
+  }
+  if (scene === "cliff-edge") {
+    const wind = (frame * 0.8) % 300;
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* cliff face + abyss haze + wind streaks */}
+        <path d="M 0 1080 L 0 300 L 260 160 L 420 400 L 500 1080 Z" fill="#7a90a8" opacity={opacity} />
+        <path d="M 1400 1080 L 1520 620 L 1740 780 L 1920 560 L 1920 1080 Z" fill="#8aa0b8" opacity={opacity * 0.7} />
+        {Array.from({ length: 6 }).map((_, i) => (
+          <rect key={i} x={(200 + i * 290 - wind) % 1920} y={180 + i * 130} width="180" height="8" rx="4" fill="#cfe0ee" opacity={opacity * 1.5} />
+        ))}
+      </svg>
+    );
+  }
+  if (scene === "village-dusk") {
+    const lanternFlicker = 0.12 + 0.05 * Math.sin(frame * 0.2);
+    return (
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0 }}>
+        {/* rooftop line + hanging lanterns */}
+        <path d="M 0 1080 L 0 700 L 200 620 L 420 700 L 420 1080 Z" fill="#8a5c34" opacity={opacity} />
+        <path d="M 500 1080 L 500 640 L 760 560 L 1020 640 L 1020 1080 Z" fill="#9a6a3c" opacity={opacity} />
+        <path d="M 1200 1080 L 1200 680 L 1450 600 L 1700 680 L 1700 1080 Z" fill="#8a5c34" opacity={opacity} />
+        {[540, 860, 1300, 1560].map((x, i) => (
+          <g key={i}>
+            <line x1={x} y1="540" x2={x} y2="600" stroke="#5a3a1e" strokeWidth="6" opacity={opacity * 2} />
+            <ellipse cx={x} cy="640" rx="34" ry="44" fill="#ff9a5a" opacity={lanternFlicker * 3} />
+          </g>
+        ))}
       </svg>
     );
   }

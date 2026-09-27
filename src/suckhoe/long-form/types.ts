@@ -16,7 +16,23 @@ export type LongFormBeat = {
    * character blocking is shown. Kept small and reused across the whole
    * episode (a handful of locations revisited), not a new set per line.
    */
-  scene: "hook" | "kitchen" | "car" | "bedroom" | "dressing-room" | "wedding-hall";
+  scene:
+    | "hook"
+    | "kitchen"
+    | "car"
+    | "bedroom"
+    | "dressing-room"
+    | "wedding-hall"
+    // Xianxia story-arc sets (added 2026-09-27 for the cultivation
+    // audiobook series — narrator-only beats, motifs carry the mood)
+    | "sect-mountain"
+    | "cultivation-cave"
+    | "battlefield"
+    | "arena"
+    | "forest-night"
+    | "throne-hall"
+    | "cliff-edge"
+    | "village-dusk";
   /**
    * Present only on the line where the granddaughter reveals the real
    * research behind a remedy — triggers the animated science-diagram
