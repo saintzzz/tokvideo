@@ -109,25 +109,47 @@ const CATEGORY_KEYWORDS = {
   "en-sleep-relax": { tags: ["better sleep", "sleep aid", "relaxation"], hashtag: "sleepremedy" },
   "en-skin-beauty": { tags: ["skincare", "skin remedy", "natural beauty"], hashtag: "skincare" },
   "en-digestion": { tags: ["digestive health", "upset stomach", "digestion tips"], hashtag: "digestivehealth" },
+  // Story categories (CR-001 pivot) — not in playlist-map.json (no
+  // playlists created yet) but used for tags/hashtags.
+  "co-tich": { tags: ["cổ tích", "truyện kể", "truyện dân gian"], hashtag: "cotich" },
+  "ma-lang-que": { tags: ["chuyện ma", "truyện ma dân gian", "truyện ly kỳ"], hashtag: "chuyenma" },
+  "cam-dong": { tags: ["truyện cảm động", "bài học cuộc sống", "chuyện đời"], hashtag: "truyencamdong" },
+  "lich-su": { tags: ["lịch sử", "giai thoại", "sử Việt"], hashtag: "lichsu" },
+  "en-folklore": { tags: ["folklore", "folk tales", "storytelling"], hashtag: "folklore" },
+  "en-spooky": { tags: ["scary stories", "spooky tales", "creepy folklore"], hashtag: "spookystories" },
+  "en-heartwarming": { tags: ["heartwarming stories", "life lessons", "feel good stories"], hashtag: "heartwarming" },
+  "en-history": { tags: ["history facts", "weird history", "history shorts"], hashtag: "history" },
 };
 const categoryInfo = CATEGORY_KEYWORDS[episode.category];
 
+const isStory = episode.kind === "story";
+
 function buildTags() {
-  const base = isEn
-    ? ["homeremedies", "folkwisdom", "shorts"]
-    : ["suckhoe", "meodangian", "shorts"];
+  const base = isStory
+    ? isEn
+      ? ["folktales", "storytime", "shorts"]
+      : ["truyenke", "kechuyen", "shorts"]
+    : isEn
+      ? ["homeremedies", "folkwisdom", "shorts"]
+      : ["suckhoe", "meodangian", "shorts"];
   const ingredientTags = episode.ingredientName
-    .split(/,| và | and |\//i)
-    .map((s) => s.trim())
-    .filter(Boolean);
+    ? episode.ingredientName
+        .split(/,| và | and |\//i)
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : [];
   const tags = [...base, ...ingredientTags, ...(categoryInfo?.tags ?? [])];
   return [...new Set(tags)].slice(0, 8);
 }
 
 function buildHashtagLine() {
-  const base = isEn
-    ? ["#homeremedies", "#folkwisdom", "#shorts"]
-    : ["#suckhoe", "#meodangian", "#shorts"];
+  const base = isStory
+    ? isEn
+      ? ["#folktales", "#storytime", "#shorts"]
+      : ["#truyenke", "#kechuyen", "#shorts"]
+    : isEn
+      ? ["#homeremedies", "#folkwisdom", "#shorts"]
+      : ["#suckhoe", "#meodangian", "#shorts"];
   const extra = [categoryInfo ? `#${categoryInfo.hashtag}` : null, isEn ? "#naturalremedies" : "#meovat"].filter(
     Boolean
   );
@@ -135,7 +157,19 @@ function buildHashtagLine() {
 }
 
 const title = `${episode.channelTitle} #Shorts`;
-const description = isEn
+const description = isStory
+  ? [
+      (episode.storyParts ?? []).join("\n\n"),
+      "",
+      episode.moral ?? "",
+      isEn
+        ? "A folk tale retold for entertainment."
+        : "Truyện dân gian kể lại, nghe cho vui.",
+      episode.cta,
+      "",
+      buildHashtagLine(),
+    ].join("\n")
+  : isEn
   ? [
       episode.remedy,
       "",

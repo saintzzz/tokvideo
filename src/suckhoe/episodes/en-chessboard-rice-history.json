@@ -1,0 +1,16 @@
+{
+  "slug": "en-chessboard-rice-history",
+  "kind": "story",
+  "locale": "en",
+  "channelTitle": "The inventor who asked for rice and nearly bankrupted an empire",
+  "hook": "A wise man asked an emperor for 'just some rice' - and the math ruined the palace treasury.",
+  "storyParts": [
+    "Legend says the inventor of chess showed his game to an emperor, who offered any reward. The inventor asked only for rice: one grain on the first square, doubled each square after.",
+    "The emperor laughed and agreed - until his treasurers did the math. By the 64th square the pile needed was bigger than every harvest in the empire combined, many times over.",
+    "Some versions say the inventor was made chief advisor for outsmarting the court. Others say he was executed for embarrassing the emperor. Either way, nobody forgot the lesson."
+  ],
+  "moral": "Grandma June's takeaway: never laugh at a small number that's doubling - it's how most fortunes and most debts are really made.",
+  "cta": "Would you have taken the rice deal? Tell Grandma June what you'd have asked for instead",
+  "category": "en-history",
+  "hookStyle": "statement"
+}

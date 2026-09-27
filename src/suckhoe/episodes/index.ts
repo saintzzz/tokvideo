@@ -198,6 +198,18 @@ import enPruneJuiceConstipation from "./en-prune-juice-constipation.json";
 import enThymeTeaCough from "./en-thyme-tea-cough.json";
 import enPassionflowerTeaSleep from "./en-passionflower-tea-sleep.json";
 import enCalendulaSalveCuts from "./en-calendula-salve-cuts.json";
+import truyenCayTreTramDot from "./truyen-cay-tre-tram-dot.json";
+import truyenMaNhaHoangDauLang from "./truyen-ma-nha-hoang-dau-lang.json";
+import truyenBatComCuoiCung from "./truyen-bat-com-cuoi-cung.json";
+import truyenVuaLyDoiDo from "./truyen-vua-ly-doi-do.json";
+import truyenTamCamCaBong from "./truyen-tam-cam-ca-bong.json";
+import truyenBongDenGiuaDong from "./truyen-bong-den-giua-dong.json";
+import truyenNguoiLinhChoDoi from "./truyen-nguoi-linh-cho-doi.json";
+import truyenAnDuongVuongNoThan from "./truyen-an-duong-vuong-no-than.json";
+import enJackOLanternFolklore from "./en-jack-o-lantern-folklore.json";
+import enVanishingHitchhiker from "./en-vanishing-hitchhiker.json";
+import enTwoBrothersWheat from "./en-two-brothers-wheat.json";
+import enChessboardRiceHistory from "./en-chessboard-rice-history.json";
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
 //
@@ -402,4 +414,16 @@ export const EPISODES: SucKhoeEpisode[] = [
   enThymeTeaCough,
   enPassionflowerTeaSleep,
   enCalendulaSalveCuts,
+  truyenCayTreTramDot,
+  truyenMaNhaHoangDauLang,
+  truyenBatComCuoiCung,
+  truyenVuaLyDoiDo,
+  truyenTamCamCaBong,
+  truyenBongDenGiuaDong,
+  truyenNguoiLinhChoDoi,
+  truyenAnDuongVuongNoThan,
+  enJackOLanternFolklore,
+  enVanishingHitchhiker,
+  enTwoBrothersWheat,
+  enChessboardRiceHistory,
 ] as SucKhoeEpisode[];

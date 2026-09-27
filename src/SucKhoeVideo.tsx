@@ -4,6 +4,7 @@ import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 import { HookScene } from "./scenes-suckhoe/HookScene";
 import { RemedyScene } from "./scenes-suckhoe/RemedyScene";
+import { StoryScene } from "./scenes-suckhoe/StoryScene";
 import { StepsScene } from "./scenes-suckhoe/StepsScene";
 import { CTAScene } from "./scenes-suckhoe/CTAScene";
 import { MusicBed } from "./components/MusicBed";
@@ -45,11 +46,19 @@ export const SucKhoeVideo: React.FC<SucKhoeVideoProps> = ({
         </TransitionSeries.Sequence>
         {transition()}
         <TransitionSeries.Sequence durationInFrames={sceneDurations.remedy}>
-          <RemedyScene episode={episode} hasAudio={hasAudio.remedy} />
+          {episode.kind === "story" ? (
+            <StoryScene episode={episode} hasAudio={hasAudio.remedy} audioKey="remedy" />
+          ) : (
+            <RemedyScene episode={episode} hasAudio={hasAudio.remedy} />
+          )}
         </TransitionSeries.Sequence>
         {transition()}
         <TransitionSeries.Sequence durationInFrames={sceneDurations.steps}>
-          <StepsScene episode={episode} hasAudio={hasAudio.steps} />
+          {episode.kind === "story" ? (
+            <StoryScene episode={episode} hasAudio={hasAudio.steps} audioKey="steps" />
+          ) : (
+            <StepsScene episode={episode} hasAudio={hasAudio.steps} />
+          )}
         </TransitionSeries.Sequence>
         {transition()}
         <TransitionSeries.Sequence durationInFrames={sceneDurations.cta}>

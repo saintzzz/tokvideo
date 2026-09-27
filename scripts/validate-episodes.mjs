@@ -26,6 +26,13 @@ const validCategoriesFor = (locale) => new Set(Object.keys(playlistMap[locale] ?
 
 const LOCALES = new Set(["vi", "en"]);
 const HOOK_STYLES = new Set(["question", "statement", "countdown", "pov"]);
+const KINDS = new Set(["remedy", "story"]);
+// Story categories (CR-001) — no playlists exist for them yet, so they're
+// validated against this list instead of playlist-map.json.
+const STORY_CATEGORIES = {
+  vi: new Set(["co-tich", "ma-lang-que", "cam-dong", "lich-su"]),
+  en: new Set(["en-folklore", "en-spooky", "en-heartwarming", "en-history"]),
+};
 
 // Health-claim words that get YMYL channels struck. Checked case-insensitively
 // against every user-visible string field.
@@ -48,10 +55,24 @@ const scanText = (file, field, text, locale) => {
 
 const validateShortEpisode = async (file, ep) => {
   const locale = ep.locale ?? "vi";
-  for (const f of ["slug", "channelTitle", "hook", "ingredientName", "remedy", "cta"]) {
+  if (ep.kind !== undefined && !KINDS.has(ep.kind)) {
+    err(file, `invalid kind "${ep.kind}" (one of ${[...KINDS].join(", ")})`);
+  }
+  const isStory = ep.kind === "story";
+  const required = isStory
+    ? ["slug", "channelTitle", "hook", "cta"]
+    : ["slug", "channelTitle", "hook", "ingredientName", "remedy", "cta"];
+  for (const f of required) {
     if (!isStr(ep[f])) err(file, `missing/empty required field "${f}"`);
   }
-  if (!Array.isArray(ep.steps) || ep.steps.length === 0 || !ep.steps.every(isStr)) {
+  if (isStory) {
+    if (!Array.isArray(ep.storyParts) || ep.storyParts.length < 2 || !ep.storyParts.every(isStr)) {
+      err(file, `"storyParts" must be an array of at least 2 non-empty strings`);
+    }
+    if (ep.moral !== undefined && !isStr(ep.moral)) {
+      err(file, `"moral" must be a non-empty string when present`);
+    }
+  } else if (!Array.isArray(ep.steps) || ep.steps.length === 0 || !ep.steps.every(isStr)) {
     err(file, `"steps" must be a non-empty string array`);
   }
   if (isStr(ep.slug) && ep.slug !== file.replace(/\.json$/, "")) {
@@ -60,9 +81,12 @@ const validateShortEpisode = async (file, ep) => {
   if (ep.locale !== undefined && !LOCALES.has(ep.locale)) {
     err(file, `invalid locale "${ep.locale}"`);
   }
-  if (ep.category !== undefined && !validCategoriesFor(locale).has(ep.category)) {
-    err(file, `category "${ep.category}" not in playlist-map.json for locale "${locale}"`);
-  } else if (ep.category === undefined) {
+  if (ep.category !== undefined) {
+    const storyCats = STORY_CATEGORIES[locale] ?? new Set();
+    if (!validCategoriesFor(locale).has(ep.category) && !(isStory && storyCats.has(ep.category))) {
+      err(file, `category "${ep.category}" not in playlist-map.json${isStory ? " or the story-category list" : ""} for locale "${locale}"`);
+    }
+  } else {
     warn(file, `no category — episode won't be added to a playlist`);
   }
   if (ep.hookStyle !== undefined && !HOOK_STYLES.has(ep.hookStyle)) {
@@ -89,16 +113,19 @@ const validateShortEpisode = async (file, ep) => {
   // Compliance: banned claims across visible text. `caution` is exempt —
   // it is the disclaimer field itself ("không lạm dụng thay thuốc" is
   // exactly what we want it to say).
-  const fields = { hook: ep.hook, remedy: ep.remedy, cta: ep.cta, channelTitle: ep.channelTitle };
+  const fields = { hook: ep.hook, remedy: ep.remedy, cta: ep.cta, channelTitle: ep.channelTitle, moral: ep.moral };
   for (const [f, text] of Object.entries(fields)) {
     if (isStr(text)) scanText(file, f, text, locale);
   }
   if (Array.isArray(ep.steps)) {
     ep.steps.forEach((s, i) => isStr(s) && scanText(file, `steps[${i}]`, s, locale));
   }
+  if (Array.isArray(ep.storyParts)) {
+    ep.storyParts.forEach((s, i) => isStr(s) && scanText(file, `storyParts[${i}]`, s, locale));
+  }
 
   // Folk-wisdom framing on the remedy body — the channel's legal cover.
-  if (isStr(ep.remedy)) {
+  if (!isStory && isStr(ep.remedy)) {
     const markers = locale === "en" ? FOLK_MARKERS_EN : FOLK_MARKERS_VI;
     if (!markers.some((re) => re.test(ep.remedy))) {
       warn(file, `remedy lacks folk-wisdom framing ("dân gian"/"grandma"/"traditional") — add it to stay compliant`);

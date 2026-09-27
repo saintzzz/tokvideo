@@ -1,6 +1,6 @@
 # CR-001: Channel Pivot — thoát khỏi trạng thái "kênh chết phân phối"
 
-Ngày: 2026-09-27 · Trạng thái: chờ phê duyệt hướng pivot
+Ngày: 2026-09-27 · Trạng thái: ĐÃ PHÊ DUYỆT phương án A (Bà Tư kể chuyện, tất cả 4 loại) - đã implement 2026-09-27
 
 ## 1. Yêu cầu thay đổi
 

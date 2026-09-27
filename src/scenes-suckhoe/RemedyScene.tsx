@@ -16,11 +16,11 @@ import { KineticText } from "../components/KineticText";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { KaraokeCaption } from "../components/KaraokeCaption";
 import { fonts } from "../fonts";
-import { SucKhoeEpisode } from "../suckhoe/types";
+import { RemedyEpisode } from "../suckhoe/types";
 import { themeForEpisode } from "../suckhoe/themes";
 
 export const RemedyScene: React.FC<{
-  episode: SucKhoeEpisode;
+  episode: RemedyEpisode;
   hasAudio: boolean;
 }> = ({ episode, hasAudio }) => {
   const frame = useCurrentFrame();

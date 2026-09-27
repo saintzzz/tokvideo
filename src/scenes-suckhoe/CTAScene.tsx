@@ -109,9 +109,13 @@ export const CTAScene: React.FC<{
             opacity: 0.65,
           }}
         >
-          {episode.locale === "en"
-            ? "Traditional folk wisdom, not medical advice"
-            : "Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ"}
+          {episode.kind === "story"
+            ? episode.locale === "en"
+              ? "A folk tale retold for entertainment"
+              : "Truyện dân gian kể lại, nghe cho vui"
+            : episode.locale === "en"
+              ? "Traditional folk wisdom, not medical advice"
+              : "Kinh nghiệm dân gian, không thay thế ý kiến bác sĩ"}
         </div>
         {episode.caution ? (
           <div

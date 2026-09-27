@@ -82,6 +82,68 @@ const THEMES: Record<string, SceneTheme> = {
     bokeh: "rgba(164,198,57,0.26)",
     particleHue: 75,
   },
+  // ── Story categories (CR-001 pivot) ────────────────────────────
+  // co-tich: warm fireside amber — grandma telling tales by the hearth.
+  "co-tich": {
+    bg: ["#33200f", "#1a1009", "#0b0705"],
+    accent: "#E8B04B",
+    ink: "#FBF3E4",
+    bokeh: "rgba(232,176,75,0.28)",
+    particleHue: 32,
+  },
+  // ma-lang-que: cold village-night teal — ghost stories, kept eerie not
+  // gory. Pale accent reads "spectral" against the near-black ground.
+  "ma-lang-que": {
+    bg: ["#12211f", "#08110f", "#040807"],
+    accent: "#8FD8C9",
+    ink: "#E4F2EF",
+    bokeh: "rgba(143,216,201,0.22)",
+    particleHue: 168,
+  },
+  // cam-dong: warm dusk rose — heartwarming parables.
+  "cam-dong": {
+    bg: ["#2e1d1e", "#170e0f", "#0a0606"],
+    accent: "#E89B8A",
+    ink: "#FAEEE9",
+    bokeh: "rgba(232,155,138,0.26)",
+    particleHue: 8,
+  },
+  // lich-su: aged parchment sepia — history anecdotes.
+  "lich-su": {
+    bg: ["#2a2118", "#140f0a", "#080604"],
+    accent: "#C9A15F",
+    ink: "#F4ECD9",
+    bokeh: "rgba(201,161,95,0.26)",
+    particleHue: 38,
+  },
+  "en-folklore": {
+    bg: ["#1a2b1c", "#0d150e", "#060906"],
+    accent: "#A8C686",
+    ink: "#EFF6E8",
+    bokeh: "rgba(168,198,134,0.26)",
+    particleHue: 95,
+  },
+  "en-spooky": {
+    bg: ["#1c1630", "#0e0a18", "#06040c"],
+    accent: "#A89BD0",
+    ink: "#EDEAF6",
+    bokeh: "rgba(168,155,208,0.24)",
+    particleHue: 250,
+  },
+  "en-heartwarming": {
+    bg: ["#2e1d1e", "#170e0f", "#0a0606"],
+    accent: "#E8A88F",
+    ink: "#FAF0EB",
+    bokeh: "rgba(232,168,143,0.26)",
+    particleHue: 14,
+  },
+  "en-history": {
+    bg: ["#26201a", "#131009", "#080604"],
+    accent: "#C9A15F",
+    ink: "#F4ECD9",
+    bokeh: "rgba(201,161,95,0.26)",
+    particleHue: 40,
+  },
 };
 
 const DEFAULT_THEME: SceneTheme = THEMES["tieu-hoa"];

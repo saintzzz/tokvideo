@@ -1,18 +1,24 @@
-export type SucKhoeEpisode = {
+// One channel, two episode kinds (CR-001 channel pivot):
+//   "remedy" (default, omitted kind) — folk-remedy Shorts, the original
+//     format. Requires ingredientName/remedy/steps.
+//   "story" — storytelling Shorts (folk tales, ghost-lite village tales,
+//     heartwarming parables, history anecdotes). The pivot away from the
+//     saturated/YMYL-suppressed remedy niche. Requires storyParts.
+// The renderer, voiceover, publish queue and captions all branch on
+// `kind` — same pipeline, different scene content.
+
+type SucKhoeBase = {
   slug: string;
   channelTitle: string;
   hook: string;
-  ingredientName: string;
-  remedy: string;
-  steps: string[];
-  /** Ingredient-specific safety note, e.g. honey + infants. Optional. */
-  caution?: string;
   cta: string;
+  /** Safety/caveat note shown in the CTA scene. Optional. */
+  caution?: string;
   /**
    * Which channel/audience this episode is for. Omitted = "vi" (existing
    * Vietnamese "Suc Khoe" channel, all content in Vietnamese). "en" is a
-   * separate English-market channel — culturally-appropriate Western home
-   * remedies, not translations of the Vietnamese content. Locale drives
+   * separate English-market channel — culturally-appropriate Western
+   * content, not translations of the Vietnamese episodes. Locale drives
    * TTS voice selection and which channel's credentials/queue an episode
    * publishes through — see scripts/generate-voiceover.mjs and
    * scripts/publish-next-suckhoe.mjs.
@@ -24,12 +30,14 @@ export type SucKhoeEpisode = {
    * (see src/suckhoe/playlist-map.json for the category → playlist ID
    * mapping, one map per locale). Grouping related videos into playlists
    * encourages longer watch sessions, which the algorithm rewards.
-   * Vietnamese categories: "ho-cam-hong", "tieu-hoa", "giac-ngu",
-   * "dau-nhuc-met-moi", "da-toc-lam-dep". English: "en-cold-throat",
-   * "en-sleep-relax", "en-skin-beauty", "en-digestion". Adding a new
-   * category requires creating the playlist and adding it to
-   * playlist-map.json — an episode whose category isn't in the map is
-   * uploaded normally, just not added to any playlist.
+   * Remedy categories: "ho-cam-hong", "tieu-hoa", "giac-ngu",
+   * "dau-nhuc-met-moi", "da-toc-lam-dep" (vi) and "en-cold-throat",
+   * "en-sleep-relax", "en-skin-beauty", "en-digestion" (en).
+   * Story categories (no playlists yet — uploads fine without one):
+   * "co-tich", "ma-lang-que", "cam-dong", "lich-su" (vi) and
+   * "en-folklore", "en-spooky", "en-heartwarming", "en-history" (en).
+   * An episode whose category isn't in playlist-map.json is uploaded
+   * normally, just not added to any playlist.
    */
   category?: string;
   /**
@@ -39,10 +47,31 @@ export type SucKhoeEpisode = {
    */
   hookStyle?: "question" | "statement" | "countdown" | "pov";
   /**
-   * Optional real/AI ingredient photos (paths under public/, e.g.
-   * "images/suckhoe/<slug>/01.jpg"). When present, RemedyScene and
-   * StepsScene render them with the Ken Burns effect instead of the
-   * abstract icon visuals. Files must exist — validate-episodes checks.
+   * Optional real/AI photos (paths under public/, e.g.
+   * "images/suckhoe/<slug>/01.jpg"). When present, the scenes render them
+   * with the Ken Burns effect instead of the abstract visuals. Files
+   * must exist — validate-episodes checks.
    */
   images?: string[];
 };
+
+export type RemedyEpisode = SucKhoeBase & {
+  kind?: "remedy";
+  ingredientName: string;
+  remedy: string;
+  steps: string[];
+};
+
+export type StoryEpisode = SucKhoeBase & {
+  kind: "story";
+  /**
+   * Story beats in order. parts[0] plays in the first story scene,
+   * parts[1..n] joined play in the second — keep each part to 1-2 short
+   * sentences so the on-screen text stays readable. 2-4 parts.
+   */
+  storyParts: string[];
+  /** Optional closing lesson/moral, narrated just before the CTA. */
+  moral?: string;
+};
+
+export type SucKhoeEpisode = RemedyEpisode | StoryEpisode;

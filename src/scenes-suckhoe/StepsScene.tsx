@@ -15,7 +15,7 @@ import { KitchenBackdrop } from "../components/KitchenBackdrop";
 import { KenBurnsImage } from "../components/KenBurnsImage";
 import { KaraokeCaption } from "../components/KaraokeCaption";
 import { fonts } from "../fonts";
-import { SucKhoeEpisode } from "../suckhoe/types";
+import { RemedyEpisode } from "../suckhoe/types";
 import { themeForEpisode, type SceneTheme } from "../suckhoe/themes";
 
 const STEP_STAGGER = 20;
@@ -83,7 +83,7 @@ const StepRow: React.FC<{
 };
 
 export const StepsScene: React.FC<{
-  episode: SucKhoeEpisode;
+  episode: RemedyEpisode;
   hasAudio: boolean;
 }> = ({ episode, hasAudio }) => {
   const { durationInFrames } = useVideoConfig();

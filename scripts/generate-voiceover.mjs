@@ -41,6 +41,18 @@ const SUCKHOE_EPISODES = await Promise.all(
 // remedies, not translations), so their narration needs English
 // connectors too, not just a different TTS voice.
 const buildSucKhoeNarration = (episode) => {
+  // Story episodes (CR-001 pivot): hook = cold open, the "remedy" slot
+  // carries storyParts[0], the "steps" slot carries the rest of the
+  // story, and the moral (if any) is spoken right before the CTA.
+  if (episode.kind === "story") {
+    const parts = episode.storyParts ?? [];
+    return {
+      hook: episode.hook,
+      remedy: parts[0] ?? "",
+      steps: parts.slice(1).join(" "),
+      cta: episode.moral ? `${episode.moral} ${episode.cta}` : episode.cta,
+    };
+  }
   if (episode.locale === "en") {
     return {
       hook: episode.hook,
@@ -404,6 +416,9 @@ for (const id of ids) {
     // video-level voice and the global PROSODY.
     const isPerBeatEntry = typeof entry === "object" && entry !== null;
     const text = isPerBeatEntry ? entry.text : entry;
+    if (!text || !String(text).trim()) {
+      continue; // e.g. a story episode with a single part leaves "steps" empty
+    }
     const voice = resolveVoice(isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI);
     const prosody = isPerBeatEntry ? entry.prosody : PROSODY;
     await synthesize(video.audioDir, key, text, voice, prosody);
