@@ -110,6 +110,22 @@ const uploadEnv =
       }
     : {};
 
+// Owner-ordered channel purge (docs/CHANNEL-CLEANUP.md): when
+// pending-cleanup.json flags this locale, wipe every video not tied to a
+// current story episode BEFORE publishing anything new. The script
+// clears its own flag when finished — a partial run (quota) resumes on
+// the next tick instead of re-deleting.
+const cleanupFlagPath = path.join(root, "src", "suckhoe", "pending-cleanup.json");
+try {
+  const flag = JSON.parse(await readFile(cleanupFlagPath, "utf8"));
+  if (flag[locale]) {
+    console.log(`pending-cleanup flag set for "${locale}" — running channel purge first.`);
+    run("node", ["scripts/cleanup-channel-videos.mjs", `--locale=${locale}`], uploadEnv);
+  }
+} catch {
+  // no flag file — normal publish path
+}
+
 for (const slug of batch) {
   console.log(`\n--- ${slug} ---`);
   run("node", ["scripts/generate-voiceover.mjs", `suckhoe-${slug}`]);
