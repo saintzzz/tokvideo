@@ -35,8 +35,9 @@ const mouthOpenAmount = (frame: number, isSpeaking: boolean): number => {
 export const BaTuCharacter: React.FC<{
   scale?: number;
   isSpeaking?: boolean;
-  /** "present" raises her right arm toward the on-screen ingredient. */
-  gesture?: "idle" | "present";
+  /** "present" raises her right arm toward the on-screen ingredient;
+   *  "book" has her holding an open storybook with both hands. */
+  gesture?: "idle" | "present" | "book";
 }> = ({ scale = 1, isSpeaking = false, gesture = "idle" }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -59,12 +60,18 @@ export const BaTuCharacter: React.FC<{
   const headNod = isSpeaking ? Math.sin(frame * 0.35) * 2 : 0;
 
   // arm sway — gentle pendulum, opposite phase; "present" pins the
-  // right arm up toward the prop she's showing off
-  const armL = 2.5 * Math.sin(frame * 0.07);
+  // right arm up toward the prop she's showing off; "book" tucks both
+  // hands inward to hold the open storybook drawn over them below
+  const armL =
+    gesture === "book"
+      ? -42 + 1.5 * Math.sin(frame * 0.07)
+      : 2.5 * Math.sin(frame * 0.07);
   const armR =
     gesture === "present"
       ? -58 + 2.5 * Math.sin(frame * 0.07 + Math.PI)
-      : 2.5 * Math.sin(frame * 0.07 + Math.PI);
+      : gesture === "book"
+        ? 42 + 1.5 * Math.sin(frame * 0.07 + Math.PI)
+        : 2.5 * Math.sin(frame * 0.07 + Math.PI);
 
   return (
     <div style={{ transform: `scale(${scale})`, transformOrigin: "bottom center" }}>
@@ -131,6 +138,23 @@ export const BaTuCharacter: React.FC<{
           <ellipse cx="322" cy="424" rx="13" ry="16" fill={SKIN} />
           <ellipse cx="332" cy="418" rx="7" ry="9" fill={SKIN} />
         </g>
+
+        {/* open storybook — drawn over the inward-tucked hands so it
+            reads as held. Two cream pages with ruled lines, dark red
+            cover, subtle page sway while she reads aloud. */}
+        {gesture === "book" ? (
+          <g
+            transform={`translate(210 452) rotate(${Math.sin(frame * 0.09) * 1.5}) translate(-210 -452)`}
+          >
+            <rect x="138" y="420" width="144" height="84" rx="10" fill="#7a4238" />
+            <path d="M 146 428 Q 178 418 208 428 L 208 494 Q 178 486 146 494 Z" fill="#f6ecd8" />
+            <path d="M 274 428 Q 242 418 212 428 L 212 494 Q 242 486 274 494 Z" fill="#efe2c8" />
+            <path d="M 156 442 Q 180 436 200 442 M 156 456 Q 180 450 200 456 M 156 470 Q 180 464 200 470" stroke="#b39d76" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M 220 442 Q 240 436 264 442 M 220 456 Q 240 450 264 456 M 220 470 Q 240 464 264 470" stroke="#b39d76" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <ellipse cx="148" cy="496" rx="12" ry="8" fill={SKIN} />
+            <ellipse cx="272" cy="496" rx="12" ry="8" fill={SKIN} />
+          </g>
+        ) : null}
 
         {/* NECK */}
         <rect x="192" y="256" width="36" height="40" rx="10" fill={SKIN} />

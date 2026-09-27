@@ -65,13 +65,25 @@ export type RemedyEpisode = SucKhoeBase & {
 export type StoryEpisode = SucKhoeBase & {
   kind: "story";
   /**
-   * Story beats in order. parts[0] plays in the first story scene,
-   * parts[1..n] joined play in the second — keep each part to 1-2 short
-   * sentences so the on-screen text stays readable. 2-4 parts.
+   * Story beats in order — ONE scene + ONE voiceover file (part-N.mp3)
+   * per beat, so this array is the actual narrative arc of the video:
+   * setup → conflict → escalation → turn → resolution. 4-7 beats lands
+   * the video at ~90-150s; the old 40s cram (2-3 parts) was dropped
+   * because a real tale needs room.
    */
   storyParts: string[];
   /** Optional closing lesson/moral, narrated just before the CTA. */
   moral?: string;
+  /**
+   * Serialized storytelling: when a tale is too long for one video,
+   * split it into multiple episodes that share a seriesTitle. All parts
+   * land in one YouTube playlist named after the series (auto-created
+   * on first upload, cached in src/suckhoe/series-playlists.json).
+   * seriesPart is 1-based; part 2+ hooks should recap briefly.
+   */
+  seriesTitle?: string;
+  seriesPart?: number;
+  seriesTotal?: number;
 };
 
 export type SucKhoeEpisode = RemedyEpisode | StoryEpisode;

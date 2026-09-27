@@ -198,18 +198,31 @@ import enPruneJuiceConstipation from "./en-prune-juice-constipation.json";
 import enThymeTeaCough from "./en-thyme-tea-cough.json";
 import enPassionflowerTeaSleep from "./en-passionflower-tea-sleep.json";
 import enCalendulaSalveCuts from "./en-calendula-salve-cuts.json";
-import truyenCayTreTramDot from "./truyen-cay-tre-tram-dot.json";
-import truyenMaNhaHoangDauLang from "./truyen-ma-nha-hoang-dau-lang.json";
-import truyenBatComCuoiCung from "./truyen-bat-com-cuoi-cung.json";
-import truyenVuaLyDoiDo from "./truyen-vua-ly-doi-do.json";
-import truyenTamCamCaBong from "./truyen-tam-cam-ca-bong.json";
-import truyenBongDenGiuaDong from "./truyen-bong-den-giua-dong.json";
-import truyenNguoiLinhChoDoi from "./truyen-nguoi-linh-cho-doi.json";
-import truyenAnDuongVuongNoThan from "./truyen-an-duong-vuong-no-than.json";
-import enJackOLanternFolklore from "./en-jack-o-lantern-folklore.json";
-import enVanishingHitchhiker from "./en-vanishing-hitchhiker.json";
-import enTwoBrothersWheat from "./en-two-brothers-wheat.json";
-import enChessboardRiceHistory from "./en-chessboard-rice-history.json";
+import truyenCayTreTramDotTap1 from "./truyen-cay-tre-tram-dot-tap-1.json";
+import truyenCayTreTramDotTap2 from "./truyen-cay-tre-tram-dot-tap-2.json";
+import truyenMaNhaHoangDauLangTap1 from "./truyen-ma-nha-hoang-dau-lang-tap-1.json";
+import truyenMaNhaHoangDauLangTap2 from "./truyen-ma-nha-hoang-dau-lang-tap-2.json";
+import truyenBatComCuoiCungTap1 from "./truyen-bat-com-cuoi-cung-tap-1.json";
+import truyenBatComCuoiCungTap2 from "./truyen-bat-com-cuoi-cung-tap-2.json";
+import truyenVuaLyDoiDoTap1 from "./truyen-vua-ly-doi-do-tap-1.json";
+import truyenVuaLyDoiDoTap2 from "./truyen-vua-ly-doi-do-tap-2.json";
+import truyenNguoiLinhChoDoiTap1 from "./truyen-nguoi-linh-cho-doi-tap-1.json";
+import truyenNguoiLinhChoDoiTap2 from "./truyen-nguoi-linh-cho-doi-tap-2.json";
+import truyenTamCamCaBongTap1 from "./truyen-tam-cam-ca-bong-tap-1.json";
+import truyenTamCamCaBongTap2 from "./truyen-tam-cam-ca-bong-tap-2.json";
+import truyenTamCamCaBongTap3 from "./truyen-tam-cam-ca-bong-tap-3.json";
+import truyenBongDenGiuaDongTap1 from "./truyen-bong-den-giua-dong-tap-1.json";
+import truyenBongDenGiuaDongTap2 from "./truyen-bong-den-giua-dong-tap-2.json";
+import truyenAnDuongVuongNoThanTap1 from "./truyen-an-duong-vuong-no-than-tap-1.json";
+import truyenAnDuongVuongNoThanTap2 from "./truyen-an-duong-vuong-no-than-tap-2.json";
+import enJackOLanternPart1 from "./en-jack-o-lantern-part-1.json";
+import enJackOLanternPart2 from "./en-jack-o-lantern-part-2.json";
+import enVanishingHitchhikerPart1 from "./en-vanishing-hitchhiker-part-1.json";
+import enVanishingHitchhikerPart2 from "./en-vanishing-hitchhiker-part-2.json";
+import enTwoBrothersWheatPart1 from "./en-two-brothers-wheat-part-1.json";
+import enTwoBrothersWheatPart2 from "./en-two-brothers-wheat-part-2.json";
+import enChessboardRiceHistoryPart1 from "./en-chessboard-rice-history-part-1.json";
+import enChessboardRiceHistoryPart2 from "./en-chessboard-rice-history-part-2.json";
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
 //
@@ -414,16 +427,29 @@ export const EPISODES: SucKhoeEpisode[] = [
   enThymeTeaCough,
   enPassionflowerTeaSleep,
   enCalendulaSalveCuts,
-  truyenCayTreTramDot,
-  truyenMaNhaHoangDauLang,
-  truyenBatComCuoiCung,
-  truyenVuaLyDoiDo,
-  truyenTamCamCaBong,
-  truyenBongDenGiuaDong,
-  truyenNguoiLinhChoDoi,
-  truyenAnDuongVuongNoThan,
-  enJackOLanternFolklore,
-  enVanishingHitchhiker,
-  enTwoBrothersWheat,
-  enChessboardRiceHistory,
+  truyenCayTreTramDotTap1,
+  truyenCayTreTramDotTap2,
+  truyenMaNhaHoangDauLangTap1,
+  truyenMaNhaHoangDauLangTap2,
+  truyenBatComCuoiCungTap1,
+  truyenBatComCuoiCungTap2,
+  truyenVuaLyDoiDoTap1,
+  truyenVuaLyDoiDoTap2,
+  truyenNguoiLinhChoDoiTap1,
+  truyenNguoiLinhChoDoiTap2,
+  truyenTamCamCaBongTap1,
+  truyenTamCamCaBongTap2,
+  truyenTamCamCaBongTap3,
+  truyenBongDenGiuaDongTap1,
+  truyenBongDenGiuaDongTap2,
+  truyenAnDuongVuongNoThanTap1,
+  truyenAnDuongVuongNoThanTap2,
+  enJackOLanternPart1,
+  enJackOLanternPart2,
+  enVanishingHitchhikerPart1,
+  enVanishingHitchhikerPart2,
+  enTwoBrothersWheatPart1,
+  enTwoBrothersWheatPart2,
+  enChessboardRiceHistoryPart1,
+  enChessboardRiceHistoryPart2,
 ] as SucKhoeEpisode[];

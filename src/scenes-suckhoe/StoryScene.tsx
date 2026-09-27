@@ -10,18 +10,19 @@ import {
 import { NutritionBackground } from "../components/NutritionBackground";
 import { KitchenBackdrop } from "../components/KitchenBackdrop";
 import { BaTuCharacter } from "../components/BaTuCharacter";
-import { CinematicCamera } from "../components/CinematicCamera";
+import { CinematicCamera, CameraMove } from "../components/CinematicCamera";
 import { KaraokeCaption } from "../components/KaraokeCaption";
+import { FireGlow } from "../components/FireGlow";
 import { fonts } from "../fonts";
 import { StoryEpisode } from "../suckhoe/types";
 import { themeForEpisode } from "../suckhoe/themes";
 
 // Storytelling scene (CR-001): Bà Tư narrates a folk tale / village
-// ghost story / parable / history anecdote. Rendered twice per episode —
-// once for the opening beat ("open", maps to the remedy.mp3 slot) and
-// once for the rest of the story ("body", maps to steps.mp3) — reusing
-// the existing 4-scene audio pipeline so voiceover, captions and
-// duration resolution need no changes.
+// mystery / parable / history anecdote, one storyPart per scene instance
+// (audio file part-<index>.mp3). She holds an open storybook beside a
+// fire glow — the "grandma telling tales" staging. Longer stories split
+// into as many of these as needed (~10-20s each), so a real 5-7 beat
+// tale runs 90-150s instead of the cramped 40s version.
 
 const CATEGORY_LABEL: Record<string, { vi: string; en: string }> = {
   "co-tich": { vi: "TRUYỆN CỔ TÍCH", en: "FOLK TALE" },
@@ -34,25 +35,35 @@ const CATEGORY_LABEL: Record<string, { vi: string; en: string }> = {
   "en-history": { vi: "WEIRD HISTORY", en: "WEIRD HISTORY" },
 };
 
+// Different camera move per beat so consecutive scenes never feel like
+// the same shot repeated — slow drift for quiet exposition, push for
+// the reveal/climax beats.
+const CAMERA_ROTATION: CameraMove[] = ["drift-left", "push", "drift-right", "pull"];
+
 export const StoryScene: React.FC<{
   episode: StoryEpisode;
   hasAudio: boolean;
-  /** Which audio/caption slot this instance reads: "remedy" = parts[0], "steps" = parts[1..n]. */
-  audioKey: "remedy" | "steps";
-}> = ({ episode, hasAudio, audioKey }) => {
+  partIndex: number;
+  /** Audio/caption slot: part-0, part-1, ... */
+  audioKey: string;
+}> = ({ episode, hasAudio, partIndex, audioKey }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const theme = themeForEpisode(episode);
   const isEn = episode.locale === "en";
 
-  const text =
-    audioKey === "remedy"
-      ? (episode.storyParts[0] ?? "")
-      : episode.storyParts.slice(1).join(" ");
+  const text = episode.storyParts[partIndex] ?? "";
 
   const label =
     CATEGORY_LABEL[episode.category ?? ""]?.[isEn ? "en" : "vi"] ??
     (isEn ? "STORY" : "TRUYỆN");
+  // Serialized tales get an episode-number chip under the category
+  // label, so viewers landing mid-series know where they are.
+  const partLabel = episode.seriesPart
+    ? isEn
+      ? `PART ${episode.seriesPart}${episode.seriesTotal ? ` OF ${episode.seriesTotal}` : ""}`
+      : `TẬP ${episode.seriesPart}${episode.seriesTotal ? `/${episode.seriesTotal}` : ""}`
+    : null;
 
   const charSpring = spring({
     frame: frame - 8,
@@ -78,8 +89,9 @@ export const StoryScene: React.FC<{
       ) : null}
 
       <KitchenBackdrop accent={theme.accent} />
+      <FireGlow accent={theme.accent} />
 
-      <CinematicCamera move={audioKey === "remedy" ? "drift-left" : "push"}>
+      <CinematicCamera move={CAMERA_ROTATION[partIndex % CAMERA_ROTATION.length]}>
         {/* Category chip, pinned high so it never collides with the card */}
         <div
           style={{
@@ -88,6 +100,8 @@ export const StoryScene: React.FC<{
             left: 0,
             right: 0,
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             justifyContent: "center",
             opacity: interpolate(frame, [6, 18], [0, 1], {
               extrapolateLeft: "clamp",
@@ -110,6 +124,21 @@ export const StoryScene: React.FC<{
           >
             {label}
           </div>
+          {partLabel ? (
+            <div
+              style={{
+                fontFamily: fonts.sans,
+                fontWeight: 700,
+                fontSize: 22,
+                letterSpacing: 3,
+                color: theme.ink,
+                marginTop: 14,
+                opacity: 0.85,
+              }}
+            >
+              {partLabel}
+            </div>
+          ) : null}
         </div>
 
         {/* Storyteller + card side by side, centered above the caption zone */}
@@ -129,7 +158,7 @@ export const StoryScene: React.FC<{
           }}
         >
           <div style={{ transform: `scale(${charScale})`, flexShrink: 0 }}>
-            <BaTuCharacter scale={0.58} isSpeaking={hasAudio} />
+            <BaTuCharacter scale={0.72} isSpeaking={hasAudio} gesture="book" />
           </div>
 
           <div

@@ -283,21 +283,70 @@ console.log(`Recorded videoId in ${publishedPath}`);
 const localeKey = isEn ? "en" : "vi";
 const playlistId = episode.category ? playlistMap[localeKey]?.[episode.category] : undefined;
 
-if (playlistId) {
+const addToPlaylist = async (id, label) => {
   try {
     await youtube.playlistItems.insert({
       part: ["snippet"],
       requestBody: {
         snippet: {
-          playlistId,
+          playlistId: id,
           resourceId: { kind: "youtube#video", videoId: res.data.id },
         },
       },
     });
-    console.log(`Added to playlist ${playlistId} (category: ${episode.category})`);
+    console.log(`Added to playlist ${id} (${label})`);
   } catch (err) {
-    console.error(`Failed to add to playlist ${playlistId}: ${err.message ?? err}`);
+    console.error(`Failed to add to playlist ${id}: ${err.message ?? err}`);
   }
+};
+
+if (playlistId) {
+  await addToPlaylist(playlistId, `category: ${episode.category}`);
 } else if (episode.category) {
   console.log(`No playlist mapped for category "${episode.category}" (locale ${localeKey}) — skipping.`);
+}
+
+// Serialized stories (kind "story" with seriesTitle): every part of a
+// tale goes into ONE public playlist named after the series — binge
+// sessions are how story channels grow. The playlist is looked up by
+// exact title on the channel and created on the first part's upload —
+// no repo-side state file to keep in sync. Never throw here: a missed
+// playlist must not fail an otherwise-successful upload.
+if (episode.seriesTitle) {
+  try {
+    let seriesPlaylistId;
+    let pageToken;
+    do {
+      const list = await youtube.playlists.list({
+        part: ["snippet"],
+        mine: true,
+        maxResults: 50,
+        pageToken,
+      });
+      seriesPlaylistId = (list.data.items ?? []).find(
+        (p) => p.snippet?.title === episode.seriesTitle
+      )?.id;
+      pageToken = list.data.nextPageToken;
+    } while (!seriesPlaylistId && pageToken);
+
+    if (!seriesPlaylistId) {
+      const created = await youtube.playlists.insert({
+        part: ["snippet", "status"],
+        requestBody: {
+          snippet: {
+            title: episode.seriesTitle,
+            description:
+              episode.channelTitle +
+              (isEn ? " — serialized storytelling with Grandma June" : " - truyện kể nhiều tập của Bà Tư"),
+          },
+          status: { privacyStatus: "public" },
+        },
+      });
+      seriesPlaylistId = created.data.id;
+      console.log(`Created series playlist "${episode.seriesTitle}": ${seriesPlaylistId}`);
+    }
+    await addToPlaylist(seriesPlaylistId, `series: ${episode.seriesTitle}`);
+  } catch (err) {
+    console.error(`Series playlist step failed for "${episode.seriesTitle}": ${err.message ?? err}`);
+  }
 }

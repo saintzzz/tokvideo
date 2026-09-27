@@ -66,11 +66,26 @@ const validateShortEpisode = async (file, ep) => {
     if (!isStr(ep[f])) err(file, `missing/empty required field "${f}"`);
   }
   if (isStory) {
-    if (!Array.isArray(ep.storyParts) || ep.storyParts.length < 2 || !ep.storyParts.every(isStr)) {
-      err(file, `"storyParts" must be an array of at least 2 non-empty strings`);
+    if (!Array.isArray(ep.storyParts) || ep.storyParts.length < 2 || ep.storyParts.length > 8 || !ep.storyParts.every(isStr)) {
+      err(file, `"storyParts" must be an array of 2-8 non-empty strings (one audio file + scene per beat)`);
+    } else if (ep.storyParts.length < 4) {
+      warn(file, `only ${ep.storyParts.length} storyParts - a real tale wants 5-7 beats (~90-150s)`);
     }
     if (ep.moral !== undefined && !isStr(ep.moral)) {
       err(file, `"moral" must be a non-empty string when present`);
+    }
+    // Serialized tales: seriesTitle + seriesPart go together so the
+    // uploader knows which playlist to file the video under.
+    if (ep.seriesTitle !== undefined || ep.seriesPart !== undefined) {
+      if (!isStr(ep.seriesTitle)) {
+        err(file, `story episodes split into parts need a non-empty "seriesTitle" (the shared playlist name)`);
+      }
+      if (!Number.isInteger(ep.seriesPart) || ep.seriesPart < 1) {
+        err(file, `"seriesPart" must be a positive integer (1 = first part)`);
+      }
+      if (ep.seriesTotal !== undefined && (!Number.isInteger(ep.seriesTotal) || ep.seriesTotal < ep.seriesPart)) {
+        err(file, `"seriesTotal" must be an integer >= seriesPart`);
+      }
     }
   } else if (!Array.isArray(ep.steps) || ep.steps.length === 0 || !ep.steps.every(isStr)) {
     err(file, `"steps" must be a non-empty string array`);

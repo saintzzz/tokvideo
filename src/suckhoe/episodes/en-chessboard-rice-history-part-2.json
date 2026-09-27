@@ -1,0 +1,21 @@
+{
+  "slug": "en-chessboard-rice-history-part-2",
+  "kind": "story",
+  "locale": "en",
+  "channelTitle": "By square 40 the treasurers went pale - the math of the rice chessboard - Part 2",
+  "hook": "In Part 1, the emperor laughed and agreed to pay in rice - doubled each square. Then the treasurers started the real math.",
+  "storyParts": [
+    "By the twentieth square the court stopped laughing. By the thirtieth, the treasurers were emptying granaries. By the fortieth they went pale: the squares demanded more rice than the empire harvested in a decade.",
+    "The sixty-fourth square alone - eighteen quintillion grains - needed more rice than the world had ever grown. The humble request was the most expensive bargain in history.",
+    "Some versions of the tale end kindly: the emperor, impressed, made the inventor his chief advisor and paid him honestly what the treasury could bear.",
+    "The darker versions end with an executioner - emperors don't enjoy being outsmarted in front of the whole court. Either way, nobody ever mocked a modest request again.",
+    "Mathematicians still teach the story today. It's the oldest cautionary tale about exponential growth - and it fit on a board you could carry in one hand."
+  ],
+  "moral": "Grandma June's takeaway: never laugh at a small number that's doubling - it's how most fortunes and most debts are really made.",
+  "cta": "Would you have taken the rice deal? Tell Grandma June what you'd have asked for instead",
+  "category": "en-history",
+  "hookStyle": "pov",
+  "seriesTitle": "The Rice Chessboard - Grandma June Story Time",
+  "seriesPart": 2,
+  "seriesTotal": 2
+}

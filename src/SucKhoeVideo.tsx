@@ -10,14 +10,17 @@ import { CTAScene } from "./scenes-suckhoe/CTAScene";
 import { MusicBed } from "./components/MusicBed";
 import { ProgressBar } from "./components/ProgressBar";
 import { PolishOverlay } from "./components/PolishOverlay";
-import { SucKhoeSceneKey, TRANSITION_FRAMES } from "./timing";
+import { TRANSITION_FRAMES } from "./timing";
 import { SucKhoeEpisode } from "./suckhoe/types";
 import { themeForEpisode } from "./suckhoe/themes";
 
 export type SucKhoeVideoProps = {
   episode: SucKhoeEpisode;
-  sceneDurations: Record<SucKhoeSceneKey, number>;
-  hasAudio: Record<SucKhoeSceneKey, boolean>;
+  // Remedy episodes use the fixed keys hook/remedy/steps/cta; story
+  // episodes use hook/part-0..part-N/cta, resolved per episode in
+  // SucKhoeComposition — so these are keyed loosely by string.
+  sceneDurations: Record<string, number>;
+  hasAudio: Record<string, boolean>;
 };
 
 const transition = () => (
@@ -37,6 +40,7 @@ export const SucKhoeVideo: React.FC<SucKhoeVideoProps> = ({
   hasAudio,
 }) => {
   const theme = themeForEpisode(episode);
+  const isStory = episode.kind === "story";
   return (
     <AbsoluteFill>
       <MusicBed episode={episode} />
@@ -45,22 +49,35 @@ export const SucKhoeVideo: React.FC<SucKhoeVideoProps> = ({
           <HookScene episode={episode} hasAudio={hasAudio.hook} />
         </TransitionSeries.Sequence>
         {transition()}
-        <TransitionSeries.Sequence durationInFrames={sceneDurations.remedy}>
-          {episode.kind === "story" ? (
-            <StoryScene episode={episode} hasAudio={hasAudio.remedy} audioKey="remedy" />
-          ) : (
-            <RemedyScene episode={episode} hasAudio={hasAudio.remedy} />
-          )}
-        </TransitionSeries.Sequence>
-        {transition()}
-        <TransitionSeries.Sequence durationInFrames={sceneDurations.steps}>
-          {episode.kind === "story" ? (
-            <StoryScene episode={episode} hasAudio={hasAudio.steps} audioKey="steps" />
-          ) : (
-            <StepsScene episode={episode} hasAudio={hasAudio.steps} />
-          )}
-        </TransitionSeries.Sequence>
-        {transition()}
+        {isStory ? (
+          // One scene per story beat — a real tale needs 5-7 beats
+          // (~90-150s total) rather than cramming into the 40s
+          // remedy-style slot layout.
+          episode.storyParts.map((_, i) => (
+            <React.Fragment key={i}>
+              <TransitionSeries.Sequence durationInFrames={sceneDurations[`part-${i}`]}>
+                <StoryScene
+                  episode={episode}
+                  hasAudio={hasAudio[`part-${i}`]}
+                  partIndex={i}
+                  audioKey={`part-${i}`}
+                />
+              </TransitionSeries.Sequence>
+              {transition()}
+            </React.Fragment>
+          ))
+        ) : (
+          <>
+            <TransitionSeries.Sequence durationInFrames={sceneDurations.remedy}>
+              <RemedyScene episode={episode} hasAudio={hasAudio.remedy} />
+            </TransitionSeries.Sequence>
+            {transition()}
+            <TransitionSeries.Sequence durationInFrames={sceneDurations.steps}>
+              <StepsScene episode={episode} hasAudio={hasAudio.steps} />
+            </TransitionSeries.Sequence>
+            {transition()}
+          </>
+        )}
         <TransitionSeries.Sequence durationInFrames={sceneDurations.cta}>
           <CTAScene episode={episode} hasAudio={hasAudio.cta} />
         </TransitionSeries.Sequence>
