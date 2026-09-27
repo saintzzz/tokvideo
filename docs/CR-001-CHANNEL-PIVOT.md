@@ -76,7 +76,7 @@ Phản hồi của owner: truyện 40s thì "làm gì có nội dung gì" - cổ
 ### Đã thay đổi
 
 1. **Độ dài**: format 40s (2-3 storyParts nhồi vào 2 scene remedy cũ) bị loại. Mỗi storyPart giờ là MỘT scene riêng + MỘT file voiceover (part-N.mp3) - tập đơn 5-7 nhịp ~60-90s, trong giới hạn Shorts 3 phút.
-2. **Serialization**: truyện đủ dài được chia 2-3 tập, mỗi tập là một episode file riêng (`-tap-1`, `-tap-2`), chung `seriesTitle`. Uploader tự tạo 1 YouTube playlist public tên theo series ở lần đăng đầu (cache ID trong `src/suckhoe/series-playlists.json`) - các tập sau tự join. Tập 1 kết bằng cliffhanger CTA, tập 2+ mở bằng recap.
+2. **Serialization**: truyện đủ dài được chia 2-3 tập, mỗi tập là một episode file riêng (`-tap-1`, `-tap-2`), chung `seriesTitle`. Uploader tự tra playlist theo tên trên kênh và tạo public playlist ở lần đăng đầu - các tập sau tự join, không cần file state. Tập 1 kết bằng cliffhanger CTA, tập 2+ mở bằng recap. **publish-next-suckhoe publish TRỌN series trong 1 tick** (không rải mỗi ngày 1 tập) - người xem xong tập 1 xem được luôn tập 2.
 3. **Nhân vật**: gesture mới `book` - Bà Tư cầm sách mở kể chuyện (thay gesture idle). `FireGlow` thêm lửa trại + đom đóm bay cho không khí kể chuyện đêm. Camera move xoay vòng theo partIndex để các cảnh liên tiếp không giống nhau.
 4. **Nội dung**: 12 truyện đơn được viết lại thành 25 tập series (8 VI x2-3 tập, 4 EN x2). Mỗi tập có mini-arc riêng, không phải cắt đoạn tuỳ tiện.
 5. **Scene**: StoryScene hiển thị badge "TẬP N/M" dưới chip thể loại.
