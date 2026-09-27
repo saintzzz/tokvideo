@@ -237,7 +237,9 @@ const res = await withRetry(
           title,
           description,
           tags: buildTags(),
-          categoryId: "26", // Howto & Style
+          // Story shorts are entertainment content; remedy shorts are
+          // how-to. Wrong category mislabels the audience-match signal.
+          categoryId: isStory ? "24" : "26", // Entertainment / Howto & Style
         },
         status: {
           privacyStatus: PRIVACY_STATUS,

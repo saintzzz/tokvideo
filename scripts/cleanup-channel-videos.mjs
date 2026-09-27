@@ -44,13 +44,10 @@ const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
 // Keep set: videoIds belonging to CURRENT episode files only.
 const episodeFiles = (await readdir(episodesDir)).filter((f) => f.endsWith(".json"));
-const currentSlugs = new Set(
-  await Promise.all(
-    episodeFiles.map(
-      async (f) => JSON.parse(await readFile(path.join(episodesDir, f), "utf8")).slug
-    )
-  )
+const currentEpisodes = await Promise.all(
+  episodeFiles.map(async (f) => JSON.parse(await readFile(path.join(episodesDir, f), "utf8")))
 );
+const currentSlugs = new Set(currentEpisodes.map((e) => e.slug));
 const published = Object.fromEntries(
   Object.entries(JSON.parse(await readFile(publishedPath, "utf8"))).map(([k, v]) => [
     k,
@@ -62,15 +59,41 @@ const keepIds = new Set(
     .filter(([slug, v]) => currentSlugs.has(slug) && v?.videoId && !v.deletedAt)
     .map(([, v]) => v.videoId)
 );
+// Secondary keep set by TITLE: an upload whose videoId never landed in
+// published.json (e.g. the commit step failed after a successful upload —
+// observed 2026-09-28, VI story uploads were swept by the next purge)
+// would otherwise be treated as a stray and deleted. Match the exact
+// "<channelTitle> #Shorts" shape upload-youtube.mjs produces.
+const keepTitles = new Set(
+  currentEpisodes
+    .filter((e) => e?.channelTitle)
+    .map((e) => `${e.channelTitle} #Shorts`)
+);
 // videoId -> slug, for stamping the audit trail back onto published.json
 const slugByVideoId = new Map(
   Object.entries(published).filter(([, v]) => v?.videoId).map(([s, v]) => [v.videoId, s])
 );
 console.log(`Keep list: ${keepIds.size} video(s) tied to current story episodes.`);
 
-// Enumerate every upload on the channel via the uploads playlist.
-const channel = await youtube.channels.list({ part: ["contentDetails"], mine: true });
-const uploadsPlaylist = channel.data.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+// Enumerate every upload on the channel via the uploads playlist. If the
+// quota is already spent even listing fails — fail SOFT (exit 0) so the
+// publish step after us still runs; purging is nice-to-have, publishing
+// is the job.
+const isQuotaErr = (err) =>
+  /quotaExceeded|dailyLimitExceeded/i.test(err?.errors?.[0]?.reason ?? "") ||
+  /quota/i.test(err?.message ?? "");
+
+let uploadsPlaylist;
+try {
+  const channel = await youtube.channels.list({ part: ["contentDetails"], mine: true });
+  uploadsPlaylist = channel.data.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+} catch (err) {
+  if (isQuotaErr(err)) {
+    console.log("Cleanup skipped: quota exhausted before listing — publish continues.");
+    process.exit(0);
+  }
+  throw err;
+}
 if (!uploadsPlaylist) {
   console.error("Could not resolve the channel's uploads playlist — aborting, nothing deleted.");
   process.exit(1);
@@ -78,19 +101,27 @@ if (!uploadsPlaylist) {
 
 const allVideos = [];
 let pageToken;
-do {
-  const page = await youtube.playlistItems.list({
-    part: ["contentDetails", "snippet"],
-    playlistId: uploadsPlaylist,
-    maxResults: 50,
-    pageToken,
-  });
-  for (const item of page.data.items ?? []) {
-    const id = item.contentDetails?.videoId;
-    if (id) allVideos.push({ id, title: item.snippet?.title ?? "" });
+try {
+  do {
+    const page = await youtube.playlistItems.list({
+      part: ["contentDetails", "snippet"],
+      playlistId: uploadsPlaylist,
+      maxResults: 50,
+      pageToken,
+    });
+    for (const item of page.data.items ?? []) {
+      const id = item.contentDetails?.videoId;
+      if (id) allVideos.push({ id, title: item.snippet?.title ?? "" });
+    }
+    pageToken = page.data.nextPageToken;
+  } while (pageToken);
+} catch (err) {
+  if (isQuotaErr(err)) {
+    console.log("Cleanup skipped mid-listing: quota exhausted — publish continues.");
+    process.exit(0);
   }
-  pageToken = page.data.nextPageToken;
-} while (pageToken);
+  throw err;
+}
 
 console.log(`Channel has ${allVideos.length} video(s).`);
 
@@ -106,7 +137,7 @@ let kept = 0;
 let failed = 0;
 let quotaHit = false;
 for (const video of allVideos) {
-  if (keepIds.has(video.id) || alreadyDeletedIds.has(video.id)) {
+  if (keepIds.has(video.id) || keepTitles.has(video.title) || alreadyDeletedIds.has(video.id)) {
     kept++;
     continue;
   }
