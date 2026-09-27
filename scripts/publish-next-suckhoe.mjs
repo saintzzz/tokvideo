@@ -105,6 +105,18 @@ if (!process.env.YOUTUBE_CLIENT_ID || !process.env.YOUTUBE_CLIENT_SECRET || !ref
 // upload-youtube.mjs records the authoritative {publishedAt, videoId}
 // right after a successful insert — only fill in a bare entry here when
 // it somehow didn't (older script versions, manual upload paths).
+// Re-read the file first: upload-youtube.mjs may have just written the
+// videoId, and this script's `published` map was loaded BEFORE the
+// upload ran — writing the stale map back used to clobber the videoId,
+// silently breaking the videoId dedupe on every publish.
+try {
+  const fresh = JSON.parse(await readFile(publishedPath, "utf8"));
+  published = Object.fromEntries(
+    Object.entries(fresh).map(([k, v]) => [k, typeof v === "string" ? { publishedAt: v } : v])
+  );
+} catch {
+  // unreadable — keep the earlier snapshot
+}
 if (!published[next]?.videoId) {
   published[next] = { ...(published[next] ?? {}), publishedAt: new Date().toISOString(), locale };
   await writeFile(publishedPath, JSON.stringify(published, null, 2) + "\n");
