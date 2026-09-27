@@ -121,6 +121,10 @@ try {
   if (flag[locale]) {
     console.log(`pending-cleanup flag set for "${locale}" — running channel purge first.`);
     run("node", ["scripts/cleanup-channel-videos.mjs", `--locale=${locale}`], uploadEnv);
+    // Same flag gate: rebrand the channel (title/description/keywords)
+    // to the story direction. Idempotent — re-applies each tick while
+    // the flag lives, stops once the owner removes it.
+    run("node", ["scripts/update-channel-branding.mjs", `--locale=${locale}`], uploadEnv);
   }
 } catch {
   // no flag file — normal publish path

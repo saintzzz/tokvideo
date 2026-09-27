@@ -1,0 +1,16 @@
+{
+  "vi": {
+    "title": "Bà Tư Kể Chuyện",
+    "description": "Bà Tư ngồi bên lửa kể chuyện cho con cháu nghe: truyện cổ tích, chuyện ly kỳ làng quê, chuyện cảm động và giai thoại lịch sử Việt Nam - kể bằng hoạt hình, chia thành từng tập trọn cốt truyện.\n\nTruyện mới ra mắt mỗi ngày. Mỗi truyện một playlist, xem hết một lần.\n\nBà Tư đọc hết comment - muốn nghe truyện gì cứ nhắn nhé.",
+    "keywords": "truyện cổ tích,kể chuyện,chuyện ma làng quê,chuyện cảm động,giai thoại lịch sử,truyện ngắn,hoạt hình,truyện kể việt nam,cổ tích việt nam,tấm cám",
+    "country": "VN",
+    "defaultLanguage": "vi"
+  },
+  "en": {
+    "title": "Grandma June Story Time",
+    "description": "Grandma June sits by the fire and tells stories: folk tales, spooky village legends, heartwarming parables, and strange-but-true history - animated and told in complete serialized parts.\n\nNew stories every day. Every tale gets its own playlist, so you can binge the whole arc.\n\nGrandma June reads every comment - tell her which tale to tell next.",
+    "keywords": "folk tales,storytime,animated stories,spooky stories,urban legends,weird history,bedtime stories,grandma stories,jack o lantern,vanishing hitchhiker",
+    "country": "US",
+    "defaultLanguage": "en"
+  }
+}
