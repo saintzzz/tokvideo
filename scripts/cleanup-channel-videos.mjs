@@ -120,7 +120,12 @@ for (const video of allVideos) {
     console.log(`Deleted: ${video.title.slice(0, 70)} (${video.id}${slug ? `, slug ${slug}` : ""})`);
   } catch (err) {
     const reason = err?.errors?.[0]?.reason ?? "";
-    if (/quotaExceeded|dailyLimitExceeded/i.test(reason)) {
+    // GaxiosError shapes vary: reason may live on err.errors,
+    // err.response.data.error.errors, or only inside message text.
+    const quotaError =
+      /quotaExceeded|dailyLimitExceeded/i.test(reason) ||
+      /quota/i.test(err?.message ?? "");
+    if (quotaError) {
       console.error(`Quota exhausted after ${deleted} deletions — next publish tick continues.`);
       quotaHit = true;
       break;

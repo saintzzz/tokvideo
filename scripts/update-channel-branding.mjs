@@ -37,34 +37,40 @@ const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
-// channels.update requires the FULL brandingSettings back — a partial
-// update can wipe fields it didn't return. Read current settings first
-// and merge.
-const current = await youtube.channels.list({ part: ["brandingSettings"], mine: true });
-const existing = current.data.items?.[0]?.brandingSettings ?? {};
-const channelId = current.data.items?.[0]?.id;
+try {
+  // channels.update requires the FULL brandingSettings back — a partial
+  // update can wipe fields it didn't return. Read current settings first
+  // and merge.
+  const current = await youtube.channels.list({ part: ["brandingSettings"], mine: true });
+  const existing = current.data.items?.[0]?.brandingSettings ?? {};
+  const channelId = current.data.items?.[0]?.id;
 
-const updated = {
-  ...existing,
-  channel: {
-    ...(existing.channel ?? {}),
-    title: branding.title,
-    description: branding.description,
-    keywords: branding.keywords,
-    country: branding.country,
-    defaultLanguage: branding.defaultLanguage,
-  },
-  image: {
-    ...(existing.image ?? {}),
-    // Banner art lives in the repo so it's versioned with the brand;
-    // YouTube fetches it from the raw GitHub URL on every update.
-    bannerExternalUrl: `https://raw.githubusercontent.com/saintzzz/tokvideo/main/public/channel-banner-${locale}.png`,
-  },
-};
+  const updated = {
+    ...existing,
+    channel: {
+      ...(existing.channel ?? {}),
+      title: branding.title,
+      description: branding.description,
+      keywords: branding.keywords,
+      country: branding.country,
+      defaultLanguage: branding.defaultLanguage,
+    },
+    image: {
+      ...(existing.image ?? {}),
+      // Banner art lives in the repo so it's versioned with the brand;
+      // YouTube fetches it from the raw GitHub URL on every update.
+      bannerExternalUrl: `https://raw.githubusercontent.com/saintzzz/tokvideo/main/public/channel-banner-${locale}.png`,
+    },
+  };
 
-await youtube.channels.update({
-  part: ["brandingSettings"],
-  requestBody: { id: channelId, brandingSettings: updated },
-});
+  await youtube.channels.update({
+    part: ["brandingSettings"],
+    requestBody: { id: channelId, brandingSettings: updated },
+  });
 
-console.log(`Channel ${channelId} rebranded: "${branding.title}" (country=${branding.country}, lang=${branding.defaultLanguage})`);
+  console.log(`Channel ${channelId} rebranded: "${branding.title}" (country=${branding.country}, lang=${branding.defaultLanguage})`);
+} catch (err) {
+  // Branding is a nice-to-have — a quota-exhausted API must not kill the
+  // whole publish job. It re-applies on the next tick anyway.
+  console.warn(`Branding skipped this tick: ${err?.message ?? err}`);
+}
