@@ -813,6 +813,9 @@ jobs:
       - name: Render episode
         run: node scripts/render-suckhoe-long.mjs ${{ github.event.inputs.long_form_slug }}
 
+      - name: Make thumbnail
+        run: node scripts/make-long-thumbnail.mjs ${{ github.event.inputs.long_form_slug }}
+
       - name: Upload video artifact
         if: always()
         uses: actions/upload-artifact@v4

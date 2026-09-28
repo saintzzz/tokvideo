@@ -1,0 +1,103 @@
+{
+  "note": "Backlog ý tưởng xếp hạng theo tiềm năng tăng trưởng - nguồn cho daily-content-writer. status: planned | written | published.",
+  "groups": {
+    "A_written": {
+      "desc": "Đã viết, đang trong queue publish",
+      "items": [
+        {"id": "an-duong-vuong-no-than", "title": "An Dương Vương và Nỏ Thần", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 2, "status": "published"},
+        {"id": "tam-cam", "title": "Tấm Cám", "locale": "vi", "category": "co-tich", "parts": 3, "status": "written"},
+        {"id": "cay-tre-tram-dot", "title": "Cây Tre Trăm Đốt", "locale": "vi", "category": "co-tich", "parts": 2, "status": "written"},
+        {"id": "ma-lang-que", "title": "Chuyện ly kỳ làng quê", "locale": "vi", "category": "ly-ky", "parts": 2, "status": "written"},
+        {"id": "jack-o-lantern", "title": "Jack-o'-Lantern", "locale": "en", "category": "folk", "parts": 2, "status": "written"},
+        {"id": "vanishing-hitchhiker", "title": "Vanishing Hitchhiker", "locale": "en", "category": "urban", "parts": 2, "status": "written"},
+        {"id": "two-brothers", "title": "Two Brothers", "locale": "en", "category": "folk", "parts": 2, "status": "written"},
+        {"id": "chessboard-rice", "title": "Chessboard of Rice", "locale": "en", "category": "history", "parts": 2, "status": "published"}
+      ]
+    },
+    "B_co_tich_tim_kiem_cao": {
+      "desc": "Cổ tích VN nổi tiếng, search volume cao - ưu tiên viết trước",
+      "items": [
+        {"id": "thach-sanh", "title": "Thạch Sanh", "locale": "vi", "category": "co-tich", "parts": 3, "priority": 95},
+        {"id": "so-dua", "title": "Sọ Dừa", "locale": "vi", "category": "co-tich", "parts": 3, "priority": 92},
+        {"id": "cay-khe", "title": "Cây Khế - Ăn Khế Trả Vàng", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 90},
+        {"id": "son-tinh-thuy-tinh", "title": "Sơn Tinh Thủy Tinh", "locale": "vi", "category": "co-tich", "parts": 3, "priority": 88},
+        {"id": "banh-chung-banh-giay", "title": "Sự Tích Bánh Chưng Bánh Giầy", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 85},
+        {"id": "con-rong-chau-tien", "title": "Con Rồng Cháu Tiên", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 85},
+        {"id": "su-tich-trau-cau", "title": "Sự Tích Trầu Cau", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 82},
+        {"id": "thanh-giong", "title": "Thánh Gióng", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 82},
+        {"id": "chu-dong-tu", "title": "Chử Đồng Tử", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 80},
+        {"id": "ong-tao", "title": "Sự Tích Ông Táo", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 78},
+        {"id": "muoi-hai-ba-mu", "title": "Mười Hai Bà Mụ", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 72},
+        {"id": "tam-cam-phien-ban-ma-nuoc", "title": "Phần Hậu Tấm Cám (bản làng kể)", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 75},
+        {"id": "de-lai-chau-nghi", "title": "Để Lại Châu Nghìn", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 70},
+        {"id": "con-meo-doi-hinh", "title": "Con Mèo Đổi Hình", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 68},
+        {"id": "ong-lao-danh-ca", "title": "Ông Lão Đánh Cá Và Con Cá Vàng", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 75},
+        {"id": "nang-tien-ca-viet", "title": "Nàng Tiên Cá Bản Việt", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 73},
+        {"id": "cau-be-thong-minh", "title": "Cậu Bé Thông Minh", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 70},
+        {"id": "trai-cay-nuoc-nam", "title": "Sự Tích Dưa Hấu", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 68},
+        {"id": "thach-sanh-ly-thong", "title": "Thạch Sanh - Lý Thông (bản đầy đủ)", "locale": "vi", "category": "co-tich", "parts": 2, "priority": 80},
+        {"id": "nang-tien-ong", "title": "Nàng Tiên Ốc", "locale": "vi", "category": "co-tich", "parts": 1, "priority": 70}
+      ]
+    },
+    "C_ly_ky_lang_que": {
+      "desc": "Chuyện lạ/ma nhẹ làng quê - luôn có lời giải hoặc bài học cuối truyện",
+      "items": [
+        {"id": "gieng-lang-nua-dem", "title": "Giếng Làng Nửa Đêm", "locale": "vi", "category": "ly-ky", "parts": 2, "priority": 78},
+        {"id": "cay-da-dau-lang", "title": "Cây Đa Đầu Làng", "locale": "vi", "category": "ly-ky", "parts": 2, "priority": 76},
+        {"id": "den-dau-xanh", "title": "Bóng Đèn Dầu Xanh", "locale": "vi", "category": "ly-ky", "parts": 2, "priority": 75},
+        {"id": "ma-da-song", "title": "Ma Da Vực Sông", "locale": "vi", "category": "ly-ky", "parts": 2, "priority": 77},
+        {"id": "ngoi-mieu-hoang", "title": "Ngôi Miếu Hoang", "locale": "vi", "category": "ly-ky", "parts": 2, "priority": 74},
+        {"id": "tieng-khen-chieu", "title": "Tiếng Khèn Chiều Mưa", "locale": "vi", "category": "ly-ky", "parts": 1, "priority": 70},
+        {"id": "nguoi-di-dan-mua", "title": "Người Đi Đánh Mưa", "locale": "vi", "category": "ly-ky", "parts": 1, "priority": 68},
+        {"id": "chiec-khan-trang", "title": "Chiếc Khăn Trắng Trên Xà Nhà", "locale": "vi", "category": "ly-ky", "parts": 1, "priority": 66},
+        {"id": "cu-ong-ban-la", "title": "Cụ Ông Bán Lá Rau Đắng", "locale": "vi", "category": "ly-ky", "parts": 1, "priority": 65},
+        {"id": "nha-ba-noi-hoang", "title": "Nhà Bà Nội Hoang", "locale": "vi", "category": "ly-ky", "parts": 2, "priority": 72}
+      ]
+    },
+    "D_giai_thoai_lich_su": {
+      "desc": "Giai thoại lịch sử VN - dễ share, độ tin cậy cao",
+      "items": [
+        {"id": "hai-ba-trung", "title": "Hai Bà Trưng Phất Cờ", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 2, "priority": 84},
+        {"id": "ba-trieu", "title": "Bà Triệu Cưỡi Voi", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 2, "priority": 82},
+        {"id": "tran-hung-dao", "title": "Trần Hưng Đạo Và Bạch Đằng Giang", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 3, "priority": 86},
+        {"id": "nguyen-trai", "title": "Nguyễn Trãi Và Tờ Sớ Thần", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 2, "priority": 80},
+        {"id": "le-loi-tra-kiem", "title": "Lê Lợi Trả Kiếm Hồ Gươm", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 2, "priority": 88},
+        {"id": "chu-van-an", "title": "Chu Văn An - Thầy Giáo Ngàn Đời", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 1, "priority": 72},
+        {"id": "quang-trung", "title": "Quang Trung Phá Quân Thanh", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 3, "priority": 85},
+        {"id": "mi-chau-trong-thuy-full", "title": "Mị Châu Trọng Thủy - Bản Kể Đầy Đủ", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 3, "priority": 83},
+        {"id": "giang-van-minh", "title": "Giang Văn Minh Đối Đáp", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 1, "priority": 70},
+        {"id": "ong-trang-trinh", "title": "Trạng Trình Tiên Tri", "locale": "vi", "category": "giai-thoai-lich-su", "parts": 1, "priority": 74}
+      ]
+    },
+    "E_en_folk_urban": {
+      "desc": "Truyện EN - folklore, urban legends, weird history",
+      "items": [
+        {"id": "baba-yaga", "title": "Baba Yaga's Hut", "locale": "en", "category": "folk", "parts": 2, "priority": 80},
+        {"id": "headless-horseman", "title": "The Headless Horseman", "locale": "en", "category": "urban", "parts": 2, "priority": 78},
+        {"id": "pied-piper", "title": "The Pied Piper", "locale": "en", "category": "folk", "parts": 2, "priority": 76},
+        {"id": "krampus", "title": "Krampus Night", "locale": "en", "category": "folk", "parts": 2, "priority": 75},
+        {"id": "liberty-bell", "title": "The Liberty Bell's Hidden Crack", "locale": "en", "category": "history", "parts": 1, "priority": 70},
+        {"id": "nain-rouge", "title": "The Nain Rouge of Detroit", "locale": "en", "category": "urban", "parts": 2, "priority": 72},
+        {"id": "selkie", "title": "The Selkie Bride", "locale": "en", "category": "folk", "parts": 2, "priority": 74},
+        {"id": "bells-of-church", "title": "The Church Bell That Rang Itself", "locale": "en", "category": "urban", "parts": 1, "priority": 68},
+        {"id": "robert-the-doll", "title": "Robert the Doll", "locale": "en", "category": "urban", "parts": 2, "priority": 74},
+        {"id": "graveyard-shift", "title": "The Graveyard Shift", "locale": "en", "category": "urban", "parts": 2, "priority": 72},
+        {"id": "lincoln-dream", "title": "Lincoln's Last Dream", "locale": "en", "category": "history", "parts": 1, "priority": 70},
+        {"id": "mothman", "title": "The Mothman Warnings", "locale": "en", "category": "urban", "parts": 2, "priority": 77},
+        {"id": "grimm-little-brother", "title": "Grimm: The Little Brother and Sister", "locale": "en", "category": "folk", "parts": 2, "priority": 71},
+        {"id": "green-children", "title": "The Green Children of Woolpit", "locale": "en", "category": "folk", "parts": 2, "priority": 73},
+        {"id": "phantom-ship", "title": "The Phantom Ship of New Haven", "locale": "en", "category": "history", "parts": 1, "priority": 69}
+      ]
+    },
+    "F_xianxia_longform": {
+      "desc": "Series tiên hiệp dài tập - nguồn watch-hours chính",
+      "items": [
+        {"id": "kiem-hon-thuc-tinh", "title": "Kiếm Hồn Thức Tỉnh", "locale": "vi", "category": "xianxia-long", "parts": 10, "priority": 90},
+        {"id": "than-y-ma-de", "title": "Thần Y Ma Đế", "locale": "vi", "category": "xianxia-long", "parts": 10, "priority": 88},
+        {"id": "luyen-khi-muoi-van-nam", "title": "Luyện Khí Mười Vạn Năm", "locale": "vi", "category": "xianxia-long", "parts": 10, "priority": 88},
+        {"id": "hong-tran-nu-de", "title": "Hồng Trần Nữ Đế", "locale": "vi", "category": "xianxia-long", "parts": 10, "priority": 86},
+        {"id": "ma-ton-trong-sinh", "title": "Ma Tôn Trọng Sinh", "locale": "vi", "category": "xianxia-long", "parts": 10, "priority": 86}
+      ]
+    }
+  }
+}

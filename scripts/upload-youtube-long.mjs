@@ -1,4 +1,4 @@
-import { createReadStream } from "node:fs";
+import { createReadStream, existsSync } from "node:fs";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -39,6 +39,12 @@ try {
 
 const isEn = episode.locale === "en";
 
+// Narrator-audiobook story episodes (xianxia/fiction arcs) carry a
+// completely different metadata contract than the remedy-fact-check
+// episodes: different description boilerplate, tags, and category.
+// Narrator-only beats = story; grandma/granddaughter dialogue = remedy.
+const isStory = episode.beats.every((b) => b.speaker === "narrator");
+
 const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN } = {
   CLIENT_ID: process.env.YOUTUBE_CLIENT_ID,
   CLIENT_SECRET: process.env.YOUTUBE_CLIENT_SECRET,
@@ -70,7 +76,23 @@ if ([...episode.title].length > 100) {
   process.exit(1);
 }
 const title = episode.title;
-const description = isEn
+const description = isStory
+  ? isEn
+    ? [
+        episode.description,
+        "",
+        "A serialized fiction story, narrated chapter by chapter. Subscribe and open the playlist to follow the full arc.",
+        "",
+        "#storytime #audiobook #serializedfiction",
+      ].join("\n")
+    : [
+        episode.description,
+        "",
+        "Truyện dài kể theo tập, nghe trọn một lần. Đăng ký kênh và mở playlist để nghe trọn bộ.",
+        "",
+        "#truyendai #truyenkieuhiep #nghetruyen",
+      ].join("\n")
+  : isEn
   ? [
       episode.description,
       "",
@@ -102,10 +124,15 @@ const res = await youtube.videos.insert({
     snippet: {
       title,
       description,
-      tags: isEn
+      tags: isStory
+        ? isEn
+          ? ["storytime", "audiobook", "fiction", "serializedstory"]
+          : ["truyện dài", "truyện tiên hiệp", "nghe truyện", "truyện audio"]
+        : isEn
         ? ["homeremedies", "folkwisdom", "sciencecheck"]
         : ["meodangian", "suckhoe", "kiemchungkhoahoc"],
-      categoryId: "27", // Education
+      // Fiction stories -> Entertainment; remedy fact-checks -> Education.
+      categoryId: isStory ? "24" : "27",
     },
     status: {
       privacyStatus: PRIVACY_STATUS,
@@ -118,6 +145,25 @@ const res = await youtube.videos.insert({
 });
 
 console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
+
+// Custom thumbnail if one was rendered alongside the video
+// (scripts/make-long-thumbnail.mjs). Long-form CTR is thumbnail-driven;
+// the auto-picked frame is usually a dark scene. Fail-soft: a missing or
+// rejected thumbnail never fails the upload.
+const thumbPath = path.join(import.meta.dirname, "..", "out", `SucKhoeLong-${slug}-thumb.png`);
+if (existsSync(thumbPath)) {
+  try {
+    await youtube.thumbnails.set({
+      videoId: res.data.id,
+      media: { body: createReadStream(thumbPath) },
+    });
+    console.log("Custom thumbnail set.");
+  } catch (err) {
+    console.error(`Thumbnail upload failed (video stays up): ${err.message ?? err}`);
+  }
+} else {
+  console.log("No thumbnail file found — YouTube auto frame will be used.");
+}
 
 // Add to the dedicated "long-form" playlist, same pattern as the Shorts
 // upload script (scripts/upload-youtube.mjs) — this was missing entirely
