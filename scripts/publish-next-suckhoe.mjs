@@ -55,6 +55,28 @@ try {
 
 const next = slugs.find((slug) => !published[slug]?.publishedAt && !published[slug]?.videoId);
 
+// Cadence cap: a freshly rebuilt channel that floods the feed reads as
+// spam to the distribution system (documented in
+// docs/COMPETITIVE-RESEARCH.md — new/revived channels get reach only
+// after consistent, spaced publishing). One series per locale per
+// MIN_HOURS_BETWEEN_PUBLISHES is enough: a 2-3 part series already means
+// 2-3 new Shorts that day.
+const MIN_HOURS_BETWEEN_PUBLISHES = 20;
+const lastPublish = Object.entries(published)
+  .filter(([, v]) => v?.publishedAt && v.locale === locale && !v.deletedAt)
+  .map(([, v]) => new Date(v.publishedAt).getTime())
+  .sort((a, b) => b - a)[0];
+if (
+  next &&
+  lastPublish &&
+  Date.now() - lastPublish < MIN_HOURS_BETWEEN_PUBLISHES * 3600_000
+) {
+  console.log(
+    `Cadence cap: last ${locale} publish was ${((Date.now() - lastPublish) / 3600_000).toFixed(1)}h ago (< ${MIN_HOURS_BETWEEN_PUBLISHES}h) — skipping this tick, next series publishes on the following tick.`
+  );
+  process.exit(0);
+}
+
 if (!next) {
   console.log(
     `No new Suc Khoe episode to publish for locale "${locale}" — every ${locale} episode in src/suckhoe/episodes/ is already in published.json. Add more episode content to keep the queue going.`
