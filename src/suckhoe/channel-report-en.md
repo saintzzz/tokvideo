@@ -1,45 +1,28 @@
-# Channel report — 2026-09-27
+# Channel report — 2026-09-29
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 236
-Total videos: 89
+Total views: 175
+Total videos: 8
 
 ## Last 28 days (channel-wide)
 
-Views: 60
-Watch time (minutes): 7
+Views: 40
+Watch time (minutes): 5
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
-## Most recent 25 videos
+## Most recent 8 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| You've probably pulled this weed out of your garden, Grandma June kept it on purpose #Shorts | 0 | 0 | 0 | 2026-09-27 |
-| Can't switch your mind off at bedtime? Grandma June steeps this vine #Shorts | 0 | 0 | 0 | 2026-09-26 |
-| Think mint invented the cough drop? Grandma June says think again #Shorts | 0 | 0 | 0 | 2026-09-26 |
-| The same plant that flavors your beer was Grandma June's bedtime secret #Shorts | 1 | 0 | 0 | 2026-09-26 |
-| Most people just drink apple cider vinegar straight, Grandma June ferments hers for weeks #Shorts | 0 | 0 | 0 | 2026-09-25 |
-| Forget your morning coffee, Grandma June roasted this weed from the yard instead #Shorts | 0 | 0 | 0 | 2026-09-25 |
-| 3 things in your fridge Grandma June uses for tired eyes #Shorts | 0 | 0 | 0 | 2026-09-25 |
-| Forget the medicine cabinet, Grandma June reaches for this flower first #Shorts | 0 | 0 | 0 | 2026-09-25 |
-| Scratchy throat at night? Grandma June's spoonful trick #Shorts | 0 | 0 | 0 | 2026-09-24 |
-| Stomach feeling off? Grandma June's gentle go-to #Shorts | 0 | 0 | 0 | 2026-09-24 |
-| One vegetable, some sugar, and a spoonful eases a nagging cough, grandma's way #Shorts | 0 | 0 | 0 | 2026-09-23 |
-| What's a bottle of olive oil doing on Grandma June's nightstand? #Shorts | 0 | 0 | 0 | 2026-09-23 |
-| Grandma June's other go-to when a cold hits, besides soup #Shorts | 0 | 0 | 0 | 2026-09-22 |
-| Most people reach for the wrong thing first with an itchy rash #Shorts | 0 | 0 | 0 | 2026-09-22 |
-| The plant Grandma June steeps has nothing to do with oatmeal #Shorts | 0 | 0 | 0 | 2026-09-22 |
-| Not turmeric this time - the spice in Grandma June's bedtime milk #Shorts | 0 | 0 | 0 | 2026-09-21 |
-| Feeling a chill coming on? Grandma June heads for the mustard tin #Shorts | 0 | 0 | 0 | 2026-09-21 |
-| Before chest rubs came in a little blue jar, families mixed this paste #Shorts | 0 | 0 | 0 | 2026-09-21 |
-| Grandma June never chews gum before a visit, she does this instead #Shorts | 0 | 0 | 0 | 2026-09-20 |
-| Before soup, this was grandma's actual sick-day food #Shorts | 0 | 0 | 0 | 2026-09-20 |
-| The kitchen shelf trick for a bee sting Grandma June swears by #Shorts | 0 | 0 | 0 | 2026-09-20 |
-| The secret to soft hair in Grandma June's day was sitting in the fridge #Shorts | 0 | 0 | 0 | 2026-09-19 |
-| Why Grandma June keeps a little cloth pouch under her pillow #Shorts | 0 | 0 | 0 | 2026-09-19 |
-| That little brown bottle in Grandma June's cabinet isn't just for cuts #Shorts | 0 | 0 | 0 | 2026-09-19 |
-| Grandma June's cold-night fix wasn't cough syrup, it was this warm mug #Shorts | 0 | 0 | 0 | 2026-09-18 |
+| The photograph on the mantel that explains everything - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
+| The girl in the pale dress on the lonely road - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-29 |
+| They met in the middle of the field, each with a sack on his shoulder - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-28 |
+| Two brothers split the harvest in half - then the piles stopped making sense - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-28 |
+| Why a turnip became a pumpkin - the end of Stingy Jack - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
+| Stingy Jack tricked the Devil himself - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-27 |
+| By square 40 the treasurers went pale - the math of the rice chessboard - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
+| The inventor asked for 'just rice' - the whole court laughed - Part 1 #Shorts | 1 | 0 | 0 | 2026-09-27 |
 
