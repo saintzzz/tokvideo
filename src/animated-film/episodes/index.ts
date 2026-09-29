@@ -10,6 +10,7 @@ import ep09BacSiLongGheNha from "./ep-09-bac-si-long-ghe-nha.json";
 import ep10ToCanhRauMa from "./ep-10-to-canh-rau-ma.json";
 import ep11KetQuaKham from "./ep-11-ket-qua-kham.json";
 import ep12BaTuGianDoi from "./ep-12-ba-tu-gian-doi.json";
+import ep13ThucDonMoi from "./ep-13-thuc-don-moi.json";
 import { AnimatedFilmEpisode } from "../types";
 
 // Add a new episode: create `episodes/ep-<n hai chữ số>-<slug>.json` with the
@@ -28,4 +29,5 @@ export const EPISODES: AnimatedFilmEpisode[] = [
   ep10ToCanhRauMa,
   ep11KetQuaKham,
   ep12BaTuGianDoi,
+  ep13ThucDonMoi,
 ] as AnimatedFilmEpisode[];
