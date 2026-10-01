@@ -1,14 +1,14 @@
-# Channel report — 2026-09-30
+# Channel report — 2026-10-01
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 175
+Total views: 1
 Total videos: 8
 
 ## Last 28 days (channel-wide)
 
-Views: 35
-Watch time (minutes): 4
+Views: 30
+Watch time (minutes): 3
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0

@@ -1,22 +1,24 @@
-# Channel report — 2026-09-30
+# Channel report — 2026-10-01
 
 Channel: Bà Tư Kể Chuyện
 Subscribers: 250
-Total views: 6
-Total videos: 8
+Total views: 7
+Total videos: 10
 
 ## Last 28 days (channel-wide)
 
-Views: 50
-Watch time (minutes): 14
+Views: 41
+Watch time (minutes): 13
 Subscribers gained: 0
 Subscribers lost: 2
 Net subscriber change: -2
 
-## Most recent 8 videos
+## Most recent 10 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Sự thật đằng sau tiếng khóc trong nhà hoang đầu làng - Tập 2 #Shorts | 3 | 0 | 0 | 2026-09-30 |
+| Căn nhà hoang đầu làng và tiếng khóc đêm rằm - Tập 1 #Shorts | 3 | 0 | 0 | 2026-09-30 |
 | Anh nông dân tìm ra cây tre trăm đốt bằng cách không ai ngờ - Tập 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
 | Ông lão hứa thưởng vàng cho ai tìm được cây tre trăm đốt - Tập 1 #Shorts | 1 | 0 | 0 | 2026-09-29 |
 | Chín ngọn đèn hoa đăng và sự thật về khúc sông định mệnh - Tập 2 #Shorts | 0 | 0 | 0 | 2026-09-28 |
