@@ -1,22 +1,24 @@
-# Channel report — 2026-10-01
+# Channel report — 2026-10-02
 
 Channel: Bà Tư Kể Chuyện
 Subscribers: 250
 Total views: 7
-Total videos: 10
+Total videos: 12
 
 ## Last 28 days (channel-wide)
 
-Views: 41
+Views: 36
 Watch time (minutes): 13
 Subscribers gained: 0
 Subscribers lost: 2
 Net subscriber change: -2
 
-## Most recent 10 videos
+## Most recent 12 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Người lính lạc đường ngồi xuống bên ông Hòa rồi bật khóc - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-01 |
+| Ông lính già chiều nào cũng ra gốc đa chờ người - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Sự thật đằng sau tiếng khóc trong nhà hoang đầu làng - Tập 2 #Shorts | 3 | 0 | 0 | 2026-09-30 |
 | Căn nhà hoang đầu làng và tiếng khóc đêm rằm - Tập 1 #Shorts | 3 | 0 | 0 | 2026-09-30 |
 | Anh nông dân tìm ra cây tre trăm đốt bằng cách không ai ngờ - Tập 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
