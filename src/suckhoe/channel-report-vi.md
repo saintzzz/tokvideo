@@ -1,22 +1,25 @@
-# Channel report — 2026-10-02
+# Channel report — 2026-10-03
 
 Channel: Bà Tư Kể Chuyện
 Subscribers: 250
-Total views: 7
-Total videos: 12
+Total views: 13
+Total videos: 15
 
 ## Last 28 days (channel-wide)
 
-Views: 36
+Views: 40
 Watch time (minutes): 13
 Subscribers gained: 0
 Subscribers lost: 2
 Net subscriber change: -2
 
-## Most recent 12 videos
+## Most recent 15 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Tấm vào cung thành hoàng hậu, mẹ con Cám lại mưu hại - Tập cuối #Shorts | 0 | 0 | 0 | 2026-10-02 |
+| Bụt hiện ra dạy Tấm chôn xương Bống vào bốn lọ - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-02 |
+| Tấm nuôi cá Bống trong giếng, Cám đứng nấp nhìn từ xa - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-02 |
 | Người lính lạc đường ngồi xuống bên ông Hòa rồi bật khóc - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Ông lính già chiều nào cũng ra gốc đa chờ người - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Sự thật đằng sau tiếng khóc trong nhà hoang đầu làng - Tập 2 #Shorts | 3 | 0 | 0 | 2026-09-30 |
