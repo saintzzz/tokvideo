@@ -59,7 +59,7 @@
       "accent": "Ôn câu sai • Gợi ý theo kỹ năng",
       "shot": "review.png",
       "cropTop": 0,
-      "cropHeight": 840,
+      "cropHeight": 760,
       "narration": "Câu từng làm sai được lưu để ôn lại. Gợi ý theo kỹ năng giúp con biết mình cần luyện thêm phần nào.",
       "captions": [
         "Câu từng làm sai được lưu để ôn lại.",
@@ -102,18 +102,7 @@
     }
   ],
   "versions": {
-    "Full": [
-      "hook",
-      "practice",
-      "quest",
-      "review",
-      "report",
-      "cta"
-    ],
-    "Short": [
-      "hook",
-      "review",
-      "cta"
-    ]
+    "Full": ["hook", "practice", "quest", "review", "report", "cta"],
+    "Short": ["hook", "review", "cta"]
   }
 }
