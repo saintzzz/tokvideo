@@ -1,8 +1,8 @@
-# Channel report — 2026-10-04
+# Channel report — 2026-10-05
 
 Channel: Bà Tư Kể Chuyện
 Subscribers: 250
-Total views: 13
+Total views: 14
 Total videos: 17
 
 ## Last 28 days (channel-wide)
@@ -17,7 +17,7 @@ Net subscriber change: -2
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Rồng vàng hiện lên mặt sông Hồng và cái tên Thăng Long ra đời - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-03 |
+| Rồng vàng hiện lên mặt sông Hồng và cái tên Thăng Long ra đời - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-03 |
 | Nhà vua muốn bỏ kinh đô nghìn năm, cả triều đình phản đối - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-03 |
 | Tấm vào cung thành hoàng hậu, mẹ con Cám lại mưu hại - Tập cuối #Shorts | 0 | 0 | 0 | 2026-10-02 |
 | Bụt hiện ra dạy Tấm chôn xương Bống vào bốn lọ - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-02 |
