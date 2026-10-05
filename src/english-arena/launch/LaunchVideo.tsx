@@ -41,7 +41,7 @@ const Proof = ({scene, duration}: {scene: Scene; duration: number}) => {
       <Img src={staticFile(`images/english-arena/${scene.shot}`)} style={{width: "100%", position: "absolute", top: -(scene.cropTop ?? 0) * width / 860, transform: `scale(${scale})`, transformOrigin: "top center"}} />
     </div>
     {scene.id === "practice" && <div style={{position: "absolute", bottom: 20, left: 12, right: 12, display: "flex", gap: 14}}>{["TƯƠNG TÁC", "KHÁM PHÁ", "LUYỆN TẬP"].map((s,i) => <div key={s} style={{flex: 1, textAlign: "center", padding: "20px 0", borderRadius: 18, background: i===1 ? GOLD : "#FFFFFF12", color: i===1 ? INK : "white", fontSize: 22, fontWeight: 800}}>{s}</div>)}</div>}
-    {scene.id === "quest" && <div style={{position: "absolute", top: height + 35, width: 794, height: 240, overflow: "hidden", border: "2px solid #93B5DE55", borderRadius: 30}}><Img src={staticFile("images/english-arena/pet.png")} style={{width: 794, position: "absolute", top: -740 * 794 / 860}} /></div>}
+    {scene.id === "quest" && <div style={{position: "absolute", top: height + 20, width: 794, height: 270, overflow: "hidden", border: "2px solid #93B5DE55", borderRadius: 30}}><Img src={staticFile("images/english-arena/pet.png")} style={{width: 794, position: "absolute", top: -740 * 794 / 860}} /></div>}
     {scene.id === "review" && <div style={{position: "absolute", top: height + 40, fontSize: 33, color: "#95DDCF", fontWeight: 600}}>Nhận ra → Ôn lại → Luyện tiếp</div>}
   </div>;
 };
