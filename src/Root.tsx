@@ -6,6 +6,7 @@ import { IdeverrayComposition } from "./IdeverrayComposition";
 import { AmMuuComposition } from "./AmMuuComposition";
 import { SucKhoeCompositions } from "./SucKhoeComposition";
 import { SucKhoeLongCompositions } from "./SucKhoeLongComposition";
+import { EnglishArenaCompositions } from "./EnglishArenaComposition";
 import { AvatarCompositions } from "./AvatarComposition";
 import { BannerCompositions } from "./BannerComposition";
 
@@ -19,6 +20,7 @@ export const RemotionRoot: React.FC = () => {
       <AmMuuComposition />
       <SucKhoeCompositions />
       <SucKhoeLongCompositions />
+      <EnglishArenaCompositions />
       <AvatarCompositions />
       <BannerCompositions />
     </>

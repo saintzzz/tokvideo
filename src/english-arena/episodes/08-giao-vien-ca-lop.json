@@ -1,0 +1,27 @@
+{
+  "slug": "08-giao-vien-ca-lop",
+  "channelTitle": "Cô muốn cả lớp ôn thi - nhưng ai là người chấm bài?",
+  "persona": "giao-vien",
+  "hook": "Cô muốn cả lớp ôn thi IOE - nhưng ai sẽ là người chấm bài?",
+  "parts": [
+    {
+      "text": "Giao đề in về thì bốn mươi em nhân cả trăm câu - chấm thủ công là không nổi."
+    },
+    {
+      "text": "English Arena tự chấm tức thì - con làm xong là biết đúng sai, cô không phải chấm.",
+      "shot": "game-1.png",
+      "label": "Chấm tự động tức thì"
+    },
+    {
+      "text": "Tài khoản tạo sẵn cho cả lớp - tên đăng nhập và mã PIN, phát phiếu là các em vào luyện.",
+      "shot": "admin-accounts.png",
+      "label": "Cấp tài khoản cả lớp"
+    },
+    {
+      "text": "Em nào luyện, em nào chưa, điểm số ra sao - cô nhìn một cái là biết, không cần thu vở chấm tay.",
+      "shot": "admin-progress.png",
+      "label": "Theo dõi tiến độ lớp"
+    }
+  ],
+  "cta": "Cô thử ngay tại ea.vieschool.com - muốn pilot miễn phí cho lớp thì nhắn VieSchool."
+}

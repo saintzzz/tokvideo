@@ -1,0 +1,24 @@
+{
+  "slug": "04-sai-lai-sai",
+  "channelTitle": "Sai một câu năm lần - không phải con dốt, là con chưa ôn đúng cách",
+  "persona": "phu-huynh",
+  "hook": "Sai một câu đến năm lần - không phải con dốt, là con chưa ôn đúng cách.",
+  "parts": [
+    {
+      "text": "Làm đề mới hoài mà lỗi cũ cứ lặp lại - vì không ai nhắc con ôn lại đúng lúc."
+    },
+    {
+      "text": "English Arena tự gom mọi câu con từng sai về một chỗ - câu nào đang chờ ôn lại nhìn là rõ.",
+      "shot": "review.png",
+      "label": "Ôn lại câu sai"
+    },
+    {
+      "text": "Con ôn lại đúng những câu mình sai - làm đúng vài lần là nhớ lâu luôn."
+    },
+    {
+      "text": "Sai đâu trị đấy - không phải làm lại cả trăm câu vì mấy câu chưa nhớ.",
+      "shot": "coach.png"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - cho con thử miễn phí, sai câu nào ôn lại câu đó."
+}

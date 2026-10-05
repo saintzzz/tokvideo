@@ -46,6 +46,8 @@
     "render:ideverray": "remotion render Ideverray-AoDoi out/Ideverray-AoDoi.mp4",
     "render:ammuu": "remotion render AmMuu-ChienLuoc out/AmMuu-ChienLuoc.mp4",
     "render:suckhoe": "node scripts/render-suckhoe.mjs",
+    "generate-voiceover:ea": "node scripts/generate-voiceover.mjs ea",
+    "render:ea": "node scripts/render-english-arena.mjs",
     "render": "npm run render:gia-cat-luong && npm run render:churchill && npm run render:hippocrates && npm run render:ideverray && npm run render:ammuu && npm run render:suckhoe",
     "youtube-get-refresh-token": "node scripts/youtube-get-refresh-token.mjs",
     "upload-youtube:suckhoe": "node scripts/upload-youtube-all.mjs",

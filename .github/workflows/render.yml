@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long, english-arena]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -93,6 +93,9 @@ jobs:
       suckhoe: ${{ steps.decide.outputs.suckhoe }}
       suckhoe_shared: ${{ steps.decide.outputs.suckhoe_shared }}
       suckhoe_episode_files: ${{ steps.filter.outputs.suckhoe_episodes_files }}
+      english_arena: ${{ steps.decide.outputs.english_arena }}
+      english_arena_shared: ${{ steps.decide.outputs.english_arena_shared }}
+      english_arena_episode_files: ${{ steps.filter.outputs.english_arena_episodes_files }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -156,6 +159,20 @@ jobs:
               - 'src/suckhoe/types.ts'
             suckhoe_episodes:
               - 'src/suckhoe/episodes/*.json'
+            # English Arena marketing ads — same shared/episode split as
+            # suckhoe. A shared-file change re-renders every ad; an
+            # episode-only push renders just that ad. The episodes index
+            # (src/english-arena/episodes/index.ts) is deliberately left
+            # out — it always accompanies a new episode .json anyway.
+            english_arena_shared:
+              - 'src/EnglishArenaVideo.tsx'
+              - 'src/EnglishArenaComposition.tsx'
+              - 'src/scenes-ea/**'
+              - 'scripts/render-english-arena.mjs'
+              - 'src/english-arena/types.ts'
+              - 'public/images/english-arena/**'
+            english_arena_episodes:
+              - 'src/english-arena/episodes/*.json'
 
       # On push: render only videos touched by this change (or every video
       # if a shared file changed). On a manual run: render everything unless
@@ -173,6 +190,8 @@ jobs:
           AMMUU_CHANGED: ${{ steps.filter.outputs.ammuu }}
           SUCKHOE_SHARED_CHANGED: ${{ steps.filter.outputs.suckhoe_shared }}
           SUCKHOE_EPISODES_CHANGED: ${{ steps.filter.outputs.suckhoe_episodes }}
+          ENGLISH_ARENA_SHARED_CHANGED: ${{ steps.filter.outputs.english_arena_shared }}
+          ENGLISH_ARENA_EPISODES_CHANGED: ${{ steps.filter.outputs.english_arena_episodes }}
         run: |
           if [ "$EVENT_NAME" = "schedule" ]; then
             # The scheduled tick only drives publish-next-suckhoe (its own
@@ -294,6 +313,33 @@ jobs:
             echo "ammuu=true" >> "$GITHUB_OUTPUT"
             echo "suckhoe=true" >> "$GITHUB_OUTPUT"
             echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          # English Arena ads are decided separately so the giant chain
+          # above doesn't grow 2 echoes per branch. Renders on: push
+          # touching its files, manual "english-arena" or "all" dispatch.
+          # Any other manual pick (suckhoe, gia-cat-luong, ...) leaves it
+          # off — the picker asked for one specific thing.
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            echo "english_arena=false" >> "$GITHUB_OUTPUT"
+            echo "english_arena_shared=false" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
+            if [ "$SHARED_CHANGED" = "true" ] || [ "$ENGLISH_ARENA_SHARED_CHANGED" = "true" ] || [ "$ENGLISH_ARENA_EPISODES_CHANGED" = "true" ]; then
+              echo "english_arena=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "english_arena=false" >> "$GITHUB_OUTPUT"
+            fi
+            if [ "$SHARED_CHANGED" = "true" ] || [ "$ENGLISH_ARENA_SHARED_CHANGED" = "true" ]; then
+              echo "english_arena_shared=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "english_arena_shared=false" >> "$GITHUB_OUTPUT"
+            fi
+          elif [ "$VIDEO_INPUT" = "english-arena" ] || [ "$VIDEO_INPUT" = "all" ]; then
+            echo "english_arena=true" >> "$GITHUB_OUTPUT"
+            echo "english_arena_shared=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "english_arena=false" >> "$GITHUB_OUTPUT"
+            echo "english_arena_shared=false" >> "$GITHUB_OUTPUT"
           fi
 
   render-gia-cat-luong:
@@ -547,6 +593,87 @@ jobs:
       # path that is allowed to upload to YouTube is publish-next-suckhoe
       # below — it's queue-gated (checks published.json) and rate-limited
       # to one episode per schedule tick. Do not re-add an upload step here.
+
+  # English Arena marketing ads (src/english-arena/episodes/) — vertical
+  # pain-point -> product-proof -> CTA videos for the ea.vieschool.com
+  # online funnel. Same changed-episode targeting as render-suckhoe.
+  # Deliberately NO YouTube upload: these are sales assets the owner
+  # posts to FB/Zalo/TikTok/ads manually after review, not channel
+  # content — an auto-upload here would put product ads on the story
+  # channel and repeat the exact mass-publish signature that killed it.
+  render-english-arena:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.english_arena == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Determine which episodes changed
+        id: targets
+        env:
+          EA_SHARED: ${{ needs.detect-changes.outputs.english_arena_shared }}
+          EPISODE_FILES: ${{ needs.detect-changes.outputs.english_arena_episode_files }}
+        run: |
+          if [ "$EA_SHARED" = "true" ] || [ -z "$EPISODE_FILES" ]; then
+            echo "mode=all" >> "$GITHUB_OUTPUT"
+            echo "Rendering every English Arena ad (shared file changed, or no specific episode file list available)."
+          else
+            slugs=""
+            ids=""
+            for f in $EPISODE_FILES; do
+              if [ -f "$f" ]; then
+                slug=$(basename "$f" .json)
+                slugs="$slugs $slug"
+                ids="$ids ea-$slug"
+              fi
+            done
+            if [ -z "$slugs" ]; then
+              echo "mode=none" >> "$GITHUB_OUTPUT"
+              echo "All changed episode files were deletions — nothing to render."
+            else
+              echo "mode=partial" >> "$GITHUB_OUTPUT"
+              echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
+              echo "ids=$ids" >> "$GITHUB_OUTPUT"
+              echo "Rendering only the changed ad(s): $slugs"
+            fi
+          fi
+
+      - name: Generate voiceover for the affected ad(s) (free Edge neural TTS, no API key)
+        if: steps.targets.outputs.mode != 'none'
+        run: |
+          if [ "${{ steps.targets.outputs.mode }}" = "all" ]; then
+            npm run generate-voiceover:ea
+          else
+            node scripts/generate-voiceover.mjs ${{ steps.targets.outputs.ids }}
+          fi
+
+      - name: Render the affected ad(s)
+        if: steps.targets.outputs.mode != 'none'
+        run: |
+          if [ "${{ steps.targets.outputs.mode }}" = "all" ]; then
+            npm run render:ea
+          else
+            node scripts/render-english-arena.mjs ${{ steps.targets.outputs.slugs }}
+          fi
+
+      - name: Upload video artifacts
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: english-arena-ads
+          path: out/EnglishArena-*.mp4
+          retention-days: 30
+          if-no-files-found: ignore
 
   # Every 4 hours (see the schedule trigger above): publish exactly the
   # next un-published episode and commit the updated queue state back to

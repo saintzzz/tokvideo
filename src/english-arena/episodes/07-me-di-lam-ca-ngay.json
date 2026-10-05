@@ -1,0 +1,26 @@
+{
+  "slug": "07-me-di-lam-ca-ngay",
+  "channelTitle": "Mẹ đi làm cả ngày - làm sao biết con có thật sự luyện bài?",
+  "persona": "phu-huynh",
+  "hook": "Mẹ đi làm cả ngày - làm sao biết con ở nhà có thật sự luyện bài không?",
+  "parts": [
+    {
+      "text": "Gọi điện nhắc thì con bảo làm rồi - mà tin hay không thì chịu."
+    },
+    {
+      "text": "English Arena có báo cáo cho ba mẹ: con làm bao nhiêu câu, ngày nào, đúng bao nhiêu - rõ từng con số.",
+      "shot": "report.png",
+      "label": "Báo cáo cho ba mẹ"
+    },
+    {
+      "text": "Chuỗi ngày liên tiếp khiến con tự giữ thói quen - mẹ không phải đóng vai cảnh sát.",
+      "shot": "home.png",
+      "label": "Chuỗi ngày liên tiếp"
+    },
+    {
+      "text": "Tiến độ đồng bộ - con làm trên máy tính bảng, mẹ xem báo cáo trên điện thoại.",
+      "shot": "report.png"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - con tự luyện, mẹ yên tâm đi làm."
+}

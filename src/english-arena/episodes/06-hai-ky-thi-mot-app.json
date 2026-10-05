@@ -1,0 +1,26 @@
+{
+  "slug": "06-hai-ky-thi-mot-app",
+  "channelTitle": "Thi cả IOE lẫn Violympic Toán tiếng Anh - mua lẻ từng app rất tốn",
+  "persona": "phu-huynh",
+  "hook": "Con thi cả IOE lẫn Violympic Toán tiếng Anh - mua lẻ hai ba app, một năm mất mấy trăm nghìn.",
+  "parts": [
+    {
+      "text": "App này luyện IOE, app kia luyện Toán - con vừa loạn mà mẹ vừa tốn."
+    },
+    {
+      "text": "English Arena gói cả hai trong một: Tiếng Anh và Toán tiếng Anh, đủ năm khối lớp.",
+      "shot": "map-top.png",
+      "label": "Tiếng Anh và Toán tiếng Anh"
+    },
+    {
+      "text": "Luyện đề, thi thử, ôn câu sai, báo cáo phụ huynh - tất cả trong một chỗ.",
+      "shot": "quests.png",
+      "label": "Đủ chế độ luyện"
+    },
+    {
+      "text": "Một tài khoản, một nơi luyện, một báo cáo - mẹ đỡ nhức đầu.",
+      "shot": "report.png"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - một app cho cả hai kỳ thi, thử miễn phí ngay."
+}

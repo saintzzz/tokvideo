@@ -1,0 +1,24 @@
+{
+  "slug": "05-khong-can-email",
+  "channelTitle": "App học nào cũng đòi email, số điện thoại - của con mới tám tuổi?",
+  "persona": "phu-huynh",
+  "hook": "App học nào cũng đòi email, số điện thoại - của con mới tám tuổi?",
+  "parts": [
+    {
+      "text": "English Arena thì không: không email, không số điện thoại, không chat với người lạ.",
+      "shot": "login.png",
+      "label": "Không cần email"
+    },
+    {
+      "text": "Con đăng nhập bằng tên đăng nhập và mã PIN - lớp tạo sẵn, phát phiếu là vào được.",
+      "shot": "login-filled.png",
+      "label": "Tên đăng nhập và PIN"
+    },
+    {
+      "text": "Còn chưa muốn đăng nhập? Cứ bấm Chơi không cần tài khoản - mỗi lớp có một vòng miễn phí.",
+      "shot": "guest-start.png",
+      "label": "Chơi thử miễn phí"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - an toàn cho trẻ, yên tâm cho mẹ."
+}

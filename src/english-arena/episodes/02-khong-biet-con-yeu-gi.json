@@ -1,0 +1,27 @@
+{
+  "slug": "02-khong-biet-con-yeu-gi",
+  "channelTitle": "Con luyện cả tháng mà mẹ không biết con yếu ở đâu",
+  "persona": "phu-huynh",
+  "hook": "Con luyện cả tháng, mà mẹ không biết con đang yếu ở đâu - nghe, ngữ pháp, hay đọc hiểu?",
+  "parts": [
+    {
+      "text": "Luyện bừa thì câu sai cứ lặp lại. Quan trọng là phải biết con yếu đúng chỗ nào."
+    },
+    {
+      "text": "English Arena có báo cáo cho ba mẹ - từng kỹ năng hiện rõ, kỹ năng nào yếu là thấy ngay.",
+      "shot": "report.png",
+      "label": "Báo cáo cho ba mẹ"
+    },
+    {
+      "text": "App còn gợi ý ôn đúng chỗ con còn yếu, dựa trên bài làm bảy ngày gần nhất.",
+      "shot": "coach.png",
+      "label": "Gợi ý theo kỹ năng"
+    },
+    {
+      "text": "Bài kiểm tra đầu vào cho biết con đang ở đâu, trước khi bắt đầu luyện.",
+      "shot": "exam-intro.png",
+      "label": "Kiểm tra đầu vào"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - cho con làm thử một vòng, mẹ xem báo cáo ngay hôm nay."
+}

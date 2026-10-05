@@ -1,0 +1,26 @@
+{
+  "slug": "03-so-phong-thi",
+  "channelTitle": "Đề dài, giờ ngắn - lần đầu vào phòng thi con nào cũng hoảng",
+  "persona": "phu-huynh",
+  "hook": "Đề IOE dài mà thời gian ngắn - lần đầu vào phòng thi, con nào cũng hoảng.",
+  "parts": [
+    {
+      "text": "Hoảng vì lạ format: đồng hồ đếm ngược, hàng trăm câu, phải biết lướt câu, biết nộp bài đúng lúc."
+    },
+    {
+      "text": "English Arena có chế độ Thi thử theo format đề IOE - giống thi thật từ đồng hồ đến nút nộp bài.",
+      "shot": "exam-mid.png",
+      "label": "Thi thử theo format IOE"
+    },
+    {
+      "text": "Cả Toán tiếng Anh nữa - con luyện đề được chữa ngay, thi thử thì căng như thi thật.",
+      "shot": "map-top.png",
+      "label": "Luyện đề và Thi thử"
+    },
+    {
+      "text": "Con quen nhịp rồi thì vào phòng thi chỉ còn việc tập trung làm bài.",
+      "shot": "exam-mid-2.png"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - cho con thi thử một lần trước khi thi thật."
+}

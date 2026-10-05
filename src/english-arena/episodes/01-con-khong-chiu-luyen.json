@@ -1,0 +1,29 @@
+{
+  "slug": "01-con-khong-chiu-luyen",
+  "channelTitle": "Bắt con luyện đề - sao khó hơn đưa con đi thi?",
+  "persona": "phu-huynh",
+  "hook": "Bảo con ngồi luyện đề tiếng Anh mười lăm phút - sao khó hơn cả đưa con đi thi?",
+  "parts": [
+    {
+      "text": "Đề thi thì khô khan, còn game thì con mê tít. Vậy biến bài luyện thành game luôn.",
+      "shot": "game-1.png",
+      "label": "Bài luyện như game"
+    },
+    {
+      "text": "English Arena có sao, huy hiệu, và nhiệm vụ mỗi ngày - con luyện để giữ chuỗi ngày liên tiếp.",
+      "shot": "quests.png",
+      "label": "Nhiệm vụ ngày"
+    },
+    {
+      "text": "Nuôi bạn đồng hành: trả lời đúng là bạn ấy lớn lên. Con tự mở app mà không cần ai nhắc.",
+      "shot": "pet.png",
+      "label": "Bạn đồng hành"
+    },
+    {
+      "text": "Con thích ganh đua thì có Đấu trường - cùng một đề, thi với bạn bè, ai nhanh hơn thắng.",
+      "shot": "arena.png",
+      "label": "Đấu trường 1v1"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - cho con chơi thử một vòng miễn phí, không cần tài khoản."
+}

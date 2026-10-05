@@ -1,10 +1,11 @@
 import { createWriteStream } from "node:fs";
-import { mkdir, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
 import { withRetry } from "./lib/retry.mjs";
 import { probeDurationSeconds, sanityCheckAudio } from "./lib/audio-probe.mjs";
+import { writeCaptions } from "./lib/captions.mjs";
 import giaCatLuongNarration from "../src/narration.json" with { type: "json" };
 import churchillNarration from "../src/narration.churchill.json" with { type: "json" };
 import hippocratesNarration from "../src/narration.hippocrates.json" with { type: "json" };
@@ -229,6 +230,43 @@ for (const episode of ANIMATED_FILM_EPISODES) {
   };
 }
 
+// English Arena marketing ads (src/english-arena/episodes/) — hook +
+// part-N per beat + cta, all Vietnamese. Female voice (HoaiMy) reads
+// warmer for the parent audience than the default NamMinh ad voice.
+const eaDir = path.join(
+  import.meta.dirname,
+  "..",
+  "src",
+  "english-arena",
+  "episodes"
+);
+let EA_EPISODES = [];
+try {
+  const eaFiles = (await readdir(eaDir)).filter((f) => f.endsWith(".json"));
+  EA_EPISODES = await Promise.all(
+    eaFiles.map(async (file) => {
+      const url = pathToFileURL(path.join(eaDir, file));
+      const mod = await import(url, { with: { type: "json" } });
+      return mod.default;
+    })
+  );
+} catch {
+  // Directory doesn't exist yet before the first ad is written.
+}
+const VOICE_EA = process.env.EDGE_TTS_VOICE_EA ?? "vi-VN-HoaiMyNeural";
+for (const episode of EA_EPISODES) {
+  const narration = { hook: episode.hook };
+  (episode.parts ?? []).forEach((part, i) => {
+    narration[`part-${i}`] = part.text;
+  });
+  narration.cta = episode.cta;
+  VIDEOS[`ea-${episode.slug}`] = {
+    audioDir: path.join(publicDir, "english-arena", episode.slug),
+    narration,
+    voice: VOICE_EA,
+  };
+}
+
 // Pass one or more video ids as CLI args to generate only those. The bare
 // id "suckhoe" expands to every "suckhoe-<slug>" Short episode (NOT the
 // long-form ones — those are ~20 minutes each and far too expensive to
@@ -251,6 +289,9 @@ const ids =
         }
         if (id === "animated-film") {
           return Object.keys(VIDEOS).filter((key) => key.startsWith("animated-film-"));
+        }
+        if (id === "ea" || id === "english-arena") {
+          return Object.keys(VIDEOS).filter((key) => key.startsWith("ea-"));
         }
         return [id];
       })
@@ -375,36 +416,12 @@ const healthcheckVoices = async () => {
 
 await healthcheckVoices();
 
-// ── Karaoke caption emission (Q-03) ───────────────────────────────
-// Word timings are allocated proportionally across the real mp3
-// duration — see docs/ARCHITECTURE.md D1. Written next to the audio in
-// public/captions/<videoId>/<scene>.json for KaraokeCaption to fetch.
-const writeCaptions = async (videoId, key, text, durationSec) => {
-  const words = text.split(/\s+/).filter(Boolean);
-  if (!words.length || !durationSec) return;
-  // 92% of the clip is spoken words; the rest is leading/trailing breath.
-  const budget = durationSec * 0.92;
-  const lead = durationSec * 0.04;
-  const weights = words.map((w) => {
-    // Longer words take longer; sentence-ending punctuation adds a pause.
-    const pause = /[.!?,;:…—]$/.test(w) ? 2.5 : 0;
-    return Math.max(w.replace(/[^\p{L}\p{N}]/gu, "").length, 1) + pause;
-  });
-  const total = weights.reduce((a, b) => a + b, 0);
-  let t = lead;
-  const timed = words.map((w, i) => {
-    const dur = (weights[i] / total) * budget;
-    const entry = { w, start: +t.toFixed(3), end: +(t + dur).toFixed(3) };
-    t += dur;
-    return entry;
-  });
-  const dir = path.join(import.meta.dirname, "..", "public", "captions", videoId);
-  await mkdir(dir, { recursive: true });
-  await writeFile(
-    path.join(dir, `${key}.json`),
-    JSON.stringify({ durationSec: +durationSec.toFixed(3), words: timed }, null, 1)
-  );
-};
+// ── Karaoke caption emission (Q-03) — shared implementation lives in
+// lib/captions.mjs so backfill-captions.mjs can rebuild caption JSONs
+// from existing mp3s without re-running TTS.
+const captionsRoot = path.join(import.meta.dirname, "..", "public", "captions");
+const writeCaptionsFor = (videoId, key, text, durationSec) =>
+  writeCaptions(captionsRoot, videoId, key, text, durationSec);
 
 for (const id of ids) {
   const video = VIDEOS[id];
@@ -422,7 +439,7 @@ for (const id of ids) {
     const prosody = isPerBeatEntry ? entry.prosody : PROSODY;
     await synthesize(video.audioDir, key, text, voice, prosody);
     const dur = probeDurationSeconds(path.join(video.audioDir, `${key}.mp3`));
-    if (dur) await writeCaptions(id, key, text, dur);
+    if (dur) await writeCaptionsFor(id, key, text, dur);
   }
 }
 
