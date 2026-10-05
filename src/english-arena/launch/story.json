@@ -1,0 +1,59 @@
+{
+  "fps": 30,
+  "brand": "English Arena",
+  "url": "ea.vieschool.com",
+  "scenes": [
+    {
+      "id": "hook", "kind": "hook", "eyebrow": "TIẾNG ANH CHO HỌC SINH TIỂU HỌC",
+      "title": "Mỗi bài luyện.\nMột khám phá mới.",
+      "accent": "Học mà muốn chơi tiếp.", "shot": "home.png",
+      "narration": "Học tiếng Anh, hay khám phá một trò chơi? Cùng con bắt đầu với English Arena, từ VieSchool.",
+      "captions": ["Học tiếng Anh, hay khám phá một trò chơi?", "Cùng con bắt đầu với English Arena, từ VieSchool."],
+      "seconds": 8
+    },
+    {
+      "id": "practice", "kind": "proof", "eyebrow": "01 / KHÁM PHÁ",
+      "title": "Chạm vào bài học.\nBật lên hứng thú.",
+      "accent": "Tìm chữ thừa • Nghe • Ghép hình", "shot": "game-1.png", "cropTop": 0, "cropHeight": 1010,
+      "narration": "Tìm chữ thừa, nghe và ghép hình. Nhiều dạng bài giúp con luyện tiếng Anh qua từng tương tác nhỏ.",
+      "captions": ["Tìm chữ thừa, nghe và ghép hình.", "Nhiều dạng bài giúp con luyện tiếng Anh", "qua từng tương tác nhỏ."],
+      "seconds": 8
+    },
+    {
+      "id": "quest", "kind": "proof", "eyebrow": "02 / DUY TRÌ",
+      "title": "Hôm nay,\ncon có nhiệm vụ mới.",
+      "accent": "Nhiệm vụ ngày • Sao • Bạn đồng hành", "shot": "quests.png", "cropTop": 720, "cropHeight": 770,
+      "narration": "Nhiệm vụ mỗi ngày, những ngôi sao và bạn đồng hành tạo thêm lý do để con quay lại luyện tập.",
+      "captions": ["Nhiệm vụ mỗi ngày, những ngôi sao", "và bạn đồng hành tạo thêm lý do", "để con quay lại luyện tập."],
+      "seconds": 8
+    },
+    {
+      "id": "review", "kind": "proof", "eyebrow": "03 / CỦNG CỐ",
+      "title": "Câu từng làm sai.\nCơ hội để hiểu hơn.",
+      "accent": "Ôn câu sai • Gợi ý theo kỹ năng", "shot": "review.png", "cropTop": 0, "cropHeight": 840,
+      "narration": "Câu từng làm sai được lưu để ôn lại. Gợi ý theo kỹ năng giúp con biết mình cần luyện thêm phần nào.",
+      "captions": ["Câu từng làm sai được lưu để ôn lại.", "Gợi ý theo kỹ năng giúp con biết", "mình cần luyện thêm phần nào."],
+      "seconds": 8
+    },
+    {
+      "id": "report", "kind": "proof", "eyebrow": "04 / ĐỒNG HÀNH",
+      "title": "Con luyện tập.\nBa mẹ hiểu thêm.",
+      "accent": "Báo cáo hoạt động 7 ngày", "shot": "report.png", "cropTop": 0, "cropHeight": 1720,
+      "narration": "Ba mẹ xem hoạt động bảy ngày và những kỹ năng con cần củng cố, để cùng con chọn bước tiếp theo.",
+      "captions": ["Ba mẹ xem hoạt động bảy ngày", "và những kỹ năng con cần củng cố,", "để cùng con chọn bước tiếp theo."],
+      "seconds": 8
+    },
+    {
+      "id": "cta", "kind": "cta", "eyebrow": "ENGLISH ARENA / VIESCHOOL",
+      "title": "Khám phá cùng con.\nBắt đầu hôm nay.",
+      "accent": "Mỗi lớp 1 vòng miễn phí • Không cần tài khoản", "shot": "login.png",
+      "narration": "Mở e a chấm vie school chấm com. Chọn chơi không cần tài khoản, để thử miễn phí một vòng ở mỗi lớp.",
+      "captions": ["Mở ea.vieschool.com.", "Chọn “Chơi không cần tài khoản”,", "để thử miễn phí một vòng ở mỗi lớp."],
+      "seconds": 9
+    }
+  ],
+  "versions": {
+    "Full": ["hook", "practice", "quest", "review", "report", "cta"],
+    "Short": ["hook", "review", "cta"]
+  }
+}

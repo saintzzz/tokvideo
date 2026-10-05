@@ -1,0 +1,38 @@
+name: English Arena launch review
+on:
+  pull_request:
+    paths:
+      - 'src/english-arena/launch/**'
+      - 'scripts/*ea-launch.mjs'
+      - 'public/ea-launch/**'
+      - '.github/workflows/ea-launch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ea-launch-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: node scripts/prepare-ea-launch.mjs
+      - run: node scripts/render-ea-launch.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: english-arena-launch-review
+          path: |
+            out/EnglishArena-Launch-*
+            public/ea-launch/*.mp3
+            public/ea-launch/music.wav
+            public/ea-launch/timings.json
+          if-no-files-found: error
+          retention-days: 30
