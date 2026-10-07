@@ -1,0 +1,24 @@
+{
+  "slug": "12-so-con-choi-khong-hoc",
+  "channelTitle": "App game hóa quá - sợ con chỉ chơi mà không học?",
+  "persona": "phu-huynh",
+  "hook": "App game hóa quá, mẹ sợ con chỉ chơi mà không học? Nhìn kỹ lại đi.",
+  "parts": [
+    {
+      "text": "Trong English Arena, mỗi vòng chơi là một bài câu hỏi theo format đề thi - con đua điểm bằng câu trả lời đúng.",
+      "shot": "game-1.png",
+      "label": "Chơi là làm đề"
+    },
+    {
+      "text": "Sao, huy hiệu, đấu trường - tất cả chỉ mở ra khi con trả lời đúng câu hỏi bài học.",
+      "shot": "arena.png",
+      "label": "Thưởng bằng kiến thức"
+    },
+    {
+      "text": "Và mẹ không phải tin lời con - báo cáo kỹ năng ghi rõ con làm bao nhiêu câu, đúng bao nhiêu.",
+      "shot": "report.png",
+      "label": "Báo cáo thật"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - cho con chơi thử một vòng, mẹ tự kiểm chứng."
+}

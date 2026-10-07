@@ -11,9 +11,23 @@
     "Con Bống không biết, ngoi lên mừng rỡ - và bị bắt ngay. Chiều ấy Tấm về, thấy nồi cá kho trên bếp mà òa khóc như chết đi một người thân trong nhà."
   ],
   "cta": "Tấm ra giếng gọi mãi mà Bống không ngoi lên - chuyện gì xảy ra tiếp? Xem tập 2 trong playlist Tấm Cám nhé",
+  "imagePrompts": [
+    "Two Vietnamese girls herding water buffalo in a misty green rice field at dawn, one thin hardworking girl in a faded patched ao tu than dress with hair wrapped in cloth, the other plump and lazy resting under a banyan tree",
+    "A thin Vietnamese girl in a faded patched dress gently releasing a tiny silver fish into an old mossy stone well, warm dusk light reflecting on water",
+    "The same thin Vietnamese girl in a faded patched dress calling softly at the stone well edge, a fat golden fish leaping joyfully from the water toward her",
+    "A plump sly Vietnamese girl peeking from behind bamboo at the well, a stern middle-aged woman in dark ao nau scheming beside her, dramatic shadows",
+    "A rustic Vietnamese village kitchen, a pot of caramelized fish simmering on a clay stove, the thin girl in a faded patched dress standing frozen with tears in her eyes, dramatic warm firelight"
+  ],
   "category": "co-tich",
   "hookStyle": "pov",
   "seriesTitle": "Tấm Cám - Cổ Tích Bà Tư Kể",
   "seriesPart": 1,
-  "seriesTotal": 3
+  "seriesTotal": 3,
+  "images": [
+    "images/suckhoe/truyen-tam-cam-ca-bong-tap-1/part-0.jpg",
+    "images/suckhoe/truyen-tam-cam-ca-bong-tap-1/part-1.jpg",
+    "images/suckhoe/truyen-tam-cam-ca-bong-tap-1/part-2.jpg",
+    "images/suckhoe/truyen-tam-cam-ca-bong-tap-1/part-3.jpg",
+    "images/suckhoe/truyen-tam-cam-ca-bong-tap-1/part-4.jpg"
+  ]
 }

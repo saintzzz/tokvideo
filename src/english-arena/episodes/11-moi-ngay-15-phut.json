@@ -1,0 +1,26 @@
+{
+  "slug": "11-moi-ngay-15-phut",
+  "channelTitle": "Không cần học nhiều - chỉ cần đều mỗi ngày",
+  "persona": "phu-huynh",
+  "hook": "Mẹ không cần bắt con học cả buổi tối - chỉ cần mười lăm phút mỗi ngày, nhưng phải đều.",
+  "parts": [
+    {
+      "text": "Nhồi hai tiếng cuối tuần thì con quên mất ba ngày sau. Mười lăm phút mỗi ngày lại nhớ rất lâu."
+    },
+    {
+      "text": "English Arena có nhiệm vụ mỗi ngày vừa sức con - xong là nghỉ, không dồn ép.",
+      "shot": "quests.png",
+      "label": "Nhiệm vụ vừa sức"
+    },
+    {
+      "text": "Chuỗi ngày liên tiếp khiến con tự giữ nhịp - bỏ một ngày là tiếc streak, con tự nhớ.",
+      "shot": "home.png",
+      "label": "Streak mỗi ngày"
+    },
+    {
+      "text": "Mỗi ngày một chút, đến ngày thi con đã quen cả format lẫn nhịp làm bài.",
+      "shot": "exam-mid.png"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - mười lăm phút mỗi ngày, bắt đầu từ vòng chơi miễn phí."
+}

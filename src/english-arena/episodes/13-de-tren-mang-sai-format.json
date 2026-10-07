@@ -1,0 +1,26 @@
+{
+  "slug": "13-de-tren-mang-sai-format",
+  "channelTitle": "Đề luyện trên mạng - sai format, sai dạng, chữa không đáp án",
+  "persona": "phu-huynh",
+  "hook": "Tải đề luyện trên mạng về cho con - sai format, sai dạng câu, xong chẳng ai chữa.",
+  "parts": [
+    {
+      "text": "Đề rời rạc khiến con quen kiểu sai - đến phòng thi thật mới vỡ ra format khác hẳn."
+    },
+    {
+      "text": "English Arena có ngân hàng câu hỏi theo format đề IOE và Violympic - đúng dạng, đúng độ khó, có giải thích.",
+      "shot": "game-2.png",
+      "label": "Theo format đề thi"
+    },
+    {
+      "text": "Con chọn sai là được chữa ngay - biết sai ở đâu chứ không phải đợi ai chấm.",
+      "shot": "game-1.png",
+      "label": "Chữa ngay từng câu"
+    },
+    {
+      "text": "Câu sai tự động quay lại để con ôn - lỗi nào cũng bị dứt điểm.",
+      "shot": "review.png"
+    }
+  ],
+  "cta": "Vào ea.vieschool.com - luyện đúng dạng ngay từ vòng đầu, miễn phí."
+}

@@ -8,7 +8,7 @@ import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { probeDurationSeconds } from "./lib/audio-probe.mjs";
-import { writeCaptions } from "./lib/captions.mjs";
+import { writeAlignedCaptions } from "./lib/captions.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const episodesDir = path.join(root, "src", "english-arena", "episodes");
@@ -40,7 +40,8 @@ for (const file of files) {
       console.warn(`SKIP ea-${slug}/${key}: no mp3 or duration unknown`);
       continue;
     }
-    await writeCaptions(captionsRoot, `ea-${slug}`, key, text, dur);
+    const mp3Path = path.join(audioDir, `${key}.mp3`);
+    await writeAlignedCaptions(captionsRoot, `ea-${slug}`, key, text, mp3Path, dur, "vi");
     console.log(`captions: ea-${slug}/${key} (${dur.toFixed(1)}s)`);
   }
 }

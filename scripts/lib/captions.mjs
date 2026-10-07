@@ -7,6 +7,43 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+// Preferred entry point: real word timings from Whisper alignment when
+// the model/ffmpeg are available (lib/whisper-align.mjs), proportional
+// fallback otherwise — the JSON shape is identical either way.
+// Whisper is skipped for very short clips: proportional allocation is
+// accurate enough on a handful of words and the model load/decode cost
+// is not worth it.
+const MIN_ALIGN_SEC = 4.5;
+export const writeAlignedCaptions = async (
+  captionsRoot,
+  videoId,
+  key,
+  text,
+  mp3Path,
+  durationSec,
+  language = "vi"
+) => {
+  try {
+    if (durationSec < MIN_ALIGN_SEC) throw new Error("short clip");
+    const { alignWords } = await import("./whisper-align.mjs");
+    const aligned = await alignWords(mp3Path, text, language);
+    if (aligned?.length) {
+      const dir = path.join(captionsRoot, videoId);
+      await mkdir(dir, { recursive: true });
+      await writeFile(
+        path.join(dir, `${key}.json`),
+        JSON.stringify(
+          { durationSec: +durationSec.toFixed(3), aligned: true, words: aligned },
+          null,
+          1
+        )
+      );
+      return;
+    }
+  } catch { /* fall back below */ }
+  await writeCaptions(captionsRoot, videoId, key, text, durationSec);
+};
+
 export const writeCaptions = async (captionsRoot, videoId, key, text, durationSec) => {
   const words = String(text).split(/\s+/).filter(Boolean);
   if (!words.length || !durationSec) return;

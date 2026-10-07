@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Audio,
+  Img,
   interpolate,
   spring,
   staticFile,
@@ -82,6 +83,31 @@ export const StoryScene: React.FC<{
     extrapolateRight: "clamp",
   });
 
+  // Generated scene illustration for this beat (generate-story-visuals).
+  // When present it replaces the text card — the narration still plays
+  // and the karaoke caption carries the words, so the image gets the
+  // full frame. A hard mid-scene switch of zoom direction creates the
+  // sub-cut beat every ~4-5s that short-form retention needs, without a
+  // second image.
+  const { durationInFrames } = useVideoConfig();
+  const shot = episode.images?.[partIndex];
+  const half = Math.floor(durationInFrames / 2);
+  const inSecondHalf = frame >= half;
+  const zoomP1 = interpolate(frame, [0, half], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const zoomP2 = interpolate(frame, [half, durationInFrames], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const imgScale = inSecondHalf
+    ? interpolate(zoomP2, [0, 1], [1.3, 1.12])
+    : interpolate(zoomP1, [0, 1], [1.05, 1.24]);
+  const imgPanX = inSecondHalf
+    ? interpolate(zoomP2, [0, 1], [-2.5, 1.5])
+    : interpolate(zoomP1, [0, 1], [0, -2.5]);
+
   return (
     <NutritionBackground theme={theme}>
       {hasAudio ? (
@@ -90,6 +116,48 @@ export const StoryScene: React.FC<{
 
       <KitchenBackdrop accent={theme.accent} />
       <FireGlow accent={theme.accent} />
+
+      {shot ? (
+        <div
+          style={{
+            position: "absolute",
+            top: 210,
+            bottom: 400,
+            left: 44,
+            right: 44,
+            overflow: "hidden",
+            borderRadius: 36,
+            border: `2px solid ${theme.accent}55`,
+            boxShadow: "0 30px 80px rgba(0,0,0,0.55)",
+            opacity: cardOpacity,
+            transform: `translateY(${cardY}px)`,
+          }}
+        >
+          <Img
+            src={staticFile(shot)}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              transform: `scale(${imgScale}) translateX(${imgPanX}%)`,
+              transformOrigin: "center 40%",
+            }}
+          />
+          {/* Vignette at the bottom so the karaoke caption stays legible
+              over bright areas of the illustration. */}
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              bottom: 0,
+              height: 260,
+              background:
+                "linear-gradient(180deg, transparent, rgba(5,8,4,0.82))",
+            }}
+          />
+        </div>
+      ) : null}
 
       <CinematicCamera move={CAMERA_ROTATION[partIndex % CAMERA_ROTATION.length]}>
         {/* Category chip, pinned high so it never collides with the card */}
@@ -141,7 +209,10 @@ export const StoryScene: React.FC<{
           ) : null}
         </div>
 
-        {/* Storyteller + card side by side, centered above the caption zone */}
+        {/* Storyteller + card side by side, centered above the caption
+            zone. With a generated illustration the card disappears and
+            Bà Tư shrinks to a corner avatar — brand continuity without
+            covering the artwork. */}
         <div
           style={{
             position: "absolute",
@@ -157,11 +228,26 @@ export const StoryScene: React.FC<{
             padding: "0 44px",
           }}
         >
-          <div style={{ transform: `scale(${charScale})`, flexShrink: 0 }}>
-            <BaTuCharacter scale={0.72} isSpeaking={hasAudio} gesture="book" />
+          <div
+            style={
+              shot
+                ? {
+                    position: "absolute",
+                    left: 60,
+                    bottom: 30,
+                    transform: `scale(${charScale})`,
+                  }
+                : { transform: `scale(${charScale})`, flexShrink: 0 }
+            }
+          >
+            <BaTuCharacter
+              scale={shot ? 0.34 : 0.72}
+              isSpeaking={hasAudio}
+              gesture="book"
+            />
           </div>
 
-          <div
+          {!shot ? <div
             style={{
               width: 560,
               opacity: cardOpacity,
@@ -184,7 +270,7 @@ export const StoryScene: React.FC<{
             >
               {text}
             </div>
-          </div>
+          </div> : null}
         </div>
       </CinematicCamera>
 

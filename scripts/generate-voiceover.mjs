@@ -5,7 +5,8 @@ import { pathToFileURL } from "node:url";
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
 import { withRetry } from "./lib/retry.mjs";
 import { probeDurationSeconds, sanityCheckAudio } from "./lib/audio-probe.mjs";
-import { writeCaptions } from "./lib/captions.mjs";
+import { writeAlignedCaptions } from "./lib/captions.mjs";
+import { polishVoiceover } from "./lib/audio-polish.mjs";
 import giaCatLuongNarration from "../src/narration.json" with { type: "json" };
 import churchillNarration from "../src/narration.churchill.json" with { type: "json" };
 import hippocratesNarration from "../src/narration.hippocrates.json" with { type: "json" };
@@ -418,10 +419,9 @@ await healthcheckVoices();
 
 // ── Karaoke caption emission (Q-03) — shared implementation lives in
 // lib/captions.mjs so backfill-captions.mjs can rebuild caption JSONs
-// from existing mp3s without re-running TTS.
+// from existing mp3s without re-running TTS. writeAlignedCaptions prefers
+// real Whisper word timings and falls back to proportional allocation.
 const captionsRoot = path.join(import.meta.dirname, "..", "public", "captions");
-const writeCaptionsFor = (videoId, key, text, durationSec) =>
-  writeCaptions(captionsRoot, videoId, key, text, durationSec);
 
 for (const id of ids) {
   const video = VIDEOS[id];
@@ -438,8 +438,15 @@ for (const id of ids) {
     const voice = resolveVoice(isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI);
     const prosody = isPerBeatEntry ? entry.prosody : PROSODY;
     await synthesize(video.audioDir, key, text, voice, prosody);
-    const dur = probeDurationSeconds(path.join(video.audioDir, `${key}.mp3`));
-    if (dur) await writeCaptionsFor(id, key, text, dur);
+    const mp3Path = path.join(video.audioDir, `${key}.mp3`);
+    // Trim head/tail silence + level out loudness before measuring —
+    // captions must be generated from the FINAL clip duration.
+    polishVoiceover(mp3Path);
+    const dur = probeDurationSeconds(mp3Path);
+    if (dur) {
+      const lang = (id.startsWith("en-") || id.includes("-en") || voice.startsWith("en-")) ? "en" : "vi";
+      await writeAlignedCaptions(captionsRoot, id, key, text, mp3Path, dur, lang);
+    }
   }
 }
 

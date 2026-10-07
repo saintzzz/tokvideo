@@ -50,9 +50,19 @@ type SucKhoeBase = {
    * Optional real/AI photos (paths under public/, e.g.
    * "images/suckhoe/<slug>/01.jpg"). When present, the scenes render them
    * with the Ken Burns effect instead of the abstract visuals. Files
-   * must exist — validate-episodes checks.
+   * must exist — validate-episodes checks. For story episodes,
+   * images[i] is the illustration for storyParts[i] (see
+   * scripts/generate-story-visuals.mjs).
    */
   images?: string[];
+  /**
+   * Optional English image-generation prompts, one per storyPart —
+   * consumed by scripts/generate-story-visuals.mjs when producing
+   * `images`. Write these at authoring time for deliberate composition
+   * (recurring character descriptors + per-scene action); when absent
+   * the script auto-builds a prompt from the storyPart text.
+   */
+  imagePrompts?: string[];
 };
 
 export type RemedyEpisode = SucKhoeBase & {
