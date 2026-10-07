@@ -1,8 +1,8 @@
 {
   "slug": "loi-nguyen-gieng-cu-tap-01",
   "locale": "vi",
-  "title": "LỜI NGUYỀN GIẾNG CŨ - Tập 1: Ngôi Nhà Ông Nội Để Lại | Truyện Ma Dài",
-  "description": "Minh về quê nhận lại ngôi nhà cổ của ông nội - và cái giếng đá bị lấp mà cả làng không ai dám nhắc đến. Đêm đầu tiên, tiếng gõ ba nhịp vang lên từ cánh cửa sau.\n\nTruyện ma dài 5 tập, kể bởi Bà Tư.",
+  "title": "LỜI NGUYỀN GIẾNG CŨ | Tập 1: Đêm Đầu Tiên, 3 Nhịp Gõ Cửa Vang Lên | Truyện Ma Dài",
+  "description": "Về quê nhận thừa kế căn nhà cổ của ông nội, Minh được dặn duy nhất một điều: TUYỆT ĐỐI đừng đào cái giếng bị lấp sau nhà. Đêm đầu tiên, ba nhịp gõ cửa vang lên - và trên thềm là một vũng nước còn mới.\n\nTruyện ma dài 5 tập - Lời Nguyền Giếng Cũ, kể bởi Bà Tư.",
   "prosody": {
     "rate": "-5%",
     "pitch": "-3%",
@@ -401,5 +401,19 @@
     "old-well": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/old-well.jpg",
     "storm-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/storm-night.jpg",
     "river-mist": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/river-mist.jpg"
-  }
+  },
+  "thumbTitle": "ĐÊM ĐẦU TIÊN - 3 NHỊP GÕ CỬA",
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma có thật",
+    "truyện ma làng quê",
+    "ma kinh dị",
+    "nghe truyện ma",
+    "truyện audio",
+    "bà tư kể chuyện",
+    "lời nguyền giếng cũ",
+    "horror story việt nam"
+  ],
+  "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook"
 }

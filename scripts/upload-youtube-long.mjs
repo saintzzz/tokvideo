@@ -76,6 +76,9 @@ if ([...episode.title].length > 100) {
   process.exit(1);
 }
 const title = episode.title;
+// Per-arc metadata overrides (episode.hashtags / episode.tags) replace
+// the generic story boilerplate - the horror arc needs horror tags, not
+// the xianxia defaults this description block was written for.
 const description = isStory
   ? isEn
     ? [
@@ -83,14 +86,14 @@ const description = isStory
         "",
         "A serialized fiction story, narrated chapter by chapter. Subscribe and open the playlist to follow the full arc.",
         "",
-        "#storytime #audiobook #serializedfiction",
+        episode.hashtags ?? "#storytime #audiobook #serializedfiction",
       ].join("\n")
     : [
         episode.description,
         "",
         "Truyện dài kể theo tập, nghe trọn một lần. Đăng ký kênh và mở playlist để nghe trọn bộ.",
         "",
-        "#truyendai #truyenkieuhiep #nghetruyen",
+        episode.hashtags ?? "#truyendai #truyenkieuhiep #nghetruyen",
       ].join("\n")
   : isEn
   ? [
@@ -124,13 +127,13 @@ const res = await youtube.videos.insert({
     snippet: {
       title,
       description,
-      tags: isStory
+      tags: episode.tags ?? (isStory
         ? isEn
           ? ["storytime", "audiobook", "fiction", "serializedstory"]
           : ["truyện dài", "truyện tiên hiệp", "nghe truyện", "truyện audio"]
         : isEn
         ? ["homeremedies", "folkwisdom", "sciencecheck"]
-        : ["meodangian", "suckhoe", "kiemchungkhoahoc"],
+        : ["meodangian", "suckhoe", "kiemchungkhoahoc"]),
       // Fiction stories -> Entertainment; remedy fact-checks -> Education.
       categoryId: isStory ? "24" : "27",
     },

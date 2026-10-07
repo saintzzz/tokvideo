@@ -4,11 +4,18 @@ import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { findFfmpeg } from "./lib/ffmpeg.mjs";
 
-// Builds a 1280x720 YouTube thumbnail for one long-form episode: grabs a
-// frame from inside the rendered video (past the intro), darkens the lower
-// third, and stamps the episode title on it. Long-form CTR lives and dies
-// by the thumbnail — the auto-picked frame alone is not enough.
+// Builds a 1280x720 YouTube thumbnail for one long-form episode.
+//
+// Source image: the episode's `hook` scene still when available
+// (public/images/suckhoe-long/... — generated, consistent, and always
+// present even before the video renders); falls back to a frame at
+// 120s inside the rendered mp4 for remedy episodes without sceneImages.
+//
+// Layout: slight brighten (the horror stills are very dark), a dark
+// lower-half gradient for text contrast, a red "TẬP N" badge top-left,
+// the series name in gold above a large bold `thumbTitle` bottom-left.
 //
 // Usage: node scripts/make-long-thumbnail.mjs <episode-slug>
 // Output: out/SucKhoeLong-<slug>-thumb.png
@@ -19,26 +26,46 @@ if (!slug) {
   process.exit(1);
 }
 
-const outDir = path.join(import.meta.dirname, "..", "out");
+const root = path.resolve(import.meta.dirname, "..");
+const outDir = path.join(root, "out");
 const videoPath = path.join(outDir, `SucKhoeLong-${slug}.mp4`);
 const thumbPath = path.join(outDir, `SucKhoeLong-${slug}-thumb.png`);
 
-if (!existsSync(videoPath)) {
-  console.error(`No rendered video at ${videoPath} — render first.`);
+const longFormDir = path.join(root, "src", "suckhoe", "long-form");
+const episode = (await import(pathToFileURL(path.join(longFormDir, `${slug}.json`)), { with: { type: "json" } })).default;
+
+const ffmpeg = findFfmpeg();
+if (!ffmpeg) {
+  console.error("No runnable ffmpeg found (set FFMPEG_BIN).");
   process.exit(1);
 }
 
-const longFormDir = path.join(import.meta.dirname, "..", "src", "suckhoe", "long-form");
-const episode = (await import(pathToFileURL(path.join(longFormDir, `${slug}.json`)), { with: { type: "json" } })).default;
-const title = episode.title.replace(/\s*\|\s*/g, " · ");
+// hook still -> rendered frame -> fail
+const hookRel = episode.sceneImages?.hook;
+const hookPath = hookRel ? path.join(root, "public", hookRel) : null;
+let inputArgs;
+if (hookPath && existsSync(hookPath)) {
+  inputArgs = ["-loop", "1", "-i", hookPath];
+} else if (existsSync(videoPath)) {
+  inputArgs = ["-ss", "120", "-i", videoPath];
+} else {
+  console.error(`No hook image and no rendered video at ${videoPath}.`);
+  process.exit(1);
+}
+
+const epNum = (slug.match(/tap-(\d+)/)?.[1] ?? "1").replace(/^0/, "");
+const badge = `TẬP ${epNum}`;
+const thumbTitle = episode.thumbTitle ?? episode.title.replace(/\s*\|\s*/g, " · ");
+const series = episode.title.split("|")[0]?.trim() ?? "";
 
 // drawtext wants a font file; probe the usual locations (Ubuntu runners
-// ship DejaVu, macOS has Arial in Supplemental).
+// ship DejaVu, macOS has Arial in Supplemental, Windows has arialbd).
 const FONT_CANDIDATES = [
   "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
   "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf",
   "/System/Library/Fonts/Supplemental/Arial.ttf",
   "/System/Library/Fonts/Helvetica.ttc",
+  "C:/Windows/Fonts/arialbd.ttf",
 ];
 const font = FONT_CANDIDATES.find(existsSync);
 if (!font) {
@@ -46,24 +73,39 @@ if (!font) {
   process.exit(1);
 }
 
-// Write the title through a file — drawtext's text= escaping is brittle
-// with Vietnamese punctuation (colons, apostrophes in titles).
+// Write text through files — drawtext's text= escaping is brittle with
+// Vietnamese punctuation (colons, apostrophes).
 const tmp = await mkdtemp(path.join(tmpdir(), "thumb-"));
+const badgeFile = path.join(tmp, "badge.txt");
 const titleFile = path.join(tmp, "title.txt");
-await writeFile(titleFile, title, "utf8");
+const seriesFile = path.join(tmp, "series.txt");
+await writeFile(badgeFile, badge, "utf8");
+await writeFile(titleFile, thumbTitle, "utf8");
+await writeFile(seriesFile, series, "utf8");
 
-// Frame from ~2 minutes in: past the hook card, into the actual scene.
+// ffmpeg filtergraph treats `:` as an option separator — Windows drive
+// letters ("C:/...") must have it escaped, and backslashes turned to /.
+const fpath = (p) => p.replace(/\\/g, "/").replace(/:/g, "\\:");
+
 const result = spawnSync(
-  "ffmpeg",
+  ffmpeg,
   [
     "-y",
-    "-ss", "120",
-    "-i", videoPath,
+    ...inputArgs,
     "-vf",
     [
       "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720",
-      "drawbox=y=ih-300:w=iw:h=300:color=black@0.6:t=fill",
-      `drawtext=fontfile='${font}':textfile='${titleFile}':fontcolor=white:fontsize=46:x=60:y=h-260:borderw=2:bordercolor=black@0.8:line_spacing=10`,
+      // horror stills are intentionally very dark — lift them a touch so
+      // the scene reads at thumbnail size
+      "eq=brightness=0.05:contrast=1.05:saturation=1.1",
+      // lower-half dark gradient for text contrast
+      "drawbox=y=ih*0.45:w=iw:h=ih*0.55:color=black@0.6:t=fill",
+      // red episode badge top-left
+      "drawbox=x=44:y=44:w=170:h=66:color=0xB02A20@0.95:t=fill",
+      `drawtext=fontfile='${fpath(font)}':textfile='${fpath(badgeFile)}':fontcolor=white:fontsize=36:x=60:y=56`,
+      // series name in gold, then the big hook line
+      `drawtext=fontfile='${fpath(font)}':textfile='${fpath(seriesFile)}':fontcolor=0xE8B84B:fontsize=34:x=60:y=h-236`,
+      `drawtext=fontfile='${fpath(font)}':textfile='${fpath(titleFile)}':fontcolor=white:fontsize=56:x=60:y=h-180:borderw=3:bordercolor=black@0.85:line_spacing=8`,
     ].join(","),
     "-frames:v", "1",
     thumbPath,

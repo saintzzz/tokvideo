@@ -76,6 +76,20 @@ export type LongFormEpisode = {
   title: string;
   description: string;
   /**
+   * YouTube metadata overrides for scripts/upload-youtube-long.mjs -
+   * per-arc tags/hashtags replace the generic story boilerplate (e.g.
+   * horror tags for CR-002 instead of the xianxia defaults).
+   */
+  tags?: string[];
+  /** Space-separated #tags appended to the description. */
+  hashtags?: string;
+  /**
+   * Short punchy overlay text for scripts/make-long-thumbnail.mjs
+   * (uppercase, a few words) - the full title is too long for a
+   * readable thumbnail.
+   */
+  thumbTitle?: string;
+  /**
    * AI-generated still per scene setting (path under public/, e.g.
    * "images/suckhoe-long/<slug>/haunted-house.jpg"). Beats in that scene
    * show this image with a slow Ken Burns drift instead of the
