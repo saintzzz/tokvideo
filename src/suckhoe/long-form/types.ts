@@ -32,7 +32,22 @@ export type LongFormBeat = {
     | "forest-night"
     | "throne-hall"
     | "cliff-edge"
-    | "village-dusk";
+    | "village-dusk"
+    // Horror arc sets (CR-002, "Loi nguyen gieng cu"): Vietnamese
+    // village ghost-story settings, narrated slowly.
+    | "village-night"
+    | "haunted-house"
+    | "ancestral-altar"
+    | "old-well"
+    | "graveyard"
+    | "river-mist"
+    | "storm-night"
+    // Horror arc tập 4-5 additions: confrontation + epilogue locations.
+    | "estate-gate"
+    | "ancestral-house"
+    | "village-square"
+    | "well-shrine"
+    | "dawn-village";
   /**
    * Present only on the line where the granddaughter reveals the real
    * research behind a remedy — triggers the animated science-diagram
@@ -60,5 +75,29 @@ export type LongFormEpisode = {
   locale: "vi" | "en";
   title: string;
   description: string;
+  /**
+   * AI-generated still per scene setting (path under public/, e.g.
+   * "images/suckhoe-long/<slug>/haunted-house.jpg"). Beats in that scene
+   * show this image with a slow Ken Burns drift instead of the
+   * procedural gradient+motif background - the visual-consistency
+   * mechanism for serialized stories: same setting, same image, across
+   * every beat and every episode that revisits it.
+   */
+  sceneImages?: Partial<Record<LongFormBeat["scene"], string>>;
+  /**
+   * Prompt per scene for scripts/generate-story-visuals.mjs --long.
+   * Authoring-time metadata; the renderer only reads `sceneImages`.
+   */
+  scenePrompts?: Partial<Record<LongFormBeat["scene"], string>>;
+  /**
+   * Per-beat image override for a one-off visual beat inside a scene
+   * (rare - sceneImages covers the common case).
+   */
+  beatImages?: Record<number, string>;
+  /**
+   * Narrator delivery override - e.g. slower/lower for horror.
+   * { rate, pitch, volume } in Edge-TTS prosody format ("-5%").
+   */
+  prosody?: { rate?: string; pitch?: string; volume?: string };
   beats: LongFormBeat[];
 };

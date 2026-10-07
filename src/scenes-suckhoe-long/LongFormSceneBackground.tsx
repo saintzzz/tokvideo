@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
 export type SceneName =
   | "hook"
@@ -15,7 +15,19 @@ export type SceneName =
   | "forest-night"
   | "throne-hall"
   | "cliff-edge"
-  | "village-dusk";
+  | "village-dusk"
+  | "village-night"
+  | "haunted-house"
+  | "ancestral-altar"
+  | "old-well"
+  | "graveyard"
+  | "river-mist"
+  | "storm-night"
+  | "estate-gate"
+  | "ancestral-house"
+  | "village-square"
+  | "well-shrine"
+  | "dawn-village";
 
 const GRADIENTS: Record<SceneName, [string, string]> = {
   hook: ["#1a2a1f", "#0c140e"],
@@ -32,6 +44,20 @@ const GRADIENTS: Record<SceneName, [string, string]> = {
   "throne-hall": ["#3a1030", "#12060e"],
   "cliff-edge": ["#22303e", "#0a1016"],
   "village-dusk": ["#3a2414", "#140c06"],
+  // Horror scenes — cold, desaturated, near-monochrome. These gradients
+  // are only the no-image fallback; generated sceneImages normally win.
+  "village-night": ["#141a26", "#05070c"],
+  "haunted-house": ["#1a1410", "#060403"],
+  "ancestral-altar": ["#241006", "#0a0402"],
+  "old-well": ["#0e1a1a", "#030808"],
+  graveyard: ["#101a14", "#040806"],
+  "river-mist": ["#16202a", "#060a0e"],
+  "storm-night": ["#101020", "#040408"],
+  "estate-gate": ["#1c1610", "#060402"],
+  "ancestral-house": ["#201410", "#070403"],
+  "village-square": ["#181a20", "#060708"],
+  "well-shrine": ["#121a16", "#040806"],
+  "dawn-village": ["#2a2620", "#0e0c08"],
 };
 
 const seededRandom = (seed: number) => {
@@ -255,11 +281,21 @@ const SceneMotif: React.FC<{ scene: SceneName; frame: number }> = ({ scene, fram
   return null;
 };
 
-export const LongFormSceneBackground: React.FC<{ scene: SceneName; children?: React.ReactNode }> = ({
-  scene,
-  children,
-}) => {
+export const LongFormSceneBackground: React.FC<{
+  scene: SceneName;
+  children?: React.ReactNode;
+  /**
+   * Path under public/ to an AI-generated still for this scene. When
+   * set, the procedural gradient/motif/particles are replaced by a slow
+   * Ken Burns drift over the image - `variant` (usually the beat index)
+   * alternates the drift direction so consecutive beats in the same
+   * scene don't sit on an identical frozen frame.
+   */
+  image?: string;
+  variant?: number;
+}> = ({ scene, children, image, variant = 0 }) => {
   const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
   const [from, to] = GRADIENTS[scene];
 
   const particles = useMemo(
@@ -273,6 +309,54 @@ export const LongFormSceneBackground: React.FC<{ scene: SceneName; children?: Re
       })),
     []
   );
+
+  // Slow Ken Burns over the generated still: ~4% drift across the beat,
+  // alternating direction and pan focus per variant so the same scene
+  // image never sits twice as an identical frozen frame. Slower than the
+  // Shorts version on purpose - long-form horror reads through
+  // atmosphere, not cuts.
+  if (image) {
+    const dir = variant % 2 === 0 ? 1 : -1;
+    const scale = interpolate(frame, [0, durationInFrames], [1.02, 1.08], {
+      extrapolateRight: "clamp",
+    });
+    const panX = interpolate(frame, [0, durationInFrames], [dir * 1.2, -dir * 1.2], {
+      extrapolateRight: "clamp",
+    });
+    const panY = interpolate(frame, [0, durationInFrames], [-dir * 0.8, dir * 0.8], {
+      extrapolateRight: "clamp",
+    });
+    return (
+      <AbsoluteFill style={{ background: "#000" }}>
+        <Img
+          src={staticFile(image)}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transform: `scale(${scale}) translate(${panX}%, ${panY}%)`,
+          }}
+        />
+        {/* heavier vignette + slight desaturation mood grade for horror */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse at 50% 42%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.72) 100%)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(8,12,20,0.18)",
+          }}
+        />
+        {children}
+      </AbsoluteFill>
+    );
+  }
 
   return (
     <AbsoluteFill style={{ background: `linear-gradient(160deg, ${from} 0%, ${to} 100%)` }}>

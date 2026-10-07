@@ -83,6 +83,10 @@ const buildSucKhoeNarration = (episode) => {
 // Other good English options: "en-US-AriaNeural", "en-GB-SoniaNeural".
 const VOICE_VI = process.env.EDGE_TTS_VOICE ?? "vi-VN-NamMinhNeural";
 const VOICE_EN = process.env.EDGE_TTS_VOICE_EN ?? "en-US-JennyNeural";
+// RESUME=1 skips beats whose mp3 already exists and passes the sanity
+// check — recovery path for the intermittent multi-minute Edge-TTS
+// outages that otherwise force a full 60+ beat regeneration.
+const RESUME = !!process.env.RESUME;
 
 // Punchier "ad read" delivery instead of flat narration: a bit faster,
 // a bit brighter/louder. Override per-run with env vars if a specific
@@ -166,10 +170,20 @@ const LONG_FORM_EPISODES = await Promise.all(
 
 for (const episode of LONG_FORM_EPISODES) {
   const voices = LONG_FORM_VOICES[episode.locale] ?? LONG_FORM_VOICES.vi;
+  // Optional per-episode narrator prosody (e.g. slower/lower for horror)
+  // merges over the locale's narrator delivery.
+  const override = episode.prosody ?? null;
   const narration = {};
   episode.beats.forEach((beat, i) => {
     const { voice, prosody } = voices[beat.speaker] ?? voices.narrator;
-    narration[`beat-${i}`] = { text: beat.text, voice, prosody };
+    narration[`beat-${i}`] = {
+      text: beat.text,
+      voice,
+      prosody:
+        override && beat.speaker === "narrator"
+          ? { ...prosody, ...override }
+          : prosody,
+    };
   });
   VIDEOS[`suckhoe-long-${episode.slug}`] = {
     audioDir: path.join(publicDir, "suckhoe-long", episode.slug),
@@ -354,7 +368,7 @@ const synthesize = async (outDir, key, text, voice, prosody) => {
       }
       console.log(`Wrote ${outFile}`);
     },
-    { attempts: 3, baseMs: 1500, label: `tts ${key}` }
+    { attempts: 8, baseMs: 2000, label: `tts ${key}` }
   ).catch((err) => {
     throw new Error(`Failed to synthesize ${outFile}: ${err.message}`);
   });
@@ -437,11 +451,23 @@ for (const id of ids) {
     }
     const voice = resolveVoice(isPerBeatEntry ? entry.voice : video.voice ?? VOICE_VI);
     const prosody = isPerBeatEntry ? entry.prosody : PROSODY;
-    await synthesize(video.audioDir, key, text, voice, prosody);
     const mp3Path = path.join(video.audioDir, `${key}.mp3`);
-    // Trim head/tail silence + level out loudness before measuring —
-    // captions must be generated from the FINAL clip duration.
-    polishVoiceover(mp3Path);
+    // RESUME=1: keep already-synthesized beats — for 60+ beat long-form
+    // episodes, restarting after a mid-run TTS outage otherwise burns ~40
+    // extra API calls and re-rolls the dice on the flaky endpoint.
+    // Captions are still (re)generated below, so an interrupted run heals
+    // fully. Default behavior (full regenerate) is unchanged.
+    // A cached file only counts when it both passes sanity AND probes to a
+    // finite duration — an unprobeable mp3 would otherwise be skipped and
+    // also get no captions (the `if (dur)` below would fail for it too).
+    const cached = RESUME ? sanityCheckAudio(mp3Path) : null;
+    const haveAudio = cached?.ok === true && Number.isFinite(cached.durationSec);
+    if (!haveAudio) {
+      await synthesize(video.audioDir, key, text, voice, prosody);
+      // Trim head/tail silence + level out loudness before measuring —
+      // captions must be generated from the FINAL clip duration.
+      polishVoiceover(mp3Path);
+    }
     const dur = probeDurationSeconds(mp3Path);
     if (dur) {
       const lang = (id.startsWith("en-") || id.includes("-en") || voice.startsWith("en-")) ? "en" : "vi";

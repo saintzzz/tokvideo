@@ -6,7 +6,7 @@
 // Usage: node scripts/validate-episodes.mjs [--strict]
 //   --strict also fails on warnings (e.g. missing caution field).
 
-import { readdir, readFile, access } from "node:fs/promises";
+import { readdir, readFile, access, stat } from "node:fs/promises";
 import path from "node:path";
 
 const root = path.join(import.meta.dirname, "..");
@@ -148,7 +148,7 @@ const validateShortEpisode = async (file, ep) => {
   }
 };
 
-const validateLongForm = (file, ep) => {
+const validateLongForm = async (file, ep) => {
   if (!isStr(ep.slug)) err(file, `missing "slug"`);
   if (!Array.isArray(ep.beats) || ep.beats.length === 0) {
     err(file, `"beats" must be a non-empty array`);
@@ -158,6 +158,43 @@ const validateLongForm = (file, ep) => {
     if (!isStr(b?.text)) err(file, `beats[${i}].text missing`);
     if (!isStr(b?.speaker)) err(file, `beats[${i}].speaker missing`);
   });
+  // AI scene stills must be real image files under public/images — a
+  // missing path renders a black frame instead of falling back
+  // procedurally, and an out-of-tree path (`../`) would silently pass a
+  // bare access() check.
+  for (const map of [ep.sceneImages ?? {}, ep.beatImages ?? {}]) {
+    for (const [key, img] of Object.entries(map)) {
+      if (!isStr(img)) {
+        err(file, `image path for "${key}" must be a string`);
+        continue;
+      }
+      const rel = img.replace(/^\//, "");
+      // Reject `\` outright — on Windows it traverses like `/`, so a
+      // segment check on `/` alone would miss `..\`.
+      if (!rel.startsWith("images/") || rel.includes("\\") || rel.split("/").includes("..")) {
+        err(file, `image path for "${key}" must stay inside public/images/: ${img}`);
+        continue;
+      }
+      if (!/\.(jpe?g|png|webp)$/i.test(rel)) {
+        err(file, `image path for "${key}" must be .jpg/.png/.webp: ${img}`);
+        continue;
+      }
+      // Containment on resolved paths, not the string prefix.
+      const publicDir = path.resolve(root, "public");
+      const abs = path.resolve(publicDir, rel);
+      const inside = path.relative(publicDir, abs);
+      if (inside.startsWith("..") || path.isAbsolute(inside)) {
+        err(file, `image path for "${key}" escapes public/: ${img}`);
+        continue;
+      }
+      try {
+        const st = await stat(abs);
+        if (!st.isFile()) err(file, `scene image is not a file: public/${rel} (${key})`);
+      } catch {
+        err(file, `scene image not found: public/${rel} (${key})`);
+      }
+    }
+  }
 };
 
 // ── scan directories ──────────────────────────────────────────────
@@ -186,7 +223,7 @@ let longCount = 0;
 for (const file of (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort()) {
   longCount++;
   try {
-    validateLongForm(file, JSON.parse(await readFile(path.join(longFormDir, file), "utf8")));
+    await validateLongForm(file, JSON.parse(await readFile(path.join(longFormDir, file), "utf8")));
   } catch (e) {
     err(file, `invalid JSON: ${e.message}`);
   }

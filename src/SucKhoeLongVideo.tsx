@@ -53,6 +53,9 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
         // window retention research recommends for pattern interrupts.
         const previousBeat = episode.beats[segment.beatIndex - 1];
         const isSceneStart = segment.beatIndex === 0 || previousBeat?.scene !== beat.scene;
+        const image =
+          episode.beatImages?.[segment.beatIndex] ??
+          episode.sceneImages?.[beat.scene];
         return (
           <Series.Sequence key={i} durationInFrames={segment.durationInFrames}>
             <DialogueScene
@@ -60,6 +63,8 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
               locale={episode.locale}
               hasAudio={segment.hasAudio}
               isSceneStart={isSceneStart}
+              image={image}
+              variant={segment.beatIndex}
               audioSrc={
                 segment.hasAudio
                   ? `audio/suckhoe-long/${episode.slug}/beat-${segment.beatIndex}.mp3`

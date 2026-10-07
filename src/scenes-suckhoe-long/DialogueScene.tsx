@@ -38,7 +38,11 @@ export const DialogueScene: React.FC<{
   audioSrc?: string;
   hasAudio: boolean;
   isSceneStart: boolean;
-}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart }) => {
+  /** AI still for this beat's scene (public/ path) - see sceneImages. */
+  image?: string;
+  /** Beat index - alternates the Ken Burns drift direction. */
+  variant?: number;
+}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, variant = 0 }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
@@ -74,7 +78,7 @@ export const DialogueScene: React.FC<{
     : 0;
 
   return (
-    <LongFormSceneBackground scene={beat.scene as SceneName}>
+    <LongFormSceneBackground scene={beat.scene as SceneName} image={image} variant={variant}>
       {audioSrc ? <Audio src={staticFile(audioSrc)} /> : null}
 
       <div style={{ position: "absolute", inset: 0, transform: `scale(${cameraScale * punchScale})` }}>

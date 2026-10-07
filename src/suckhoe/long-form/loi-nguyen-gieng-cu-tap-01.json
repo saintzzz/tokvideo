@@ -1,0 +1,405 @@
+{
+  "slug": "loi-nguyen-gieng-cu-tap-01",
+  "locale": "vi",
+  "title": "LỜI NGUYỀN GIẾNG CŨ - Tập 1: Ngôi Nhà Ông Nội Để Lại | Truyện Ma Dài",
+  "description": "Minh về quê nhận lại ngôi nhà cổ của ông nội - và cái giếng đá bị lấp mà cả làng không ai dám nhắc đến. Đêm đầu tiên, tiếng gõ ba nhịp vang lên từ cánh cửa sau.\n\nTruyện ma dài 5 tập, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "scenePrompts": {
+    "hook": "an abandoned old Vietnamese three-compartment house at the edge of a misty village at dusk, a sealed stone well in the courtyard, crows on the tiled roof",
+    "village-dusk": "a quiet Vietnamese riverside village at dusk, small boats on dark water, oil lamps glowing in windows, mist rising from the fields",
+    "village-night": "a deserted Vietnamese village lane at night, one weak street lamp, dark house silhouettes, fog crawling along the ground",
+    "haunted-house": "the dark interior of an old wooden three-compartment Vietnamese house, dusty furniture under torn covers, one flickering oil lamp",
+    "ancestral-altar": "an old Vietnamese ancestral altar at night, black-and-white portrait of an old man, two oil lamp flames, incense smoke curling",
+    "old-well": "an ancient moss-covered round stone well sealed with heavy slabs in a dark courtyard at night, faint mist seeping from the cracks",
+    "storm-night": "torrential rain at night over an old Vietnamese village, lightning flash over tiled roofs and a dark courtyard",
+    "river-mist": "a wide dark river at night covered in thick mist, a lone wooden boat silhouette, cold moonlight"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Ngôi nhà ông nội để lại",
+      "text": "Tháng chạp năm ấy, Minh nhận được giấy báo ông nội qua đời. Cú điện thoại chỉ vỏn vẹn một câu: về quê đi con, nhà cửa giờ là của mày. Ba mươi lăm năm sống ở thành phố, Minh chưa từng nghĩ mình sẽ lại bước về cái làng ven sông ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Làng ven sông",
+      "text": "Làng An Mỹ nằm cuối con đường đất, ôm lấy một khúc quanh của dòng sông Bưởi. Chiếc xe khách thả Minh xuống lúc trời đã sập tối, khói bếp từ những mái nhà lưu cữu bay nghiêng trong gió, mùi rơm cháy quện với mùi phù sa ẩm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Đường làng vắng",
+      "text": "Đường làng vắng đến mức Minh nghe rõ tiếng dép mình trên đất. Đèn đường đứt quãng, cái sáng cái không. Những ngôi nhà hai bên đã lên đèn, nhưng kỳ lạ thay, ngõ dẫn về nhà ông nội thì nhà nào cũng khép kín cửa, sớm hơn hẳn giờ nghỉ của người quê."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Bà Hai bên cửa",
+      "text": "Đầu ngõ, một bà cụ tóc bạc ngồi trên chiếc ghế đá trước nhà, đôi mắt mờ đục dõi theo Minh từ lúc chưa thấy rõ mặt. Khi Minh ngang qua, bà cụ chợt cất giọng khàn: cháu ông Lực đấy à. Về rồi thì tốt, nhớ lo cho xong cái nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Bà Hai",
+      "text": "Minh dừng lại chào. Bà cụ tự xưng là bà Hai, hàng xóm sát vách nhà ông nội năm xưa. Giọng bà nhỏ dần khi nói: ông mày trước khi mất có để lại lời nhắn. Nhà thì ở, đất thì canh tác, nhưng cái giếng sau nhà - tuyệt đối đừng đào lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Lời nhắn của ông nội",
+      "text": "Minh bật cười cho có lệ, hỏi vì sao. Bà Hai không đáp, chỉ lắc đầu chậm rãi, rồi đứng dậy định vào nhà. Trước khi khép cửa, bà nói thêm một câu khiến Minh lạnh sống lưng: ông mày khóa nó lại năm mươi năm rồi, làng này ngủ được yên là nhờ thế."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Nhà cổ ba gian",
+      "text": "Ngôi nhà ông nội để lại là một căn nhà gỗ ba gian mái ngói âm dương, tường đất nện đã ngả màu thời gian. Chìa khóa vặn vào ổ khóa gỉ nặng như mở một cái gì đó đã ngủ quên rất lâu. Mùi trầm hương cũ, mùi gỗ lim và mùi ẩm mốc ào ra gặp Minh ở ngay ngưỡng cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đèn dầu",
+      "text": "Điện trong nhà chập chờn, công tơ có lẽ cắt từ lâu. Minh thắp ngọn đèn dầu bà Hai đưa cho, thứ ánh sáng vàng vọt run rẩy soi từng vật dụng phủ vải bạc. Bộ trường kỷ chạm trầu cau, chạn bát sứ, và cái võng bành ki đung đưa nhè nhẹ dù nhà không có gió."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Ban thờ ông nội",
+      "text": "Giữa gian chính là ban thờ gia tiên. Di ảnh ông nội đen trắng, nét mặt nghiêm như lúc còn sống, đôi mắt trong ảnh trông như đang nhìn thẳng vào người lạ vừa vào nhà. Minh thắp ba nén hương, khấn vái cho có nghi thức, rồi ôm đồ vào gian hè."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đêm đầu tiên",
+      "text": "Đêm đầu tiên Minh nằm trên chiếc giường gỗ cũ, nghe tiếng sông chảy xa xa và tiếng dế mèn lác đác. Người mệt sau quãng đường dài, anh thiếp đi lúc nào không biết. Đến khoảng giữa đêm, một âm thanh khác lọt vào giấc ngủ - tiếng nước chảy róc rách, rất gần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Tiếng nước trong nhà",
+      "text": "Minh mở mắt trong bóng tối. Tiếng nước vẫn đó, không phải mơ - nghe như ai đó đang múc nước rồi đổ xuống, chậm và đều, ngay trong sân sau. Anh chờ nó dừng. Nó không dừng. Bóng tối ngoài cửa sổ đặc quánh, giờ chắc cũng đã quá nửa đêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Ba nhịp gõ cửa",
+      "text": "Đang định dậy soi đèn thì tiếng nước im bặt. Thay vào đó là ba tiếng gõ - cộc, cộc, cộc - vang lên từ cánh cửa phụ phía sau nhà. Không phải gõ dồn dập của người có việc gấp. Ba nhịp chậm, đều, kiên nhẫn, như ai đó biết chắc người trong nhà sẽ nghe thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Không một ai",
+      "text": "Minh đứng giữa nhà, tim đập nhanh, bản năng mách bảo đừng mở. Nhưng rồi tự nhủ người đời thời nay, không lẽ sợ ma. Anh rút then, hé cửa. Ngoài sân sau chỉ có màn đêm và gió sông. Không một ai. Chỉ có vũng nước nhỏ ngay thềm, mới đọng, như ai vừa đứng đó với đôi chân ướt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Giếng bị lấp",
+      "text": "Ngọn đèn dầu quét một vòng sân sau, và lần đầu Minh thấy rõ cái giếng mà bà Hai nhắc đến. Giếng đá tròn đã bị lấp kín bằng ba tảng đá tẻ lớn, trên phủ rêu xanh đặc. Nhưng đêm nay, một góc tảng đá ngoài cùng bị xô lệch - kẽ hở đen ngòm mở ra giữa sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Kẽ hở đen ngòm",
+      "text": "Minh không dám lại gần. Anh đóng sập cửa, chèn thêm cái trường kỷ, thức đến gần sáng. Lạ một điều: khi trời vừa rạng, tiếng ếch nhái và gà gáy đầu tiên vang lên, anh quay ra nhìn qua khe cửa - tảng đá lại nằm ngay ngắn như chưa từng bị động."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Về quê lần đầu",
+      "text": "Minh nhớ lại lần cuối về quê đã mười lăm năm trước, hồi anh còn là sinh viên năm nhất. Ông nội ngồi trước nhà hút thuốc lào, chỉ dặn đúng một câu lạ lùng: ở đây con ơi, tối rồi đừng ra sân sau. Hồi đó Minh chỉ cười, nghĩ ông già hay mê tín. Giờ đứng lại trước cổng nhà, câu nói ấy nghe khác hẳn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Vì sao xa quê",
+      "text": "Cha mẹ Minh cũng ít khi về quê. Hồi mẹ còn sống, bả từng nói bóng gió: nhà ông nội buồn lắm, không hợp để con nít ở. Minh lớn lên trong trại nội trú thành phố, quen đèn pha tiếng xe, và coi quê chỉ là cái địa chỉ để viết vào giấy tờ. Ngôi nhà trước mặt giờ là tất cả những gì còn lại của cái gốc ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Lễ tang ông nội",
+      "text": "Ba ngày lo lễ tang ông nội, làng đến đông đủ nhưng ai cũng về sớm, không ai ở lại quá chén trà chiều. Minh để ý: mỗi khi câu chuyện lỡ chạm đến căn nhà hay cái giếng, người già lại đổi đề tài, người trẻ thì nhìn nhau rồi cười trừ gượng gạo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Vong linh trong nhà",
+      "text": "Đêm tang lễ, Minh ngủ lại giữa nhà trông hương. Giữa đêm anh mơ thấy ông nội đứng cạnh ban thờ, lưng quay ra, tay chỉ về phía sân sau. Tỉnh dậy, nhang trên ban thờ vẫn đỏ lửa đều đặn ba cây - nhưng tro nhang rụng thành một vòng tròn hoàn hảo trên mặt bát hương, như ai đó vẽ bằng compa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Làng chìm sớm",
+      "text": "Sau rằm tháng chạp, làng như chìm vào giấc sớm hơn bình thường. Minh ngồi hiên nhà nhìn ra, chỉ thấy đường làng vắng ngắt và tiếng chó sủa lác đác rồi im bặt hẳn. Điều lạ là tiếng chó sủa ấy luôn dừng đúng lúc gần nửa đêm - như cả làng cùng nín thở chờ một giờ nào đó trôi qua."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Nhật ký của ông",
+      "text": "Dọn đồ ông nội, Minh tìm thấy một cuốn sổ da đen giấu sau ban thờ, giấy đã ố vàng. Nhiều trang bị xé. Những trang còn lại ghi chuyện trồng trọt, giống lúa, giá thuốc - và chen giữa, một dòng chữ viết nắn nót đến run: nó vẫn ở đó, đừng bao giờ mở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Dòng chữ lạ",
+      "text": "Lật tiếp, một trang khác chỉ có ba chữ lặp đi lặp lại đầy nửa trang giấy: ba nhịp gõ. Minh đọc mà da gà nổi lên, vì đêm qua anh đã nghe đúng ba nhịp ấy. Nét bút cuối trang nguệch ngoạc hẳn, như tay người viết đã run không cầm được nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đêm thứ hai",
+      "text": "Đêm thứ hai, Minh quyết định thức chờ. Anh ngồi bên ngọn đèn dầu đến quá giờ Tý, mắt díp lại rồi lại tỉnh. Đúng lúc đó, tiếng nước chảy lại róc rách ngoài sân - lần này gần hơn, như ngay bên bờ giếng. Rồi ba tiếng gõ lại vang lên, đều nhịp như đêm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Bóng trắng trong sân",
+      "text": "Minh không mở cửa. Anh ghé mắt qua khe nan cửa sổ. Trong khoảnh khắc ngọn đèn đường đầu ngõ chớp sáng, anh thấy - hoặc tưởng thấy - một bóng trắng dáng người đứng bên cái giếng, quay lưng về phía nhà, tóc dài buông phủ xuống tận gót chân ướt sũng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Nước tràn qua kẽ đá",
+      "text": "Điều khiến Minh cứng họng không phải bóng trắng. Mà là nước. Nước đen đang tràn lên qua kẽ hở của tảng đá lấp giếng, chảy nhễn nhại trên sân, mà giếng thì đã bị lấp năm mươi năm, đáy sâu đã bị đất đá lấp kín từ đời ông nội còn trẻ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Sáng hôm sau",
+      "text": "Sáng hôm sau sân khô ráo như chưa có gì. Minh chạy thẳng sang nhà bà Hai. Bà cụ nghe xong chuyện đêm, mặt trắng bệch, thở dài một tiếng rất dài: bà đã đoán được ngày này sẽ đến. Ngồi xuống đây cháu, bà kể cho nghe chuyện mà cả làng này đã hứa sẽ mang xuống mồ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Chuyện bà Hai kể",
+      "text": "Bà Hai kể, hồi xưa nhà ông nội Minh thuộc về cụ Đạt, cha ông nội. Cụ có đứa con rể cưng - mà không, bà lắc đầu sửa lại - là cụ cưới về cho con trai một cô dâu tên Liên, đẹp nhất vùng, giọng hát nghe như chuông gió. Đêm tân hôn của Liên cũng là đêm cả làng nghe thấy tiếng khóc từ nhà cụ Đạt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Cô dâu tên Liên",
+      "text": "Sáng hôm sau Liên mất tích. Cụ Đạt bảo với làng rằng cô dâu hởn theo trai bỏ đi trong đêm, làng lúc đó không ai hỏi lại - hỏi mất mặt cụ. Ba ngày sau, cụ cho người lấp kín cái giếng sau nhà, nói nước giếng ôi thiu không dùng được. Từ đó, đêm nào nhà ấy cũng thức đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Điều làng giấu",
+      "text": "Bà Hai ngừng lại, mắt nhìn xuống đôi bàn tay nhăn nheo. Bà nói khẽ: bà không biết chuyện gì xảy ra đêm đó, nhưng bà nghe mẹ bà kể lại - người ta nghe tiếng Liên gọi mẹ ơi giữa đêm, rồi tiếng động mạnh rơi xuống nước. Và từ đó, không ai bao giờ nhìn thấy Liên nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Minh không tin",
+      "text": "Minh nghe xong mà nửa tin nửa ngờ. Chuyện ma cỏ nghe quen trong giới trẻ thành phố, nhưng lòng anh không yên. Chiều đó anh quyết định ở lại thêm, dọn dẹp nhà cửa, sắp xếp giấy tờ thừa kế - và tự mình kiểm tra lại cái giếng cho xong nỗi tò mò."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đồ đạc trong nhà",
+      "text": "Dọn gian thờ, Minh thấy nhiều thứ kỳ lạ. Tủ thờ có một ngăn khóa riêng, bên trong là bộ đồ cúng kiêng còn nguyên tro và tàn nhang năm nào - cúng cho ai, bốn mùa một năm, đều đặn năm mươi năm trời. Dưới đáy ngăn là một tờ giấy vàng gấp tư, viết chữ nhỏ xíu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Phong thư cũ",
+      "text": "Tờ giấy là một phong thư không gửi, không đề người nhận. Chữ ông nội run rẩy: con Liên ơi, tao biết mày không đi theo trai. Tao nghe hết đêm đó. Tao giữ lại được cái này của mày, để một ngày ai đó trả lại danh dự cho mày. Dưới đáy phong thư là một đoạn dây chuyền bạc đã đen."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Dây chuyền bạc",
+      "text": "Minh cầm đoạn dây chuyền trên tay mà lạnh toát sống lưng. Nếu Liên thật sự mất tích đêm tân hôn, nếu ông nội đã nghe hết đêm đó - thì cái làng này đã giấu một điều gì rất tày trời. Và cái giếng ngoài sân sau bỗng trở thành thứ Minh không thể không hỏi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Xuống xem giếng",
+      "text": "Chiều muộn hôm ấy, Minh lần đầu tiên đứng trước giếng ban ngày. Ba tảng đá tẻ dính liền đất đá, rêu đặc như chưa từng ai động. Nhưng đặt tai lên kẽ đá, anh nghe rất rõ - tiếng nước chảy sủi bọt bên dưới, sâu và tối, như dòng nước vẫn còn nguyên sau năm mươi năm bị chôn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Kẽ hở thở",
+      "text": "Minh nhét lửa thắp vào kẽ đá xem khí trong giếng còn không. Ngọn lửa không tắt - nó kéo dài và bị hút nghiêng xuống dưới, như giếng đang hút hơi thở từ trên mặt đất. Anh rụt tay lại. Kẽ đen bên dưới như đang nhìn ngược lên, chờ đợi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Đêm mưa đầu tiên",
+      "text": "Đêm ấy trời đổ mưa to. Sấm chớp liên hồi ngoài sông. Minh nằm nghe mưa và chờ - chờ tiếng gõ ba nhịp. Nó đến, nhưng không phải ở cửa sau. Lần này, ba tiếng gõ vang lên từ trong nhà - từ chính cánh cửa ngăn gian thờ với gian hè, nơi Minh đang nằm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Gõ từ trong nhà",
+      "text": "Cộc. Cộc. Cộc. Từ phía gian thờ - tức là có thứ gì đó ở trong nhà, ngăn cách bởi một cánh cửa gỗ mỏng. Minh ngồi bật dậy, lưng dính tường. Ngoài mưa sập sầm, đèn điện lờ mờ chớp. Ba tiếng gõ lại vang lên, lần này kèm theo tiếng nước rỏ rả rả trên nền gạch."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Vết chân ướt",
+      "text": "Minh gồng hết can đảm, cầm đèn pin mở toang cửa. Gian thờ tối đen. Nhưng trên nền gạch bóng loáng, có một hàng vết chân ướt - từ phía ban thờ, đi thẳng tới trước cửa phòng anh vừa nằm. Vết chân nhỏ, chân trần, từng dấu đọng nước đen ngòm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Di ảnh nghiêng ngả",
+      "text": "Ngọn đèn pin soi lên ban thờ. Hàng nhang vẫn đỏ lửa cháy chập chờn dù anh nhớ rõ đã tắt hết từ chiều. Và di ảnh ông nội - bức ảnh anh đặt ngay ngắn lúc thắp hương chiều - giờ nghiêng hẳn sang một bên, mặt ảnh xoay hẳn về một hướng: hướng cửa sau, hướng cái giếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Đêm không ngủ",
+      "text": "Minh kéo ghế ngồi thức cả đêm còn lại, đèn pin trong tay, mắt không rời di ảnh ông nội. Anh chợt hiểu ra một điều rùng mình: ông nội không phải dặn đừng đào giếng vì sợ - mà là dặn như người canh chừng một cái cửa. Năm mươi năm ông canh, và bây giờ ông mất rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Tý - bạn thuở nhỏ",
+      "text": "Sáng hôm sau Minh đi tìm Tý, bạn thuở nhỏ cùng lứa, giờ làm nghề cày thuê trong làng. Tý nghe chuyện giếng thì mặt cắt không còn giọt máu: mày đừng hỏi tao chuyện đó. Từ nhỏ đến giờ cha mẹ tao cấm qua gần nhà mày lúc tối. Cả làng biết, chỉ mày là không biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Chuyện làng giấu",
+      "text": "Tý nói, mỗi đời làng lại có người nghe tiếng khóc ngoài giếng đêm khuya. Người ta đồn ai mở cửa khi nghe ba nhịp gõ thì người ấy phải trả lại thứ đã lấy của Liên. Năm 1993, ông Ba Cẩn nhà họ Ân - nhà giàu nhất làng - điên lên kể suốt ngày đêm rằng Liên về đòi, rồi chết đuối ngay sông nhà mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Nhà họ Ân",
+      "text": "Họ Ân - Minh nhớ ra cái tên này. Đám tang ông nội, phía nhà họ Ân gửi vòng hoa to nhất nhưng không ai vào nhà viếng. Ông Ba nhỏ - cháu nội ông Ba Cẩn - giờ là chủ khu đất lớn đầu làng, dạo này đang định mua lại khu đất nhà ông nội Minh để làm homestay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Quá khứ nhà họ Ân",
+      "text": "Tý kể thêm, nhà họ Ân vốn không phải gốc làng An Mỹ. Ông Tư Cẩn - tổ tiên nhà ấy - đến làng những năm bốn mươi, làm quản lý đất cho cụ Đạt rồi lần lần lật đất làm của riêng. Đến đời ông Ba Cẩn thì giàu có nhất vùng, mà cũng đến đời ông ấy thì nhà Ân bắt đầu sa sút kỳ lạ - con cháu bệnh tật, đàn bà trong nhà khó giữ mạng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Cái chết của ông Ba Cẩn",
+      "text": "Chuyện ông Ba Cẩn điên rồi chết đuối, Tý nói, làng vẫn nhắc thì thầm. Ông ta ôm khư khư cái hòm gỗ, đêm nào cũng kêu Liên ơi tha cho tao. Người ta tìm thấy ông Ba Cẩn trôi ở khúc sông phía sau nhà ông nội Minh - ngay khúc sông đổ nước từ khuôn viên nhà cổ ấy ra. Nhà họ Ân từ đó cấm con cháu nhắc tên Liên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Ông Ba tìm đến",
+      "text": "Chiều hôm ấy ông Ba nhỏ tự đến tận nhà. Ông ta hơn Minh vài tuổi, mặc áo sơ mi bóng, xịt nước hoa nồng. Vừa bước vào sân ông đã liếc thẳng về phía giếng rồi quay lại: cháu Minh à, bác thương lắm mới nói. Bán căn nhà này cho bác, giá trả đời, cháu về thành phố làm ăn cho đỡ phiền."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Mua nhà hay mua giếng",
+      "text": "Minh hỏi vì sao ông Ba hào hứng với mảnh đất nằm cuối ngõ ấy đến thế. Ông Ba cười đáp qua loa về view sông, view ruộng. Nhưng Minh để ý - trong suốt cuộc nói chuyện, mắt ông ta cứ liếc về cái giếng, và khi Minh nhắc đến định đào giếng lên dùng lại nước, mặt ông Ba đanh lại thấy rõ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Lời cảnh báo ngược",
+      "text": "Trước khi ra về, ông Ba đứng lại giữa sân, giọng hạ xuống rất thấp: nghe bác, đừng có đụng vào giếng. Không phải vì ma quỷ gì - vì ở đây người ta còn sống được là nhờ biết thôi đúng lúc. Ông ta vỗ vai Minh, lực tay siết mạnh hơn cần thiết, rồi bỏ đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Quyết định của Minh",
+      "text": "Đêm ấy Minh mở lại cuốn sổ da đen của ông nội, lật từng trang dưới đèn. Cuối sổ là một sơ đồ nhỏ vẽ tay: sơ đồ sân sau, cái giếng được đánh dấu đỏ, và bên cạnh giếng - một dấu chấm nhỏ ở gốc cây đa cổ phía tường rào. Dưới sơ đồ, ông nội viết: chỗ này đáy thấp, cũ đây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Tiếng trong tường",
+      "text": "Trước khi ngủ, Minh ghé tai vào bức tường gian thờ - thứ người quê hay làm để nghe nhà còn chắc. Trong tường đất nện có tiếng động rất khẽ, như tiếng thở ra vô đều đặn của một người đang ngủ sâu. Anh rút tai ra, tự nhủ tiếng gió luồn khe. Nhưng tường đất nện nửa mét thì không luồn được gió."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Giấc mơ lặp lại",
+      "text": "Đêm ấy Minh lại mơ thấy ông nội. Lần này ông không chỉ tay nữa - ông quay mặt lại, và trong mơ ông nói một câu mà sáng dậy Minh vẫn nhớ rõ từng chữ: mày hỏi tụi già trong đình, bản đồ làng năm sáu hai còn đó. Giếng cũ không nằm ở chỗ mày đang nhìn đâu con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đình làng",
+      "text": "Sáng hôm sau Minh lên đình làng xin xem tài liệu cũ. Ông thủ từ tóc bạc mở cho anh cái tủ hoen gỉ đựng hồ sơ làng. Giữa đống giấy mốc, có một bản đồ làng An Mỹ vẽ tay năm 1962 - và đúng như lời ông nội nói trong mơ, cái giếng trong sân nhà cụ Đạt nằm lệch sang trái so với cái giếng bị lấp hiện tại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Hai cái giếng",
+      "text": "Minh đứng hình mất mấy giây. Trên bản đồ, giếng nhà cụ Đạt được đánh dấu ngay sau gốc đa - chứ không phải giữa sân. Cái giếng năm mươi năm nay cả làng ngại ngần nhắc đến, cái giếng bị lấp kín - hóa ra chỉ là cái giếng mới đào lên để đánh lạc hướng. Giếng thật, giếng xưa, vẫn nằm đâu đó dưới chân gốc đa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Gốc đa cổ",
+      "text": "Gốc cây đa phía tường rào - Minh đào xới đất dưới đám rễ già lúc chiều hôm sau. Xẻng chạm phải thứ cứng. Một hộp tôn rỉ nát, nặng trịch. Trong hộp là một gói vải nilon buộc chặt nhiều vòng: bên trong là chiếc khăn voan thêu tay đã ngả nâu, và một tập giấy gói kín - nhật ký thật sự của ông nội."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Nhật ký thật",
+      "text": "Tập giấy kể một câu chuyện khác hẳn lời đồn. Ông nội viết: đêm tân hôn của Liên, ông - lúc đó còn là cậu thanh niên - nghe tiếng cãi nhau ngoài sân. Không phải cãi vợ chồng. Là tiếng Liên cãi ông Tư Cẩn, chủ đất thân tín của cụ Đạt, người đã sớm để mắt đến cô dâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đêm tân hôn",
+      "text": "Ông nội viết tiếp: ông nghe Liên hét, rồi tiếng động mạnh ở giếng, rồi im. Ông trốn sau nhà kho không dám ra. Sáng hôm sau cụ Đạt bảo Liên theo trai. Ông Ba Cẩn - con ông Tư - là người xúm lại làm chứng cho lời nói đó. Ba ngày sau họ lấp giếng, và ông nội bị cụ Đạt gọi vào dặn: im thì sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Lời thề năm mươi năm",
+      "text": "Những trang cuối ông nội viết bằng nét chữ già nua: tao giấu dây chuyền của nó, tao giấu phong thư nó định gửi về quê trước đám cưới. Tao không dám mở giếng, vì ông Tư Cẩn còn mạnh, còn nhiều tiền. Nhưng tao ghi lại hết, để con cháu tao - nếu là người - thì trả lại công bằng cho cô Liên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Tiếng gõ đêm nay",
+      "text": "Minh khép cuốn nhật ký lại, tay run. Đúng lúc đó ngoài trời mưa giội, và trong nhà - ba tiếng gõ. Lần này không chậm rãi nữa. Cộc. Cộc. Cộc. Nhanh hơn, gấp hơn, như ai đó đã chờ năm mươi năm và biết rằng cuối cùng cũng có người đọc được lời từ trần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Bóng trắng cuối hành lang",
+      "text": "Và lần đầu tiên, Minh không né tránh. Anh cầm đèn pin, đi ra phía cửa sau, mở toang. Ngoài sân mưa trắng trời. Bên cái giếng lấp, bóng trắng đứng đó - lần này quay mặt về phía anh. Tóc đen dài, áo trắng ướt sũng dính vào người, và khuôn mặt - khuôn mặt của Liên, nhợt nhạt, đôi mắt đỏ hoe đầy nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Ánh mắt van nài",
+      "text": "Đáng lẽ Minh phải hét lên, phải chạy. Nhưng cái nhìn của bóng trắng ấy không phải ánh mắt đe dọa - là ánh mắt của một người đã chờ rất lâu, van nài đến tuyệt vọng. Người đàn bà trẻ trong áo dài trắng nhấc tay chỉ về phía tảng đá lấp giếng, chỉ ba lần - như ba nhịp gõ - rồi tan đi trong màn mưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Quyết mở giếng",
+      "text": "Minh đứng giữa mưa rất lâu. Trong đầu anh vang lên lời ông nội viết: để con cháu tao, nếu là người, thì trả lại công bằng. Anh quay vào nhà, lấy cuốn nhật ký và chiếc dây chuyền bạc, đặt lên ban thờ trước di ảnh ông nội - và lần đầu tiên sau ba đêm, anh nói to lên: được, con sẽ đào giếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Tập sau: Đào giếng",
+      "text": "Nhưng đào cái giếng ấy nghĩa là đụng vào bí mật năm mươi năm của cả một dòng họ giàu có nhất làng - và đụng vào thứ mà ông Tư Cẩn, dù đã nằm dưới đất, vẫn để lại người canh giữ. Tập sau: Minh đào giếng, và cái xác trong giếng không phải là thứ đáng sợ nhất đêm đó."
+    }
+  ],
+  "sceneImages": {
+    "hook": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/hook.jpg",
+    "village-dusk": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/village-dusk.jpg",
+    "village-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/village-night.jpg",
+    "haunted-house": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/haunted-house.jpg",
+    "ancestral-altar": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/ancestral-altar.jpg",
+    "old-well": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/old-well.jpg",
+    "storm-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/storm-night.jpg",
+    "river-mist": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/river-mist.jpg"
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "slug": "loi-nguyen-gieng-cu-tap-03",
+  "locale": "vi",
+  "title": "LỜI NGUYỀN GIẾNG CŨ - Tập 3: Đêm Đào Giếng | Truyện Ma Dài",
+  "description": "Đêm rằm tháng chạp, Minh và Tý đào giếng thật dưới gốc đa, cụ Đoàn đứng lễ phá trấn. Dưới đáy giếng không chỉ có xương cốt của Liên - còn một thứ kẻ giết người đã ném theo.\n\nTruyện ma dài 5 tập, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "sceneImages": {
+    "village-dusk": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/village-dusk.jpg",
+    "village-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/village-night.jpg",
+    "haunted-house": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/haunted-house.jpg",
+    "ancestral-altar": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/ancestral-altar.jpg",
+    "old-well": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/old-well.jpg",
+    "storm-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/storm-night.jpg",
+    "graveyard": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-02/graveyard.jpg",
+    "river-mist": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/river-mist.jpg",
+    "hook": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-02/hook.jpg"
+  },
+  "scenePrompts": {},
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập trước: lời cụ Đoàn",
+      "text": "Tập trước, cụ Đoàn - thầy cúng trấn giếng năm xưa - đã khai ra cách cứu oan hồn: đưa xác lên, gọi tên trước làng, và bắt kẻ thủ ác nhận tội. Đêm rằm tháng chạp, đêm duy nhất có thể phá trấn, chỉ còn cách mấy hôm nữa. Và mẹ Liên - cụ bà tám mươi tuổi - phải có mặt tại giếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Chuẩn bị đêm rằm",
+      "text": "Ba ngày trước rằm, Minh và Tý lên kế hoạch tỉ mỉ. Đào giếng ban đêm, chuông xẻng thuốc cày chuẩn bị sẵn, dây thừng đèn pin đủ cả. Khó nhất là đưa mẹ Liên qua sông mà không để nhà họ Ân hay - vì giờ thì cả làng đã biết có người đang bới móc chuyện giếng nhà ông Lực."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Kẻ canh ngõ",
+      "text": "Tý để ý từ mấy hôm trước: đầu ngõ nhà ông nội có một thằng trai lạ ngồi gặm trầu từ sáng đến tối, mắt không rời cổng nhà. Tý đi vòng ra sau thì thấy thêm một thằng nữa đỗ xe ở bờ sông. Nhà họ Ân đã bố trí người canh cả hai đầu - biết đêm nào đó việc sẽ xảy ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Mẹ Liên qua sông",
+      "text": "Đêm trước rằm, Minh mượn xuồng chèo đón mẹ Liên qua sông lúc trời chưa sáng, vòng qua bãi sình phía dưới làng để tránh mắt kẻ canh. Cụ bà nhỏ như con nít, nằm trong xuồng che chiếu, hai tay ôm khư khư cái túi vải đựng bộ quần áo mới của con gái - bộ bà đã may sẵn từ năm năm mươi năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Đón cụ bà qua sông",
+      "text": "Trên đường đón cụ bà qua sông lúc tờ mờ sáng, Minh nhận ra sương sông dày hơn thường ngày - sương trắng xóa, mù mịt, như dòng sông cố giấu chiếc xuồng nhỏ chở người mẹ tám mươi tuổi qua bờ. Cụ bà trong chiếu không nói một lời, chỉ ôm chặt cái túi quần áo vào ngực, mắt nhìn thẳng về phía làng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-mist",
+      "caption": "Chuyện trên sông",
+      "text": "Giữa dòng, cụ bà chợt mở miệng, giọng nhỏ như gió: hồi con Liên còn nhỏ, nó hay chèo xuồng đi hái rau muống trên sông này. Nó chèo giỏi lắm, mạnh tay lắm. Cụ ngừng lại, nhìn xuống mặt nước đen - sông này, giếng kia, nước ở đâu mà chả chả mang con tôi đi. Minh chèo chậm lại, không nói được gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Cụ bà vào nhà cụ Đạt",
+      "text": "Đưa cụ bà vào nhà ông nội, Minh chỉ chỗ ban thờ có ảnh Liên. Cụ bà nhìn tấm ảnh nhỏ con gái cài hoa lài, người run lên bần bật, hai tay nâng tấm ảnh như nâng đứa trẻ: con ơi, con ơi, mẹ đến đây rồi. Tiếng khóc của cụ vang trong gian nhà tối, và trên ban thờ - ngọn đèn dầu bỗng bùng lên sáng rỡ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Liên về gặp mẹ",
+      "text": "Trong gian nhà lúc ấy, mùi hoa lài tràn ngập đến ngộp thở. Cụ bà nhìn quanh mênh mông, mắt mờ đục như cố nhìn một thứ mình không thấy được: Liên ơi, con có ở đây không? Mẹ ở đây rồi, mẹ đến đón con rồi. Và cánh cửa sau - tự mở ra, khẽ khàng, như có ai vừa đẩy từ ngoài sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Hai mẹ con năm mươi năm",
+      "text": "Minh và Tý đứng ngoài ngưỡng cửa, không ai dám bước vào. Trong gian thờ, cụ bà ngồi bất động bên ảnh con gái, mắt nhắm lại, môi mấp máy - như đang nói chuyện với một người chỉ mình bà thấy. Sau này cụ kể: đêm đó bà thấy Liên, đứng ngay trước mặt, mặc áo trắng, cười với mẹ như ngày còn sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Ngày rằm",
+      "text": "Ngày rằm tháng chạp trời đẹp lạ thường - quang, lạnh, đêm hứa có trăng. Minh nhốt cụ bà trong nhà, dặn Tý đi lòng vòng dò kẻ canh. Đến chiều, Tý về báo: hai thằng canh ngõ đã về - có lẽ nhà họ Ân tưởng hôm nay không có gì. Nhưng ông Ba nhỏ đi đâu cả ngày không ai biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Chiều rằm chuẩn bị",
+      "text": "Chiều rằm, cụ Đoàn đến sớm mang theo túi vải đựng đồ lễ - nhang bạc, bùa vàng, chén rượu, một nắm gạo muối. Cụ dặn Minh: đêm nay đào thì không được sợ, không được quay lưng gọi tên nhau to, và tuyệt đối - nếu nghe ai gọi tên mình từ trong giếng, đừng trả lời. Lời dặn ấy nghe như câu chuyện cổ tích, nhưng cụ nói bằng mặt không đùa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Mẹ Liên đợi",
+      "text": "Cụ bà mẹ Liên ngồi im suốt buổi chiều trên chiếc ghế nhỏ cạnh ban thờ, tay vuốt bộ quần áo mới của con gái. Cụ không ăn, chỉ uống nước, mắt mờ nhìn ra sân như chờ đợi điều mình đã chờ năm mươi năm. Cụ nói với Minh: tối nay đưa được con tôi lên, tôi chết cũng cam. Anh phải nắm tay cụ mà bảo - cụ còn phải sống để trông mộ nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Làng ngủ sớm đêm rằm",
+      "text": "Chín giờ tối, làng đã tắt đèn hết - chuyện lạ lùng vì đêm rằm thường nhà nào cũng thức khuya cúng lễ. Tý đi vòng phát hiện ra: chiều nay nhà họ Ân sai người đi từng nhà khuyên dân rằm nên ngủ sớm vì lễ gia tiên nhà Ân cần làng yên tĩnh. Làng nghe lời - hoặc là vì nể, hoặc là vì ai cũng mơ hồ cảm thấy đêm nay không nên ra ngoài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Nửa đêm đêm rằm",
+      "text": "Mười một giờ đêm, cả làng đã ngủ. Minh, Tý, cụ Đoàn và mẹ Liên lặng lẽ ra gốc đa. Trăng rằm sáng vằng vặc, rọi bóng cây đa đổ dài trên sân. Cụ Đoàn đặt bàn lễ nhỏ trước miệng hố cũ, thắp hương bạc, lải nhải đọc chú văn mà Minh không hiểu - chỉ thấy không khí đặc lại, lạnh đến buốt xương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Phá trấn",
+      "text": "Cụ Đoàn đốt ba tờ bùa vàng, hạt nước lã lên miệng giếng, rồi đập nát nắp ván trấn yểm. Tiếng ván vỡ vang trong đêm khô như tiếng súng. Cụ quay lại bảo Minh và Tý: đào đi, nhanh tay. Nửa đêm qua giờ tốt thì lễ mất hiệu lực. Hai thằng cắm cúi cuốc đất, mồ hôi chảy ròng dù trời lạnh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Đất giếng mở ra",
+      "text": "Đất trong giếng lạ vô cớ - lúc cứng như đá, lúc mềm nhão như bùn, mùi thối ngai ngái bốc lên từng đợt. Đào đến gần sáng, xẻng của Tý chạm vải. Cả hai dừng lại. Minh rúc xuống, tay run, kéo ra một mảnh vải trắng còn nguyên vân thêu - chiếc áo dài cưới của Liên, năm mươi năm trong đất mà chưa mục hết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Đào trong đêm",
+      "text": "Đất đầu tiên nhổ lên đen ngòm, khô khốc, như lớp da chết của giếng. Mỗi xẻng đất được vứt sang mép sân, mỗi xẻng như kéo mình đến gần câu trả lời năm mươi năm tuổi. Minh và Tý thay nhau xuống hố - người đào, người khom lưng xúc đất lên xô. Cụ Đoàn ngồi bên miệng lễ, tay không rời chuỗi tràng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Đất thay đổi",
+      "text": "Đào sâu đến hai thước thì đất đổi - từ khô khốc sang ẩm nhẽo, màu nâu đục, mùi nước đọng lâu năm bốc lên nồng. Cụ Đoàn gọi khẽ: gần rồi, chậm tay. Từ đây đào bằng xẻng nhỏ, bới từng tí, kẻo hỏng xác. Hai thằng trai khom lưng trong hố, nước bùn thấm ướt đến gối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Tiếng từ đáy giếng",
+      "text": "Đào được nửa đêm thì bắt đầu nghe thấy tiếng từ dưới đất - khẽ, nhỏ, như tiếng người mệt thở trong giấc. Tý nín thở cúi tai xuống miệng hố: có tiếng nấc. Cụ Đoàn bảo đừng nghe, đừng trả lời, đào tiếp. Nhưng tiếng ấy rõ lên mỗi lúc - tiếng đàn bà khóc khan, nức nở, tiếng ngón tay cào vào vách đất ẩm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Giọng gọi tên",
+      "text": "Rồi trong một khoảnh khắc, tiếng khóc ấy đổi thành tiếng gọi - Đạt ơi, Đạt ơi - cứu con với, nước lạnh quá. Chính giọng Liên, ngọt và trẻ như ngày mười chín tuổi. Minh đứng sững trong hố, da gà nổi lên khắp người. Nó gọi tên ông nội anh. Năm mươi năm dưới đất mà giọng vẫn ngây như hôm qua."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Cụ Đoàn niệm chú",
+      "text": "Cụ Đoàn đứng phắt dậy, rải gạo muối vòng quanh miệng giếng, giọng run mà vẫn đanh: im mồm, đừng nghe, đó là vọng giếng - nó thử lòng mày. Cụ đọc chú lớn hơn, nhang bạc lay động trong tay. Tiếng gọi tên chùng xuống, lại trở về tiếng nấc nghẹn - buồn hơn, xa hơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Đáy giếng lộ ra",
+      "text": "Đến gần ba thước, chân giếng lộ ra - nền đá ong cũ lở loét, một vài mảnh ngói vỡ. Nước giếng còn đọng một vệt đen sánh ở giữa. Tý ghé sát tai Minh: ở đây rồi, xác cô ấy nằm đâu đó trong mớ đất này. Hai thằng ngồi lặng một lúc trước khi cầm tay bới đất - không ai dám dùng xẻng nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Bới bằng tay",
+      "text": "Bới đất bằng tay trong giếng lạnh là cảm giác không ai quên được - ngón tay cứng đờ, đất sệt lọt kẽ, mỗi lần chạm vào thứ gì cứng đều phải rùng mình nhìn kỹ. Tý bới ra một mảnh xương nhỏ trước - đưa lên tay run không cầm nổi. Rồi thêm mảnh nữa, rồi mảnh khác - xương người nằm rải dưới đáy như bị chôn vội, không lễ nghi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Mưa bắt đầu rơi",
+      "text": "Gần sáng, trời bắt đầu rơi mưa - mưa lạnh, nhỏ, đều đặn. Mẹ Liên vẫn ngồi bên miệng giếng, mắt không rời hố đất đang dần mở ra, hai tay nắm chặt bộ quần áo. Cụ Đoàn đứng lễ không ngừng, nhang bạc cháy đỏ trong gió lạnh. Minh và Tý cuốc đất đến tay rạn nứt, ai cũng biết - họ đang gần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Mảnh vải trắng đầu tiên",
+      "text": "Đến khúc cuối, xẻng Tý chạm vào thứ mềm - không phải đất. Hai thằng quỳ xuống, dùng tay nhổ từng nắm đất bùn ra. Dưới đáy, một góc vải trắng lộ ra, vân thêu hoa cúc vẫn còn mờ nhạt - mảnh vải áo dài năm mươi năm tuổi, chưa tan hết trong lòng đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Bộ xương của Liên",
+      "text": "Dưới lớp vải ấy là xương. Bộ xương người nằm co quắp giữa đáy giếng, xương tay còn cài nguyên chiếc vòng ngọc, đầu lâu nghiêng hẳn - hộp sọ có vết lõm sâu ở sau gáy, không phải chết đuối, mà là bị đánh ngã trước khi rơi xuống nước. Mẹ Liên nhìn thấy, gào lên một tiếng rồi ngất xỉu trong vòng tay cụ Đoàn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Trèo xuống đáy",
+      "text": "Đưa hết xương lên xong, Minh trèo lại xuống đáy giếng lần cuối - cụ Đoàn dặn phải rà hết đáy, không để sót thứ gì của cô ấy ở lại. Đáy giếng lạnh buốt, nước đen ngấm qua dép. Anh lần mò từng góc đá ong, bới từng lớp bùn đặc quánh - rồi ngón tay chạm vào thứ cứng lạnh khác xương: kim loại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Khối đá khắc bùa",
+      "text": "Trước cả hộp sắt, Minh bới ra một khối đá hình trụ nặng trịch - to bằng cổ tay, trên đá khắc chìm những vòng chữ cổ xoắn lại như rắn. Cụ Đoàn nhìn từ trên miệng giếng mà tay nắm chặt miệng hố: khối đá chôn - bùa ép hồn, đè linh hồn xuống không cho siêu. Người xưa chỉ dùng cho kẻ bị giết mà kẻ giết muốn chôn cả tiếng kêu oan."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Thứ ném theo xuống",
+      "text": "Minh trèo xuống đáy giếng để đưa xương lên từng phần theo lễ. Đến cuối, tay anh chạm phải một thứ lạ trong bùn: một cái hộp sắt nhỏ, rỉ nát, buộc dây xích. Cạnh hộp sắt - một khối đá hình trụ lạ, trên đá khắc những vòng bùa ép sẵn. Cụ Đoàn nhìn thấy thì mặt trắng bệch: đây là bùa khóa hồn, người xưa chỉ dùng cho kẻ giết người muốn giam nạn nhân vĩnh viễn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-well",
+      "caption": "Hộp sắt rỉ",
+      "text": "Hai thằng khiêng hộp sắt lên mặt đất. Khóa rỉ bung ra chỉ sau một nhát xẻng. Trong hộp không phải vàng bạc - là một chiếc khăn lụa gói một nắm tóc đen dài, một mẩu bùa giấy đỏ, và một chiếc nhẫn vàng khắc chữ Ân. Ông Tư Cẩn đã giam Liên bằng chính vật của mình - tóc của nạn nhân, bùa khóa hồn, và dấu ấn của kẻ làm bùa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Trời đổi gió",
+      "text": "Ngay lúc đó, trời đổi gió. Trăng rằm sáng vằng vặc bỗng bị mây đen che phủ, gió rít qua tán đa như tiếng người kêu. Cụ Đoàn hét to: đưa xác lên hết, đắp đất lại ngay! Nhưng chưa kịp đắp thì trời đổ mưa - mưa rào ào ào, sấm nổ đùng đoàng - như cả một cơn thịnh nộ năm mươi năm được mở trần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Bóng trắng trong mưa",
+      "text": "Và giữa màn mưa ấy, Liên hiện ra. Không còn là bóng trắng mờ nhạt nữa - cô ấy đứng rõ ràng bên miệng giếng, áo dài trắng, tóc dài, khuôn mặt hiện lên dưới ánh chớp giật: đẹp, trẻ, nhưng mắt đỏ ngầu như máu. Cô ấy không nhìn Minh - cô nhìn về phía đầu làng, hướng nhà họ Ân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Mưa rào và sấm",
+      "text": "Cơn mưa rào ập xuống bất chợt - từ trời quang trăng sáng sang mưa xối xả chỉ trong vài phút, như bầu trời nứt ra cùng miệng giếng. Sấm nổ đùng đoàng liên hồi, chớp giật chiếu sáng cả gốc đa. Mẹ Liên được cụ Đoàn bế vội vào nhà, xương Liên được Minh ôm khư khư chạy trước - hai thằng cố không để nước mưa thấm vào hài cốt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Oan hồn thoát trấn",
+      "text": "Cụ Đoàn gào lên trong mưa: nó thoát rồi! Trấn phá rồi! Nó sẽ đi đòi nhà Ân ngay đêm nay nếu không kịp gọi tên. Minh bế cụ bà mẹ Liên đang ngất vào nhà, Tý và cụ Đoàn vội đắp đất lại miệng giếng. Nhưng tất cả đều biết - việc lớn nhất vừa xảy ra: Liên đã tự do, và cô ấy mang theo năm mươi năm oan ức."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Bóng trắng cuối sân",
+      "text": "Trước khi vào nhà, Minh quay đầu nhìn lại một lần - qua màn mưa, dưới gốc đa, bóng trắng còn đứng đó. Cô ấy không đi. Cô ấy đứng nhìn mình ôm xương cô ấy chạy vào nhà, như tiễn một đứa trẻ đi ngủ. Rồi một nhát chớp giật nữa - và sân trống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đêm trong nhà",
+      "text": "Trong nhà, mẹ Liên tỉnh dậy thì ôm xương con gái mà khóc suốt đêm - tiếng khóc thảm thiết xen lẫn sấm mưa khiến Minh muốn điên. Xác Liên được đặt trang trọng trên giường gỗ gian thờ, phủ chiếc khăn voan mẹ dệt. Cụ Đoàn ngồi trông coi đêm ấy, tay lẩm bẩm, mắt không rời cánh cửa mở ra sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Tiếng bước đi qua",
+      "text": "Khoảng ba giờ sáng, mọi người trong nhà đều nghe thấy - tiếng bước chân trần ướt sũng đi từ sân sau, qua hiên, vòng qua gian giữa, rồi ra cổng. Nhịp chân chậm, nặng, đều đặn như người đi công việc. Không ai dám mở cửa nhìn. Tiếng bước chân đi thẳng ra đường làng - về hướng nhà họ Ân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Tin đồn sáng sớm",
+      "text": "Sáng hôm sau cả làng xôn xao. Đêm qua, mấy nhà gần đường nghe thấy tiếng chó sủa điên cuồng, rồi tiếng người đàn bà khóc đi ngang qua nhà - ai mở cửa ra thì chỉ thấy mưa. Và ở nhà họ Ân đầu làng, người ta đồn ông Ba nhỏ đã thức suốt đêm, đốt lửa trong sân, hét lên một mình như cãi nhau với ai đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đặt xương trên giường",
+      "text": "Bộ xương Liên được đặt cẩn thận trên giường gỗ gian thờ, phủ chiếc khăn voan mẹ Liên dệt từ lâu. Mảnh xương nào cũng được rửa qua nước lã mà cụ Đoàn đã niệm, đặt đúng vị trí theo lối người nằm. Nhìn bộ xương nhỏ như xương con gái mười bốn mười lăm - chứ không phải cô dâu mười chín - Minh mới thấy Liên chết trẻ đến thế nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Mẹ khóc bên xác con",
+      "text": "Cụ bà ngồi bên giường xương con suốt từ lúc tỉnh dậy đến trưa. Cụ không khóc to nữa - khóc mòn rồi - chỉ ngồi vuốt nhẹ chiếc khăn voan, lần lượt từng khúc xương như từng ngày vuốt đầu con ngủ. Cụ kể khẽ cho xương nghe: năm nay mẹ tám mươi rồi, con mãi mười chín. Mẹ sắp gặp con rồi, nhưng phải làm xong việc này đã."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Ông Ba nhỏ điên",
+      "text": "Chiều đó Tý mang tin về: ông Ba nhỏ phát điên thật rồi - ngồi giữa nhà tóc tai bù xù, khăn tang quấn đầu, miệng lảm nhảm Liên ơi tha cho nhà tao. Người nhà Ân đưa đi viện nhưng ông ta bám cột không chịu, kêu có người đứng sau lưng ông ta mỗi lúc ông ta quay đầu. Cả làng nghe mà rùng mình - ai cũng biết Liên đã ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Làng sợ hãi",
+      "text": "Không khí làng An Mỹ đổi hẳn trong một đêm. Nhà nào cũng đóng cửa trước chạng vạng, chó buộc vào nhà, người đi sớm về sớm. Có nhà rải vôi quanh cổng, có bà treo tỏi trên cửa sổ. Chuyện giếng nhà ông Lực đã lan ra - ai cũng biết giếng được đào, ai cũng biết có gì đó đã thoát ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-night",
+      "caption": "Nhà Ân im lặng",
+      "text": "Nhà họ Ân - ngoài ông Ba nhỏ điên - thì im như tờ. Không ai đến hỏi, không ai đến dọa, không ai đến xem. Cái im lặng ấy lạnh hơn bất cứ lời đe dọa nào. Minh biết họ đang đợi - đợi xem thằng cháu ông Đạt sẽ làm gì tiếp, đợi xem làng có đứng về phía nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đêm thứ hai không vong",
+      "text": "Đêm thứ hai sau khi đưa xác lên, trong nhà ông nội yên tĩnh đến lạ - không nước lu đục, không gương mờ, không tiếng hát ví. Liên không còn ở trong nhà nữa. Minh biết cô ấy đang ở đâu - chỗ mà cô ấy đã chờ năm mươi năm để quay về. Anh chỉ sợ một điều: cô ấy đi quá xa mà không kịp được gọi tên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Chiếc mộ chuẩn bị",
+      "text": "Cụ Đoàn chọn chỗ đặt mộ cho Liên - góc nghĩa trang làng bên bãi sông, cây gạo già rợp bóng. Ông bảo: xác đào lên mà chưa gọi được tên thì xương phải được an táng đàng hoàng, có mộ có bia, người ta mới có chỗ để về. Hai anh em Minh Tý xúc đất đắp ngôi mộ đất đầu tiên cho cô dâu năm mươi năm tuổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Bia mộ tạm",
+      "text": "Bia mộ tạm là một miếng ván gỗ căn dặn cụ Đoàn phải viết đúng - Nguyễn Thị Liên, sinh năm Giáp Thìn, tại làng An Mỹ. Chưa có ngày mất vì chưa ai biết chính xác đêm nào - chỉ có kẻ giết người biết. Khi họ nhận tội trước làng, ngày ấy mới được khắc lên bia. Đến lúc đó, Liên mới thật sự có mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Minh lo cho Liên",
+      "text": "Nhưng Minh lo một điều khác: cụ Đoàn nói oan hồn đi đòi sẽ biến thành sát quỷ nếu uất khí quá lớn - Liên trả thù được thì cũng mất đi phần người, mãi mãi kẹt làm vong oan. Muốn cứu cô ấy thật sự, phải gọi tên cô trước làng và bắt nhà Ân nhận tội công khai - trước khi cô ấy tự tay trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Kế hoạch đối chất",
+      "text": "Cả đêm ấy Minh và cụ Đoàn bàn kế hoạch: không đủ chỉ có tang chứng trong hộp sắt - nhà Ân sẽ chối. Phải có lời khai của ông Tư Cẩn còn sống, hoặc ít nhất có người nhà Ân đứng ra nhận tội trước đông người. Cụ Đoàn nói thẳng: ông Tư già rồi, chết lúc nào không biết - phải làm trong vài ngày tới, không kịp nữa thì Liên thành sát quỷ, cả làng lãnh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Tý đi dò nhà Ân",
+      "text": "Sáng hôm sau Tý đi dò nhà Ân, về báo: ông Tư Cẩn nằm liệt từ đêm rằm - nghe nói đêm đó ông ta gào lên một tiếng rồi ngã quỵ. Nhà Ân mời thầy cúng đến làm lễ suốt ngày, bùa dán kín cửa. Nhưng ông Tư còn thở - còn người để đối chất. Thời gian chạy ngắn dần như nước ròng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Những tin lạ từ khắp làng",
+      "text": "Tin đồn lan khắp làng suốt ngày hôm sau. Bà bán cá đầu chợ kể: đêm qua đi vệ sinh nghe tiếng hát ví từ sông. Ông đánh đò khuya kể: thấy người đàn bà áo trắng đứng trên bãi, gọi tên ông Tư Cẩn. Nhà thằng Hai sát nhà Ân kể: khuya nghe tiếng khóc từ vườn nhà họ Ân - chính vườn có cây nhãn cổ thụ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Cây nhãn trong vườn Ân",
+      "text": "Tý nghe đến cây nhãn thì giật mình: cây nhãn cổ thụ trong vườn nhà Ân - chính là cây Liên leo hái trộm quả hồi nhỏ, bị ông Tư Cẩn đuổi đánh chạy qua sân. Cây đó có dây đỏ buộc cũ kỹ từ đời nào - người ta bảo là buộc từ hồi ông Tư cưới vợ cả. Bây giờ vong Linh đang đi về đúng chỗ ký ức của nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Xin lỗi ông nội",
+      "text": "Tối hôm đó Minh quỳ trước ban thờ ông nội, khấn: ông ơi, ông giữ được tang chứng năm mươi năm, con đưa được xác cô Liên lên rồi. Phần còn lại con lo - con sẽ đưa nhà Ân ra trước làng nhận tội. Nhang trên ban thờ cháy đều, ảnh ông nội như mỉm cười - lần đầu tiên anh thấy nét ảnh ông nhẹ nhõm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Ba ngày còn lại",
+      "text": "Cụ Đoàn đếm ngày trên lịch âm treo tường: ông Tư Cẩn nếu qua được tuần này, Liên sẽ hóa sát quỷ hẳn - vong oan sau giết người ba lần không được tên, không được lễ, mất hết phần người. Còn ba ngày. Ba ngày để bắt một ông già liệt giường nhận tội trước cả làng - và để Liên, trước khi biến mất trong oán hận, được nghe mẹ gọi tên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Tập sau: Đối chất",
+      "text": "Nhưng đối chất với nhà họ Ân không phải chuyện dễ - họ có tiền, có người, và năm mươi năm im lặng của cả một làng đứng về phía họ. Tập sau - tập bốn: mẹ Liên đứng trước cổng nhà Ân gọi tên con gái, và cả làng An Mỹ phải chọn bên."
+    }
+  ]
+}

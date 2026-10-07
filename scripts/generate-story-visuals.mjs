@@ -15,10 +15,12 @@
 //   node scripts/generate-story-visuals.mjs <slug> [...]   # specific episodes
 //   node scripts/generate-story-visuals.mjs --prompts <slug>   # dry-run, print prompts only
 //   FORCE=1 ...                                            # regenerate even when images exist
-import { readdir, readFile, writeFile, mkdir, access } from "node:fs/promises";
+import { readdir, readFile, writeFile, mkdir, access, unlink } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { execFileSync } from "node:child_process";
 import { withRetry } from "./lib/retry.mjs";
+import { findFfmpeg } from "./lib/ffmpeg.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const episodesDir = path.join(root, "src", "suckhoe", "episodes");
@@ -27,6 +29,11 @@ const STYLE_VI =
   "Vietnamese folk tale storybook illustration, warm gouache painting, soft cinematic lighting, muted gold and deep green palette, traditional Vietnamese village setting, no text, no watermark";
 const STYLE_EN =
   "folk tale storybook illustration, warm painterly gouache style, cinematic lighting, muted earthy palette, no text, no watermark";
+// Horror arc (CR-002): cold, desaturated, cinematic — fixed style block
+// is what keeps every scene and every episode visually consistent, the
+// prompt only supplies the setting.
+const STYLE_HORROR =
+  "dark cinematic horror illustration, muted desaturated palette of deep teal and cold grey, volumetric fog, single faint light source, Vietnamese rural village atmosphere, film grain, painterly, moody, no text, no watermark, no faces close-up";
 
 const hashSeed = (s) => {
   let h = 0;
@@ -47,14 +54,14 @@ const autoPrompt = (partText, isEn) => {
 // (imagePrompts in the episode JSON) rather than relying on expansion.
 const MODEL_CHAIN = (process.env.POLLINATIONS_MODELS ?? "flux,zimage,klein").split(",");
 
-const pollinationsUrl = (prompt, seed, model) =>
+const pollinationsUrl = (prompt, seed, model, w = 1080, h = 1350) =>
   `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}` +
-  `?width=1080&height=1350&seed=${seed}&model=${model}&nologo=true`;
+  `?width=${w}&height=${h}&seed=${seed}&model=${model}&nologo=true`;
 
-const fetchImage = async (prompt, seed) => {
+const fetchImage = async (prompt, seed, dims) => {
   let lastErr;
   for (const model of MODEL_CHAIN) {
-    const url = pollinationsUrl(prompt, seed, model);
+    const url = pollinationsUrl(prompt, seed, model, dims?.w, dims?.h);
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(120_000) });
       if (!res.ok) {
@@ -75,31 +82,76 @@ const fetchImage = async (prompt, seed) => {
   throw lastErr ?? new Error("all image models failed");
 };
 
+// The anonymous tier ignores nologo=true — every image comes back with a
+// "pollinations.ai" watermark along the bottom-right (~12% of height, the
+// source is smaller than requested: 1024x576 regardless of the width
+// param). Crop that strip and (long-form only) upscale back to 1920w for
+// the 1080p composition. A failed crop must fail the generation — a cached
+// watermarked file would otherwise be skipped forever by the resume check.
+let ffmpegChecked = false;
+let ffmpegBin = null;
+const cropWatermark = async (rawFile, outFile, upscaleW) => {
+  if (!ffmpegChecked) {
+    ffmpegChecked = true;
+    ffmpegBin = findFfmpeg();
+  }
+  if (!ffmpegBin) {
+    throw new Error("ffmpeg required to strip the pollinations watermark (set FFMPEG_BIN)");
+  }
+  const crop = "crop=iw:floor(ih*0.875/2)*2:0:0";
+  const vf = upscaleW ? `${crop},scale=${upscaleW}:-2:flags=lanczos` : crop;
+  execFileSync(ffmpegBin, ["-y", "-i", rawFile, "-vf", vf, "-q:v", "3", outFile], { stdio: "ignore" });
+};
+
+// Downloads land in a `.raw` temp file and are only promoted to the cache
+// path after a successful crop — a failed crop must not leave a watermarked
+// file behind for the resume check to accept forever.
+const fetchToCache = async (prompt, seed, dims, outFile) => {
+  const rawFile = `${outFile}.raw.jpg`;
+  try {
+    const buf = await fetchImage(prompt, seed, dims);
+    await writeFile(rawFile, buf);
+    await cropWatermark(rawFile, outFile, dims?.w);
+    await unlink(rawFile);
+    return buf.length;
+  } catch (err) {
+    await unlink(rawFile).catch(() => {});
+    await unlink(outFile).catch(() => {});
+    throw err;
+  }
+};
+
 const args = process.argv.slice(2);
+const longMode = args.includes("--long");
 const dryRun = args.includes("--prompts");
 const force = !!process.env.FORCE;
 const requested = args.filter((a) => !a.startsWith("--"));
 
-const files = (await readdir(episodesDir)).filter((f) => f.endsWith(".json"));
-const episodes = await Promise.all(
-  files.map(async (file) => {
-    const mod = await import(pathToFileURL(path.join(episodesDir, file)), {
-      with: { type: "json" },
-    });
-    return { file, ...mod.default };
-  })
-);
+// --long mode handles only the long-form pipeline below; skip the
+// short-form story scan entirely so the two modes are mutually exclusive
+// (otherwise `--long` would also regenerate every Shorts episode missing
+// images, burning the anonymous quota before reaching the real targets).
+if (!longMode) {
+  const files = (await readdir(episodesDir)).filter((f) => f.endsWith(".json"));
+  const episodes = await Promise.all(
+    files.map(async (file) => {
+      const mod = await import(pathToFileURL(path.join(episodesDir, file)), {
+        with: { type: "json" },
+      });
+      return { file, ...mod.default };
+    })
+  );
 
-const targets = episodes.filter(
-  (ep) =>
-    ep.kind === "story" &&
-    (requested.length === 0 || requested.includes(ep.slug))
-);
+  const targets = episodes.filter(
+    (ep) =>
+      ep.kind === "story" &&
+      (requested.length === 0 || requested.includes(ep.slug))
+  );
 
-if (!targets.length) {
-  console.log("No story episodes matched.");
-  process.exit(0);
-}
+  if (!targets.length) {
+    console.log("No story episodes matched.");
+    process.exit(0);
+  }
 
 for (const ep of targets) {
   const isEn = ep.locale === "en";
@@ -139,9 +191,8 @@ for (const ep of targets) {
     }
     await withRetry(
       async () => {
-        const buf = await fetchImage(prompts[i], seed);
-        await writeFile(outFile, buf);
-        console.log(`wrote ${relPaths[i]} (${(buf.length / 1024).toFixed(0)}KB)`);
+        const bytes = await fetchToCache(prompts[i], seed, null, outFile);
+        console.log(`wrote ${relPaths[i]} (${(bytes / 1024).toFixed(0)}KB)`);
       },
       // Anonymous quota allows roughly one image per ~30-60s — a 402 is
       // a cooldown signal, not a hard failure, so backoff is long.
@@ -159,6 +210,69 @@ for (const ep of targets) {
   json.images = relPaths;
   await writeFile(jsonPath, JSON.stringify(json, null, 2) + "\n");
   console.log(`updated ${ep.file}: images[${written.length}]`);
+}
+}
+
+// ---------------------------------------------------------------------------
+// --long mode: long-form episodes carry `scenePrompts` (map scene -> prompt)
+// instead of per-part imagePrompts. One still per scene setting is generated
+// at 1920x1080 and written into `sceneImages`; beats sharing a scene reuse the
+// same image, which is what keeps the arc visually consistent. Resumable —
+// existing files are skipped unless FORCE=1.
+if (longMode) {
+  const longDir = path.join(root, "src", "suckhoe", "long-form");
+  const dims = { w: 1920, h: 1080 };
+  const lfFiles = (await readdir(longDir)).filter((f) => f.endsWith(".json"));
+  for (const file of lfFiles) {
+    const mod = await import(pathToFileURL(path.join(longDir, file)), {
+      with: { type: "json" },
+    });
+    const ep = mod.default;
+    if (requested.length && !requested.includes(ep.slug)) continue;
+    const prompts = ep.scenePrompts ?? {};
+    const scenes = Object.keys(prompts);
+    if (!scenes.length) continue;
+
+    const outDir = path.join(root, "public", "images", "suckhoe-long", ep.slug);
+    await mkdir(outDir, { recursive: true });
+    const seed = hashSeed(ep.slug);
+    const sceneImages = { ...(ep.sceneImages ?? {}) };
+
+    for (const scene of scenes) {
+      const rel = `images/suckhoe-long/${ep.slug}/${scene}.jpg`;
+      const outFile = path.join(outDir, `${scene}.jpg`);
+      if (!force) {
+        try {
+          await access(outFile);
+          sceneImages[scene] = rel;
+          console.log(`exists ${rel}`);
+          continue;
+        } catch { /* not generated yet */ }
+      }
+      const prompt = `${prompts[scene]} ${STYLE_HORROR}`;
+      if (dryRun) {
+        console.log(`${ep.slug} [${scene}]: ${prompt}`);
+        continue;
+      }
+      await withRetry(
+        async () => {
+          const bytes = await fetchToCache(prompt, seed, dims, outFile);
+          console.log(`wrote ${rel} (${(bytes / 1024).toFixed(0)}KB)`);
+        },
+        { attempts: 6, baseMs: 20000, label: `pollinations ${ep.slug} ${scene}` }
+      );
+      sceneImages[scene] = rel;
+      await new Promise((r) => setTimeout(r, 15000));
+    }
+
+    if (!dryRun) {
+      const jsonPath = path.join(longDir, file);
+      const json = JSON.parse(await readFile(jsonPath, "utf8"));
+      json.sceneImages = sceneImages;
+      await writeFile(jsonPath, JSON.stringify(json, null, 2) + "\n");
+      console.log(`updated ${file}: sceneImages[${Object.keys(sceneImages).length}]`);
+    }
+  }
 }
 
 console.log("Done.");

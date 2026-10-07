@@ -1,0 +1,297 @@
+{
+  "slug": "loi-nguyen-gieng-cu-tap-05",
+  "locale": "vi",
+  "title": "LỜI NGUYỀN GIẾNG CŨ - Tập 5: Hồi Kết | Truyện Ma Dài",
+  "description": "Nghiệp quả của nhà Ân, ngày mẹ Liên đi theo con, và quyết định cuối cùng của Minh với căn nhà ông nội - nơi một lời nguyền năm mươi năm đã được giải.\n\nTập cuối - truyện ma dài 5 tập, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "sceneImages": {
+    "village-dusk": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/village-dusk.jpg",
+    "village-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/village-night.jpg",
+    "haunted-house": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/haunted-house.jpg",
+    "ancestral-altar": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/ancestral-altar.jpg",
+    "old-well": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/old-well.jpg",
+    "storm-night": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/storm-night.jpg",
+    "graveyard": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-02/graveyard.jpg",
+    "river-mist": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-01/river-mist.jpg",
+    "hook": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-02/hook.jpg",
+    "estate-gate": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-04/estate-gate.jpg",
+    "ancestral-house": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-04/ancestral-house.jpg",
+    "village-square": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-04/village-square.jpg",
+    "well-shrine": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-05/well-shrine.jpg",
+    "dawn-village": "images/suckhoe-long/loi-nguyen-gieng-cu-tap-05/dawn-village.jpg"
+  },
+  "scenePrompts": {
+    "well-shrine": "a small Vietnamese shrine built over an old sealed well under a giant banyan tree at night, incense smoke, candles glowing, mist, peaceful but eerie",
+    "dawn-village": "a Vietnamese riverside village at dawn, pale golden mist over rice fields and tiled roofs, a river reflecting the first light, serene and melancholic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập trước: lời thú tội",
+      "text": "Tập trước, trước cổng nhà Ân và trước mặt cả làng, ông Tư Cẩn đã khóc khai tội - đêm tân hôn năm mươi năm trước, ông giết Liên rồi ném xác xuống giếng. Mẹ Liên được gọi tên con gái trước dân làng. Oan hồn được minh oan, tan đi trong gió như hơi sương. Nhưng câu chuyện năm mươi năm chưa hết - nghiệp quả của nhà Ân còn ở phía trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Ngày sau lời khai",
+      "text": "Ngày hôm sau buổi đối chất, nhà Ân đóng kín cổng. Không ai ra chợ, không ai đi làm, con cháu ở xa được gọi về gấp. Trong nhà, ông Tư Cẩn nằm im trên giường - sau lời khai ông không nói thêm lời nào, chỉ thở, mắt nhìn trần. Người nhà mời thầy đến cúng giải hạn suốt đêm - nhưng lần này không ai còn tin bùa nào cứu nổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Ông Tư mất",
+      "text": "Ông Tư Cẩn mất ba ngày sau buổi đối chất - đúng đêm cuối trong ba ngày cụ Đoàn đếm. Người ta kể trước khi chết ông chợt mở mắt to, nhìn về góc buồng trống, ú ớ mấy tiếng không rõ rồi tắt thở. Trên mặt ông không có nét nhẹ nhõm của người được tha - chỉ có nét hoảng của người gặp lại điều mình trốn năm mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Tang lễ nhà Ân",
+      "text": "Tang lễ ông Tư Cẩn làm vắng vẻ lạ thường cho một gia đình từng là trưởng làng - ít người đến viếng, lễ làm gọn, không ai khóc to. Dân làng đến thì đến qua loa, đốt nén nhang rồi về. Ai cũng biết - người mất mang tội giết người chưa rửa, lễ to cũng không cứu được. Nhà Ân từ đó như căn nhà bị làng tách ra - không ai ghét, nhưng không ai gần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Thằng Sanh sau tang bố",
+      "text": "Thằng Sanh sau tang bố đi chùa làm lễ cầu siêu ba ngày ba đêm - người ta kể ông ta khấn sấp mặt trước phật đài, khóc như mưa. Không rõ ông khóc cho bố hay khóc cho cả nhà Ân - năm mươi năm dựng trên một cái chết chôn giấu, một buổi sáng thì đổ. Ông không nói nhiều sau đó - chỉ thu dọn sách bán đất, dời dần ra khỏi làng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Ông Ba nhỏ tỉnh lại",
+      "text": "Lạ nhất là ông Ba nhỏ - sau buổi đối chất, ông dần tỉnh lại. Người ta bảo: kẻ điên vì mang nặng bí mật năm mươi năm, nói ra hết rồi thì hết điên. Ông Ba nhỏ sau đó về sống trong căn nhà cũ bỏ hoang của mình, ngày ra nghĩa trang quét mộ Liên, tối về ngồi một mình. Ông không nói chuyện nhiều - nhưng ai gặp cũng thấy ông cúi đầu chào nhẹ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Nhà Ân tan",
+      "text": "Trong năm sau đó nhà Ân tan dần: thằng Sanh bán ruộng vườn đưa vợ con lên thành phố, nói không ai chịu nổi không khí làng nữa. Căn nhà to đỏ đầu làng bỏ trống, cỏ mọc qua kẽ gạch sân, cây nhãn cổ thụ một mình giữa vườn vắng. Đứa cháu gái ông Tư - cô đã quỳ xin lỗi mẹ Liên - là người duy nhất thỉnh thoảng về, thắp nhang cho ông rồi sang thắp nhang trên mộ Liên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-house",
+      "caption": "Căn nhà bỏ trống",
+      "text": "Căn nhà Ân bỏ trống nhiều năm sau vẫn đứng đó - không ai mua, không ai thuê, cháy một góc do đom đóm rơi vào rồi để đó. Cây nhãn cổ thụ trong vườn mỗi mùa vẫn sai quả, quả rụng đầy sân không ai hái. Người đi ngang qua thấy căn nhà ấy thì nhớ chuyện - nhớ rằng nhà nào dựng trên máu người, đứng được lâu đến mấy cũng có ngày trống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Làng dựng nhà cho mẹ Liên",
+      "text": "Làng An Mỹ tự góp tiền dựng cho mẹ Liên một căn nhà nhỏ gần nghĩa trang - nhà tranh ba gian, có bếp có buồng, đủ cho cụ bà tám mươi tuổi sống những năm cuối. Không ai bàn, không ai góp ý gì - chuyện ấy làng tự làm như làng nợ cụ một căn nhà năm mươi năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Mẹ Liên trông mộ",
+      "text": "Mẹ Liên không về bên kia sông nữa - cụ ở lại làng An Mỹ, trong căn nhà nhỏ dân làng dựng cho gần nghĩa trang. Ngày nào cụ cũng ra mộ con - quét lá, thay nước, ngồi nói chuyện với bia mộ như nói chuyện với người sống. Cụ nói: năm mươi năm mẹ không được trông con, giờ mẹ trông bù. Đến ngày mẹ đi, mẹ đi nhẹ lòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Ba năm trông mộ",
+      "text": "Ba năm cụ trông mộ con - ba năm không một ngày vắng. Mùa mưa cụ mặc áo mưa ra quét, mùa nắng cụ đội nón ra ngồi. Dân làng quen dần cái bóng nhỏ của cụ bên ngôi mộ đất - quen đến mức ngày nào không thấy cụ thì tự nhau đi tìm. Cụ trở thành một phần của nghĩa trang như cây gạo già - đứng đó, hiền, kiên nhẫn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Cụ kể chuyện cho trẻ",
+      "text": "Chiều chiều, lũ trẻ trong làng hay quây cụ nghe kể chuyện - kể Liên hồi nhỏ ngoan thế nào, hay hái nhãn trộm, hát ví hay. Cụ kể chuyện con gái cụ như kể chuyện cổ tích - con Liên đẹp lắm, con Liên hát hay lắm, con Liên được làng yêu lắm. Lũ trẻ nghe cụ kể cứ tưởng Liên là chị trong làng - mãi sau mới biết đó là bà nội trong truyện."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Chiều bên mộ con",
+      "text": "Có chiều Minh đi ngang nghĩa trang thấy cụ ngồi bên mộ con, tay vuốt bia, mồm kể chuyện. Cụ kể: hôm qua mẹ mơ thấy con - con mặc áo dài trắng, đẹp lắm, đứng trên bãi sông cười với mẹ. Con vẫy tay bảo mẹ đừng buồn. Mẹ biết con siêu rồi - nhưng mẹ vẫn ra đây ngồi với con. Người ta nói siêu là hết - mẹ thì cứ thấy con ở đây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đêm quyết định",
+      "text": "Đêm trước ngày định về thành phố, Minh ngồi một mình trong gian giữa, nhìn từng góc nhà - góc ông nội hay ngồi đọc báo, góc bếp ông hay nấu cháo, góc sân có gốc cau ông trồng. Nhà này chờ ông năm mươi năm, chờ anh ba tuần đào giếng - giờ nó sạch rồi, yên rồi. Nếu anh bỏ đi, nhà lại hoang. Và một căn nhà đã chờ năm mươi năm không nên phải chờ tiếp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Minh quyết định ở lại",
+      "text": "Minh định về thành phố sau khi mọi việc xong - nhưng đêm trước ngày đi, ngồi trong nhà ông nội nhìn căn nhà đã hết ma, anh đổi ý. Căn nhà này ông giữ năm mươi năm để chờ một người dám đào cái giếng kia - giờ giếng đã đào, oan đã minh, nhà đã sạch. Anh gọi điện về thành phố xin chuyển công việc remote - anh ở lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Tý ở lại cùng",
+      "text": "Tý cũng ở lại - thằng bạn thân ngày nào giờ đã lập gia đình, nhà sát nhà Minh, hai nhà ăn cơm chung như một. Tý hay đùa: mày ở đây thì tao ở đây - giếng mày đào, ma mày gỡ, nhà mày ở, tao ở cạnh cho yên tâm. Hai thằng từ ngày đó coi nhà nhau như nhà mình, con cái nhà này chạy sang nhà kia như chạy trong một sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Làng đón nhận Minh",
+      "text": "Làng An Mỹ đón Minh ở lại như đón người nhà - anh là người đã làm việc cả làng không dám làm, và anh là cháu ông Đạt, người giữ lời hứa năm mươi năm. Bà con hay ghé qua mang bánh, mời anh ăn cưới ăn giỗ. Anh không còn là thằng cháu từ thành phố về - anh là người của làng này, được làng tin bằng cả một câu chuyện năm mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Sửa lại nhà ông",
+      "text": "Minh sửa lại nhà ông nội - giữ nguyên khung gỗ cũ, thay mái, sơn lại cửa, dọn vườn sau. Ban thờ ông nội giữ nguyên, bên cạnh thêm tấm ảnh nhỏ của Liên - cô gái cài hoa lài giờ là người nhà, được thờ cùng gia tiên. Cụ Đoàn đến xem, gật: đúng rồi, cô ấy bây giờ là người thờ trong nhà này - nhà Đạt có công, cô ấy trông nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-shrine",
+      "caption": "Miếu trên giếng cũ",
+      "text": "Trên miệng giếng cũ, làng góp tiền xây một ngôi miếu nhỏ - mái ngói, tường vôi, trong thờ một tấm bia khắc: Nguyễn Thị Liên - oan hồn được minh. Cụ Đoàn đứng ra trông coi miếu đến khi mất - cụ mất hai năm sau đó, an nhiên, ngủ một giấc không dậy. Làng kể cụ mất đẹp - vì cụ đã làm xong việc của đời mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-shrine",
+      "caption": "Giếng không còn lạnh",
+      "text": "Giếng cũ sau khi đắp lại và xây miếu, không còn lạnh như xưa nữa. Người đi ngang vẫn kính cẩn bỏ nón cúi chào, trẻ con được dặn đi vòng chứ không bước qua miếu - nhưng không phải vì sợ. Vì kính. Cái giếng từng nỗi sợ của cả làng giờ là chỗ làng nhớ về một bài học năm mươi năm: im lặng trước cái ác cũng là một cách làm ác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-shrine",
+      "caption": "Truyện kể lại trong làng",
+      "text": "Chuyện cô Liên giờ được làng kể lại - không còn là lời rợm gáy rẻ tiền để hù trẻ con, mà là câu chuyện được kể bằng giọng nghiêm: ngày xưa làng mình có một cô gái bị giết đêm cưới, cả làng biết mà không nói, năm mươi năm sau có người dám đào giếng và làng mới dám đứng ra. Mỗi lần kể đến đó, người kể lại nín, người nghe nín."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-shrine",
+      "caption": "Rằm tháng chạy hằng năm",
+      "text": "Mỗi năm đến rằm tháng chạp - đêm đào giếng năm xưa - làng tự đến miếu thắp nhang. Không ai tổ chức, không ai nhắc - cứ đến đêm ấy cửa miếu tự mở, nhang tự cháy, hoa tự có người cắm. Cụ Đoàn trước khi mất dặn: đêm ấy thắp nhang cho cô Liên là được, không cần lễ lớn - cô ấy chỉ cần được nhớ đến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-shrine",
+      "caption": "Bia minh oan",
+      "text": "Tấm bia trong miếu có khắc thêm bốn chữ nhỏ bên dưới tên Liên - được minh oan. Bốn chữ ấy cụ Đoàn bắt khắc thêm: tên người ta khắc lên bia mộ là bình thường, nhưng người được minh oan sau năm mươi năm thì phải có bốn chữ ấy - để đời sau biết xương cốt trong đây từng bị chôn lỗi, và lỗi đã được trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-mist",
+      "caption": "Sông An Mỹ vẫn chảy",
+      "text": "Dòng sông An Mỹ vẫn chảy đều như năm mươi năm trước - sông chở xuồng Liên đi hái rau, sông chở mẹ Liên đi tìm con, sông chở Minh đón cụ bà qua đêm mờ sáng. Sông không đổi - chỉ có người trên sông đổi. Nhưng chuyện đã xảy ra trên sông ấy thì sông nhớ mãi, và người đánh cá khuya vẫn thỉnh thoảng nghe tiếng chèo khuya ai đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Tin buồn",
+      "text": "Chiều mùa đông năm ấy, người ta thấy cụ không ra mộ - đi tìm thì thấy cụ nằm trong nhà, như đang ngủ, tay cầm tấm ảnh Liên cài hoa lài. Cụ đi nhẹ nhàng như đi ngủ - trên mặt còn nét mỉm cười. Người ta bảo: cụ biết ngày của mình, cụ chuẩn bị sẵn, cụ đi gặp con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Mẹ Liên đi theo con",
+      "text": "Mẹ Liên mất ba năm sau đêm đào giếng - tám mươi ba tuổi, ra đi trong giấc ngủ, mặt bình an. Trước khi đi cụ dặn Minh: chôn mẹ cạnh con Liên nhé - mẹ hứa trông mộ nó, mẹ trông được ba năm, giờ mẹ nằm cạnh luôn. Lời cụ được làm đúng - hai ngôi mộ sát nhau bên cây gạo già, bia mẹ và bia con đứng cạnh nhau nhìn ra sông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Tang lễ mẹ Liên",
+      "text": "Tang lễ mẹ Liên làm ba ngày, đông đủ cả làng - người già người trẻ đến viếng như viếng người nhà. Dân làng lập quỹ nhỏ để lo mộ phần hai mẹ con sau này - không để hai người phụ nữ oan khuất và kiên nhẫn nhất của làng phải thiếu thốn gì nữa. Ngày đưa tang, người kể trời trong xanh lạ - không mưa, không gió, như trời cũng tiễn cụ đi nhẹ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Đêm trước tang",
+      "text": "Đêm trước tang mẹ Liên, nhiều người trong làng cùng mơ một giấc - mơ thấy cụ bà và cô con gái đứng trên bãi sông, mẹ cầm tay con, cả hai cười với làng rồi đi vào sương mờ. Người mơ thì tưởng mơ riêng - đến sáng kể ra mới biết cả làng cùng mơ. Từ đó ai cũng tin: hai mẹ con gặp nhau rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard",
+      "caption": "Hai ngôi mộ sát nhau",
+      "text": "Ngày an táng mẹ Liên, cả làng An Mỹ đến dự - đông hơn tang ông Tư Cẩn gấp mấy lần. Người ta nói cụ bà này mất mới là mất đẹp - sống đủ lâu để thấy con được minh oan, chết trong nhà do làng dựng, mộ nằm cạnh con. Đêm trước tang, nhiều người kể nghe tiếng ví dặm vọng từ bãi sông - giọng đàn bà êm đềm, lần này không ai sợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-mist",
+      "caption": "Bãi sông hai mẹ con",
+      "text": "Từ hai ngôi mộ bên cây gạo, nhìn xuống là bãi sông An Mỹ - nơi Liên chèo xuồng hái rau muống hồi nhỏ, nơi cụ bà đợi con mười mấy năm đầu mỗi chiều. Người đánh cá khuya thỉnh thoảng kể thấy hai bóng người đứng trên bãi - một già một trẻ, tay nắm tay, nhìn theo dòng nước. Không ai sợ - ai cũng hiểu đó là hai mẹ con cuối cùng được ở bên nhau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Minh lập gia đình",
+      "text": "Minh ở lại làng ba năm sau thì lấy vợ - cô gái làng cạnh, đến chơi nhà rồi thương nhau lúc nào không hay. Đám cưới làm trong nhà ông nội, cụ Đoàn làm lễ trước ban thờ có ông cố Đạt và cô Liên. Người ta nói đám cưới hôm ấy mùi hoa lài thơm khắp nhà - mùa đông không có hoa lài, nhưng cả nhà ai cũng ngửi thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Căn nhà bây giờ",
+      "text": "Căn nhà ông nội giờ là nhà của Minh - ấm, sáng, có tiếng cười. Anh lập gia đình, con đầu lòng chạy loanh quanh gian thờ nơi có ảnh ông cố Đạt và ảnh cô Liên. Đứa bé hay chỉ tấm ảnh cô gái cài hoa hỏi: đây là ai bố? Minh trả lời: bà Liên - bà sống trong nhà mình từ hồi ông cố con. Nó là người nhà mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "haunted-house",
+      "caption": "Đứa bé và bà Liên",
+      "text": "Đứa con Minh lớn lên quen với chuyện bà Liên - không sợ, vì từ nhỏ đã nghe bố kể bà ấy hiền lắm, bà ấy trông nhà mình. Có lần thằng bé ngủ quên trong gian giữa, mẹ nó tìm mãi thấy nó nằm ngủ ngon bên ban thờ, trên người đắp cái khăn voan của mẹ Liên - khăn ấy cất trong tủ, ai lấy ra đắp cho nó không ai biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Hoa lài trên ban thờ",
+      "text": "Có một điều lạ trong nhà Minh đến giờ: mùa hè đến, ban thờ tự thơm mùi hoa lài dù không ai cắm hoa. Tý đến chơi ngửi thấy thì cười: cô Liên vẫn ở đây. Minh gật - không sợ, không kỳ lạ - chỉ thấy như người nhà đi xa thỉnh thoảng về thăm. Nhà có hồn người trông thì nhà không bao giờ hoang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Làng An Mỹ bây giờ",
+      "text": "Làng An Mỹ bây giờ khác xưa. Câu chuyện giếng cũ được dạy cho trẻ con như một bài học của làng - không phải chuyện ma để sợ, mà là chuyện để nhớ: nhớ rằng im lặng trước cái sai năm mươi năm thì cái sai nó sống năm mươi năm. Đình làng xây lại, trong đền thờ thêm một vị - người ta gọi là Cô Liên, vong linh được làng minh oan."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Năm thứ nhất sau giếng",
+      "text": "Năm đầu tiên sau chuyện giếng, làng An Mỹ như tỉnh dậy từ một giấc mộng dài - người ta nói chuyện với nhau nhiều hơn, hỏi han nhau nhiều hơn. Cái im lặng năm mươi năm vỡ ra để lại không chỉ sự thật về Liên, mà còn một bài học mọi người mang theo: trong làng này, từ nay không ai được phép biết chuyện sai mà chọn im."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Những bí mật được nói ra",
+      "text": "Sau chuyện Liên, vài chuyện cũ khác trong làng cũng được nói ra - người ta đứng ra xin lỗi nhau chuyện mười hai mươi năm trước, gia đình giận nhau lâu năm làm hòa. Không phải vì ma quỷ - vì làng đã thấy im lặng để lại cái gì. Chuyện cô Liên không chỉ cứu cô - nó cứu cả làng khỏi một cái lưỡi im quá lâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Minh kể lại",
+      "text": "Minh giờ là người kể chuyện này - cứ mỗi rằm tháng chạp, đêm đào giếng năm xưa, anh ra miếu giếng thắp nhang và kể cho lũ trẻ làng nghe. Kể đến đoạn ông nội giấu thư của Liên trong sổ tay, lũ trẻ mắt mở to. Kể đến đoạn cụ bà tám mươi tuổi gọi tên con trước cổng nhà Ân, có đứa khóc. Câu chuyện sống tiếp - đúng như Liên từng muốn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Trẻ con hỏi",
+      "text": "Lũ trẻ nghe chuyện xong hay hỏi: bác Minh ơi, cô Liên có quay lại không? Minh trả lời: cô ấy không cần quay lại - cô ấy đã được về nhà, được mẹ gọi tên, được nằm cạnh mẹ. Vong hồn chỉ quay lại khi còn nợ đời - cô ấy hết nợ rồi. Lũ trẻ nghe xong không sợ - chỉ buồn một chút rồi lại chạy đi chơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-shrine",
+      "caption": "Trăng trên miếu giếng",
+      "text": "Mỗi đêm rằm, trăng lên trên miếu giếng cũ tròn và sáng. Người ta kể đêm rằm ngồi yên lắng nghe sẽ nghe tiếng hát ví khẽ từ bãi sông - êm, trong, không buồn nữa. Không phải tiếng oan hồn khóc giếng - là tiếng cô gái mười chín tuổi được mẹ đón về, hát ví trên sông quê mình. Lời nguyền giếng cũ đã thành lời cầu bình an."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Ông nội nhìn lại",
+      "text": "Có lần Minh dọn tủ tài liệu ông nội, tìm thấy cuốn nhật ký cũ - cuốn có thư Liên giấu trong bìa. Trang cuối ông nội viết: nếu ai đọc được dòng này, nghĩa là chuyện đã ra - cảm ơn người đã dám đào giếng ấy. Ông xin lỗi vì để con cháu phải gánh. Minh đọc xong, khóc một mình trong gian giữa - ông nội đã biết trước sẽ có người làm điều ông không làm nổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Bài học của gia đình",
+      "text": "Minh kể cho con mình nghe chuyện ông cố - không giấu, không vắn tắt, kể cả phần ông cố từng chọn im lặng vì sợ. Vì anh muốn con hiểu: gia đình mình từng có người sai, và người sau phải đứng ra sửa - không ai sinh ra đã đúng, nhưng ai cũng có thể chọn đứng ra khi cần. Đó là bài học nhà này truyền lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Lời kết",
+      "text": "Và đó là câu chuyện lời nguyền giếng cũ ở làng An Mỹ - câu chuyện về một cô dâu bị giết đêm tân hôn, một người chồng giữ lời hứa năm mươi năm, một người mẹ tám mươi tuổi đi gọi tên con, và một đứa cháu dám đào cái giếng cả làng không dám nhìn. Chuyện ma này không để dọa ai - để nhắc rằng sự thật bị chôn sâu đến đâu cũng có ngày nổi lên, và im lặng của người sống đôi khi còn đáng sợ hơn cả oan hồn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Cảm ơn người nghe",
+      "text": "Cảm ơn các bạn đã nghe hết năm tập truyện ma dài Lời Nguyền Giếng Cũ. Nếu câu chuyện làm bạn nghĩ đến một điều gì đó - một sự thật chưa được nói, một lời xin lỗi chưa được nói - thì đó là điều câu chuyện này muốn để lại. Hẹn gặp các bạn ở những câu chuyện sau của Bà Tư."
+    }
+  ]
+}
