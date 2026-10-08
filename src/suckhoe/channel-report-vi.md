@@ -1,27 +1,28 @@
-# Channel report — 2026-10-07
+# Channel report — 2026-10-08
 
 Channel: Bà Tư Kể Chuyện
 Subscribers: 250
 Total views: 14
-Total videos: 17
+Total videos: 18
 
 ## Last 28 days (channel-wide)
 
-Views: 36
+Views: 33
 Watch time (minutes): 5
 Subscribers gained: 0
 Subscribers lost: 1
 Net subscriber change: -1
 
-## Most recent 17 videos
+## Most recent 18 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| T1: LỜI NGUYỀN GIẾNG CŨ | Tập 1: Đêm Đầu Tiên, 3 Nhịp Gõ Cửa Vang Lên | Truyện Ma Dài | 3 | 1 | 0 | 2026-10-07 |
 | Rồng vàng hiện lên mặt sông Hồng và cái tên Thăng Long ra đời - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-03 |
 | Nhà vua muốn bỏ kinh đô nghìn năm, cả triều đình phản đối - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-03 |
 | Tấm vào cung thành hoàng hậu, mẹ con Cám lại mưu hại - Tập cuối #Shorts | 0 | 0 | 0 | 2026-10-02 |
 | Bụt hiện ra dạy Tấm chôn xương Bống vào bốn lọ - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-02 |
-| Tấm nuôi cá Bống trong giếng, Cám đứng nấp nhìn từ xa - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-02 |
+| Tấm nuôi cá Bống trong giếng, Cám đứng nấp nhìn từ xa - Tập 1 #Shorts | 1 | 0 | 0 | 2026-10-02 |
 | Người lính lạc đường ngồi xuống bên ông Hòa rồi bật khóc - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Ông lính già chiều nào cũng ra gốc đa chờ người - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Sự thật đằng sau tiếng khóc trong nhà hoang đầu làng - Tập 2 #Shorts | 3 | 0 | 0 | 2026-09-30 |
