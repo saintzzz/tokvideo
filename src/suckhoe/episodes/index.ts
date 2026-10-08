@@ -27,6 +27,22 @@ import enTwoBrothersWheatPart1 from "./en-two-brothers-wheat-part-1.json";
 import enTwoBrothersWheatPart2 from "./en-two-brothers-wheat-part-2.json";
 import enChessboardRiceHistoryPart1 from "./en-chessboard-rice-history-part-1.json";
 import enChessboardRiceHistoryPart2 from "./en-chessboard-rice-history-part-2.json";
+import truyenThachSanhTap1 from "./truyen-thach-sanh-tap-1.json";
+import truyenThachSanhTap2 from "./truyen-thach-sanh-tap-2.json";
+import truyenThachSanhTap3 from "./truyen-thach-sanh-tap-3.json";
+import truyenSoDuaTap1 from "./truyen-so-dua-tap-1.json";
+import truyenSoDuaTap2 from "./truyen-so-dua-tap-2.json";
+import truyenCayKheTap1 from "./truyen-cay-khe-tap-1.json";
+import truyenSonTinhThuyTinhTap1 from "./truyen-son-tinh-thuy-tinh-tap-1.json";
+import truyenSonTinhThuyTinhTap2 from "./truyen-son-tinh-thuy-tinh-tap-2.json";
+import truyenLeLoiTraKiemTap1 from "./truyen-le-loi-tra-kiem-tap-1.json";
+import truyenLeLoiTraKiemTap2 from "./truyen-le-loi-tra-kiem-tap-2.json";
+import truyenHaiBaTrungTap1 from "./truyen-hai-ba-trung-tap-1.json";
+import truyenHaiBaTrungTap2 from "./truyen-hai-ba-trung-tap-2.json";
+import enBabaYagaPart1 from "./en-baba-yaga-part-1.json";
+import enBabaYagaPart2 from "./en-baba-yaga-part-2.json";
+import enMothmanPart1 from "./en-mothman-part-1.json";
+import enMothmanPart2 from "./en-mothman-part-2.json";
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
 //
@@ -60,4 +76,20 @@ export const EPISODES: SucKhoeEpisode[] = [
   enTwoBrothersWheatPart2,
   enChessboardRiceHistoryPart1,
   enChessboardRiceHistoryPart2,
+  truyenThachSanhTap1,
+  truyenThachSanhTap2,
+  truyenThachSanhTap3,
+  truyenSoDuaTap1,
+  truyenSoDuaTap2,
+  truyenCayKheTap1,
+  truyenSonTinhThuyTinhTap1,
+  truyenSonTinhThuyTinhTap2,
+  truyenLeLoiTraKiemTap1,
+  truyenLeLoiTraKiemTap2,
+  truyenHaiBaTrungTap1,
+  truyenHaiBaTrungTap2,
+  enBabaYagaPart1,
+  enBabaYagaPart2,
+  enMothmanPart1,
+  enMothmanPart2,
 ] as SucKhoeEpisode[];
