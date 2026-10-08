@@ -150,9 +150,8 @@ function buildHashtagLine() {
     : isEn
       ? ["#homeremedies", "#folkwisdom", "#shorts"]
       : ["#suckhoe", "#meodangian", "#shorts"];
-  const extra = [categoryInfo ? `#${categoryInfo.hashtag}` : null, isEn ? "#naturalremedies" : "#meovat"].filter(
-    Boolean
-  );
+  const remedyTag = isStory ? null : isEn ? "#naturalremedies" : "#meovat";
+  const extra = [categoryInfo ? `#${categoryInfo.hashtag}` : null, remedyTag].filter(Boolean);
   return [...base, ...extra].join(" ");
 }
 
