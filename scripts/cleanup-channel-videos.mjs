@@ -1,4 +1,5 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import path from "node:path";
 import { google } from "googleapis";
 
@@ -69,6 +70,26 @@ const keepTitles = new Set(
     .filter((e) => e?.channelTitle)
     .map((e) => `${e.channelTitle} #Shorts`)
 );
+// Long-form protection: upload-youtube-long.mjs writes videoIds to
+// published-long.json, and its uploads use episode.title verbatim (no
+// #Shorts suffix). Without both, every long-form upload was swept as a
+// stray — observed 2026-10-09 (kiem-hon-thuc-tinh-tap-01 deleted a day
+// after a successful upload).
+const longFormDir = path.join(root, "src", "suckhoe", "long-form");
+const longFormFiles = (await readdir(longFormDir)).filter((f) => f.endsWith(".json"));
+const longFormEpisodes = await Promise.all(
+  longFormFiles.map(async (f) => JSON.parse(await readFile(path.join(longFormDir, f), "utf8")))
+);
+const longLedgerPath = path.join(root, "src", "suckhoe", "published-long.json");
+const longLedger = existsSync(longLedgerPath)
+  ? JSON.parse(await readFile(longLedgerPath, "utf8"))
+  : {};
+for (const v of Object.values(longLedger)) {
+  if (v?.videoId && !v.deletedAt) keepIds.add(v.videoId);
+}
+for (const e of longFormEpisodes) {
+  if (e?.title) keepTitles.add(e.title);
+}
 // videoId -> slug, for stamping the audit trail back onto published.json
 const slugByVideoId = new Map(
   Object.entries(published).filter(([, v]) => v?.videoId).map(([s, v]) => [v.videoId, s])

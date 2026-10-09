@@ -1,5 +1,5 @@
 import { createReadStream, existsSync } from "node:fs";
-import { readdir } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { google } from "googleapis";
@@ -148,6 +148,24 @@ const res = await youtube.videos.insert({
 });
 
 console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
+
+// Persist the videoId immediately — cleanup-channel-videos.mjs sweeps any
+// channel video it cannot tie back to a ledger entry, and this script used
+// to record nothing, so every long-form upload was purged by the next
+// cleanup tick (observed 2026-10-09: kiem-hon-thuc-tinh-tap-01 deleted).
+const ledgerPath = path.join(import.meta.dirname, "..", "src", "suckhoe", "published-long.json");
+let ledger = {};
+if (existsSync(ledgerPath)) {
+  ledger = JSON.parse(await readFile(ledgerPath, "utf8"));
+}
+ledger[slug] = {
+  videoId: res.data.id,
+  publishedAt: new Date().toISOString(),
+  locale: isEn ? "en" : "vi",
+  privacyStatus: PRIVACY_STATUS,
+};
+await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
+console.log(`Ledger updated: published-long.json[${slug}] = ${res.data.id}`);
 
 // Custom thumbnail if one was rendered alongside the video
 // (scripts/make-long-thumbnail.mjs). Long-form CTR is thumbnail-driven;
