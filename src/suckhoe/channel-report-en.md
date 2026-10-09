@@ -1,9 +1,9 @@
-# Channel report — 2026-10-08
+# Channel report — 2026-10-09
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 1
-Total videos: 8
+Total videos: 10
 
 ## Last 28 days (channel-wide)
 
@@ -13,10 +13,12 @@ Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
-## Most recent 8 videos
+## Most recent 10 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 0 | 0 | 0 | 2026-10-09 |
+| The hut on chicken legs - the real Baba Yaga story - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-09 |
 | The photograph on the mantel that explains everything - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
 | The girl in the pale dress on the lonely road - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-29 |
 | They met in the middle of the field, each with a sack on his shoulder - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-28 |
