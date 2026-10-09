@@ -40,6 +40,16 @@ if (!ffmpeg) {
   process.exit(1);
 }
 
+// The runner's ffmpeg may be a build without libfreetype — probe the
+// filter list once and degrade to a text-free thumbnail instead of
+// dying on "Filter not found" (observed on CI 2026-10-09).
+const hasFilter = (name) =>
+  spawnSync(ffmpeg, ["-hide_banner", "-filters"], { encoding: "utf8" })
+    .stdout?.includes(` ${name} `) ?? false;
+const canDrawText = hasFilter("drawtext") && hasFilter("drawbox");
+if (!canDrawText) {
+  console.warn("ffmpeg lacks drawtext/drawbox — emitting plain-frame thumbnail.");}
+
 // hook still -> rendered frame -> fail
 const hookRel = episode.sceneImages?.hook;
 const hookPath = hookRel ? path.join(root, "public", hookRel) : null;
@@ -58,62 +68,63 @@ const badge = `TẬP ${epNum}`;
 const thumbTitle = episode.thumbTitle ?? episode.title.replace(/\s*\|\s*/g, " · ");
 const series = episode.title.split("|")[0]?.trim() ?? "";
 
-// drawtext wants a font file; probe the usual locations (Ubuntu runners
-// ship DejaVu, macOS has Arial in Supplemental, Windows has arialbd).
-const FONT_CANDIDATES = [
-  "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-  "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf",
-  "/System/Library/Fonts/Supplemental/Arial.ttf",
-  "/System/Library/Fonts/Helvetica.ttc",
-  "C:/Windows/Fonts/arialbd.ttf",
+let font = null;
+let tmp = null;
+const filters = [
+  "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720",
+  // horror stills are intentionally very dark — lift them a touch so
+  // the scene reads at thumbnail size
+  "eq=brightness=0.05:contrast=1.05:saturation=1.1",
 ];
-const font = FONT_CANDIDATES.find(existsSync);
-if (!font) {
-  console.error("No usable font found for drawtext.");
-  process.exit(1);
+
+if (canDrawText) {
+  // drawtext wants a font file; probe the usual locations (Ubuntu runners
+  // ship DejaVu, macOS has Arial in Supplemental, Windows has arialbd).
+  const FONT_CANDIDATES = [
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf",
+    "/System/Library/Fonts/Supplemental/Arial.ttf",
+    "/System/Library/Fonts/Helvetica.ttc",
+    "C:/Windows/Fonts/arialbd.ttf",
+  ];
+  font = FONT_CANDIDATES.find(existsSync);
 }
 
-// Write text through files — drawtext's text= escaping is brittle with
-// Vietnamese punctuation (colons, apostrophes).
-const tmp = await mkdtemp(path.join(tmpdir(), "thumb-"));
-const badgeFile = path.join(tmp, "badge.txt");
-const titleFile = path.join(tmp, "title.txt");
-const seriesFile = path.join(tmp, "series.txt");
-await writeFile(badgeFile, badge, "utf8");
-await writeFile(titleFile, thumbTitle, "utf8");
-await writeFile(seriesFile, series, "utf8");
+if (font) {
+  // Write text through files — drawtext's text= escaping is brittle with
+  // Vietnamese punctuation (colons, apostrophes).
+  tmp = await mkdtemp(path.join(tmpdir(), "thumb-"));
+  const badgeFile = path.join(tmp, "badge.txt");
+  const titleFile = path.join(tmp, "title.txt");
+  const seriesFile = path.join(tmp, "series.txt");
+  await writeFile(badgeFile, badge, "utf8");
+  await writeFile(titleFile, thumbTitle, "utf8");
+  await writeFile(seriesFile, series, "utf8");
 
-// ffmpeg filtergraph treats `:` as an option separator — Windows drive
-// letters ("C:/...") must have it escaped, and backslashes turned to /.
-const fpath = (p) => p.replace(/\\/g, "/").replace(/:/g, "\\:");
+  // ffmpeg filtergraph treats `:` as an option separator — Windows drive
+  // letters ("C:/...") must have it escaped, and backslashes turned to /.
+  const fpath = (p) => p.replace(/\\/g, "/").replace(/:/g, "\\:");
+  filters.push(
+    // lower-half dark gradient for text contrast
+    "drawbox=y=ih*0.45:w=iw:h=ih*0.55:color=black@0.6:t=fill",
+    // red episode badge top-left
+    "drawbox=x=44:y=44:w=170:h=66:color=0xB02A20@0.95:t=fill",
+    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(badgeFile)}':fontcolor=white:fontsize=36:x=60:y=56`,
+    // series name in gold, then the big hook line
+    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(seriesFile)}':fontcolor=0xE8B84B:fontsize=34:x=60:y=h-236`,
+    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(titleFile)}':fontcolor=white:fontsize=56:x=60:y=h-180:borderw=3:bordercolor=black@0.85:line_spacing=8`,
+  );
+} else if (canDrawText) {
+  console.warn("No usable font found for drawtext — plain-frame thumbnail.");
+}
 
 const result = spawnSync(
   ffmpeg,
-  [
-    "-y",
-    ...inputArgs,
-    "-vf",
-    [
-      "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720",
-      // horror stills are intentionally very dark — lift them a touch so
-      // the scene reads at thumbnail size
-      "eq=brightness=0.05:contrast=1.05:saturation=1.1",
-      // lower-half dark gradient for text contrast
-      "drawbox=y=ih*0.45:w=iw:h=ih*0.55:color=black@0.6:t=fill",
-      // red episode badge top-left
-      "drawbox=x=44:y=44:w=170:h=66:color=0xB02A20@0.95:t=fill",
-      `drawtext=fontfile='${fpath(font)}':textfile='${fpath(badgeFile)}':fontcolor=white:fontsize=36:x=60:y=56`,
-      // series name in gold, then the big hook line
-      `drawtext=fontfile='${fpath(font)}':textfile='${fpath(seriesFile)}':fontcolor=0xE8B84B:fontsize=34:x=60:y=h-236`,
-      `drawtext=fontfile='${fpath(font)}':textfile='${fpath(titleFile)}':fontcolor=white:fontsize=56:x=60:y=h-180:borderw=3:bordercolor=black@0.85:line_spacing=8`,
-    ].join(","),
-    "-frames:v", "1",
-    thumbPath,
-  ],
+  ["-y", ...inputArgs, "-vf", filters.join(","), "-frames:v", "1", thumbPath],
   { stdio: "inherit" }
 );
 
-await rm(tmp, { recursive: true, force: true });
+if (tmp) await rm(tmp, { recursive: true, force: true });
 
 if (result.status !== 0 || !existsSync(thumbPath)) {
   console.error("ffmpeg thumbnail generation failed");

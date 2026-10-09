@@ -921,6 +921,8 @@ jobs:
   suckhoe-long:
     if: github.event.inputs.video == 'suckhoe-long'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -940,7 +942,11 @@ jobs:
       - name: Render episode
         run: node scripts/render-suckhoe-long.mjs ${{ github.event.inputs.long_form_slug }}
 
+      # Thumbnail is nice-to-have — a failure here must never skip the
+      # upload (observed 2026-10-09: missing drawtext on the runner's
+      # ffmpeg killed the step and the whole publish).
       - name: Make thumbnail
+        continue-on-error: true
         run: node scripts/make-long-thumbnail.mjs ${{ github.event.inputs.long_form_slug }}
 
       - name: Upload video artifact
