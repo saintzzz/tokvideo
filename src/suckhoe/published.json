@@ -807,9 +807,9 @@
     "videoId": "vNaZaR3wtHk"
   },
   "truyen-cay-khe-tap-1": {
-    "publishedAt": "2026-10-08T20:28:42.696Z",
+    "publishedAt": "2026-10-08T20:44:50.000354+00:00",
     "locale": "vi",
-    "videoId": "nryNyRkItd8"
+    "videoId": "DaWLAR9J_l4"
   },
   "truyen-thach-sanh-tap-1": {
     "publishedAt": "2026-10-08T20:10:19.179081Z",
@@ -836,11 +836,6 @@
     "locale": "vi",
     "videoId": "0LBNKOTeXIE"
   },
-  "truyen-cay-khe-tap-1": {
-    "publishedAt": "2026-10-08T20:44:50.000354+00:00",
-    "locale": "vi",
-    "videoId": "DaWLAR9J_l4"
-  },
   "truyen-son-tinh-thuy-tinh-tap-1": {
     "publishedAt": "2026-10-08T20:52:09.327022+00:00",
     "locale": "vi",
@@ -855,5 +850,15 @@
     "publishedAt": "2026-10-08T21:06:20.363446+00:00",
     "locale": "vi",
     "videoId": "I_JQns_A6Fw"
+  },
+  "en-baba-yaga-part-1": {
+    "publishedAt": "2026-10-09T04:12:13.333Z",
+    "locale": "en",
+    "videoId": "1ook5C5HtBs"
+  },
+  "en-baba-yaga-part-2": {
+    "publishedAt": "2026-10-09T04:18:55.324Z",
+    "locale": "en",
+    "videoId": "dN9w4Ixoqes"
   }
 }
