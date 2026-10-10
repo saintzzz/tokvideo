@@ -1,22 +1,24 @@
-# Channel report — 2026-10-09
+# Channel report — 2026-10-10
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
 Total views: 1
-Total videos: 10
+Total videos: 12
 
 ## Last 28 days (channel-wide)
 
-Views: 10
+Views: 8
 Watch time (minutes): 0
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
-## Most recent 10 videos
+## Most recent 12 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| The Silver Bridge fell at rush hour - 46 people died - was it a warning? - Part 2 #Shorts | 0 | 0 | 0 | 2026-10-10 |
+| Point Pleasant 1966 - the red-eyed thing that warned the town - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-10 |
 | Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 0 | 0 | 0 | 2026-10-09 |
 | The hut on chicken legs - the real Baba Yaga story - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-09 |
 | The photograph on the mantel that explains everything - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |

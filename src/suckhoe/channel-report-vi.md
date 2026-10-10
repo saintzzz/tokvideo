@@ -1,4 +1,4 @@
-# Channel report — 2026-10-09
+# Channel report — 2026-10-10
 
 Channel: Bà Tư Kể Chuyện
 Subscribers: 250
@@ -7,8 +7,8 @@ Total videos: 27
 
 ## Last 28 days (channel-wide)
 
-Views: 33
-Watch time (minutes): 5
+Views: 36
+Watch time (minutes): 23
 Subscribers gained: 0
 Subscribers lost: 1
 Net subscriber change: -1
