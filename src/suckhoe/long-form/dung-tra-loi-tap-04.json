@@ -1,0 +1,309 @@
+{
+  "slug": "dung-tra-loi-tap-04",
+  "locale": "vi",
+  "title": "ĐỪNG TRẢ LỜI | Tập 4: Đêm Rằm Đi Đèo - Bảy Cây Số Không Được Ngoái Lại | Truyện Ma Dài",
+  "description": "Cả xóm Bản Lừ mang xương cốt bà Bảy qua đèo Ma Già trong đêm rằm - bảy cây số buộc dây nối nhau, cấm ngoái lại, cấm trả lời. Nó đi cùng suốt đường, gọi tên từng người bằng đúng giọng người thân họ nhớ nhất. Và ở cuối đèo, nó đứng chắn giữa đoàn người và nấm mộ.\n\nTruyện ma dài 5 tập - Đừng Trả Lời, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "scenePrompts": {
+    "hook": "a line of Vietnamese villagers roped together walking through a fog-covered mountain pass at night under a huge full moon, carrying a ceramic jar, ghostly silhouette waiting ahead",
+    "rope-march": "villagers tied together by a rope marching on a mountain road in thick fog at night, oil lamps weak, faces tense",
+    "voice-tempt": "an elderly Vietnamese man pausing on a foggy night road, tears on his face, listening to something unseen behind him, rope tied to his wrist",
+    "spirit-following": "a tall wet-haired female silhouette walking parallel to a line of people in the fog on a mountain pass at night, always the same distance",
+    "child-ear": "a small Vietnamese girl with cotton in her ears walking in a line of roped villagers at night, eyes wide in the fog",
+    "grave-site": "an old overgrown ancestral grave site beyond a mountain pass at night, a carved stone tomb half-buried in weeds, moonlight",
+    "spirit-blocking": "a tall female figure in torn old clothes standing motionless on a path between villagers and an old grave, fog swirling around her feet",
+    "lantern-fail": "oil lamps and flashlights flickering out one by one on a dark mountain road at night, people huddled in darkness",
+    "cliff-edge": "a mountain pass road at night with a sheer drop into foggy darkness, a line of people pressed against the rock wall"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Bảy cây số",
+      "text": "Bảy cây số đường đèo từ xóm Bản Lừ ra mộ tổ ngoài kia - ban ngày người ta đi bộ một tiếng, ban đêm trong sương thì dài như cả một đời. Hai mươi mấy người buộc chung một sợi dây, cụ trưởng xóm đi đầu, Vinh đeo khảm xương bà Bảy trước ngực, Hà đi sát cạnh anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rope-march",
+      "caption": "Dây nối mạng",
+      "text": "Sợi dây thừng ấy là mạng sống - cụ dặn: đi theo dây, ai nghe gì cũng không được dừng, không được ngoái lại, không được buông tay khỏi dây. Vì trên đèo này, cái nguy hiểm nhất không phải vực sâu bên đường. Là tiếng gọi từ phía sau - tiếng mà chỉ một mình mình nghe được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rope-march",
+      "caption": "Nó đi cùng",
+      "text": "Nó đi cùng đoàn ngay từ đầu - người ta thấy cái bóng cao gầy đi song song trong sương, cách con đường chừng mười thước, lúc nhanh lúc chậm theo đúng nhịp chân đoàn. Không đuổi, không chắn, chỉ đi cùng. Và từ cái bóng ấy, những giọng nói bắt đầu tách ra, tìm đến từng người một."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voice-tempt",
+      "caption": "Giọng riêng từng người",
+      "text": "Ma quái thay, mỗi người nghe một giọng khác nhau. Ông Mậu nghe giọng mẹ già gọi con út về ăn cơm. Cô Hai nghe chồng cô - người lính không bao giờ về - đọc lại đúng lá thư cuối gửi từ biên giới. Hà nghe mẹ hát bài ru quen thuộc. Không ai nghe giọng của ai cả - nó gọi riêng vào tai từng người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voice-tempt",
+      "caption": "Ông Mậu dừng lại",
+      "text": "Ông Mậu là người đầu tiên suýt gãy. Giữa đường, ông đứng khựng, mắt đỏ hoe ngoái lại - phía sau ông, trong sương, một bóng bà cụ lưng còng đang đứng gọi: Mậu ơi, mẹ đi có một đoạn mà mày bỏ mẹ lại. Người ta phải kéo dây mạnh, ông mới lảo đảo bước tiếp, khóc không thành tiếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rope-march",
+      "caption": "Không được hô tên",
+      "text": "Cụ dặn thêm một điều nữa trước khi đi: trên đường, tuyệt đối không ai được hô tên nhau. Cần gọi thì vỗ vai, cần báo thì giật dây. Vì mỗi cái tên được hô ra ngoài đèo là một cái tên nó nghe được - và nó sẽ gọi lại đúng cái tên ấy bằng đúng giọng người vừa hô. Cả đoàn đi trong sương, câm như một đoàn bóng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rope-march",
+      "caption": "Mùi hàng cũ",
+      "text": "Đi được một đoạn, người ta bắt đầu ngửi thấy mùi - mùi vải ẩm mốc lẫn mùi quế khô, mùi của gánh hàng vải ngày xưa. Mùi ấy cứ lúc đậm lúc nhạt quanh đoàn, như người bán hàng đi len lỏi giữa khách. Bà già nào cũng nhận ra ngay: đúng mùi gánh hàng bà Bảy ngày ấy, đến kẹo đường phèn cũng còn thơm phảng phất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voice-tempt",
+      "caption": "Nó dụ dỗ",
+      "text": "Nó không chỉ gọi - nó dụ. Với ông Mậu, nó nói: mẹ chưa chết đâu con, mẹ chỉ lạc đường, mày quay lại dẫn mẹ về. Với cô Hai: anh trốn đơn vị về thăm, em ra đây đừng để ai thấy. Với cụ trưởng xóm thì nó đổi giọng vợ: ông đi đâu đêm này, về nhà đi, tôi đun nước chờ rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-following",
+      "caption": "Cùng một khoảng cách",
+      "text": "Đáng sợ hơn cả là nhịp đi của nó. Đoàn đi nhanh - nó nhanh. Đoàn chậm - nó chậm. Luôn đúng mười thước, không hơn không kém, như cái bóng của đoàn người. Có lúc sương loãng thoáng trăng, người ta thấy rõ nó vẫn gánh hai thúng hàng, đầu hơi nghiêng, chân trần đi trên đá mà không một tiếng động."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "child-ear",
+      "caption": "Đứa bé nghe thấy",
+      "text": "Đứa bé gái - cháu bà Tám - đi giữa đoàn, tai bịt bông, tay nắm chặt áo mẹ. Đến giữa đèo, nó giật bông ra, ngơ ngác nhìn quanh rồi nói thầm vào tai mẹ: mẹ ơi, có nhiều người đi theo mình lắm, không chỉ có một cô Bảy đâu. Sau cô Bảy còn hàng dài người nữa - toàn người đi chân trần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "child-ear",
+      "caption": "Hàng người chân trần",
+      "text": "Cả đoàn nghe câu ấy mà tê sống lưng. Đứa bé nói: sau lưng cô Bảy là một hàng người đi theo - ông thôn trưởng, ông Cậu, và nhiều người lạ nữa, toàn người xóm mình mất từ trước đến giờ. Sáu mươi năm nó mượn bao nhiêu người, giờ từng ấy người lũ lượt đi theo sau nó trên con đèo này."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lantern-fail",
+      "caption": "Đèn tắt dần",
+      "text": "Đến khúc quanh giữa đèo, đèn bắt đầu tắt. Không phải hết dầu - ngọn đèn cứ xanh lét rồi tắt ngúm, cái này nối cái kia, như có ai đi ngang thổi. Đèn pin cũng chớp tắt. Trong một khắc cả đoàn chìm vào bóng tối đặc quánh, chỉ còn trăng rằm mờ sau màn sương - và tiếng gọi thì vang lên gấp đôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voice-tempt",
+      "caption": "Giọng bố Vinh",
+      "text": "Đến lượt Vinh - nó dùng giọng bố anh, người chết trên chính con đèo này mười hai năm trước: Vinh ơi, bố ở ngay bên đường đây con, bố lạnh lắm, con đưa bố về. Vinh nghiến răng đi tiếp, vai đeo khảm xương nặng như đeo tảng đá. Giọng bố vẫn đi theo, vẫn gọi, từng bước một, như chính đêm mưa năm ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voice-tempt",
+      "caption": "Bố kể chuyện cũ",
+      "text": "Nó bắt đầu kể - kể chuyện hồi Vinh nhỏ bố dẫn đi phá ổ ong trên đèo, chuyện bố hứa mua con trâu còi cho mình năm tới, chuyện đêm mưa cuối cùng. Từng câu một đúng, từng tiếng thở một quen. Vinh chỉ còn biết siết chặt dây, lặp thầm trong đầu: không phải bố, không phải bố, bố mình không đứng trong sương gọi con đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voice-tempt",
+      "caption": "Cô Hai gục xuống",
+      "text": "Cô Hai - mẹ đứa bé gái - là người thứ hai gục. Giọng chồng cô đọc lá thư cuối rồi nói thêm: em cầm lá thư này ra khúc cua, anh đứng chờ, anh dẫn em về đơn vị sống luôn cho đỡ khổ. Cô loạng choạng suýt buông dây, người ta phải hai bên đỡ lấy, bịt tai cô lại bằng chính khăn tang của bà Tám."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lantern-fail",
+      "caption": "Đếm người trong tối",
+      "text": "Trong bóng tối ấy, cụ trưởng xóm ra lệnh đếm người theo dây - từng người hô số của mình, không được hô tên vì hô tên là dạng trả lời. Một, hai, ba - đếm đến hai mươi tư là hết số người đi. Nhưng tiếng đếm vẫn tiếp: hai lăm, hai sáu, hai bảy - cứ đều đặn vọng trong sương, những giọng lạ không của ai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cliff-edge",
+      "caption": "Qua khúc cua vực",
+      "text": "Khúc cua hiểm nhất - người ta gọi là khúc Mái Chèo - đường chỉ vừa một người, bên trong vách đá bên ngoài vực sâu trăm thước đầy sương. Đoàn phải xếp một hàng, lưng áp vách đá mà đi. Đúng lúc ấy, nó đứng ở giữa khúc cua - lần đầu tiên đứng chắn đường, tay cầm gánh hàng ngang người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cliff-edge",
+      "caption": "Chắn giữa đường",
+      "text": "Cụ trưởng xóm dừng đoàn lại, giơ tay ra hiệu im. Bóng nó đứng giữa đường, trong trăng sương, cao hơn người thường nửa cái đầu. Nó cất giọng - lần này không mượn ai, mà là giọng thật của bà Bảy: người đi buôn mệt mỏi, khàn và già: các ông đem xương tôi đi đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cliff-edge",
+      "caption": "Giọng thật bà Bảy",
+      "text": "Cụ trưởng xóm đáp - không phải trả lời nó, mà trả lời để nói cho nó nghe: đem bà về mộ tổ ngoài đèo, cho bà yên nghỉ đúng nghĩa. Xóm Bản Lừ trả nợ bà đêm nay. Cả đoàn đứng nín, chờ. Bóng nó im lặng một lúc lâu - rồi nghiêng gánh hàng, nhường ra một khe đường vừa đủ đi qua."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cliff-edge",
+      "caption": "Khe đường hẹp",
+      "text": "Người ta lần lượt đi qua khe đường hẹp ấy - qua ngay trước mặt nó, gần đến mức ngửi thấy mùi ẩm ướt của vải mốc và mùi sương lạnh. Mỗi người đi qua đều rạ rụp cả người, như đi qua một cửa vô hình. Nó đứng im như tượng đá, chỉ có mái tóc đen bay trong gió đèo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Khi Hà đi qua",
+      "text": "Nhưng khi Hà đi qua - bóng nó chợt quay đầu theo cô, mái tóc rủ ra, và giọng bà Bảy vang lên đổi điệu, nghe buồn hơn giận: đứa nào có mặt của ta. Hà đứng sững giữa khe đường, không thể bước - không phải vì sợ, mà vì cô thấy mắt nó: sau mái tóc đen, đôi mắt ấy đang khóc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Hai gương mặt giống nhau",
+      "text": "Trăng rằm xẹt qua màn sương, soi một khắc - và cả đoàn thấy điều Hà từng nói: gương mặt oan hồn sau mái tóc, trừ đôi mắt trũng sâu và làn da trắng bệch, quả nhiên giống Hà đến lạ - hai người đứng đối diện nhau như hai ảnh của một người, một sống một đã chết sáu mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cliff-edge",
+      "caption": "Khảm suýt rơi",
+      "text": "Giữa khe đường hẹp, đến lượt cậu Mậu đi qua - cậu lảo đảo vì chân run, suýt làm rơi cái ba lô chứa đồ cúng xuống vực. Cả đoàn nín thở. Vinh phải đổi khảm xương từ ngực sang tay, một tay bám vách đá, một tay đỡ cậu. Khảm gốm nặng trĩu lắc qua lắc lại bên miệng vực sương - chỉ cần rơi, là xương bà Bảy vỡ tan giữa vực không đáy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cliff-edge",
+      "caption": "Nó đỡ khảm",
+      "text": "Và điều không ai ngờ: khi khảm gốm nghiêng hẳn về phía vực, một luồng sương lạnh quấn quanh tay Vinh, đẩy khảm về lại lòng anh - chậm, nhẹ, như một bàn tay đỡ. Bóng nó đứng đó, gánh hàng vẫn trên vai, và chỉ khi khảm đã chắc trong ngực Vinh thì nó mới quay đầu đi. Nó cũng muốn về mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lantern-fail",
+      "caption": "Tiếng bước chân thừa",
+      "text": "Trong bóng tối đèn tắt ấy, người ta nghe rõ hơn một thứ khác: tiếng bước chân. Đoàn mình đi - có tiếng. Nhưng giữa các nhịp chân của đoàn, chen vào những tiếng chân trần nhẹ hơn, lạch cạch, đi đúng nhịp nhưng không của ai. Đếm theo thì thấy cứ mỗi người đi, có thêm một tiếng chân trần đi sát cạnh - như mỗi người được một bóng đi kèm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lantern-fail",
+      "caption": "Chân bên cạnh chân",
+      "text": "Khi đèn chớp sáng lại một khắc, ai cũng nhìn xuống chân mình - và thấy bên cạnh đôi chân mình, trên mặt đất ướt, in một dấu chân trần khô ố khác, dài hẹp, ngón xòe ra cứng đờ. Đèn tắt, đèn sáng lần nữa - dấu chân vẫn đó, đi cùng bước với mình, không bao giờ đi trước cũng không bao giờ đi sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Nó hỏi Hà",
+      "text": "Nó hỏi Hà, giọng mềm đi lạ: người ta chọn mày vì mặt mày giống ta, để mày trả lời thay cả xóm - mày có biết không. Hà không đáp, chỉ nhìn nó. Rồi nó nói câu khiến cả đoàn lạnh gáy: ta cũng từng là đứa được chọn như mày. Xóm bên kia đèo, đời trước, cũng làm y vậy với ta."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Bà Bảy từng giữ chỗ",
+      "text": "Hóa ra bà Bảy cũng từng là người giữ chỗ - của một xóm khác, một giao ước khác, một đời trước. Bà lớn lên để trả lời nó, rồi đi buôn kiếm sống, rồi bị giết trên đèo này - và chính vì đời bà đã là vật trả lời thay, vong bà mới thành con Mượn Giọng, đi mượn giọng đòi người trả lời thay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Cái vòng của nợ",
+      "text": "Cụ trưởng xóm lẩm bẩm: thì ra cái nợ này không bắt đầu ở xóm ta - nó chạy vòng từ xóm nọ qua xóm kia, đời trước đời sau, xóm nào cũng đẩy một đứa ra đỡ. Giết người chỉ là mở thêm một vòng nợ nữa. Muốn chặt đứt cái vòng này, không đủ chỉ trả xương - phải có người dám đứng ra trả lời bằng tiếng thật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Mộ tổ ngoài đèo",
+      "text": "Qua khúc cua là đến mộ tổ - nơi tổ tiên các họ trong vùng cùng chôn, có bia đá cũ rêu phong. Người ta đặt khảm xương xuống trước mộ, cụ trưởng xóm khựu xuống đào huyệt bằng chính tay run của mình. Cả xóm ai nấy cùng bới đất, không dùng cuốc xẻng - tay, để chạm đất như người ta chạm vào tội lỗi mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Nó đứng nhìn",
+      "text": "Trong lúc cả xóm đào huyệt, nó đứng cách đó mười thước nhìn, không tiến lại. Cái bóng cao gầy đứng yên giữa trăng rằm, và lần đầu tiên người ta thấy nó không còn điệu bộ săn mồi nữa - nó đứng như người đàn bà đứng chờ được chôn, kiên nhẫn như đã chờ sáu mươi năm nay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Hàng người sau lưng",
+      "text": "Nhưng đứa bé gái lại rụt rè nói: mẹ ơi, hàng người chân trần kia họ đứng vòng quanh mình hết rồi. Quả nhiên - người ta ngẩng lên thấy trong sương vây quanh bãi mộ, những bóng người đứng im lìm, hàng chục bóng, vây kín mít. Tất cả những ai xóm này đã mất cho nó - giờ đứng xem xóm này trả nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Thử thách cuối",
+      "text": "Và lúc huyệt mộ sắp xong, nó lên tiếng lần cuối - không còn giọng đi buôn nữa, mà giọng của một người đàn bà già héo sau sáu mươi năm chờ: các ông trả tôi về mộ, tôi tha cho các ông. Nhưng xương tôi về được tới mộ, thì phải có một người trả lời tôi một lần - một tiếng thôi - để tôi biết xóm các ông thật lòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Một tiếng thôi",
+      "text": "Nó nhìn thẳng về phía Hà: đứa có mặt của ta - mày trả lời ta một tiếng, ta để cả xóm sống, để mày sống, xóa hết nợ. Cả đoàn đứng căng như dây đàn. Vinh bước ra chắn trước vợ. Cụ trưởng xóm khoát tay: đừng - đó là cạm bẫy cũ, trả lời là mất. Nhưng bức thư thầy Tào nói gì - đến mồ nó, người nợ phải trả lời bằng tiếng xin lỗi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Hai cách trả lời",
+      "text": "Hai cách trả lời, một sống một chết, ở ngay trước mặt. Trả lời theo cách nó muốn - thốt lên một tiếng đáp lời - là mất hồn. Trả lời theo cách thầy Tào dạy - quỳ xuống mồ, nói tiếng xin lỗi thật - là trả xong nợ. Nó cược một ván: xóm này có đủ can đảm xin lỗi không, hay lại chọn đường đẩy một đứa ra đỡ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Nó nhớ mặt Hà",
+      "text": "Nó nói tiếp với Hà: hồi còn sống, ta đi buôn qua xóm nào người ta cũng bảo ta có mặt phúc hậu - nhưng trong xóm ta, đời ta, người ta lại chọn ta vì mặt ta giống cái thần mà họ phải trả lời. Đời ta sống để trả lời thay người khác, chết đi vẫn bị đem ra làm giọng gọi. Mày - ta không muốn mày giống đời ta."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-blocking",
+      "caption": "Đừng như ta",
+      "text": "Đó là lý do, nó nói, nó đã luôn cố dọa Hà đi khỏi xóm ngay từ đầu - ba chiếc khăn mỏ quạ là cả báo động lẫn lời đuổi. Mẹ Hà hiểu, cho nên bả gửi Hà đi thành phố, cấm về quê. Nếu Hà không về, nó sẽ chỉ đòi xóm thôi. Nhưng rồi mẹ Hà chết - và đứa con gái được chọn kia lại đúng dịp về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Cụ trưởng xóm quỳ",
+      "text": "Cụ trưởng xóm là người đầu tiên quỳ - quỳ xuống đất lạnh trước nấm mộ, trước mặt oan hồn, trước hàng chục bóng người trong sương. Cụ khấu đầu xuống đất, giọng già run mà rõ từng chữ: bà Bảy ơi, xóm Bản Lừ có mặt ở đây, xin lỗi bà. Sáu mươi năm muộn, nhưng chúng tôi xin lỗi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Tập 4 - hết",
+      "text": "Và cụ trả lời - trả lời nó ngay giữa mộ, bằng tiếng xin lỗi thật. Cả xóm nín thở chờ xem trời đất có sập xuống không. Bóng nó run lên lần đầu tiên. Nhưng rồi từ trong đám bóng người chân trần, một giọng khác cất lên - giọng mẹ Hà - và câu chuyện đêm rằm ấy mới bước sang phần cuối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Từng nhà quỳ",
+      "text": "Sau cụ trưởng xóm, từng nhà một quỳ xuống trước mộ. Ông Mậu quỳ, khóc nấc lên thừa nhận nhà ông cầm hai đồng bạc. Cô Hai quỳ thay chồng thay bố nhà. Từng người một, quỳ xuống đất lạnh, nói ra tiếng xin lỗi mà xóm này giấu sáu mươi năm - mỗi tiếng xin lỗi là một tiếng trả lời đúng nghĩa, trả cho người đã đợi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Sương tan dần",
+      "text": "Mỗi người xin lỗi xong, màn sương quanh bãi mộ lại loãng ra thêm một lớp, như ai gỡ từng lớp vải. Bóng người chân trần vây quanh bắt đầu rã ra - cái bóng này lùi lại, cái bóng kia mờ đi, như từng món nợ được ghi xóa. Chỉ còn bóng cao gầy của bà Bảy vẫn đứng nguyên chỗ cũ, chờ đến lượt cuối cùng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Huyệt mộ sẵn",
+      "text": "Đào xuống nửa thước, người ta sững lại: huyệt mộ đã có sẵn - một cái hố hình chữ nhật vừa khít cái khảm, bốn bề phẳng lì như vừa đào hôm qua, đáy hố khô ráo giữa đêm sương ướt. Không ai trong đoàn từng lên đây. Xung quanh nấm mộ, đất cỏ nguyên vẹn - chỉ mỗi cái huyệt đã đào sẵn chờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Người đào huyệt",
+      "text": "Đứa bé gái chỉ về phía hàng bóng đứng trong sương: là các ông các bà kia đào đấy mẹ ạ - họ đứng đào từ chiều rồi. Hàng chục bóng người chân trần đã đến trước đoàn, đào sẵn huyệt mộ cho bà Bảy. Những người chết của xóm này, sáu mươi năm nợ nó, giờ cùng đứng ra trả nợ cùng người sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Gà gáy xa",
+      "text": "Đang lúc đó từ phía chân đèo, tiếng gà gáy đầu tiên của một trại gà ngoài thị trấn vọng lên mỏi mòn - còn xa, nhưng là báo hiệu trời sắp rạng. Lời thầy Tào còn một nửa: phải xong trước gà gáy ba lần. Gà gáy một - người ta tăng tốc. Còn hai tiếng gáy nữa cho món nợ sáu mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-site",
+      "caption": "Giọng mẹ Hà",
+      "text": "Chính lúc ấy, giọng mẹ Hà vọng lên từ đám bóng chân trần - không còn điệu dỗ dành nữa mà rõ ràng, bình thản: Hà, con quỳ xuống đi. Con là người giữ chỗ cuối cùng của xóm này - tiếng của con là tiếng mấy đời nhà giữ lửa để lại. Con phải là người trả lời cuối cùng, nhưng trả lời đúng cách. Mẹ dạy con điều cuối này."
+    }
+  ],
+  "thumbTitle": "7 CÂY SỐ KHÔNG ĐƯỢC NGOÁI LẠI",
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma có thật",
+    "truyện ma làng quê",
+    "ma kinh dị",
+    "nghe truyện ma",
+    "truyện audio",
+    "bà tư kể chuyện",
+    "đừng trả lời",
+    "horror story việt nam"
+  ],
+  "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "queuePriority": 1
+}

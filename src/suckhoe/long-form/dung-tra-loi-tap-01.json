@@ -1,0 +1,386 @@
+{
+  "slug": "dung-tra-loi-tap-01",
+  "locale": "vi",
+  "title": "ĐỪNG TRẢ LỜI | Tập 1: Về Xóm Cuối Đèo - Mẹ Đã Mất Sao Đêm Còn Gọi Ngoài Cửa | Truyện Ma Dài",
+  "description": "Đưa vợ về xóm cuối đèo lo tang mẹ vợ, Vinh nghe cụ trưởng xóm dặn một điều kỳ lạ: khi sương phủ qua đèo, ai gọi ngoài cửa cũng tuyệt đối đừng trả lời - kể cả tiếng mẹ đã mất. Đêm đầu tiên, tiếng gọi ấy vang lên đúng nửa đêm.\n\nTruyện ma dài 5 tập - Đừng Trả Lời, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "scenePrompts": {
+    "hook": "a misty mountain pass in northern Vietnam at dusk, a tiny hamlet of wooden stilt houses swallowed by fog, one lonely road winding up through old forest",
+    "pass-road": "a narrow mountain road at dusk climbing into thick white fog, pine silhouettes, an old motorbike headlight beam cutting the mist",
+    "hamlet-dusk": "a half-abandoned Vietnamese mountain hamlet at dusk, wooden stilt houses with smoking chimneys, wet rice paddies empty and grey, mountains behind",
+    "old-house": "an old dark wooden Vietnamese stilt house at night, one warm lamp in the window, corn hanging under the eaves, fog at the doorsteps",
+    "village-elder": "an old Vietnamese woman in a faded scarf sitting on a doorstep of a stilt house at dusk, deep wrinkles, watching strangers with wary eyes",
+    "ancestral-altar": "a dim Vietnamese ancestral altar inside a wooden house at night, black-and-white portrait of a middle-aged woman, incense smoke, oil lamp flame",
+    "door-night": "the inside of a dark wooden house door at night, moonlight through the cracks, a wooden latch, fog seeping under the door",
+    "mist-pass": "thick white fog pouring over a mountain pass at night, dead trees, total darkness beyond the fog line"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Xóm cuối đèo",
+      "text": "Người ta đồn rằng ở cuối con đèo Ma Già có một xóm nhỏ, tên gọi trên giấy tờ là xóm Bản Lừ, nhưng dân quanh vùng chỉ dám gọi nó là xóm Cuối Đèo. Và ở xóm ấy, có một luật sống truyền đời mà đứa trẻ nào cũng thuộc lòng trước khi biết đọc: đêm xuống, sương về, ai gọi ngoài cửa cũng tuyệt đối đừng trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tin buồn",
+      "text": "Chuyện bắt đầu từ cú điện thoại lúc ba giờ sáng. Hà ôm điện thoại run lẩy bẩy, nước mắt chảy ra không tiếng. Mẹ cô, bà Phủ, vừa mất ở quê - người ta bảo là ngủ một giấc không tỉnh. Vinh không nói gì, chỉ quay xe buýt về nhà, xếp vội hai cái va li."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pass-road",
+      "caption": "Đường về",
+      "text": "Từ thị xã lên Bản Lừ phải qua ba chục cây số đường đèo. Xe khách chỉ chạy đến chân đèo, đoạn cuối hai vợ chồng thuê xe ôm. Người đàn ông chở xe cứ liếc qua vai Vinh mãi, đến cổng xóm thì hạ giọng: hai người lo tang xong về sớm đi, đừng ở lại lâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pass-road",
+      "caption": "Sương trên đèo",
+      "text": "Vinh tưởng ông ta đùa. Nhưng khi xe ôm quay đầu, anh thấy từ đỉnh đèo, một vách sương trắng đặc đang tràn xuống như nước. Chưa đầy hai giờ chiều mà bóng tối đã đứng sẵn ở chân xóm, chờ sẵn như biết họ sắp tới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Tang lễ lạ",
+      "text": "Buổi chiều ấy, người xóm kéo đến viếng đông đúc. Nhưng Vinh để ý một điều kỳ quặc: ai viếng xong cũng vắt vội khăn tang lên tay, khẽ liếc đồng hồ, rồi ra về luôn không một câu chúc. Đến năm giờ chiều, gian nhà đông đúc bỗng vơi nhanh như thủy triều rút - không ai dám ở lại quá giờ ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Không ai ở lại",
+      "text": "Hà khóc mời mọi người ở lại dùng cơm chay. Người ta chỉ lắc đầu, kéo nhau về trước khi sương xuống. Một ông lão đi ngang qua Vinh, thảy xuống một câu nhỏ bằng hơi thở: đêm nay các cháu đừng ra khỏi nhà, kể cả nghe ai gọi. Cứ như thể cả xóm cùng giấu hai vợ chồng một nỗi sợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Bản Lừ",
+      "text": "Xóm Bản Lừ nhỏ đến tội. Nguyên cái xóm chỉ còn chín căn nhà sàn, rải rác hai bên con đường đất. Nhà nào cũng thấp thoáng khói bếp, nhưng không một tiếng chó sủa, không một đứa trẻ nào chạy ra xem người lạ - một sự im ắng nặng trĩu như trần đất đèo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Nhìn theo",
+      "text": "Hà bước đi như người mất hồn. Từng cánh cửa hé mở, từng đôi mắt già nua thò ra nhìn theo hai vợ chồng, rồi khép lại rất nhẹ. Không ai ra mừng, không ai hỏi thăm, chỉ có những cái nhìn dài theo sau, cho đến tận căn nhà cuối xóm - nhà mẹ Hà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Bà Tám",
+      "text": "Người duy nhất đứng chờ họ là bà Tám, hàng xóm cạnh nhà, trông coi quan tài mẹ Hà suốt một tuần. Bà bước ra sân, nắm lấy tay Hà, mắt đỏ hoe. Nhưng câu đầu tiên bà nói không phải lời chia buồn: về là tốt rồi, nhưng cháu phải nhớ kỹ luật xóm nghe chưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Luật xóm",
+      "text": "Vinh hỏi luật gì. Bà Tám nhìn thẳng vào mắt anh, từng chữ nặng như đá: khi sương đã phủ qua đèo, trời đã tối hẳn, ai gọi ngoài cửa cũng không được trả lời, không được mở cửa. Dù tiếng ấy nghe quen đến đâu, dù nó gọi tên mình đến đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Vì sao",
+      "text": "Hà nghẹn ngào hỏi vì sao. Bà Tám im lặng rất lâu, rồi liếc về phía quan tài trong nhà: vì ngoài đó không phải người đâu cháu. Nó mượn giọng người chết để gọi người sống. Ai trả lời một tiếng, coi như tự mình mở cửa cho nó bước vào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Đừng cười",
+      "text": "Vinh suýt bật cười. Người thành phố như anh nghe chuyện này chỉ thấy mê tín. Nhưng bà Tám siết chặt tay anh lại, các khớp ngón tay già cứng như cành khô: cậu đừng cười. Mẹ con Hà chết trong giấc ngủ đấy, nhưng trước khi chết, bả đã trả lời một tiếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Cái chết của bà Phủ",
+      "text": "Vinh hỏi mẹ vợ chết thế nào. Bà Tám ngồi xuống bậc thềm, mắt nhìn vô định: người ta tìm thấy bả ngồi trên ghế, mặt quay ra phía cửa, tai còn đeo cái bông bạc cũ - như thể vừa đứng dậy nghe ai gọi rồi ngồi lại. Trên mặt bả không đau đớn, chỉ có một vẻ như vừa nhận ra điều gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Chồng bà Tám",
+      "text": "Bà Tám nói thêm, giọng nhỏ đến mức Vinh phải cúi sát: chồng bà, ông Cậu, cũng mất y vậy ba năm trước. Đêm ấy bà nghe tiếng gõ cửa, kịp bịt miệng ông - nhưng ông đã lỡ thở dài một tiếng. Ba ngày sau, người ta tìm thấy ông nằm lạnh trên bậc thềm, mắt mở nhìn ra con đèo. Nhà bà giờ chỉ còn một mình bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Nhà mẹ vợ",
+      "text": "Câu ấy làm cả hai lặng đi. Bước vào nhà, mùi trầm hương ùa ra, ngột ngạt. Quan tài mẹ vợ đặt giữa gian nhà, hai ngọn đèn dầu cháy hai đầu. Hà quỳ sụp xuống, khóc tới khản giọng. Vinh thắp hương, mà trong đầu cứ quanh quẩn câu nói của bà Tám."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Ảnh thờ",
+      "text": "Trên bàn thờ, tấm ảnh chân dung mẹ Hà nhìn xuống, nét mặt hiền mà đôi mắt cứ như đang dõi theo từng bước chân trong nhà. Vinh lau bụi trên khung ảnh, vô tình đọc được dòng chữ khắc mờ trên thanh gỗ bàn thờ: giữ lửa giữ cửa, đừng để nó gọi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Giấc mơ của Hà",
+      "text": "Chiều ấy Hà thiếp đi trên chõng tre, mơ một giấc lạ: cô thấy mẹ đứng ngoài sân, đội khăn mỏ quạ, vẫy cô ra. Trong mơ cô bước ra ngưỡng cửa, chân đã kịp chạm thềm, thì mẹ bỗng quay lưng, giơ tay đẩy ngược cô vào nhà, quát một câu đau nhói: con trả lời mẹ làm gì. Hà giật mình, mồ hôi ướt áo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Dấu chân trên thềm",
+      "text": "Điều rùng mình là lúc tỉnh, Hà thấy chân mình lấm bùn - bùn đen sềnh sệch y hệt thứ bùn rỏ vào từ khe cửa. Cô không nhớ mình đã rời chõng. Vinh lau chân cho vợ, không nói gì, nhưng hai người nhìn nhau đều hiểu: trong giấc mơ, Hà đã suýt bước qua thềm cửa thật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Chiếc khăn mỏ quạ",
+      "text": "Hà dọn lại buồng cho mẹ, lật từng nếp chăn cũ. Dưới gối, cô tìm thấy chiếc khăn mỏ quạ đen mẹ hay đội - chiếc khăn mà bà Tám bảo đã được đặt trong quan tài theo người mất. Hà cầm khăn, tay run, thì thào: khăn này đáng lẽ đang nằm cùng mẹ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Chữ trong chăn",
+      "text": "Đáng sợ hơn, khi Hà trải lại chiếc chăn cũ của mẹ, hai vợ chồng nhận ra bên trong mép chăn được thêu dày đặc bằng chỉ đỏ - không phải hoa văn, mà là hàng chữ lặp đi lặp lại suốt chiều dài: đừng trả lời, đừng trả lời, đừng trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Cụ trưởng xóm",
+      "text": "Chiều hôm ấy, cụ trưởng xóm sang thắp hương. Cụ đã hơn tám mươi, lưng còng, mắt còn tinh. Trước khi về, cụ đứng ở cửa, ngó ra con đèo đã chìm trong sương, nói như tự nhủ: đêm nay trăng khuyết. Nó sẽ đến sớm. Các cháu nhớ đừng trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Mượn giọng",
+      "text": "Vinh hỏi nó là cái gì. Cụ trưởng xóm thở dài: người ta gọi nó là con Mượn Giọng. Nó không có giọng của riêng nó. Nó chỉ nói được bằng giọng của những ai đã chết trong xóm - và của những kẻ đã từng trả lời nó. Cho nên càng nghe quen, càng phải câm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-pass",
+      "caption": "Sương qua đèo",
+      "text": "Tối ấy, sương đổ qua đèo lúc nào không hay. Chỉ một lúc trước còn thấy ngọn đèn nhà bà Tám lờ mờ, một lúc sau thì trắng xóa như ai trút vôi đầy trời. Cả xóm chín căn nhà, chín ngọn lửa, tắt ngấm hết trong vòng một khắc - không một tiếng động."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Xóm từng 40 nhà",
+      "text": "Cụ trưởng xóm nói xóm Bản Lừ năm xưa có bốn mươi mấy nhà, trẻ con chạy giàn giụa khắp bờ ruộng. Giờ còn chín nhà, đa số già cả hết. Người chết trong xóm giờ nhiều hơn người sống. Và mỗi người chết, con Mượn Giọng lại thêm được một giọng nữa để gọi - cái xóm này đang chết dần chết mòn trong miệng nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Đền thờ bịt kín",
+      "text": "Vinh hỏi đã làm gì để xua nó chưa. Cụ lắc đầu: đầu xóm có miếu thờ, người ta đã dùng vải đỏ bịt kín cửa miếu lại từ đời cụ cha cụ. Vì ngày xưa, chính nó từng mượn giọng ông thầy cúng đứng trong miếu, gọi cả xóm ra giữa đêm. Ba mươi người đi ra đêm ấy, sáng hôm sau chỉ mười một người còn nhớ mình đã đi đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Chín ngọn lửa tắt",
+      "text": "Vinh hé cửa nhìn ra mà rùng mình. Cả xóm tắt đèn cùng lúc, không hẹn mà thành lệ, như thể mọi nhà đều biết chính xác giờ nó bước qua đèo. Trong nhà chỉ còn hai ngọn đèn dầu thắp cho linh cữu, cháy xanh lét giữa màn sương luồn qua khe cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Nửa đêm",
+      "text": "Hà ngồi thức bên quan tài mẹ, thiếp đi thiếp lại vì kiệt sức. Vinh tự nhủ mình không tin chuyện ma quỷ, vậy mà tay anh cứ kiểm tra lại chốt cửa đến lần thứ ba. Nửa đêm, khi ngọn đèn dầu thứ hai bắt đầu chớp tắt, tiếng gõ vang lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Ba nhịp gõ",
+      "text": "Cạch. Cạch. Cạch. Ba nhịp chậm rãi, đều đặn, lịch sự đến tàn nhẫn. Không phải gió - gió không gõ đúng nhịp ba lần rồi ngừng, rồi lại gõ. Vinh đứng dậy, tim đập dồn. Hà chợt mở mắt, ngơ ngác nhìn ra cửa như người vừa bị gọi khỏi mộng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Tiếng mẹ",
+      "text": "Rồi một giọng cất lên ngoài cửa, gần đến mức như đặt môi sát vào khe gỗ: Hà ơi. Mẹ đây. Giọng ấy - giọng mẹ Hà, từng chút từng chút một, cái ngân dài cuối câu, cái ấm miền quê mà suốt mười mấy năm Vinh nghe mỗi lần về thăm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Mẹ đây",
+      "text": "Hà gào lên thảng thốt: Mẹ! Cô lao về phía cửa. Vinh ôm choàng lấy vợ, một tay bịt chặt miệng cô, tay kia giữ chốt cửa. Giọng ngoài kia ngừng một nhịp, rồi cười khẽ - tiếng cười ấm áp, y hệt tiếng cười của người mẹ vừa nằm trong quan tài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Con về rồi à",
+      "text": "Nó nói tiếp, giọng đổi sang cái điệu dỗ dành của mẹ với con nhỏ: con về rồi à. Mẹ chờ con lâu lắm. Ra với mẹ đi con, ngoài này lạnh quá. Hà giãy trong vòng tay Vinh, nước mắt chảy đầy tay anh, tiếng nấc nghẹn trong lòng bàn tay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Bóng dưới cửa",
+      "text": "Vinh nhìn xuống khe cửa. Có một cái bóng chắn ngang vệt sáng mờ dưới chân cửa - hai bàn chân trần, đứng sát ngay thềm. Cái bóng ấy đứng im rất lâu, nhẫn nại như có cả đêm. Rồi từng giọt nước rỏ từ khe cửa vào, lạnh, sềnh sệch, ngai ngái mùi bùn sông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Kể chuyện ngày xưa",
+      "text": "Giọng ấy bắt đầu kể - kể chuyện hồi Hà bảy tuổi bị sốt, mẹ gánh con đi bộ hai mươi cây đèo xuống trạm xá; kể chuyện bí mật hai mẹ con chôn đồng xu dưới gốc đa đầu xóm, hứa lấy lại ngày Hà lấy chồng. Chỉ có hai mẹ con biết chuyện đó. Mẹ Hà đã mang theo vào quan tài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Đêm mưa mười hai năm trước",
+      "text": "Giọng bố Vinh ngoài cửa bắt đầu kể: mày nhớ đêm mưa ấy không con, đêm mày lên cơn co giật, bố gánh mày xuống đèo. Giọng ấy kể đúng từng chi tiết - cái áo khoác xanh, tiếng sấm trên đỉnh đèo, câu cuối cùng bố nói trước khi xe lao xuống vực: con ơi bám chặt vào. Câu ấy chỉ mình Vinh nghe được, trong tai, lúc tám tuổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Nó biết hết",
+      "text": "Vinh lạnh đến tận xương. Chuyện ấy anh chưa kể cho ai, kể cả Hà. Vậy mà ngoài cửa, cái thứ mượn giọng bố anh kể lại trôi chảy, từng chữ một, như đọc trong đầu anh. Nó không chỉ biết người chết - nó đọc được cả ký ức người sống đang núp trong nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Gọi tên Vinh",
+      "text": "Rồi đột ngột, giọng đổi người. Lần này là giọng của một đàn ông trầm khàn, gọi thẳng tên Vinh: Vinh ơi, mở cửa cho bố. Giọng bố Vinh - người đã mất vì tai nạn trên chính con đèo này mười hai năm trước, khi đi đón cấp cứu chính Vinh lúc nhỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Hai tiếng gọi",
+      "text": "Hai giọng, hai người chết, đứng ngoài cửa thay phiên gọi. Bên trong, Vinh ôm vợ ngồi bẹp xuống sàn, lưng tựa chân quan tài mẹ vợ. Anh chỉ còn biết lặp đi lặp lại trong đầu câu chữ thêu trên chăn: đừng trả lời, đừng trả lời, đừng trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Tiếng Hà",
+      "text": "Lâu nhất là đoạn cuối. Giọng ngoài cửa đổi lần nữa - và cả hai vợ chồng cùng tê cứng: đó là giọng của chính Hà. Nó nói bằng giọng vợ anh, êm và trong: Vinh ơi, mở cửa ra, em đứng ngoài này lạnh quá. Trong khi Hà thật đang nằm gọn trong vòng tay anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Mẹ ơi",
+      "text": "Đỉnh điểm là lúc Hà không chịu nổi nữa. Cô gào lên trong lòng bàn tay Vinh - không thành tiếng, nhưng thanh quản đã rung. Và ngay khoảnh khắc ấy, ngoài cửa im bặt. Hoàn toàn im. Im đến mức nghe rõ tiếng mạch đập trong tai mình. Nó nghe thấy rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Nó nghe thấy rồi",
+      "text": "Một hồi lâu, giọng mẹ Hà cất lên lần cuối, không còn điệu dỗ dành nữa - mà thủ thỉ, mừng rỡ, như người vừa tìm được điều mình tìm: con đã trả lời mẹ rồi. Mẹ nghe thấy rồi. Vậy thì đêm mai, mẹ lại đến. Rồi tiếng chân trần xa dần, tan vào sương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Rạng sáng",
+      "text": "Rạng sáng, sương rút về phía đèo như ai kéo tấm màn. Vinh mở cửa, tay vẫn còn run. Trên thềm gỗ, một vệt bùn ướt in dấu chân trần - không phải một dấu chân đi vào, mà là hai hàng dấu chân quay đi, đứng cạnh nhau, chờ suốt đêm ngay trước cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Vật trên thềm",
+      "text": "Trên bậc thềm có một vật nhỏ gói trong lá chuối úa. Hà mở ra với đôi tay run - bên trong là đồng xu đã xỉn đen. Đồng xu hai mẹ con chôn dưới gốc đa đầu xóm ngày Hà bảy tuổi. Cái bí mật mà trên đời này, chỉ một người còn nhớ - và người đó vừa nằm trong quan tài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Bà Tám xanh mặt",
+      "text": "Vinh chạy sang nhà bà Tám, kể hết chuyện đêm. Mặt bà cụ xanh lét khi nghe đến đoạn Hà suýt gào lên: cháu đã lỡ trả lời chưa. Vinh bảo chỉ rung thanh quản thôi, chưa thành tiếng. Bà Tám ngồi thụp xuống, lẩm bẩm: chưa thành tiếng, nhưng nó đã nghe thấy hơi con người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Mất một sợi",
+      "text": "Bà cụ nắm tay Vinh: nghe cho kỹ đây. Trả lời một tiếng, nó mượn được một sợi hồn. Trả lời ba lần, nó mượn được cả người. Hồn của con Hà bây giờ đã dính một sợi vào nó rồi. Đêm nay nó sẽ gọi mạnh hơn, gần hơn - và nó sẽ dùng đúng thứ làm con Hà đau nhất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Sáng hôm sau",
+      "text": "Sáng hôm sau, kỳ lạ thay, cả xóm đều biết đêm qua nó đã gõ cửa nhà mẹ Hà - dù không ai nghe thấy, hay không ai thừa nhận nghe thấy. Nhà nào cũng đốt trầm nhiều hơn thường ngày. Người ta đi ngang nhìn Vinh bằng ánh mắt thương hại, như nhìn người đã trót dính vào món nợ không trả được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Đứa bé duy nhất",
+      "text": "Ở đầu ngõ có một đứa bé gái chừng chín tuổi - đứa trẻ duy nhất của cả xóm. Nó đứng nhìn Hà rất lâu, rồi thì thào đủ nghe: chị Hà đừng buồn, đêm qua bà chị cũng gọi cháu, cháu suýt trả lời. Rồi mẹ nó kéo mạnh nó vào nhà, sập cửa rầm. Bà chị của nó - chết đuối hai năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Miếu đầu xóm",
+      "text": "Vinh đi ngang miếu thờ đầu xóm. Quả nhiên cửa miếu bịt kín vải đỏ cũ mốc, trước miếu hương vẫn cắm đầy, đồ cúng còn tươi - người ta vẫn cúng, nhưng không ai dám mở cửa. Trên thanh ngang cửa miếu, ai đó khắc một hàng chữ mờ: người trong trả lời, người ngoài vào được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-elder",
+      "caption": "Vì sao là Hà",
+      "text": "Vinh hỏi vì sao nó nhắm vào Hà. Bà Tám chần chừ, rồi nhìn xuống đất tránh mắt anh: chuyện của xóm này dài lắm, cháu ạ. Có những đứa trẻ sinh ra trong xóm Bản Lừ là đã được chọn từ trong bụng mẹ. Cụ trưởng xóm đang đến, để cụ nói. Và đừng để Hà nghe thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dusk",
+      "caption": "Quan tài kỳ lạ",
+      "text": "Trong lúc chờ cụ trưởng xóm, Vinh quay về nhà, đi ngang qua quan tài mẹ vợ - và đứng khựng lại. Hai ngọn đèn dầu vẫn cháy. Nhưng nắp quan tài, vốn úp kín suốt tuần lễ qua, giờ hé ra một khe nhỏ bằng ngón tay. Mà không ai trong nhà đụng vào nó cả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-pass",
+      "caption": "Đêm thứ hai",
+      "text": "Đêm thứ hai, Vinh rút kinh nghiệm: anh dùng dây treo lục lạc nhỏ quanh khung cửa - chỉ cần cửa động là lục kêu; rồi anh đẩy tủ nặng chắn ngang. Nhưng đúng nửa đêm, anh giật mình nghe tiếng lục kêu len lỏi - không phải ngoài cửa, mà từ trong chính buồng ngủ, chỗ Hà vừa đứng dậy lúc nào không hay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Hà đi trong ngủ",
+      "text": "Hà đang đứng trước cửa, mắt vẫn nhắm, người lảo đảo như bị ai nắm tay kéo. Ngoài kia, giọng mẹ êm ái: con về rồi mẹ ơi. Vinh lao tới ôm lấy vợ, lay mạnh. Hà tỉnh dậy hoảng loạn, không nhớ gì cả - chỉ nhớ trong mơ mình đang chạy theo mẹ ra con đèo, mẹ cứ ngoái lại vẫy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Khe nắp quan tài",
+      "text": "Vinh dũng cảm lắm mới ghé mắt nhìn qua khe hé. Bên trong tối thui, chỉ thoáng thấy góc chiếc khăn mỏ quạ đen - chiếc khăn lẽ ra đã phủ lên mặt người mất. Chiếc khăn thứ hai. Vì chiếc đầu tiên, sáng nay, đang nằm gọn trong ngăn kéo tủ của Hà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Miệng người chết",
+      "text": "Và trong khoảnh khắc ngọn đèn dầu chớp, Vinh thấy - hay anh tưởng là mình thấy - khóe miệng người phụ nữ trong quan tài nhếch lên rất nhẹ, như đang mỉm cười. Cùng nụ cười mà đêm qua, anh nghe thấy qua giọng nói bên ngoài cánh cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Bưng lại quan tài",
+      "text": "Vinh gọi hai người xóm sang nhờ bưng kín quan tài lại. Cả hai đều lắc đầu lui ra sân, không dám vào nhà, chỉ thì thầm: nắp hé là nắp hé rồi, cậu đừng đụng vào. Mẹ con Hà vốn là người giữ lửa của xóm - bả chết, là cái lửa ấy tắt. Không ai muốn dính vào việc của nhà này nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Người giữ lửa",
+      "text": "Người giữ lửa - Vinh nghe cụm từ ấy lần thứ hai rồi. Anh hỏi nghĩa là gì. Người xóm không đáp, chỉ nói để cụ trưởng xóm kể. Nhưng trước khi đi, ông ta quay lại nhìn Hà một cái rất dài, rồi buông một câu khiến Vinh ám ảnh mãi: đứa nào được nhà giữ lửa nuôi lớn, đứa đó mang nặng lắm, cậu ạ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Chờ đêm",
+      "text": "Chiều xuống, sương lại rũ xuống đèo sớm hơn hôm qua. Vinh đóng kín mọi cửa, bịt tai cho vợ, ngồi ôm nhau giữa gian nhà. Đúng nửa đêm, tiếng gõ lại vang lên - lần này không ba nhịp lịch sự nữa, mà dồn dập, kiên nhẫn, từ cửa trước sang cửa sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Gọi tên đúng hơn",
+      "text": "Và nó gọi - không còn giọng mẹ, không còn giọng bố - mà bằng một giọng mới, quen đến lạnh gáy: giọng của chính Vinh, gọi vợ mình: Hà ơi, mở cửa ra em, anh đứng ngoài này rồi. Hà ngẩng đầu nhìn chồng ngồi ngay cạnh - rồi nhìn ra cửa, mặt cắt không còn giọt máu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Tập 1 - hết",
+      "text": "Đêm thứ hai ở xóm Cuối Đèo mới chỉ bắt đầu. Và đâu đó dưới nền nhà gỗ, một tiếng cạo khô khốc vang lên từ lòng đất, như có thứ gì đang bới lên từ dưới - thứ mà mẹ Hà đã giấu suốt đời, thứ mà cụ trưởng xóm sắp kể cho Vinh nghe về cái hộp gỗ chôn dưới nhà."
+    }
+  ],
+  "thumbTitle": "MẸ ĐÃ MẤT - SAO ĐÊM CÒN GỌI",
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma có thật",
+    "truyện ma làng quê",
+    "ma kinh dị",
+    "nghe truyện ma",
+    "truyện audio",
+    "bà tư kể chuyện",
+    "đừng trả lời",
+    "horror story việt nam"
+  ],
+  "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "queuePriority": 1
+}

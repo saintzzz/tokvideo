@@ -1,0 +1,291 @@
+{
+  "slug": "dung-tra-loi-tap-05",
+  "locale": "vi",
+  "title": "ĐỪNG TRẢ LỜI | Tập 5: Hồi Kết - Người Trả Lời Cuối Cùng Của Xóm Cuối Đèo | Truyện Ma Dài",
+  "description": "Trước mộ bà Bảy, Hà - người giữ chỗ cuối cùng - phải trả lời oan hồn một lần duy nhất, nhưng phải trả lời đúng cách: không phải đáp lời, mà là tiếng xin lỗi. Đêm rằm khép lại, món nợ sáu mươi năm được thanh toán - và bí mật cuối cùng về gương mặt giống nhau của hai người đàn bà được hé lộ.\n\nTruyện ma dài 5 tập - Đừng Trả Lời, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "scenePrompts": {
+    "hook": "a Vietnamese girl kneeling before an old stone grave on a foggy mountain pass at night under a full moon, a tall ghostly female figure standing before her, a crowd watching in silence",
+    "face-to-face": "a young Vietnamese woman and a ghostly wet-haired figure facing each other at a grave at night, the ghost's hand reaching toward the girl's face",
+    "village-pray": "a crowd of Vietnamese villagers kneeling on a mountain pass grave site at night, heads bowed, an old man leading, mist around",
+    "spirit-release": "a tall female ghost silhouette dissolving into white fog at dawn on a mountain pass, carrying shoulder baskets, walking away into light",
+    "coffin-peace": "an open wooden coffin inside a Vietnamese house in morning light, an elderly woman inside with a peaceful face, incense smoke",
+    "funeral-dawn": "a Vietnamese mountain hamlet funeral procession at dawn, people in white headbands carrying a coffin to a hillside, sun rising over the pass",
+    "village-morning": "a Vietnamese mountain hamlet in clear morning sunlight after fog, children at a doorway, smoke from kitchens, peaceful",
+    "pass-guardian": "a lone traveler on a foggy mountain pass road at dusk, a faint female silhouette with shoulder baskets at the roadside waving a warning",
+    "new-family": "a young couple with luggage arriving at an old wooden stilt house in a mountain hamlet at dusk, villagers watching"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tiếng gọi cuối cùng",
+      "text": "Trước mộ bà Bảy, giữa vòng vây hàng chục bóng người chân trần và gà gáy đã vọng lên tiếng thứ hai, Hà bước ra khỏi hàng. Vinh nắm tay vợ không buông, nhưng Hà nhẹ nhàng gỡ tay anh ra - cô nhìn thẳng vào đôi mắt trũng sau mái tóc đen của oan hồn, và quỳ xuống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hà quỳ xuống",
+      "text": "Toàn bộ xóm nín thở. Cụ trưởng xóm đưa tay ra định cản - rồi khựng lại, vì ông nhìn thấy cách Hà quỳ: không phải quỳ cầu xin, mà là quỳ như người ta quỳ trước bàn thờ tổ tiên. Hà đặt hai tay lên đất lạnh, cúi đầu xuống ba lần - nghi thức khấu đầu của đứa con cháu với người đi trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Trả lời đúng cách",
+      "text": "Rồi Hà ngẩng đầu lên, nói - giọng cô run nhưng không lạc một chữ: con là đứa được chọn trả lời thay xóm Bản Lừ. Hôm nay con trả lời bà - không phải để đổi mạng, mà để xin lỗi. Xin lỗi bà vì đời con sinh ra chỉ để đỡ thay. Và xin lỗi bà vì xóm con để bà nằm không mộ sáu mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Nó tiến lại",
+      "text": "Bóng cao gầy tiến lại từng bước - gần đến mức hơi lạnh của nó phả vào mặt Hà. Cả đoàn người siết chặt dây. Vinh suýt lao ra, cụ trưởng xóm giữ lại: để con bé trả lời cho xong. Oan hồn đứng trước Hà, chậm rãi giơ một bàn tay trắng bệch lên, đưa về phía gương mặt giống mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "face-to-face",
+      "caption": "Bàn tay lạnh",
+      "text": "Bàn tay ấy chạm vào má Hà - lạnh như chạm vào tảng sương - và Hà không hề né. Hai gương mặt giống nhau nhìn nhau, cách nhau gang tay: một đã chết sáu mươi năm, một sống ba mươi năm làm bóng của người kia. Rồi nó nói, giọng không còn giận mà chỉ còn mỏi: đời ta sống làm bóng. Ta không để đời mày giống đời ta."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "face-to-face",
+      "caption": "Trả lại gương mặt",
+      "text": "Nó đặt ngón tay lên giữa trán Hà - và người ta thấy như có một lớp mờ trôi khỏi mặt Hà, theo ngón tay ấy tan vào sương. Từ khắc ấy, gương mặt giống nhau ấy không còn nữa: nó lấy lại cái nét giống mà đời người đã chọn cho Hà - giải phóng cô khỏi kiếp người giữ chỗ mãi mãi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "face-to-face",
+      "caption": "Giải phóng Hà",
+      "text": "Nó nói thêm một câu mà chỉ Hà nghe rõ - sau này cô kể lại cho Vinh: từ nay mày sống đời mày, không ai cần mày trả lời thay nữa. Mẹ mày trả lời thay mày ba mươi năm, mày trả lời ta một lần bằng lòng thật - là đủ. Ta đòi nợ xong rồi. Của ta, ta mang về mộ. Của mày, ta trả lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Cả xóm trả lời",
+      "text": "Rồi điều kỳ diệu nhất của đêm rằm ấy xảy ra: cả xóm Bản Lừ - từ cụ trưởng xóm tám mươi tuổi đến đứa bé chín tuổi - cùng quỳ xuống quanh mộ, cùng cất giọng trả lời nó một lần duy nhất trong đời: chúng con xin lỗi bà Bảy. Hai mươi mấy tiếng trả lời hòa một, và oan hồn đứng giữa, nghe cho đến chữ cuối cùng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Giọng mẹ trong đám bóng",
+      "text": "Trong lúc cả xóm xin lỗi, giọng mẹ Hà lại vọng ra từ đám bóng chân trần - nhưng lần này không phải nó mượn giọng. Đứa bé gái chỉ tay: mẹ ơi, bà Phủ đứng đó kìa, đứng cạnh cô Bảy, bà Phủ đang khóc mà bà Phủ đang cười. Hà nhìn theo - trong sương loãng, hai bóng đàn bà đứng cạnh nhau, chị em gặp lại sau sáu mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Chị em gặp lại",
+      "text": "Bóng bà Phủ tiến ra, nhìn Hà, giơ tay như muốn chạm vào con mà không với tới - rồi bả lắc đầu, cười, chỉ tay về phía Vinh như dặn dò điều cuối. Vinh không nghe được gì, nhưng anh hiểu: mẹ trao con lại cho mình. Anh cúi đầu về phía bóng mẹ vợ, một cái cúi đầu của con rể với mẹ chồng, giữa đêm rằm giữa bãi mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Nó cúi đầu",
+      "text": "Và oan hồn - con Mượn Giọng mà sáu mươi năm cả vùng khiếp sợ - cúi đầu. Lần đầu tiên nó không đứng thẳng gánh hàng nữa. Vai nó hạ xuống, mái tóc rủ trước mặt, cả cái bóng cao gầy như gập lại vì một thứ nặng hơn lời nguyền: sáu mươi năm, nó chỉ đợi một tiếng xin lỗi mà không ai chịu nói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Nó kể lại đêm ấy",
+      "text": "Nó nói, lần cuối, bằng giọng bà Bảy đi buôn: đêm ấy ta vào xóm không phải chỉ để trú mưa. Ta đến để tìm em gái ta - đứa bị xóm các người bán cho người Tày năm trước. Ta mang tiền đến chuộc em. Các người giết ta lấy tiền, còn em ta - cả đời không ai cho nó biết chị nó đã đến tìm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Bí mật cuối",
+      "text": "Cả xóm nghe câu ấy như sét đánh. Cụ trưởng xóm khóc run: bà Bảy không chỉ là người đi buôn - bả là chị của bà Phủ, mẹ nuôi Hà. Đứa em bị bán năm xưa chính là bà Phủ. Nghĩa là - nghĩa là Hà được nhà giữ lửa chọn không phải vì mặt giống oan hồn. Hà là cháu gọi bà Bảy bằng dì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-pray",
+      "caption": "Hà là cháu ruột",
+      "text": "Thì ra mọi sợi dây đều nối nhau: bà Phủ nhận nuôi Hà không phải ngẫu nhiên - Hà là con của người thân dòng máu bà Bảy, được đưa về xóm để bả nuôi thay chị. Mặt Hà giống dì ruột là lẽ đương nhiên. Và người giữ chỗ trả lời thay suốt ba mươi năm, hóa ra là cháu ruột trả lời cho chính dì mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "face-to-face",
+      "caption": "Dì cháu nhận nhau",
+      "text": "Hà nghe đến đó thì bật khóc - nước mắt tuôn suốt mấy ngày nay đè nén mới trào ra. Cô gọi, lần đầu tiên gọi nó bằng đúng nghĩa: dì Bảy ơi. Oan hồn khựng lại - sáu mươi năm không ai gọi nó bằng tiếng thân như thế. Bàn tay trắng bệch đặt lên đầu Hà, nhẹ như mẹ xoa đầu con nhỏ: ngoan, cháu dì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "face-to-face",
+      "caption": "Quà cuối của dì",
+      "text": "Nó nói với Hà lời cuối: gánh hàng của ta, ta để lại cho cháu - trong thúng vải còn mảnh ngọc ta định tặng em gái ta, giờ truyền cho cháu. Xóm này trả ta về mộ, ta trả xóm này lại tự do. Nhưng nhớ lấy: đừng bao giờ để xóm nào chọn đứa trẻ làm người trả lời thay nữa. Nợ máu phải người lớn tự trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Bà Bảy về mộ",
+      "text": "Cả đoàn hạ khảm xương xuống huyệt đã đào sẵn, lấp đất, dựng tấm bia đá mà cụ trưởng xóm đã khắc sẵn từ chiều: mộ bà Bảy đi buôn - người chị đi tìm em. Khi nén hương cuối cắm xuống mộ, bóng nó lần cuối đứng trước mồ mình, gánh hàng trên vai - rồi từ từ tan ra, hòa vào màn sương đang rạng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Giọng bố Vinh",
+      "text": "Trong đám bóng tan dần, Vinh nghe một giọng cuối - giọng bố anh, nhưng không còn điệu dụ dỗ nữa: Vinh, bố đi đây con, bố được đi rồi. Mười hai năm bị nó mượn giọng trên đèo này, giờ anh nghe giọng bố thật lần cuối - bình thản, nhẹ nhõm. Anh không trả lời, chỉ đứng cúi đầu. Không phải vì sợ nữa - mà vì nghẹn không nói nên lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Đường về",
+      "text": "Đoàn người quay về xóm lúc trời sáng hẳn, vẫn buộc dây nhưng không còn ai nín thở nữa. Người ta đi về trong tiếng chim hót và nắng sớm xuyên sương - con đường đêm qua rùng rợn giờ chỉ là đường đất quen thuộc. Có người bắt đầu khóc, có người bắt đầu cười, có bà cụ lầm rầm niệm Phật cả đoạn đường về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Gánh hàng cuối",
+      "text": "Trước khi tan hẳn, bóng bà Bảy quay lại lần cuối, nhìn cái gánh hàng trên vai mình - hai thúng vải mốc meo đeo suốt sáu mươi năm. Nó nhẹ nhàng hạ gánh xuống đất trước mộ, như người đi buôn cuối đường được đặt gánh xuống nghỉ. Rồi nó bước vào sương, lần đầu tiên trên đời - đi mà không còn phải gánh gì nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Sương nhận xác",
+      "text": "Người ta đứng nhìn theo đến tận khi bóng cuối cùng tan. Sương trên đèo không còn đặc quánh mùi ẩm ướt nữa - nó loãng dần thành sương sớm bình thường, trong và nhẹ. Con đèo Ma Già, lần đầu tiên sau sáu mươi năm, chỉ là một con đèo có sương. Người ta nghe thấy cả tiếng chim sớm đầu tiên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Bóng người tan hết",
+      "text": "Theo sau nó, hàng chục bóng người chân trần vây quanh bãi mộ cũng lần lượt tan - ông thôn trưởng, ông Cậu, bà Tám, và bao nhiêu người xóm đã mất. Đứa bé gái chỉ tay lên trời: mẹ ơi, các ông các bà đi lên kìa, bà Tám đi cuối cùng, bà Tám quay lại vẫy cháu này. Rồi sương dẹp hẳn, trời rạng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-release",
+      "caption": "Gà gáy ba",
+      "text": "Tiếng gà gáy thứ ba vừa vang lên thì mặt trời nhô qua đỉnh đèo - đúng bên rìa. Cả đoàn người ngồi bệt xuống ven đường, ai cũng như vừa thoát chết. Cụ trưởng xóm nhìn qua đèo nơi sương tan, thở dài một hơi sáu mươi năm: xong rồi. Nợ trả xong rồi. Xóm Bản Lừ từ nay hết phải canh đêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-peace",
+      "caption": "Mẹ về quan tài",
+      "text": "Về đến xóm lúc nắng lên, người ta sững lại ở cửa nhà mẹ Hà: cánh cửa khép kín, trong nhà thanh tịnh sạch sẽ - và trong quan tài, xác bà Phủ nằm lại ngay ngắn, khăn mỏ quạ phủ đúng nguyên tắc, gương mặt không còn nụ cười lạ nữa mà bình an như người ngủ. Có ai đó đã mang bà về, còn thắp sẵn nén hương mới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-peace",
+      "caption": "Mảnh ngọc",
+      "text": "Trên bàn thờ mẹ Hà, người ta tìm thấy một mảnh ngọc xanh cũ buộc chỉ đỏ - món quà bà Bảy định tặng em gái sáu mươi năm trước, nay được truyền đúng người. Hà cầm mảnh ngọc trong tay, quỳ trước quan tài mẹ, lần đầu tiên khóc được trọn vẹn - không còn phải nín, không còn sợ tiếng nấc thành lời trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Tang lễ đúng nghĩa",
+      "text": "Bà Phủ được chôn đúng nghĩa ngay hôm sau - cả xóm ra đưa, không ai vắt khăn tang vội nữa. Và lần đầu tiên sau sáu mươi năm, đêm tan tang xóm Bản Lừ cứ để đèn sáng suốt, cửa để ngỏ, người ta ngồi uống nước nói chuyện đến khuya mà không ai phải căn tai nghe tiếng gọi ngoài sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Miếu mở lại",
+      "text": "Căn miếu đầu xóm được mở cửa trở lại sau sáu mươi năm - người ta lau dọn, thờ tấm bia gỗ thầy Tào khắc ngày xưa, và thêm một bài vị nhỏ: thần giữ đèo Bảy. Từ nay xóm thờ bả như thờ thành hoàng - không phải vì sợ, mà vì mang ơn. Người qua đèo ghé lại thắp nén hương, kể chuyện cô Bảy vẫy báo đường."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Bài học của thầy",
+      "text": "Người ta còn tìm thấy trong miếu dòng cuối thư thầy Tào mà hôm trước chưa đọc kỹ: lời nguyền mạnh nhất không phải của quỷ - là của người sống chọn im lặng trước tội. Xóm nào dám nói ra tội mình, xóm đó không cần hộp giữ chỗ nào cả. Cụ trưởng xóm cho khắc câu ấy lên cột miếu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Luật xóm đổi",
+      "text": "Luật của xóm cũng đổi. Cụ trưởng xóm cho khắc lên cột đình câu mới, thay cho câu cũ người trong trả lời người ngoài vào được: đêm khuya ai gọi cứ trả lời - nhưng nhớ hỏi lại cho rõ, vì trả lời người thì nhân nghĩa, trả lời bóng thì rước nợ. Xóm này từ nay sống bằng hỏi - đáp, không bằng sợ - trốn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Đưa bà Tám về đồi",
+      "text": "Cùng đợt tang ấy, xóm còn làm lễ cho bà Tám - không có xác, chỉ có đôi dép vải và cái hộp ngũ thạch đã thành tro. Người ta xây cho bà một nấm mồ gió trên đồi, cạnh nấm mồ ông Cậu, để hai ông bà lại ở cạnh nhau. Đứa cháu gái thắp hương cho bà, nói bà Tám bây giờ đã được đi cùng ông rồi, không phải canh đêm nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Đốt hộp",
+      "text": "Rồi cả xóm đem hết các cái hộp ngũ thạch còn lại ra giữa sân, đốt. Chín cái hộp đen cháy rừng rực trong đêm - lọn tóc, miếng gỗ khắc tên, chỉ đỏ, tất cả thành tro. Người ta đứng quanh đống lửa im lặng, ai cũng hiểu mình đang đốt cả một thời sáu mươi năm sống bằng cách đẩy người khác ra đỡ thay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-morning",
+      "caption": "Xóm sống lại",
+      "text": "Mấy tháng sau, xóm Bản Lừ thay đổi hẳn. Người xuống núi kể lại: xóm cuối đèo giờ đèn đuốc sáng, đứa bé gái chạy giàn giụa khắp bờ ruộng, mấy gia đình trẻ còn lên xin đất làm nhà. Tiếng gọi nửa đêm không còn ai nghe nữa. Chỉ còn tiếng chó sủa, tiếng trẻ con gọi nhau đùa - tiếng gọi của người sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-morning",
+      "caption": "Vinh và Hà",
+      "text": "Vinh và Hà không về thành phố nữa. Họ ở lại căn nhà cũ của mẹ, sửa lại làm nhà trọ cho giáo viên vùng cao lên dạy. Hà đeo mảnh ngọc không rời. Người ta hỏi vì sao ở lại cái xóm ám ảnh thế - Hà chỉ cười: nhà giữ lửa giờ phải có người giữ lửa, nhưng là giữ lửa bếp, không phải giữ cái hộp nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pass-guardian",
+      "caption": "Bà Bảy giữ đèo",
+      "text": "Còn một chuyện nữa người ta kể: từ đêm rằm ấy, những người đi đèo khuya hay gặp một người đàn bà gánh hàng đứng ven đường, không gọi mà chỉ vẫy - vẫy báo trước khúc cua có đá lở, báo trước chỗ đường trơn, báo trước cơn mưa lũ. Ai nghe lời vẫy ấy thì qua đèo bình an. Người ta gọi bả là cô Bảy giữ đèo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pass-guardian",
+      "caption": "Từ oan hồn thành thần",
+      "text": "Oan hồn được trả nợ, được an táng, được xin lỗi - không còn đòi người nữa mà hóa thần giữ đèo. Người ta nói đúng quy luật trời đất: oan hồn có nợ được trả thành thiện thần, oan hồn bị chôn tội thành ác quỷ. Con Mượn Giọng chết đi đêm rằm ấy, và cô Bảy giữ đèo ra đời - vẫn gánh hàng, vẫn đứng trong sương, chỉ khác giờ bả đi cứu người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-family",
+      "caption": "Nhưng còn một điều",
+      "text": "Nhưng câu chuyện chưa hết đâu - truyện ma làng quê Việt Nam chưa bao giờ hết hẳn. Năm sau, một gia đình trẻ từ thị xã lên thuê lại căn nhà sàn cuối xóm, không biết gì chuyện cũ. Đêm đầu tiên của họ, sương lại đổ qua đèo, và đúng nửa đêm - có tiếng gõ cửa, ba nhịp chậm rãi, lịch sự đến tàn nhẫn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-family",
+      "caption": "Tiếng gõ mới",
+      "text": "Trong nhà ấy, người mẹ trẻ tỉnh giấc, nghe tiếng gọi ngoài cửa - tiếng mẹ chồng bà ở dưới xuôi, người vẫn còn sống khỏe mạnh: con ơi mở cửa cho mẹ, mẹ lên thăm bất ngờ. Người mẹ đứng dậy đi về phía cửa. Và ngay khi tay bà chạm chốt cửa - đứa con gái nhỏ của bà trong buồng bỗng gọi vọng ra: mẹ ơi đừng trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-family",
+      "caption": "Kể cho con cháu",
+      "text": "Câu chuyện xóm Cuối Đèo từ đó được kể lại - người lớn kể cho con cháu, con cháu kể cho bạn bè, khách qua đèo nghe lại mang đi kể khắp vùng. Kể để nhớ một điều duy nhất: ban đêm nghe tiếng quen gọi ngoài cửa, đừng vội trả lời - hãy nhìn kỹ xem cái bóng ngoài ấy có đổ bóng không, chân nó có chạm đất không."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-family",
+      "caption": "Dấu hiệu nhận biết",
+      "text": "Người xưa dạy ba dấu hiệu nhận biết: tiếng gọi của nó bao giờ cũng vọng như qua lớp nước, không trong được như tiếng người; nó chỉ gọi tên chứ không bao giờ tự vào chuyện trước; và khi mình hỏi lại một câu chỉ người thật mới biết - nó sẽ lặp lại y nguyên câu cũ, vì nó chỉ mượn giọng chứ không mượn được trí nhớ hai bên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hết 5 tập",
+      "text": "Đứa bé đã nghe chuyện từ đứa cháu bà Tám - hai đứa trẻ cùng lớp trong trường làng. Lời dặn của xóm Bản Lừ vẫn còn đó, truyền từ miệng đứa trẻ này sang đứa trẻ khác, như ngọn lửa nhà giữ lửa không bao giờ tắt: đêm khuya ai gọi cũng đừng vội trả lời - vì trên đời này, không phải tiếng gọi nào quen thuộc cũng là người thân của mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-family",
+      "caption": "Đứa bé cứu mẹ",
+      "text": "Đứa bé gái nhỏ gọi vọng ra từ buồng - tiếng gọi ấy cứu cả nhà. Người mẹ trẻ khựng lại, tay rời chốt cửa, nhớ lại câu chuyện đứa con kể từ trường làng mà bà từng cười là chuyện cổ tích. Bà lùi lại khỏi cửa, ôm con vào lòng, ngồi câm đến sáng - còn ngoài cửa, tiếng gọi ấy gọi thêm một lúc rồi lẳng đi trong sương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-family",
+      "caption": "Nó vẫn còn ngoài kia",
+      "text": "Vì đâu đó trên những con đèo khác, trong những xóm khác còn chôn những xác không mộ, những nợ chưa trả - những con Mượn Giọng khác vẫn đi trong đêm, gọi bằng giọng người thân. Xóm Bản Lừ trả xong nợ rồi, nhưng cái luật ấy vẫn phải truyền đi, vì chỉ cần một đêm sương và một tiếng trả lời lỡ miệng, câu chuyện lại bắt đầu."
+    }
+  ],
+  "thumbTitle": "NGƯỜI TRẢ LỜI CUỐI CÙNG",
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma có thật",
+    "truyện ma làng quê",
+    "ma kinh dị",
+    "nghe truyện ma",
+    "truyện audio",
+    "bà tư kể chuyện",
+    "đừng trả lời",
+    "horror story việt nam"
+  ],
+  "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "queuePriority": 1
+}

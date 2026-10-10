@@ -1,0 +1,333 @@
+{
+  "slug": "dung-tra-loi-tap-02",
+  "locale": "vi",
+  "title": "ĐỪNG TRẢ LỜI | Tập 2: Lời Nguyền 60 Năm - Mỗi Nhà Nợ Nó Một Người | Truyện Ma Dài",
+  "description": "Cụ trưởng xóm kể cho Vinh nghe câu chuyện sáu mươi năm trước - người đàn bà đi buôn chết trên đèo và lời nguyền ám cả xóm Bản Lừ: mỗi nhà nợ nó một người. Để sống, mỗi nhà phải chọn một 'người giữ chỗ'. Và dưới nền nhà mẹ vợ, cái hộp gỗ đang chờ được mở.\n\nTruyện ma dài 5 tập - Đừng Trả Lời, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "scenePrompts": {
+    "hook": "a dark Vietnamese mountain hamlet at night seen through thick fog, a single old wooden house with two faint oil lamp flames, something tall standing at the edge of the mist",
+    "elder-house": "the dim interior of an old Vietnamese stilt house, an elderly village head man by a small fire telling a story, shadows dancing on wooden walls",
+    "old-pass-1965": "a Vietnamese mountain pass in the 1960s at dusk, a lone woman peddler with shoulder baskets walking through drizzle, dark jungle both sides",
+    "village-mob": "a crowd of angry Vietnamese villagers with torches in the dark in the 1960s, faces lit by flame, a frightened woman in the middle",
+    "spirit-fog": "a tall faceless female silhouette in a torn áo dài standing in white fog on a mountain pass at night, long wet black hair",
+    "ancestral-altar": "a dim Vietnamese ancestral altar inside a wooden house at night, black-and-white portrait of a middle-aged woman, incense smoke, oil lamp flame",
+    "hidden-box": "hands lifting a floor plank inside a dark wooden house, a small black wooden box bound in red string hidden in the soil beneath",
+    "door-night": "the inside of a dark wooden house door at night, moonlight through the cracks, a wooden latch, fog seeping under the door",
+    "graveyard-mist": "an overgrown hillside graveyard at dusk, tilted grave mounds in fog, crows, an old banyan tree"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Chuyện 60 năm trước",
+      "text": "Cụ trưởng xóm đến nhà mẹ Hà lúc trời vừa xế chiều. Cụ không thắp hương, không nói lời chia buồn. Cụ ngồi xuống bên bếp lửa, châm điếu thuốc lào, hút một hơi thật dài, rồi nói: chuyện này cụ giấu với người ngoài suốt sáu mươi năm. Hôm nay cụ phải kể, vì cái nợ của xóm này sắp đòi đến nhà các cháu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Người đàn bà đi buôn",
+      "text": "Năm ấy, cụ mới hai mươi tuổi. Xóm Bản Lừ còn đông đúc, con đèo Ma Già là đường buôn duy nhất xuống huyện. Có người đàn bà gánh hàng qua đèo - họ gọi bả là bà Bảy hàng vải, tuần nào cũng qua xóm, hay ngủ nhờ đêm tối ở nhà này nhà kia. Người tốt bụng, cho trẻ con xóm kẹo đường phèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-pass-1965",
+      "caption": "Gánh hàng cuối",
+      "text": "Chuyến cuối cùng của bà Bảy là đêm mưa tháng bảy. Bả gánh hai thúng vải qua đèo, bên trong giấu kỹ bao tiền cả đời đi buôn. Bả vào xóm trú mưa, ở nhà ông thôn trưởng. Và sáng hôm sau, người ta không thấy bả đâu nữa - chỉ thấy chiếc gánh đỗ dở giữa ngõ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-mob",
+      "caption": "Đêm định mệnh",
+      "text": "Cụ nói đến đây thì im, tay cầm điếu thuốc run nhẹ. Lâu lắm cụ mới nói tiếp: không phải ma quỷ giết bà Bảy đâu cháu. Là người xóm này. Mấy nhà đầu xóm thấy tiền nhiều quá, sinh lòng tham. Họ giết bả ngay trong nhà ông thôn trưởng, chia tiền, rồi mang xác lên đồi sau chôn vội không mồ không mả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-mob",
+      "caption": "Cả xóm đồng lòng",
+      "text": "Điều đáng sợ không phải vụ giết người - là cả xóm biết hết. Không ai mách ai. Tiền chia đều khắp bốn mươi mấy nhà, mỗi nhà một phần, ai cũng cầm tiền nhuốm máu, ai cũng thề câm miệng. Cái xóm Bản Lừ sống trên một cái xác không mộ suốt sáu mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Đêm mất trăng",
+      "text": "Bảy ngày sau, đêm trăng mất, sương đổ xuống đèo đặc quánh. Cái thứ đầu tiên người ta nghe là tiếng gõ cửa nhà ông thôn trưởng - ba nhịp, lịch sự. Ngoài cửa, giọng bà Bảy hàng vải gọi nhỏ: mở cửa cho em, em về lấy tiền. Ông thôn trưởng quên hết lời dặn thầy, hấp tấp trả lời: về nhà mà lấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Người đầu tiên",
+      "text": "Sáng hôm sau, ông thôn trưởng biến mất. Chỉ còn mỗi cánh cửa mở toang và một vệt bùn đen kéo từ thềm nhà ra tận ngoài đèo. Người ta tìm cả tuần, chỉ thấy đôi dép của ông đặt ngay ngắn ở chỗ xác bà Bảy bị chôn - đất trên mộ đã tự động bới ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-mob",
+      "caption": "Cái giá của lòng tham",
+      "text": "Cụ nói mỗi nhà được chia một khoản - nghe thì ít, nhưng hồi đó đủ mua một con trâu. Ai cũng mừng tiền, không ai hỏi tiền đó lấy từ xác người nào. Chỉ có mấy bà già ngầm khóc, nhưng cũng câm. Xóm Bản Lừ từ đêm ấy không còn là một xóm nữa - nó thành một ổ đồng phạm cùng giấu một cái xác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-mob",
+      "caption": "Mộ không tên",
+      "text": "Xác bà Bảy được mang lên đồi sau xóm, đào một cái hố nông ven bờ vực, vùi vội giữa đêm mưa. Không bia mộ, không nén hương, không một chữ khắc. Người ta còn trồng lên mồ một cây thông non cho giống đất hoang - trồng cây lên nấm mồ chưa lạnh, cụ nói, tội ấy nặng gấp mười."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Nó mượn giọng",
+      "text": "Từ đêm ấy, nó bắt đầu đi từng nhà. Và đây là điều kinh khủng nhất: nó không còn giọng bà Bảy nữa. Nó có thêm giọng ông thôn trưởng. Đêm sau, nó đứng trước cửa nhà khác, gọi bằng đúng giọng ông ấy, khẩn khoản: các anh ơi mở cửa, tôi tìm được bà Bảy rồi. Nhà ấy trả lời - và mất một người nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Quy luật của nó",
+      "text": "Người ta mất mãi mới hiểu ra quy luật. Nó không phá cửa, không phá nhà. Nó chỉ gọi. Nó mượn giọng người chết, giọng người thân, giọng của chính những kẻ nó đã lấy. Ai trả lời - một tiếng cũng tính - là tự mình mở cho nó một cánh cửa vào lấy hồn. Ba tiếng trả lời, nó lấy trọn cả người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Thầy Tào",
+      "text": "Cả xóm chạy tội đến thầy Tào trên rừng. Thầy nghe xong, thở dài bảo: oan hồn này tham lắm, mà oan cũng sâu lắm. Trừ được, nhưng trừ xong cái nợ vẫn còn đó - xóm này giết người, nợ máu phải trả. Thầy chỉ cho một cách: không trừ nó, mà giữ nó. Ký giao ước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Giao ước",
+      "text": "Giao ước thế này: nó đòi mỗi nhà một người, thì mỗi nhà chọn sẵn một người gọi là người giữ chỗ - lấy một lọn tóc của người đó để vào hộp ngũ thạch, ghi tên, chôn dưới nền nhà. Khi nó đến gọi, cái hồn trong hộp sẽ trả lời thay cả nhà. Nhà nào có hộp, nhà đó được tha. Người giữ chỗ - sống để dành cho nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Trừ không được",
+      "text": "Có nhà không chịu nổi, mời ngầm một thầy pháp ngoài tỉnh lên trừ nó. Thầy lập đàn giữa xóm, đọc chú suốt đêm. Nửa đêm, nó đứng ngoài sương gọi tên thầy bằng giọng mẹ thầy đã mất ba chục năm - thầy quên cả bùa chú, thốt lên một tiếng mẹ ơi. Sáng hôm sau người ta chỉ thấy cái đàn trống không, chuông gió còn đong đưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Không ai trừ được nó",
+      "text": "Từ đó không thầy nào dám nhận. Thầy Tào trên rừng nói thẳng: nó là oan hồn có oan thật, nợ máu thật - cách nào trừ cũng chỉ là xoay vòng. Giết người đoạt của còn chôn xác không mồ, thì vong nó đòi đến khi nào xong nợ mới thôi. Muốn sống thì phải trả - trả bằng giao ước, không thì trả bằng mạng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Người giữ chỗ",
+      "text": "Người giữ chỗ không được biết mình giữ chỗ - biết rồi là hỏng giao ước. Họ sống đời bình thường, chỉ có một điều: không được rời xóm quá chín ngày, và khi nhà cần, họ phải trả lời nó thay cả nhà. Đổi lại, cả nhà được sống. Đó là lý do xóm này chỉ còn chín nhà - nhà nào mất hộp, nhà đó trả nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Nhà mẹ Hà",
+      "text": "Vinh hỏi thế nhà mẹ Hà thì sao. Cụ trưởng xóm nhìn anh rất lâu: nhà bà Phủ là nhà giữ lửa - nhà đứng đầu giao ước, giữ cái hộp đầu tiên và quyền quyết người giữ chỗ cho cả xóm. Bà Phủ chết, cái lửa tắt. Giao ước sáu mươi năm bắt đầu đứt từng mắt. Đêm qua nó đến nhà cháu trước - là vì thế."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Hà không được biết",
+      "text": "Rồi cụ hạ giọng, nhìn ra hướng Hà đang lo cơm chay ngoài bếp: và cháu phải thề không cho con Hà nghe câu này. Hồi xưa, nhà giữ lửa không có con. Bà Phủ không thể sinh. Năm đó xóm cần một đứa trẻ làm người giữ chỗ mới - và bả đi nhận một đứa bé gái về nuôi. Đứa bé ấy chính là con Hà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ancestral-altar",
+      "caption": "Đứa bé được chọn",
+      "text": "Vinh đứng chết trân. Cụ nói tiếp: con Hà sinh ra không phải để lớn lên lấy chồng. Nó được chọn từ lúc còn đỏ hỏn, được đặt tên, được lấy tóc ghi vào hộp ngũ thạch dưới nền nhà này. Cả đời bà Phủ tự trả lời nó thay con, giấu con suốt ba mươi năm. Giờ bả chết - nó đến đòi đúng người giữ chỗ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Vì sao phải tóc",
+      "text": "Vinh hỏi vì sao lại là lọn tóc. Cụ đáp: hồn người bám ở tóc và móng, thầy Tào dạy thế. Một lọn tóc của người giữ chỗ nằm trong hộp, cộng với ngũ thạch và tên tuổi giờ sinh - thành một cái hồn giả. Nó gọi ngoài cửa, hồn giả trong hộp rung lên trả lời đúng một tiếng mỗi đêm, nó tưởng đã lấy được người rồi bỏ đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Mỗi đêm một tiếng",
+      "text": "Nhưng cái hồn giả ấy cạn dần. Mỗi tiếng trả lời nó hao đi một chút, như nén hương cháy dần. Đó là lý do vì sao lọn tóc phải được bồi đắp - người giữ chỗ sống bên ngoài, hồn giả mỏng bên trong, hai cái đỡ nhau. Người giữ chỗ mà chết, hoặc biết mình giữ chỗ - hồn giả vỡ, hộp chỉ còn lọn tóc khô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Mở hộp",
+      "text": "Vinh bảo cụ chỉ chỗ chôn. Cụ dẫn anh ra góc buồng, chỉ một viên gạch nền sát chân giường mẹ Hà - viên gạch lỏng hơn những viên khác. Anh moi lên, đào xuống gang tay thì chạm gỗ. Một cái hộp đen nhỏ bằng bàn tay, quấn chỉ đỏ đã loang màu, nặng trĩu lạnh buốt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Bên trong hộp",
+      "text": "Bên trong là một lọn tóc đen quấn quanh miếng gỗ nhỏ khắc chữ. Vinh lật miếng gỗ ra đọc - và thế giới như ngừng quay: trên đó khắc đúng hai chữ HÀ, kèm giờ ngày tháng năm sinh của vợ anh, từng số một rõ ràng. Cái hộp này chôn từ ba mươi năm trước - trước cả ngày anh gặp Hà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Lọn tóc thứ hai",
+      "text": "Đáng sợ hơn, dưới lọn tóc ấy còn một lọn tóc nữa - bạc trắng, khô rối, gói trong miếng vải nâu. Tóc của bà Phủ. Hai lọn tóc, hai đời người giữ chỗ, nằm chung một hộp. Cụ trưởng xóm lẩm bẩm: nhà giữ lửa từ đời nào luôn có hai người - một đang trả lời, một được nuôi lên để thay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Hà nghe được",
+      "text": "Và ngay lúc ấy, từ phía cửa buồng, một tiếng động nhỏ. Hà đứng đó, tay cầm mâm cơm chay, mặt trắng bệch - cô đã nghe được từ câu nào không biết, nhưng ánh mắt cô nhìn cái hộp trong tay Vinh rồi nhìn mẹ nuôi trong ảnh thờ, tất cả đã rõ. Mâm cơm rơi xuống nền, chén bát vỡ loảng xoảng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Giao ước hỏng",
+      "text": "Cụ trưởng xóm đứng phắt dậy, mặt xám như tro: hỏng rồi. Người giữ chỗ đã biết mình giữ chỗ - giao ước hỏng rồi cháu ơi. Lời cụ chưa dứt thì ngoài sân, con chó duy nhất còn lại của xóm bỗng rú lên thảm thiết một tiếng rồi câm bặt - như bị ai bóp nghẹt cổ giữa ban ngày."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Vì sao cụ biết hết",
+      "text": "Vinh hỏi cụ trưởng xóm sao biết rõ từng chi tiết. Cụ cởi áo ngoài, vén ống tay: trên cánh tay già nua một vết sẹo dài xoắn như sợi chỉ đỏ. Hồi đó cụ là người gánh xác bà Bảy lên đồi. Cụ đá hòn đá nho nhỏ xuống vực theo bà - cụ nói cụ là người duy nhất trong xóm khóc cho bả đêm ấy. Cũng vì thế cụ sống đến giờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-box",
+      "caption": "Nợ cũng có nặng nhẹ",
+      "text": "Cụ nói nó không giết hết xóm đâu - nó chỉ đòi đúng phần nợ mỗi nhà. Nhà nào cầm tiền ít, nợ ít, mất ít giấc ngủ. Nhà nào cầm nhiều, chủ mưu - như nhà ông thôn trưởng - mất trọn người đầu nhà. Còn cụ, cụ chỉ đi gánh xác vì bị sai, cụ trả nợ bằng sáu mươi năm canh giữ cái xóm này."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Hà không khóc",
+      "text": "Hà nghe hết mà không khóc - điều ấy còn đáng sợ hơn khóc. Cô đứng im giữa nhà, nhìn cái hộp, nhìn lọn tóc, nhìn ảnh mẹ nuôi trên bàn thờ, rồi nói một câu lạnh ngắt: thì ra cả đời con chỉ là cái hộp của xóm này. Vinh định nói gì đó thì cô lắc đầu: anh đừng nói. Con biết rồi, con hiểu hết rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Ký ức của Hà",
+      "text": "Rồi Hà ngồi xuống, lần lại từng mảnh ký ức cũ: sao hồi bé mẹ không bao giờ cho con xuống đèo một mình; sao mẹ cứ dặn con đừng bao giờ trả lời ai gọi tên mình ngoài cửa, kể cả mẹ gọi; sao mỗi đêm mẹ ngủ cạnh cửa, lưng quay vào nhà, mặt hướng ra sân - như canh giữ một cái gì mà con không biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house",
+      "caption": "Mẹ trả lời thay",
+      "text": "Giờ thì hiểu rồi. Ba mươi năm, mỗi đêm nó đến gọi tên Hà - và mẹ là người trả lời thay, đêm nào cũng vậy, cho đến đêm mẹ không còn sức trả lời nữa. Cái chết của mẹ không phải ngủ quên - mẹ đã trả lời nó thay con đến hơi cuối cùng. Hà nói mà như nói với chính mình, mắt khô không một giọt lệ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Nó không đợi đêm",
+      "text": "Chiều hôm ấy, chưa đầy bốn giờ, trời còn sáng mà sương đã tuôn qua đèo ào ạt như lũ. Cụ trưởng xóm không dám về nhà, ngồi lại trong nhà mẹ Hà. Ba người ngồi quanh bếp lửa không nói nên lời. Rồi tiếng gõ vang lên - giữa ban ngày - lần đầu tiên trong sáu mươi năm, nó không đợi đêm nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Giọng cụ trưởng xóm",
+      "text": "Ngoài cửa, một giọng cất lên - và cả ba người trong nhà cùng đông cứng: đó là giọng của cụ trưởng xóm. Trong khi cụ đang ngồi sống sờ sờ ngay đây. Giọng ấy gọi, cái ngân quen thuộc của cụ: mở cửa cho tôi, tôi là trưởng xóm đây. Nghĩa là - nó đã đọc được cả người đang sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Nó vào được rồi",
+      "text": "Cụ run đến mức đánh rơi điếu thuốc: nó vào được rồi. Trước giờ nó chỉ mượn giọng người chết - giờ nó mượn được cả giọng người sống, nghĩa là cái hộp không còn rào được nó nữa. Giao ước đứt từ đêm bà Phủ chết, giờ nó đã ngửi thấy người giữ chỗ mới - nó chỉ còn thiếu một tiếng trả lời của con Hà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Trước mắt",
+      "text": "Vinh hé cửa sổ nhìn ra. Trong bức màn sương trắng, một bóng người đứng im giữa sân - cao gầy, mái tóc đen rủ che mặt, gánh hàng vẫn đeo trên vai như sáu mươi năm trước. Nó không gõ nữa. Nó chỉ đứng đó, ngay giữa ban ngày, ngẩng đầu nhìn thẳng vào căn nhà - như đã không cần xin phép nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Hà nhìn thấy",
+      "text": "Chỉ có Hà nhìn được rõ mặt nó. Hà đứng cạnh Vinh, ngơ ngác nhìn ra sương rồi thì thào một câu khiến anh tái mặt: mẹ ơi Vinh, sao bà Bảy ấy nhìn giống con thế. Vì trên thực tế, người giữ chỗ được chọn luôn là đứa trẻ có nét giống oan hồn - để khi trả lời, hai giọng hòa làm một."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Giống oan hồn",
+      "text": "Đó là lý do nhà giữ lửa chọn đúng Hà - một đứa trẻ mồ côi gương mặt giống người đàn bà chết oan. Khi người giữ chỗ trả lời nó, nó nghe như nghe chính mình lúc còn sống, và nó tha cho cả nhà. Ba mươi năm nay, Hà chính là cái bóng sống của bà Bảy mà không hề hay biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-mist",
+      "caption": "Đồi mộ",
+      "text": "Chiều muộn, sương tạnh đôi chút, cụ dẫn Vinh lên đồi sau xóm - nơi chôn cất vội người đàn bà sáu mươi năm trước. Cụ chỉ một đống đá ven bờ vực, cỏ mọc um tùm: xác bả chôn không mồ đây đấy. Muốn xong chuyện, hoặc là người giữ chỗ trả lời thay cả xóm mãi mãi - hoặc là phải trả xương cốt bả về đúng mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-mist",
+      "caption": "Hai con đường",
+      "text": "Cụ nói có hai con đường, và cả hai đều nói thiệt: một, để con Hà trả lời nó - nó lấy được người giữ chỗ, cả xóm được tha thêm một đời nữa, chỉ mất một mình Hà. Hai, moi xương bà Bảy lên, mang về mộ tổ ngoài kia đèo trước gà gáy - oan hồn được an táng, nợ coi như xóa, nhưng đường ấy chưa ai đi mà về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Cả xóm thấy nó",
+      "text": "Điều kinh khủng là không chỉ nhà mẹ Hà thấy bóng đứng giữa sân. Từ nhà bà Tám, nhà cụ trưởng xóm, nhà cậu Mậu - tất cả đều thấy cái bóng cao gầy ấy đứng giữa xóm, nhưng mỗi nhà thấy nó đứng trước cửa nhà mình. Chín căn nhà, chín góc nhìn - nó như đứng ở khắp mọi nơi cùng một lúc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-fog",
+      "caption": "Gánh hàng",
+      "text": "Người lớn tuổi trong xóm nhận ra ngay: bóng người ấy vẫn gánh hai thúng hàng đỗ nặng trên vai, cái dáng đứng hơi nghiêng của người quen gánh đường dài. Bà Bảy hàng vải - sáu mươi năm rồi, vẫn đứng nguyên tư thế gánh hàng, kiên nhẫn như người đi buôn đứng chờ khách."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Đêm thứ ba",
+      "text": "Đêm thứ ba, Vinh quyết không để ai trả lời. Anh trói nhẹ tay vợ vào chân cột, đắp chăn, ngồi canh. Nửa đêm, tiếng gõ vang lên lần nữa - nhưng không ở cửa trước nữa. Nó gõ từ bên trong cánh quan tài mẹ Hà. Cạch. Cạch. Cạch. Từ bên trong ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-mist",
+      "caption": "Nấm mồ trống",
+      "text": "Cụ và Vinh bới đống đá ven bờ vực. Đào xuống hơn một cánh tay, đất mềm nhão như vừa bị đảo - và không có xương. Không một mảnh xương nào hết. Chỉ có chiếc gánh hàng mục nát và hai cái thúng vải thối rữa còn vương sợi tơ. Xác bà Bảy không còn nằm dưới đó nữa - không biết từ khi nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-mist",
+      "caption": "Xác đi đâu",
+      "text": "Cụ trưởng xóm ngồi thụp xuống bên hố đất: đúng rồi, cụ quên mất. Nó không nằm yên một chỗ đâu - mỗi khi nó lấy được người, nó lại mang xác người ấy về nằm thay chỗ mình, rồi mình nó lại đứng lên đi tiếp. Xác ông thôn trưởng từng nằm đây, rồi xác ông Cậu nằm đây - và bây giờ, chắc là xác bà Phủ đang nằm đâu đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Từ trong quan tài",
+      "text": "Vinh từng bước tiến lại quan tài, tay run bấc. Nắp quan hé ra thêm một gang so với sáng. Tiếng gõ vẫn đều đặn, kiên nhẫn, từ trong lòng quan tài vọng ra. Anh hít một hơi, đẩy nắp quan ra hẳn - và đứng sững: bên trong, chỗ mẹ Hà đáng lẽ nằm, chỉ còn mỗi chiếc khăn mỏ quạ đen và một vũng bùn ướt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Mẹ đứng sau",
+      "text": "Và từ sau lưng anh, một giọng thủ thỉ - giọng mẹ Hà, nhưng lần này không qua khe cửa nữa, mà vọng từ chính gian nhà: con trai ơi, tìm mẹ làm gì, mẹ ở trong này từ lâu rồi. Vinh quay phắt lại. Trong góc tối, bên cạnh chỗ Hà đang bị trói ngủ, một bóng trắng đang đứng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập 2 - hết",
+      "text": "Nó đã vào được trong nhà - không cần ai mở cửa, vì cái xác bà Phủ mà cả xóm tin là nằm trong quan tài, hóa ra đã bị nó mang đi từ lâu, và nó mượn hẳn cả hình bóng bả bước qua thềm. Đêm thứ ba ấy, xóm Cuối Đèo chứng kiến đêm dài nhất trong sáu mươi năm - đêm mà cái hộp ngũ thạch cuối cùng cũng vỡ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Trói tay Hà",
+      "text": "Trước khi trói tay vợ, Vinh hỏi Hà có sợ không. Hà lắc đầu, nói rất khẽ: con không sợ nó anh ạ. Con chỉ sợ mình muốn trả lời. Ba mươi năm nghe giọng mẹ gọi mình, giờ nó dùng đúng giọng ấy - thân thể con nó tự muốn đáp lại, con không cầm được. Câu ấy khiến Vinh buộc dây chặt thêm một vòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-night",
+      "caption": "Giọng bà Tám",
+      "text": "Nửa đêm chưa gõ cửa, nó thử mưu khác: từ ngoài sân vọng lên giọng bà Tám hoảng hốt - Vinh ơi Hà ơi mở cửa, nhà bà Tám cháy rồi các cháu. Vinh lao ra cửa sổ: nhà bà Tám vẫn đứng im trong sương, cửa đóng, đèn tắt. Bà già vẫn ngồi thức bên trong, cắn chặt khăn để khỏi thốt ra tiếng."
+    }
+  ],
+  "thumbTitle": "NÓ GỌI BẰNG GIỌNG NGƯỜI SỐNG",
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma có thật",
+    "truyện ma làng quê",
+    "ma kinh dị",
+    "nghe truyện ma",
+    "truyện audio",
+    "bà tư kể chuyện",
+    "đừng trả lời",
+    "horror story việt nam"
+  ],
+  "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "queuePriority": 1
+}

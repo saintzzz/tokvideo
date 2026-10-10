@@ -1,0 +1,321 @@
+{
+  "slug": "dung-tra-loi-tap-03",
+  "locale": "vi",
+  "title": "ĐỪNG TRẢ LỜI | Tập 3: Đêm Trăng Đòi Nợ - Nó Vào Nhà Khoác Xác Mẹ Tôi | Truyện Ma Dài",
+  "description": "Cái xác trong quan tài biến mất, và thứ đứng trong góc tối gian nhà gọi bằng giọng mẹ Hà. Đêm rằm đến, cả xóm Bản Lừ trốn về một nhà - trong khi nó đi gõ từng cửa, gọi tên từng người, bằng đúng giọng người thân vừa khuất của mỗi nhà.\n\nTruyện ma dài 5 tập - Đừng Trả Lời, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "scenePrompts": {
+    "hook": "a dark wooden Vietnamese stilt house interior at night, a pale figure in white standing in the corner shadow beside an open empty coffin, oil lamp flickering",
+    "corpse-figure": "a dead Vietnamese elderly woman in funeral white clothes standing unnaturally still in a dark corner of a wooden house, face hidden by a black scarf",
+    "flee-night": "two people running through thick fog on a mountain hamlet dirt path at night, carrying a small box, houses with shut doors around",
+    "elder-crowd": "a crowded dark Vietnamese stilt house interior at night, nine families huddled together around one fire, frightened faces, children clinging to mothers",
+    "boxes-burning": "small black wooden boxes bound in red string cracking open, grey hairs inside turning to ash, on a house floor at night",
+    "door-siege": "a wooden house door seen from inside at night, fog and a tall silhouette visible through the cracks, barricaded with furniture",
+    "old-woman-sacrifice": "an old Vietnamese woman standing at a half-open door at night, speaking into the fog, her family holding her back",
+    "moon-full": "a huge pale full moon over a fog-covered mountain pass and a tiny hamlet of dark stilt houses, dead silence",
+    "coffin-empty": "an open empty wooden coffin inside a Vietnamese house at night, only a black headscarf and a pool of dark mud inside"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Nó ở trong nhà",
+      "text": "Bóng trắng đứng trong góc tối gian nhà, chỗ bệ thờ bị bóng đèn dầu che khuất. Nó mặc đúng bộ đồ tang của bà Phủ - áo trắng, khăn mỏ quạ đen trùm đầu, che kín mặt. Nhưng Vinh biết chắc một điều: xác mẹ Hà không thể đứng được. Cái đang đứng đó chỉ khoác hình bà - bên trong là thứ khác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "corpse-figure",
+      "caption": "Giọng mẹ trong nhà",
+      "text": "Nó lại cất giọng - êm, hiền, đúng từng điệu bà Phủ hay dỗ con: Hà ơi, lại đây với mẹ. Mẹ lạnh quá con à. Trên sàn nhà, Hà bị trói tay vào cột, giãy giụa kêu lên trong tấm vải nhét miệng. Bóng trắng kia không bước tới - nó chỉ đứng, kiên nhẫn, như biết mình không cần phải đi đâu cả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "corpse-figure",
+      "caption": "Không bước tới",
+      "text": "Vinh nhận ra điều ấy - nó đứng im. Nó đã vào được trong nhà mà vẫn không bước tới, vì luật của nó vẫn thế: nó không lấy, nó chỉ gọi. Trong nhà hay ngoài nhà không quan trọng - quan trọng là tiếng trả lời. Và giờ nó đã ở sát bên Hà, gọi bằng giọng mẹ, từ khoảng cách không tới ba thước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-empty",
+      "caption": "Quan tài trống",
+      "text": "Cụ trưởng xóm lảo đảo đứng dậy, nhìn vào quan tài mở toang: bên trong trống trơn, chỉ còn vũng bùn đen loang trên nệm. Xác bà Phủ - cụ lẩm bẩm - nó lấy xác bả từ lúc nào. Người ta canh quan tài suốt bảy ngày mà. Rồi cụ chợt hiểu: nó không lấy xác. Xác bả tự đứng dậy đi từ đêm bả chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-empty",
+      "caption": "Bà Phủ đi đêm",
+      "text": "Vì sao? Vì bà Phủ là người giữ lửa - là đời người giữ chỗ đang đương nhiệm. Khi người giữ chỗ chết, xác họ không được yên: nó gọi xác đứng dậy đi theo tiếng gọi, về với nó, nằm thay vào chỗ nó nằm. Đó là cái giá của đời người trả lời thay - sống giữ cửa, chết đi theo nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-empty",
+      "caption": "Khăn mỏ quạ thứ ba",
+      "text": "Trên nệm quan tài trống, bên cạnh vũng bùn, còn một chiếc khăn mỏ quạ nữa - chiếc thứ ba. Hà nhặt lên so với chiếc trong ngăn tủ của mình: giống hệt, cùng vải, cùng đường viền tay mẹ khâu. Ba chiếc khăn mỏ quạ - một đội theo xác mẹ, một giấu trong nhà, một nằm lại trong quan tài - như ai cố ý để lại dấu vết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "corpse-figure",
+      "caption": "Nó muốn Hà theo",
+      "text": "Cụ trưởng xóm chợt hiểu: khăn mỏ quạ là vật dẫn - thứ gì của người mất mà nó mang về, là để dẫn đường cho người sống đi theo. Ba chiếc khăn, ba lần nó đánh dấu đường từ nhà ra đèo. Nó không chỉ gọi bằng miệng - nó đang lùa con Hà đi theo vệt mà bà Phủ đã đi đêm chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flee-night",
+      "caption": "Trốn khỏi nhà",
+      "text": "Vinh không đợi nói thêm. Anh cởi trói cho Hà, ôm lấy vợ kéo ra cửa sau, ba người chạy xuyên sương sang nhà cụ trưởng xóm - nhà to nhất xóm, nền đá cao, có sẵn bàn thờ lớn. Phía sau lưng họ, giọng mẹ vẫn vọng theo trong sương, không đuổi, chỉ gọi: con bỏ mẹ đi đâu, con bỏ mẹ đi đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flee-night",
+      "caption": "Gọi theo trong sương",
+      "text": "Chạy qua giữa xóm, họ nghe thấy nó đi. Không phải bước chân - mà tiếng gọi di chuyển. Nó đi dọc con đường đất, qua từng nhà một, và ở mỗi nhà nó dừng lại, đổi giọng: nhà này gọi bằng giọng chồng chết ba năm trước, nhà kia gọi bằng giọng con trai mất đuối, nhà kia nữa gọi bằng giọng bà già mới chôn tháng trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Chín nhà một nhà",
+      "text": "Trong nhà cụ trưởng xóm, cả chín căn nhà của xóm đã tề tựu - gần ba mươi người, già là chín, trẻ con úp mặt vào lòng mẹ. Không ai cần ai báo: nghe tiếng gọi đi ngang cửa nhà mình là biết đêm nay không còn nhà nào an toàn nữa. Người ta ngồi sát nhau quanh bếp lửa, câm như phỗng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Câm như phỗng",
+      "text": "Có một luật ngầm trong đêm này mà không ai nói ra: không ai được khóc, không ai được than, không ai được gọi tên nhau - vì mọi âm thanh đều có thể thành tiếng trả lời. Một bà cụ ôm cháu bịt cả miệng cháu lẫn miệng mình. Cả gian nhà ba mươi người, chỉ nghe tiếng lửa bếp và tiếng gọi ngoài sương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Đứa bé nói mê",
+      "text": "Đứa bé gái duy nhất trong xóm, con cháu gái bà Tám, chợt ngồi dậy trong lòng mẹ - mắt vẫn nhắm nghiền mà miệng nói rõ: bà ơi, cô Bảy hỏi sao xóm mình còn chưa về. Mẹ nó bịt miệng nó lại, run cả tay. Người lớn nhìn nhau: đứa bé đang nói mê - hay nó đang nói qua miệng đứa bé, chính giữa căn nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Bịt miệng đứa trẻ",
+      "text": "Cụ trưởng xóm ra hiệu cho mẹ nó cứ bịt tai đứa bé, đừng để nó nghe - trẻ con hồn còn mỏng, dễ bị nó mượn nhất. Bà Tám ôm cháu vào lòng, vừa vỗ vừa lẩm bẩm hát ru - bài ru mà bà hát cho cả xóm nghe suốt đời, giờ hát để át đi tiếng gọi ngoài kia. Giọng bà run, nhưng không đứt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boxes-burning",
+      "caption": "Hộp bắt đầu vỡ",
+      "text": "Rồi điều kinh khủng xảy ra đầu tiên: trong buồng nhà cụ, người ta nghe tiếng rắc khô như vỡ trứng. Cái hộp ngũ thạch của nhà cậu Mậu - vừa được đem theo - tự nứt ra, lọn tóc bên trong xám đi rồi tan thành tro ngay trước mắt. Hồn giả trong hộp đã trả lời đến tiếng cuối cùng. Nhà cậu Mậu hết chỗ rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boxes-burning",
+      "caption": "Từng hộp một",
+      "text": "Cứ mỗi khắc trôi, thêm một cái hộp nứt. Hộp nhà bác Sáu. Hộp nhà dì Tư. Tiếng rắc rắc vang lên liên tiếp trong căn nhà im ắng như đếm ngược. Người ta nhìn nhau - ai cũng hiểu: sáu mươi năm trả lời thay, những lọn tóc đã cạn. Đêm nay nó gọi mạnh gấp mười, các hồn giả đứt hết cùng lúc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boxes-burning",
+      "caption": "Còn mấy hộp",
+      "text": "Đến nửa đêm, chín cái hộp của xóm chỉ còn ba: hộp nhà bà Tám, hộp nhà cụ trưởng xóm, và cái hộp nhà giữ lửa mà Vinh ôm trong người - cái hộp chứa lọn tóc của Hà. Cụ trưởng xóm nhìn ba cái hộp, nói khàn đi: nó đang phá từ yếu đến mạnh. Cái hộp giữ lửa là cửa cuối cùng - nó để dành ăn sau cùng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Nó đến nhà cụ",
+      "text": "Đúng lúc đó tiếng gọi ngừng lang băng - im đến nỗi ai cũng nghe tim mình. Rồi ba nhịp gõ vang lên ngay trước cửa nhà cụ trưởng xóm. Cả gian nhà nín thở. Bóng nó in qua khe cửa, cao gầy đứng giữa sương. Và nó gọi - bằng giọng vợ cụ trưởng xóm, người chết đã bốn mươi năm: ông ơi, tôi về rồi ông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Gọi cụ trưởng xóm",
+      "text": "Cụ trưởng xóm ngồi im, tay nắm chặt gối, nhưng người ta thấy vai cụ run. Bốn mươi năm cụ không nghe giọng bà. Nó gọi tiếp, khẩn thiết: ông ơi mở cửa, tôi đi đổ nước về muộn, trời mưa rồi ông. Đó là đêm bà cụ mất - bốn mươi năm trước bà ra suối đổ nước rồi không về, người ta chỉ thấy đôi dép."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Cụ cắn tay",
+      "text": "Cụ trưởng xóm nâng tay lên miệng cắn chặt vào mu bàn tay để khỏi thốt ra tiếng. Máu rỉ ra khóe môi cụ, mà cụ không buông. Cả nhà nhìn cụ cắn tay mình mà không ai dám động - vì cụ là người sống sót duy nhất của đêm định mệnh sáu mươi năm trước, và cụ đang đấu lại chính cái đêm ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Gọi mẹ đứa bé",
+      "text": "Đến lượt mẹ đứa bé gái - cô Hai - nó gọi bằng giọng chồng cô, người lính hy sinh trên biên giới: Hai ơi, anh về rồi em, anh nhớ con bé lắm. Cô Hai ôm chặt con, tay bịt tai cả hai mẹ con, môi mấp máy niệm Phật. Đứa cháu nhỏ trong lòng mẹ ngẩng lên, mắt ngơ ngác: mẹ ơi, sao bố gọi mẹ mà bố không gọi con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Lỡ miệng",
+      "text": "Câu hỏi ngây thơ ấy suýt giết cả nhà - vì vài người giật mình thốt lên suỵt, và tiếng suỵt ấy bay ra ngoài khe cửa. Ngoài sương, nó ngừng ngay. Một hồi im căng, rồi giọng bà Bảy cười khẽ: nghe thấy rồi, nhà này còn người tỉnh nhiều quá. Từ đó nó bám riết nhà cụ không rời nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Nó đổi mục tiêu",
+      "text": "Thấy gọi cụ không được, nó đổi. Giọng ngoài cửa biến thành tiếng khóc trẻ con - tiếng của đứa bé gái duy nhất trong xóm, cháu gái bà Tám: cháu lạnh quá, cháu đứng ngoài này lạnh quá, bà ơi mở cửa cho cháu. Trong khi đứa bé thật đang ngủ gục trong lòng mẹ nó, cách bà Tám chưa tới hai thước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Tiếng cháu gọi",
+      "text": "Mẹ đứa bé ôm chặt con, bịt tai nó. Nhưng bà Tám - bà già đã mất chồng, mất cả cái xóm này mới giữ được đứa cháu duy nhất - bà đứng dậy. Người ta kéo bà lại. Bà lắc tay, mắt nhìn ra cửa, nói nhỏ thôi: nó dùng giọng cháu tao. Giọng ấy mà khóc, tai tao nghe không nổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-sacrifice",
+      "caption": "Bà Tám đứng dậy",
+      "text": "Cả nhà giữ bà Tám lại. Bà gạt ra, già mà khỏe lạ: bà lấy cái hộp ngũ thạch của nhà mình đặt vào tay cụ trưởng xóm - hộp của bà vẫn còn nguyên, lọn tóc bạc của bà nằm trong đó. Bà nói: nhà tao chỉ còn tao với con bé. Tao già rồi, tao trả nợ xong, con bé còn được sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-sacrifice",
+      "caption": "Bà Tám mở cửa",
+      "text": "Người ta không kịp giữ. Bà Tám mở khe cửa một gang tay, đứng trong khe sáng mờ, nói ra ngoài sương - một tiếng bình thản, như trả lời người quen: bà đây. Bà đây này. Không gào khóc, không sợ hãi - giọng bà già ấm và đều như vẫn trả lời chồng mỗi chiều về nhà. Xong bà bước ra, khép cửa lại sau lưng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Nó kể tội từng nhà",
+      "text": "Rồi nó thay đổi cách gọi. Nó không gọi tên nữa - nó kể. Đứng ngoài cửa, giọng bà Bảy êm như người kể chuyện, nó nêu từng nhà một: nhà anh Mậu cầm hai đồng bạc, nhà chị Sáu cầm một đồng rưỡi, nhà thôn trưởng cầm bảy đồng và cái gương soi. Nó đọc tên, đọc số tiền, đọc cả từng món đồ mua bằng tiền ấy - trí nhớ sáu mươi năm không sai một xu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Nghe tên mình",
+      "text": "Trong nhà, từng người già cúi đầu khi nó đọc đến tên nhà mình - không ai cãi được, vì nó đọc đúng hết. Có người bắt đầu khóc. Có bà cụ lần tràng hạt. Cái xóm sáu mươi năm giấu tội, giờ bị chính oan hồn đọc biên bản tội lỗi qua khe cửa, từng mục một, rành rẽ như đọc sổ nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-siege",
+      "caption": "Chỉ thiếu một nhà",
+      "text": "Nó đọc hết tám nhà. Đến nhà thứ chín - nhà giữ lửa - nó ngừng lại rất lâu. Rồi giọng bà Bảy đổi sang một điệu khác, lần đầu tiên nghe buồn chứ không giận: nhà bà Phủ không cầm đồng nào. Bả xin tiền không được, bả khóc suốt đêm đó vì không cứu được tôi. Nhà giữ lửa sạch - mà phải trả nặng nhất, vì xóm gán hết nợ lên nhà bả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-sacrifice",
+      "caption": "Một tiếng trả lời",
+      "text": "Trong nhà không ai dám nhìn qua khe. Chỉ nghe ngoài sương, giọng bà Tám nói một câu nữa - câu cuối cùng của bà, nghe rõ mồn một: tao trả nợ cho mày rồi, tha cho con bé. Rồi tiếng gọi tắt ngấm. Tiếng chân - hai hàng dấu chân trần - xa dần về phía đèo. Sương vẫn trắng, nhà vẫn im, và bà Tám không quay lại nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Sương lắng xuống",
+      "text": "Gần sáng, sương lắng bớt, trăng rằm lộ ra trên đỉnh đèo, tròn vành vạnh lạnh ngắt. Người ta mới dám mở cửa nhìn. Trên thềm nhà cụ, chỉ còn đôi dép vải của bà Tám xếp ngay ngắn - cái kiểu xếp dép của người đã quyết định đi trước khi đứng dậy. Trong hộp ngũ thạch của bà, lọn tóc bạc đã tan thành tro."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Nó để lại lời nhắn",
+      "text": "Trước cửa nhà, trên nền đất ướt, ai đó - hay cái gì đó - đã viết bằng ngón tay quệt bùn một hàng chữ nguệch ngoạc: đêm rằm sau, ta đòi đủ. Người ta đọc xong không ai nói gì. Đêm rằm sau - tức là đêm nay tới, vì trăng tối qua đã tròn một nửa. Nó cho cả xóm đúng một ngày."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Họp xóm",
+      "text": "Sáng hôm ấy xóm họp - lần đầu tiên sau sáu mươi năm người ta nói thẳng chuyện bà Bảy ra ngoài ánh sáng. Cụ trưởng xóm đặt hai con đường lên bàn: một, để người giữ chỗ - tức con Hà - trả lời nó đêm nay, đổi cả xóm sống thêm một đời. Hai, tìm xương bà Bảy mang về mộ tổ ngoài đèo trước gà gáy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Ánh mắt cả xóm",
+      "text": "Và rồi điều Vinh sợ nhất xảy ra: cả xóm, từng người một, quay sang nhìn Hà. Không ai nói gì - không ai dám nói - nhưng ánh mắt ấy đã nói hết: một đứa, đổi cả xóm. Bà cụ bưng miệng. Mẹ đứa bé cúi đầu. Chỉ có cụ trưởng xóm đập tay xuống bàn: ai nhìn con bé nữa, tôi đuổi khỏi nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Hà lên tiếng",
+      "text": "Chính Hà lên tiếng - câu đầu tiên của cô suốt từ đêm qua: cháu hỏi cụ một câu thôi. Nếu cháu trả lời nó, thì sau cháu - ai tiếp. Xóm này đã hết trẻ con rồi. Con bé đó mà lớn lên, có bị chọn làm người giữ chỗ tiếp không. Cả nhà im. Cụ trưởng xóm im luôn - vì câu trả lời đúng là có."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-sacrifice",
+      "caption": "Chuyện ông Cậu",
+      "text": "Trước khi ra cửa, bà Tám quay lại nói với cả nhà, giọng bình thản lạ thường: ba năm trước ông Cậu nhà tao chết vì lỡ thở dài - người ta đồn thế. Sai rồi. Ông ấy trả lời rành rẽ: ừ, tao đây. Tao hỏi mãi ông mới chịu nói - ông nghe nó gọi bằng giọng con trai mình, đứa chết đuối năm mười bảy tuổi. Ông nói: tao trả lời con tao, dù là giả, tao cũng cam."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-sacrifice",
+      "caption": "Tại sao bà đi",
+      "text": "Bà nói tiếp: giờ tao hiểu ông rồi. Không phải nó lừa mình - mà là mình thà trả lời một lần còn hơn sống thiếu tiếng gọi đó mãi. Tao già rồi, nghe thiếu tiếng ông ba năm là đủ. Rồi bà nhìn đứa cháu đang ngủ: nhưng con bé còn phải nghe nhiều tiếng gọi lắm, đừng để nó phải trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Cái vòng không đáy",
+      "text": "Hà gật đầu chậm rãi: vậy thì trả lời không giải quyết được gì - chỉ dời cái nợ sang đứa khác. Mẹ cháu trả lời ba mươi năm thay cháu, bà Tám trả lời thay con bé - và kết cục vẫn chỉ là chờ đợt sau. Cháu không trả lời. Cháu đi tìm xương bà Bảy. Vinh đứng lên: tôi đi cùng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-crowd",
+      "caption": "Xương ở đâu",
+      "text": "Vấn đề là xương bà Bảy không còn ở đồi mộ. Cụ trầm ngâm rất lâu rồi chợt đứng dậy: còn một chỗ chưa ai dám đụng - miếu đầu xóm. Ngày xưa thầy Tào niêm miếu lại không phải chỉ để giữ nó ra, mà còn để giữ cái gì ở trong. Mấy đời trưởng xóm truyền miệng nhau: trong miếu có thứ thầy giấu, chỉ mở ra khi giao ước vỡ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Mở miếu",
+      "text": "Chín giờ tối hôm ấy - đêm rằm - cụ trưởng xóm cầm đèn đứng trước miếu, tay run gỡ tấm vải đỏ đã bịt kín sáu mươi năm. Cả xóm đứng phía sau, nén thở. Vải rơi xuống, cửa miếu mở ra một mùi ẩm mốc nguội lạnh - và bên trong, trên bệ thờ không có tượng thần nào cả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Trong miếu",
+      "text": "Trên bệ thờ chỉ có một cái khảm gốm lớn kín nắp, trước đó một tấm bia gỗ nhỏ khắc: bà Bảy đi buôn - người qua đèo, người không mộ. Thầy Tào đã lấy xương bả từ đồi về giấu trong miếu ngay từ đầu - để khi nào xóm dám nhìn nhận tội, thì mới đủ can đảm mở miếu mà trả bả về mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Xóm phải tự trả",
+      "text": "Cụ trưởng xóm khóc lần đầu tiên trước mặt cả xóm: thầy Tào nói đúng - nợ không trừ được, chỉ có người nợ tự trả. Sáu mươi năm xóm này trốn sau mấy cái hộp tóc, đẩy người giữ chỗ ra đỡ - bây giờ hết đường trốn rồi. Đêm nay, chúng ta mang bà Bảy về mộ. Ai sợ thì ở lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flee-night",
+      "caption": "Đêm rằm đi đèo",
+      "text": "Người ta gói cái khảm gốm vào chiếc bao cũ, Vinh đeo trước ngực. Cả đoàn đi - cụ trưởng xóm dẫn đầu dù chân đã run, mấy ông lão theo sau, Hà đi cạnh Vinh. Đường qua đèo bảy cây số, trăng rằm soi trắng xóa mặt đường. Và vừa qua khỏi cổng xóm, tiếng gọi đầu tiên vang lên - từ trong sương phía trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập 3 - hết",
+      "text": "Đêm rằm ấy, cả xóm Bản Lừ lần đầu tiên cùng đi qua con đèo Ma Già sau giờ tối - mang theo thứ mà nó tìm suốt sáu mươi năm. Trước mặt họ là bảy cây số sương, một oan hồn biết hết giọng của từng người trong đoàn, và lời hứa duy nhất giữ họ sống: đi, đừng ngoái lại, và tuyệt đối - đừng trả lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Miếu thầy Tào",
+      "text": "Bên trong miếu còn một thứ nữa: bức thư của thầy Tào để trong hộp thiếc, chữ Nho đã phai mà đọc được. Thư viết: ta trấn oan hồn bằng giao ước vì xóm chưa sẵn lòng trả. Giao ước chỉ là cây nạn đỡ cái nợ - ngày nào nạn gãy, chỉ còn một đường: trả xương về tổ mộ, trả lời xin lỗi tại mồ, không giả không trá."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "moon-full",
+      "caption": "Trả lời xin lỗi",
+      "text": "Cuối thư thầy viết một câu mà cụ đọc to cho cả xóm nghe, giọng run: nó gọi thì đừng trả lời - nhưng đến mồ nó, người nợ phải trả lời bằng tiếng xin lỗi thật. Nó đợi sáu mươi năm không phải đợi người trả lời. Nó đợi một tiếng xin lỗi của xóm Bản Lừ. Cả đoàn nghe xong, lâu không ai động đậy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flee-night",
+      "caption": "Vượt cổng xóm",
+      "text": "Qua cổng xóm, sương đặc đến mức người đi sau không thấy lưng người đi trước. Cụ trưởng xóm buộc một sợi dây thừng dài qua tay mọi người - đi theo dây, tuyệt đối không buông, không tách đoàn. Trẻ con được bịt tai bằng bông gòn. Luật đường đèo chỉ có hai chữ: đi, và câm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flee-night",
+      "caption": "Tiếng gọi đầu tiên",
+      "text": "Tiếng gọi đầu tiên vọng tới khi đoàn chưa đi được một cây - giọng bà Tám, mới mất đêm qua, cất lên từ phía sau đoàn: tụi bây đi đâu để tao lại, đợi tao với. Người ta nín thở bước tiếp. Giọng bà Tám - tức giọng mới nhất nó vừa mượn được - cứ vẩn vơ phía sau, kêu đợi, kêu chờ, khóc lóc van xin."
+    }
+  ],
+  "thumbTitle": "ĐÊM RẰM - NÓ ĐÒI ĐỦ",
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma có thật",
+    "truyện ma làng quê",
+    "ma kinh dị",
+    "nghe truyện ma",
+    "truyện audio",
+    "bà tư kể chuyện",
+    "đừng trả lời",
+    "horror story việt nam"
+  ],
+  "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "queuePriority": 1
+}
