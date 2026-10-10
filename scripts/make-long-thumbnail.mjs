@@ -40,15 +40,17 @@ if (!ffmpeg) {
   process.exit(1);
 }
 
-// The runner's ffmpeg may be a build without libfreetype — probe the
-// filter list once and degrade to a text-free thumbnail instead of
-// dying on "Filter not found" (observed on CI 2026-10-09).
-const hasFilter = (name) =>
-  spawnSync(ffmpeg, ["-hide_banner", "-filters"], { encoding: "utf8" })
-    .stdout?.includes(` ${name} `) ?? false;
+// The runner's ffmpeg is the Remotion-bundled build — compiled with
+// --disable-filters plus a small whitelist (scale, colorspace, loudnorm…)
+// and NO drawtext/drawbox/eq/crop. Probe every filter we want and keep
+// only what exists; a plain scaled frame still beats a failed upload
+// (observed on CI 2026-10-09: "No such filter: 'eq'").
+const filterList = spawnSync(ffmpeg, ["-hide_banner", "-filters"], { encoding: "utf8" }).stdout ?? "";
+const hasFilter = (name) => filterList.includes(` ${name} `);
 const canDrawText = hasFilter("drawtext") && hasFilter("drawbox");
 if (!canDrawText) {
-  console.warn("ffmpeg lacks drawtext/drawbox — emitting plain-frame thumbnail.");}
+  console.warn("ffmpeg lacks drawtext/drawbox — emitting plain-frame thumbnail.");
+}
 
 // hook still -> rendered frame -> fail
 const hookRel = episode.sceneImages?.hook;
@@ -70,12 +72,18 @@ const series = episode.title.split("|")[0]?.trim() ?? "";
 
 let font = null;
 let tmp = null;
-const filters = [
-  "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720",
+const filters = [];
+// scale is always present in the bundled build; crop/eq are not.
+filters.push(
+  hasFilter("crop")
+    ? "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720"
+    : "scale=1280:720:force_original_aspect_ratio=increase",
+);
+if (hasFilter("eq")) {
   // horror stills are intentionally very dark — lift them a touch so
   // the scene reads at thumbnail size
-  "eq=brightness=0.05:contrast=1.05:saturation=1.1",
-];
+  filters.push("eq=brightness=0.05:contrast=1.05:saturation=1.1");
+}
 
 if (canDrawText) {
   // drawtext wants a font file; probe the usual locations (Ubuntu runners
