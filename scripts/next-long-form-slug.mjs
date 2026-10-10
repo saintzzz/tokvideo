@@ -19,6 +19,7 @@ const ledger = existsSync(ledgerPath)
   : {};
 
 const files = (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort();
+const candidates = [];
 for (const f of files) {
   const slug = f.replace(/\.json$/, "");
   if (ledger[slug]?.videoId) continue;
@@ -27,7 +28,10 @@ for (const f of files) {
   // Same isStory rule as upload-youtube-long.mjs.
   const episode = JSON.parse(await readFile(path.join(longFormDir, f), "utf8"));
   if (!episode.beats?.every((b) => b.speaker === "narrator")) continue;
-  console.log(slug);
-  process.exit(0);
+  candidates.push({ slug, priority: episode.queuePriority ?? 99 });
 }
+// queuePriority (lower first) overrides filename order — the Giếng Củ
+// arc carries priority 1 so it finishes before the xianxia pilots.
+candidates.sort((a, b) => a.priority - b.priority || a.slug.localeCompare(b.slug));
+if (candidates.length) console.log(candidates[0].slug);
 // Queue drained — empty stdout, callers should no-op.
