@@ -59,6 +59,15 @@ on:
     # publish cron and landing on the exact same minute made a stale-
     # checkout push race more likely.
     - cron: "40 0 * * *"
+    # Long-form story publishing, 4x/day (owner directive 2026-10-09:
+    # "video dài 3-4 video/ngày"). Each tick runs the full pipeline for
+    # the next unpublished episode in src/suckhoe/long-form/ — voiceover,
+    # render, thumbnail, upload, ledger commit — picking the slug via
+    # scripts/next-long-form-slug.mjs and no-opping when the queue is
+    # drained. Hours spread to stay clear of both Shorts crons and each
+    # other: 4h, 10h, 16h, 22h Vietnam (21, 3, 9, 15 UTC). :30 offsets
+    # avoid exact-minute collisions with the other crons' checkouts.
+    - cron: "30 21,3,9,15 * * *"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -975,5 +984,83 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published-long.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ github.event.inputs.long_form_slug }} [skip ci]"
+          git pull --rebase --autostash
+          git push
+
+  # Scheduled long-form publisher (owner directive 2026-10-09: 3-4
+  # long videos/day). Runs the same pipeline as the suckhoe-long
+  # dispatch job, but picks the slug itself via
+  # scripts/next-long-form-slug.mjs and exits quietly when every
+  # episode in src/suckhoe/long-form/ already has a ledger videoId.
+  suckhoe-long-next:
+    if: github.event_name == 'schedule' && github.event.schedule == '30 21,3,9,15 * * *'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: suckhoe-long-publish
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pick next unpublished long-form episode
+        id: pick
+        run: |
+          SLUG=$(node scripts/next-long-form-slug.mjs)
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          if [ -z "$SLUG" ]; then echo "No unpublished long-form episode left."; fi
+
+      - name: Generate voiceover for this episode
+        if: steps.pick.outputs.slug != ''
+        run: node scripts/generate-voiceover.mjs suckhoe-long-${{ steps.pick.outputs.slug }}
+
+      - name: Render episode
+        if: steps.pick.outputs.slug != ''
+        run: node scripts/render-suckhoe-long.mjs ${{ steps.pick.outputs.slug }}
+
+      # Thumbnail is nice-to-have — never blocks the upload.
+      - name: Make thumbnail
+        if: steps.pick.outputs.slug != ''
+        continue-on-error: true
+        run: node scripts/make-long-thumbnail.mjs ${{ steps.pick.outputs.slug }}
+
+      - name: Upload video artifact
+        if: always() && steps.pick.outputs.slug != ''
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: suckhoe-long-${{ steps.pick.outputs.slug }}
+          path: out/SucKhoeLong-*.mp4
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Upload to YouTube
+        if: steps.pick.outputs.slug != ''
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
+          # Scheduled runs publish straight to public — private-by-default
+          # only makes sense for manual dispatch reviews.
+          YOUTUBE_LONG_PRIVACY_STATUS: public
+        run: node scripts/upload-youtube-long.mjs ${{ steps.pick.outputs.slug }}
+
+      - name: Commit long-form ledger
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/published-long.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Record long-form upload ${{ steps.pick.outputs.slug }} [skip ci]"
           git pull --rebase --autostash
           git push

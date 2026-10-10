@@ -84,11 +84,11 @@ if (!next) {
   process.exit(0);
 }
 
-// Serialized stories: a series lands ALL its remaining parts in the
-// same tick. Spreading parts across days kills retention — a viewer
-// who finishes part 1 wants part 2 immediately, not tomorrow. Only
-// still-unpublished parts are batched, so a mid-series failure resumes
-// cleanly on the next tick.
+// Serialized stories publish in part order. Owner directive 2026-10-09:
+// Shorts cadence is 1-2 videos/day — a series no longer dumps all its
+// parts in one tick. Cap the batch at 2; remaining parts land on the
+// next tick(s), and a mid-series failure still resumes cleanly.
+const MAX_SHORTS_PER_TICK = 2;
 const nextEpisode = episodes.find((e) => e.slug === next);
 const isUnpublished = (slug) => !published[slug]?.publishedAt && !published[slug]?.videoId;
 const batch = nextEpisode?.seriesTitle
@@ -101,6 +101,7 @@ const batch = nextEpisode?.seriesTitle
       )
       .sort((a, b) => (a.seriesPart ?? 0) - (b.seriesPart ?? 0))
       .map((e) => e.slug)
+      .slice(0, MAX_SHORTS_PER_TICK)
   : [next];
 
 console.log(
