@@ -382,5 +382,15 @@
     "horror story việt nam"
   ],
   "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
-  "queuePriority": 1
+  "queuePriority": 1,
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dung-tra-loi-tap-01/hook.jpg",
+    "pass-road": "images/suckhoe-long/dung-tra-loi-tap-01/pass-road.jpg",
+    "hamlet-dusk": "images/suckhoe-long/dung-tra-loi-tap-01/hamlet-dusk.jpg",
+    "old-house": "images/suckhoe-long/dung-tra-loi-tap-01/old-house.jpg",
+    "village-elder": "images/suckhoe-long/dung-tra-loi-tap-01/village-elder.jpg",
+    "ancestral-altar": "images/suckhoe-long/dung-tra-loi-tap-01/ancestral-altar.jpg",
+    "door-night": "images/suckhoe-long/dung-tra-loi-tap-01/door-night.jpg",
+    "mist-pass": "images/suckhoe-long/dung-tra-loi-tap-01/mist-pass.jpg"
+  }
 }

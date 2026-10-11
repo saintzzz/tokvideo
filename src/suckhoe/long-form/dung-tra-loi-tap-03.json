@@ -317,5 +317,16 @@
     "horror story việt nam"
   ],
   "hashtags": "#truyenma #truyenmadai #nghetruyen #truyenmacothat #kinhdi #audiobook",
-  "queuePriority": 1
+  "queuePriority": 1,
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dung-tra-loi-tap-03/hook.jpg",
+    "corpse-figure": "images/suckhoe-long/dung-tra-loi-tap-03/corpse-figure.jpg",
+    "flee-night": "images/suckhoe-long/dung-tra-loi-tap-03/flee-night.jpg",
+    "elder-crowd": "images/suckhoe-long/dung-tra-loi-tap-03/elder-crowd.jpg",
+    "boxes-burning": "images/suckhoe-long/dung-tra-loi-tap-03/boxes-burning.jpg",
+    "door-siege": "images/suckhoe-long/dung-tra-loi-tap-03/door-siege.jpg",
+    "old-woman-sacrifice": "images/suckhoe-long/dung-tra-loi-tap-03/old-woman-sacrifice.jpg",
+    "moon-full": "images/suckhoe-long/dung-tra-loi-tap-03/moon-full.jpg",
+    "coffin-empty": "images/suckhoe-long/dung-tra-loi-tap-03/coffin-empty.jpg"
+  }
 }
