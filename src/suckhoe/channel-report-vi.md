@@ -1,14 +1,14 @@
-# Channel report — 2026-10-10
+# Channel report — 2026-10-11
 
-Channel: Bà Tư Kể Chuyện
+Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 18
-Total videos: 27
+Total views: 21
+Total videos: 34
 
 ## Last 28 days (channel-wide)
 
-Views: 36
-Watch time (minutes): 23
+Views: 44
+Watch time (minutes): 24
 Subscribers gained: 0
 Subscribers lost: 1
 Net subscriber change: -1
@@ -17,9 +17,16 @@ Net subscriber change: -1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| LỜI NGUYỀN GIẾNG CŨ | Tập 3: Đêm Rằm Đào Giếng - Thứ Kẻ Giết Người Ném Theo | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
+| LỜI NGUYỀN GIẾNG CŨ | Tập 4: Bà Cụ 80 Tuổi Đối Chất Trước Cổng Nhà Ân | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
+| LỜI NGUYỀN GIẾNG CŨ | Tập 5: Hồi Kết - Oan Hồn Được Minh Oan | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
+| LỜI NGUYỀN GIẾNG CŨ | Tập 2: Cái Giếng Thật Dưới Gốc Đa Cổ | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
+| LỜI NGUYỀN GIẾNG CŨ | Tập 1: Đêm Đầu Tiên, 3 Nhịp Gõ Cửa Vang Lên | Truyện Ma Dài | 18 | 1 | 0 | 2026-10-10 |
+| Hai Bà Trưng cuối cùng - sông Hát chảy mãi không cạn - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-10 |
+| Hai Bà Trưng phất cờ - đêm định mệnh vùng Mê Linh - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-10 |
 | Lê Lợi nhặt được lưỡi kiếm lạ trong rừng sâu - Tập 1 #Shorts | 1 | 0 | 0 | 2026-10-08 |
 | Thủy Tinh đánh năm nào cũng thua - tại sao người ta vẫn chịu lũ? - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-08 |
-| Sơn Tinh và Thủy Tinh tranh cưới Mị Nương - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-08 |
+| Sơn Tinh và Thủy Tinh tranh cưới Mị Nương - Tập 1 #Shorts | 3 | 0 | 0 | 2026-10-08 |
 | Ăn khế trả vàng - cây khế cụt đổi đời hai anh em - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-08 |
 | Sọ Dừa đi sứ thấy đảo vàng - về giàu sang phú quý - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-08 |
 | Ăn khế trả vàng - cây khế cụt đổi đời hai anh em - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-08 |
@@ -35,11 +42,4 @@ Net subscriber change: -1
 | Người lính lạc đường ngồi xuống bên ông Hòa rồi bật khóc - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Ông lính già chiều nào cũng ra gốc đa chờ người - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 | Sự thật đằng sau tiếng khóc trong nhà hoang đầu làng - Tập 2 #Shorts | 3 | 0 | 0 | 2026-09-30 |
-| Căn nhà hoang đầu làng và tiếng khóc đêm rằm - Tập 1 #Shorts | 3 | 0 | 0 | 2026-09-30 |
-| Anh nông dân tìm ra cây tre trăm đốt bằng cách không ai ngờ - Tập 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
-| Ông lão hứa thưởng vàng cho ai tìm được cây tre trăm đốt - Tập 1 #Shorts | 1 | 0 | 0 | 2026-09-29 |
-| Chín ngọn đèn hoa đăng và sự thật về khúc sông định mệnh - Tập 2 #Shorts | 0 | 0 | 0 | 2026-09-28 |
-| Đêm khuya, ngọn đèn dầu lơ lửng giữa dòng sông đen - Tập 1 #Shorts | 0 | 0 | 0 | 2026-09-28 |
-| Chén cơm trên bàn thờ khiến ông thầy đồ phải quay mặt xóc nước mắt - Tập 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
-| Mùa đói, cậu bé mười hai tuổi xin được đúng một bát cơm - Tập 1 #Shorts | 0 | 0 | 0 | 2026-09-27 |
 
