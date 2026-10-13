@@ -1,0 +1,300 @@
+{
+  "slug": "hu-ma-ga-tap-01",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HŨ MA GÀ | Tập 1: Di Sản Của Bà - Tiếng Gà Gáy Từ Buồng Kho | Truyện Ma Dài",
+  "description": "Thanh về bản vùng cao lo tang bà nội và nhận lại căn nhà sàn cũ - cùng chiếc hũ sành quấn vải đỏ mà bà dặn tuyệt đối không được đụng vào. Đêm đầu tiên, tiếng gà gáy vang lên từ buồng kho, dù cả nhà đã hết gà từ năm trước.\n\nTruyện ma dài 5 tập về bùa ngải dân gian, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma dân gian",
+    "bùa ngải",
+    "ma gà",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #buangai #maga #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "TIẾNG GÀ GÁY TỪ BUỒNG KHO",
+  "scenePrompts": {
+    "hook": "an ancient blackened clay spirit jar wrapped in faded red cloth and tied with ritual cords, sitting alone on a dirt floor inside a dark Vietnamese stilt house, one candle flame, eerie stillness",
+    "mountain-hamlet": "a misty highland Vietnamese hamlet of Tay stilt houses on a mountainside at dusk, terraced rice fields, fog filling the valley below, smoke from kitchens",
+    "stilt-house": "the dark wooden interior of an old Vietnamese stilt house at night, bamboo walls, torn offerings, one flickering oil lamp casting long shadows",
+    "spirit-jar": "a sealed black clay jar bound with red strings and yellow talisman paper standing in a dark storage room corner, faint smoke, ominous shrine-like atmosphere",
+    "family-altar": "an old Tay minority ancestral altar inside a stilt house at night, incense smoke curling, faded portraits, two oil lamp flames",
+    "forest-path": "a narrow dirt path climbing through ancient forest to a Vietnamese mountain hamlet, morning mist between huge trees, a lone traveler figure",
+    "night-yard": "a stilt house yard at night under cold moonlight, an empty chicken coop, mist crawling along the ground, oppressive silence",
+    "mist-valley": "a deep mountain valley drowned in white fog at night, moonlight, dark silhouettes of stilt houses on the ridge above"
+  },
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hu-ma-ga-tap-01/hook.jpg",
+    "mountain-hamlet": "images/suckhoe-long/hu-ma-ga-tap-01/mountain-hamlet.jpg",
+    "stilt-house": "images/suckhoe-long/hu-ma-ga-tap-01/stilt-house.jpg",
+    "spirit-jar": "images/suckhoe-long/hu-ma-ga-tap-01/spirit-jar.jpg",
+    "family-altar": "images/suckhoe-long/hu-ma-ga-tap-01/family-altar.jpg",
+    "forest-path": "images/suckhoe-long/hu-ma-ga-tap-01/forest-path.jpg",
+    "night-yard": "images/suckhoe-long/hu-ma-ga-tap-01/night-yard.jpg",
+    "mist-valley": "images/suckhoe-long/hu-ma-ga-tap-01/mist-valley.jpg"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tiếng gà giữa đêm",
+      "text": "Mười hai giờ đêm, tiếng gà gáy vang lên từ căn buồng kho dưới gầm nhà sàn. Ba tiếng gáy khô khốc, rời rạc, như nghẹn trong cổ. Thanh nằm trên sập tre, mở mắt nhìn trần nhà đen - cả nhà bà nội đã không còn con gà nào từ cái chết của bà năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Bản Lùng Thành",
+      "text": "Bản Lùng Thành nằm vắt trên triền núi cuối con đường đất hai mươi cây, bản người Tày nhỏ chỉ hơn ba mươi mái nhà sàn. Thanh về đến bản lúc chiều tà, sau cả ngày xe khách và nửa ngày đi bộ - mây phủ đầy thung lũng, mái ngói âm dương lởm chởm nổi lên như những hòn đảo đen giữa biển sương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Về bản lo tang",
+      "text": "Thanh nhận được tin bà nội mất qua một cuộc điện thoại của bác Sẩm, hàng xóm sát nhà: bà mày mất rồi, về lo tang đi con. Tám năm đi học rồi đi làm ở Hà Nội, Thanh chưa một lần về bản - cha anh cũng không về, chỉ lạnh nhạt bảo: việc gì con phải đi, để bác Sẩm lo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Cha không cho về",
+      "text": "Điều kỳ lạ là giọng cha Thanh trên điện thoại lạc hẳn đi khi nghe anh nói sẽ về lo tang bà: con đừng về, nghe cha - việc nhà đấy không phải việc của con. Nói xong ông cúp máy. Thanh gọi lại thì không ai bắt. Lạnh sống lưng, anh vẫn xếp đồ lên xe - bà nội là người đã nuôi anh tới năm bảy tuổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Nhà sàn của bà",
+      "text": "Nhà bà nội là căn nhà sàn gỗ lim ba gian, cột đã đổ màu mực, mái rêu xanh. Bậc thang gỗ lên nhà kêu cót két dưới chân Thanh như cảnh báo người lạ. Trong nhà, tang lễ đã xong phần lớn - quan tài bà đã hạ bệ ngày trước, chỉ còn bát hương mới và mùi trầm nồng chưa tan."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Ban thờ gia tiên",
+      "text": "Ban thờ gia tiên đặt gian giữa nhà - di ảnh ông cố, ông nội, và giờ là bà nội, tấm ảnh đen trắng mới in còn bóng. Thanh thắp ba nén hương, nhìn mặt bà trong khung kính. Bà vẫn thế - mắt nheo, khăn piêu quấn đầu, nét mặt như đang dặn dò điều gì chưa kịp nói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Bác Sẩm đưa khóa",
+      "text": "Bác Sẩm trao cho Thanh chùm chìa khóa gỉ và cái nhìn dài khó đọc. Bác nói giọng nhỏ: nhà của bà mày, giờ là của mày - bà dặn trước khi đi, chỉ đưa chìa cho cháu nội, không ai khác. Rồi bác ngập ngừng mãi mới nói nốt: bà còn dặn một câu - cái hũ trong buồng kho, đừng đụng vào, và đừng để nó đói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Lời dặn của bà",
+      "text": "Thanh cười ngơ ngác hỏi hũ gì, đói là sao. Bác Sẩm không đáp - bác rút về nhà nhanh đến lạ thường, chỉ quay đầu nói với lại: chiều rồi mày dựng lửa cho nóng nhà đi, đêm trên này lạnh lắm. Đừng ra ngoài sân sau khi tối. Rồi bác đi mất, bỏ Thanh đứng giữa sân đầy nghi vấn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Bản né tránh",
+      "text": "Chiều đó đi qua bản, Thanh để ý một điều lạ: người bản nhìn anh lâu hơn bình thường, rồi quay mặt đi chỗ khác. Đàn bà ôm con nép vào hiên, trẻ con đang chơi bị mẹ gọi về khi thấy anh đi ngang. Cả bản như biết điều gì đó về căn nhà anh vừa nhận - và không ai muốn nói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Gian nhà quen thuộc",
+      "text": "Tối đó Thanh dọn dẹp gian nhà. Đồ đạc của bà còn nguyên - khung cửi dệt vải, chậu thuốc sắc, chiếc ghế gỗ bà hay ngồi vá chăn. Mỗi đồ vật đều quen mà lạ, như bà chỉ vừa đi ra ngoài vườn. Anh nấu nồi cơm đạm bạc, ăn một mình bên lò lửa, nghe gió núi thổi qua khe ván."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Cơm một mình",
+      "text": "Ăn cơm một mình bên lò lửa, Thanh chợt nhận ra cái mùi lạ trong nhà - không phải mùi trầm tang lễ, mà một mùi khô khốc, tanh nhè nhẹ, như mùi lông gà pha tro cũ. Mùi ấy thấm vào ván nhà, vào chăn chiếu, vào cả cơm anh đang ăn. Anh tự nhủ là mùi nhà cũ - nhưng đã ở thành phố lâu, anh quên mất nhà quê đáng lẽ phải mùi khói bếp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Buồng kho",
+      "text": "Trước khi đi ngủ, tò mò Thanh mở cái buồng kho dưới gầm nhà - cái buồng bà cấm anh vào suốt thời thơ ấu. Bên trong tối đen, mùi đất ẩm và một mùi lạ thoang thoảng - mùi tanh nhè nhẹ, mùi tro tàn trộn nhang cũ. Ngọn đèn pin lướt qua các chai lọ, rồi dừng lại ở góc xa nhất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Chiếc hũ sành",
+      "text": "Chiếc hũ sành đen bóng to bằng cái chum nhỏ, nắp bịt kín bằng lớp vải đỏ sờn cũ, quấn chặt bằng ba vòng dây chỉ đỏ trộn dây đồng. Trên vải dán hai tờ bùa vàng đã ố xỉn, chữ viết xoắn như giun. Hũ đặt trên một cái bệ đất nện, xung quanh rải tro - và lạ nhất, không một hạt bụi nào trên nắp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Xung quanh hũ",
+      "text": "Xung quanh bệ hũ, Thanh thấy những thứ không thuộc về một cái kho: vài lông gà trống đen tuyền gọn gàng xếp thành vòng, một chiếc bát con đựng tro đầy, và một nắm đất mới - đất sới, ẩm, như ai vừa bới lên hôm qua. Anh đứng nhìn rất lâu, rồi lùi ra khép cửa buồng như khép một cánh cửa mở nhầm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Đêm đầu tiên",
+      "text": "Đêm đầu tiên Thanh không ngủ được. Anh nằm nghe tiếng rừng - tiếng dế, tiếng gió lá chuối sau nhà, tiếng chó bản sủa xa. Đến khoảng nửa đêm, một âm thanh khác lọt vào: tiếng gào khẽ, tiếng cào của móng vuốt trên nền đất - phát ra từ ngay dưới gầm nhà, ngay dưới sàn anh đang nằm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Tiếng cào đất",
+      "text": "Tiếng cào đất chậm và đều, cứ cào rồi nghỉ, cào rồi nghỉ, như một con vật kiên nhẫn đang bới một đường hầm. Thanh nằm im đến tê cả người, tim đập dồn. Anh tự nhủ - chuột thôi, kho thóc mà không có chuột mới lạ. Nhưng tiếng ấy không giống chuột - nó nặng hơn, chắc hơn, và có nhịp điệu của sự chờ đợi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Ba tiếng gáy",
+      "text": "Rồi nó đến - ba tiếng gà gáy, khô khốc và dứt khoát, vang lên từ chính căn buồng kho. Không phải tiếng gà trống oai vệ mỗi sớm - tiếng gáy ấy nghe như bị nghẹt, như ai bóp cổ một con gà giữa chừng cái gáy. Thanh ngồi bật dậy. Cả nhà không nuôi gà - bà nội đã bán hết đàn gà từ năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Sau ba tiếng gáy",
+      "text": "Sau ba tiếng gáy, im lặng tuyệt đối - không cả tiếng cào, không cả tiếng dế ngoài sân. Im đến mức Thanh nghe rõ tim mình đập. Anh nằm xuống lại, mắt mở thao láo đến tận khi trời xám. Không phải sợ ma - anh tự nhủ vậy - chỉ là đêm đầu một mình trong căn nhà lạ quen."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Gầm nhà có người",
+      "text": "Đến khoảng gần sáng, khi buồn ngủ cuối cùng cũng kéo mí mắt xuống, Thanh bừng tỉnh vì một âm thanh nữa - tiếng bước chân. Bước chân trần, nhè nhẹ, lê trên nền đất gầm nhà, đi từ góc buồng kho ra phía chuồng cũ rồi quay lại. Đi qua đi lại, như ai đó đang tuần đêm. Anh nằm đếm nhịp - hai mươi bước, nghỉ, rồi hai mươi bước nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Bóng ngoài sân",
+      "text": "Không chịu được nữa, Thanh mò ra cửa sổ nhìn xuống sân. Bóng đêm dày đặc, chỉ có vành trăng khuyết soi mờ sân đất. Và trong khoảnh khắc trăng thoát khỏi mây, anh thấy - một bóng đen lùi tịt đi vào gầm nhà, dáng như con gà nhưng to bằng con dê. Bóng biến mất nhanh đến mức anh không chắc đã thấy thật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-valley",
+      "caption": "Sương sớm trên bản",
+      "text": "Sương sớm trên bản đẹp đến quên sợ - trắng xóa đầy thung lũng, mái nhà nhấp nhô. Thanh đun nước pha chè, ngồi hiên nhìn xuống. Cảnh tượng yên bình ấy khiến chuyện đêm qua nghe như mơ. Anh định hôm nay đi một vòng thăm bà con, rồi sắp xếp giấy tờ nhà cửa để về Hà Nội."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Gà của bác Sẩm",
+      "text": "Chưa kịp đi thì bác Sẩm gọi với từ bờ rào, mặt trắng bệch: mày ơi sang đây tao bảo. Sang nhà bác, Thanh thấy đàn gà của bác - chín con gà trống mái khỏe mạnh - chết sạch trong chuồng, nằm ngửa, mắt mở trừng. Trên mình không một con gà nào còn lông - lông rụng sạch như bị vặt, vương vãi đầy sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Chết không vết tích",
+      "text": "Đàn gà chết không một vết cắn, không một giọt máu - chỉ có cổ mỗi con vặn hẳn sang một bên, như bị bóp nghẹt lúc đang ngủ. Bác Sẩm ngồi thừ trước chuồng gà, tay run run vo điếu thuốc: tao nghe tiếng gà gáy lạ lúc nửa đêm, tưởng gà nhà ai, ra thì thế này. Bác nhìn Thanh - nhìn bằng con mắt mà anh không hiểu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Bản đã biết",
+      "text": "Tin đàn gà bác Sẩm chết lan khắp bản trước trưa. Đến chiều, Thanh thấy người bản treo lên cổng nhà mình những bó rơm trộn ớt khô - nghi thức xua ma quen thuộc của người Tày. Không ai đến hỏi chuyện anh nữa. Chỉ có đứa cháu của bác Sẩm, thằng bé mười tuổi, dám ghé lại nói khẽ: chú Thanh ơi, mẹ cháu bảo nhà bà cụ có con gà ma."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Hỏi bà con",
+      "text": "Buổi trưa Thanh đi quanh bản hỏi thăm - nhưng câu chuyện của mỗi nhà đều ngắn gọn đến lạ: bà mày mất thương lắm, yên nghỉ rồi, mày ở lại bản ít hôm nhé. Hễ anh lái sang chuyện đàn gà hay buồng kho là người đối diện lại đổi đề tài, hoặc cười trừ bảo chắc là thú rừng. Cả bản như cùng giữ một cánh cửa - và anh đang đứng ngoài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Ông già bên đình",
+      "text": "Chỉ có ông lão ngồi hút thuốc bên gốc đa đầu bản - ông Lường, trên chín mươi, người già nhất bản - trả lời anh một câu trước khi xua đuổi: chuyện nhà mày, hỏi bà mày mà không được thì hỏi hũ. Ông nói xong nhổ nước miếng xuống đất, lẩm bẩm: ba đời rồi, đến đời cháu nội rồi. Thanh hỏi lại, ông lắc đầu không nói thêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Con gà ma",
+      "text": "Thanh hỏi con gà ma là gì. Thằng bé run run kể: mẹ nó bảo bà cụ nhà chú nuôi một con gà không phải gà - nó ở trong cái hũ, đêm đêm nó đi ăn trộm linh gia súc của bản. Mẹ nó bảo trước đây ba năm một lần gà trong bản chết như thế - nhưng dạo này mỗi tháng một lần. Nó nói xong thì chạy mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Nhìn lại di ảnh",
+      "text": "Tối đó Thanh ngồi lâu trước ban thờ, nhìn di ảnh bà nội. Anh nhớ lại những chi tiết thời thơ ấu mà hồi đó không hiểu: bà đêm nào cũng xách một con gà trống xuống buồng kho, bà khóa cửa buồng ngay khi anh chạy theo, và sáng hôm sau con gà không bao giờ quay lại. Bà nói: gà bà bán chợ rồi con ạ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Ký ức tuổi thơ",
+      "text": "Nhớ lại càng nhiều, những mảnh ghép càng rợn. Tháng nào cũng có một đêm bà thức trắng, mặc áo đen, ngồi trầm trồ trước buồng kho. Có lần Thanh thức giấc thấy bà đứng ngoài sân nhìn xuống gầm nhà, khóc không tiếng. Và có lần anh hỏi tại sao nhà mình không nuôi gà - bà ôm anh vào lòng, run: nhà mình không nuôi được gà đâu con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Thư của cha",
+      "text": "Đêm đó Thanh gọi cho cha, hỏi thẳng về chiếc hũ. Cha im lặng đến nửa phút trước khi nói - giọng mệt và già hơn tuổi: con đã thấy nó rồi. Nghe cha - đóng hành lý, rời bản ngay sáng mai, nhà cửa kệ nó, con không nợ nhà đấy cái gì. Thanh hỏi tại sao, cha chỉ đáp: vì nó sẽ đòi con như nó đòi mẹ con đòi ông bà con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Cha kể điều đầu tiên",
+      "text": "Cha Thanh lần đầu kể cho con nghe điều ông giấu ba mươi năm: bà mày nuôi nó, ông mày nuôi nó trước đó, và ông cố - cha ông mày - là người mang nó về nhà này. Tao bỏ bản vì tao không chịu được cái mùi của nó, cái tiếng của nó. Tao tưởng mẹ tao mất thì nó chết theo - hóa ra không."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Ma gà là gì",
+      "text": "Cha nói: người Tày gọi nó là ma gà - một linh hồn bị nhốt vào hũ, nuôi bằng gà trống sống để đổi lấy lộc. Gia đình nào nuôi được thì giàu lên mắt thấy - nhưng ma gà thì ngày càng lớn, ngày càng đòi nhiều. Đời ông cố nó ăn một con gà mỗi năm - đời bà nội, mỗi tháng. Cha bảo: con đoán xem đời con, nó muốn ăn gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Bà đã chọn",
+      "text": "Thanh hỏi sao bà không vứt nó đi. Cha cười cay đắng: không vứt được - nó gắn với huyết thống, nó về với người nhà như trâu về chuồng. Mẹ tao thử hết cách, cuối đời bà quyết một việc - bà ngừng cho nó ăn. Bà chọn để nó giết bà, còn hơn để nó truyền sang con cháu. Đêm bà mất - là đêm bà để nó đói lần đầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Di sản ba đời",
+      "text": "Thanh đứng nhìn ba di ảnh trên ban thờ - ông cố, ông nội, bà nội. Ba người, ba đời, cùng canh giữ một chiếc hũ trong gầm nhà. Ông nội mất khi Thanh còn bé - ông mất trong rừng, người ta tìm thấy xác ông sau ba ngày, nằm ngay đường về nhà. Bà nội mất hai năm trước - trong giấc ngủ, người ta bảo. Giờ anh biết - không phải giấc ngủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Đêm thứ hai",
+      "text": "Nghe cha kể xong, Thanh ngồi choáng trước lửa bếp cả tiếng. Ngoài sân đêm lạnh buốt. Anh muốn tin cha là nói quá, muốn tin đàn gà bác Sẩm chết vì dịch bệnh. Nhưng đến nửa đêm, tiếng cào đất lại vang lên dưới gầm nhà - lần này gần hơn, như thứ đó đang bới thẳng lên trên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Mùi lông cháy",
+      "text": "Lần này tiếng cào ấy đi kèm một mùi mới - mùi lông cháy, nồng và khét, thoảng qua khe sàn lên tận chỗ anh nằm. Mùi của thứ gì đó đang bị thiêu - hoặc của thứ gì đó tỏa ra mùi để nhắc anh nó ở đó. Thanh trùm chăn kín đầu, mồ hôi lạnh đầm đìa. Mùi khét ấy kéo dài đến gần sáng, rồi tắt ngấm khi gà bản bắt đầu gáy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Tiếng gọi tên",
+      "text": "Rồi trong tiếng cào ấy, Thanh nghe - hoặc tưởng nghe - một giọng nói khẽ, giọng đàn bà già, gọi đúng tên anh: Thanh ơi... Thanh ơi... cho ta ăn với. Giọng ấy nghe như giọng bà nội, mà không phải - nó trầm hơn, khô hơn, như giọng của thứ đã nói qua xương cốt rất lâu. Anh bịt tai, thu mình trong chăn đến sáng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Đối diện với hũ",
+      "text": "Sáng hôm sau, Thanh không chạy về Hà Nội như cha dặn. Anh xuống buồng kho với ngọn đèn pin - lần đầu tiên ban ngày. Ánh sáng mờ từ khe cửa chỉ đủ thấy bóng chiếc hũ trong góc. Anh đứng trước nó một lúc lâu, rồi nói to - hơi run: mày là cái gì, mày muốn gì ở nhà này. Hũ im - nhưng tiếng vọng của anh nghe như ai đáp lại bằng một hơi thở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Mở nắp hũ",
+      "text": "Thanh biết mình nên đi - mọi bản năng đều bảo đi. Nhưng một phần anh muốn biết bà nội đã chống chọi với cái gì ba mươi năm. Anh kéo tờ bùa, tháo ba vòng dây đỏ, hé nắp vải ra một khe. Bên trong tối đen - mùi tanh xộc lên mạnh như hơi thối của cả một cái chuồng gà chết để quên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Bên trong hũ",
+      "text": "Đèn pin soi xuống: trong hũ là tro - tro xám đặc quánh, trộn xương gà vỡ nát và lông đen, chất thành lớp dày hơn nửa hũ. Trên mặt tro, một chiếc móng gà to bất thường - to bằng móng chân người, đen nhánh, nhọn hoắt. Và khi ánh đèn chạm đúng chiếc móng ấy - lớp tro bên dưới khẽ động, như có cái gì đang thở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Vết đứt trong dây",
+      "text": "Khi quấn lại ba vòng dây, Thanh để ý một điều khiến anh lạnh gáy: dây chỉ đỏ bà nội quấn còn nguyên vẹn, nhưng có một nhịp dây bị đứt - đứt từ bên trong, như thứ trong hũ đã từng chọc ra ngoài. Vết đứt cũ, đã khô - tức là chuyện này đã xảy ra trước đây, khi bà còn sống. Bà biết nó đã từng ra được. Bà vẫn ở lại canh nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Kết tập một",
+      "text": "Thanh đậy vội nắp lại, quấn dây ngược lại bằng hai tay run, rồi ngồi thụp xuống nền đất buồng. Trên đầu anh là căn nhà sàn ba đời, dưới chân anh là một thứ đã ăn ba đời. Bà nội chọn chết để đứt nó - giờ anh hiểu vì sao. Nhưng anh cũng hiểu điều kinh khủng hơn: đêm nay là đêm mùng một - và nó đã đói hơn một tháng rồi."
+    }
+  ]
+}

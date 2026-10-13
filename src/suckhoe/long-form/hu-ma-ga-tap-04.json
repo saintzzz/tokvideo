@@ -1,0 +1,219 @@
+{
+  "slug": "hu-ma-ga-tap-04",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HŨ MA GÀ | Tập 4: Người Trong Hũ - Bí Mật Ông Cố Giấu 70 Năm | Truyện Ma Dài",
+  "description": "Trang giấy giấu trong gáy cuốn sổ da đen hé lộ sự thật kinh khủng nhất: oan hồn trong hũ ma gà chính là cái Nở - người phụ nữ bán ma biến mất bảy mươi năm trước. Và kẻ giết bà không phải ai khác.\n\nTruyện ma dài 5 tập về bùa ngải dân gian, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma dân gian",
+    "bùa ngải",
+    "ma gà",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #buangai #maga #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "OAN HỒN TRONG HŨ LÀ AI?",
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hu-ma-ga-tap-01/hook.jpg",
+    "mountain-hamlet": "images/suckhoe-long/hu-ma-ga-tap-01/mountain-hamlet.jpg",
+    "stilt-house": "images/suckhoe-long/hu-ma-ga-tap-01/stilt-house.jpg",
+    "spirit-jar": "images/suckhoe-long/hu-ma-ga-tap-01/spirit-jar.jpg",
+    "family-altar": "images/suckhoe-long/hu-ma-ga-tap-01/family-altar.jpg",
+    "forest-path": "images/suckhoe-long/hu-ma-ga-tap-01/forest-path.jpg",
+    "night-yard": "images/suckhoe-long/hu-ma-ga-tap-01/night-yard.jpg",
+    "mist-valley": "images/suckhoe-long/hu-ma-ga-tap-01/mist-valley.jpg",
+    "diary": "images/suckhoe-long/hu-ma-ga-tap-02/diary.jpg",
+    "old-tree": "images/suckhoe-long/hu-ma-ga-tap-04/old-tree.jpg",
+    "digging": "images/suckhoe-long/hu-ma-ga-tap-04/digging.jpg"
+  },
+  "scenePrompts": {
+    "old-tree": "a huge ancient banyan tree in front of an old Vietnamese stilt house at dusk, twisted roots, hanging ritual cords, ominous shade",
+    "digging": "a man digging with a hoe at the foot of a giant tree root at night by lantern light, disturbed dark soil, human bones partially revealed, horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập trước: con mắt trong kẽ nứt",
+      "text": "Tập trước, thư của bà nội tiết lộ sự thật nghiêng ngả: thứ trong hũ không phải ma - nó là một người bị giết để làm nguyên liệu bùa. Cái Nở - người bán ma - biến mất đúng đêm ông cố đem hũ về. Và cuối tập, thân hũ nứt ra - một con mắt sáng nhìn Thanh qua kẽ hở. Tập này anh tìm ra nó là ai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Con mắt",
+      "text": "Cái mắt trong kẽ nứt nhìn Thanh không rời. Anh không dám lại gần thêm, nhưng cũng không lùi được - cái nhìn ấy kéo anh. Mắt ấy không đỏ, không lửa - mắt người, u sầu, đã nhìn qua sành quá lâu. Rồi nó chớp lần nữa và khuất sau tro. Từ trong hũ vọng ra tiếng khẽ - tiếng thở, đều, kiên nhẫn, như người đang đếm ngược."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Đọc lại cuốn sổ",
+      "text": "Đêm ấy Thanh đọc lại cuốn sổ ông cố từ đầu - lần này với con mắt khác. Và anh thấy điều lần trước bỏ qua: ông cố viết thầy Mo cho ta cái hũ - nhưng thầy Từ khẳng định cha ông không bao giờ cho hũ, hũ do cái Nở bán. Ông cố đã nói dối ngay dòng đầu tiên của cuốn sổ. Người viết nhật ký thật thì không dối ngay trang một - trừ khi đó là cuốn sổ viết để che."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Nhật ký che giấu",
+      "text": "Đọc lại càng thấy rõ: cuốn sổ được viết như một lời biện hộ. Ông cố kể mình nghèo khổ, kể thầy Mo bố thí, kể mình lo lắng khi cái Nở biến mất - nhưng không trang nào ông nói mình đã tìm cái Nở. Người mua của mà người bán biến mất đêm giao hàng - ai cũng phải đi tìm người bán. Ông cố không đi. Vì ông cố biết bà ấy ở đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Chữ nghĩa ngầm",
+      "text": "Những câu ông cố viết giờ đọc lại thấy hai nghĩa: ta không tin trùng hợp - không phải nghi ngờ, là thú tội ngầm. Hoặc thứ trong hũ này không phải chỉ một linh hồn - ông đã biết có hồn thứ hai vào đó, hồn của người ông chôn. Cuốn sổ này không phải để kể - nó là tờ khai viết nửa vời của kẻ không dám khai hết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Soi kỹ cuốn sổ",
+      "text": "Thanh lật từng trang cuốn sổ dưới đèn, kiên nhẫn như người soi chứng cứ. Giấy cũ ố vàng, một số trang dính nhau vì ẩm. Anh tách từng trang dính - và thấy có trang bị xé, vết xé mài đi. Ông cố đã xé bỏ những trang nào đó - những trang có lẽ kể thật quá đầy đủ. Nhưng ông cố quên - hoặc cố ý quên - cái gáy sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Trang giấu trong gáy",
+      "text": "Thanh mò kỹ cuốn sổ - và ở gáy sau, dưới lớp da lót, anh tìm ra một tờ giấy gấp mỏng dính vào đó từ rất lâu. Giấy vàng giòn, chữ ông cố nhưng run hơn hẳn - chữ người sắp chết. Dòng đầu viết: ai đọc được tờ này thì đã biết ta dối. Ta giấu nó ở đây vì ta không đủ can đốt, mà cũng không đủ mặt để lộ ra. Ta kể thật đêm đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Đêm cái Nở đến",
+      "text": "Ông cố viết: đêm ấy cái Nở đến nhà ta - sau khi hũ đã về nhà ba ngày. Bà đến không phải đòi bạc - bà đến đòi lại hũ. Bà nói bà bán nhầm - trong lô hũ bà mang đi, cái hũ ta lấy là cái bà giấu riêng, cái chứa thứ bà không dám bán cho ai. Bà quỳ xuống xin ta trả - bà nói cái trong hũ ấy ăn chủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Ông cố từ chối",
+      "text": "Ta không trả - ông cố viết, và chữ mờ đi như viết lúc khóc - ba ngày nuôi hũ, ruộng ta đã được mùa gấp đôi. Ta nghĩ bà ấy ghen với lộc của ta, nghĩ bà đòi lại để bán cho người khác giá cao hơn. Ta xua bà đi. Bà không đi - bà xách đèn một mình xuống gầm nhà, bà nói bà sẽ lấy lại bằng lễ của nghề bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Cuộc giằng co",
+      "text": "Ta xuống theo bà - ông cố viết tiếp - bà đã tháo được một vòng dây, đang đọc chú ngữ thì ta giật hũ lại. Giằng nhau trên bậc thang gầm. Bà ngã - đầu bà đập vào bệ đá. Không phải ta đẩy - hoặc ta đẩy, ta không còn nhớ nữa, chỉ nhớ bà nằm đó, máu loang trên đất, và mắt bà nhìn ta mà nói câu cuối: ngươi giữ nó đi - nó sẽ giữ lại ngươi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Chôn dưới gốc cây",
+      "text": "Ông cố chôn cái Nở đêm ấy - dưới gốc cây thị già trước sân, chỗ ông từng ngồi ăn trưa. Ông viết: ta chôn nông - ta vội, trời sắp sáng. Ta chôn cả cái túi nghề của bà - dây đồng, bùa, bộ đồ trả linh. Sáng ra ta kể với mọi người bà đã về bản trên. Ba hôm sau bản đồn bà biến mất - ta giả vờ ngạc nhiên. Ta đã giả vờ đến tận hôm nay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Ông cố sống với tội",
+      "text": "Những dòng sau ông cố viết về những năm còn lại: đêm nào ta cũng nghe bà ấy dưới gầm - gà trong chuồng chết thì ta biết bà đòi ăn, gà hàng xóm chết thì ta biết bà đi xa. Ta giàu lên trên cái chết của bà và thứ bà nuôi. Ta không dám kể cho ai - kể thì mất cả nhà, mất cả lộc. Ta mang tội ấy vào quan tài - giờ thì để lại cho đời sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Vì sao nó vào hũ",
+      "text": "Trang cuối ông cố viết điều ám ảnh nhất: bảy đêm sau đêm ấy, hũ thay đổi. Nó ăn mạnh hơn, nó bắt đầu nói - và giọng nó dần thành giọng đàn bà. Ta hiểu - lúc bà ấy chết, bà đang đọc chú thu linh, tay bà cầm dây đồng. Chú ấy bắt hồn bà vào hũ thay vì linh định thu. Bà vào đó cùng thứ bà sợ nhất - và giờ hai thứ làm một."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Sự thật hoàn chỉnh",
+      "text": "Thanh hạ tờ giấy xuống, ngồi im rất lâu trước ban thờ. Bức tranh hoàn chỉnh: thứ trong hũ là cái Nở - người phụ nữ bị ông cố giết và chôn dưới gốc cây, hồn bà bị chú ngữ của chính bà quật vào hũ cùng một oan hồn lửa mà bà từng sợ. Bảy mươi năm bà bị nhốt, bị nuôi như súc vật, bị ép đổi lộc cho chính nhà kẻ giết mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Nghiệp ba đời",
+      "text": "Giờ mọi thứ khớp: vì sao nó biết giọng người nhà - nó nghe ba đời nhà này nói chuyện. Vì sao nó đòi cái nhà ngươi nợ ta - nhà này nợ bà một mạng. Vì sao bà nội nói bà thương nó - bà nội hiểu thứ trong hũ không phải ác ma, mà là nạn nhân bị biến thành ác ma. Lộc ba đời nhà Thanh - mua bằng một cái chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Hỏi lại ông Lường",
+      "text": "Sáng hôm sau Thanh đến hỏi ông Lường - người già nhất bản - về cái Nở. Lần này ông không đuổi: ông nhớ bà - đàn bà một mình, chồng chết sớm, con trai duy nhất chết cháy nhà năm nó mười hai tuổi. Bà điên mất một thời gian, rồi đi theo thầy lang bạc học nghề thu linh. Người bản thương bà - bà bán ma mà chưa ai thấy bà làm hại ai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Con trai chết cháy",
+      "text": "Ông Lường nói điều khiến Thanh lạnh người: oan hồn chết lửa trong hũ - thầy Từ nói nó đói từ kiếp trước - có lẽ chính là hồn thằng bé con cái Nở, thứ mà bà gom về đầu tiên và không bao giờ bán. Bà giữ hồn con trong hũ riêng - và ông cố nhà mày lấy đúng cái hũ ấy. Tức là bảy mươi năm nay, mẹ và con bị nhốt chung một chỗ, ở nhà kẻ giết mẹ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-tree",
+      "caption": "Gốc cây thị",
+      "text": "Chiều đó Thanh đứng trước gốc cây thị già trước sân - cây cao ba ôm, rễ trồi lên mặt đất như những con rắn hóa đá. Anh đã qua nó cả trăm lần không nghĩ gì. Giờ anh nhìn nó khác: rễ cây quấn chặt một chỗ đất lồi hơi khác màu - đất từng bị đào, lâu lắm rồi. Bảy mươi năm cây đã đứng canh nấm mộ không đề bia này."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-tree",
+      "caption": "Chuẩn bị đào",
+      "text": "Đào mộ người là việc không thể làm bừa - Thanh lên bản trên lần nữa, mang theo tờ giấy giấu trong gáy sổ. Thầy Từ đọc xong, ngồi im một lúc lâu rồi đứng dậy lấy hộp đồ nghề của cha: được - giờ ta tin mày làm được. Đào bà ấy lên, chôn đàng hoàng, và ta sẽ làm lễ trả hồn - đêm rằm tháng này. Còn mấy hôm nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging",
+      "caption": "Đêm đào mộ",
+      "text": "Đêm ấy, dưới ánh đèn dầu và ánh trăng khuyết, Thanh đào ở gốc cây thị. Đất cứng như đá - bảy mươi năm rễ cây đã đan vào nhau trên nấm mộ. Mỗi nhát cuốc anh nghĩ đến bà nội - bà ngồi hiên nhà nhìn ra gốc cây này ba mươi năm, có khi bà đã đoán ra từ lâu rồi. Cuốc chạm vật cứng lúc nửa đêm - không phải đá."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging",
+      "caption": "Xương cái Nở",
+      "text": "Hài cốt nằm nghiêng trong đất, co lại như người ngủ - xương đã mục giòn, trộn với rễ cây đâm xuyên qua. Còn lại trên cổ tay hài cốt một chiếc vòng đồng xanh; quanh xương, mảnh vải khăn piêu hoa văn đã thối nửa. Và ngay cạnh - cái túi nghề bằng da, bên trong dây đồng, tờ bùa, và một chùm tóc cắt sẵn của trẻ con bọc vải đỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging",
+      "caption": "Chùm tóc đứa con",
+      "text": "Chùm tóc trẻ con ấy - Thanh hiểu ngay - là tóc đứa con trai chết cháy của bà. Bà mang theo tóc con đi mãi, ngay cả đêm bà chết. Thanh ngồi xuống cạnh hố, không đứng dậy nổi. Phía gầm nhà, cách đó không xa, hũ sành im lặng - và anh thề nghe thấy từ đó một tiếng thở dài, như người vừa buông được thứ ôm bảy mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging",
+      "caption": "Xếp xương lại",
+      "text": "Thanh gom từng mảnh xương bà Nở lên tấm vải sạch, cẩn thận như gom đồ của người nhà. Xương giòn tan, có mảnh vỡ trong tay anh - bảy mươi năm trong đất lạnh. Anh gói cả túi nghề của bà theo - dây đồng, bùa, đồ trả linh - đồ của bà thì trả lại bà. Cái hố anh lấp lại để hở, chờ lễ - mộ mới sẽ đào cạnh đó, chỗ đất thịt hơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Nói chuyện lần đầu",
+      "text": "Đêm đó Thanh làm điều chưa ai làm - anh ngồi xuống trước buồng kho, thắp nén hương, và nói chuyện với hũ như nói chuyện với người: bà Nở - cháu biết bà là ai rồi. Cháu tìm được bà rồi. Trong hũ im một lúc - rồi lần đầu tiên, nó đáp lại bằng giọng đàn bà rõ ràng, không còn giả giọng ai: ngươi tìm thấy ta rồi - ngươi khác họ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Giọng cái Nở",
+      "text": "Giọng ấy kể - không còn giận dữ, chỉ còn mệt: bảy mươi năm ta ngồi đây, nghe nhà ngươi lớn lên bằng lộc của ta. Ta đòi lại từng đời - đời ông cố sợ ta, đời ông nội ghét ta, đời bà nội - bà ấy khác, bà ngồi nói chuyện với ta đêm đêm. Bà ấy là người duy nhất coi ta là người. Giọng ngừng lại: bà ấy vì ta mà chết - ta biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Câu hỏi cuối",
+      "text": "Thanh hỏi: bà muốn gì để đi. Im lặng dài, rồi giọng đáp - chậm, và lần đầu có chút gì như nước mắt: ta muốn ba thứ - xương ta được chôn đàng hoàng, con ta được đi cùng ta, và một câu xin lỗi. Từ nhà ngươi. Bảy mươi năm ta đợi một câu ấy mà không ai nói. Thanh nghẹn: cháu xin lỗi bà - thay cả nhà cháu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Chưa đủ",
+      "text": "Giọng trong hũ đáp lại lời xin lỗi bằng một sự im lặng khác - không còn thù, nhưng chưa xong: câu xin lỗi của cháu cháu nhận - nhưng kẻ nợ ta không phải cháu, là nhà cháu. Lễ trả hồn đêm rằm - gọi cha cháu về. Người cuối cùng còn sống của huyết thống phải đứng trước ta mà nói - nếu không ta không đi được. Ta bị trói bằng huyết thống, chỉ huyết thống mở được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Gọi cha về",
+      "text": "Thanh gọi cho cha lần thứ ba - lần này ông nghe anh nói hết, không cúp máy. Im lặng rất lâu ở đầu kia, rồi một tiếng thở già nua: bảy mươi năm rồi nó vẫn đòi à. Tao về. Tao trốn nó ba chục năm - đến lúc phải đứng trước mặt nó. Sáng mai tao lên xe. Nghe giọng cha run mà vững, Thanh biết cha đã chuẩn bị cho ngày này từ rất lâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Kết tập bốn",
+      "text": "Đêm cuối trước lễ, kẽ nứt trên thân hũ đã rộng ra - qua đó Thanh thấy trong tro hai điểm sáng - hai con mắt. Một lớn, một nhỏ - mẹ và con, ngồi cạnh nhau trong bóng tối bảy mươi năm, chờ một lễ để đi. Ngày mai là rằm - đêm cái Nở và con trai bà được trả tự do. Và nhà Thanh sẽ phải đứng trước họ, nói câu mà ba đời trốn tránh."
+    }
+  ]
+}

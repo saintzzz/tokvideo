@@ -69,6 +69,13 @@ voice-mimic vs family-sorcery), highest niche demand, and scene assets
 are cheap to generate (đồng quê Bắc Bộ / vùng cao, hũ sành, ban thờ,
 đình làng).
 
+**Status**: `hu-ma-ga-tap-01..05.json` written (42/36/29/29/27 beats),
+scene prompts + metadata included; scene images generating via
+`generate-story-visuals.mjs --long` (Pollinations anon tier, slow).
+Twist structure: tập 1-3 là "ma ám gia tộc" kinh điển, tập 4 lộ oan hồn
+trong hũ chính là người bán ma bị ông cố giết — arc biến thành chuyện
+nợ và chuộc lỗi, khác biệt hẳn 2 arc trước.
+
 ## 4. What the PO measures each arc
 
 From `channel-report-vi.md` per-arc, 72h after the arc completes:

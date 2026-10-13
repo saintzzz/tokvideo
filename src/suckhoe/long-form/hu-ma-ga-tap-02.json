@@ -1,0 +1,260 @@
+{
+  "slug": "hu-ma-ga-tap-02",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HŨ MA GÀ | Tập 2: Cái Giá Của Lộc - Nhật Ký Ông Cố | Truyện Ma Dài",
+  "description": "Cuốn nhật ký da đen của ông cố mở ra sự thật ba đời: hũ ma gà không phải di sản - nó là một vụ mua bán. Gia tộc Thanh đã giàu lên bằng thứ mà giờ anh phải trả giá tiếp.\n\nTruyện ma dài 5 tập về bùa ngải dân gian, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma dân gian",
+    "bùa ngải",
+    "ma gà",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #buangai #maga #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "GIA TỘC MUA LỘC BẰNG GÌ?",
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hu-ma-ga-tap-01/hook.jpg",
+    "mountain-hamlet": "images/suckhoe-long/hu-ma-ga-tap-01/mountain-hamlet.jpg",
+    "stilt-house": "images/suckhoe-long/hu-ma-ga-tap-01/stilt-house.jpg",
+    "spirit-jar": "images/suckhoe-long/hu-ma-ga-tap-01/spirit-jar.jpg",
+    "family-altar": "images/suckhoe-long/hu-ma-ga-tap-01/family-altar.jpg",
+    "forest-path": "images/suckhoe-long/hu-ma-ga-tap-01/forest-path.jpg",
+    "night-yard": "images/suckhoe-long/hu-ma-ga-tap-01/night-yard.jpg",
+    "mist-valley": "images/suckhoe-long/hu-ma-ga-tap-01/mist-valley.jpg",
+    "diary": "images/suckhoe-long/hu-ma-ga-tap-02/diary.jpg",
+    "market-old": "images/suckhoe-long/hu-ma-ga-tap-02/market-old.jpg"
+  },
+  "scenePrompts": {
+    "diary": "an old leather-bound journal with yellowed pages covered in faded Vietnamese handwriting, lying open by candlelight on a dark wooden table, dust, secrets",
+    "market-old": "an old highland Vietnamese market scene decades ago, a poor man silhouette talking to a hooded shaman figure between stalls, dusk, ominous"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập trước: mở nắp hũ",
+      "text": "Tập trước, Thanh về bản Lùng Thành lo tang bà nội và phát hiện ra điều cả bản đều biết trừ anh: gia đình anh ba đời nuôi một hũ ma gà dưới gầm nhà sàn - linh hồn bị nhốt để đổi lộc. Anh đã mở nắp hũ và thấy thứ đang thở trong tro. Và đêm mùng một - đêm nó phải được ăn - đã đến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Đêm mùng một",
+      "text": "Chiều muộn, Thanh đứng trước buồng kho với hai lựa chọn: cho hũ ăn hoặc không. Cha bảo chạy đi - nhưng chạy đi để làm gì khi thứ ấy gắn với huyết thống. Bà nội chọn không cho ăn và chết. Thanh chọn cách khác: anh cho nó ăn - để câu giờ, để hiểu nó, rồi tìm cách giết nó thay vì chết như bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Con gà trống đen",
+      "text": "Theo lời bác Sẩm chỉ, Thanh mua lại con gà trống đen tuyền của nhà cuối bản - gà phải đen hoàn toàn, không một lông tạp. Anh ôm con gà xuống buồng kho lúc trời vừa tối. Con vật trong tay anh đấm đá yếu ớt, như cũng biết mình sắp đi đâu. Đặt nó trước hũ, Thanh lùi lại theo lời bác dặn: đừng nhìn, đừng nghe, đóng cửa lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Cho hũ ăn",
+      "text": "Anh đóng cửa buồng nhưng không thể không nghe. Từ dưới gầm vọng lên tiếng cánh phập dữ dội, tiếng kêu của con gà cắt ngang giữa chừng - rồi một âm thanh khác, như tiếng nhai, tiếng mút, tiếng vỏ xương nghiền trong mỏ. Kéo dài đúng một khắc trà. Rồi im. Khi Thanh mở cửa soi lại, trên đất chỉ còn mấy chiếc lông đen - con gà biến mất như chưa từng có."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Sau bữa ăn",
+      "text": "Đêm ấy nhà yên tĩnh - không tiếng cào, không tiếng gáy, không mùi khét. Thanh ngủ được một giấc, và trong giấc anh mơ thấy bà nội ngồi khung cửi, dệt vải, không quay đầu lại. Bà nói một câu trong mơ: cho nó ăn thì nó nhớ con - nhớ con thì nó đòi con. Tỉnh dậy lúc tảng sáng, anh thấy tay mình lạnh ngắt như vừa bị ai nắm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Cuốn sổ da đen",
+      "text": "Sáng hôm sau, dọn lại đồ bà nội lần nữa, Thanh tìm ra thứ anh bỏ sót: một cuốn sổ da đen bọc vải, giấu trong lớp đáy giả của hòm gỗ. Bìa sổ mòn nhẵn, ruột giấy vàng ố - nét chữ ông cố, cụ thân sinh của ông nội, người đầu tiên mang hũ về nhà. Trang đầu chỉ có một dòng: ghi lại để đời sau biết mình trả giá bao nhiêu cho lộc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Nhật ký ông cố",
+      "text": "Cuốn sổ ghi bằng chữ nho lẫn chữ quốc ngữ, viết tay run qua nhiều năm. Ông cố kể: năm ấy bản đói kém, ông mất cả vợ lẫn đứa con trai đầu vào trận dịch. Nghèo đến mức không có gạo táng. Ông đem ba đồng bạc cuối cùng lên bản trên tìm thầy Mo người Mông - người ta đồn thầy có của lạ giúp đổi vận."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "market-old",
+      "caption": "Gặp thầy Mo",
+      "text": "Ông cố viết: thầy Mo cho ta cái hũ này, không lấy bạc. Thầy chỉ lấy một lời hứa - nuôi nó cho khỏi đói, và khi nó đòi lại thì phải trả. Ta hỏi nó đòi gì. Thầy cười: nó đòi gì nó sẽ nói. Ta cầm hũ về trong đêm mưa - đêm ấy đường về tối đen như mực, mà ta cứ thấy lửa cháy trước mặt dẫn đường."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Ba năm đổi vận",
+      "text": "Ba năm sau khi mang hũ về, nhà ông cố đổi đời: trâu đẻ liên tiếp, ruộng được mùa gấp ba nhà khác, đàn lợn không ốm. Ông cố mua lại đất của chính những người đã khinh ông nghèo. Ông viết trong sổ: người bản bảo ta được trời độ - ta không sửa. Trời không độ ai cả, chỉ có thứ dưới gầm nhà này biết ta phải trả gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Cái giá đầu tiên",
+      "text": "Trang tiếp theo chữ run hơn: năm thứ ba, đêm rằm, nó bắt đầu đòi. Một con gà trống mỗi năm - ta cho, dễ quá. Năm thứ năm, đòi hai con một năm. Năm thứ bảy, đòi mỗi tháng một con. Nó lớn - ta nghe nó lớn theo từng bữa ăn. Và lần đầu ta nghe nó nói trong đầu ta: ngươi cho ta ít, ta lại cho ngươi ít thôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Giọng trong đầu",
+      "text": "Ông cố mô tả cái giọng ấy: nó không vọng từ tai - nó lên từ trong lồng ngực, như một ý nghĩ không phải của mình. Nó nói tiếng Tày mà ta nói, giọng khô và chậm. Đêm nào cũng nói - lúc đầu đòi ăn, sau đòi chuyện. Nó hỏi ta nhớ nhà không, nhớ vợ chết không. Nó biết cách mở vết thương của ta ra để nói chuyện lâu hơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Nghi lễ của bà cố",
+      "text": "Ông cố còn ghi lại cách bà cố - vợ ông - đối phó trước khi bà mất: bà không bao giờ cho gà sống vào buồng trước trời tối - phải đợi gà tự ngủ say, để nó không biết gì. Bà thắp hương trước buồng như cúng lễ, không phải nuôi. Bà nói với ông: cho nó ăn thì cúng nó như cúng ma - để nó nhớ mình là ma, đừng để nó quên mà lên ngôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Vụ mua bán",
+      "text": "Ông cố viết tiếp: đến lúc ta hiểu, thì đã muộn. Ma gà không cho lộc - nó cho ngươi mượn lộc. Mỗi thứ ngươi được, nó ghi nợ. Mỗi bữa nó ăn, nó lớn thêm một chút và nợ thêm một tý. Lúc ta giàu nhất là lúc nó mạnh nhất - và khi nó mạnh đủ, nó không đòi gà nữa. Nó đòi cái khác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Người biến mất",
+      "text": "Trang giấy tiếp theo, nét chữ nguệch ngoạc như viết vội trong đêm: đêm qua nó đòi thứ mới - nó đòi được cho ra khỏi hũ mà đi. Ta nằm nghe nó gáy trong hũ cả đêm, nó gọi tên ta bằng giọng mẹ ta đã mất. Sáng nay người bản đồn: cái Nở, người bán ma ở bản trên, biến mất đêm qua - nhà bỏ hoang, gà lợn chết hết trong chuồng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Không phải trùng hợp",
+      "text": "Ta không tin trùng hợp - ông cố viết - đêm cái Nở biến mất là đêm nó đòi ra khỏi hũ. Ta không cho nó ra. Ta buộc thêm ba vòng dây, dán thêm hai tờ bùa. Nhưng cái Nở đã mất, và không ai tìm thấy xác. Ta nghĩ - hoặc nó đi được qua kẽ hở nào đó, hoặc thứ trong hũ này không phải chỉ một linh hồn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "diary",
+      "caption": "Linh hồn nào trong hũ",
+      "text": "Ông cố nghi vấn lớn nhất viết ở trang sau: ta hỏi thầy Mo nó là linh hồn ai. Thầy nói - linh của người chết oan mà người ta bỏ không thờ, ta gom lại cho nó một chỗ. Nhưng ta nghĩ thầy nói dối - linh chết oan không nhai xương như thế. Thứ trong hũ này đói từ kiếp trước - và ta chỉ là người ký hợp đồng cho nó ăn tiếp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Thư của cha giữa trang",
+      "text": "Giữa cuốn sổ, Thanh tìm thấy một phong thư cũ gấp làm tư - thư cha anh gửi bà nội, đánh dấu ngày mười năm trước. Cha viết: mẹ ơi, con biết mẹ không bỏ được nó. Nhưng mẹ phải chọn - nó hoặc con trai mẹ. Con đi rồi, và con sẽ không bao giờ để Thanh biết về cái hũ đó. Mẹ ôm nó một mình thì mẹ ôm, đừng kéo cả cháu vào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Vì sao cha bỏ đi",
+      "text": "Trang sau của thư, chữ mờ đi như ngấm nước: mẹ đừng bảo con nhẫn tâm - đêm con đi, con nghe nó gọi tên con dưới gầm, giọng của thằng em con chết đuối năm mười tuổi. Nó dùng giọng người nhà để mồi người nhà - mẹ biết rõ điều đó hơn con. Mẹ chọn ở lại với nó. Con chọn đi để giữ mạng con trai con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Ông nội trong sổ",
+      "text": "Những trang cuối sổ chuyển sang tay ông nội - nét khác hẳn, chữ đẹp hơn: cha mất rồi, ta tiếp nối việc ông để lại. Ta không tin ma - ta tin nghĩa vụ. Nhưng đêm đầu tiên ta cho hũ ăn, ta đã hiểu cha đã sống với cái gì. Nó không phải con vật - nó có ý thức, nó nhớ từng người nuôi mình, và nó đếm nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Ông nội thử đốt",
+      "text": "Ông nội ghi lại lần ông thử đốt hũ: năm ấy ta bế hũ ra sân, tưới dầu, châm lửa. Lửa cháy quanh hũ cả canh giờ - hũ không nứt, không nóng, như lửa trượt trên da nó. Ta dập lửa đi. Đêm ấy nó gáy lần đầu trong hũ - gáy ba tiếng, vang như khắp bản nghe. Sáng ra trâu nhà ông Tỏi chết hai con không rõ lý do. Ta không đốt lần nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Quy luật ngầm",
+      "text": "Qua hai đời viết, Thanh đọc ra một bộ quy luật ngầm mà không ai dám gọi tên: hũ phải ở nhà người nuôi, chỉ người trong huyết thống cho ăn được, không được đưa ra ánh sáng ban ngày, và đêm mùng một là đêm nó được ra - ra bằng cách nào thì sổ không nói, chỉ ghi: đêm ấy không ai trong nhà nên ra khỏi nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Lần đầu ông nội cho ăn",
+      "text": "Ông nội viết: đêm đầu tiên cho ăn, ta đưa con gà vào buồng rồi đứng ngoài nghe - ta nghe rõ con vật không chỉ bị ăn, mà bị tra tấn trước. Tiếng kêu kéo dài quá lâu cho một cái chết. Rồi nó gáy - tiếng gà gáy vọng ra từ hũ, như nó khoe bữa ăn. Ta hiểu ra: nó không chỉ ăn thịt - nó ăn cả nỗi sợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Những cái chết trong họ",
+      "text": "Ông nội ghi lại danh sách những cái chết trong dòng họ mà cả bản gọi là nghiệp: chú ba của ông - chú của cha ông - mất tích trong rừng, xác không tìm thấy. Cô dì út chết trẻ, hai mươi tuổi, ngã xuống suối. Và vợ ông - bà nội của Thanh - nối nghiệp thay ông khi ông chết bất đắc kỳ tử trong rừng, năm Thanh bốn tuổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Ông nội chết trong rừng",
+      "text": "Trang cuối cùng có chữ của ông nội - viết ba ngày trước khi ông chết: nó lại đòi thêm. Lần này không phải gà - nó muốn ta đổi cái khác. Ta không nói được nó muốn gì, nhưng ta biết nó muốn cái gì đó trong nhà này. Nếu ta không về được khỏi rừng lần này, người đọc sổ này - hãy đốt nhà, đốt hũ, chôn tro đi thật sâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Bà nội nối nghiệp",
+      "text": "Bà nội không đốt - Thanh hiểu từ những gì cha kể. Bà tiếp nối việc của chồng không phải vì tin lộc - mà vì sợ nó tự do. Bà nuôi nó ba mươi năm như canh một cái lồng - mỗi bữa ăn là để nó yên, để nó không ra. Và đến cuối đời, khi thấy mình sắp không giữ nổi nó nữa, bà chọn cách duy nhất còn lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Giàu nhất bản",
+      "text": "Bác Sẩm lúc sau kể thêm cho Thanh nghe phần bản địa: nhà anh hồi đó giàu nhất nhì bản - đất nhiều, trâu lợn đầy, ông nội được người ta nể. Người ta ghen với lộc của nhà mày - bác nói - mà không biết lộc đó mua bằng gì. Từ khi bà mày mất, bản đề phòng lắm - mày thấy đấy, người ta treo rơm ớt khắp nơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Nỗi sợ của bản",
+      "text": "Bác Sẩm nói nhỏ: bản này không ghét nhà mày - bản sợ nhà mày. Sợ cái thứ dưới gầm nhà mày đi đêm. Ba mươi năm nay cứ đến mùng một là nhà nào cũng khóa gà, khóa lợn, không ai ra khỏi nhà sau chạng vạng. Trẻ con khóc đêm, mẹ dọa: khóc nữa thì con gà ma nhà ông nội nó bắt đi. Thanh nghe mà nghẹn - nhà mình là nỗi sợ của cả bản."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Nó biết anh ở đây",
+      "text": "Đọc xong cuốn sổ, Thanh hiểu ra điều làm anh lạnh nhất: nó không phải thứ thụ động trong hũ - nó có trí nhớ, nó có kế hoạch. Nó biết gia tộc anh từng người. Bà nội chết - người nuôi cuối cùng còn sống trong huyết thống là cha anh. Và khi cha bỏ đi - anh là người duy nhất còn lại để nó gọi về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Thư của ông nội",
+      "text": "Trang cuối cùng của sổ, ông nội để lại một lời nhắn: người đọc sổ này - nếu là cháu ta, ta xin lỗi đã để mày nhận gánh này. Đừng cho nó ăn nếu mày định bỏ trốn - nó sẽ đói đến điên và nó sẽ ra. Đừng đốt hũ nếu chưa biết nó là ai - đốt sai cách thì giải phóng nó mà không giải phóng mày. Tìm thầy Mo - hoặc người nối nghiệp thầy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Không còn đường lùi",
+      "text": "Thanh gấp sổ lại. Ba đời đã viết cho anh cùng một kết luận: không ai thoát khỏi hũ này bằng cách chạy hay giấu - chỉ có hai đường, nuôi nó đến chết như bà, hoặc tìm hiểu nó là gì mà giải phóng cả hai phía. Ông nội nói rõ: tìm thầy Mo. Anh quyết định - sáng mai lên bản trên, tìm nhà thầy Mo năm xưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Lên đường tìm thầy",
+      "text": "Sáng sớm hôm sau Thanh đi bộ hai tiếng lên bản trên - nơi ông cố gặp thầy Mo bảy mươi năm trước. Đường rừng xưa ông đi vẫn còn, mờ và rậm, sương che kín nóc rừng. Anh mang theo con gà trống đen thứ hai - đề phòng phải ở lại qua đêm mùng một - và cuốn sổ da đen nhét trong bọc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Trên đường",
+      "text": "Đường đi qua rừng già, nơi ông nội chết không rõ lý do. Thanh đi qua chỗ người ta tìm thấy xác ông - một khoảng đất trũng bên suối nhỏ mà bản gọi là Khe Khóc. Đứng đó, anh cảm giác có cái gì nhìn từ trong rừng - không phải thú, cái nhìn ấy biết anh. Anh đi nhanh hơn, không quay lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Tiếng gà theo sau",
+      "text": "Giữa đường, Thanh chợt nghe tiếng gà gáy - một tiếng duy nhất, vọng từ phía sau anh trên con đường vắng. Anh quay lại - đường rừng trống, chỉ sương. Gáy ở rừng, giữa trưa, không gà nào ở đây. Anh ôm chặt bọc sổ và con gà trống, đi nhanh hơn nữa - và nhận ra điều rợn nhất: con gà trong bọc không kêu, nó run như lên đồng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-valley",
+      "caption": "Bản từ trên cao",
+      "text": "Đến chỗ đường vòng qua sườn núi, Thanh nhìn xuống bản Lùng Thành từ trên cao. Mái nhà ông nội - giờ là nhà anh - nằm giữa bản, tối hơn các mái khác dù cùng lợp ngói. Nhìn từ xa, mây quanh bản lưu lại quanh căn nhà ấy lâu hơn, như một cái đầu đang cúi xuống canh. Anh đứng nhìn lâu, lần đầu thấy nhà mình như người bản thấy - đáng sợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Bản trên",
+      "text": "Bản trên nhỏ hơn và nghèo hơn bản dưới - mười mấy nhà sàn rải trên sườn cao hơn, mây bay ngang mái. Người bản trên nhìn Thanh hỏi thăm ngay - khách lạ hiếm lên đây. Khi anh hỏi nhà thầy Mo, người đàn bà đang nhổ cỏ chỉ tay lên đỉnh dốc: nhà ông Mo già chết rồi, con trai ông ấy ở đó - thầy Từ, nhưng ổng không làm nghề nữa đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Kết tập hai",
+      "text": "Đứng trước căn nhà sàn xiêu vẹo trên đỉnh dốc - nhà thầy Mo xưa - Thanh ôm cuốn sổ ông nội trong túi. Ba đời nhà anh chỉ giải được một nửa câu đố: nuôi hay bỏ. Nửa còn lại - hủ này là ai, và trả nó về đâu - nằm trong căn nhà trước mặt. Anh gõ cửa. Trong nhà, một tiếng già nua đáp lại mà không hỏi ai: nhà ông Lực đấy à - vào đi, ta đợi ba chục năm rồi."
+    }
+  ]
+}

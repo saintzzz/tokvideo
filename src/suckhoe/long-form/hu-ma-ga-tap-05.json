@@ -1,0 +1,211 @@
+{
+  "slug": "hu-ma-ga-tap-05",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HŨ MA GÀ | Tập 5: Đêm Rằm Trả Hồn - Cái Kết Sau 70 Năm | Truyện Ma Dài",
+  "description": "Đêm rằm, thầy Từ làm lễ trả hồn cuối cùng. Cha Thanh về bản đứng trước hũ nói câu mà ba đời trốn tránh. Nhưng trước khi cái Nở được đi, oan hồn lửa trong hũ còn một đêm để giữ nhà này lại.\n\nTruyện ma dài 5 tập về bùa ngải dân gian, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma dân gian",
+    "bùa ngải",
+    "ma gà",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #buangai #maga #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "ĐÊM RẰM TRẢ HỒN",
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hu-ma-ga-tap-01/hook.jpg",
+    "mountain-hamlet": "images/suckhoe-long/hu-ma-ga-tap-01/mountain-hamlet.jpg",
+    "stilt-house": "images/suckhoe-long/hu-ma-ga-tap-01/stilt-house.jpg",
+    "spirit-jar": "images/suckhoe-long/hu-ma-ga-tap-01/spirit-jar.jpg",
+    "family-altar": "images/suckhoe-long/hu-ma-ga-tap-01/family-altar.jpg",
+    "forest-path": "images/suckhoe-long/hu-ma-ga-tap-01/forest-path.jpg",
+    "night-yard": "images/suckhoe-long/hu-ma-ga-tap-01/night-yard.jpg",
+    "mist-valley": "images/suckhoe-long/hu-ma-ga-tap-01/mist-valley.jpg",
+    "old-tree": "images/suckhoe-long/hu-ma-ga-tap-04/old-tree.jpg",
+    "ritual": "images/suckhoe-long/hu-ma-ga-tap-05/ritual.jpg",
+    "fire-spirit": "images/suckhoe-long/hu-ma-ga-tap-05/fire-spirit.jpg",
+    "hamlet-dawn": "images/suckhoe-long/hu-ma-ga-tap-05/hamlet-dawn.jpg",
+    "new-grave": "images/suckhoe-long/hu-ma-ga-tap-05/new-grave.jpg"
+  },
+  "scenePrompts": {
+    "ritual": "a Vietnamese shaman ritual at night under a full moon, an old shaman in ceremonial dress before a spirit jar, candles and talismans arranged in a circle, incense smoke",
+    "fire-spirit": "a giant spectral rooster made of dark fire and embers rising from a cracked clay jar at night, terrifying, Vietnamese stilt house courtyard",
+    "hamlet-dawn": "a highland Vietnamese hamlet at dawn, golden mist over stilt roofs, smoke from morning kitchens, peaceful valley, hope",
+    "new-grave": "a small fresh grave mound under a big old tree at dawn, incense sticks burning, a faded embroidered scarf laid on it, two wooden grave markers"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập trước: hai con mắt",
+      "text": "Tập trước, Thanh tìm ra sự thật cuối cùng: oan hồn trong hũ là cái Nở - người bán ma bị ông cố giết và chôn dưới gốc cây thị, cùng hồn con trai chết cháy của bà. Bà chỉ đòi ba thứ để đi: chôn đàng hoàng, con đi cùng, và một câu xin lỗi từ huyết thống. Đêm rằm - đêm lễ trả hồn - đã đến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Cha về bản",
+      "text": "Cha Thanh về đến bản chiều hôm trước lễ - ông đứng đầu đường vào bản nhìn nhà mình một lúc lâu trước khi bước tiếp. Ba mươi năm ông không đặt chân lên đất này. Khi ông bước qua cổng, cả bản ngừng nhìn - người con trai đã bỏ nhà đi nay quay lại. Ông không vào nhà ngay - ông đứng trước gốc cây thị, nơi nấm mộ mới đào, và cúi đầu rất thấp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Hai cha con trước ban thờ",
+      "text": "Tối ấy hai cha con ngồi trước ban thờ. Cha Thanh nhìn ba di ảnh rồi nói - nửa như kể cho con, nửa như nói với người đã khuất: tao bỏ đi vì tao hèn - tao biết trong nhà có thứ không phải người, mà tao chọn để mẹ tao ôm nó. Ba mươi năm tao tự nhủ tao đi vì con - thật ra tao đi vì tao. Ông nói xong thì khóc - đàn ông sáu mươi tuổi khóc như đứa trẻ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Chuẩn bị lễ",
+      "text": "Trưa rằm, thầy Từ xuống bản mang theo hộp đồ nghề của cha ông. Ông bày lễ ngay sân trước nhà sàn: vòng tròn trầm hương quanh chỗ đặt hũ, hai ngọn nến lớn, chuỗi dây đồng dẫn từ hũ ra gốc cây thị - nơi mộ mới đã sẵn sàng. Thầy dặn hai cha con: lễ này giải trói - hồn ra sẽ có một lúc nó được tự do trước khi đi. Lúc ấy nó làm gì là chuyện của nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Điều kiện của lễ",
+      "text": "Thầy Từ còn dặn thêm những điều cấm: trong lúc lễ không ai được gọi tên người đã khuất trừ thầy; không ai được khóc to - tiếng khóc níu hồn ở lại; và quan trọng nhất - khi hồn ra, người nhà tuyệt đối không được chạy. Chạy là tỏ ra sợ - hồn mà thấy sợ thì nó nhớ mình là ma, quên mình đang được trả tự do."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Bản chứng kiến",
+      "text": "Tin lễ trả hồn lan ra - chiều rằm, người bản đứng vòng ngoài sân nhà Thanh xem. Không ai dám vào vòng trầm, nhưng không ai về - cả bản đợi kết thúc của nỗi sợ ba chục năm. Ông Lường già nhất ngồi hàng đầu, tay chắp khấn khẩn. Bác Sẩm ôm thằng bé - đứa đã từng bị nhập - che mắt nó nhưng chính mình không rời mắt khỏi sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Đêm rằm bắt đầu",
+      "text": "Mặt trời lặn, trăng rằm tròn vành vạnh lên khỏi rặng tre. Thầy Từ mặc áo lễ đỏ đen của cha ông, khấn ba vái bốn phương rồi bắt đầu đọc chú ngữ tiếng Tày cổ - giọng ông trầm và đều như mặt sông. Hai cha con Thanh quỳ trong vòng trầm, trước hũ. Không khí nặng dần - ngọn nến không đổ chiều dù gió đang thổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Lời xin lỗi của cha",
+      "text": "Đến phần công khai tội trạng - thầy Từ gọi tên ông cố, gọi tên cái Nở, kể lại đêm xưa cho đất trời nghe. Rồi ông quay sang cha Thanh: nói đi. Cha Thanh ngước mặt nhìn chiếc hũ - và nói to câu mà ba đời trốn tránh: nhà tôi xin lỗi bà - ông cố tôi giết bà, ba đời nhà tôi giam bà. Lỗi đó tôi không đòi bà tha - tôi chỉ xin bà cho tôi được chôn bà đàng hoàng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Trả lời từ hũ",
+      "text": "Câu xin lỗi vừa dứt, ba vòng dây đỏ trên nắp hũ tự nhiên đứt - từng vòng một, như có bàn tay tháo. Tờ bùa cháy không lửa, rụi thành tro bay lên theo luồng không khí quay quanh hũ. Cả sân im phăng phắc - kể cả gió. Rồi nắp vải đỏ từ từ nâng lên, như bị đẩy từ trong ra, và mùi tanh quen thuộc thoát ra - lần cuối cùng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fire-spirit",
+      "caption": "Hồn lửa ra trước",
+      "text": "Thứ ra đầu tiên không phải cái Nở - là oan hồn lửa. Từ miệng hũ, một luồng than đỏ và lửa đen phun lên, hợp thành hình con gà khổng lồ - to bằng con trâu, lông là lửa, mắt là hai hốc than hồng. Nó gáy - tiếng gáy rung cả bản, kính cửa sổ các nhà nứt. Đây là thứ đói từ kiếp trước - thứ mà bảy mươi năm nói chuyện cùng cái Nở trong tối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fire-spirit",
+      "caption": "Nó không muốn đi",
+      "text": "Con gà lửa quay đầu nhìn quanh sân - nhìn người bản, nhìn hai cha con, rồi nhìn về nhà sàn. Thầy Từ hô lớn: nó không muốn đi - bảy mươi năm ăn no, nó coi đây là chuồng của nó. Con gà lửa xòe cánh phủ qua nửa sân, hơi nóng phả lên mặt mọi người như hơi lò. Nó cúi xuống nhìn cha Thanh - người của huyết thống nuôi nó - như dò xét có nên giữ lại không."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fire-spirit",
+      "caption": "Khoảnh khắc nguy hiểm",
+      "text": "Khoảnh khắc ấy ai cũng nín thở - một đứa trẻ trong đám xem bật khóc, người mẹ vội bịt miệng nó. Con gà lửa giật đầu về phía tiếng khóc, mắt than hồng sáng lên. Thầy Từ tăng nhịp chú ngữ, tay ông run đầu tiên trong đêm. Nếu nó lao vào đám người thì không ai cứu được - và hồn điên ấy sẽ mãi mãi không đi được nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fire-spirit",
+      "caption": "Cái Nở xuất hiện",
+      "text": "Ngay lúc ấy, từ trong hũ, luồng sáng thứ hai dâng lên - dịu hơn, trắng xanh như ánh trăng hạ xuống. Hình dáng một người đàn bà khăn piêu hiện ra giữa sân - cái Nở, thật sự, bảy mươi năm sau. Bà đứng giữa con gà lửa và hai cha con. Bà không nhìn người nhà Thanh - bà quay sang nhìn con gà lửa, và nói bằng giọng mẹ dỗ con: thôi con - đi với mẹ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fire-spirit",
+      "caption": "Con trai của bà",
+      "text": "Con gà lửa nghe giọng ấy thì ngừng gáy. Lửa trên mình nó từ từ hạ xuống - cánh xòe khép lại, đầu cúi thấp. Hình dáng gà tan dần, lộ ra bên trong: một cậu bé mười hai tuổi, cháy xém áo quần, mắt rũ xuống - hồn đứa con trai cái Nở, thứ bà giữ lại và thứ đã thành thú dữ vì đói và giận. Nó lê về phía mẹ nó - chậm, như sợ bị đuổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Mẹ ôm con",
+      "text": "Cái Nở quỳ xuống ôm lấy đứa con - hai hồn ma ôm nhau giữa sân, ánh sáng trắng và lửa đỏ hòa lại thành một màu ấm kỳ lạ. Cả sân không ai lên tiếng - có người khóc không biết vì sợ hay vì thương. Bà xoa đầu con như xoa đầu đứa trẻ đi chơi xa mới về: mẹ đây rồi - đi với mẹ, đừng đói nữa. Con gà lửa cuối cùng cũng được gọi đúng tên nó - con trai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual",
+      "caption": "Lời cuối của cái Nở",
+      "text": "Trước khi đi, cái Nở quay lại nhìn hai cha con Thanh quỳ trong vòng trầm. Bà nói - giọng vang khắp sân, người bản ai cũng nghe: ta không tha cho ông cố - kẻ ấy đã chịu phán xử của mình. Nhưng mẹ con ta được chôn đàng hoàng và được đi - nợ nhà ngươi coi như xong. Sống tiếp cho tử tế - đừng mua lộc bằng thứ người khác mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-grave",
+      "caption": "Đi về phía mộ",
+      "text": "Hai hình bóng mẹ con lững đi theo sợi dây đồng thầy Từ dẫn sẵn - từ hũ ra nấm mộ mới dưới gốc cây thị, nơi xương bà đã được rửa sạch, đặt trong quan tài nhỏ hai cha con đóng chiều qua, cùng chùm tóc đứa trẻ. Ánh sáng của họ chìm xuống đất như nước ngấm vào gốc cây - rồi tan. Nấm mộ chỉ còn nén hương cháy. Chiếc hũ đứng giữa sân - vỡ tan như vỏ trứng, tro bay theo gió."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Đêm đầu yên tĩnh",
+      "text": "Đêm ấy nhà sàn im - nhưng là cái im khác. Không còn tiếng cào dưới gầm, không còn mùi khét, không còn cái nặng đè trên nóc nhà. Thanh nằm nghe - và lần đầu tiên, tiếng dế ngoài sân chỉ là tiếng dế. Bản ấy ngủ yên. Với cả bản, nỗi sợ ba chục năm đã chôn theo bà ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dawn",
+      "caption": "Sáng hôm sau",
+      "text": "Sáng hôm sau sương vẫn phủ thung lũng, nhưng trông khác - sương sáng hơn, như mỏng đi. Người bản dỡ những bó rơm ớt treo suốt ba chục năm xuống. Bác Sẩm sang nhà mang theo rổ trứng - lần đầu tiên ai đó đến nhà này bằng cửa chính với nụ cười. Ông Lường nói câu cả bản đợi: xong rồi - nhà ông Lực sạch rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dawn",
+      "caption": "Cái giá cuối cùng",
+      "text": "Nhưng lộc thì đi theo nó - đúng như thầy Từ cảnh báo. Vụ mùa năm ấy nhà Thanh hao hụt, con trâu già nhất chết. Nhà nghèo lại - trở về đúng mức nhà ấy đáng lẽ phải có nếu không mượn lộc bảy mươi năm. Cha Thanh không buồn - ông nói: nghèo thật còn hơn giàu mượn. Ít ra giờ đêm nào tao cũng ngủ được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Bản thay đổi",
+      "text": "Bản cũng đổi - đêm mùng một trở lại là đêm bình thường, chuồng gà không còn khóa kỹ như chuồng cọp. Người bản bắt đầu qua lại với nhà Thanh, có người còn xin lỗi vì đã xa lánh. Ông Lường kể lại cho lũ trẻ chuyện đêm rằm như kể chuyện cổ - cụ mất cái thương cho bà Nở, cụ nhớ bà từ hồi bà còn bán ma đi ngang qua bản."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Cha nói về ông cố",
+      "text": "Trước khi về lại thành phố, cha Thanh nói với con một câu cuối về ông cố - người ông chưa từng gặp: ông cố giết người thì tội ông cố mang - nhưng ông cố cũng để lại cuốn sổ ấy. Kẻ ác thuần thì đốt sổ đi - ông cố giấu nó cho đời sau tìm, tức là ông ấy muốn ngày này đến. Giờ anh mới hiểu - sổ nhật ký là phần lời xin lỗi mà ông cố không dám nói khi còn sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-grave",
+      "caption": "Hai nấm mộ",
+      "text": "Dưới gốc cây thị giờ có hai nấm mộ nhỏ - cái Nở và con trai bà, mộ cắm tấm bia gỗ mộc mạc do chính Thanh đẽo. Mỗi tuần anh thắp hương cho họ như thắp cho gia tiên. Bản nhìn thấy và hiểu - người bản bắt đầu cũng thắp hương cho bà Nở, gọi bà là bà Mo nhỏ. Oan hồn một thời bị giam thành bùa - giờ được thờ như người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Thanh ở lại",
+      "text": "Thanh không về Hà Nội - anh xin chuyển công việc về huyện, ở lại căn nhà sàn. Anh sửa lại nhà, mở lại khung cửi của bà, nuôi một đàn gà nhỏ - lần đầu tiên sau bốn đời, nhà này nuôi được gà. Đàn gà sống khỏe, gáy mỗi sớm - tiếng gà thật, tiếng của buổi sáng chứ không phải nửa đêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Người kể chuyện",
+      "text": "Tối tối, trẻ con trong bản hay kéo sang nhà Thanh nghe kể chuyện - chuyện cái Nở, chuyện hũ ma gà, chuyện ba đời nhà anh trả nợ. Anh kể cho chúng nghe như bà nội từng kể cho anh - và mỗi lần kể, anh nhấn một câu: cái đáng sợ nhất không phải ma - cái đáng sợ nhất là tham. Tham thì người biến ma thành của, rồi bị của biến thành nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Đêm rằm năm sau",
+      "text": "Đêm rằm năm sau, Thanh ngồi hiên nhà nhìn trăng như đúng một năm trước. Từ chuồng gà vọng tiếng ỉa ỉa của đàn gà con - tiếng sống, tiếng bình thường, tiếng mà anh giờ mới biết quý. Dưới gốc cây thị, hai nấm mộ yên trong bóng rễ. Anh thắp nén hương cho bà Nở và con trai bà - rồi ngồi yên nghe bản ngủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hamlet-dawn",
+      "caption": "Lời kết",
+      "text": "Chuyện hũ ma gà của bản Lùng Thành đến đây là hết - nhưng người ta bảo, chỗ nào còn có nhà đổi vận quá nhanh thì chỗ đó còn có hũ. Câu chuyện của nhà Thanh không phải để răn ma - để răn người. Cảm ơn các bạn đã nghe cả năm tập. Nếu thấy câu chuyện đáng nghe, hãy để lại một lượt thích và theo dõi kênh - Bà Tư sẽ còn kể tiếp."
+    }
+  ]
+}

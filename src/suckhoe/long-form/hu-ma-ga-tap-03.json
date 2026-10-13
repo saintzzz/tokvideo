@@ -1,0 +1,220 @@
+{
+  "slug": "hu-ma-ga-tap-03",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HŨ MA GÀ | Tập 3: Đêm Ma Đói - Hũ Không Thể Bỏ | Truyện Ma Dài",
+  "description": "Thanh thử chôn hũ ma gà xuống đáy suối - sáng hôm sau hũ ngồi lại giữa sân. Ma đói bắt đầu trả thù: gia súc chết hàng loạt, đứa em họ nói bằng giọng người đã khuất. Thứ trong hũ không phải thú nuôi - nó là một oan hồn bị trói.\n\nTruyện ma dài 5 tập về bùa ngải dân gian, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "truyện ma dân gian",
+    "bùa ngải",
+    "ma gà",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #buangai #maga #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "HŨ TỰ VỀ GIỮA SÂN",
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hu-ma-ga-tap-01/hook.jpg",
+    "mountain-hamlet": "images/suckhoe-long/hu-ma-ga-tap-01/mountain-hamlet.jpg",
+    "stilt-house": "images/suckhoe-long/hu-ma-ga-tap-01/stilt-house.jpg",
+    "spirit-jar": "images/suckhoe-long/hu-ma-ga-tap-01/spirit-jar.jpg",
+    "family-altar": "images/suckhoe-long/hu-ma-ga-tap-01/family-altar.jpg",
+    "forest-path": "images/suckhoe-long/hu-ma-ga-tap-01/forest-path.jpg",
+    "night-yard": "images/suckhoe-long/hu-ma-ga-tap-01/night-yard.jpg",
+    "mist-valley": "images/suckhoe-long/hu-ma-ga-tap-01/mist-valley.jpg",
+    "stream-bed": "images/suckhoe-long/hu-ma-ga-tap-03/stream-bed.jpg",
+    "jar-returned": "images/suckhoe-long/hu-ma-ga-tap-03/jar-returned.jpg",
+    "possessed-child": "images/suckhoe-long/hu-ma-ga-tap-03/possessed-child.jpg"
+  },
+  "scenePrompts": {
+    "stream-bed": "a dark mountain stream at dusk, a man lowering a sealed black clay jar into the water, mist, cold wet stones, ominous",
+    "jar-returned": "a sealed black clay jar bound with red cord sitting alone in the middle of a stilt house yard at dawn, wet mud footprints leading to it, no people, dread",
+    "possessed-child": "a small child standing rigid in a dark stilt house doorway at night, backlit, head tilted, unsettling, Vietnamese highland house interior"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập trước: nhà thầy Mo",
+      "text": "Tập trước, cuốn sổ da đen của ông cố hé lộ sự thật: hũ ma gà là một vụ mua bán lộc đời - ba đời nhà Thanh nuôi nó và trả giá bằng những cái chết. Lời nhắn cuối của ông nội chỉ một đường duy nhất: tìm thầy Mo. Thanh lên bản trên và gặp được thầy Từ - con trai thầy Mo - người đáp lời anh trước cả khi anh gõ cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Nhà thầy Từ",
+      "text": "Nhà thầy Từ là căn nhà sàn xiêu vẹo nhất bản trên - mái rêu dày, cột mục, trước hiên treo đầy xương động vật và những bó rơm đen. Thầy Từ mở cửa trước khi Thanh kịp gõ, ông nhìn anh bằng đôi mắt đục của người ngoài bảy mươi: nhà ông Lực đấy à - vào đi, ta đợi ba chục năm rồi. Không phải đợi anh - đợi ai đó của nhà ấy quay lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Thầy từ chối",
+      "text": "Thầy Từ nghe Thanh kể hết thì lắc đầu: cha ta chết rồi, ta không nối nghiệp. Cái hũ ấy cha ta không làm - cha ta chỉ trông giữ hộ một lần, rồi trả cho người khác. Người đem nó đi bán cho ông cố mày là cái Nở - người bán ma. Thanh tái mặt: cái Nở - người phụ nữ biến mất đêm ông cố đem hũ về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Người bán ma",
+      "text": "Thầy Từ kể: cái Nở là người phụ nữ bán ma quanh vùng - bà thu gom những linh hồn không ai thờ, chết oan, chết đường, bỏ vào hũ bán cho ai cần đổi vận. Nghề ấy độc - bà ta phải nuôi chúng trước khi bán. Đêm ông cố mày mua hũ, bà ấy định bán nốt rồi nghỉ nghề - sáng hôm sau nhà bà hoang, bà biến mất. Cả bản trên tin là ma bà nuôi quay lại đòi chủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Cha thầy Mo",
+      "text": "Thanh hỏi về ông Mo già - thầy Từ chỉ lên sườn núi sau nhà: mộ cha ta ở đó, chết hai mươi năm rồi. Ông nói giọng phức tạp: cha ta hối hận vụ cái Nở đến chết - ông tin mình đã nên đoán được nhà nào mua hũ ấy thì nhà ấy trả giá. Ông lưu lại một cái hộp sắt toàn đồ nghề - ta chưa từng mở. Nếu mày cần, ta cho mày - nhưng cái trong đó không phải cho người không biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Hộp của thầy Mo",
+      "text": "Cái hộp sắt gỉ mở ra mùi trầm cũ và mùi gỗ mục. Trong đó là đồ nghề của thầy Mo già: một chùm dây đồng, mấy tờ bùa khung xương, một con dao nghi lễ cán sừng, và một cuốn sổ nhỏ bọc da - khác với sổ ông cố, đây là sổ lễ. Trang đầu thầy Mo viết: ma không phải của - ma là người chưa đi được. Người mua ma là người mua nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Trong hũ là ai",
+      "text": "Thanh hỏi: vậy trong hũ nhà cháu là linh hồn ai. Thầy Từ im lâu, rồi nói: ta không biết - nhưng cha ta từng nói cái Nở nuôi một thứ mà cả bà ta cũng sợ - một oan hồn chết bằng lửa, đói từ kiếp trước. Nó ăn qua gà trống vì gà trống là linh vật dẫn dương. Nhưng cái nó thật sự muốn ăn là thứ đã làm nó chết - công lý, hoặc trả thù."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forest-path",
+      "caption": "Đường về",
+      "text": "Thầy Từ đưa Thanh ra cửa, chỉ dặn một câu: nếu mày định chôn nó hay vứt nó thì đừng - nó về, và lần về sau nó đói hơn lần trước. Ta không làm lễ nữa, nhưng ta biết đủ để nói mày nghe: thứ đó không phải của để sở hữu - nó là nợ. Và nợ thì không đốt được, chỉ trả được. Thanh đi xuống đường rừng, lưng nặng như đeo cả hũ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stream-bed",
+      "caption": "Chôn hũ",
+      "text": "Về đến nhà đã xế chiều. Thanh quyết định thử dù sao cũng thử - anh bế hũ xuống Khe Khóc, chỗ nước sâu nhất, chỗ người ta tìm thấy xác ông nội. Anh chôn hũ xuống đáy suối, đắp đá nặng lên trên, đứng nhìn đến khi nước chảy qua phẳng lặng như chưa có gì. Anh nói với dòng suối: về đi - về với nơi ông nội nằm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Đêm yên tĩnh",
+      "text": "Đêm ấy nhà im - im khác thường. Không tiếng cào, không mùi khét, không tiếng gáy. Thanh nằm thao thức chờ, và cái im ấy đáng sợ hơn cả tiếng động - im của cái gì đang chờ. Anh mơ màng ngủ lúc gần sáng, mơ thấy nước - nước đen chảy ngược lên chân cầu thang, lênh láng vào gầm nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-returned",
+      "caption": "Hũ tự về",
+      "text": "Sáng ra Thanh mở cửa và đứng sững: chiếc hũ ngồi giữa sân. Đúng chiếc hũ - vải đỏ, ba vòng dây, hai tờ bùa - ướt sũng nước, đất suối còn đọng quanh thân. Trên nền sân, một hàng dấu chân trần nhỏ lê từ bờ rào vào tận chỗ hũ ngồi - dấu chân lùi, gót hướng vào nhà, như ai đó bế hũ đi lùi về phía trước mặt nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-returned",
+      "caption": "Không bỏ được",
+      "text": "Thanh ngồi xuống bậc thang, hai tay ôm đầu. Thầy Từ nói đúng - nó về. Không phải về nhà - về với người có huyết thống. Bế hũ bỏ lại vào buồng, anh cảm nhận qua lớp sành một sự ấm khẽ - ấm như hơi thở, như nó đang mỉm cười trong đó. Anh hiểu: từ giờ không còn chuyện chạy hay giấu - chỉ còn nuôi hoặc trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Ma đói",
+      "text": "Nhưng đã trễ - hơn một tháng không được ăn, rồi một bữa duy nhất đêm mùng một. Ma gà bắt đầu đói thật. Ba đêm liền sau đó, gia súc trong bản chết rần rần - không chỉ gà, cả lợn con, vịt. Người bản chôn xác gia súc theo bờ suối, không ai nói to nhưng ai cũng biết nó là thứ gì - và nó ở nhà nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-hamlet",
+      "caption": "Bản lên án",
+      "text": "Chiều hôm ấy một nhóm già làng đến nhà Thanh - không gõ cửa, đứng ngoài rào. Ông Lường già nhất nói thay cả bản: nhà mày nuôi nó thì nhà mày giữ nó cho kỹ - để nó ra bản ăn là tội. Hoặc nhà mày dọn đi, hoặc làm như bà mày - cột nó lại bằng mạng mình. Không ai nói câu thứ ba - nhưng cả bản đều nghe rõ: câu thứ ba là nếu nó giết thêm, người bản sẽ tự giải quyết cả nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Đêm bạo lực",
+      "text": "Đêm ấy là đêm tồi tệ nhất. Tiếng cào không còn dưới gầm nữa - nó đi vòng quanh nhà, trên sân, dưới cầu thang, như đánh hơi tìm kẽ hở. Thanh khóa hết cửa, ngồi ôm cây rựa giữa nhà. Đến nửa đêm, tiếng gáy vang lên không phải ba tiếng - mà liên tục, điên cuồng, như hàng chục con gà bị bóp cổ cùng lúc. Ván nhà rung. Ban thờ lay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Bóng trên tường",
+      "text": "Giữa cơn điên ấy, ngọn lửa bếp lay động và Thanh thấy trên vách ván một bóng đổ - bóng không của anh. Bóng có hình dạng kỳ lạ: phần thân như người còng xuống, phần đầu lại có mào và mỏ - nửa người nửa gà, cao chạm xà nhà. Bóng đứng yên trên tường như đang nhìn xuống anh. Khi lửa bếp hắt lại, bóng biến mất - nhưng anh đã thấy nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Tiếng trên mái",
+      "text": "Chưa hết - sau tiếng gáy, có tiếng trên mái nhà. Nặng, chắc, tiếng vuốt và tiếng bước - thứ gì đó đang đi trên mái ngói, từ đầu nhà sang cuối nhà. Ngói kêu răng rắc dưới bước ấy. Thanh ngước nhìn trần tối, từng mảng vữa rơi xuống mặt anh. Tiếng bước dừng ngay trên chỗ anh nằm ngủ - rồi im. Nó biết anh ngủ chỗ nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-yard",
+      "caption": "Nó lên nhà",
+      "text": "Rồi tiếng gáy tắt - và Thanh nghe một âm thanh chưa từng có: tiếng vuốt trên sàn nhà - ngay trên đầu gầm, ngay bên ngoài cửa chính. Thứ đó đã lên khỏi gầm nhà. Tiếng vuốt lê trên ván, đi tới đi lui trước cửa như tuần. Anh ngồi im đến tê cứng, rựa trong tay ướt mồ hôi. Nó đứng trước cửa rất lâu, rồi xuống lại - như chỉ để nhắc anh: ta lên được rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "possessed-child",
+      "caption": "Đứa em họ bị nhập",
+      "text": "Tệ hơn nữa đến sáng hôm sau - bác Sẩm chạy sang, mặt cắt không còn giọt máu: thằng bé cháu tao nói khùng nói điên cả đêm. Thanh chạy sang - thằng bé mười tuổi ngồi thẳng trên giường, mắt mở nhưng nhìn xuyên qua người. Nó nói bằng một giọng không phải giọng nó - giọng đàn bà già, khô, chậm: cho ta ăn - nhà ông Lực cho ta ăn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "possessed-child",
+      "caption": "Giọng của người chết",
+      "text": "Bác Sẩm khóc không ra tiếng - giọng ấy bác nhận ra: giọng mẹ bác, người đã mất tám năm. Nó mượn miệng thằng bé nói chuyện bằng giọng người nhà - đúng như ông cố viết trong sổ. Thanh đứng giữa nhà, lạnh cả người - nó không chỉ ở trong hũ nữa, nó đi được ra ngoài, nó chạm được vào người. Bữa ăn đêm mùng một không làm nó no - nó chỉ đánh thức cái đói lớn hơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "possessed-child",
+      "caption": "Đòi món mới",
+      "text": "Thằng bé - hay giọng trong miệng nó - quay đầu nhìn thẳng Thanh, nói câu khiến cả nhà lạnh sống lưng: gà trống thì vừa đủ cho mùa này - mùa sau ta đòi món khác. Ta đòi cái mà nhà ngươi nợ ta. Ngươi đem ta về nhà ngươi, ngươi phải trả nợ cho ta. Rồi thằng bé ngất xỉu, tỉnh lại không nhớ gì - chỉ sốt cao cả ngày."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Bà Sẩm kể thật",
+      "text": "Chiều đó bác Sẩm - vợ bác Sẩm - ngồi lại với Thanh, lần này không giấu: bà nói chuyện bà nội đêm cuối. Bà nội biết mình sắp hết sức giữ nó - bà đã viết sẵn thư gửi Thanh, nhét trong hòm - thư Thanh chưa tìm thấy. Đêm ấy bà gọi bác Sẩm qua, dặn: tối nay tôi không cho nó ăn - mai mốt cháu Thanh về, bảo cháu đừng trách tôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house",
+      "caption": "Đêm bà nội chết",
+      "text": "Bác Sẩm kể: đêm ấy cả nhà bác không dám ngủ - họ nghe tiếng từ nhà bà nội cả đêm. Không phải tiếng gáy - tiếng người. Tiếng bà nội nói chuyện với ai đó, chuyện rất lâu, giọng bà bình tĩnh như đang khuyên. Sáng ra bà mất trên sập, mặt bình an, tay cầm chùm chìa khóa buồng. Bà đã nói chuyện với nó cả đêm trước khi đi - và chết trong khi vẫn giữ nó ở trong hũ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Thư của bà nội",
+      "text": "Đêm đó Thanh lục lại hòm gỗ của bà - tìm kỹ hơn lần trước. Dưới đáy thật, giấu trong tà áo dài thờ của bà, có lá thư tay để sẵn cho anh. Bà viết: cháu Thanh - nếu cháu đọc thư này thì bà đã đi rồi, và cái hũ vẫn còn. Bà xin lỗi đã không giết được nó - bà chỉ đủ sức nhốt nó. Việc bà không làm nổi, để lại cháu - nếu cháu dám."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Nội dung thư",
+      "text": "Bà viết tiếp: nó không phải ma nhà - nó là người. Người bị giết để nhốt vào hũ, để làm nguyên liệu cho cái gọi là ma gà. Bà không biết nó tên gì, nhà đâu - nhưng nó kể cho bà nghe suốt ba mươi năm. Nó muốn thoát, nhưng thoát sai cách thì nó thành ma thật - ăn cả bản. Muốn giải nó đúng phải biết nó là ai - hỏi thầy Mo, hỏi cái Nở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Người bị giết",
+      "text": "Dòng cuối thư, chữ bà run nhẹ: đêm nay bà hỏi nó tên - nó không nói. Nó chỉ nói một điều: nó bị giết ở đâu đó rất gần nhà này, xương nó vẫn còn đâu đây. Nếu ai tìm được xương nó, chôn nó đàng hoàng, nó sẽ đi - nó chỉ muốn đi. Bà không kịp tìm. Cháu - nếu còn cách nào, cho nó đi đàng hoàng nhé. Bà thương nó, dù nó là thứ giết bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Ba mươi năm canh giữ",
+      "text": "Gấp thư lại, Thanh khóc - lần đầu tiên từ khi về. Anh khóc cho bà nội - người đã ôm cái đói ấy ba mươi năm một mình, để cả bản ngủ yên. Không ai trong bản biết bà đã đánh đổi gì - họ chỉ thấy nhà bà giàu, rồi nhà bà im. Anh khóc cả cho thứ trong hũ - một người bị giết, bị nhốt, bị nuôi như súc vật để lấy lộc cho người khác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Nó là ai",
+      "text": "Thanh ngồi trước buồng kho đến khuya, nhìn chiếc hũ bằng con mắt khác. Ba đời nhà anh nuôi một oan hồn - một người bị giết để làm bùa. Cái Nở biến mất đúng đêm ông cố đem hũ về. Cái giá của lộc không chỉ là gà trống - là một mạng người, và ba đời nỗi đau. Anh phải tìm ra cái Nở bị giết ở đâu - và ai giết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "spirit-jar",
+      "caption": "Kết tập ba",
+      "text": "Đêm đó, khi Thanh quay lại buồng kho để khóa cửa, anh thấy thân hũ đã nứt - một đường nứt nhỏ chạy ngang, từ trong ra. Và qua kẽ nứt ấy, trong bóng tối, có một điểm sáng nhỏ - một con mắt. Mắt gà mà không phải mắt gà - mắt có mi, có biểu cảm, đang nhìn anh chằm chằm. Anh đứng đó nhìn lại, và điểm sáng ấy chớp - như một cái nháy mắt."
+    }
+  ]
+}
