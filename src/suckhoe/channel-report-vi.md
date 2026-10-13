@@ -1,23 +1,23 @@
-# Channel report — 2026-10-12
+# Channel report — 2026-10-13
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 55
+Total views: 71
 Total videos: 35
 
 ## Last 28 days (channel-wide)
 
-Views: 44
-Watch time (minutes): 24
-Subscribers gained: 0
-Subscribers lost: 1
+Views: 68
+Watch time (minutes): 71
+Subscribers gained: 1
+Subscribers lost: 2
 Net subscriber change: -1
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Rùa thần hiện lên giữa hồ - thanh kiếm bay về tay người cũ - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-11 |
+| Rùa thần hiện lên giữa hồ - thanh kiếm bay về tay người cũ - Tập 2 #Shorts | 2 | 0 | 0 | 2026-10-11 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 3: Đêm Rằm Đào Giếng - Thứ Kẻ Giết Người Ném Theo | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 4: Bà Cụ 80 Tuổi Đối Chất Trước Cổng Nhà Ân | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 5: Hồi Kết - Oan Hồn Được Minh Oan | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
