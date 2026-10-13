@@ -1,6 +1,11 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
+// Scene names are freeform per-arc (each horror series invents its own
+// locations). The union below documents the canonical names for IDE
+// autocomplete; `(string & {})` keeps the field open — beats carrying a
+// sceneImage don't need a gradient at all, and unknown names degrade to
+// FALLBACK_GRADIENT instead of crashing a multi-hour render.
 export type SceneName =
   | "hook"
   | "kitchen"
@@ -27,9 +32,12 @@ export type SceneName =
   | "ancestral-house"
   | "village-square"
   | "well-shrine"
-  | "dawn-village";
+  | "dawn-village"
+  | (string & {});
 
-const GRADIENTS: Record<SceneName, [string, string]> = {
+const FALLBACK_GRADIENT: [string, string] = ["#14161a", "#050607"];
+
+const GRADIENTS: Record<string, [string, string]> = {
   hook: ["#1a2a1f", "#0c140e"],
   kitchen: ["#3a2a1a", "#1a120a"],
   car: ["#1a2436", "#0a0e18"],
@@ -296,7 +304,7 @@ export const LongFormSceneBackground: React.FC<{
 }> = ({ scene, children, image, variant = 0 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const [from, to] = GRADIENTS[scene];
+  const [from, to] = GRADIENTS[scene] ?? FALLBACK_GRADIENT;
 
   const particles = useMemo(
     () =>

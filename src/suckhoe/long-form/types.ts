@@ -47,7 +47,11 @@ export type LongFormBeat = {
     | "ancestral-house"
     | "village-square"
     | "well-shrine"
-    | "dawn-village";
+    | "dawn-village"
+    // Per-arc freeform scenes (e.g. "Dung tra loi" invents 30+ location
+    // names) — `(string & {})` keeps autocomplete without forcing every
+    // new arc to extend this union. GRADIENTS degrades to a fallback.
+    | (string & {});
   /**
    * Present only on the line where the granddaughter reveals the real
    * research behind a remedy — triggers the animated science-diagram
