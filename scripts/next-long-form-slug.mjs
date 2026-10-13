@@ -8,6 +8,13 @@ import path from "node:path";
 // successful insert. Ordering follows filename sort so tap-01 lands
 // before tap-02 of the same series.
 //
+// Arc-atomicity rule (owner directive 2026-10-13): a whole arc ships in
+// ONE day across the six daily publish ticks. A mid-arc episode is
+// always eligible. An episode that STARTS a new arc (its arc prefix
+// differs from the most recently published episode's) is only eligible
+// during the first daily slot (VN 05:00-08:59); later ticks skip, so
+// the arc can never straddle two days.
+//
 // Usage: SLUG=$(node scripts/next-long-form-slug.mjs)
 
 const root = path.join(import.meta.dirname, "..");
@@ -33,5 +40,29 @@ for (const f of files) {
 // queuePriority (lower first) overrides filename order — the Giếng Củ
 // arc carries priority 1 so it finishes before the xianxia pilots.
 candidates.sort((a, b) => a.priority - b.priority || a.slug.localeCompare(b.slug));
-if (candidates.length) console.log(candidates[0].slug);
+
+const arcOf = (slug) => slug.replace(/-tap-\d+$/, "");
+const arcStartsToday = () => {
+  // VN (UTC+7, no DST) hour of the current tick — the first daily slot
+  // is 05:30 VN, so arcs may only begin while vnHour < 9.
+  const vnHour = (new Date().getUTCHours() + 7) % 24;
+  return vnHour >= 5 && vnHour < 9;
+};
+
+const next = candidates[0];
+if (next) {
+  const latest = Object.values(ledger)
+    .filter((e) => e?.videoId && e.publishedAt)
+    .sort((a, b) => String(a.publishedAt).localeCompare(String(b.publishedAt)))
+    .at(-1);
+  const lastSlug = Object.entries(ledger).find(([, v]) => v === latest)?.[0];
+  const continuingArc = lastSlug && arcOf(lastSlug) === arcOf(next.slug);
+  if (continuingArc || arcStartsToday()) {
+    console.log(next.slug);
+  } else {
+    console.error(
+      `Holding new arc "${arcOf(next.slug)}" — arcs only start on the first daily slot (VN 05:00-08:59).`
+    );
+  }
+}
 // Queue drained — empty stdout, callers should no-op.

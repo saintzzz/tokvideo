@@ -59,15 +59,21 @@ on:
     # publish cron and landing on the exact same minute made a stale-
     # checkout push race more likely.
     - cron: "40 0 * * *"
-    # Long-form story publishing, 4x/day (owner directive 2026-10-09:
-    # "video dài 3-4 video/ngày"). Each tick runs the full pipeline for
-    # the next unpublished episode in src/suckhoe/long-form/ — voiceover,
-    # render, thumbnail, upload, ledger commit — picking the slug via
-    # scripts/next-long-form-slug.mjs and no-opping when the queue is
-    # drained. Hours spread to stay clear of both Shorts crons and each
-    # other: 4h, 10h, 16h, 22h Vietnam (21, 3, 9, 15 UTC). :30 offsets
-    # avoid exact-minute collisions with the other crons' checkouts.
-    - cron: "30 21,3,9,15 * * *"
+    # Long-form story publishing, 6x/day (owner directive 2026-10-13:
+    # "1 ngày phải đăng đủ số tập của 1 câu chuyện" — a whole 5-episode
+    # arc ships inside one day, spread across VN peak hours instead of
+    # the 2026-10-10 all-in-10-minutes dump that buried taps 2-5).
+    # Each tick runs the full pipeline for the next unpublished episode
+    # in src/suckhoe/long-form/ — voiceover, render, thumbnail, upload,
+    # ledger commit — picking the slug via scripts/next-long-form-slug.mjs
+    # and no-opping when the queue is drained. Slots (VN, UTC+7):
+    # 05:30 / 10:30 / 13:30 / 16:30 / 19:30 / 22:30 — morning commute,
+    # lunch, afternoon, and the 19-23h horror prime window. Uploads land
+    # ~40-60min after each tick. New arcs can only start on the 05:30
+    # slot (enforced in the picker) so a 5-ep arc always completes the
+    # same VN day. :30 offsets avoid exact-minute collisions with the
+    # other crons' checkouts.
+    - cron: "30 22,3,6,9,12,15 * * *"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -1005,7 +1011,7 @@ jobs:
   # scripts/next-long-form-slug.mjs and exits quietly when every
   # episode in src/suckhoe/long-form/ already has a ledger videoId.
   suckhoe-long-next:
-    if: github.event_name == 'schedule' && github.event.schedule == '30 21,3,9,15 * * *'
+    if: github.event_name == 'schedule' && github.event.schedule == '30 22,3,6,9,12,15 * * *'
     runs-on: ubuntu-latest
     permissions:
       contents: write
