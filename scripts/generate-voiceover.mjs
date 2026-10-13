@@ -1,4 +1,4 @@
-import { createWriteStream } from "node:fs";
+import { createWriteStream, existsSync } from "node:fs";
 import { mkdir, readdir } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -429,7 +429,28 @@ const healthcheckVoices = async () => {
   }
 };
 
-await healthcheckVoices();
+// If RESUME=1 and every requested beat already has a valid mp3, no TTS
+// call will be made at all — skip the healthcheck so a down endpoint
+// doesn't abort a run that needs zero synthesis (e.g. CI with committed
+// audio, where GitHub-runner IPs get 403'd by the Edge TTS endpoint).
+const allBeatsCached = () => {
+  if (!RESUME) return false;
+  for (const id of ids) {
+    const video = VIDEOS[id];
+    for (const [key, entry] of Object.entries(video.narration)) {
+      const text = typeof entry === "object" && entry !== null ? entry.text : entry;
+      if (!text || !String(text).trim()) continue;
+      const check = sanityCheckAudio(path.join(video.audioDir, `${key}.mp3`));
+      if (!(check.ok && Number.isFinite(check.durationSec))) return false;
+    }
+  }
+  return true;
+};
+if (allBeatsCached()) {
+  console.log("All requested beats already have valid audio — skipping TTS healthcheck (RESUME=1).");
+} else {
+  await healthcheckVoices();
+}
 
 // ── Karaoke caption emission (Q-03) — shared implementation lives in
 // lib/captions.mjs so backfill-captions.mjs can rebuild caption JSONs
@@ -469,7 +490,12 @@ for (const id of ids) {
       polishVoiceover(mp3Path);
     }
     const dur = probeDurationSeconds(mp3Path);
-    if (dur) {
+    // Committed caption JSONs are authoritative — under RESUME=1 a beat
+    // whose audio AND caption both exist is left fully untouched, so a CI
+    // run with committed assets doesn't spend CPU re-running Whisper just
+    // to (possibly) overwrite a good alignment with a fallback one.
+    const captionPath = path.join(captionsRoot, id, `${key}.json`);
+    if (dur && !(RESUME && haveAudio && existsSync(captionPath))) {
       const lang = (id.startsWith("en-") || id.includes("-en") || voice.startsWith("en-")) ? "en" : "vi";
       await writeAlignedCaptions(captionsRoot, id, key, text, mp3Path, dur, lang);
     }

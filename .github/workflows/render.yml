@@ -951,7 +951,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # RESUME=1: when audio was committed with the episode (pre-generated
+      # locally), the generator skips TTS entirely — the Edge TTS endpoint
+      # 403s GitHub-runner IPs intermittently, so committed audio must not
+      # still depend on a live TTS healthcheck.
       - name: Generate voiceover for this episode
+        env:
+          RESUME: "1"
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ github.event.inputs.long_form_slug }}
 
       - name: Render episode
@@ -1039,6 +1045,8 @@ jobs:
 
       - name: Generate voiceover for this episode
         if: steps.pick.outputs.slug != ''
+        env:
+          RESUME: "1"
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ steps.pick.outputs.slug }}
 
       - name: Render episode

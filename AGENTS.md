@@ -61,5 +61,14 @@ compositor itself (`remotion.exe`) works fine. Workaround for local
   model `Xenova/whisper-base`, override via `WHISPER_MODEL`, disable via
   `CAPTION_ALIGN=off`) and falls back to duration-proportional timings
   if alignment fails.
+- Long-form audio/captions are COMMITTED: `public/audio/suckhoe-long/`
+  and `public/captions/suckhoe-long-*/` are the only non-ignored media
+  dirs. Edge TTS 403s GitHub Actions IPs intermittently, so the CI
+  jobs run `RESUME=1 node scripts/generate-voiceover.mjs <id>` —
+  beats whose committed mp3 passes sanity+duration checks are reused,
+  and when every beat is cached the TTS healthcheck is skipped
+  entirely. To prepare a new arc for CI: run generate-voiceover
+  locally with RESUME=1, then commit the episode's audio dir and
+  captions dir.
 - Local render scripts accept `REMOTION_BIN_DIR=<dir>` to inject the
   Windows ffmpeg workaround above without editing commands.
