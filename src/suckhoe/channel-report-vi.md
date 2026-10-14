@@ -1,14 +1,14 @@
-# Channel report — 2026-10-13
+# Channel report — 2026-10-14
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 71
-Total videos: 35
+Total views: 74
+Total videos: 36
 
 ## Last 28 days (channel-wide)
 
-Views: 68
-Watch time (minutes): 71
+Views: 92
+Watch time (minutes): 96
 Subscribers gained: 1
 Subscribers lost: 2
 Net subscriber change: -1
@@ -17,6 +17,7 @@ Net subscriber change: -1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| ĐỪNG TRẢ LỜI | Tập 1: Về Xóm Cuối Đèo - Mẹ Đã Mất Sao Đêm Còn Gọi Ngoài Cửa | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-14 |
 | Rùa thần hiện lên giữa hồ - thanh kiếm bay về tay người cũ - Tập 2 #Shorts | 2 | 0 | 0 | 2026-10-11 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 3: Đêm Rằm Đào Giếng - Thứ Kẻ Giết Người Ném Theo | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 4: Bà Cụ 80 Tuổi Đối Chất Trước Cổng Nhà Ân | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
@@ -41,5 +42,4 @@ Net subscriber change: -1
 | Bụt hiện ra dạy Tấm chôn xương Bống vào bốn lọ - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-02 |
 | Tấm nuôi cá Bống trong giếng, Cám đứng nấp nhìn từ xa - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-02 |
 | Người lính lạc đường ngồi xuống bên ông Hòa rồi bật khóc - Tập 2 #Shorts | 0 | 0 | 0 | 2026-10-01 |
-| Ông lính già chiều nào cũng ra gốc đa chờ người - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-01 |
 
