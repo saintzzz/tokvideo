@@ -21,6 +21,12 @@ on:
         description: "suckhoe-long only: which long-form episode slug to generate/render/upload (any slug in src/suckhoe/long-form/)"
         type: string
         default: "kiem-hon-thuc-tinh-tap-01"
+  # repository_dispatch lets automation (a repo-scoped token — the
+  # workflow_dispatch endpoint needs the broader `workflow` scope)
+  # trigger one long-form publish: POST /dispatches with
+  # event_type=publish-long and client_payload {slug, privacy?}.
+  repository_dispatch:
+    types: [publish-long]
   push:
     branches: [main]
     paths-ignore:
@@ -934,10 +940,13 @@ jobs:
   # renders, and uploads (private by default) exactly one long-form
   # episode by slug. See src/suckhoe/long-form/.
   suckhoe-long:
-    if: github.event.inputs.video == 'suckhoe-long'
+    if: github.event.inputs.video == 'suckhoe-long' || github.event_name == 'repository_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      LONG_SLUG: ${{ github.event.inputs.long_form_slug || github.event.client_payload.slug }}
+      PRIVACY_OVERRIDE: ${{ github.event.client_payload.privacy }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -958,24 +967,24 @@ jobs:
       - name: Generate voiceover for this episode
         env:
           RESUME: "1"
-        run: node scripts/generate-voiceover.mjs suckhoe-long-${{ github.event.inputs.long_form_slug }}
+        run: node scripts/generate-voiceover.mjs suckhoe-long-${{ env.LONG_SLUG }}
 
       - name: Render episode
-        run: node scripts/render-suckhoe-long.mjs ${{ github.event.inputs.long_form_slug }}
+        run: node scripts/render-suckhoe-long.mjs ${{ env.LONG_SLUG }}
 
       # Thumbnail is nice-to-have — a failure here must never skip the
       # upload (observed 2026-10-09: missing drawtext on the runner's
       # ffmpeg killed the step and the whole publish).
       - name: Make thumbnail
         continue-on-error: true
-        run: node scripts/make-long-thumbnail.mjs ${{ github.event.inputs.long_form_slug }}
+        run: node scripts/make-long-thumbnail.mjs ${{ env.LONG_SLUG }}
 
       - name: Upload video artifact
         if: always()
         uses: actions/upload-artifact@v4
         continue-on-error: true
         with:
-          name: suckhoe-long-${{ github.event.inputs.long_form_slug }}
+          name: suckhoe-long-${{ env.LONG_SLUG }}
           path: out/SucKhoeLong-*.mp4
           retention-days: 7
           if-no-files-found: ignore
@@ -986,8 +995,8 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
-          YOUTUBE_LONG_PRIVACY_STATUS: ${{ vars.YOUTUBE_LONG_PRIVACY_STATUS }}
-        run: node scripts/upload-youtube-long.mjs ${{ github.event.inputs.long_form_slug }}
+          YOUTUBE_LONG_PRIVACY_STATUS: ${{ env.PRIVACY_OVERRIDE || vars.YOUTUBE_LONG_PRIVACY_STATUS }}
+        run: node scripts/upload-youtube-long.mjs ${{ env.LONG_SLUG }}
 
       - name: Commit long-form ledger
         if: always()
@@ -995,7 +1004,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published-long.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Record long-form upload ${{ github.event.inputs.long_form_slug }} [skip ci]"
+          git diff --staged --quiet || git commit -m "Record long-form upload ${{ env.LONG_SLUG }} [skip ci]"
           for i in 1 2 3 4 5; do
             git fetch origin main
             if git rebase origin/main; then
