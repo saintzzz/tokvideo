@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
+import { sanityCheckAudio } from "./lib/audio-probe.mjs";
 
 // Prints the next unpublished long-form slug to stdout (empty output =
 // queue drained). "Published" means present in published-long.json with
@@ -35,7 +36,7 @@ for (const f of files) {
   // Same isStory rule as upload-youtube-long.mjs.
   const episode = JSON.parse(await readFile(path.join(longFormDir, f), "utf8"));
   if (!episode.beats?.every((b) => b.speaker === "narrator")) continue;
-  candidates.push({ slug, priority: episode.queuePriority ?? 99 });
+  candidates.push({ slug, priority: episode.queuePriority ?? 99, episode });
 }
 // queuePriority (lower first) overrides filename order — the Giếng Củ
 // arc carries priority 1 so it finishes before the xianxia pilots.
@@ -49,20 +50,41 @@ const arcStartsToday = () => {
   return vnHour >= 5 && vnHour < 9;
 };
 
+// Readiness gate (2026-10-15): an episode is only pickable when every
+// beat has a committed, sanity-passing mp3. Edge TTS 403s GitHub
+// Actions IPs, so CI cannot synthesize missing audio — it can only
+// reuse what's in the repo. Picking an episode with incomplete audio
+// used to let the voiceover step run a healthcheck, hit 403, and fail
+// the whole run red (beat-46 of dung-tra-loi-tap-03 was committed as
+// a 0-byte file mid-write and did exactly that). Holding instead turns
+// the same state into a green no-op and the next tick retries.
+const audioDir = (slug) =>
+  path.join(root, "public", "audio", "suckhoe-long", slug);
+const ready = (episode, slug) =>
+  episode.beats.every((_, i) =>
+    sanityCheckAudio(path.join(audioDir(slug), `beat-${i}.mp3`)).ok
+  );
+
 const next = candidates[0];
 if (next) {
-  const latest = Object.values(ledger)
-    .filter((e) => e?.videoId && e.publishedAt)
-    .sort((a, b) => String(a.publishedAt).localeCompare(String(b.publishedAt)))
-    .at(-1);
-  const lastSlug = Object.entries(ledger).find(([, v]) => v === latest)?.[0];
-  const continuingArc = lastSlug && arcOf(lastSlug) === arcOf(next.slug);
-  if (continuingArc || arcStartsToday()) {
-    console.log(next.slug);
-  } else {
+  if (!ready(next.episode, next.slug)) {
     console.error(
-      `Holding new arc "${arcOf(next.slug)}" — arcs only start on the first daily slot (VN 05:00-08:59).`
+      `Holding "${next.slug}" — committed audio incomplete; CI cannot synthesize (Edge TTS 403s runner IPs).`
     );
+  } else {
+    const latest = Object.values(ledger)
+      .filter((e) => e?.videoId && e.publishedAt)
+      .sort((a, b) => String(a.publishedAt).localeCompare(String(b.publishedAt)))
+      .at(-1);
+    const lastSlug = Object.entries(ledger).find(([, v]) => v === latest)?.[0];
+    const continuingArc = lastSlug && arcOf(lastSlug) === arcOf(next.slug);
+    if (continuingArc || arcStartsToday()) {
+      console.log(next.slug);
+    } else {
+      console.error(
+        `Holding new arc "${arcOf(next.slug)}" — arcs only start on the first daily slot (VN 05:00-08:59).`
+      );
+    }
   }
 }
 // Queue drained — empty stdout, callers should no-op.
