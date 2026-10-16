@@ -1,13 +1,13 @@
-# Channel report — 2026-10-15
+# Channel report — 2026-10-16
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
 Total views: 73
-Total videos: 37
+Total videos: 41
 
 ## Last 28 days (channel-wide)
 
-Views: 93
+Views: 92
 Watch time (minutes): 96
 Subscribers gained: 1
 Subscribers lost: 2
@@ -17,8 +17,12 @@ Net subscriber change: -1
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| HŨ MA GÀ | Tập 1: Di Sản Của Bà - Tiếng Gà Gáy Từ Buồng Kho | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-16 |
+| ĐỪNG TRẢ LỜI | Tập 5: Hồi Kết - Người Trả Lời Cuối Cùng Của Xóm Cuối Đèo | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-15 |
+| ĐỪNG TRẢ LỜI | Tập 4: Đêm Rằm Đi Đèo - Bảy Cây Số Không Được Ngoái Lại | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-15 |
+| ĐỪNG TRẢ LỜI | Tập 3: Đêm Trăng Đòi Nợ - Nó Vào Nhà Khoác Xác Mẹ Tôi | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-15 |
 | ĐỪNG TRẢ LỜI | Tập 2: Lời Nguyền 60 Năm - Mỗi Nhà Nợ Nó Một Người | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-14 |
-| ĐỪNG TRẢ LỜI | Tập 1: Về Xóm Cuối Đèo - Mẹ Đã Mất Sao Đêm Còn Gọi Ngoài Cửa | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-14 |
+| ĐỪNG TRẢ LỜI | Tập 1: Về Xóm Cuối Đèo - Mẹ Đã Mất Sao Đêm Còn Gọi Ngoài Cửa | Truyện Ma Dài | 3 | 0 | 0 | 2026-10-14 |
 | Rùa thần hiện lên giữa hồ - thanh kiếm bay về tay người cũ - Tập 2 #Shorts | 2 | 0 | 0 | 2026-10-11 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 3: Đêm Rằm Đào Giếng - Thứ Kẻ Giết Người Ném Theo | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 4: Bà Cụ 80 Tuổi Đối Chất Trước Cổng Nhà Ân | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
@@ -38,8 +42,4 @@ Net subscriber change: -1
 | Công chúa bị trăn khổng lồ bắt - ai được vua gả con gái? - Tập 2 #Shorts | 4 | 0 | 0 | 2026-10-08 |
 | Thạch Sanh và mũi tên giết đại bàng khổng lồ - Tập 1 #Shorts | 1 | 0 | 0 | 2026-10-08 |
 | Rồng vàng hiện lên mặt sông Hồng và cái tên Thăng Long ra đời - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-03 |
-| Nhà vua muốn bỏ kinh đô nghìn năm, cả triều đình phản đối - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-03 |
-| Tấm vào cung thành hoàng hậu, mẹ con Cám lại mưu hại - Tập cuối #Shorts | 0 | 0 | 0 | 2026-10-02 |
-| Bụt hiện ra dạy Tấm chôn xương Bống vào bốn lọ - Tập 2 #Shorts | 1 | 0 | 0 | 2026-10-02 |
-| Tấm nuôi cá Bống trong giếng, Cám đứng nấp nhìn từ xa - Tập 1 #Shorts | 0 | 0 | 0 | 2026-10-02 |
 
