@@ -1,13 +1,13 @@
-# Channel report — 2026-10-16
+# Channel report — 2026-10-17
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 73
+Total views: 77
 Total videos: 41
 
 ## Last 28 days (channel-wide)
 
-Views: 92
+Views: 93
 Watch time (minutes): 96
 Subscribers gained: 1
 Subscribers lost: 2
@@ -22,7 +22,7 @@ Net subscriber change: -1
 | ĐỪNG TRẢ LỜI | Tập 4: Đêm Rằm Đi Đèo - Bảy Cây Số Không Được Ngoái Lại | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-15 |
 | ĐỪNG TRẢ LỜI | Tập 3: Đêm Trăng Đòi Nợ - Nó Vào Nhà Khoác Xác Mẹ Tôi | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-15 |
 | ĐỪNG TRẢ LỜI | Tập 2: Lời Nguyền 60 Năm - Mỗi Nhà Nợ Nó Một Người | Truyện Ma Dài | 0 | 0 | 0 | 2026-10-14 |
-| ĐỪNG TRẢ LỜI | Tập 1: Về Xóm Cuối Đèo - Mẹ Đã Mất Sao Đêm Còn Gọi Ngoài Cửa | Truyện Ma Dài | 3 | 0 | 0 | 2026-10-14 |
+| ĐỪNG TRẢ LỜI | Tập 1: Về Xóm Cuối Đèo - Mẹ Đã Mất Sao Đêm Còn Gọi Ngoài Cửa | Truyện Ma Dài | 4 | 0 | 0 | 2026-10-14 |
 | Rùa thần hiện lên giữa hồ - thanh kiếm bay về tay người cũ - Tập 2 #Shorts | 2 | 0 | 0 | 2026-10-11 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 3: Đêm Rằm Đào Giếng - Thứ Kẻ Giết Người Ném Theo | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
 | LỜI NGUYỀN GIẾNG CŨ | Tập 4: Bà Cụ 80 Tuổi Đối Chất Trước Cổng Nhà Ân | Truyện Ma Dài | 1 | 1 | 0 | 2026-10-10 |
