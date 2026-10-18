@@ -66,7 +66,7 @@ export function longFormTitle(episode, slug) {
 
   const suffix = num ? `${lead} | ${arc} - Tập ${num}: ` : `${lead} | ${arc}: `;
   const budget = 100 - [...suffix].length - 1;
-  return suffix + [...hook].slice(0, budget) + "…";
+  return suffix + [...hook].slice(0, budget).join("") + "…";
 }
 
 export function playlistUrl(playlistId) {
