@@ -76,6 +76,16 @@ Twist structure: tập 1-3 là "ma ám gia tộc" kinh điển, tập 4 lộ oan
 trong hũ chính là người bán ma bị ông cố giết — arc biến thành chuyện
 nợ và chuộc lỗi, khác biệt hẳn 2 arc trước.
 
+**Arc 4 — "Đêm Khâm Liệm" (rank 3, tử thi trỗi dậy), written 2026-10-18:**
+`dem-kham-liem-tap-01..05.json` (38/28/27/20/17 beats). Nhân chứng Hải
+về lo tang ông nội; đêm khâm liệm đầu xác ngồi dậy, thầy cúng phán
+vong nhập tràng đến đúng nhà này vì cái rương phong ấn trên gác —
+xương cô gái chết oan bị nhà điền chủ thỉnh hồn giữ làm "tài sản"
+70 năm. Twist tập 4: ông nội chính là Tốn, người tình bị đánh trục
+xuất của cô Lụa — ông giữ rương không vì lộc mà vì yêu và sợ thả
+sai lễ cô tan hồn. Arc kết bằng lễ hội hồn: hai hồn gặp nhau một
+lần rồi cùng siêu (kèm hồn đứa con trong bụng — rương 2 hồn).
+
 ## 4. What the PO measures each arc
 
 From `channel-report-vi.md` per-arc, 72h after the arc completes:

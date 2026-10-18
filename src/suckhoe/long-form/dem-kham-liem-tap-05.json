@@ -1,0 +1,150 @@
+{
+  "slug": "dem-kham-liem-tap-05",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "ĐÊM KHÂM LIỆM | Tập 5: Hồi Kết - Lễ Hội Hồn, Hai Người Gặp Nhau Sau 70 Năm | Truyện Ma Dài",
+  "description": "Canh cuối trước gà gáy: thầy Tài làm lễ hội hồn để cô Lụa gặp ông Hai một lần sau bảy mươi năm - rồi siêu cả hai. Đám tang ông nội khép lại, nhưng cái rương trên gác có một điều cuối cùng chưa ai ngờ.\n\nTruyện ma dài 5 tập về tập tục khâm liệm và những đêm canh quan tài, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "tử thi trỗi dậy",
+    "khâm liệm",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #tuthitroiday #khamliem #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "LỄ HỘI HỒN - GẶP NHAU SAU 70 NĂM",
+  "scenePrompts": {
+    "hook": "two translucent spirits - an old man and a young woman in white ao dai - facing each other in a candlelit Vietnamese funeral hall at night, incense smoke swirling around them, a coffin between them, bittersweet supernatural reunion",
+    "ritual-circle": "a night exorcism ritual in a Vietnamese funeral hall, a circle of rice powder and talismans around an open coffin, an old shaman ringing a bronze bell, red threads stretched across doorways",
+    "funeral-hall": "a traditional Vietnamese funeral hall inside an old country house, white cloth banners, incense smoke, an open wooden coffin on a raised platform, yellow coffin lamp burning at its head",
+    "river-bank": "a dark river bank at dusk with an abandoned ferry landing and a small rotten boat, reeds, mist over the black water, ominous stillness",
+    "dawn-village": "a Vietnamese village at dawn, rooster crows, first golden sunlight over rice fields and tiled roofs, smoke rising from kitchens, peaceful morning after a dark night",
+    "old-cemetery": "an overgrown old Vietnamese cemetery at the edge of a village, crooked grave mounds, fallen stone markers, a large ancient tree in the center, morning mist",
+    "paper-lanterns": "small paper boats with candle flames floating on a dark river at night, a Vietnamese soul-release ceremony, dozens of tiny lights drifting downstream",
+    "family-altar": "an old Vietnamese ancestral altar crowded with faded portraits, incense sticks burning in a bronze urn, oil lamp flames, dark wooden pillars"
+  },
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dem-kham-liem-tap-05/hook.jpg",
+    "ritual-circle": "images/suckhoe-long/dem-kham-liem-tap-05/ritual-circle.jpg",
+    "funeral-hall": "images/suckhoe-long/dem-kham-liem-tap-05/funeral-hall.jpg",
+    "river-bank": "images/suckhoe-long/dem-kham-liem-tap-05/river-bank.jpg",
+    "dawn-village": "images/suckhoe-long/dem-kham-liem-tap-05/dawn-village.jpg",
+    "old-cemetery": "images/suckhoe-long/dem-kham-liem-tap-05/old-cemetery.jpg",
+    "paper-lanterns": "images/suckhoe-long/dem-kham-liem-tap-05/paper-lanterns.jpg",
+    "family-altar": "images/suckhoe-long/dem-kham-liem-tap-05/family-altar.jpg"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Lễ hội hồn bắt đầu",
+      "text": "Một canh cuối trước gà gáy. Thầy Tài đặt hai chiếc ghế đối diện nhau giữa vòng lễ, một bên để trống cho hồn ông Hai, một bên cho cô Lụa. Chín chén nước, chín nén nhang, hai ngọn đèn hồn - một của ông Hai, một thầy vừa châm mới cho cô Lụa. Thầy bắt đầu rung chuông - nhịp chuông lần này chậm và thấp, nhịp thỉnh hồn chứ không phải nhịp đuổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Hồn ông Hai về",
+      "text": "Ngọn đèn hồn của ông Hai bỗng cháy bùng xanh - và trên chiếc ghế trống, không khí như đông lại thành một hình dáng mờ: ông Hai ngồi đó, già nua, lưng còng đúng như lúc sinh thời, đầu hơi cúi. Hồn ông không phải dạng đáng sợ - chỉ là một ông già mỏi mệt ngồi lặng, như đã chờ ai đó rất lâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hai hồn gặp nhau",
+      "text": "Cô Lụa bước từ cửa vào - lần này nó đi chậm, chân chạm đất như người sống, dáng cô gái mười bảy tuổi trong bộ áo dài trắng. Hai hồn nhìn nhau giữa ánh nến và khói nhang - bảy mươi năm tách biệt, một người già, một người mãi mười bảy. Cô Lụa khẽ gọi: Tốn. Hồn ông Hai ngẩng lên - và lần đầu tiên Hải thấy hồn người chết cũng biết khóc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Bảy mươi năm một câu",
+      "text": "Ông Hai nói - giọng hồn vọng nhẹ như gió: Lụa, tôi đến trễ quá. Cô Lụa lắc đầu, nước mắt đen vẫn rơi: chàng không trễ - chàng ở lại với thiếp mười lăm năm, từng đêm thắp nhang - thiếp biết hết, thiếp nghe hết từ trong rương, chỉ là thiếp giận chàng không thả thiếp ra sớm hơn. Ông Hai cúi đầu: tôi sợ cô tan hồn - thà giữ cô thêm chút, thà mang tiếng tham."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Đứa con trong bụng",
+      "text": "Cô Lụa đặt tay lên bụng mình - chỗ mà bảy mươi năm trước cô ôm khi chìm xuống sông: con ta chết cùng ta, hồn nó cũng bị giữ trong rương ấy - trong lọn tóc còn cuộn cả tóc em bé. Thầy Tài nghe đến đó giật mình: vậy trong rương là hai hồn - mẹ và đứa con chưa thành hình. Ông nội Hải mười lăm năm cúng một rương hai hồn mà không biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Ba hồn cần siêu",
+      "text": "Thầy Tài sửa lễ ngay giữa chừng - không còn siêu hai hồn mà là ba: ông Hai, cô Lụa, và hồn đứa con trong bụng chưa từng có tên. Thầy bảo Hải - cháu trai đích tôn - phải đặt tên cho đứa trẻ để nó có danh mà siêu. Hải run giọng đặt: tên là Hải Ân - giọt ân cuối của hai người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "paper-lanterns",
+      "caption": "Thả đèn ra sông",
+      "text": "Thầy Tài dẫn cả nhà ra bến sông cái - đúng bến sông nơi cô Lụa bị cha đẩy xuống. Ba chiếc thuyền đèn giấy được thả xuống mặt nước đen: một mang tên Lê thị Lụa, một mang tên ông Hai - tức Tốn, một nhỏ xíu mang tên Hải Ân. Thầy đọc văn siêu, tiếng chuông hòa với tiếng nước chảy, ba đốm lửa nhỏ trôi chậm dần xuống dòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "paper-lanterns",
+      "caption": "Ba đốm lửa trôi",
+      "text": "Ba đốm lửa trôi song song một đoạn - rồi đốm nhỏ của đứa trẻ chệch ra trước, tắt ngúm, biến mất. Rồi hai đốm lớn trôi tiếp, sát vào nhau, sáng đều đều cho đến khi chìm vào khúc cua xa xa của con sông. Không gió mạnh, không sóng lớn - mặt sông êm như tờ. Thầy Tài nói: chúng nó đi rồi, đi cùng nhau - nợ bảy mươi năm thanh toán xong."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Gà gáy",
+      "text": "Trời vừa rạng thì tiếng gà đầu làng gáy - đúng lúc thầy Tài thu lễ. Cả nhà đứng bên sông nhìn ba đốm lửa đã khuất. Hải ngẩng lên thấy phía đông hừng sáng, sương tan dần trên đồng lúa - cái làng Nghĩa Hòa sau ba đêm kinh hãi giờ hiện ra bình thường đến lạ, như chưa từng có chuyện gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Đóng quan tài",
+      "text": "Về đến nhà, thầy Tài xem lại xác ông Hai - vệt đen quanh cổ đã biến mất, mắt ông đã khép kín, mặt ông bình an như người ngủ say. Thầy nói: ông đi rồi, xác chỉ còn là xác - có thể đóng quan tài. Đinh được đóng lần này êm ái, không một tiếng cọt kẹt. Đám tang ông Hai sau ba đêm cuối cùng cũng đúng nghi - ông được chôn vào mộ gia đình sáng hôm sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Mộ cô Lụa",
+      "text": "Mộ cô Lụa dưới gốc đa giờ có bia khắc đủ: Lê thị Lụa - và dưới tên cô, thầy Tài bảo khắc thêm dòng nhỏ: thê của người tên Tốn. Vì theo lễ, cô là vợ ông Hai từ đêm họ thề ước bên sông trước khi bị phân ly. Hai nấm mộ - một của ông nội trong mộ gia đình, một của cô Lụa dưới cây đa - cách nhau nửa nghĩa địa, nhưng người làng bảo đêm nào cũng có đom đóm bay qua lại giữa hai mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Cái rương cuối",
+      "text": "Còn cái rương trên gác - thầy Tài bảo đốt đi vì nó là vật giữ hồn, giữ lại là giữ tà. Nhưng trước khi đốt, Hải lục lại một lần cuối: dưới đáy rương có một ngăn rất mỏng ai cũng bỏ sót - bên trong là một chiếc vòng bạc cũ đen xì và một tờ giấy nhỏ viết nét chữ con gái: trả cho chàng khi chàng lấy thiếp - Lụa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Chiếc vòng bạc",
+      "text": "Chiếc vòng bạc ấy - cô Lụa để dành từ hồi còn sống, định trao cho anh Tốn ngày thành hôn. Nó nằm dưới đáy rương suốt bảy mươi năm, dưới lớp xương và tro, chờ đúng người mở ra. Hải giữ chiếc vòng - thầy Tài bảo đó là vật trần, không tà, giữ lại làm kỷ niệm cũng được mà chôn theo mộ ông nội cũng được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Vòng chôn theo ông nội",
+      "text": "Hải chọn chôn chiếc vòng vào mộ ông nội - để ông mang theo xuống nơi ông đi. Trên bia mộ ông Hai, cậu Út cho khắc đầy đủ tên thật: tức Tốn - để đời sau biết ông từng có một tên khác và một đời khác trước khi thành ông nội của mọi người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Hải rời làng",
+      "text": "Vài ngày sau Hải lên xe về thành phố. Trước khi đi cậu vào nghĩa địa lần cuối - thắp nhang cho ông nội, rồi đi nửa nghĩa địa sang thắp cho cô Lụa. Hai nấm mộ mới, hai hàng nhang còn ấm. Gió qua cây đa kêu xào xạc nhẹ, không còn gì đáng sợ - chỉ còn mùi đất ẩm và tiếng lá."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Câu chuyện còn lại",
+      "text": "Trước khi đi, thầy Tài nói với Hải một câu cậu nhớ mãi: người ta đồn giữ hồn mang lộc - nhưng hồn nào cũng là người từng sống, giữ hồn là giữ một cái chết chưa xong. Ông cháu giữ vì thương, cha cô Lụa giữ vì tham - hai cái giữ khác nhau trời đất, nhưng hồn bị giữ thì khổ như nhau. Nhớ điều đó - chết rồi thì phải thả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Lời Bà Tư kể",
+      "text": "Chuyện đêm khâm liệm ở làng Nghĩa Hòa Bà Tư kể đến đây là hết - ba đêm xác trỗi, một cái rương hai hồn, và một mối tình bảy mươi năm chỉ được gặp nhau đúng một lần trước khi cùng đi. Các cháu nghe chuyện thì nhớ: nhà ai có tang, đêm khâm liệm đừng để ngọn đèn hồn tắt - và đừng giữ của người chết thứ gì, kể cả tấm lòng. Chết rồi thì phải thả."
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "slug": "dem-kham-liem-tap-02",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "ĐÊM KHÂM LIỆM | Tập 2: Tiếng Gõ Trong Quan Tài - Thầy Cúng Phán Một Câu Lạnh Sống Lưng | Truyện Ma Dài",
+  "description": "Thầy Tài về làng Nghĩa Hòa, nhìn một lượt quanh nhà tang rồi phán: thứ nhập vào xác ông Hai không phải vong lang thang - nó đến đúng nhà này, đúng cái rương trên gác.\n\nTruyện ma dài 5 tập về tập tục khâm liệm và những đêm canh quan tài, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "tử thi trỗi dậy",
+    "khâm liệm",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #tuthitroiday #khamliem #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "THẦY CÚNG PHÁN: NÓ ĐẾN ĐÚNG NHÀ NÀY",
+  "scenePrompts": {
+    "hook": "an old Vietnamese shaman in dark ceremonial robes holding a torch over an open coffin at night, inspecting the corpse, mourners holding their breath, incense smoke thick",
+    "shaman-house": "a small thatched Vietnamese shaman house behind an old bamboo grove, bronze bells and dried garlic hanging at the gate, dusk light",
+    "funeral-hall": "a traditional Vietnamese funeral hall inside an old country house, white cloth banners, incense smoke, an open wooden coffin on a raised platform, yellow coffin lamp burning at its head",
+    "ritual-circle": "a night exorcism ritual in a Vietnamese funeral hall, a circle of rice powder and talismans around an open coffin, an old shaman ringing a bronze bell, red threads stretched across doorways",
+    "village-dusk": "a rural Vietnamese village at dusk, an old tiled-roof house with white funeral banners hanging at the gate, dirt road, areca palms silhouetted against a dark orange sky",
+    "night-vigil": "a lonely night vigil inside a funeral hall, two mourners dozing beside an open coffin, a single coffin lamp flame, long shadows on the white banners",
+    "attic-trunk": "an old wooden trunk covered by faded red cloth on a dark attic floor, a yellow talisman paper pasted on its edge, dust and cobwebs, one ray of light",
+    "family-altar": "an old Vietnamese ancestral altar crowded with faded portraits, incense sticks burning in a bronze urn, oil lamp flames, dark wooden pillars",
+    "mist-field": "a dark rice field at night covered in low white fog, a distant figure walking stiffly toward the village, moonlight through clouds"
+  },
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dem-kham-liem-tap-02/hook.jpg",
+    "shaman-house": "images/suckhoe-long/dem-kham-liem-tap-02/shaman-house.jpg",
+    "funeral-hall": "images/suckhoe-long/dem-kham-liem-tap-02/funeral-hall.jpg",
+    "ritual-circle": "images/suckhoe-long/dem-kham-liem-tap-02/ritual-circle.jpg",
+    "village-dusk": "images/suckhoe-long/dem-kham-liem-tap-02/village-dusk.jpg",
+    "night-vigil": "images/suckhoe-long/dem-kham-liem-tap-02/night-vigil.jpg",
+    "attic-trunk": "images/suckhoe-long/dem-kham-liem-tap-02/attic-trunk.jpg",
+    "family-altar": "images/suckhoe-long/dem-kham-liem-tap-02/family-altar.jpg",
+    "mist-field": "images/suckhoe-long/dem-kham-liem-tap-02/mist-field.jpg"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Thầy Tài xem xác",
+      "text": "Thầy Tài về đến nhà tang lúc xế chiều, chưa kịp uống nước đã bảo mở hờ nắp quan tài. Thầy cúi nhìn mặt ông Hai một lúc lâu, rồi ngửi ngửi mép quan tài như ngửi mùi thuốc, cuối cùng rút ra một cây kim đồng nhỏ châm nhẹ vào cổ tay người chết. Máu chảy ra - đen đặc, và có mùi tanh hăng hắc không phải mùi người mới mất ba ngày."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Ba dấu hiệu lạ",
+      "text": "Thầy Tài chỉ cho cả nhà thấy ba dấu hiệu: máu đen tanh, mắt mở mà ngươi trắng, và quan trọng nhất - vệt tím quanh cổ ông Hai giờ đã sẫm thành vạch đen như bị ai siết. Thầy nói: người chết yên xác không thế này được, đây là dấu thứ trong xác đang đấu với hồn chủ - nó muốn giữ xác, còn hồn ông các cháu đang bị dồn ra ngoài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Hồn ông nội bị dồn ra",
+      "text": "Cậu Út hỏi vậy hồn cha con đi đâu. Thầy Tài chỉ lên gác nhà: hồn người chết thân quen nhà cửa, bị xua ra khỏi xác thì nó trốn về chỗ nó hay quanh quẩn nhất lúc sống - ông các cháu mười lăm năm tối nào cũng lên gác, hồn ông chắc đang quanh cái rương đó. Mà tôi nói trước - thứ nhập vào xác ông không phải vong lang thang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Thầy phán thẳng",
+      "text": "Thầy Tài nhìn quanh nhà một lượt, dừng mắt lâu ở cầu thang lên gác, rồi nói câu khiến cả nhà lặng thinh: vong lang thang nhập xác là nhập ngẫu nhiên, nó đâu có biết đường - còn thứ này đến đúng đêm rằm tháng bảy, đúng xác mới nhất, đúng nhà có cái rương phong ấn trên gác. Nó đến đúng nhà này - nó đến vì cái rương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Cái rương trên gác",
+      "text": "Cả nhà nhìn nhau không ai nói. Cuối cùng ông Bảy lên tiếng: cái rương đó cha ông mang về từ hồi đi làm thuê cho điền chủ Lê ở thị xã, mười lăm năm rồi không ai đụng vào, ông nội còn dán bùa niêm lại. Thầy Tài nhíu mày hỏi: điền chủ Lê nào - có phải nhà họ Lê chết thảm cả nhà hồi năm xưa không?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Chuyện nhà họ Lê",
+      "text": "Ông Bảy gật đầu - đúng nhà họ Lê ấy. Chuyện cả vùng ai cũng biết: điền chủ Lê giàu nhất thị xã, một đêm cả nhà bảy người chết trụi không rõ nguyên nhân, còn người làm thì tản đi hết. Ông nội Hải là người làm cuối cùng rời nhà họ Lê, mang theo cái rương bảo là đồ chủ thưởng. Từ đó không ai hỏi, ông nội cũng không bao giờ kể."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Vòng trấn xác",
+      "text": "Thầy Tài bảo trước hết phải giữ xác đêm nay, chuyện cái rương sáng mai tính. Thầy rải một vòng bột gạo trộn tro trấu quanh quan tài, căng ba sợi chỉ đỏ ngang cửa chính và cửa sau, dán chín tấm bùa vàng lên thành quan tài. Thầy nói: vòng này giữ được xác, nhưng chỉ giữ đến gà gáy - nếu đêm nay nó phá được vòng thì mai tôi phải dùng cách mạnh hơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Đêm canh thứ ba",
+      "text": "Đêm thứ ba, thầy Tài tự ngồi canh cùng Hải và cậu Út. Thầy đặt cái chuông đồng nhỏ trước quan tài, bảo chuông reo là có vong lại gần - chuông càng reo mạnh vong càng gần. Hải hỏi sao thầy không nhập luôn hồn ông nội về lại xác. Thầy lắc đầu: chưa được - phải biết thứ kia là cái gì đã, nhập lộn thì xác này hỏng cả hai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Chuông đồng reo",
+      "text": "Khoảng một giờ sáng, chuông đồng bỗng reo lanh canh - một tiếng, rồi im. Thầy Tài mở mắt, tay cầm sẵn ba nén nhang. Reo lần nữa - hai tiếng. Rồi ba tiếng, bốn tiếng, chuông reo rối lên như có luồng gió vô hình đang chạy vòng quanh nhà. Ngoài sân nghe tiếng chó tru xa xa, kéo dài não nề."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Vong đi vòng quanh",
+      "text": "Tiếng chuông reo lạch cạch chạy quanh tường nhà - nó đang đi vòng quanh nhà tang, tìm khe hở. Thầy Tài nghiến răng: nó vào được thì phải qua chỉ đỏ - chỉ đỏ rít là hồn ông các cháu - nhưng thứ này không qua chỉ, nó đang dò vòng bột gạo. Tiếng chuông chạy nhanh dần, quanh nhà một vòng, rồi hai vòng, rồi bỗng im bặt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Im ắng đáng sợ",
+      "text": "Sự im ắng sau cơn chuông còn đáng sợ hơn. Cả nhà nín thở nhìn vòng bột gạo quanh quan tài - và rồi Hải thấy rõ: từng vệt bột gạo sần lên như có gì đang lướt qua, từng đoạn một, tiến về phía quan tài. Thầy Tài đốt phắt ba nén nhang, khói bốc cuồn cuộn - vệt sần bột gạo dừng lại ngay mép vòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Vong rút đi",
+      "text": "Vệt sần dừng lại giây lát, rồi từ từ lùi ra, như thứ vô hình kia đang rút đi không cam tâm. Chuông đồng reo yếu dần rồi tắt hẳn. Thầy Tài thở ra, nhưng mặt không giãn: nó thử được một lần rồi - đêm mai nó sẽ mạnh hơn, bột gạo không giữ nổi nữa. Sáng mai phải mở cái rương - dù trong đó là gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Lên gác",
+      "text": "Sáng hôm sau, thầy Tài dẫn Hải và cậu Út lên gác - lần đầu tiên sau mười lăm năm có người bước lên. Gác thấp, tối, mùi hương cũ và mùi gỗ mốc đặc quánh. Cái rương nằm góc cuối, vải đỏ phủ đã sờn rách, tấm bùa vàng dán chéo trên nắp - nét chữ son đã phai thành màu nâu đen như vết máu khô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Tấm bùa trên rương",
+      "text": "Thầy Tài quỳ trước rương, đọc kỹ tấm bùa, mặt càng lúc càng nghiêm. Đây là phù ấn trấn thi - không phải bùa bình thường mà là bùa niêm xác, thầy chỉ thấy trong sách cổ chứ chưa gặp ngoài đời. Thầy quay lại hỏi: ai dán tấm này - ông các cháu không tự làm được, phải có thầy pháp cao tay làm hộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Mở rương",
+      "text": "Cậu Út kể ông nội hồi đó có mời một ông thầy ở tận miền tây về làm lễ ba ngày ba đêm - sau đợt đó rương mới được dán bùa niêm lại. Thầy Tài trầm ngâm rồi quyết: bùa đã suy lắm rồi, thứ trong rương đang rề rà muốn ra - mở rương bây giờ còn hơn để nó tự phá. Thầy lấy dao sắc rạch tấm bùa, lật nắp rương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Bên trong cái rương",
+      "text": "Trong rương không phải vàng bạc như mọi người tưởng - là một lớp tro tàn đen xì, trên mặt tro có một bộ quần áo tơ tằm cũ xếp gọn, và giữa bộ đồ là một cái hộp gỗ nhỏ bằng bàn tay, bọc vải đỏ buộc chỉ son. Thầy Tài không đụng vào, chỉ bảo Hải lấy đèn soi kỹ: dưới lớp tro ấy lộ ra những mảng trắng xanh - xương người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Xương trong rương",
+      "text": "Cả gác như đông cứng không khí. Xương người trong rương - không đủ một bộ, chỉ có hộp sọ nhỏ và mấy khúc xương tay xương chân, xương nhỏ như xương trẻ em hoặc đàn bà gầy. Thầy Tài nói khẽ: xác người ta chôn không yên, xương mang đi - đây là chuyện giữ hồn, giữ vong bằng xương. Ông nội các cháu không chỉ mang rương về - ông mang theo cả một cái chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Cái hộp nhỏ",
+      "text": "Thầy Tài bọc khăn lấy cái hộp nhỏ ra - bên trong là một lọn tóc đen dài cuộn tròn quanh một tờ giấy vàng viết chữ nho mờ. Thầy đọc được vài chữ: tên một người con gái, năm sinh, và dòng chữ nhỏ ở cuối - phụ thân thỉnh hồn quy vị. Thầy ngẩng lên: đây là thỉnh hồn - người ta thỉnh hồn con gái mình chết oan về nhà giữ trong rương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Cha thỉnh hồn con",
+      "text": "Thầy Tài giải thích: có thầy pháp chuyên làm lễ thỉnh hồn - hồn người chết oan được thỉnh về rương, gia chủ cúng kiếng thì hồn giữ nhà, giữ của, trả ơn chủ. Nhưng hồn bị giữ không cho siêu thì càng lâu càng quỷ - nó oán chủ giữ mình. Mười lăm năm bị nhốt trong rương - hồn con gái ấy giờ không còn là hồn nữa, nó thành ma rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Ai giết con gái điền chủ",
+      "text": "Ông Bảy lúc này mới nhớ ra chuyện quan trọng: điền chủ Lê có đứa con gái út tên Lụa - nghe đồn chết đuối trước thảm họa cả nhà chỉ mấy tháng. Nhà họ Lê làm lễ lớn rồi cho người mang một cái rương đi chôn bí mật - nhưng ông Bảy từng nghe cha kể, thực ra rương đó không chôn, người làm mang đi giữa đêm rồi tản mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Sự thật về cái rương",
+      "text": "Vậy là rõ: ông nội Hải - người làm cuối cùng rời nhà họ Lê - đã được giao mang xương cô Lụa đi chôn, nhưng ông không chôn, ông giữ lại vì nghe đồn rương có phù hồn mang lộc. Ông lập rương thờ trên gác, đêm nào cũng cúng - nhà khá lên thật, nhưng ông giữ một hồn oan như nuôi trong lồng. Mười lăm năm, hồn ấy chờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Đêm rằm trả hồn",
+      "text": "Thầy Tài nói chuyện giờ đã rõ: hồn cô Lụa mười lăm năm bị giữ, đêm rằm tháng bảy cửa ngầm mở, nó ra khỏi rương - và nó cần một cái xác để đi, để trả oán cho nhà giữ mình. Xác mới nhất là ông Hai - người giữ nó mười lăm năm. Thầy nói khẽ: nó không chỉ muốn xác - nó muốn nhà này trả nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Chuẩn bị đêm cuối",
+      "text": "Chiều hôm ấy, thầy Tài bảo dọn sẵn lễ lớn: mâm cơm canh cúng cô hồn, hai con thuyền đèn, và chuẩn bị đồ khâm liệm mới cho ông Hai - quan tài phải đóng hẳn trước nửa đêm. Thầy dặn: đêm nay là đêm cuối khâm liệm, nó sẽ đến mạnh nhất - và tôi phải làm một việc mà nếu hỏng thì cả nhà này không yên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Lễ khấu hồn",
+      "text": "Tối hôm ấy thầy Tài lập lễ khấu hồn giữa sân: chín chén nước, chín nén nhang, và cái hộp tóc của cô Lụa đặt giữa. Thầy bảo Hải đứng vào vị trí cháu trai - lễ này cần người thân đích tôn. Khi thầy vừa rung chuông đồng mở lễ, ngọn đèn hồn trong nhà bỗng cháy bùng lên xanh lét - và trong quan tài, tiếng gõ cốp cốp lại vang lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Tiếng gõ không ngừng",
+      "text": "Lần này tiếng gõ không còn đều đặn kiên nhẫn nữa - nó gấp gáp, dồn dập, như người bị nhốt đập cửa xin ra. Thầy Tài vừa niệm chú vừa vung chuông, khói nhang cuồn lên phủ đầy sân. Và rồi tiếng gõ ngừng - nhưng lần này ngừng không phải vì nó chịu khuất: nắp quan tài bỗng kêu răng rắc, ba cái đinh bật ra bắn cả lên trời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Nắp quan tài bật",
+      "text": "Nắp quan tài bật tung, người ta la hét chạy tán loạn. Xác ông Hai từ từ ngồi dậy - nhưng lần này không phải chậm rãi như đêm đầu: nó ngồi phắt lên, hai tay chống thành quan tài, đầu quay một vòng đầy đủ nhìn cả nhà như đếm người. Rồi nó nói - miệng không mấp máy, nhưng tiếng nói vọng ra từ bụng xác - một giọng đàn bà trẻ: trả rương ta."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Giọng đàn bà trong xác",
+      "text": "Cả sân chết lặng. Thầy Tài giơ chuông quát: Lụa ơi! Cái rương ngươi bị giữ mười lăm năm - nhưng người giữ ngươi đã chết, thả xác ông ra! Giọng đàn bà trong xác ông Hai cười - tiếng cười khàn khàn vọng từ bụng: ông giữ ta mười lăm năm, ta giữ xác ông mười lăm ngày - đêm mai ta mang xác về mộ ta, ai muốn lấy lại thì đến mà lấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-field",
+      "caption": "Xác đi vào đêm",
+      "text": "Nói rồi xác ông Hai từ từ đứng dậy khỏi quan tài - đứng thẳng, cứng đờ, bước ra khỏi vòng bột gạo mà bột không ngăn được nữa. Nó đi ngang qua đám người, cả làng né ra không ai dám động, rồi bước ra khỏi cổng đi vào đêm - về hướng nghĩa địa phía tây làng. Thầy Tài không chặn - thầy chỉ nói: mai phải đi tìm mộ cô Lụa, đêm nay mọi người không ai được ra khỏi nhà."
+    }
+  ]
+}

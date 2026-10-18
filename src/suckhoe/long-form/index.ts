@@ -15,6 +15,11 @@ import huMaGaTap02 from "./hu-ma-ga-tap-02.json";
 import huMaGaTap03 from "./hu-ma-ga-tap-03.json";
 import huMaGaTap04 from "./hu-ma-ga-tap-04.json";
 import huMaGaTap05 from "./hu-ma-ga-tap-05.json";
+import demKhamLiemTap01 from "./dem-kham-liem-tap-01.json";
+import demKhamLiemTap02 from "./dem-kham-liem-tap-02.json";
+import demKhamLiemTap03 from "./dem-kham-liem-tap-03.json";
+import demKhamLiemTap04 from "./dem-kham-liem-tap-04.json";
+import demKhamLiemTap05 from "./dem-kham-liem-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -49,4 +54,14 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   huMaGaTap03,
   huMaGaTap04,
   huMaGaTap05,
+  // Horror arc 4 (PO topic rank #3, docs/PO-001): "Dem kham liem" - a
+  // funeral-night corpse possession (tu thi troi day). Twist at tap 4:
+  // the grandfather who kept the spirit-jar for luck turns out to be
+  // the banished lover of the drowned girl inside it - the arc turns
+  // from haunting into a 70-year star-crossed love story.
+  demKhamLiemTap01,
+  demKhamLiemTap02,
+  demKhamLiemTap03,
+  demKhamLiemTap04,
+  demKhamLiemTap05,
 ] as LongFormEpisode[];

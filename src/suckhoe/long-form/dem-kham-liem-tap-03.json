@@ -1,0 +1,210 @@
+{
+  "slug": "dem-kham-liem-tap-03",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "ĐÊM KHÂM LIỆM | Tập 3: Xác Ông Nội Đi Về Nghĩa Địa - Tìm Mộ Cô Gái Mất Tích 70 Năm | Truyện Ma Dài",
+  "description": "Xác ông nội bị vong nhập mang về phía nghĩa địa. Thầy Tài và gia đình phải tìm ra ngôi mộ thật của cô Lụa trước khi xác ông bị chôn thay - và phát hiện ra cái chết của cô không hề đơn giản.\n\nTruyện ma dài 5 tập về tập tục khâm liệm và những đêm canh quan tài, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "tử thi trỗi dậy",
+    "khâm liệm",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #tuthitroiday #khamliem #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "XÁC ÔNG ĐI VỀ NGHĨA ĐỊA",
+  "scenePrompts": {
+    "hook": "a corpse in white burial shroud walking stiffly through a dark cemetery at night among old grave mounds, moonlight, fog between graves, supernatural horror",
+    "old-cemetery": "an overgrown old Vietnamese cemetery at the edge of a village, crooked grave mounds, fallen stone markers, a large ancient tree in the center, morning mist",
+    "grave-digging": "men digging up an old grave at dawn in a Vietnamese cemetery, shovels, excavated dark soil, an old shaman standing watching with a lantern",
+    "empty-grave": "an opened grave pit showing a broken empty coffin inside, dark soil walls, scattered old bones, dawn light, horror atmosphere",
+    "village-dusk": "a rural Vietnamese village at dusk, an old tiled-roof house with white funeral banners hanging at the gate, dirt road, areca palms silhouetted against a dark orange sky",
+    "funeral-hall": "a traditional Vietnamese funeral hall inside an old country house, white cloth banners, incense smoke, an open wooden coffin on a raised platform, yellow coffin lamp burning at its head",
+    "river-bank": "a dark river bank at dusk with an abandoned ferry landing and a small rotten boat, reeds, mist over the black water, ominous stillness",
+    "old-man-hut": "a tiny dilapidated hut of an old gravedigger at the cemetery edge, one small lamp inside, stacks of old burial tools, dusk"
+  },
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dem-kham-liem-tap-03/hook.jpg",
+    "old-cemetery": "images/suckhoe-long/dem-kham-liem-tap-03/old-cemetery.jpg",
+    "grave-digging": "images/suckhoe-long/dem-kham-liem-tap-03/grave-digging.jpg",
+    "empty-grave": "images/suckhoe-long/dem-kham-liem-tap-03/empty-grave.jpg",
+    "village-dusk": "images/suckhoe-long/dem-kham-liem-tap-03/village-dusk.jpg",
+    "funeral-hall": "images/suckhoe-long/dem-kham-liem-tap-03/funeral-hall.jpg",
+    "river-bank": "images/suckhoe-long/dem-kham-liem-tap-03/river-bank.jpg",
+    "old-man-hut": "images/suckhoe-long/dem-kham-liem-tap-03/old-man-hut.jpg"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Xác đi vào nghĩa địa",
+      "text": "Đêm ấy cả làng không ai ngủ - xác ông Hai đi khỏi nhà tang, một mình bước về phía nghĩa địa phía tây. Có người gan lì theo dõi từ xa, kể lại nó đi rất chậm nhưng không một lần lảo đảo, hai chân khuỵu xuống mỗi bước rồi lại đứng thẳng - và nó đi thẳng một đường vào nghĩa địa, biến mất giữa những gò mộ cỏ cao đầu người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Nghĩa địa bỏ hoang",
+      "text": "Sáng ra thầy Tài dẫn Hải, cậu Út và ông Bảy vào nghĩa địa tìm xác. Nghĩa địa làng Nghĩa Hòa nằm trên một gò đất cao, mộ mả xưa chen chúc, nửa số không còn người thân đến thăm - cỏ cao che khuất bia mộ, nhiều nấm mộ sụt lún chỉ còn là những vũng đất trũng. Giữa nghĩa địa có cây đa già mà người làng không bao giờ đến gần sau giờ Dậu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Dấu chân trần",
+      "text": "Họ tìm thấy dấu chân của xác ông Hai - dấu chân trần in hằn trên đất ướt, kéo một đường thẳng từ cổng nghĩa địa đến tận gốc cây đa già giữa nghĩa địa, rồi mất hút. Không có vết lộn xộn, không có dấu quay lại - xác đến gốc đa rồi biến mất như chìm xuống đất. Thầy Tài đứng nhìn gốc đa một lúc lâu không nói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Gốc cây đa",
+      "text": "Dưới gốc cây đa già có một nấm mộ lún sâu, bia đá mục nát không còn chữ, trước mộ có tàn tro nhang cũ - và mới lạ, có vệt đất đào lên mới tinh ở chân mộ như ai vừa moi gì từ dưới. Thầy Tài cúi sờ vệt đất mới: đất còn ướt, moi từ dưới lên - không phải ai đào xuống, mà là thứ gì ở dưới đã trồi lên rồi lấp lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-hut",
+      "caption": "Ông già trông mộ",
+      "text": "Trước khi làm gì thêm, thầy Tài dẫn cả nhóm đến gặp ông già trông mộ - ông Năm Canh, hơn tám mươi tuổi, người cuối cùng còn nhớ mộ mả xưa trong nghĩa địa. Ông Năm sống trong túp lều đầu nghĩa địa, da nhăn như vỏ cây, mắt một bên đui. Nghe hỏi nấm mộ dưới gốc đa, ông Năm im lặng hút hết một điếu thuốc lào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-hut",
+      "caption": "Mộ không tên",
+      "text": "Cuối cùng ông Năm nói: mộ đó là mộ cô gái tội nghiệp - không tên, không bia, đổ hẳn vì không ai đến. Hồi ông còn nhỏ nghe người già kể, cô ấy là con gái điền chủ thị xã, chết đuối, cha mẹ cho chôn lén ở nghĩa địa làng này vì nhà điền chủ không muốn người đời biết cái chết của con gái - đêm mang đi chôn, không kiệu không tang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Cô Lụa chết đuối",
+      "text": "Ông Năm kể tiếp: cô Lụa chết đuối ở bến sông cái sau nhà điền chủ, đêm trăng tháng giêng năm ấy. Người nhà kể cô trót chân ngã, nhưng người làng xì xầm rằng cô bị đuổi ra sông - vì cô có bầu với người làm trong nhà. Xác cô vớt lên nổi phồng, điền chủ Lê không cho tang, không cho kiệu, bảo chôn vội cho qua chuyện."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Người làm tên Tốn",
+      "text": "Và người làm mà cô Lụa có bầu - ông Năm nhớ tên là anh Tốn - bị điền chủ Lê sai người đánh bầm dập rồi trục xuất khỏi thị xã. Không ai biết anh Tốn đi đâu - nhưng ông Năm nói một chi tiết khiến Hải và cậu Út đứng hình: đêm chôn cô Lụa, chỉ có hai người đào mộ - một là ông Năm hồi đó còn nhỏ, hai là một người làm trẻ tên Hai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Ông Hai - ông nội",
+      "text": "Người làm tên Hai - chính là ông nội của Hải. Ông Năm nói: ông Hai hồi đó hai mươi tuổi, là người làm được điền chủ Lê tin nhất, cũng là người được giao mang rương xương đi - nhà họ Lê sau cái chết của cô Lụa mời thầy thỉnh hồn cô về giữ trong rương, rồi khi cả nhà chết thảm, rương đó người ta bảo đã mang đi chôn, thực ra giao ông Hai mang đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Chuỗi sự thật",
+      "text": "Hải đứng giữa nghĩa địa mà lạnh toát: ông nội được giao mang xương cô Lụa đi chôn nhưng không chôn - vì cái rương có bùa thỉnh hồn, giữ hồn được thì giữ được lộc. Ông mang rương về nhà, lập gác thờ, mười lăm năm cúng kiếng. Nhà khá lên - nhưng ông giữ một hồn con gái chết oan bảy mươi năm trong cái rương như nuôi vật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Mộ trống",
+      "text": "Thầy Tài bảo đào mộ dưới gốc đa xem còn gì. Mấy người đàn ông đào nửa buổi - xuống sâu chừng một thước thì chạm gỗ quan tài cũ mục, mở ra: quan tài rỗng, chỉ còn lớp bùn đen và một cái khăn voan cũ. Cô Lụa không còn trong mộ - xương cô đã bị moi đi từ lâu, từ cái đêm người ta thỉnh hồn cô về rương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "empty-grave",
+      "caption": "Xác ông nội đâu",
+      "text": "Nhưng nấm mộ trống ấy - thầy Tài chỉ xuống đáy quan tài cũ - có thêm thứ không phải của cô Lụa: một lớp đất tươi đào lên từ dưới, và trong lớp đất đó, mấy sợi tóc bạc. Ông Bảy run run: tóc cha tôi. Xác ông Hai không biến mất - nó đã chui xuống nấm mộ này, nằm vào chỗ cô Lụa từng nằm - nó thay mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "empty-grave",
+      "caption": "Thay mộ",
+      "text": "Thầy Tài ngồi thụp xuống mép mộ, lần đầu mặt thầy trắng bệch: thay mộ - thứ độc nhất của nhập tràng. Nó chiếm xác ông, mang xác về mộ nó, rồi để xác ông nằm vào quan tài nó - muốn nhà này khâm liệm cho xong thì xác ông thành xác nó, hồn ông lang thang mãi không nhà không cửa. Còn nó - nó sẽ lấy thân người sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Nó sẽ lấy thân người sống",
+      "text": "Hải hỏi lấy thân người sống nghĩa là gì. Thầy Tài không trả lời ngay - mãi đến khi ra khỏi nghĩa địa thầy mới nói: hồn bị giữ lâu thành ma, ma trả xong oán thì muốn sống lại - nó phải nhập vào người sống cùng huyết thống với người giữ nó, tức là cháu đích tôn nhà ông Hai. Thầy nhìn thẳng Hải: nhà này chỉ có một cháu trai - là cháu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Hải là đích",
+      "text": "Cả nhà chết sững. Cậu Út quát: không có chuyện đó, cháu tôi không dính vào! Thầy Tài lắc đầu: không phải tôi muốn - nó muốn. Nó chọn đêm khâm liệm để trỗi, chọn đúng xác ông Hai, mang xác về mộ nó - từng bước một đều là lễ, nó đang làm lễ đổi thân. Đến đêm khâm liệm cuối - đêm ba - nó hoàn tất, khi đó chỉ còn một cách: nó phải lấy thân cháu trai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Còn một cách",
+      "text": "Thầy Tài nói vẫn còn một cách ngăn: phải chuộc lại xác ông Hai trước đêm khâm liệm cuối - đem xác về, làm lễ cúng trả hồn cho cô Lụa, rồi thỉnh hồn ông Hai về lại xác trước giờ đóng quan tài. Nếu qua đêm ba mà xác còn nằm trong mộ cô Lụa - lễ đổi thân hoàn tất, không thầy nào cứu được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Kế hoạch chuộc xác",
+      "text": "Kế hoạch như sau: chiều mai - ngày khâm liệm cuối - thầy Tài sẽ làm lễ khai mộ lấy xác ông Hai ra khỏi quan tài cô Lụa. Nhưng không thể chỉ lấy - phải trả: gia đình phải làm một bộ quan tài mới cho cô Lụa, đặt vào đúng mộ của cô, cúng lễ đầy đủ như tang người nhà. Cô chết bảy mươi năm chưa từng có đám tang - nhà ông Hai nợ cô một đám tang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Chuẩn bị đám tang cho người chết 70 năm",
+      "text": "Cả chiều hôm ấy nhà Hải lộn xộn chuẩn bị một việc chưa từng có: đám tang cho người chết bảy mươi năm. Chú Ba đi mua vải trắng, quan tài gỗ tốt; ông Bảy tự tay viết bia mộ - trên bia khắc: Lê thị Lụa, tên con gái điền chủ từng bị nhà chôn lén không tên. Cậu Út đi xin từng nhà trong làng một nén nhang - làng nghe chuyện ai cũng giúp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Đêm trước lễ",
+      "text": "Đêm trước ngày khai mộ, Hải mơ thấy một giấc mơ rõ ràng đến lạ: cậu đứng ở bến sông cái sau một căn nhà lớn, trăng trắng đầy nước, một cô gái mặc áo dài trắng đứng quay lưng, tóc dài đến gót. Cô không quay mặt, chỉ nói: ông ngươi giữ ta mười lăm năm - còn cha ta giữ ta bảy mươi năm. Hải mới định hỏi thì cô biến mất, chỉ còn mặt sông đen."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Giấc mơ và câu hỏi",
+      "text": "Tỉnh dậy Hải nói giấc mơ cho thầy Tài nghe. Thầy trầm ngâm: cha ta giữ ta bảy mươi năm - điền chủ Lê cũng giữ con gái mình, chôn lén không tên không tang, xương moi đi thỉnh hồn giữ như giữ của. Hai thế hệ hai người cha con cùng giữ một hồn oan - nợ này nợ lớn, không phải tiền bạc trả được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-cemetery",
+      "caption": "Sáng ngày khâm liệm cuối",
+      "text": "Sáng ngày khâm liệm cuối, trời u ám đổ mưa phùn. Cả nhóm ra nghĩa địa, theo sau là quan tài mới của cô Lụa khiêng trên vai bốn người làng tình nguyện giúp. Dưới gốc cây đa, nấm mộ không tên y nguyên như hôm qua - nhưng thầy Tài nhìn kỹ thì thấy: vệt đất mới hôm trước giờ đã lún sâu thêm, như thứ gì ở dưới đang nằm xuống chỗ sâu hơn, ổn vị hơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-digging",
+      "caption": "Lễ khai mộ",
+      "text": "Thầy Tài lập lễ khai mộ: thắp chín nén nhang, đọc văn tế xin phép tổ tiên đất đai, rồi bốn người đào. Đất lần này xốp lạ - như đã được đào sẵn từ dưới lên. Chỉ một khắc sau đã chạm nắp quan tài cũ của cô Lụa - và khi nhấc nắp, cả bốn người đào lùi lại cùng lúc: bên trong quan tài, xác ông Hai nằm ngửa, mắt vẫn mở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "empty-grave",
+      "caption": "Xác ông trong mộ người khác",
+      "text": "Xác ông Hai nằm trong quan tài cũ của cô Lụa - nhưng điều khiến ai cũng sởn gai: hai tay ông không đặt chéo trên ngực như lúc khâm liệm, mà duỗi thẳng hai bên, lòng bàn tay ngửa lên như đang dâng cái gì. Trên ngực xác có một nắm đất đen và một lọn tóc đen dài - tóc con gái, mềm như tóc người còn sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-digging",
+      "caption": "Khiêng xác về",
+      "text": "Thầy Tài niệm chú, đặt tấm bùa mới lên trán xác, bảo khiêng về. Khi bốn người nhấc xác lên, xác nặng bất thường - nặng như hai người. Một người làng khiêng kêu lên: sao nặng thế - nhưng thầy Tài quát: đừng nói, đừng nghĩ, khiêng đi. Trên đường về, ai cũng nghe thấy từ bên trong khăn phủ xác một tiếng thở dài - rất nhẹ, như tiếng đàn bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Xác về nhà",
+      "text": "Xác ông Hai được đặt lại vào quan tài mới vừa kịp trước giờ Dậu - giờ cuối cùng được phép khâm liệm. Thầy Tài khâm liệm lại từ đầu: tắm rửa lại xác bằng nước lá bưởi, mặc lại áo lụa mới, phủ lại giấy vàng. Khi đặt xác vào quan tài, Hải thấy vết đen quanh cổ ông đã nhạt đi - hồn ông vẫn còn quanh đây, chỉ bị xua ra ngoài thôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Chờ đêm cuối",
+      "text": "Đêm khâm liệm cuối - đêm thứ ba - bắt đầu. Quan tài cô Lụa đã được chôn lại vào chính mộ cô dưới gốc đa, bia mộ khắc đầy đủ tên, trước mộ đặt mâm cơm cúng lễ đầy đủ như đám tang thật. Nhưng thầy Tài bảo cả nhà: việc chưa xong - nó có xác ông ba ngày, đã quen đường về nhà này, đêm nay nó sẽ quay lại lấy thứ nó muốn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Trận pháp cuối",
+      "text": "Thầy Tài bố trận pháp cuối: quan tài ông Hai đặt giữa vòng chín nén nhang, chỉ đỏ căng khắp nhà, và cái rương cũ - rương xương cô Lụa - đặt ngay cửa, mở nắp, bên trong đã được lót vải đỏ mới và đốt cháy lọn tóc cũ. Thầy nói: nó vào nhà này bằng rương thì phải cho nó ra bằng rương - và Hải, cháu ngồi đây, trong vòng chỉ đỏ, không được ra ngoài cho đến sáng."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "slug": "dem-kham-liem-tap-04",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "ĐÊM KHÂM LIỆM | Tập 4: Đêm Cuối Nó Quay Lại - Bí Mật Ông Nội Giấu 70 Năm | Truyện Ma Dài",
+  "description": "Đêm khâm liệm cuối, vong quay lại đòi thân cháu trai. Giữa trận pháp, một bí mật bị chôn bảy mươi năm lộ ra: ông nội không giữ cái rương vì lộc - ông chính là người tình bị trục xuất của cô Lụa.\n\nTruyện ma dài 5 tập về tập tục khâm liệm và những đêm canh quan tài, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "tử thi trỗi dậy",
+    "khâm liệm",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #tuthitroiday #khamliem #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "ÔNG NỘI CHÍNH LÀ NGƯỜI TÌNH NĂM ẤY",
+  "scenePrompts": {
+    "hook": "a ghostly young woman in a flowing white ao dai with long black hair standing inside a Vietnamese funeral hall at night facing a coffin, her feet not touching the floor, mourners frozen",
+    "ritual-circle": "a night exorcism ritual in a Vietnamese funeral hall, a circle of rice powder and talismans around an open coffin, an old shaman ringing a bronze bell, red threads stretched across doorways",
+    "funeral-hall": "a traditional Vietnamese funeral hall inside an old country house, white cloth banners, incense smoke, an open wooden coffin on a raised platform, yellow coffin lamp burning at its head",
+    "old-letter": "an old yellowed handwritten love letter and a faded photograph of a young couple in 1950s Vietnamese clothes, beside a lock of black hair, candlelight",
+    "night-vigil": "a lonely night vigil inside a funeral hall, two mourners dozing beside an open coffin, a single coffin lamp flame, long shadows on the white banners",
+    "village-dusk": "a rural Vietnamese village at dusk, an old tiled-roof house with white funeral banners hanging at the gate, dirt road, areca palms silhouetted against a dark orange sky",
+    "river-bank": "a dark river bank at dusk with an abandoned ferry landing and a small rotten boat, reeds, mist over the black water, ominous stillness",
+    "attic-trunk": "an old wooden trunk covered by faded red cloth on a dark attic floor, a yellow talisman paper pasted on its edge, dust and cobwebs, one ray of light",
+    "family-altar": "an old Vietnamese ancestral altar crowded with faded portraits, incense sticks burning in a bronze urn, oil lamp flames, dark wooden pillars"
+  },
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dem-kham-liem-tap-04/hook.jpg",
+    "ritual-circle": "images/suckhoe-long/dem-kham-liem-tap-04/ritual-circle.jpg",
+    "funeral-hall": "images/suckhoe-long/dem-kham-liem-tap-04/funeral-hall.jpg",
+    "old-letter": "images/suckhoe-long/dem-kham-liem-tap-04/old-letter.jpg",
+    "night-vigil": "images/suckhoe-long/dem-kham-liem-tap-04/night-vigil.jpg",
+    "village-dusk": "images/suckhoe-long/dem-kham-liem-tap-04/village-dusk.jpg",
+    "river-bank": "images/suckhoe-long/dem-kham-liem-tap-04/river-bank.jpg",
+    "attic-trunk": "images/suckhoe-long/dem-kham-liem-tap-04/attic-trunk.jpg",
+    "family-altar": "images/suckhoe-long/dem-kham-liem-tap-04/family-altar.jpg"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Nó quay lại",
+      "text": "Đêm khâm liệm cuối, khoảng hai giờ sáng, cả nhà nghe thấy tiếng bước chân trên sân - chân trần, lê từng bước chậm rãi vào nhà. Rồi nó hiện ra ở ngưỡng cửa: một cô gái mặc áo dài trắng cũ, tóc đen dài buông tới gót, chân không chạm đất. Nó đứng giữa cửa nhìn vào trong - nhìn quan tài ông Hai, rồi nhìn Hải đang ngồi trong vòng chỉ đỏ - và nó cười."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Nó đứng ngoài vòng",
+      "text": "Cô Lụa đứng ngoài vòng bột gạo, không bước vào - chỉ đứng đó nhìn Hải, đầu hơi nghiêng như ngắm nghía. Giọng nó vọng lại êm ru như hát: cháu ông Hai đây hả - mắt giống ông ta, mày cũng giống ông ta. Thầy Tài đứng chắn trước vòng, chuông đồng giơ ngang ngực, bảo cả nhà không ai được lên tiếng trả lời nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Nó gọi tên Hải",
+      "text": "Nó bắt đầu gọi: Hải ơi - ra đây với ta. Giọng êm ái, gần như dịu dàng. Hải ngồi cứng trong vòng chỉ đỏ, mồ hôi chảy dọc sống lưng. Nó gọi tiếp, mỗi lần gọi giọng lại gần hơn, như thể nó đang bước lại - nhưng nhìn xuống thì nó vẫn đứng yên ngoài vòng bột gạo, chỉ có giọng nó tiến lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Nó mặc thân ông nội",
+      "text": "Rồi nó đổi thủ đoạn - bỗng hình dáng cô gái nhạt đi, thay vào là dáng ông Hai đứng đó, mặc đúng bộ đồ tang, giọng ông nội thân quen gọi: Hải, cháu - lại đây với ông, ông lạnh lắm. Hải gần như đứng dậy - chính cậu Út phải níu vai kéo lại: không phải ông đâu cháu, nhìn chân nó đi - nó không có bóng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Thầy Tài đấu pháp",
+      "text": "Thầy Tài bắt đầu niệm chú, chuông rung liên hồi. Vong giật mình lùi lại nửa bước - rồi nó giận. Áo dài trắng của nó bồng lên không gió, tóc dựng tung, mặt nó từ dung nhan đàn bà chuyển thành mặt xanh lét mắt lõm sâu - thứ mà người ta gọi là oan diện, mặt thật của vong chết oan bảy mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Nó kể nỗi oan",
+      "text": "Nó không còn êm ái nữa - giọng nó gào lên trong nhà, mà lạ là nghe như vọng từ rất xa: ta mười bảy tuổi, cha ta bảo ta đi đón trăng bến sông - cha ta đẩy ta xuống nước vì ta có bầu với người làm! Cha ta giết con mình rồi bảo trót chân! Ta chết đuối mà tay ta vẫn ôm bụng - nghe chưa, cả nhà nghe chưa!"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Cha giết con",
+      "text": "Cả nhà đờ người - không ai ngờ cái chết của cô Lụa không phải tai nạn, mà là chính cha đẩy xuống sông. Nó kể tiếp, giọng rít lên: xác ta trôi ba ngày, cha ta cho vớt lên rồi chôn lén, rồi lại moi xương ta thỉnh hồn giữ trong rương - vì thầy bảo hồn con gái chết oan giữ được thì giữ được phúc. Cha ta giữ hồn ta như giữ của - bảy mươi năm!"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Rương từ nhà điền chủ",
+      "text": "Vậy cái rương không phải ông Hai lấy trộm - đó là rương thỉnh hồn mà nhà điền chủ Lê tự làm: giữ hồn con gái để giữ phúc cho nhà. Khi cả nhà điền chủ chết thảm - người ta nói chính hồn cô Lụa trả oán - rương đó được giao ông Hai mang đi chôn kín. Nhưng ông Hai không chôn - ông giữ lại. Và câu hỏi còn lại: vì sao ông Hai giữ?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Nó ngừng lại",
+      "text": "Vong đang gào thì bỗng ngừng - nó nhìn về phía cái rương cũ đặt ngay cửa, nắp mở, vải đỏ mới lót trong. Nó nhìn cái rương một lúc lâu, lâu đến nỗi cả nhà tưởng nó bị trấn - rồi nó nói một câu nhỏ đi, giọng không còn oán mà chỉ còn buồn: ông ta giữ ta mười lăm năm - ông ta là người duy nhất mỗi đêm lên thắp nhang nói chuyện với ta."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "attic-trunk",
+      "caption": "Thư trong rương",
+      "text": "Lúc ấy Hải chợt nhớ: khi thầy lật rương, dưới lớp quần áo tơ tằm còn một ngăn kéo nhỏ chưa ai mở. Cậu Út chạy lên gác lục - trong ngăn kéo có một xấp giấy cũ bọc vải: mấy chục lá thư tay, nét chữ nắn nót, đầu mỗi lá đều viết Lụa ơi. Chữ ông nội - ông nội viết thư cho cô Lụa, viết suốt mười lăm năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-letter",
+      "caption": "Thư tay ông nội",
+      "text": "Cậu Út run tay đọc lá thư trên cùng: Lụa ơi, hôm nay mồng một, tôi lại lên thắp nhang cho cô - vợ con tôi không biết tôi lên gác làm gì, họ tưởng tôi thờ cái rương lộc. Tôi thờ cô, Lụa - mười lăm năm rồi tôi không dám nói với ai: tôi chính là Tốn, người làm cha cô đánh trục xuất. Tôi quay lại nhận rương cô vì tôi không chịu được chuyện cô nằm một mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-letter",
+      "caption": "Ông Hai là Tốn",
+      "text": "Cả nhà đứng chết trân - ông nội chính là anh Tốn, người tình của cô Lụa. Ông bị đánh trục xuất, trôi dạt một năm, rồi đổi tên quay lại vùng làm người làm cho điền chủ Lê - ngay dưới mắt cha cô Lụa mà ông ta không nhận ra. Ông ở lại chỉ vì một lý do: ông nghe đồn hồn cô bị giữ trong rương - ông muốn cứu cô ra nhưng không biết cách, nên ông giữ rương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-letter",
+      "caption": "Mười lăm năm viết thư",
+      "text": "Lá thư cuối cùng, viết cách ngày ông mất chỉ vài hôm: Lụa ơi, tôi già rồi, chắc không bao lâu nữa tôi đi theo cô. Tôi hứa với cô - đến khi nào tôi chết, tôi sẽ thả cô ra khỏi rương, để cô được đi đầu thai. Tôi không dám thả sớm vì thầy miền tây bảo thả sai lễ cô sẽ tan hồn - tôi sợ cô tan, thà giữ cô thêm một chút. Tha thứ cho tôi giữ cô lâu quá."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Sự thật cuối cùng",
+      "text": "Vậy ra ông nội không giữ hồn cô Lụa vì lộc - ông giữ vì yêu, và vì sợ thả sai cách thì cô tan hồn. Ông mang nỗi đó suốt mười lăm năm, viết thư tỏ bày với cô mà không dám nói với ai sống. Ông chết đêm rằm tháng bảy - và cô, bị giữ bảy mươi năm thành ma, lao ra chiếm xác ông không phải để trả thù ông - mà vì nỗi oán bảy mươi năm không còn phân biệt được ai nợ ai nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Nó nghe thấy",
+      "text": "Và lúc cậu Út đọc xong lá thư cuối, vong ở cửa bỗng khựng lại - mặt oan diện của nó từ từ nhạt đi, trở lại mặt cô gái mười bảy tuổi. Nó nhìn xấp thư trong tay cậu Út, nhìn cái rương mở nắp, rồi nhìn quan tài ông Hai - và lần đầu tiên, mắt nó rơi nước: nước mắt đen chảy dài trên má trắng. Nó nói rất khẽ: ông ta... là Tốn?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Nó gục xuống",
+      "text": "Nó đứng im giữa cửa, hai vai run lên. Bảy mươi năm oán hận vừa sụp xuống thành một câu nói lắp bắp: ta tưởng... ta tưởng ông ta cũng chỉ giữ ta như cha ta. Ta chiếm xác ông ba ngày - ta định đêm nay lấy thân cháu ông. Nó quay sang Hải, lần đầu nói thẳng tên cậu với giọng người: Hải - ta xin lỗi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-circle",
+      "caption": "Nó vẫn chưa đi",
+      "text": "Nhưng thầy Tài không hạ chuông - thầy nói: cô Lụa, oán giãi rồi, nhưng thân ma của cô vẫn còn đây - bảy mươi năm oan khí không tan chỉ vì một câu xin lỗi. Nếu cô ở lại trần gian đêm nay, oan khí sẽ lại phủ lên đầu cô - cô phải siêu, và phải siêu ngay đêm nay, trước gà gáy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Cô Lụa đồng ý siêu",
+      "text": "Cô Lụa nhìn quan tài ông Hai lần cuối, rồi gật đầu: thầy làm lễ cho tôi - nhưng tôi xin một điều. Xác ông ta còn đây, hồn ông ta còn quanh nhà - cho tôi gặp ông ta một lần trước khi tôi đi. Tôi đợi ông ta bảy mươi năm - ông ta viết thư cho tôi mười lăm năm - tôi muốn nhìn mặt ông ta một lần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Thầy chuẩn bị lễ hội hồn",
+      "text": "Thầy Tài ngần ngừ rồi gật: được - tôi sẽ làm lễ hội hồn, thỉnh hồn ông Hai về gặp cô một lần, xong thì siêu cả hai. Nhưng phải làm ngay - còn một canh trước gà gáy. Thầy bảo cả nhà: đây là lễ cuối của câu chuyện này - và là lễ nguy hiểm nhất, vì hai hồn gặp nhau giữa lúc oan khí còn sót, chệch một ly là hỏng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Một canh cuối",
+      "text": "Cả nhà dọn lễ trong im lặng. Hải ngồi trong vòng chỉ đỏ, nhìn quan tài ông nội - ông nội mà đến tận lúc này cậu mới hiểu hết: ông không phải người giữ vong vì lộc, ông là người tình quay lại vì lời hứa chưa thành. Và đêm nay, sau bảy mươi năm, hai người ấy sẽ gặp nhau một lần - trước khi cả hai cùng đi."
+    }
+  ]
+}

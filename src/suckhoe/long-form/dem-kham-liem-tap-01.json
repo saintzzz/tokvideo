@@ -1,0 +1,276 @@
+{
+  "slug": "dem-kham-liem-tap-01",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "ĐÊM KHÂM LIỆM | Tập 1: Con Cháu Đứng Hàng - Đêm Đầu Tiên Người Chết Ngồi Dậy | Truyện Ma Dài",
+  "description": "Hải về quê lo đám tang ông nội - đêm khâm liệm đầu tiên, quan tài chưa đóng nắp và người trong làng dặn một điều kỳ lạ: tuyệt đối không để người chết một mình quá nửa đêm.\n\nTruyện ma dài 5 tập về tập tục khâm liệm và những đêm canh quan tài, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "tử thi trỗi dậy",
+    "khâm liệm",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #tuthitroiday #khamliem #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "ĐÊM ĐẦU NGƯỜI CHẾT NGỒI DẬY",
+  "scenePrompts": {
+    "hook": "a dead old man sitting upright inside an open wooden coffin in a candlelit Vietnamese funeral hall, white mourning banners, mourners frozen in terror, eerie supernatural atmosphere",
+    "village-dusk": "a rural Vietnamese village at dusk, an old tiled-roof house with white funeral banners hanging at the gate, dirt road, areca palms silhouetted against a dark orange sky",
+    "funeral-hall": "a traditional Vietnamese funeral hall inside an old country house, white cloth banners, incense smoke, an open wooden coffin on a raised platform, yellow coffin lamp burning at its head",
+    "coffin-close": "close-up of an open dark wooden coffin, an old man lying inside covered by a yellow cloth up to the chest, white paper face covering slightly lifted by wind, candle flames flickering",
+    "village-road": "a narrow dirt road into a Vietnamese village at twilight, rice fields on both sides, a lone traveler with a backpack walking toward distant funeral banners",
+    "family-altar": "an old Vietnamese ancestral altar crowded with faded portraits, incense sticks burning in a bronze urn, oil lamp flames, dark wooden pillars",
+    "night-vigil": "a lonely night vigil inside a funeral hall, two mourners dozing beside an open coffin, a single coffin lamp flame, long shadows on the white banners",
+    "mist-field": "a dark rice field at night covered in low white fog, a distant figure walking stiffly toward the village, moonlight through clouds"
+  },
+  "sceneImages": {
+    "hook": "images/suckhoe-long/dem-kham-liem-tap-01/hook.jpg",
+    "village-dusk": "images/suckhoe-long/dem-kham-liem-tap-01/village-dusk.jpg",
+    "funeral-hall": "images/suckhoe-long/dem-kham-liem-tap-01/funeral-hall.jpg",
+    "coffin-close": "images/suckhoe-long/dem-kham-liem-tap-01/coffin-close.jpg",
+    "village-road": "images/suckhoe-long/dem-kham-liem-tap-01/village-road.jpg",
+    "family-altar": "images/suckhoe-long/dem-kham-liem-tap-01/family-altar.jpg",
+    "night-vigil": "images/suckhoe-long/dem-kham-liem-tap-01/night-vigil.jpg",
+    "mist-field": "images/suckhoe-long/dem-kham-liem-tap-01/mist-field.jpg"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Người chết ngồi dậy",
+      "text": "Ba giờ sáng, giữa lúc cả nhà gục đầu ngủ vòng quanh quan tài, cái xác của ông Hai chậm rãi ngồi dậy. Tờ giấy vàng che mặt rơi xuống ngực. Mắt vẫn nhắm, nhưng hai bàn tay gân xanh bấu chặt vào thành quan tài như sắp đứng phắt lên. Đó là đêm khâm liệm đầu tiên - và đó cũng là khoảnh khắc Hải hiểu vì sao bà con trong làng dặn cậu một điều duy nhất trước khi về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-road",
+      "caption": "Về quê lo tang",
+      "text": "Hải về làng Nghĩa Hòa đúng chập tối, sau bảy tiếng xe khách và một đoạn đi bộ cuối đường đất. Từ xa đã thấy cổng nhà ông nội treo hai vải trắng buồn nhoèn - đám tang đã sang ngày thứ hai và cậu là đứa cháu trai duy nhất về kịp. Xe máy không vào được vì đường sụt lún, nên cậu đi bộ, cái balo nặng trĩu quà và một khoản tiền mẹ dặn đưa nhà tang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Nhà ông nội",
+      "text": "Nhà ông nội là căn nhà ba gian lợp ngói âm dương, đứng lùi sau vườn cau già. Cổng tre mở hé, bên trong nhang khói nghi ngút, đèn hắc âm sáng vàng như đốm lửa nhỏ giữa màn đêm. Người thân trong họ ngồi thấp thoáng quanh quan tài, ai cũng mặc áo tang trắng, im ắng như những cái bóng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Đêm khâm liệm",
+      "text": "Giữa nhà chính, quan tài gỗ dổi đặt trên hai con ngựa gỗ, nắp đậy hờ chưa đóng đinh - theo lệ làng, phải để hờ ba đêm cho người chết gia từ. Đầu quan tài thắp ngọn đèn hắc âm gọi là đèn hồn, đèn mà người ta bảo soi đường cho vong về lại xác mỗi đêm. Hải khẽ đặt vòng hoa, vái lạy, rồi ngồi xuống bên cạnh cậu ruột là chú Ba."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Lời dặn của cậu Út",
+      "text": "Đang quỳ thắp nhang trước bàn thờ gia tiên, Hải nghe cậu Út - chú ruột út còn độc thân sống với ông - ghé tai thì thầm: tối nay cháu canh với cậu một đêm, nhưng nhớ kỹ, qua nửa đêm đừng để quan tài một mình, dù có chuyện gì cũng không được đi đâu hết. Giọng cậu Út run nhè nhẹ, không giống giọng người nói đùa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-close",
+      "caption": "Ông nội trong quan tài",
+      "text": "Hải tò mò lại gần quan tài lúc chỉ còn hai chú cháu. Ông nội nằm đó, khô nhỏ hơn nhiều so với lần cuối cậu gặp ba năm trước. Mặt phủ tờ giấy vàng, ngực đắp lụa đỏ thêu chữ phúc, hai tay đặt chéo cầm nén nhang tàn. Nhìn kỹ, Hải thấy cổ ông có một vệt tím nhạt chạy vòng quanh, hình như nó mới xuất hiện sau ngày khâm liệm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Canh đêm đầu",
+      "text": "Đêm khâm liệm đầu tiên, người thân tản về hai bên nhà ngủ tạm, chỉ còn Hải, cậu Út và cô hàng xóm tên Lựu ngồi canh. Cô Lựu ngồi xổm góc nhà quay lưng vào quan tài, hai tay ôm một cây gậy tre nhỏ - cây gậy cô bảo chuyên để gõ người mò ngủ, nhưng tay cô cứ siết chặt như sẵn sàng gõ thứ khác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Ba điều cấm kỵ",
+      "text": "Cô Lựu lặng lẽ nói ba điều cấm của đêm khâm liệm: không được nói đến tên người chết sau giờ Hợi, không được để mèo hay chó chạy ngang dưới gầm quan tài, và tuyệt đối không để ngọn đèn hồn tắt. Điều cuối cùng cô nhấn mạnh hai lần: đèn hồn tắt là người chết quên đường về xác - mà quên rồi thì nó lượn đi, lượn đi nó gặp thứ không phải của nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Giờ Hợi",
+      "text": "Qua giờ Hợi, cả nhà lặng hẳn. Hải ngồi tựa lưng vào cột gỗ, nhìn ngọn đèn hồn bập bùng. Cậu Út ngồi đối diện, mắt không rời quan tài, thỉnh thoảng đứng dậy châm thêm mỡ vào đèn mà không nói gì. Ngoài sân, gió thổi qua tàu cau kêu sột sột như tiếng ai lật giấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-close",
+      "caption": "Tờ giấy cựa",
+      "text": "Khoảng gần mười hai giờ, Hải thấy tờ giấy vàng trên mặt ông nội hơi cựa - chớp mắt lại nhìn, nó lại im. Cậu tự trấn an là gió, nhưng rồi nó cựa lần nữa, phập phồng lên rồi xẹp xuống, đều đặn như nhịp thở. Hải định gọi cậu Út thì thấy cậu Út đang ngồi ngủ gật, đầu gục xuống ngực, tay vẫn nắm cây mỡ đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Ngọn đèn hắc âm",
+      "text": "Hải đứng dậy định qua khuấy cậu Út dậy thì ngọn đèn hồn đột nhiên nhỏ lại, nhỏ thành một đốm xanh lét. Cậu vội đổ thêm mỡ vào bát đèn - ngọn lửa bật lên, bình thường. Nhưng khi quay lại nhìn quan tài, Hải cứng đờ: tờ giấy trên mặt ông nội giờ đã trệch hẳn sang một bên, để lộ nửa khuôn mặt nhợt nhạt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-close",
+      "caption": "Mắt mở ra",
+      "text": "Và trong ánh đèn hồn chập chờn, Hải thấy rõ màng nhĩn: mắt ông nội đã mở. Không phải mở từ từ - mà đã mở sẵn từ lúc nào, hai con ngươi đục trắng nghiêng hẳn sang một bên, nhìn chằm chằm về phía cửa sau dẫn ra vườn cau. Hải đứng im, tim đập thình thịch, chân như đóng đinh xuống nền gạch."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Gọi người dậy",
+      "text": "Cậu lảo đảo qua lay cậu Út - cậu Út ơi, ông, mắt ông mở rồi! Cậu Út giật mình bật dậy, lao đến quan tài, tay run run đặt lại tờ giấy vàng. Chú chỉ nói một câu duy nhất, giọng tắc nghẹn: giấy nó tự rơi thôi, mắt người chết đôi khi nở ra vì hơi ẩm, cháu đừng nghĩ linh tinh. Nhưng tay cậu Út lúc đặt giấy run như cầy sấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Câu chuyện của ông Bảy",
+      "text": "Được phen này mất ngủ, Hải nghe ông Bảy - bác của cậu, đang thức khâu phần tang phục - kể chuyện xưa: hồi đó trong làng có ông Hai Tư mới chết, đêm khâm liệm người nhà sơ ý để ngọn đèn hồn tắt qua nửa đêm. Sáng hôm sau người ta thấy quan tài trống trơn, còn ông Hai Tư thì ngồi tựa ở cổng nhà thờ họ, da xanh bét, miệng đầy đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Chuyện cũ trong làng",
+      "text": "Ông Bảy kể thêm rằng việc ấy người ta gọi là trộm thi - xác chết tự dậy đi lang thang vì linh hồn chưa biết đường về mồ, bị các vong ngoài nương theo mà nhập. Để tránh, làng mới lập luật đèn hồn phải cháy suốt đêm, cấm kỵ để quan tài một mình. Ông nhìn Hải: ông nội cháu chết êm, nhưng ông mất đúng đêm rằm tháng bảy - nên đêm nay phải coi chừng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Đêm rằm tháng bảy",
+      "text": "Nghe đến rằm tháng bảy Hải mới để ý - đúng là ông nội mất hôm qua, rằm tháng bảy âm lịch, ngày mà người ta bảo cô hồn được thả về. Cậu nhớ mẹ từng dặn: về lo tang ông mà thấy gì lạ thì ráng kể cho chú Ba nghe, đừng tự giải quyết. Vậy là nhà cậu từ trước đã biết ông mất vào đêm xấu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Ba thế hệ chú cháu",
+      "text": "Hải hỏi cậu Út vì sao ông chết đột ngột. Cậu Út ngập ngừng: ông nội hôm ấy đi nhà thờ họ về khuya, sáng ra thấy ông nằm bất động trong nhà trệt, tay vẫn cầm chùm chìa khóa cũ - chìa khóa cái rương dổi mà từ nhỏ đến lớn không ai được phép mở. Rương đó ông để trên gác, phủ vải đỏ bên dưới một tấm bùa vàng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Cái rương trên gác",
+      "text": "Nhìn lên gác tối thui sau bàn thờ gia tiên, Hải thấy bóng cái rương cũ đắp vải đỏ, góc rương để lộ một mép vàng hoe của tấm bùa. Cậu Út bảo ông nội cấm ai lên gác từ mười lăm năm nay, kể cả quét nhà cũng chỉ quét đến chân thang. Mà ông Bảy nói thêm: hồi còn sống, đêm nào ông nội cũng tự mang cơm lên gác, bảo là dọn chỗ thờ, nhưng gác đó chỉ có cái rương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Mười hai giờ đêm",
+      "text": "Đồng hồ điểm mười hai giờ. Cô Lựu đã ngủ gục, cậu Út thì ra sân hút thuốc. Chỉ còn Hải ngồi một mình trước quan tài. Gió lùa qua khe cửa làm ngọn đèn hồn lay lay - cậu vội đưa tay che, ngọn đèn lại đâm chổi lên một cái rồi lại bé xuống như sắp tắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-close",
+      "caption": "Đèn hồn tắt",
+      "text": "Và rồi đèn hồn tắt phụt - không phải nhỏ dần mà tắt ngúm như bị ai bóp ngọn. Bóng tối ập xuống gian nhà chỉ còn ánh trăng rằm lọt qua cửa sổ. Trong lúc mắt còn lóa tối, Hải nghe một tiếng cộp khô khốc - tiếng gỗ va vào gỗ - từ chính chiếc quan tài. Cậu dụi mắt, loay hoay châm lại đèn, thì cảnh tượng trước mắt khiến máu cậu đông cứng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Ông nội ngồi dậy",
+      "text": "Ông nội ngồi thẳng lên trong quan tài, lưng cứng đơ như khúc cây. Tờ giấy vàng rơi xuống đùi. Mắt ông vẫn mở, hai con ngươi trắng dã quay quay về phía Hải - và rồi bàn tay gân xanh của ông từ từ nhấc lên, đặt chân thành quan tài, như sắp leo ra ngoài. Hải muốn hét nhưng họng nghẹn đắng, hai chân dính chặt xuống đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Cậu Út lao vào",
+      "text": "Đúng lúc ấy cậu Út từ sân lao vào, quăng cây thuốc, chụp lấy nắp quan tài đè xuống. Nhưng nắp đè xuống được một nửa thì bị một lực từ bên trong đẩy ngược lên - lực mạnh đến nỗi cậu Út bị hất bật ngửa ra sau. Ông Bảy nghe động lao ra, hai người đàn ông gồng mình ép nắp, tiếng gỗ kêu cọt kẹt dữ dội."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Bàn tay bấu thành quan tài",
+      "text": "Bàn tay ông nội thò lên giữa khe nắp, các ngón tay xanh nhạt quằn quại bấu vào thành gỗ đến chảy máu đen - máu người chết loãng đặc quánh. Cô Lựu tỉnh dậy hét lên thất thanh. Cậu Út hét bảo Hải đốt nhang vòng quanh quan tài - nhanh lên, đốt đi!"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Vòng nhang vây quan tài",
+      "text": "Hải run tay bật lửa đốt năm nén nhang, cắm vòng quanh đế quan tài theo đúng thế ngũ hành ông Bảy chỉ. Khói nhang bốc lên, bàn tay ông nội chùn xuống, từ từ rụt vào trong. Hai người đàn ông ấn mạnh - nắp quan tài khớp xuống cái rầm. Cậu Út quỵ ngồi phệt xuống đất, thở hồng hộc, mồ hôi nhễ nhại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Châm lại đèn hồn",
+      "text": "Cậu Út run run châm lại ngọn đèn hồn, bảo Hải quan sát kỹ - đèn phải cháy đến sáng, ai hết ca canh phải gọi người khác thay, tuyệt đối không được để trống. Rồi cậu Út nhìn về phía gác nhà, nơi cái rương vải đỏ nằm im trong bóng tối, nói khẽ: ba nó không muốn đi vì còn cái gì đó chưa buông được - chắc mai phải gọi thầy về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Sáng hôm sau",
+      "text": "Sáng hôm sau cả làng đã biết chuyện đêm qua. Bà con túa đến xem, ai cũng lắc đầu: ông Hai chết đêm rằm tháng bảy đã là xấu, mà đêm đầu tiên xác đã trỗi dậy thì không phải chuyện thường. Người ta bàn nhau phải mời ông thầy Tài - thầy cúng giỏi nhất vùng, đang đi làm lễ ở làng bên - về gấp trước đêm khâm liệm thứ hai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Vết máu trên nắp",
+      "text": "Hải lại gần quan tài lúc trưa - trên mép nắp vẫn còn vệt máu đen quánh của bàn tay ông nội. Chú Ba cạo vệt máu đó đi bằng dao nhỏ, mặt trắng bệch, bảo chuyện này không kể cho bà con nghe thêm. Nhưng Hải thấy chú Ba lén nhét vệt máu đó vào một cái khăn trắng rồi gấp lại cất vào túi áo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-field",
+      "caption": "Đi tìm thầy Tài",
+      "text": "Chiều đó Hải theo cậu Út sang làng bên tìm thầy Tài. Đi qua cánh đồng lúa đang trổ, sương chiều bắt đầu giăng. Cậu Út vừa đi vừa nói: thầy Tài hồi xưa từng khâm liệm lại cho một cái xác trỗi dậy ở làng mình - ông ta biết cách. Nhưng cháu phải hứa một điều: thầy hỏi gì về ông nội, cháu nói thật, đừng giấu - nhà mình đã giấu quá nhiều thứ rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-road",
+      "caption": "Câu chuyện trên đường đi",
+      "text": "Trên đường đi Hải hỏi cậu Út vì sao ông nội cấm lên gác. Cậu Út im lặng một lúc lâu rồi kể: hồi ông nội còn trẻ, nhà mình nghèo lắm, ông đi làm thuê cho một điền chủ ở thị xã - có lần về mang theo cái rương đó, bảo là đồ thừa của chủ cho. Từ ngày có cái rương nhà mình khá lên hẳn, nhưng ông nội đổi hẳn tính - hay cáu, hay lẩm bẩm một mình trên gác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mist-field",
+      "caption": "Bóng người trong sương",
+      "text": "Đang đi qua đồng, Hải bỗng thấy xa xa giữa màn sương chiều có một bóng người đứng im - đứng im giữa ruộng nước, mặc áo đen, đầu đội nón lá, không động đậy. Cậu ngoái nhìn cậu Út định hỏi, quay lại thì bóng người đã biến mất. Cậu Út bảo cậu đừng nhìn, đừng nghĩ - chiều nay ruộng nước không có ai cắt cỏ đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Nhà thầy Tài",
+      "text": "Nhà thầy Tài ở cuối làng bên, một căn nhà lá nhỏ sau hàng tre già, cổng treo chuông đồng và tỏi khô. Thầy Tài đang ngồi xếp bó thuốc, nhìn hai chú cháu bước vào thì ngước lên, nhíu mày: nhà các cháu vừa có tang phải không - xác có vấn đề. Không phải là câu hỏi, là câu khẳng định - thầy đoán ngay từ mùi hương liệu còn vương trên áo cậu Út."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Thầy Tài hỏi chuyện",
+      "text": "Thầy Tài hỏi ba câu: ông mất lúc nào, xác trỗi dậy đêm nào, và nhà có vật gì cấm người nhà đụng vào không. Cậu Út kể rõ ba điều ấy - ông mất đêm rằm, xác trỗi đêm đầu, và có cái rương trên gác mười lăm năm không ai mở. Thầy Tài im lặng một lúc lâu, rồi bảo: không phải ông các cháu đâu - thứ trong quan tài đêm qua không phải hồn ông Hai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-close",
+      "caption": "Không phải hồn ông nội",
+      "text": "Hải và cậu Út nghe đến đó lạnh sống lưng. Thầy Tài nói tiếp: hồn người chết thân thiết trỗi dậy chỉ quanh quẩn, còn cái thứ ngồi dậy bấu thành quan tài muốn bò ra là nhập tràng - vong ngoài xâm chiếm xác. Nó chờ xác mới để vào - mà đêm rằm tháng bảy cửa ngầm mở, xác mới nhất vùng là của ông Hai - vậy nó về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Thầy sẽ đến",
+      "text": "Thầy Tài hứa sẽ về làng Nghĩa Hòa ngay chiều mai, trước đêm khâm liệm thứ hai. Thầy dặn một điều rõ ràng: đêm nay vẫn phải canh như mọi đêm, nếu xác lại trỗi dậy thì không được sợ mà bỏ chạy - để nó ra khỏi quan tài là nó mất dạng, lúc đó muốn tìm lại cũng không được. Nó sẽ đi đâu thì chỉ trời biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-road",
+      "caption": "Về nhà lúc chiều tối",
+      "text": "Hai chú cháu về đến nhà khi trời đã tối hẳn. Cả làng đã túa đến viếng, nhà cửa đông nghẹt, nhang khói mù mịt. Người ta nhìn hai chú cháu với ánh mắt lo lắng - ai cũng biết chuyện đêm qua. Hải ngồi vào góc nhà chính, nhìn ngọn đèn hồn cháy đều, nghĩ về lời thầy Tài: thứ trong quan tài không phải ông nội - vậy hồn ông nội đang ở đâu?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-hall",
+      "caption": "Đêm khâm liệm thứ hai",
+      "text": "Đêm khâm liệm thứ hai, nhà đông hơn đêm đầu - bà con tự nguyện đến canh. Ngọn đèn hồn được châm đầy mỡ, bốn nén nhang cắm quanh quan tài. Nắp quan tài đã được đóng đinh ba phần, chỉ hờ lại một góc nhỏ để thông hơi - theo lời thầy Tài nhắn về. Cậu Út bảo Hải ngủ trước đi, đến nửa đêm thay ca."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-vigil",
+      "caption": "Giờ Tý nửa đêm",
+      "text": "Hải được gọi dậy lúc nửa đêm. Cậu ngồi vào vị trí canh, mắt dán vào ngọn đèn hồn. Ngoài sân im ắng, chỉ còn tiếng dế và tiếng gió xa. Khoảng hai giờ sáng, cậu nghe một tiếng khô khốc rất nhỏ từ quan tài - như tiếng ai gõ ngón tay vào gỗ từ bên trong. Một tiếng, rồi hai tiếng, rồi ba tiếng - đều đặn, kiên nhẫn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-close",
+      "caption": "Tiếng gõ trong quan tài",
+      "text": "Cả nhà thức giấc cùng nghe tiếng gõ ấy - cốp, cốp, cốp - từ bên trong quan tài đóng đinh. Không ai dám lại gần. Cậu Út đứng cạnh, mặt xanh mét, lẩm bẩm: đêm qua nó bấu thành, đêm nay nó gõ - nó đang đếm, đếm ngày khâm liệm còn lại trước khi quan tài đóng hẳn. Có người bật khóc. Nắp quan tài rung nhẹ, tiếng gõ vẫn cốp cốp đều đặn cho đến tận sáng."
+    }
+  ]
+}
