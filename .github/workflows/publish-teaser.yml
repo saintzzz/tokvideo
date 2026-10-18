@@ -26,6 +26,12 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # The teaser filter graph (boxblur/scale/overlay, libx264) needs a
+      # full ffmpeg build — the Remotion-bundled binary that
+      # scripts/lib/ffmpeg.mjs falls back to is a minimal build that
+      # rejects the graph outright (observed 2026-10-18 run 39130584056).
+      - name: Install real ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Build teaser video
         run: |
           if [ -z "$SLUG" ]; then echo "No slug in dispatch payload — no-op."; exit 0; fi
