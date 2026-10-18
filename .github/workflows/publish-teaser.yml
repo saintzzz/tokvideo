@@ -53,6 +53,11 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add src/suckhoe/published-long.json
             git commit -m "Record long-form teaser upload ${SLUG} [skip ci]"
+            # Parallel teaser dispatches race on this same file — rebase
+            # the sibling commits before pushing (2026-10-18: two of
+            # three runs pushed simultaneously and lost to a
+            # non-fast-forward).
+            git pull --rebase --autostash
             git push
           else
             echo "No ledger change."

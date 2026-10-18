@@ -19,7 +19,7 @@ export function arcBase(slug) {
 
 // "dem-kham-liem" -> "Đêm Khâm Liệm" using the episode's own title
 // casing when available, else a title-cased slug.
-function arcDisplayName(episode, slug) {
+export function arcDisplayName(episode, slug) {
   // Legacy title format: "ARC NAME | Tập N: ...". Reuse the arc part
   // but title-case it so the new title doesn't shout.
   const legacy = episode.title?.split("|")[0]?.trim();

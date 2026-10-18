@@ -14,7 +14,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { google } from "googleapis";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
-import { arcBase, videoUrl, playlistUrl } from "./lib/long-metadata.mjs";
+import { arcDisplayName, videoUrl, playlistUrl } from "./lib/long-metadata.mjs";
 
 const slug = process.argv[2];
 if (!slug) {
@@ -61,10 +61,7 @@ if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
 const PRIVACY_STATUS = process.env.YOUTUBE_TEASER_PRIVACY_STATUS || "public";
 
 const epNum = slug.match(/-tap-(\d+)$/)?.[1] ?? "";
-const arcName = arcBase(slug)
-  .split("-")
-  .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-  .join(" ");
+const arcName = arcDisplayName(episode, slug);
 const title = `Truyện Ma | ${arcName} - Tập ${parseInt(epNum, 10)} (xem trước) #Shorts`;
 
 const playlistId = playlistMap.vi?.["long-form"];
