@@ -214,10 +214,14 @@ jobs:
           ENGLISH_ARENA_SHARED_CHANGED: ${{ steps.filter.outputs.english_arena_shared }}
           ENGLISH_ARENA_EPISODES_CHANGED: ${{ steps.filter.outputs.english_arena_episodes }}
         run: |
-          if [ "$EVENT_NAME" = "schedule" ]; then
+          if [ "$EVENT_NAME" = "schedule" ] || [ "$EVENT_NAME" = "repository_dispatch" ]; then
             # The scheduled tick only drives publish-next-suckhoe (its own
             # job, gated on event_name == 'schedule' directly) — none of
-            # the push/manual-dispatch render jobs should fire here.
+            # the push/manual-dispatch render jobs should fire here. Same
+            # for repository_dispatch: it only drives the suckhoe-long job
+            # (gated on event_name directly) — without this branch the
+            # dispatch falls into the all-true `else` below and burns every
+            # render-* job on the Edge-TTS-403 wall for nothing.
             echo "gia_cat_luong=false" >> "$GITHUB_OUTPUT"
             echo "churchill=false" >> "$GITHUB_OUTPUT"
             echo "hippocrates=false" >> "$GITHUB_OUTPUT"
@@ -341,7 +345,7 @@ jobs:
           # touching its files, manual "english-arena" or "all" dispatch.
           # Any other manual pick (suckhoe, gia-cat-luong, ...) leaves it
           # off — the picker asked for one specific thing.
-          if [ "$EVENT_NAME" = "schedule" ]; then
+          if [ "$EVENT_NAME" = "schedule" ] || [ "$EVENT_NAME" = "repository_dispatch" ]; then
             echo "english_arena=false" >> "$GITHUB_OUTPUT"
             echo "english_arena_shared=false" >> "$GITHUB_OUTPUT"
           elif [ "$EVENT_NAME" = "push" ] && { [ -z "$VIDEO_INPUT" ] || [ "$VIDEO_INPUT" = "auto" ]; }; then
