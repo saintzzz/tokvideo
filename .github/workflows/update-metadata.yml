@@ -1,0 +1,33 @@
+name: Update long-form metadata
+
+# Retroactive metadata pass on already-published long-form videos:
+# keyword-first titles + prev/next/playlist links in descriptions.
+# Triggered by repository_dispatch so a repo-scoped token can fire it:
+#   POST /repos/{owner}/{repo}/dispatches
+#   { "event_type": "update-long-metadata",
+#     "client_payload": { "slugs": ["hu-ma-ga-tap-01", ...] } }
+# An empty slugs list updates every episode in published-long.json.
+on:
+  repository_dispatch:
+    types: [update-long-metadata]
+
+permissions:
+  contents: read
+
+jobs:
+  update-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Update published long-form metadata
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          SLUGS: ${{ join(github.event.client_payload.slugs, ' ') }}
+        run: node scripts/update-long-metadata.mjs $SLUGS

@@ -1,0 +1,53 @@
+name: Publish long-form teaser Short
+
+# Builds + uploads a ~50s vertical teaser for one long-form episode —
+# the Shorts feed is the discovery funnel while browse distribution
+# recovers. Dispatch with:
+#   POST /repos/{owner}/{repo}/dispatches
+#   { "event_type": "publish-long-teaser",
+#     "client_payload": { "slug": "hu-ma-ga-tap-01", "privacy": "public" } }
+on:
+  repository_dispatch:
+    types: [publish-long-teaser]
+
+permissions:
+  contents: write
+
+jobs:
+  publish-teaser:
+    runs-on: ubuntu-latest
+    env:
+      SLUG: ${{ github.event.client_payload.slug }}
+      TEASER_PRIVACY: ${{ github.event.client_payload.privacy }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build teaser video
+        run: |
+          if [ -z "$SLUG" ]; then echo "No slug in dispatch payload — no-op."; exit 0; fi
+          node scripts/make-long-teaser.mjs "$SLUG"
+      - name: Upload teaser
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_TEASER_PRIVACY_STATUS: ${{ github.event.client_payload.privacy || 'public' }}
+        run: |
+          if [ -z "$SLUG" ]; then echo "No slug in dispatch payload — no-op."; exit 0; fi
+          node scripts/upload-long-teaser.mjs "$SLUG"
+      - name: Commit ledger
+        if: env.SLUG != ''
+        run: |
+          if ! git diff --quiet -- src/suckhoe/published-long.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add src/suckhoe/published-long.json
+            git commit -m "Record long-form teaser upload ${SLUG} [skip ci]"
+            git push
+          else
+            echo "No ledger change."
+          fi

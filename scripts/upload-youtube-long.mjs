@@ -4,6 +4,13 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { google } from "googleapis";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
+import {
+  longFormTitle,
+  longFormDescription,
+  longFormTags,
+  videoUrl,
+  arcBase,
+} from "./lib/long-metadata.mjs";
 
 // Uploads one rendered long-form Suc Khoe episode. Manual/dispatch-only —
 // NOT part of the automated Shorts publish queue. Regular long-form video,
@@ -69,32 +76,41 @@ const videoPath = path.join(import.meta.dirname, "..", "out", `SucKhoeLong-${slu
 // 2026-08-22 (a 108-char title silently killed an otherwise-successful
 // render/upload). Fail loudly and early instead of burning another full
 // render on a title that was always going to be rejected.
-if ([...episode.title].length > 100) {
+const title = longFormTitle(episode, slug);
+if ([...title].length > 100) {
   console.error(
-    `Episode title is ${[...episode.title].length} characters, over YouTube's 100-char limit: "${episode.title}"`
+    `Episode title is ${[...title].length} characters, over YouTube's 100-char limit: "${title}"`
   );
   process.exit(1);
 }
-const title = episode.title;
+
+// The ledger is needed before upload too: the previous arc episode's
+// videoId feeds the "Tập trước" link in this description, and after the
+// upload the previous video's description gets patched with the link to
+// this one (binge-session chaining — same pattern update-long-metadata
+// applies retroactively).
+const ledgerPath = path.join(import.meta.dirname, "..", "src", "suckhoe", "published-long.json");
+let ledger = {};
+if (existsSync(ledgerPath)) {
+  ledger = JSON.parse(await readFile(ledgerPath, "utf8"));
+}
+const arc = arcBase(slug);
+const epNum = parseInt(slug.match(/-tap-(\d+)$/)?.[1] ?? "0", 10);
+const prevEntry = epNum > 1 ? ledger[`${arc}-tap-${String(epNum - 1).padStart(2, "0")}`] : null;
+const nextEntry = ledger[`${arc}-tap-${String(epNum + 1).padStart(2, "0")}`] ?? null;
+
+const localeKeyEarly = isEn ? "en" : "vi";
+const longPlaylistId = playlistMap[localeKeyEarly]?.["long-form"];
+
 // Per-arc metadata overrides (episode.hashtags / episode.tags) replace
 // the generic story boilerplate - the horror arc needs horror tags, not
 // the xianxia defaults this description block was written for.
 const description = isStory
-  ? isEn
-    ? [
-        episode.description,
-        "",
-        "A serialized fiction story, narrated chapter by chapter. Subscribe and open the playlist to follow the full arc.",
-        "",
-        episode.hashtags ?? "#storytime #audiobook #serializedfiction",
-      ].join("\n")
-    : [
-        episode.description,
-        "",
-        "Truyện dài kể theo tập, nghe trọn một lần. Đăng ký kênh và mở playlist để nghe trọn bộ.",
-        "",
-        episode.hashtags ?? "#truyendai #truyenkieuhiep #nghetruyen",
-      ].join("\n")
+  ? longFormDescription(episode, {
+      playlistId: longPlaylistId,
+      prevVideoId: prevEntry?.videoId,
+      nextVideoId: nextEntry?.videoId,
+    })
   : isEn
   ? [
       episode.description,
@@ -127,13 +143,11 @@ const res = await youtube.videos.insert({
     snippet: {
       title,
       description,
-      tags: episode.tags ?? (isStory
-        ? isEn
-          ? ["storytime", "audiobook", "fiction", "serializedstory"]
-          : ["truyện dài", "truyện tiên hiệp", "nghe truyện", "truyện audio"]
+      tags: isStory
+        ? longFormTags(episode)
         : isEn
         ? ["homeremedies", "folkwisdom", "sciencecheck"]
-        : ["meodangian", "suckhoe", "kiemchungkhoahoc"]),
+        : ["meodangian", "suckhoe", "kiemchungkhoahoc"],
       // Fiction stories -> Entertainment; remedy fact-checks -> Education.
       categoryId: isStory ? "24" : "27",
     },
@@ -153,11 +167,6 @@ console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
 // channel video it cannot tie back to a ledger entry, and this script used
 // to record nothing, so every long-form upload was purged by the next
 // cleanup tick (observed 2026-10-09: kiem-hon-thuc-tinh-tap-01 deleted).
-const ledgerPath = path.join(import.meta.dirname, "..", "src", "suckhoe", "published-long.json");
-let ledger = {};
-if (existsSync(ledgerPath)) {
-  ledger = JSON.parse(await readFile(ledgerPath, "utf8"));
-}
 ledger[slug] = {
   videoId: res.data.id,
   publishedAt: new Date().toISOString(),
@@ -192,8 +201,7 @@ if (existsSync(thumbPath)) {
 // upload never showed up in a playlist). Never fails the upload over
 // this: a missing/unmapped playlist just means the video isn't added to
 // one, logged and moved on.
-const localeKey = isEn ? "en" : "vi";
-const playlistId = playlistMap[localeKey]?.["long-form"];
+const playlistId = longPlaylistId;
 
 if (playlistId) {
   try {
@@ -211,5 +219,39 @@ if (playlistId) {
     console.error(`Failed to add to playlist ${playlistId}: ${err.message ?? err}`);
   }
 } else {
-  console.log(`No "long-form" playlist mapped for locale "${localeKey}" — skipping.`);
+  console.log(`No "long-form" playlist mapped for locale "${localeKeyEarly}" — skipping.`);
+}
+
+// Back-patch the previous arc episode's description with a direct
+// "Tập tiếp theo" link to this upload — the strongest binge-session
+// signal available in metadata. Fail-soft, skips silently when the
+// link is already present (e.g. re-runs).
+if (isStory && prevEntry?.videoId) {
+  try {
+    const prevList = await youtube.videos.list({
+      part: ["snippet"],
+      id: [prevEntry.videoId],
+    });
+    const prevItem = prevList.data.items?.[0];
+    if (prevItem) {
+      const nextLine = `▶ Tập tiếp theo: ${videoUrl(res.data.id)}`;
+      if (!prevItem.snippet.description.includes(res.data.id)) {
+        await youtube.videos.update({
+          part: ["snippet"],
+          requestBody: {
+            id: prevEntry.videoId,
+            snippet: {
+              title: prevItem.snippet.title,
+              description: `${prevItem.snippet.description}\n${nextLine}`,
+              tags: prevItem.snippet.tags,
+              categoryId: prevItem.snippet.categoryId,
+            },
+          },
+        });
+        console.log(`Patched next-episode link on previous video ${prevEntry.videoId}`);
+      }
+    }
+  } catch (err) {
+    console.error(`Next-link patch on ${prevEntry.videoId} failed (upload unaffected): ${err.message ?? err}`);
+  }
 }
