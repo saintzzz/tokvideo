@@ -9,13 +9,37 @@ name: Update long-form metadata
 # An empty slugs list updates every episode in published-long.json.
 on:
   repository_dispatch:
-    types: [update-long-metadata]
+    types: [update-long-metadata, update-long-thumbnails]
 
 permissions:
   contents: read
 
 jobs:
+  update-thumbnails:
+    if: github.event_name == 'repository_dispatch' && github.event.action == 'update-long-thumbnails'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Install real ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Rebuild + set thumbnails
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          for slug in ${{ join(github.event.client_payload.slugs, ' ') }}; do
+            node scripts/make-long-thumbnail.mjs "$slug" || true
+          done
+          node scripts/set-long-thumbnail.mjs ${{ join(github.event.client_payload.slugs, ' ') }}
+
   update-metadata:
+    if: github.event_name == 'repository_dispatch' && github.event.action == 'update-long-metadata'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

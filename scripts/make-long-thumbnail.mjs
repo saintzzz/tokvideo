@@ -52,11 +52,15 @@ if (!canDrawText) {
   console.warn("ffmpeg lacks drawtext/drawbox — emitting plain-frame thumbnail.");
 }
 
-// hook still -> rendered frame -> fail
+// thumb still (gen-thumb-visuals.mjs — deliberately scary) -> hook
+// still -> rendered frame -> fail
+const thumbStillPath = path.join(root, "public", "images", "suckhoe-long", slug, "thumb.jpg");
 const hookRel = episode.sceneImages?.hook;
 const hookPath = hookRel ? path.join(root, "public", hookRel) : null;
 let inputArgs;
-if (hookPath && existsSync(hookPath)) {
+if (existsSync(thumbStillPath)) {
+  inputArgs = ["-loop", "1", "-i", thumbStillPath];
+} else if (hookPath && existsSync(hookPath)) {
   inputArgs = ["-loop", "1", "-i", hookPath];
 } else if (existsSync(videoPath)) {
   inputArgs = ["-ss", "120", "-i", videoPath];
