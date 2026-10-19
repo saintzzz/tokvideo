@@ -29,7 +29,7 @@ for (const f of files) {
   if (!process.env.SKIP_POLISH) polishVoiceover(mp3);
   const dur = probeDurationSeconds(mp3);
   if (dur && !existsSync(captionPath)) {
-    await writeAlignedCaptions(captionsRoot, videoId, `beat-${i}`, episode.beats[i - 1].text, mp3, dur, "vi");
+    await writeAlignedCaptions(captionsRoot, videoId, `beat-${i}`, episode.beats[i].text, mp3, dur, "vi");
   }
   console.log(`${ep} beat-${i} ok (${dur?.toFixed(1)}s)`);
 }

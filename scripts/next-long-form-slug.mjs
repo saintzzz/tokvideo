@@ -62,7 +62,7 @@ const audioDir = (slug) =>
   path.join(root, "public", "audio", "suckhoe-long", slug);
 const ready = (episode, slug) =>
   episode.beats.every((_, i) =>
-    sanityCheckAudio(path.join(audioDir(slug), `beat-${i + 1}.mp3`)).ok
+    sanityCheckAudio(path.join(audioDir(slug), `beat-${i}.mp3`)).ok
   );
 
 const next = candidates[0];

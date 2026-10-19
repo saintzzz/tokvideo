@@ -65,7 +65,7 @@ async def gen_episode(slug: str) -> None:
     os.makedirs(out_dir, exist_ok=True)
 
     beats = ep["beats"]
-    for i, beat in enumerate(beats, 1):
+    for i, beat in enumerate(beats):
         out_path = os.path.join(out_dir, f"beat-{i}.mp3")
         if os.path.exists(out_path) and os.path.getsize(out_path) > 4096:
             continue
@@ -80,8 +80,8 @@ async def gen_episode(slug: str) -> None:
                 await asyncio.sleep(min(attempt * 5, 30))
         else:
             raise RuntimeError(f"{slug} beat-{i}: gave up after 6 attempts")
-        if i % 5 == 0 or i == len(beats):
-            print(f"{slug}: {i}/{len(beats)} beats", flush=True)
+        if i % 5 == 4 or i == len(beats) - 1:
+            print(f"{slug}: {i + 1}/{len(beats)} beats", flush=True)
 
 
 async def main() -> None:

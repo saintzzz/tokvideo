@@ -39,7 +39,7 @@ if (!existsSync(hookPath)) {
 const audioDir = path.join(repoRoot, "public", "audio", "suckhoe-long", slug);
 const beats = [];
 let total = 0;
-for (let i = 1; i <= episode.beats.length; i++) {
+for (let i = 0; i < episode.beats.length; i++) {
   const f = path.join(audioDir, `beat-${i}.mp3`);
   if (!existsSync(f)) break;
   const d = probeDurationSeconds(f) ?? 0;
