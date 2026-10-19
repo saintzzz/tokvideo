@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { writeFile, mkdtemp, rm } from "node:fs/promises";
+import { mkdir, writeFile, mkdtemp, rm } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -28,6 +28,7 @@ if (!slug) {
 
 const root = path.resolve(import.meta.dirname, "..");
 const outDir = path.join(root, "out");
+await mkdir(outDir, { recursive: true }); // gitignored — missing on CI checkout
 const videoPath = path.join(outDir, `SucKhoeLong-${slug}.mp4`);
 const thumbPath = path.join(outDir, `SucKhoeLong-${slug}-thumb.png`);
 
