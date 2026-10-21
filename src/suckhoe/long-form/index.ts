@@ -20,6 +20,11 @@ import demKhamLiemTap02 from "./dem-kham-liem-tap-02.json";
 import demKhamLiemTap03 from "./dem-kham-liem-tap-03.json";
 import demKhamLiemTap04 from "./dem-kham-liem-tap-04.json";
 import demKhamLiemTap05 from "./dem-kham-liem-tap-05.json";
+import chuyenDoDemTap01 from "./chuyen-do-dem-tap-01.json";
+import chuyenDoDemTap02 from "./chuyen-do-dem-tap-02.json";
+import chuyenDoDemTap03 from "./chuyen-do-dem-tap-03.json";
+import chuyenDoDemTap04 from "./chuyen-do-dem-tap-04.json";
+import chuyenDoDemTap05 from "./chuyen-do-dem-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -64,4 +69,14 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   demKhamLiemTap03,
   demKhamLiemTap04,
   demKhamLiemTap05,
+  // Horror arc 5: "Chuyen do dem" - a night-ferryman arc. Son takes
+  // over father's night ferry after he vanishes mid-river; the
+  // passengers are the dead a village sank 40 years ago. Twist at
+  // tap 4: the father went under voluntarily to become the return
+  // ferryman so the son can survive the final one-way crossing.
+  chuyenDoDemTap01,
+  chuyenDoDemTap02,
+  chuyenDoDemTap03,
+  chuyenDoDemTap04,
+  chuyenDoDemTap05,
 ] as LongFormEpisode[];
