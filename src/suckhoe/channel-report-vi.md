@@ -1,13 +1,13 @@
-# Channel report — 2026-10-21
+# Channel report — 2026-10-22
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 124
-Total videos: 53
+Total views: 129
+Total videos: 54
 
 ## Last 28 days (channel-wide)
 
-Views: 140
+Views: 146
 Watch time (minutes): 97
 Subscribers gained: 1
 Subscribers lost: 1
@@ -17,6 +17,7 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Truyện Ma Có Thật | Chuyến Đò Đêm - Tập 1: Bến Đò Cũ - Mười Một Khách Lên, Mười Khách Xuống | 0 | 0 | 0 | 2026-10-22 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 5: Hồi Kết - Lễ Hội Hồn, Hai Người Gặp Nhau Sau 70 Năm | 0 | 0 | 0 | 2026-10-20 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 4: Đêm Cuối Nó Quay Lại - Bí Mật Ông Nội Giấu 70 Năm | 0 | 0 | 0 | 2026-10-20 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 3: Xác Ông Nội Đi Về Nghĩa Địa - Tìm Mộ Cô Gái Mất Tích 70 … | 0 | 0 | 0 | 2026-10-20 |
@@ -41,5 +42,4 @@ Net subscriber change: 0
 | Truyện Ma Có Thật | Lời Nguyền Giếng Cũ - Tập 5: Hồi Kết - Oan Hồn Được Minh Oan | 1 | 1 | 0 | 2026-10-10 |
 | Truyện Ma Có Thật | Lời Nguyền Giếng Cũ - Tập 2: Cái Giếng Thật Dưới Gốc Đa Cổ | 1 | 1 | 0 | 2026-10-10 |
 | Truyện Ma Có Thật | Lời Nguyền Giếng Cũ - Tập 1: Đêm Đầu Tiên, 3 Nhịp Gõ Cửa Vang Lên | 23 | 1 | 0 | 2026-10-10 |
-| Hai Bà Trưng cuối cùng - sông Hát chảy mãi không cạn - Tập 2 #Shorts | 56 | 0 | 0 | 2026-10-10 |
 
