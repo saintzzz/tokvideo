@@ -259,6 +259,33 @@ if (readyCount < 5) {
 }
 lines.push("");
 
+// -- Posting sheet -------------------------------------------------------
+// For every published episode that now has a teaser file under
+// out/teaser-<slug>.mp4 (built this run or before), emit one row the
+// operator can paste straight into TikTok/FB Reels: caption + the
+// long-form URL it should point at. CI uploads out/teaser-*.mp4 as an
+// artifact, so the pack is self-contained.
+const sheet = [];
+sheet.push(`# Teaser posting sheet — ${new Date().toISOString().slice(0, 10)}`);
+sheet.push("");
+sheet.push("Post each clip to TikTok + FB Reels, then reply/pin the long-form link.");
+sheet.push("");
+for (const [slug, entry] of Object.entries(ledger).sort()) {
+  if (isTeaserKey(slug) || !entry?.videoId) continue;
+  const epPath = path.join(longFormDir, `${slug}.json`);
+  if (!existsSync(epPath)) continue;
+  const ep = JSON.parse(await readFile(epPath, "utf8"));
+  if (ep.locale !== "vi" || !ep.beats?.every((b) => b.speaker === "narrator")) continue;
+  if (!existsSync(path.join(root, "out", `teaser-${slug}.mp4`))) continue;
+  sheet.push(`## ${slug}`);
+  sheet.push(`- file: out/teaser-${slug}.mp4`);
+  sheet.push(`- caption: ${ep.thumbTitle ?? ep.title}`);
+  sheet.push(`- link: https://youtube.com/watch?v=${entry.videoId}`);
+  sheet.push(`- tags: #truyenma #truyenmacothat #nghetruyen #truyệnma #cotich`);
+  sheet.push("");
+}
+await writeFile(path.join(root, "out", "teaser-posting-sheet.md"), sheet.join("\n"));
+
 // -- Report -------------------------------------------------------------
 lines.push(`## Findings`);
 lines.push("");

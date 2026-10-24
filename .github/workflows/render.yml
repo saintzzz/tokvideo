@@ -1164,6 +1164,21 @@ jobs:
           DOCTOR_MAX_TEASERS: "3"
         run: node scripts/pipeline-doctor.mjs
 
+      # Every teaser built this run + a paste-ready caption/link sheet —
+      # the seeding pack for posting the same clips to TikTok/FB Reels,
+      # which need accounts we don't automate.
+      - name: Upload teaser posting pack
+        if: always()
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: teaser-posting-pack
+          path: |
+            out/teaser-*.mp4
+            out/teaser-posting-sheet.md
+          retention-days: 14
+          if-no-files-found: ignore
+
       - name: Commit doctor report + ledger fixes
         if: always()
         run: |
