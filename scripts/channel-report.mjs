@@ -135,6 +135,47 @@ async function main() {
       .map((item) => item.id.videoId)
       .filter(Boolean);
 
+    // Impressions + CTR + retention per video — splits "YouTube is not
+    // showing the video" (impressions ~0) from "shown but not clicked"
+    // (impressions ok, CTR < ~4%) from "clicked but abandoned"
+    // (CTR ok, averageViewPercentage low).
+    if (videoIds.length > 0) {
+      try {
+        const perVideo = await youtubeAnalytics.reports.query({
+          ids: "channel==MINE",
+          startDate: fmtDate(start),
+          endDate: fmtDate(end),
+          metrics: "views,impressions,impressionClickThroughRate,averageViewDuration,averageViewPercentage",
+          dimensions: "video",
+          filters: `video==${videoIds.join(",")}`,
+          sort: "-views",
+        });
+        const rows = perVideo.data.rows ?? [];
+        if (rows.length > 0) {
+          lines.push(`## Funnel per video (last 28 days)`);
+          lines.push("");
+          lines.push("| videoId | Views | Impressions | CTR% | AvgView(s) | AvgView% |");
+          lines.push("|---|---|---|---|---|---|");
+          for (const r of rows) {
+            lines.push(
+              `| ${r[0]} | ${r[1]} | ${r[2]} | ${(+r[3]).toFixed(1)} | ${Math.round(r[4])} | ${(+r[5]).toFixed(1)} |`
+            );
+          }
+          lines.push("");
+          const zeroImp = rows.filter((r) => (r[2] ?? 0) === 0).length;
+          lines.push(
+            `Videos with zero impressions: ${zeroImp}/${rows.length} — 0 means YouTube never surfaced it (distribution problem), not a click problem.`
+          );
+          lines.push("");
+        }
+      } catch (err) {
+        lines.push(
+          `## Funnel per video\n\n(Impressions query failed: ${err.message ?? err})`
+        );
+        lines.push("");
+      }
+    }
+
     if (videoIds.length > 0) {
       const videos = await youtube.videos.list({
         part: ["snippet", "statistics"],

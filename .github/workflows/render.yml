@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long, english-arena]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long, english-arena, pipeline-doctor]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -100,6 +100,17 @@ on:
     # (see each job's commit step); the offset is extra insurance to cut
     # how often they queue back to back at all.
     - cron: "20 2,10,18 * * *"
+    # Once daily — pipeline watchdog + self-heal (owner directive
+    # 2026-10-24: "check thấy fail thì tự fix"). Runs scripts/
+    # pipeline-doctor.mjs: verifies every ledger videoId is still public
+    # on the channel (dead entries are removed so the episode
+    # re-queues), recovers orphan uploads whose ledger commit lost a
+    # rebase race, backfills missing teaser Shorts for published
+    # episodes, and reports queue depth. Committed to
+    # src/suckhoe/pipeline-doctor.md so the state is visible without
+    # anyone asking. 16:45 UTC = 23:45 VN — after the day's last
+    # long-form tick's upload has had time to land and settle.
+    - cron: "45 16 * * *"
 
 jobs:
   detect-changes:
@@ -315,7 +326,7 @@ jobs:
             # Manual "render all suckhoe" dispatch — deliberately full,
             # not diffed.
             echo "suckhoe_shared=true" >> "$GITHUB_OUTPUT"
-          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ] || [ "$VIDEO_INPUT" = "release-shelved-suckhoe" ] || [ "$VIDEO_INPUT" = "suckhoe-long" ]; then
+          elif [ "$VIDEO_INPUT" = "suckhoe-publish-next" ] || [ "$VIDEO_INPUT" = "suckhoe-en-publish-next" ] || [ "$VIDEO_INPUT" = "channel-report" ] || [ "$VIDEO_INPUT" = "set-video-privacy" ] || [ "$VIDEO_INPUT" = "release-shelved-suckhoe" ] || [ "$VIDEO_INPUT" = "suckhoe-long" ] || [ "$VIDEO_INPUT" = "pipeline-doctor" ]; then
             # These are each gated directly on their own input value in
             # their own job — none of the render-* jobs should run. A
             # missing branch here previously fell through to the
@@ -1115,3 +1126,62 @@ jobs:
             sleep $((i * 15))
           done
           exit 1
+
+  # Daily watchdog + self-heal — scripts/pipeline-doctor.mjs. Catches
+  # the failures that look green from the outside: videos uploaded but
+  # never ledgered (rebase-race loss), ledgered videos that later
+  # vanished, published episodes missing their discovery teaser, and a
+  # drained story queue. Fixes what it can, reports the rest to
+  # src/suckhoe/pipeline-doctor.md.
+  pipeline-doctor:
+    if: (github.event_name == 'schedule' && github.event.schedule == '45 16 * * *') || github.event.inputs.video == 'pipeline-doctor'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: suckhoe-long-publish
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run pipeline doctor
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_TEASER_PRIVACY_STATUS: public
+          # 3 teasers/run — backfills the backlog over a few days without
+          # pushing the channel near the daily upload cap.
+          DOCTOR_MAX_TEASERS: "3"
+        run: node scripts/pipeline-doctor.mjs
+
+      - name: Commit doctor report + ledger fixes
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/pipeline-doctor.md src/suckhoe/published-long.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Pipeline doctor report + ledger reconciliation [skip ci]"
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              git push && exit 0
+            fi
+            node scripts/merge-long-ledger.mjs
+            git add src/suckhoe/published-long.json
+            if GIT_EDITOR=true git rebase --continue; then
+              git push && exit 0
+            fi
+            git rebase --abort || true
+            sleep $((i * 15))
+          done
+          exit 0
