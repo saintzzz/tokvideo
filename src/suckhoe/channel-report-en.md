@@ -1,8 +1,8 @@
-# Channel report — 2026-10-23
+# Channel report — 2026-10-24
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 21
+Total views: 23
 Total videos: 12
 
 ## Last 28 days (channel-wide)
@@ -20,7 +20,7 @@ Net subscriber change: 0
 | The Silver Bridge fell at rush hour - 46 people died - was it a warning? - Part 2 #Shorts | 1 | 0 | 0 | 2026-10-10 |
 | Point Pleasant 1966 - the red-eyed thing that warned the town - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-10 |
 | Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 4 | 0 | 0 | 2026-10-09 |
-| The hut on chicken legs - the real Baba Yaga story - Part 1 #Shorts | 4 | 0 | 0 | 2026-10-09 |
+| The hut on chicken legs - the real Baba Yaga story - Part 1 #Shorts | 5 | 0 | 0 | 2026-10-09 |
 | The photograph on the mantel that explains everything - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
 | The girl in the pale dress on the lonely road - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-29 |
 | They met in the middle of the field, each with a sack on his shoulder - Part 2 #Shorts | 10 | 0 | 0 | 2026-09-28 |
@@ -28,5 +28,5 @@ Net subscriber change: 0
 | Why a turnip became a pumpkin - the end of Stingy Jack - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
 | Stingy Jack tricked the Devil himself - Part 1 #Shorts | 1 | 0 | 0 | 2026-09-27 |
 | By square 40 the treasurers went pale - the math of the rice chessboard - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
-| The inventor asked for 'just rice' - the whole court laughed - Part 1 #Shorts | 1 | 0 | 0 | 2026-09-27 |
+| The inventor asked for 'just rice' - the whole court laughed - Part 1 #Shorts | 2 | 0 | 0 | 2026-09-27 |
 

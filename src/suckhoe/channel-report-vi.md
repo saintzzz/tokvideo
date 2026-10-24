@@ -1,14 +1,14 @@
-# Channel report — 2026-10-23
+# Channel report — 2026-10-24
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 142
+Total views: 144
 Total videos: 58
 
 ## Last 28 days (channel-wide)
 
-Views: 147
-Watch time (minutes): 97
+Views: 150
+Watch time (minutes): 96
 Subscribers gained: 1
 Subscribers lost: 1
 Net subscriber change: 0
