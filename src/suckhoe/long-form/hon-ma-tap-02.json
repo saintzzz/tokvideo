@@ -1,0 +1,124 @@
+{
+  "slug": "hon-ma-tap-02",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HÔN MA | Tập 2: Người Trong Ảnh Thờ - Lời Thừa Nhận Của Ông Phóng | Truyện Ma Dài",
+  "description": "Mắt kẹt trong bản sau đêm rằm, Tuấn tìm ra sự thật: cô dâu chết sáu mươi năm trước trong đám cưới đầu tiên của mình, và kể từ đó mỗi thế hệ nhà họ Lỷ phải cưới một người sống cho cô - nếu không, cô sẽ lấy đi một người trong nhà.\n\nTruyện ma dài 5 tập về tục hôn ma vùng cao, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "hôn ma",
+    "đám cưới ma",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #honma #damcuoima #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "SÁU MƯƠI NĂM MỘT CHÚ RỂ",
+  "scenePrompts": {
+    "hook": "an old wooden ancestral altar at night, a framed black and white photo of a young woman, two burning candles, incense, dark room, cinematic horror",
+    "dark-room": "a small dark room in an old Vietnamese house at night, a photographer sitting against the wall clutching his camera bag, oil lamp",
+    "red-ao-dai": "a red men's wedding ao dai laid on a wooden table in candlelight, embroidered dragon patterns, eerie still life",
+    "footsteps": "wooden clogs on dark brick floor of an old house at night, seen from low angle, shadowy",
+    "old-man-confession": "an old Vietnamese man sitting hunched by a small oil lamp at night, weathered face, guilty expression, dark hut interior",
+    "dead-tree": "a huge dead tree on a foggy hillside at night, old red fabric strips tied to branches, graves barely visible behind",
+    "ledger-book": "an old handmade ledger book open on a table, faded handwriting, lists of names with dates, candlelight",
+    "six-coffins": "a row of old photographs showing six generations of Vietnamese men, sepia, same wedding pose, uncanny repetition",
+    "village-dawn": "a mountain village at grey dawn, fog between old roofs, no people, oppressive quiet"
+  },
+  "sceneImages": {},
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Sáu mươi năm một chú rể",
+      "text": "Trên ban thờ nhà họ Lỷ có một dãy ảnh cưới - sáu tấm, từ đen trắng đến màu rửa mốc. Sáu chú rể khác nhau, sáu thế hệ khác nhau. Nhưng cô dâu trong cả sáu tấm - là một người. Cùng khuôn mặt, cùng kiểu tóc búi, cùng nụ cười hé môi. Sáu mươi năm, sáu đời chú rể, một cô dâu. Và bây giờ họ đang chờ cái thứ bảy mặc áo the đỏ - Tuấn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dark-room",
+      "caption": "Đêm trong buồng khóa",
+      "text": "Đêm đầu tiên Tuấn bị nhốt trong buồng phụ nhà gái - không trói, không canh, chỉ khóa cửa bằng một thanh gỗ ngoài xà như nhốt trâu. Anh gọi cửa hết giờ. Không ai trả lời. Ba lô đồ vẫn còn, máy ảnh vẫn còn - họ không lấy, chắc vì cũng chẳng sợ anh chạy. Anh lật lại ảnh trong máy, từng tấm một. Tấm khách nhà gái: nửa số ghế ngồi đó - trên ảnh - trống trơn. Không phải mặt xám tro nữa mà là trống. Có nghĩa trong bữa tiệc chiều, ngồi đối diện anh, có cả những kẻ mà máy ảnh không nhận ra là người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "red-ao-dai",
+      "caption": "Chiếc áo the",
+      "text": "Chiếc áo the đỏ bà già đưa anh vẫn nằm trong hộp gỗ, đặt trên bàn cách chỗ anh ngồi một cánh tay. Tuấn không đụng vào - anh nghe dân chơi đồ cũ kể, đồ cưới của người chết, người sống mặc vào là khép hờ hôn thú. Trong hộp áo còn có một mảnh giấy vàng viết chữ nhỏ - chữ anh đọc được nửa: giấy thông hành, người âm dương có khác, kẻ sống cưới người mất phải viết tên tuổi năm sinh nộp cho quan âm phủ, kẻo vong người sống bị kéo theo khi khánh thành hôn lễ. Mảnh giấy trong hộp - vẫn trống. Chưa ai viết tên. Tức là họ chưa muốn giữ anh sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "footsteps",
+      "caption": "Tiếng guốc nửa đêm",
+      "text": "Nửa đêm, tiếng guốc gỗ lại nghe. Không phải ngoài hành lang - là trên mái nhà. Tuấn nằm im nghe nó đi từ đầu mái này sang mái kia, đều đặn, từng bước - như ai đó đang đi tuần trên nóc nhà suốt đêm, canh cho cả bản. Rồi tiếng guốc dừng hẳn ngay phía trên buồng anh. Một lúc lâu không động tĩnh. Tuấn biết cái thứ đó đang đứng phía trên, lắng nghe anh thở. Anh nín thở. Nó vẫn đứng đó. Hai thằng nín thở cùng nhau một cái xà gỗ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-confession",
+      "caption": "Ông Phóng kể",
+      "text": "Sáng sớm ông Hai Phóng lẻn đến, mang theo bát cơm nguội và điếu cày. Ông ngồi xuống không nói gì một lúc, rồi mở đầu bằng cái thở dài: tao biết mày chửi tao trong đầu suốt đêm qua. Tuấn không lên tiếng. Ông rít thuốc, khói đặc trong buồng, kể ra - cháu trai ông, thằng nhóc giả chú rể chiều qua, năm nay đúng tuổi hạn trong gia phả nhà họ Lỷ: mỗi khi trong bản có trai tráng ngoại tỉnh tuổi hợp mạng, nhà họ Lỷ được quyền mượn mạng kẻ đó thay mình cưới. Gia phả viết rõ - năm mới, thỉnh khách. Khách - là Tuấn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-confession",
+      "caption": "Cái nợ của cả bản",
+      "text": "Ông Phóng kể tiếp: sáu mươi năm trước, con gái út nhà họ Lỷ - cô Mười Bốn - được hứa gả cho con trai lớn nhà họ Trần dưới chân đèo. Đêm trước ngày cưới, cô lên rừng hái hoa cưới, té dốc, gãy cổ chết. Lễ cưới đã mời, mặt hai họ không thể thua, bèn cưới áo quan - chú rể sống quỳ một mình trước di ảnh. Ba năm sau chú rể đó chết đuối. Rồi từ đó, mỗi khi trong bản có trai mới lớn, nhà họ Lỷ đêm trước ngày thành hôn lại thấy cô Mười Bốn về đứng dưới gốc đa, váy cưới đỏ, đòi chồng. Cả bản phải góp vào cưới cho cô - bằng một người sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dead-tree",
+      "caption": "Dưới gốc đa",
+      "text": "Ông dẫn Tuấn ra ngoài ban ngày - dẫn mà vẫn khóa buồng lại phía sau, chỉ mở hé cửa cho anh nhìn ra sân. Ông chỉ tay lên đồi sau bản: cái gốc đa chết trọc trên đỉnh đồi, cành cây khô như xương vẩy tay, trên cành buộc đầy dải vải đỏ phai. Ông bảo: dưới gốc đó có mồ của cô - nhưng không phải mồ thường. Mồ đó được đổ thừa bê tông ba lần rồi mà cứ rạn. Lần cuối thầy bản bảo thôi đừng chạm nữa - để nguyên đó, rằm tháng nào cũng cúng lễ tại chỗ. Thầy nói cô này không phải ma lạng vạng - cô là ma có chức."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ledger-book",
+      "caption": "Sổ danh sách",
+      "text": "Tuấn hỏi ông: mười ngày trước ông dẫn tôi lên, ông đã biết hết - sao không nói? Ông Phóng móc trong người ra một cuốn sổ bọc nilon, mở trang có ghi mấy chục cái tên - mỗi tên một người: năm 1971, tên, tuổi, làng dưới đèo. Năm 1989, tên, tuổi, khách qua đường. Năm 2003, tên, tuổi, người buôn muối. Cột cuối ghi chữ kết quả - hầu hết đều là chữ đã giao. Ông lật trang cuối: tên Tuấn viết nét mới, cột kết quả còn trống. Ông nói nhỏ: danh sách này - tao giữ ba mươi năm. Tao là người ghi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "six-coffins",
+      "caption": "Sáu bức ảnh",
+      "text": "Tuấn cầm sổ run run lật ngược về đầu. Trang đầu nhất - năm 1966 - không phải chữ, là một tấm ảnh nhỏ dán vào giấy vàng: đám cưới áo quan, chú rể quỳ một mình. Trang hai, trang ba - mỗi trang một thế hệ, mỗi thế hệ một cái tên khách ngoại tỉnh được giao. Tuấn đếm: sáu trang, sáu cái tên, cách nhau mười lăm năm đều đặn. Năm nay đúng năm thứ sáu mươi - sáu mươi năm, bốn chú rể. Anh hỏi ông: bốn người trong sổ - sống không? Ông Phóng trả lời không nhìn vào mắt: người sống cưới ma - sống được mấy tháng là nhiều. Có người xuống núi ba ngày thì chết co."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dawn",
+      "caption": "Cả bản cùng ăn",
+      "text": "Tuấn hỏi: cả bản này đều biết? Ông gật: cả bản. Bản có quà chung - nhà họ Lỷ mỗi năm phát cho mỗi nóc nhà một trâu, một kho bạc tròn, điều kiện người bản không kể với kẻ ngoại tỉnh. Khách mỏi chân vào bản, được tiếp đãi tử tế, rồi khuya khóa cổng. Nhà nào không giữ miệng - nhà đó năm sau phải trả lời. Tuấn nhớ lại: mặt đất đầu bản chiều qua yên tĩnh đến lạ - không trẻ con, không chó sủa. Hóa ra cả bản đang nín thở, chờ món quà năm nay đến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-confession",
+      "caption": "Con bé trong góc",
+      "text": "Tuấn hỏi thêm một câu nữa: thằng chú rể giả chiều qua - cháu ông - nó biết không? Ông Phóng im lâu, rồi ông đáp: nó biết. Nhưng mày phải hiểu - năm nay, nếu không có khách, nhà họ Lỷ trả người. Và người họ trả - là cháu tao. Tao dẫn mày lên là tao muốn cháu tao sống. Tao xin lỗi. Ông cúi đầu, vai rung. Nhưng cái xin lỗi này - Tuấn nghe rõ - không có nghĩa ông sẽ thả anh về. Ông xin lỗi nhưng ông vẫn khóa cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dark-room",
+      "caption": "Lễ chính đêm nay",
+      "text": "Trước khi về, ông Phóng nói: tối nay là lễ chính. Giờ hợi, khánh thành. Trước giờ đó họ nhốt mày, sau giờ đó - ông lắc đầu - sau giờ đó không ai biết mày là ai nữa, kể cả chính mày. Cái áo the, mày có mặc hay không mặc, cũng vậy thôi - nhưng mày nên mặc, mặc thì nó để mày nguyên vẹn, không mặc thì nó lấy từng miếng. Ông đứng dậy, rút điếu cày cuối, đi đến cửa thì quay lại thêm một câu: còn một đường duy nhất - đường âm, qua lưng đồi - nhưng đường đó không ai đi rồi về cả. Tối nay nó mở, chỉ tối nay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "footsteps",
+      "caption": "Tiếng gõ tường",
+      "text": "Ông Phóng đi rồi, Tuấn ngồi trong buồng nhìn cái áo the. Ba giờ chiều, sáu tiếng nữa là giờ hợi. Anh đang ngẩn thì nghe thấy - rất khẽ - tiếng gõ từ bức tường cuối buồng. Gõ ba nhịp, ngừng, ba nhịp. Anh áp tai vào tường: tường bên kia là buồng để đồ cúng, không ai ở. Tiếng gõ dừng, rồi một giọng con gái - rất trẻ, rất khẽ, không giống giọng ai cả - vọng qua tường như vọng qua nước: anh chụp ảnh cho em đi. Ảnh hồi sáng - em đẹp không?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Cô dâu mở lời",
+      "text": "Đó là lần đầu tiên cô dâu nói chuyện với Tuấn - và câu hỏi của cô khiến anh không ngủ được nốt phần còn lại của buổi chiều. Anh chụp ảnh cho em đi - em đẹp không? Cô hỏi như một cô gái thật, rụt rè, sợ xấu. Không phải giọng của thứ đuổi anh trên đồi đêm qua. Tuấn tự hỏi: cái thứ lấy chồng sáu mươi năm nay - có khi nào nó không muốn làm cái này lắm không? Câu hỏi đó, về sau, là cái duy nhất cứu mạng anh."
+    }
+  ]
+}

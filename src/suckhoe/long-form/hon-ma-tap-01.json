@@ -1,0 +1,178 @@
+{
+  "slug": "hon-ma-tap-01",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HÔN MA | Tập 1: Đám Cưới Trên Đèo - Bức Ảnh Không Có Bóng Cô Dâu | Truyện Ma Dài",
+  "description": "Nhiếp ảnh gia nhận job chụp đám cưới cho gia đình giàu nhất vùng đèo - cát-xê gấp năm lần, điều kiện duy nhất là tuyệt đối không chụp cô dâu sau giờ hợi. Trong máy ảnh của Tuấn, toàn bộ phía nhà gái hiện lên bằng một thứ mà mắt thường không thấy.\n\nTruyện ma dài 5 tập về tục hôn ma vùng cao, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "hôn ma",
+    "đám cưới ma",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #honma #damcuoima #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "CÔ DÂU KHÔNG CÓ BÓNG",
+  "scenePrompts": {
+    "hook": "a Vietnamese mountain wedding at dusk, red lanterns on an old wooden house, a bride in red ao dai standing motionless, fog, cinematic horror",
+    "mountain-road": "a winding dirt road over a foggy mountain pass at late afternoon, a motorbike with camera bag, dark pine forest",
+    "village-gate": "an old northern Vietnamese village entrance at dusk, mossy stone gate, red wedding banners, empty dirt road",
+    "wedding-house": "a wealthy old wooden Vietnamese house decorated for a wedding, red fabric, lanterns, candles, no people visible",
+    "wedding-hall": "a traditional Vietnamese wedding hall inside an old house, ancestral altar, two candles, red silk, guests seated stiffly",
+    "camera-viewfinder": "view through a camera viewfinder of a wedding scene, grainy, a bride figure glowing faintly, horror mood",
+    "bride-shadow": "a bride in red wedding dress standing in candlelight, the wall behind shows no shadow, eerie",
+    "altar-photo": "an old ancestral altar with a framed photograph of a young woman, incense smoke, faded black and white photo",
+    "misty-courtyard": "a stone courtyard of a mountain house at night, heavy fog, red lanterns, a lone figure standing far away"
+  },
+  "sceneImages": {},
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Cô dâu không có bóng",
+      "text": "Tấm ảnh cưới cuối cùng trong máy Tuấn là tấm anh chụp lén. Trên màn hình nhỏ, cô dâu đứng giữa hai cây nến đỏ, khăn voan phủ ngang mặt. Phía sau lưng cô, bức tường vôi trắng loá - không có bóng. Khách hai họ đứng hai bên đều có bóng in đậm trên tường, chỉ riêng cô dâu là không. Mà đó chỉ là cái kết của ngày hôm đó. Mọi chuyện bắt đầu từ ba điều cấm kỵ mà nhà gái dặn trước khi cho anh nhận job."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-road",
+      "caption": "Job cát-xê gấp năm",
+      "text": "Tuấn làm nhiếp ảnh tự do ở thị xã nhỏ dưới chân đèo. Cuối tháng ế đơn, thì ông Hai Phóng tìm đến: cháu trai ông cưới vợ trên bản cao, nhà gái trả tiền chụp ảnh - gấp năm lần giá thường, điều kiện chụp xong xuống núi ngay, không ở lại qua giờ hợi. Mười giờ đêm. Tuấn nghe xong chỉ cười: dân bản lạ lắm, tiền cho ngon mà kỳ cũng lạ. Anh nhận luôn, nhét máy vào ba lô, lên đèo lúc trời còn sớm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-gate",
+      "caption": "Bản lạ yên tĩnh",
+      "text": "Bản của nhà gái nằm trên đỉnh một quả đồi, cổng đá rêu phong, hai bên giăng băng vải đỏ đã phai màu. Lạ một điều: đám cưới mà bản yên tĩnh như đêm ba giờ. Không tiếng trẻ con, không tiếng chó sủa, không một bóng người qua lại trên đường đất. Chỉ có khói bếp đổ từ những mái ngói cũ, lẫn vào sương buổi chiều. Tuấn đứng trước cổng bản mà thấy lạnh sống lưng, dù trời còn sáng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-house",
+      "caption": "Nhà lớn nhất bản",
+      "text": "Nhà gái là căn nhà gỗ lim ba gian to nhất bản, ngói âm dương, trước sân đá đen bóng. Cổng giăng vải đỏ, hai bên cột treo đôi đèn lồng giấy chữ hỷ. Vậy mà chữ hỷ trên cổng, người ta dán ngược. Tuấn hỏi thằng nhỏ đứng gần đó, nó lắc đầu rồi chạy mất. Ông Hai Phóng đứng từ trong sân vẫy anh vào, mặt nhà gái đón khách niềm nở, chỉ có mẹ cô dâu - một bà già tóc bạc, mắt mờ đục - ngồi bó gối ở góc nhà, cứ lầm bầm đếm gì đó trên đầu ngón tay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-hall",
+      "caption": "Ba điều cấm kỵ",
+      "text": "Trước khi cho chụp, bà già nắm tay Tuấn, móng tay bấm vào thịt, dặn ba điều. Một: không được chụp mặt cô dâu khi chưa phủ khăn voan - hỏi sao thì bà bảo tục bản. Hai: không được chụp sau giờ hợi, tức mười giờ đêm - hỏi sao thì bà im. Ba: không được đếm số khách phía nhà gái ra thành tiếng - câu này bà nói rất nhỏ, như sợ cái gì nghe được. Tuấn gật đầu cho qua, trong bụng nghĩ: già rồi, mê tín. Ảnh thì anh cứ chụp, ai kiểm soát được anh chụp gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-hall",
+      "caption": "Khách nhà gái",
+      "text": "Khách phía nhà gái ngồi kín mấy dãy ghế dài trong gian chính. Người thì mặc đồ đen cũ kỹ kiểu ngày xưa, người mặc áo trắng xõa. Đàn ông im lặng, đàn bà cúi đầu, không ai ăn uống gì dù mâm cỗ bày đầy. Tuấn đưa máy lên chụp cảnh tiệc cho có, thì một ông già ngồi mép ghế ngẩng lên nhìn anh - chậm rãi, cổ xoay một góc hơi dài. Tuấn hạ máy, gật đầu cười xã giao. Ông già không cười lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bride-shadow",
+      "caption": "Cô dâu bước ra",
+      "text": "Giờ lành, trống bản điểm ba hồi, cô dâu từ buồng trong bước ra. Áo dài cưới đỏ thẫm, khăn voan đỏ phủ ngang mặt, tay buông dài hai bên. Cô bước rất chậm, hai người con gái đỡ hai bên như dìu - nhưng Tuấn để ý kỹ: hai người đỡ không chạm vào cô, họ đưa tay khum khum, lòng bàn tay hờ trên cánh tay cô dâu, như đỡ một thứ gì sợ chạm hẳn. Cả gian nhà cùng đứng dậy, cùng cúi đầu - trừ mấy người nhà trai là đứng thẳng, nhìn chòng chọc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "camera-viewfinder",
+      "caption": "Qua ống kính",
+      "text": "Tuấn giơ máy bắt đầu làm việc. Và chính lúc đó anh mới thấy. Qua mắt thường, khách nhà gái ngồi nghiêm chỉnh, mặt mũi bình thường. Qua ống kính máy ảnh - cùng một dãy ghế đó - một số người có mặt xám tro, một số người mắt đen không tròng trắng, một bà cụ ở hàng cuối, đầu ngả hẳn về một bên như gãy cổ. Tuấn hạ máy, nhìn lại bằng mắt: bà cụ ngồi thẳng, bình thường. Giơ máy lên lần nữa: đầu lại ngả. Tay anh bắt đầu run."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "camera-viewfinder",
+      "caption": "Kiểm tra lại",
+      "text": "Anh tự trấn an: chắc máy hỏng, chắc sương đọng trên ống kính. Anh tháo kính lọc, thổi lau, chụp thử một vật bất kỳ - cái cốc nước trên mâm. Ảnh hiện ra bình thường. Chụp người nhà trai - bình thường. Chụp phía nhà gái - lại hiện mấy cái mặt xám tro đó. Tuấn ngồi nín trong một góc, lật lại từng tấm đã chụp từ sáng. Tấm nào hướng về nhà gái, tấm đó có lỗi. Không phải lỗi ngẫu nhiên - là từng người, từng người, hiện ra đúng hình dáng họ chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "misty-courtyard",
+      "caption": "Người trông chừng",
+      "text": "Đang hoảng thì bờ vai Tuấn bị một bàn tay đặt lên. Là ông Hai Phóng. Ông không hỏi anh thấy gì, chỉ nói khẽ: chụp đám rước cho xong rồi về, cháu. Đừng nói với ai. Giọng ông run. Tuấn mới nhìn kỹ ông già này - mặt ông tái mét, mồ hôi rịn trên trán, mắt cứ liếc về phía buồng cô dâu. Hóa ra ông biết hết. Ông biết mà vẫn dẫn anh lên đây. Tuấn siết chặt dây máy ảnh, muốn hỏi cho ra nhẽ, nhưng lễ rước đã bắt đầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-hall",
+      "caption": "Lễ rước dâu",
+      "text": "Chú rể - cháu trai ông Phóng, một thằng nhóc chưa đầy hai mươi mặt xanh như tàu lá - được dẫn lên đứng trước bàn thờ gia tiên nhà gái. Cô dâu quỳ trên chiếu cói, khăn voan vẫn phủ. Mẹ cô dâu đọc lời, giọng khàn đặc: hôm nay trả lại cho nhà mình cái lời đã hứa, mong hai gia đình từ đây sống yên. Nghe không giống lời chúc phúc, giống lời chuộc nợ hơn. Tuấn đứng mép chụp theo yêu cầu, mà trong đầu chỉ nghĩ: trả lại - cái gì? Ai nợ ai?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-hall",
+      "caption": "Khăn voan",
+      "text": "Đến lượt chú rể vén khăn voan cho khách hai họ chiêm ngưỡng cô dâu. Bà già nhà gái gật đầu cho phép Tuấn chụp đúng một tấm. Thằng nhóc chú rể run run vén khăn - mặt cô dâu hiện ra. Đẹp. Đẹp một cách không giống người sống: da trắng như ngấn sứ, môi đỏ thẫm, hai mắt nhìn thẳng trước mặt, không chớp. Tuấn chụp liền ba tấm rồi hạ máy. Trên màn hình, ba tấm ảnh - cô dâu trong cả ba đều đang nhìn thẳng vào ống kính. Dù lúc chụp, mắt cô nhìn về hướng khác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bride-shadow",
+      "caption": "Tấm ảnh không bóng",
+      "text": "Rồi đến tấm ảnh cuối - tấm mà về sau này Tuấn không dám xem lại. Anh chụp cô dâu đứng giữa hai cây nến, lúc mọi người đang quay sang mâm cỗ. Trên màn hình, cô dâu không có bóng trên tường. Anh zoom vào hết cỡ - phần chân váy đỏ của cô, thay vì đôi giày thêu, là hai cái chân trần, xanh xao, mười ngón chân khoằm xuống mặt sàn gỗ như bấm vào thứ gì vô hình. Không - không phải bấm. Là lơ lửng. Chân cô cách mặt sàn một gang tay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "misty-courtyard",
+      "caption": "Không đường về",
+      "text": "Chín giờ tối, lễ xong, Tuấn vội xin phép ra về. Ông Phóng níu tay anh: xuống đèo giờ này nguy, ở lại một đêm. Tuấn định từ chối thì ra đến cổng bản thấy sương đã đặc quánh, ba mét không thấy đường. Xe máy anh khóa đèn, chìa khóa không biết ai lấy mất - hỏi khắp bản, ai cũng lắc đầu. Bà già nhà gái đứng từ trong bóng tối sân đá nhìn anh, cười lần đầu tiên trong ngày: khách đã lên tận bản rồi thì cứ ở lại dự trọn đám cưới. Đám cưới - mới bắt đầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-house",
+      "caption": "Tiệc đêm",
+      "text": "Tuấn được xếp ngồi vào mâm tiệc đêm cùng khách nhà gái - vì phía nhà trai đã về hết từ chiều, xe trâu kéo xuống đèo hết rồi. Mâm cỗ toàn món nguội: gà luộc để nguyên con, rượu trắng đổ đầy bát nhưng không ai uống. Đối diện anh, một ông già mặt xám tro trong ảnh chiều đó - bằng mắt thường giờ anh nhìn kỹ - vẫn cứ nhấp rượu như thật, nhưng miệng ông ta khô héo, không động đậy. Tuấn vờ cúi ăn, tay để sẵn máy ảnh trên đùi, bật chế độ quay phim."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-hall",
+      "caption": "Đếm khách",
+      "text": "Và rồi anh phạm sai lầm - điều cấm thứ ba. Anh đếm. Trong đầu, theo thói quen phân cảnh của thợ ảnh: hàng ghế bên trái, mười người. Bên phải, mười hai. Hàng sau, tám. Cộng mẹ cô dâu, bốn người đỡ dâu, cô dâu - bốn mươi hai. Vừa nhẩm xong con số trong đầu, cả gian nhà như cùng khựng lại một nhịp. Không một tiếng động. Bốn mươi mấy cái đầu - đồng loạt - quay về phía anh. Bà già nhà gái đứng giữa, giọng như than lạnh: nó đếm rồi. Ai bảo nó đếm?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "misty-courtyard",
+      "caption": "Chạy vào sương",
+      "text": "Tuấn không nhớ mình chạy ra cửa thế nào. Anh chỉ nhớ hai chân đạp loạn vào sân đá, sương mù nuốt gọn mọi thứ, phía sau là tiếng ghế gỗ kéo lê trên sàn - rất nhiều chiếc ghế, cùng một lúc. Anh chạy thẳng ra khỏi cổng bản, chạy xuống con dốc đất, ba lô đánh đập vào lưng. Sương đặc đến mức anh tự đâm vào một gốc cây, ngã lăn, ôm máy ảnh chặt trong ngực. Nằm đó thở hổn hển, anh nghe thấy tiếng gì đó phía trên đồi - tiếng trống đám cưới, vẫn điểm đều, xa xa, như chưa từng có gì xảy ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-road",
+      "caption": "Vòng lại bản",
+      "text": "Anh chạy suốt con đường đất anh đã đi lên chiều đó - mười lăm phút đổ bộ là tới đường cái. Anh chạy nửa tiếng. Đường cứ một dốc lên, một dốc xuống, cây hai bên đen ngòm giống hệt nhau. Rồi đến một khúc quanh, anh sững lại: trước mặt là cổng đá rêu phong, băng vải đỏ phai, khói bếp lẫn sương. Cổng bản. Anh chạy một vòng ngược lên đúng nơi anh vừa trốn ra. Từ trong bản, tiếng bà già nhà gái vọng ra, gần như thì thầm bên tai: chạy chi mệt, cháu rể. Tối nay - cưới cháu mà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-house",
+      "caption": "Về ghế khách",
+      "text": "Họ không lôi anh về. Không cần. Anh quay lại vì đường nào cũng đưa về bản. Khi anh bước lại qua cổng, sân đá yên ắng như chưa từng náo loạn - mâm tiệc vẫn còn nguyên, lư hương khói nghi ngút, còn người thì đã vào nhà hết. Chỉ có bà già ngồi chờ anh trên chiếc ghế khảm, trên tay bà một chiếc hộp gỗ nhỏ, nắp khắc hoa đào. Bà đẩy hộp về phía anh: cất đi, mai mặc vào. Trong hộp là một chiếc áo the nam màu đỏ - áo chú rể - cùng một đôi giày thêu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wedding-house",
+      "caption": "Kẻ được chọn",
+      "text": "Tuấn mới hiểu ra mọi chuyện - hiểu theo cách tồi tệ nhất có thể. Chú rể thằng nhóc ban chiều chỉ là mồi nhử cho đám khách phía nhà gái nhìn cho quen mắt. Cái thứ thật sự được dựng lên là anh - kẻ ngoại tỉnh, kẻ chụp ảnh, kẻ không ai biết mặt biết tên trong bản này. Ông Hai Phóng dẫn anh lên không phải để chụp đám cưới. Ông dẫn anh lên để trả một cái nợ mà cháu trai ông không muốn trả. Anh là chú rể thay thế."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "altar-photo",
+      "caption": "Ảnh trên ban thờ",
+      "text": "Bà già dẫn anh qua gian chính, giơ tay chỉ vào ban thờ gia tiên nhà gái. Giữa hàng khói hương là một bức ảnh thờ đen trắng đã ngả vàng - cô gái trong ảnh mặc áo dài trắng, đứng nghiêng, mặt đẹp lạnh. Dòng chữ nhỏ bên dưới ảnh: con gái út Mười Bốn - mất năm mười chín tuổi. Bà già nói, giọng đều đều như kể chuyện đã thuộc lòng: năm nay là năm thứ sáu mươi. Sáu mươi năm nhà này trả lời được một người. Đêm nay - đến lượt nhà này trả người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bride-shadow",
+      "caption": "Cô dâu đứng sau",
+      "text": "Và Tuấn đã nghe thấy - đúng lúc đó - tiếng guốc gỗ gõ khẽ trên nền gạch sau lưng mình. Anh không quay lại. Anh nhìn vào tấm ảnh thờ trên ban, và trong lớp kính mờ của khung ảnh, anh thấy cái bóng đỏ phản chiếu đứng ngay sau lưng mình - áo dài đỏ, khăn voan đỏ, hai cái chân trần lơ lửng cách đất một gang. Bà già cười khùng khục: nó ra đón cháu rồi đấy. Đừng quay đầu - quay đầu là nó chụp mặt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hồi kết mở đầu",
+      "text": "Đêm đó Tuấn đứng cứng giữa gian nhà, không dám quay đầu, nghe tiếng guốc gỗ vòng quanh mình - một vòng, hai vòng - như con mồi bị dò đường chạy. Phía sau lưng anh, thứ kia thở đều - một thứ hơi thở lạnh buốt phả qua gáy anh, mùi hoa cưới ướt. Bà già bỏ đi vào buồng, khóa cửa, để lại một câu: đến giờ hợi, nó lìa bỏ cái voan - lúc đó cháu mặc áo hay không mặc, cũng là rể rồi. Giờ hợi. Mười giờ đêm. Bây giờ là chín giờ bốn mươi lăm."
+    }
+  ]
+}

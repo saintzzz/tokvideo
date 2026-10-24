@@ -1,0 +1,112 @@
+{
+  "slug": "hon-ma-tap-04",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HÔN MA | Tập 4: Đường Âm - Kẻ Làm Mẹ Sáu Mươi Năm | Truyện Ma Dài",
+  "description": "Tờ giấy cháy giữa đồi, cô dâu được giải thoát - nhưng bà già không phải người. Sáu mươi năm trước bà là người ký giấy giữ cô lại, và bà đã dùng chính mạng mình nuôi hồn cô để mua yên cho cả bản. Đường âm mở, Tuấn phải chọn: chạy một mình hay quay lại cứu người thương cô đợi sáu mươi năm.\n\nTruyện ma dài 5 tập về tục hôn ma vùng cao, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "hôn ma",
+    "đám cưới ma",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #honma #damcuoima #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "NGƯỜI GIỮ HỒN",
+  "scenePrompts": {
+    "hook": "a burning yellow paper held in a hand on a foggy grave hill at night, a dead tree behind, red mist, cinematic horror",
+    "burning-contract": "close view of an old yellowed contract paper burning at the edges, calligraphy characters glowing, darkness",
+    "grave-open": "a cracked concrete grave mound on a hill at night, pale hands emerging from the crack, red fog, dead tree",
+    "old-woman-true": "an ancient blind woman with white eyes standing on a hill at night, dark ceremonial robes, holding a wooden staff, terrifying",
+    "souls-rising": "a foggy hilltop at night with faint glowing silhouettes of people rising into dark sky, dead tree silhouette",
+    "village-fire": "a mountain village at night with red glow between rooftops, fog, a crowd of dark figures moving toward a hill",
+    "under-road": "a dark narrow path through a misty forest at night, pale markers on the ground, oppressive darkness",
+    "lost-man": "a gaunt middle-aged man in rags kneeling on a forest path at night, weeping, ghostly atmosphere",
+    "dawn-coming": "first grey light over a foggy mountain ridge, a lone figure running on a dark path, tense escape mood"
+  },
+  "sceneImages": {},
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tờ giấy bốc cháy",
+      "text": "Que lửa cháy trên tay Tuấn, đôi tay trắng xanh dưới mồ đang đẩy vỡ kẽ bê tông - anh quyết định trong tích tắc: đốt. Giấy thông hành bốc lên như cốm, cháy không ra tro mà ra một thứ sương đỏ. Cùng lúc đó, cái thứ dưới mồ hét lên một tiếng không giống người - và từ đỉnh đồi, gốc đa chết rung lên, tất cả dải vải đỏ trên cành đồng loạt đứt bay xuống như máu đổ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-open",
+      "caption": "Mồ mở",
+      "text": "Kẽ bê tông vỡ toác. Cái thứ chui ra không phải xác cô dâu - là một bà già teo tóp, mặc đồ đen, hai mắt trắng giã - chính bà mẹ cô dâu đang gõ gậy dưới kia, nhưng bản này già hơn, khô hơn, như cái xác khô bọc da. Bà nhìn lên Tuấn bằng hai con mắt trắng, mở miệng - và tiếng phát ra là tiếng của cả một đám đông: mày hủy giấy rồi - tao giữ cô ấy sáu mươi năm, mày biết mày vừa thả cái gì ra không?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-true",
+      "caption": "Người giữ hồn",
+      "text": "Tuấn lùi lại, ngã dúi xuống đất. Bà già đứng dậy khỏi mồ - đứng thẳng bất thường như rối kéo dây - kể ra sự thật cuối cùng: bà không phải mẹ cô Mười Bốn. Bà là thầy mố của bản năm xưa - người viết tờ giấy thông hành, người làm lễ cưới áo quan, người đề nghị đổ mồ bê tông. Nhà họ Lỷ mướn bà giữ hồn cô lại để cô không vong về phá bản. Bà ký đổi: mạng bà giữ cô, nhà họ Lỷ nuôi bà sáu mươi năm không già thêm một ngày. Bà - chính là cái khóa. Chứ không phải tờ giấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "souls-rising",
+      "caption": "Cô được thả",
+      "text": "Khi giấy cháy, khóa cũng cháy theo - Tuấn mới hiểu: bà thầy mố giấu chìa trong tờ giấy, đốt giấy là phá bà. Từ kẽ mồ, một cái bóng đỏ đứng lên - cô Mười Bốn, váy cưới, khăn voan đã không còn, mặt cô không còn trắng sứ lạnh lẽo mà xanh nhạt như tro - nhưng mắt cô sáng. Cô nhìn Tuấn, cúi đầu một lần rất sâu - cảm ơn - rồi quay sang nhìn bà thầy mố. Bà thầy lùi lại lần đầu tiên trong sáu mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-fire",
+      "caption": "Bản nổi dậy",
+      "text": "Từ dưới bản, tiếng gõ gậy vừa dừng - và thay vào đó là một tiếng tru dài của vô số miệng cùng lúc. Cả bản sáng lên ánh đỏ - không phải lửa, là ánh từ những cánh cửa mọi nhà đồng loạt mở. Ông Phóng đứng ở chân đồi, hét lên với Tuấn: khách âm đang lên đồi - họ biết khóa mở rồi - họ không chịu mất con tin sáu mươi năm nuôi họ yên. Chạy xuống đường âm đi - lối sau đồi - ĐI!"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "under-road",
+      "caption": "Đường âm mở",
+      "text": "Tuấn chạy qua lưng đồi theo chỉ của ông Phóng. Đường âm hiện ra - con đường hẹp giữa hai hàng cây khô, nền đất trắng xóa như rải tro, hai bên cắm những khúc gỗ trắng đánh dấu. Ông Phóng từng nói: đường âm không ai đi rồi về cả - nhưng đêm nay nó mở, chỉ đêm nay. Và nó mở vì cô đã được thả - đường này là đường của cô, của hồn được về, không phải đường của người sống. Anh đi vào là anh đi nhầm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "under-road",
+      "caption": "Người trên đường",
+      "text": "Nhưng con đường đất dưới bản - cả bản đang đứng chặn. Tuấn không còn đường nào khác, đành bước vào đường âm. Hai bên đường, khúc gỗ trắng càng lúc càng dày, sương đen quấn vào cổ chân. Giữa đường, một người đàn ông trung niên quần áo rách rưới đang ngồi khóc. Ngước lên - mặt đầy râu, mắt mệt mỏi, da người thật - ông ta nắm lấy gấu áo Tuấn, giọng run: đường này mày đi được không? Tao tìm đường về sáu mươi năm rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lost-man",
+      "caption": "Người sáu mươi năm",
+      "text": "Ông ta là con trai lớn nhà họ Trần - chú rể thật trong đám cưới áo quan năm xưa. Ông kể: đêm cưới áo quan, ông quỳ bái xong thì trời sáng, ông đi tìm đường về - và đi nhầm vào đường này. Đi mãi không ra. Ông không chết - cũng không còn sống - cứ đi mãi trên con đường này, đôi khi nghe thấy tiếng ai đó đi phía sau nhưng quay lại không có ai. Ông nắm tay Tuấn: cô Mười Bốn - cô ấy còn đó không? Tao lên rừng đêm đó - tao đợi cô ấy - tao biết nhà họ Lỷ không chịu. Tao đã chờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "souls-rising",
+      "caption": "Gặp lại sau sáu mươi năm",
+      "text": "Tuấn kể cho ông nghe hết - giấy cháy, cô được thả, cô chờ người yêu sáu mươi năm mà người đó lại kẹt ở đây. Ông Trần đứng phắt dậy: đường này đi về phía trước là về âm phủ, đi ngược lại mới ra được - nhưng không ai đi ngược được vì trên đường có người gặt - họ kéo tay mọi kẻ quay đầu. Tuấn nhìn lại con đường phía sau - đường đất trắng đã biến mất, thay vào đó là một bức tường sương đỏ đặc quánh đang tràn tới - bà thầy mố đang đuổi theo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-coming",
+      "caption": "Lối ra duy nhất",
+      "text": "Ông Trần nói: chỉ còn một cách - đường này mở cho hồn được về, không mở cho người sống. Muốn ra phải có người âm kéo qua - người sống không đi được, người sống bị kéo là hỏng luôn. Nhưng người sống có thể đi cùng nếu nắm tay một hồn được thả - một hồn không còn nợ. Tuấn hỏi: ông đợi sáu mươi năm, ông có nợ gì cô không? Ông Trần lắc đầu, mắt đỏ hoe: tao chỉ nợ cô một đám cưới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-fire",
+      "caption": "Quay lại bản",
+      "text": "Vậy là Tuấn quay lại - quay lại đúng nơi anh vừa chạy ra. Lần này bản không còn yên tĩnh nữa: đám khách âm đứng đầy sân đá, bà thầy mố đứng giữa trước nhà gỗ lim, phía sau bà - cô Mười Bốn bị kéo bằng một sợi dây đỏ buộc vào cổ, đang bị đám khách định lôi trở lại buồng - họ cưới lại, lần này không cần giấy nữa. Tuấn hét lên - không phải để đánh - mà để gọi: cô Mười Bốn! Người cô đợi - ông đang ở đường âm - ông chờ cô sáu mươi năm!"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Sợi dây đỏ đứt",
+      "text": "Cô ngẩng lên. Sợi dây đỏ trên cổ cô đứt phựt - đám khách âm giật lùi như bị đẩy. Cô bước ra giữa sân đá, mắt cô tìm Tuấn - anh chỉ tay về phía lưng đồi: đường âm, đi đường đó - ông Trần đợi. Cô nhìn anh một lần nữa, lần cuối - rồi chạy. Bà thầy mố gào lên, toàn thân bà giãn ra như cái bóng bị kéo - bà đuổi theo cô lên đồi. Tuấn chạy theo sau - vì anh biết: lối ra của anh, cũng là lối ra của cô - và ông Trần chỉ có một đêm này để chờ."
+    }
+  ]
+}

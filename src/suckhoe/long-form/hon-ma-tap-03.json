@@ -1,0 +1,124 @@
+{
+  "slug": "hon-ma-tap-03",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HÔN MA | Tập 3: Lễ Chính - Nàng Không Muốn Cưới | Truyện Ma Dài",
+  "description": "Đêm lễ chính, Tuấn bị mặc áo the dẫn ra giữa đám khách âm. Nhưng khi vén khăn voan, cô dâu khóc - nước mắt đen - và khẽ nói câu đầu tiên: cứu em. Sáu mươi năm cưới chồng, không phải cô muốn - là nhà họ Lỷ bắt cô.\n\nTruyện ma dài 5 tập về tục hôn ma vùng cao, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "hôn ma",
+    "đám cưới ma",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #honma #damcuoima #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "CÔ DÂU KHÓC",
+  "scenePrompts": {
+    "hook": "a bride in red ao dai kneeling before an ancestral altar at night, black tears on her pale face, candles, dark wedding hall, cinematic horror",
+    "procession": "a night wedding procession on a foggy village path, red lanterns carried by motionless figures, a groom walking stiffly, horror",
+    "red-dress-forced": "a man in a red embroidered wedding tunic looking terrified, surrounded by shadowy guests, candles, old wooden house",
+    "altar-candles": "an ancestral altar with tall burning candles, thick incense smoke, a black and white bride photo, offerings",
+    "ghost-guests": "rows of seated wedding guests in old dark clothing, faces grey and hollow, lit by red candle glow, eerie",
+    "black-tears": "close view of a bride's face under lifted red veil, pale as porcelain, trails of black tears on her cheeks, candlelight",
+    "dead-mother": "an old blind woman in dark ceremonial clothes gripping a wooden staff, white eyes, stern expression, ancestral hall",
+    "contract-paper": "an old yellowed paper with handwritten calligraphy and red stamps, held over candle flame, dark room",
+    "grave-hill": "a foggy hilltop at night with a dead tree and a concrete-sealed grave mound cracked open, red fabric strips"
+  },
+  "sceneImages": {},
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Cô dâu khóc",
+      "text": "Khi Tuấn vén khăn voan trong lễ chính, cô dâu nhìn thẳng vào mắt anh - và khóc. Hai dòng nước mắt đen lăn xuống má trắng như ngấn sứ. Cả gian nhà im phăng phắc. Cô khẽ mấp máy, giọng như gió qua kẽ cửa, chỉ anh đứng gần mới nghe: cứu em. Nàng không muốn cưới. Sáu mươi năm - không phải nàng đòi chồng. Là nhà họ Lỷ bắt nàng lấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "procession",
+      "caption": "Rước qua làng âm",
+      "text": "Chín giờ tối, họ dẫn Tuấn ra. Anh đã mặc áo the - không phải vì sợ họ lấy từng miếng, mà vì anh muốn đi xa được khỏi buồng, nhìn cho ra đường chạy. Đoàn rước đi qua con đường đất bản: đèn lồng đỏ cầm bởi những bàn tay trắng bệch, mười hai người hai hàng, không ai nói, không ai nhìn thẳng. Tuấn đi giữa đoàn, phía trước lưng anh là cái bóng đỏ của cô dâu - cô đi một mình, hai tay buông, chân không gập gối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-guests",
+      "caption": "Khách hai họ",
+      "text": "Đến nhà gái - vẫn căn nhà gỗ lim đó - gian chính đã đông nghẹt khách. Tuấn nhìn qua không dám chụp: lần này cả hàng ghế nhà gái, không còn ai có mặt người nữa. Ông cụ trưởng tộc ngồi trên cao, mặt màu tro tàn; mấy bà lão hàng hai, cổ tối om như bị bóp; một thằng bé ngồi gần cửa, mặt ú sầu, xương tay lộ ra giữa chỗ áo xắn. Khách nhà trai - người thật - chỉ có ông Hai Phóng, đứng co một góc, mặt trắng hơn cả khách âm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dead-mother",
+      "caption": "Bà già làm lễ",
+      "text": "Bà già mẹ cô dâu - hay đúng hơn, kẻ đứng ra làm mẹ cô dâu - chủ lễ. Bà mặc đồ đen thêu tơ vàng, đầu đội khăn đen, hai mắt trắng giã nhìn lên trần chứ không nhìn khách. Bà gõ gậy ba nhịp vào nền gạch, cả gian nhà đứng dậy như rút dây. Bà đọc lời - không phải tiếng Việt, một thứ tiếng cổ, giọng càng lúc càng trầm xuống, nến trên bàn thờ cháy xanh lét. Tuấn nghe không hiểu nhưng hai tai ù đi - tiếng đọc đó không phải để cho người sống nghe."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "altar-candles",
+      "caption": "Trước ban thờ",
+      "text": "Đến phần bái gia tiên, cô dâu quỳ trước ban thờ - váy đỏ xòe trên chiếu - Tuấn bị hai bóng người đỡ hai bên dìu xuống quỳ cùng. Anh nhìn ban thờ: giữa hương khói, tấm ảnh thờ cô Mười Bốn nhìn ra - và anh nhận ra cái chi tiết lúc nãy anh chưa kịp để ý: khung ảnh thờ của cô, không giống khung người mất. Khung ảnh thờ có chữ cầu siêu - nhưng nét chữ viết ngược. Người ta không cầu siêu cho cô - người ta khóa cô trong tấm kính đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "black-tears",
+      "caption": "Vén khăn voan",
+      "text": "Đến lượt vén khăn cho họ hàng chiêm ngưỡng - lần này bà già cho phép Tuấn tự vén, vì anh là chú rể. Tay anh run nâng lớp voan đỏ. Mặt cô hiện ra - đẹp như hồi chiều qua, trắng như sứ, nhưng lần này mắt cô động đậy. Mắt cô nhìn Tuấn - ướt - và từ khóe mắt lăn ra hai giọt nước mắt đen. Môi cô mấp máy. Tuấn cúi xuống gần, giả vờ chỉnh váy cô, tai áp sát. Cô nói: cứu em. Em không muốn ở đây. Mẹ - không phải mẹ em."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "black-tears",
+      "caption": "Lời của cô",
+      "text": "Cô nói khẽ đến mức Tuấn phải đọc môi: sáu mươi năm trước em lên rừng không phải hái hoa - em lên gặp người em thương, người nhà nghèo, nhà họ Lỷ không chịu. Họ bắt em về cưới nhà họ Trần. Em trốn đêm trước cưới, họ đuổi theo, em té dốc - cũng có thể họ làm em té dốc. Chết rồi họ vẫn ép em cưới - bắt em phục vụ cái gia phả, đám khách trên bản, đám khách dưới âm. Mỗi mười lăm năm họ đưa em một người sống để họ được yên. Em - em chỉ muốn đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "contract-paper",
+      "caption": "Tờ giấy thông hành",
+      "text": "Cô chỉ tay vào lư hương trên bàn thờ: trong lư có một tờ giấy vàng - giấy thông hành - giấy anh thấy trong hộp áo chiều nay, nhưng đây là bản gốc năm xưa, đã viết tên Tuấn vào đó từ tối qua. Cô nói: giấy đó còn nguyên là em còn bị giữ, giấy cháy em được đi - nhưng giấy cháy mà chú rể đã quỳ bái đủ ba lạy thì em đi mà mang theo chú rể. Cho nên - anh phải cháy giấy trước khi lạy lần thứ ba. Vừa nói xong, trống lễ điểm - phần bái thiên địa bắt đầu. Lạy thứ nhất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "altar-candles",
+      "caption": "Lạy thứ nhất",
+      "text": "Bà già hô lạy - Tuấn khom lưng lạy lần thứ nhất, đầu gần chạm chiếu. Anh cảm nhận một cái lạnh buốt chạy từ đỉnh đầu xuống gót - như ai vừa vẽ một nét trên gáy mình. Bên cạnh, cô dâu khẽ rung - cô lạy cùng, nhưng lạy để cho có, cô không cúi xuống hẳn. Bà già gõ gậy nhịp hai - Tuấn lạy lần hai. Cái lạnh lần này xuống đến thắt lưng, anh cảm giác hai chân mình không còn thuộc về mình nữa - như ai đang cột mình vào chiếu từng lớp dây. Lạy thứ ba - nến xanh bùng lên. Anh chưa lạy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-guests",
+      "caption": "Bà già nghi",
+      "text": "Bà già nhận ra anh chưa lạy. Hai mắt trắng giã của bà quay xuống nhìn thẳng vào anh - nhìn bằng hai con mắt trắng mà vẫn thấy, thấy rõ hơn người sáng mắt. Bà hỏi: sao không lạy? Tuấn đứng đó, hai chân tê, não quay cuồng tìm lời. Thì ông Hai Phóng từ góc nhà ho một tiếng thật to, chỉ tay ra sân: mưa to quá bà ơi - mọi người nhìn ra sân - cả đám khách âm đồng loạt quay đầu. Ông già đó vừa cứu anh một lần nữa. Nhưng chỉ được có một cái quay đầu đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dead-mother",
+      "caption": "Đập vỡ kính ảnh",
+      "text": "Tuấn không đợi giây nữa. Anh vươn tay lên ban thờ, túm lư hương - nóng phỏng cả lòng bàn tay - hất đổ xuống chiếu. Tro hương và tờ giấy thông hành lăn ra giữa đám. Anh nhào tới nhặt giấy - bà già quát một tiếng khàn mà cả gian nhà như nứt vỡ: GIỮ NÓ LẠI. Mấy chục bóng khách âm đứng dậy cùng lúc, không một tiếng động. Tuấn nắm giấy trong tay, chạy ngược về phía bàn thờ, đập mạnh tấm ảnh thờ xuống nền gạch - kính vỡ toang - tiếng la của bà già và tiếng gào của một thứ gì đó từ trong tấm ảnh cùng vọng lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-hill",
+      "caption": "Chạy lên đồi",
+      "text": "Tờ giấy trong tay Tuấn chưa cháy - cần lửa. Nến trên bàn thờ đã tắt phụt khi kính vỡ. Anh chạy ra sân, chạy vọt lên con đường đất về phía đồi sau bản - vì ông Phóng từng chỉ: mồ cô nằm dưới gốc đa trên đồi, và ông từng nói câu này, câu giờ anh mới hiểu: lửa duy nhất còn lại - đốt ở chỗ cô nằm. Phía sau lưng anh, cả bản sáng lên một thứ ánh đỏ - không phải đèn lồng - và tiếng guốc gỗ trên mái nhà bắt đầu chạy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-hill",
+      "caption": "Mồ bê tông",
+      "text": "Tuấn leo lên đồi gần như trên bốn chân. Gốc đa chết hiện ra trước mặt - và lần đầu anh nhìn rõ mồ của cô: mồ bê tông đã rạn nứt như ông Phóng kể, từ kẽ rạn bốc lên làn sương đỏ nhạt, mùi hoa cưới ướt nồng đến ngạt thở. Dưới chân mồ, trên nền đất, ai đó đã để sẵn một hộp quẹt - ông già. Ông Phóng. Ông biết anh sẽ lên đây. Tuấn nhặt quẹt, tay run không đánh được lửa. Phía dưới bản, tiếng bà già gõ gậy vọng lên đồi - càng lúc càng gần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Đốt hay không đốt",
+      "text": "Đánh được lửa rồi - Tuấn cầm que lửa đưa đến góc tờ giấy thông hành - thì anh khựng lại. Vì anh chợt nhớ ra câu cô dâu nói: giấy cháy em được đi - nhưng nếu lạy đủ ba lạy thì em đi mang theo chú rể. Anh đã lạy hai lạy rồi. Vậy nếu giấy cháy lúc anh chỉ lạy hai - em đi - còn anh? Anh còn ở lại trong số người sống hay trong số đám khách? Que lửa đang cháy trên tay anh, đám giấy đang chờ, và từ dưới kẽ rạn mồ bê tông, đôi bàn tay trắng xanh đang rục rịch đẩy từ bên trong."
+    }
+  ]
+}

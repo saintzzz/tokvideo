@@ -1,0 +1,118 @@
+{
+  "slug": "hon-ma-tap-05",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "HÔN MA | Tập 5: Hồi Kết - Tấm Ảnh Cuối Cùng Trong Máy | Truyện Ma Dài",
+  "description": "Bình minh trên đường âm: cô Mười Bốn và ông Trần gặp lại sau sáu mươi năm, bà thầy mố bị chính con tin của mình kéo về âm phủ. Tuấn xuống núi sống sót - nhưng trong máy ảnh của anh còn một tấm cuối cùng mà anh không dám in.\n\nTruyện ma dài 5 tập về tục hôn ma vùng cao, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "hôn ma",
+    "đám cưới ma",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
+  "hashtags": "#truyenma #truyenmadai #honma #damcuoima #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "TẤM ẢNH KHÔNG DÁM IN",
+  "scenePrompts": {
+    "hook": "a final photograph on a camera screen showing two figures in wedding clothes holding hands on a misty path at dawn, bittersweet horror",
+    "road-reunion": "a pale misty path at night where a bride in red meets a gaunt man in rags, hands reaching toward each other, emotional",
+    "old-woman-dragged": "an ancient blind woman in dark robes being pulled backward into red fog by ghostly hands, dead tree, night",
+    "hands-together": "two hands clasping on a misty path, one pale bride hand in red sleeve, one thin man's hand in rags, dawn light",
+    "dawn-village": "a mountain village at grey dawn after the storm, collapsed red banners, empty stone courtyard, eerie calm",
+    "elder-goodbye": "an old Vietnamese man standing at a village gate at dawn, waving goodbye to a younger man, relieved faces",
+    "mountain-descent": "a motorbike descending a foggy mountain pass at sunrise, rider with camera bag, light breaking through clouds",
+    "last-photo": "a camera display screen showing a wedding photo of two translucent figures holding hands on a pale path, grainy",
+    "new-shop": "a small photography shop in a town, a framed photo on the counter showing a misty path, warm daylight, peaceful ending"
+  },
+  "sceneImages": {},
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tấm ảnh cuối cùng",
+      "text": "Trong máy ảnh của Tuấn, sau tất cả, còn lại đúng một tấm cuối cùng - tấm anh chụp lúc bình minh, trên đường âm, từ rất xa: hai người mặc đồ cưới đứng giữa con đường trắng, tay nắm tay, quay lưng lại phía ánh sáng. Anh đã định xóa nó nhiều lần. Nhưng mỗi lần định bấm xóa, anh lại nhớ ra đôi bàn tay nắm chặt đó - và không xóa nổi. Tấm ảnh đó, đến giờ, vẫn là tấm duy nhất anh không dám in."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "road-reunion",
+      "caption": "Hai người gặp lại",
+      "text": "Tuấn chạy lên đồi đúng lúc cô Mười Bốn vừa bước vào đầu đường âm. Ông Trần đang ngồi trên đường như sáu mươi năm nay - ông ngẩng lên, nhìn cô, và đứng dậy chậm như sợ làm vỡ một cái gì đó. Họ đứng nhìn nhau một lúc - không chạy vào nhau, không khóc - chỉ nhìn. Rồi cô cất tiếng đầu tiên, giọng con gái thật, không còn vọng qua kẽ cửa nữa: anh vẫn đợi. Ông Trần đáp, giọng gãy nát: em còn mặc áo dài - tao nhận ra ngay."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-dragged",
+      "caption": "Bà thầy mố giữa đường",
+      "text": "Bà thầy mố vừa đuổi tới chân đường âm thì dừng lại - vì bà không đi vào được. Đường này chỉ mở cho hồn được thả và người không nợ. Bà đứng ở mép đường, gõ gậy xuống đất, gào lên bằng giọng của cả đám đông: nợ tao chưa trả - sáu mươi năm tao giữ mày sống cho bản - mày trả tao trước! Cô Mười Bốn quay lại, nhìn bà lần đầu tiên không còn sợ: bà giữ em để nuôi bà - chứ không phải nuôi bản. Con tin của bà là em - mà kẻ nợ là bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-dragged",
+      "caption": "Bị chính con tin kéo",
+      "text": "Từ bức tường sương đỏ phía sau bà thầy mố, mấy chục cánh tay thò ra - cánh tay của đám khách âm bản đó, của những kẻ sáu mươi năm ăn yên nhờ cái khóa bà giữ. Nhưng lần này họ không kéo cô dâu - họ kéo bà. Bà thầy mố đập gậy, chân bà lún xuống đất, sương nuốt đến đầu gối - bà gào lên một tiếng cuối: nhà họ Lỷ - các người nợ tao - các người cũng phải xuống đây! Sương đỏ khép lại. Đường âm im lặng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hands-together",
+      "caption": "Tay nắm tay",
+      "text": "Ông Trần đưa tay - cô Mười Bốn đặt tay lên - hai bàn tay nắm lại giữa con đường trắng. Tuấn đứng nhìn từ mép đường, không dám thở mạnh. Ông Trần quay sang anh, cúi đầu lần cuối: nhờ chú em. Đường này - chú em đi ngược ra được, người sống quay đầu đường sẽ thả - người sống đi xuôi mới hỏng. Còn tao với cô ấy - đi đúng chiều rồi. Cả hai cùng bước về phía xa, váy đỏ và bộ rách rưới, không quay lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-coming",
+      "caption": "Quay đầu ra",
+      "text": "Tuấn quay đầu đi ngược con đường âm - đúng như ông Trần dặn. Đường đất trắng phía sau anh cứ nhạt dần sau lưng mỗi bước, và khi anh bước ra khỏi hai hàng cây khô, đầu đường là lưng đồi quen thuộc - bình minh vừa lên, sương rã mỏng. Gốc đa chết trên đỉnh đồi - cành cây khô không còn - cây đã gãy ngang trong đêm, ngã xuống che kín mồ bê tông. Không một dải vải đỏ nào còn sót lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dawn-village",
+      "caption": "Bản sau đêm",
+      "text": "Xuống tới bản thì trời đã sáng hẳn - nhưng bản vắng tanh. Sân đá trước nhà gỗ lim trống trơn, vải đỏ rách rơi đầy nền, mâm cỗ lật úp, cửa các nhà đóng im. Không một bóng người - kể cả người sống. Tuấn gọi ông Hai Phóng - ông bước ra từ buồng sau nhà, mặt già đi chục tuổi sau một đêm, chỉ nói đúng một câu: nó xong rồi. Cả bản hôm qua nín thở chờ cưới - hôm nay nín thở vì không còn biết nhà họ Lỷ sẽ trả ai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-goodbye",
+      "caption": "Ông Phóng tiễn",
+      "text": "Ông Phóng dẫn Tuấn ra cổng bản, đưa lại anh chiếc chìa khóa xe máy - chính ông giấu hôm qua, không phải ai khác. Ông nói: tao đã định để mày ở lại thay cháu tao - tao sai, tao thừa nhận. Nhưng cái hộp quẹt trên đồi - tao để đó từ ba đời trước mày, mỗi lần có khách tao đều để đó, chờ có kẻ đủ can đốt cái giấy đó. Ba mươi năm - cuối cùng có người đốt. Mày về đi, đừng nhắc bản này nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mountain-descent",
+      "caption": "Xuống đèo",
+      "text": "Tuấn nổ máy xuống đèo. Con đường đất hôm qua chạy mãi không ra - giờ đi thẳng một mạch, mười lăm phút đã thấy đường cái. Anh dừng lại một lần, quay nhìn lên đỉnh đồi: gốc đa ngã chỉ còn là một vệt đen nhỏ trong sương tan. Anh không nhìn lại lần thứ hai. Xuống tới thị xã anh vứt cái áo the đỏ xuống bờ mương, tắm ba lần, ăn một bữa nóng, ngủ mười tám tiếng liền."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "last-photo",
+      "caption": "Những tấm còn lại",
+      "text": "Hôm sau anh ngồi lật lại máy ảnh. Tấm khách nhà gái mặt xám tro - vẫn còn. Tấm cô dâu không bóng - vẫn còn. Tấm chân lơ lửng - vẫn còn. Anh chuyển ra máy tính, không in, khóa vào một thư mục đặt tên không liên quan. Nhưng khi kéo đến cuối thẻ nhớ, anh dừng ở tấm cuối cùng - tấm anh không nhớ đã chụp: hai người mặc đồ cưới trên đường trắng, nắm tay, đang quay đầu lại nhìn về phía máy ảnh - nhìn về phía anh - và cả hai đang mỉm cười. Cười thật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "last-photo",
+      "caption": "Không dám in",
+      "text": "Tuấn không in tấm đó. Anh cũng không xóa. Anh kể lại cho tôi - Bà Tư đây - hồi năm ngoái ghé tiệm ảnh của anh ở thị xã, lúc anh đã bình tĩnh để nói ra. Anh nói: có những thứ mình giữ lại không phải để chứng minh nó có thật - mà để nhớ rằng có những cuộc đợi sáu mươi năm vẫn đáng được đợi. Ảnh cưới đó, hỏi in làm gì - người trong ảnh đã về nhà rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-shop",
+      "caption": "Câu chuyện sau chuyện",
+      "text": "Bản trên đồi đó, nghe sau này, vẫn còn - nhưng nhà họ Lỷ không còn phát quà nữa, đám khách âm không còn đứng đầy sân mỗi rằm. Gốc đa ngã để nguyên, không ai dám chặt, người bản đi ngang vẫn để một nén hương dưới gốc - không phải cầu, mà là tạ. Còn ông Hai Phóng, mất cách đây ba năm, trước khi nhắm mắt ông gọi Tuấn lên tận giường, giao lại cuốn sổ bọc nilon - danh sách sáu mươi năm - với một yêu cầu duy nhất: đốt đi. Tuấn đốt ngay tại giường ông. Sáu trang sổ cháy mất chưa đầy một phút."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Lời kết của Bà Tư",
+      "text": "Chuyện HÔN MA đến đây là hết - năm tập, sáu mươi năm, một đám cưới cuối cùng cũng được về đúng nhà. Nhưng các con nghe Bà Tư nói này: trên các vùng cao, tục hôn ma vẫn còn. Có nơi người ta vẫn cưới cho người mất bằng mô hình, bằng ảnh, bằng gà trống thay chú rể - cũng có nơi vẫn cưới bằng người thật. Cho nên nếu có ai đó mời các con lên núi chụp đám cưới cát-xê gấp năm - nhớ hỏi kỹ một câu: cô dâu năm nay bao nhiêu tuổi. Và sinh năm nào."
+    }
+  ]
+}

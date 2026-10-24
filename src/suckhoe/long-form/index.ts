@@ -25,6 +25,11 @@ import chuyenDoDemTap02 from "./chuyen-do-dem-tap-02.json";
 import chuyenDoDemTap03 from "./chuyen-do-dem-tap-03.json";
 import chuyenDoDemTap04 from "./chuyen-do-dem-tap-04.json";
 import chuyenDoDemTap05 from "./chuyen-do-dem-tap-05.json";
+import honMaTap01 from "./hon-ma-tap-01.json";
+import honMaTap02 from "./hon-ma-tap-02.json";
+import honMaTap03 from "./hon-ma-tap-03.json";
+import honMaTap04 from "./hon-ma-tap-04.json";
+import honMaTap05 from "./hon-ma-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -79,4 +84,14 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   chuyenDoDemTap03,
   chuyenDoDemTap04,
   chuyenDoDemTap05,
+  // Horror arc 6: "Hon ma" - a mountain-village ghost wedding. A
+  // photographer is lured up the pass as the substitute groom; twist
+  // at tap 3-4: the bride is not the monster, the village witch who
+  // sealed her for 60 years is - the arc turns from haunting into a
+  // rescue of two lovers separated for sixty years.
+  honMaTap01,
+  honMaTap02,
+  honMaTap03,
+  honMaTap04,
+  honMaTap05,
 ] as LongFormEpisode[];
