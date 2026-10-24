@@ -4,8 +4,23 @@
   "queuePriority": 1,
   "title": "CHUYẾN ĐÒ ĐÊM | Tập 1: Bến Đò Cũ - Mười Một Khách Lên, Mười Khách Xuống | Truyện Ma Dài",
   "description": "Bố mất tích giữa dòng - chiếc đò trôi về bến không người. Trần về quê tiếp quản chuyến đò đêm và phát hiện năm điều luật mà bố để lại trong cabin, cùng một cuốn sổ ghi tên khách toàn người đã chết.\n\nTruyện ma dài 5 tập về nghề đưa đò đêm và những vị khách không của cõi sống, kể bởi Bà Tư.",
-  "prosody": { "rate": "-5%", "pitch": "-3%", "volume": "+10%" },
-  "tags": ["truyện ma", "truyện ma dài", "đưa đò đêm", "ma sông nước", "truyện ma dân gian", "truyện ma làng quê", "truyện ma có thật", "kinh dị việt nam", "truyện ma audio", "bà tư kể chuyện"],
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "đưa đò đêm",
+    "ma sông nước",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện"
+  ],
   "hashtags": "#truyenma #truyenmadai #duadodem #masongnuoc #nghetruyen #truyenmacothat #kinhdi #audiobook",
   "thumbTitle": "MƯỜI MỘT LÊN, MƯỜI XUỐNG",
   "scenePrompts": {
@@ -19,30 +34,155 @@
     "shoal-dead": "a misty sandbar in the middle of a dark river at night, faint silhouettes of people standing motionless in fog",
     "father-photo": "an old framed photograph on a wooden wall of a middle-aged ferryman standing by his boat, sepia, dim candle light"
   },
-  "sceneImages": {},
+  "sceneImages": {
+    "hook": "images/suckhoe-long/chuyen-do-dem-tap-01/hook.jpg",
+    "river-dusk": "images/suckhoe-long/chuyen-do-dem-tap-01/river-dusk.jpg",
+    "ferry-boat": "images/suckhoe-long/chuyen-do-dem-tap-01/ferry-boat.jpg",
+    "night-river": "images/suckhoe-long/chuyen-do-dem-tap-01/night-river.jpg",
+    "pier-night": "images/suckhoe-long/chuyen-do-dem-tap-01/pier-night.jpg",
+    "cabin-ledger": "images/suckhoe-long/chuyen-do-dem-tap-01/cabin-ledger.jpg",
+    "village-river": "images/suckhoe-long/chuyen-do-dem-tap-01/village-river.jpg",
+    "shoal-dead": "images/suckhoe-long/chuyen-do-dem-tap-01/shoal-dead.jpg",
+    "father-photo": "images/suckhoe-long/chuyen-do-dem-tap-01/father-photo.jpg"
+  },
   "beats": [
-    { "speaker": "narrator", "scene": "hook", "caption": "Mười một lên, mười xuống", "text": "Đêm đầu tiên Trần chèo đò thay bố, có mười một người lên thuyền. Anh đếm rõ trong đầu: mười một. Nhưng đến bến bên kia, xuống chỉ có mười. Người thứ mười một không nhảy xuống vực, không lặn - cứ thế mà không còn trên thuyền. Và đó là lúc Trần nhớ ra điều luật thứ hai trong sổ của bố: tuyệt đối không được đếm khách ra thành tiếng." },
-    { "speaker": "narrator", "scene": "river-dusk", "caption": "Bố mất giữa dòng", "text": "Mười ngày trước, người ta thấy chiếc đò của ông Nhàn trôi lềnh bềnh về bến, mái chèo vẫn cài ngang mạn, đèn dầu trong cabin còn cháy. Người không thấy đâu. Vớt ba ngày dưới con đục lũ, chỉ vớt được một chiếc dép. Làng bèn lo rồi bàn nhau làm đám tang không xác - người đưa đò ba mươi năm của bến Bãi Đá." },
-    { "speaker": "narrator", "scene": "village-river", "caption": "Bến Bãi Đá", "text": "Bến Bãi Đá là đường qua sông duy nhất trong hai mươi cây số. Ban ngày có đò máy của người thuê bến chạy đều đặn. Nhưng từ giờ hợi trở đi, từ xưa đến nay, chỉ một chiếc đò chèo tay chạy - và chỉ một nghề truyền đời đứng chèo. Làng gọi nó là đò đêm, gọi người chèo là người đưa đò, và gọi chuyến của ông Nhàn bằng một tiếng lịch sự lạ lùng: chuyến đò trả nợ." },
-    { "speaker": "narrator", "scene": "village-river", "caption": "Không ai chịu chèo", "text": "Tang lễ xong, vấn đề nổ ra ngay: ai chèo đò đêm? Người thuê bến chỉ đồng ý chạy đến chín giờ tối. Mà bên kia sông có chợ sớm, có nhà quê, có người đi làm xa về khuya - bỏ chuyến đêm là cắt đứt cả một phía sông. Mấy trai tráng được hỏi đều lắc đầu, người duy nhất đáp ứng là bà Căn - bà già góa sống một mình đầu bến - bảo: để con thằng Nhàn về mà chèo." },
-    { "speaker": "narrator", "scene": "father-photo", "caption": "Con trai người đưa đò", "text": "Trần về quê trong bộ đồ đen đi chịu tang. Anh bỏ quê lên phố học từ mười tám, làm kỹ thuật ở xưởng điện, một năm chỉ về một lần. Trong nhà cha vắng lặng, trên vách còn tấm ảnh bố đứng cạnh chiếc đò, cười hiền như chưa từng có chuyện gì. Bà Căn nói một câu làm anh rùng mình: nghề này không xin, nghề này được giao. Bố cháu chọn cháu từ lâu rồi." },
-    { "speaker": "narrator", "scene": "pier-night", "caption": "Cabin và cuốn sổ", "text": "Chiều hôm ấy bà Căn dẫn Trần xuống bến, lên chiếc đò đã được chắp vá kỹ. Trong cabin nhỏ đầy mùi dầu hỏa và gỗ ẩm, bà mở hộc gỗ dưới mui thuyền lấy ra một cuốn sổ bìa da bọc nilon - cuốn sổ của ông Nhàn. Bà đặt vào tay anh: đọc kỹ trang đầu trước khi chèo. Còn mấy trang sau - đêm nào chèo xong thì về mà đọc, đừng đọc trên đò." },
-    { "speaker": "narrator", "scene": "cabin-ledger", "caption": "Năm điều luật", "text": "Trang đầu cuốn sổ viết năm điều, chữ ông Nhàn nắn nót như khắc: một, ai gọi đò sau giờ hợi cũng phải đón, không được bỏ khách. Hai, không được đếm khách ra tiếng. Ba, khách nào không trả tiền cũng không được đòi. Bốn, gặp đoạn nước lặng như gương giữa dòng thì dừng mái chèo, tuyệt đối đừng nhìn xuống mặt nước. Năm - dòng này viết nét mờ nhất - đêm rằm không đưa chuyến cuối, trừ khi có người gọi ba lần tên thật." },
-    { "speaker": "narrator", "scene": "cabin-ledger", "caption": "Lạ lùng mà quen", "text": "Trần đọc đi đọc lại. Lạ lùng thay, năm điều luật ấy không xa lạ - hồi nhỏ anh hay được bố chở qua sông chơi, và anh nhớ bố từng hất hàm khi anh đếm khách líu ríu: đừng đếm, con. Hồi ấy anh tưởng bố sợ đếm sai thu nhập. Giờ đọc lại, anh mới hiểu ra bố không sợ mình đếm sai - bố sợ mình đếm đúng." },
-    { "speaker": "narrator", "scene": "pier-night", "caption": "Giờ hợi", "text": "Chín giờ tối đúng, đò máy của bến cập bờ chuyến cuối, người thuê bến tắt máy đi về không quên nói vọng lại một câu lạ: chèo cho kỹ vào nhé cháu - đêm nay đò cháu đông lắm đấy. Trần ngẩn ra hỏi sao biết, ông ấy chỉ cười mà không đáp, bước lên bờ bỏ đi nhanh như có ai rẫm gót phía sau. Sông xuống sương, trăng non lưỡi liềm mờ sau mây." },
-    { "speaker": "narrator", "scene": "ferry-boat", "caption": "Khách đầu tiên", "text": "Vị khách đầu tiên đứng chờ sẵn ngoài bến từ lúc nào - một cụ bà ăn mặc nâu sồng, tay ôm gói vải. Bà lên đò nhẹ như không, ngồi gọn vào đầu thuyền, lặng lẽ đặt hai đồng xu cũ xuống máng chèo. Trần hỏi cụ đi đâu, bà chỉ nhìn ra dòng, nói nhỏ: về nhà thôi cháu. Giọng cụ hay lắm, ấm lắm, mà Trần không hiểu sao nổi da gà." },
-    { "speaker": "narrator", "scene": "night-river", "caption": "Khách cứ lên", "text": "Suốt khúc sông đầu, khách cứ lên. Không phải đứng chờ trên bến - mà hiện ra từng người một trên các cù lao ven đường, trong sương, gọi nhỏ một tiếng: đò ơi. Trần ghé đò đón từng người - ông lão gánh hòm, chị đàn bà ôm con nhỏ, anh thanh niên ướt nhẹp. Ai cũng im, ai cũng ngồi gọn, ai cũng trả tiền bằng những đồng tiền cũ mèm mà Trần không nhận ra." },
-    { "speaker": "narrator", "scene": "night-river", "caption": "Chuyện lạ đầu tiên", "text": "Giữa dòng, Trần mới nhận ra điều lạ: đò chở gần chục người mà không hề tròng trành - mặt nước quanh mạn thuyền phẳng lì. Và những vị khách kia không ai nói chuyện với ai, không ai nhìn ai, tất cả cùng ngồi quay mặt nhìn về một hướng - hướng bến bên kia, nơi trong sương chỉ có một ngọn đèn vàng đứng chờ. Cả chiếc đò im như chiếc quan tài trôi." },
-    { "speaker": "narrator", "scene": "ferry-boat", "caption": "Người không trả tiền", "text": "Có một người lên mà không trả - một người đàn ông mặc áo nâu cũ, ngồi tụt xuống mũi thuyền, mặt cúi gầm. Trần định hỏi tiền thì chợt nhớ điều ba: không được đòi. Anh nuốt câu hỏi xuống, chèo tiếp. Người kia không ngẩng đầu suốt đường - và Trần thề sau này anh vẫn không quên cái bóng cúi gầm ấy, vì giữa đêm, khi đèn dầu xẹt qua, anh thấy cổ ông ta vẹo hẳn sang một bên." },
-    { "speaker": "narrator", "scene": "night-river", "caption": "Đoạn nước lặng", "text": "Giữa sông, đò đi qua một quãng nước đen phẳng như gương - không một gợn, dù gió vẫn thổi xung quanh. Mái chèo của Trần đánh xuống mà không nghe tiếng nước, như chèo vào nhung. Anh nhớ điều bốn: dừng chèo, đừng nhìn xuống. Trần siết tay, để đò tự trôi qua quãng gương ấy - và dù không nhìn, anh vẫn cảm nhận dưới mặt nước phẳng lì kia, có cái gì đó đang nhìn lên." },
-    { "speaker": "narrator", "scene": "shoal-dead", "caption": "Cù lao giữa sông", "text": "Qua khúc cua là cù lao Bãi Ma - một bãi cát nhỏ giữa dòng, trăng soi qua sương trắng bóc. Trên bãi, Trần thoáng thấy một hàng người đứng - chục bóng đứng im lìm quay mặt về phía đò như đứng xem đoàn diễu qua. Anh chớp mắt định nhìn kỹ, thì cụ bà nâu sồng đầu thuyền lên tiếng lần duy nhất suốt đường: đừng nhìn lâu bãi đó cháu. Bãi ấy không của người sống đâu." },
-    { "speaker": "narrator", "scene": "ferry-boat", "caption": "Bến bên kia", "text": "Cập bến bên kia, khách lần lượt lên bờ, lắc lư chìm vào sương về hướng làng. Trần cầm đèn dầu soi lại thuyền, buột miệng đếm to lần đầu - và chính cái đếm to ấy mới là tai họa: anh đếm được mười một người lên, mà trên bờ chỉ còn mười bóng đi xa. Người thứ mười một - người đàn ông áo nâu cúi gầm mặt - không thấy lên bờ mà cũng không còn trên đò." },
-    { "speaker": "narrator", "scene": "ferry-boat", "caption": "Đếm ra tiếng", "text": "Trần vừa thốt ra tiếng mười một thì toàn bộ đèn bến phía sau anh phụt tắt cùng một lúc. Sương đổ dày hơn. Và trên mặt sông tĩnh lặng, anh nghe thấy tiếng gõ - ba nhịp rất khẽ - từ mặt dưới đáy đò, gõ từ dưới lên, như có người bên dưới lòng sông vừa nghe thấy con số anh vừa nói và đang trả lời. Anh đứng đông cứng, không dám động đến khi tiếng gõ tắt." },
-    { "speaker": "narrator", "scene": "pier-night", "caption": "Bà Căn đợi", "text": "Về đến bến nhà, bà Căn đã ngồi đợi sẵn trên bậc thang, trong tay một chén nước gừng. Bà nhìn mặt Trần là biết ngay: cháu đếm khách ra tiếng rồi đúng không. Anh gật. Bà thở dài: tội nghiệp, đêm đầu đã vỡ luật. Rồi bà nói điều khiến anh lạnh buốt: đếm ra tiếng là gọi số người ấy quay lại. Đêm mai mày chèo, nó sẽ chờ mày giữa dòng." },
-    { "speaker": "narrator", "scene": "cabin-ledger", "caption": "Cuốn sổ khách", "text": "Về nhà dưới ánh đèn dầu, Trần mở tiếp cuốn sổ - mấy trang sau không phải điều luật nữa, mà là danh sách. Hàng trăm cái tên, mỗi tên một dòng, phần lớn đã bị gạch mờ bằng mực đỏ. Mỗi trang đều ghi năm, từ mấy chục năm trước đến gần đây. Anh giật mình nhận ra nét chữ thay đổi qua các trang - cuốn sổ này không chỉ của bố anh. Nó được truyền tay từ đời đưa đò trước." },
-    { "speaker": "narrator", "scene": "cabin-ledger", "caption": "Tên khách đêm nay", "text": "Trần lật đến trang gần nhất - và tay anh lạnh ngắt. Những cái tên đêm nay anh vừa chở đã nằm sẵn trong sổ từ trước: cụ bà áo nâu ôm gói vải - tên trong sổ là bà Phước, chết đuối năm ngoái. Chị đàn bà ôm con - chị Sen, mất trăng tròn hai năm trước. Mười một vị khách của anh đêm nay, mười một cái tên người chết được ghi sẵn, chờ đêm này để được gạch đi." },
-    { "speaker": "narrator", "scene": "cabin-ledger", "caption": "Một cái tên chưa gạch", "text": "Chỉ duy nhất một dòng trong trang cuối chưa được gạch - và không phải vì chưa đến lượt. Dòng ấy bị khoanh đi khoanh lại nhiều lần đến rách giấy: cô bé không tên - Bãi Ma. Không năm, không tuổi, không họ hàng. Bên cạnh là nét chữ của bố Trần, viết nguệch ngoạc khác hẳn mọi dòng khác, như tay run lúc viết: gần xong rồi. Còn một mình nó. Bố ta không dám chở." },
-    { "speaker": "narrator", "scene": "father-photo", "caption": "Bố không chết đuối", "text": "Trần ngồi nhìn tấm ảnh bố trên vách đến gần sáng. Anh chợt hiểu ra điều mà cả làng giấu mình: bố anh không chết đuối. Người đưa đò ba mươi năm qua sông như qua sân nhà không thể trượt chân xuống dòng được. Bố anh không rơi xuống nước - bố anh đi xuống. Và điều này sợ hơn cả: trong cuốn sổ, chữ cuối cùng bố viết không phải lời dặn mà là lời cầu xin - xin đừng đếm khách." },
-    { "speaker": "narrator", "scene": "hook", "caption": "Tập 1 - hết", "text": "Đêm mai, theo lời bà Căn, người thứ mười một sẽ đứng chờ Trần giữa dòng - vì anh đã đếm tên nó ra thành tiếng. Còn cô bé không tên ở Bãi Ma - cái tên mà ba đời đưa đò không dám chở - vẫn nằm lại trong sổ, chờ đò đêm cuối cùng. Chuyến đò của Trần mới bắt đầu, và mặt sông tối nay đang lặng dần như tấm gương." }
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Mười một lên, mười xuống",
+      "text": "Đêm đầu tiên Trần chèo đò thay bố, có mười một người lên thuyền. Anh đếm rõ trong đầu: mười một. Nhưng đến bến bên kia, xuống chỉ có mười. Người thứ mười một không nhảy xuống vực, không lặn - cứ thế mà không còn trên thuyền. Và đó là lúc Trần nhớ ra điều luật thứ hai trong sổ của bố: tuyệt đối không được đếm khách ra thành tiếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-dusk",
+      "caption": "Bố mất giữa dòng",
+      "text": "Mười ngày trước, người ta thấy chiếc đò của ông Nhàn trôi lềnh bềnh về bến, mái chèo vẫn cài ngang mạn, đèn dầu trong cabin còn cháy. Người không thấy đâu. Vớt ba ngày dưới con đục lũ, chỉ vớt được một chiếc dép. Làng bèn lo rồi bàn nhau làm đám tang không xác - người đưa đò ba mươi năm của bến Bãi Đá."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-river",
+      "caption": "Bến Bãi Đá",
+      "text": "Bến Bãi Đá là đường qua sông duy nhất trong hai mươi cây số. Ban ngày có đò máy của người thuê bến chạy đều đặn. Nhưng từ giờ hợi trở đi, từ xưa đến nay, chỉ một chiếc đò chèo tay chạy - và chỉ một nghề truyền đời đứng chèo. Làng gọi nó là đò đêm, gọi người chèo là người đưa đò, và gọi chuyến của ông Nhàn bằng một tiếng lịch sự lạ lùng: chuyến đò trả nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-river",
+      "caption": "Không ai chịu chèo",
+      "text": "Tang lễ xong, vấn đề nổ ra ngay: ai chèo đò đêm? Người thuê bến chỉ đồng ý chạy đến chín giờ tối. Mà bên kia sông có chợ sớm, có nhà quê, có người đi làm xa về khuya - bỏ chuyến đêm là cắt đứt cả một phía sông. Mấy trai tráng được hỏi đều lắc đầu, người duy nhất đáp ứng là bà Căn - bà già góa sống một mình đầu bến - bảo: để con thằng Nhàn về mà chèo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "father-photo",
+      "caption": "Con trai người đưa đò",
+      "text": "Trần về quê trong bộ đồ đen đi chịu tang. Anh bỏ quê lên phố học từ mười tám, làm kỹ thuật ở xưởng điện, một năm chỉ về một lần. Trong nhà cha vắng lặng, trên vách còn tấm ảnh bố đứng cạnh chiếc đò, cười hiền như chưa từng có chuyện gì. Bà Căn nói một câu làm anh rùng mình: nghề này không xin, nghề này được giao. Bố cháu chọn cháu từ lâu rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pier-night",
+      "caption": "Cabin và cuốn sổ",
+      "text": "Chiều hôm ấy bà Căn dẫn Trần xuống bến, lên chiếc đò đã được chắp vá kỹ. Trong cabin nhỏ đầy mùi dầu hỏa và gỗ ẩm, bà mở hộc gỗ dưới mui thuyền lấy ra một cuốn sổ bìa da bọc nilon - cuốn sổ của ông Nhàn. Bà đặt vào tay anh: đọc kỹ trang đầu trước khi chèo. Còn mấy trang sau - đêm nào chèo xong thì về mà đọc, đừng đọc trên đò."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cabin-ledger",
+      "caption": "Năm điều luật",
+      "text": "Trang đầu cuốn sổ viết năm điều, chữ ông Nhàn nắn nót như khắc: một, ai gọi đò sau giờ hợi cũng phải đón, không được bỏ khách. Hai, không được đếm khách ra tiếng. Ba, khách nào không trả tiền cũng không được đòi. Bốn, gặp đoạn nước lặng như gương giữa dòng thì dừng mái chèo, tuyệt đối đừng nhìn xuống mặt nước. Năm - dòng này viết nét mờ nhất - đêm rằm không đưa chuyến cuối, trừ khi có người gọi ba lần tên thật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cabin-ledger",
+      "caption": "Lạ lùng mà quen",
+      "text": "Trần đọc đi đọc lại. Lạ lùng thay, năm điều luật ấy không xa lạ - hồi nhỏ anh hay được bố chở qua sông chơi, và anh nhớ bố từng hất hàm khi anh đếm khách líu ríu: đừng đếm, con. Hồi ấy anh tưởng bố sợ đếm sai thu nhập. Giờ đọc lại, anh mới hiểu ra bố không sợ mình đếm sai - bố sợ mình đếm đúng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pier-night",
+      "caption": "Giờ hợi",
+      "text": "Chín giờ tối đúng, đò máy của bến cập bờ chuyến cuối, người thuê bến tắt máy đi về không quên nói vọng lại một câu lạ: chèo cho kỹ vào nhé cháu - đêm nay đò cháu đông lắm đấy. Trần ngẩn ra hỏi sao biết, ông ấy chỉ cười mà không đáp, bước lên bờ bỏ đi nhanh như có ai rẫm gót phía sau. Sông xuống sương, trăng non lưỡi liềm mờ sau mây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ferry-boat",
+      "caption": "Khách đầu tiên",
+      "text": "Vị khách đầu tiên đứng chờ sẵn ngoài bến từ lúc nào - một cụ bà ăn mặc nâu sồng, tay ôm gói vải. Bà lên đò nhẹ như không, ngồi gọn vào đầu thuyền, lặng lẽ đặt hai đồng xu cũ xuống máng chèo. Trần hỏi cụ đi đâu, bà chỉ nhìn ra dòng, nói nhỏ: về nhà thôi cháu. Giọng cụ hay lắm, ấm lắm, mà Trần không hiểu sao nổi da gà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-river",
+      "caption": "Khách cứ lên",
+      "text": "Suốt khúc sông đầu, khách cứ lên. Không phải đứng chờ trên bến - mà hiện ra từng người một trên các cù lao ven đường, trong sương, gọi nhỏ một tiếng: đò ơi. Trần ghé đò đón từng người - ông lão gánh hòm, chị đàn bà ôm con nhỏ, anh thanh niên ướt nhẹp. Ai cũng im, ai cũng ngồi gọn, ai cũng trả tiền bằng những đồng tiền cũ mèm mà Trần không nhận ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-river",
+      "caption": "Chuyện lạ đầu tiên",
+      "text": "Giữa dòng, Trần mới nhận ra điều lạ: đò chở gần chục người mà không hề tròng trành - mặt nước quanh mạn thuyền phẳng lì. Và những vị khách kia không ai nói chuyện với ai, không ai nhìn ai, tất cả cùng ngồi quay mặt nhìn về một hướng - hướng bến bên kia, nơi trong sương chỉ có một ngọn đèn vàng đứng chờ. Cả chiếc đò im như chiếc quan tài trôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ferry-boat",
+      "caption": "Người không trả tiền",
+      "text": "Có một người lên mà không trả - một người đàn ông mặc áo nâu cũ, ngồi tụt xuống mũi thuyền, mặt cúi gầm. Trần định hỏi tiền thì chợt nhớ điều ba: không được đòi. Anh nuốt câu hỏi xuống, chèo tiếp. Người kia không ngẩng đầu suốt đường - và Trần thề sau này anh vẫn không quên cái bóng cúi gầm ấy, vì giữa đêm, khi đèn dầu xẹt qua, anh thấy cổ ông ta vẹo hẳn sang một bên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-river",
+      "caption": "Đoạn nước lặng",
+      "text": "Giữa sông, đò đi qua một quãng nước đen phẳng như gương - không một gợn, dù gió vẫn thổi xung quanh. Mái chèo của Trần đánh xuống mà không nghe tiếng nước, như chèo vào nhung. Anh nhớ điều bốn: dừng chèo, đừng nhìn xuống. Trần siết tay, để đò tự trôi qua quãng gương ấy - và dù không nhìn, anh vẫn cảm nhận dưới mặt nước phẳng lì kia, có cái gì đó đang nhìn lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shoal-dead",
+      "caption": "Cù lao giữa sông",
+      "text": "Qua khúc cua là cù lao Bãi Ma - một bãi cát nhỏ giữa dòng, trăng soi qua sương trắng bóc. Trên bãi, Trần thoáng thấy một hàng người đứng - chục bóng đứng im lìm quay mặt về phía đò như đứng xem đoàn diễu qua. Anh chớp mắt định nhìn kỹ, thì cụ bà nâu sồng đầu thuyền lên tiếng lần duy nhất suốt đường: đừng nhìn lâu bãi đó cháu. Bãi ấy không của người sống đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ferry-boat",
+      "caption": "Bến bên kia",
+      "text": "Cập bến bên kia, khách lần lượt lên bờ, lắc lư chìm vào sương về hướng làng. Trần cầm đèn dầu soi lại thuyền, buột miệng đếm to lần đầu - và chính cái đếm to ấy mới là tai họa: anh đếm được mười một người lên, mà trên bờ chỉ còn mười bóng đi xa. Người thứ mười một - người đàn ông áo nâu cúi gầm mặt - không thấy lên bờ mà cũng không còn trên đò."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ferry-boat",
+      "caption": "Đếm ra tiếng",
+      "text": "Trần vừa thốt ra tiếng mười một thì toàn bộ đèn bến phía sau anh phụt tắt cùng một lúc. Sương đổ dày hơn. Và trên mặt sông tĩnh lặng, anh nghe thấy tiếng gõ - ba nhịp rất khẽ - từ mặt dưới đáy đò, gõ từ dưới lên, như có người bên dưới lòng sông vừa nghe thấy con số anh vừa nói và đang trả lời. Anh đứng đông cứng, không dám động đến khi tiếng gõ tắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "pier-night",
+      "caption": "Bà Căn đợi",
+      "text": "Về đến bến nhà, bà Căn đã ngồi đợi sẵn trên bậc thang, trong tay một chén nước gừng. Bà nhìn mặt Trần là biết ngay: cháu đếm khách ra tiếng rồi đúng không. Anh gật. Bà thở dài: tội nghiệp, đêm đầu đã vỡ luật. Rồi bà nói điều khiến anh lạnh buốt: đếm ra tiếng là gọi số người ấy quay lại. Đêm mai mày chèo, nó sẽ chờ mày giữa dòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cabin-ledger",
+      "caption": "Cuốn sổ khách",
+      "text": "Về nhà dưới ánh đèn dầu, Trần mở tiếp cuốn sổ - mấy trang sau không phải điều luật nữa, mà là danh sách. Hàng trăm cái tên, mỗi tên một dòng, phần lớn đã bị gạch mờ bằng mực đỏ. Mỗi trang đều ghi năm, từ mấy chục năm trước đến gần đây. Anh giật mình nhận ra nét chữ thay đổi qua các trang - cuốn sổ này không chỉ của bố anh. Nó được truyền tay từ đời đưa đò trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cabin-ledger",
+      "caption": "Tên khách đêm nay",
+      "text": "Trần lật đến trang gần nhất - và tay anh lạnh ngắt. Những cái tên đêm nay anh vừa chở đã nằm sẵn trong sổ từ trước: cụ bà áo nâu ôm gói vải - tên trong sổ là bà Phước, chết đuối năm ngoái. Chị đàn bà ôm con - chị Sen, mất trăng tròn hai năm trước. Mười một vị khách của anh đêm nay, mười một cái tên người chết được ghi sẵn, chờ đêm này để được gạch đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cabin-ledger",
+      "caption": "Một cái tên chưa gạch",
+      "text": "Chỉ duy nhất một dòng trong trang cuối chưa được gạch - và không phải vì chưa đến lượt. Dòng ấy bị khoanh đi khoanh lại nhiều lần đến rách giấy: cô bé không tên - Bãi Ma. Không năm, không tuổi, không họ hàng. Bên cạnh là nét chữ của bố Trần, viết nguệch ngoạc khác hẳn mọi dòng khác, như tay run lúc viết: gần xong rồi. Còn một mình nó. Bố ta không dám chở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "father-photo",
+      "caption": "Bố không chết đuối",
+      "text": "Trần ngồi nhìn tấm ảnh bố trên vách đến gần sáng. Anh chợt hiểu ra điều mà cả làng giấu mình: bố anh không chết đuối. Người đưa đò ba mươi năm qua sông như qua sân nhà không thể trượt chân xuống dòng được. Bố anh không rơi xuống nước - bố anh đi xuống. Và điều này sợ hơn cả: trong cuốn sổ, chữ cuối cùng bố viết không phải lời dặn mà là lời cầu xin - xin đừng đếm khách."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Tập 1 - hết",
+      "text": "Đêm mai, theo lời bà Căn, người thứ mười một sẽ đứng chờ Trần giữa dòng - vì anh đã đếm tên nó ra thành tiếng. Còn cô bé không tên ở Bãi Ma - cái tên mà ba đời đưa đò không dám chở - vẫn nằm lại trong sổ, chờ đò đêm cuối cùng. Chuyến đò của Trần mới bắt đầu, và mặt sông tối nay đang lặng dần như tấm gương."
+    }
   ]
 }
