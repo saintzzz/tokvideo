@@ -1,4 +1,5 @@
 import { createWriteStream, existsSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { mkdir, readdir } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -325,6 +326,23 @@ for (const id of ids) {
 // request and verifying the file actually has bytes — with a couple of
 // retries — has been reliable in practice.
 const synthesizeOnce = async (outFile, text, voice, prosody) => {
+  try {
+    await synthesizeViaNodeLib(outFile, text, voice, prosody);
+  } catch (err) {
+    // msedge-tts (node) broke again 2026-10-24: Microsoft bumped the
+    // websocket handshake requirements and the library now gets
+    // "Unexpected server response: 200" on every voice while the
+    // actively-maintained Python edge-tts CLI still works. Shell out to
+    // it when available — audio is committed anyway (CI reuses beats and
+    // skips TTS entirely), so the python dependency only matters on the
+    // machine that prepares a new arc.
+    if (!edgeTtsCli) throw err;
+    console.warn(`msedge-tts failed (${err.message}) — retrying via edge-tts CLI`);
+    await synthesizeViaCli(outFile, text, voice, prosody);
+  }
+};
+
+const synthesizeViaNodeLib = async (outFile, text, voice, prosody) => {
   const tts = new MsEdgeTTS();
   try {
     await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3);
@@ -340,6 +358,41 @@ const synthesizeOnce = async (outFile, text, voice, prosody) => {
   } finally {
     tts.close();
   }
+};
+
+// `edge-tts` python CLI on PATH — resolved lazily, cached.
+let edgeTtsCli;
+const findEdgeTtsCli = () => {
+  if (edgeTtsCli !== undefined) return edgeTtsCli;
+  for (const cmd of [process.env.EDGE_TTS_CLI, "edge-tts"]) {
+    if (!cmd) continue;
+    try {
+      execFileSync(cmd, ["--help"], { stdio: "ignore" });
+      edgeTtsCli = cmd;
+      return edgeTtsCli;
+    } catch { /* try next */ }
+  }
+  edgeTtsCli = null;
+  return null;
+};
+findEdgeTtsCli();
+
+// CLI pitch takes Hz ("-3Hz"), our prosody values are percent ("-3%") —
+// map sign/magnitude 1:1; a fallback approximation beats no audio.
+const cliPitch = (pitch) => {
+  const m = String(pitch ?? "+0%").match(/^([+-]\d+)%$/);
+  return m ? `${m[1]}Hz` : String(pitch ?? "+0Hz");
+};
+
+const synthesizeViaCli = (outFile, text, voice, prosody) => {
+  execFileSync(edgeTtsCli, [
+    `--voice=${voice}`,
+    `--rate=${prosody?.rate ?? "+0%"}`,
+    `--pitch=${cliPitch(prosody?.pitch)}`,
+    `--volume=${prosody?.volume ?? "+0%"}`,
+    "--file=-", // read text from stdin — avoids argv length/quoting issues
+    `--write-media=${outFile}`,
+  ], { input: text, stdio: ["pipe", "ignore", "pipe"] });
 };
 
 // Fallback voices per locale when the primary is unhealthy — msedge-tts
