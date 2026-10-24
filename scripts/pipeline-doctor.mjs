@@ -284,6 +284,7 @@ for (const [slug, entry] of Object.entries(ledger).sort()) {
   sheet.push(`- tags: #truyenma #truyenmacothat #nghetruyen #truyệnma #cotich`);
   sheet.push("");
 }
+await mkdir(path.join(root, "out"), { recursive: true });
 await writeFile(path.join(root, "out", "teaser-posting-sheet.md"), sheet.join("\n"));
 
 // -- Report -------------------------------------------------------------
