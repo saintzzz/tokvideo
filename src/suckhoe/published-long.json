@@ -180,10 +180,10 @@
     "privacyStatus": "public"
   },
   "chuyen-do-dem-tap-01-fb": {
-    "videoId": "1136724249295184",
-    "publishedAt": "2026-10-25T11:00:00.000Z",
+    "videoId": "1026330163819332",
+    "publishedAt": "2026-10-25T22:52:59.270Z",
     "platform": "facebook",
-    "manual": true
+    "scheduledFor": "2026-10-26T05:30:00.000Z"
   },
   "dung-tra-loi-tap-01-fb": {
     "videoId": "1147616157849766",
@@ -211,6 +211,36 @@
   "loi-nguyen-gieng-cu-tap-02-fb": {
     "videoId": "1153591567318579",
     "publishedAt": "2026-10-25T17:00:00.494Z",
+    "platform": "facebook",
+    "scheduledFor": "2026-10-26T15:30:00.000Z"
+  },
+  "chuyen-do-dem-tap-01-teaser": {
+    "videoId": "m02UohQHzzE",
+    "publishedAt": "2026-10-25T22:50:38.845Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "chuyen-do-dem-tap-02-teaser": {
+    "videoId": "wf84gpkTqb4",
+    "publishedAt": "2026-10-25T22:51:31.162Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "chuyen-do-dem-tap-03-teaser": {
+    "videoId": "kte8KwKvPQ4",
+    "publishedAt": "2026-10-25T22:52:23.037Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "chuyen-do-dem-tap-02-fb": {
+    "videoId": "1118955610723284",
+    "publishedAt": "2026-10-25T22:53:36.544Z",
+    "platform": "facebook",
+    "scheduledFor": "2026-10-26T12:30:00.000Z"
+  },
+  "chuyen-do-dem-tap-03-fb": {
+    "videoId": "2659591444472347",
+    "publishedAt": "2026-10-25T22:54:13.807Z",
     "platform": "facebook",
     "scheduledFor": "2026-10-26T15:30:00.000Z"
   }
