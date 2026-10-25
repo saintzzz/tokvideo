@@ -22,14 +22,27 @@ const ep = JSON.parse(
       "utf8",
     )),
 );
-const img = path.join(repoRoot, "public/images/suckhoe-long", slug, "hook.jpg");
+// Hero image: prefer hook.jpg, then thumb.jpg, then the first sceneImages
+// entry (arc-shared assets may live under another episode's dir).
+const imgDir = path.join(repoRoot, "public/images/suckhoe-long", slug);
+const candidates = [
+  path.join(imgDir, "hook.jpg"),
+  path.join(imgDir, "thumb.jpg"),
+  ...Object.values(ep.sceneImages || ep.images || {}).map((p) =>
+    path.join(repoRoot, "public", p)),
+];
+const img = candidates.find((f) => existsSync(f));
 const b0 = path.join(repoRoot, "public/audio/suckhoe-long", slug, "beat-0.mp3");
 const b1 = path.join(repoRoot, "public/audio/suckhoe-long", slug, "beat-1.mp3");
-for (const f of [img, b0, b1]) {
+for (const f of [b0, b1]) {
   if (!existsSync(f)) {
     console.error(`Missing asset: ${f}`);
     process.exit(1);
   }
+}
+if (!img) {
+  console.error(`Missing hero image for ${slug} (tried ${candidates.length} paths)`);
+  process.exit(1);
 }
 
 // Title: short arc name + episode number, e.g. "HÔN MA - TẬP 1"
