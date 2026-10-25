@@ -56,6 +56,9 @@ const deletedKeys = new Set();
 
 const arcOf = (slug) => slug.replace(/-tap-\d+$/, "").replace(/-teaser$/, "");
 const isTeaserKey = (key) => key.endsWith("-teaser");
+// `-fb` ledger keys hold Facebook Reel video IDs — the videoId lives on
+// Facebook, not YouTube, so channel reconciliation must never touch them.
+const isFbKey = (key) => key.endsWith("-fb");
 
 async function listChannelVideos(youtube) {
   // All uploads on the channel (search.list forMine pages by 50).
@@ -122,7 +125,7 @@ if (youtube) {
   try {
     channelVideos = await listChannelVideos(youtube);
     const ledgerIds = Object.entries(ledger)
-      .filter(([, v]) => v?.videoId)
+      .filter(([k, v]) => v?.videoId && !isFbKey(k))
       .map(([k, v]) => v.videoId);
     const status = await videosStatus(youtube, [...ledgerIds]);
 
@@ -132,13 +135,13 @@ if (youtube) {
       const s = status.get(entry.videoId);
       if (!s) {
         findings.push(`Ledger "${key}" -> ${entry.videoId} no longer exists on channel.`);
-        if (!isTeaserKey(key)) {
+        if (!isTeaserKey(key) && !isFbKey(key)) {
           delete ledger[key];
           deletedKeys.add(key);
           ledgerDirty = true;
           fixed.push(`Removed dead ledger entry "${key}" — episode re-queues on next tick.`);
         }
-      } else if (s.privacy !== "public" && !isTeaserKey(key)) {
+      } else if (s.privacy !== "public" && !isTeaserKey(key) && !isFbKey(key)) {
         findings.push(`Ledger "${key}" -> ${entry.videoId} is ${s.privacy}, not public.`);
         // Self-heal: episodes uploaded before the public-by-default var
         // was set are invisible until flipped. Shelved list is the only
@@ -238,7 +241,6 @@ for (const k of deletedKeys) delete ledger[k];
 // title, captions link-free) + a first comment carrying the YT link.
 // Ledger key `<slug>-fb`. Without FB creds the reel is still built so the
 // posting sheet can ship it as an artifact.
-const isFbKey = (key) => key.endsWith("-fb");
 const fbCandidates = Object.entries(ledger)
   .filter(([k, v]) => !isTeaserKey(k) && !isFbKey(k) && v?.videoId)
   .filter(([slug]) => !ledger[`${slug}-fb`]?.videoId)
