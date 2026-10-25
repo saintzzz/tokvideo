@@ -1162,6 +1162,11 @@ jobs:
           # 3 teasers/run — backfills the backlog over a few days without
           # pushing the channel near the daily upload cap.
           DOCTOR_MAX_TEASERS: "3"
+          # Facebook Page automation — system-user token, never expires.
+          # Absent creds -> doctor still builds reels for the posting pack.
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          DOCTOR_MAX_FB_REELS: "3"
         run: node scripts/pipeline-doctor.mjs
 
       # Every teaser built this run + a paste-ready caption/link sheet —

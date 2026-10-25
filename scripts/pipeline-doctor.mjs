@@ -233,6 +233,53 @@ const freshLedger = existsSync(ledgerPath)
 Object.assign(ledger, freshLedger);
 for (const k of deletedKeys) delete ledger[k];
 
+// -- Check 3b: Facebook reels -------------------------------------------
+// Same published vi episodes get an FB-optimized reel (zoom + burned-in
+// title, captions link-free) + a first comment carrying the YT link.
+// Ledger key `<slug>-fb`. Without FB creds the reel is still built so the
+// posting sheet can ship it as an artifact.
+const isFbKey = (key) => key.endsWith("-fb");
+const fbCandidates = Object.entries(ledger)
+  .filter(([k, v]) => !isTeaserKey(k) && !isFbKey(k) && v?.videoId)
+  .filter(([slug]) => !ledger[`${slug}-fb`]?.videoId)
+  .map(([slug]) => slug)
+  .sort();
+const MAX_FB = parseInt(process.env.DOCTOR_MAX_FB_REELS || "3", 10);
+let fbDone = 0;
+for (const slug of fbCandidates) {
+  if (fbDone >= MAX_FB) {
+    findings.push(`FB reel backlog: ${fbCandidates.length - fbDone} episodes still lack an FB reel.`);
+    break;
+  }
+  const epPath = path.join(longFormDir, `${slug}.json`);
+  if (!existsSync(epPath)) continue;
+  const ep = JSON.parse(await readFile(epPath, "utf8"));
+  if (ep.locale !== "vi" || !ep.beats?.every((b) => b.speaker === "narrator")) continue;
+  try {
+    execFileSync("node", ["scripts/build-fb-reel.mjs", slug], { cwd: root, stdio: "inherit" });
+    const postOut = execFileSync("node", ["scripts/post-fb-reel.mjs", slug], {
+      cwd: root,
+      encoding: "utf8",
+      env: process.env,
+    });
+    if (postOut.includes("ledger updated")) {
+      fbDone++;
+      fixed.push(`Built + posted FB reel for "${slug}".`);
+    } else {
+      findings.push(`FB reel "${slug}" built but post skipped (${postOut.trim().split("\n").pop()}).`);
+      break; // no creds — the rest would skip the same way
+    }
+  } catch (err) {
+    failed.push(`FB reel for "${slug}" failed: ${String(err.message ?? err).slice(0, 200)}`);
+  }
+}
+// Re-read ledger after FB posts.
+const freshLedger2 = existsSync(ledgerPath)
+  ? JSON.parse(await readFile(ledgerPath, "utf8"))
+  : ledger;
+Object.assign(ledger, freshLedger2);
+for (const k of deletedKeys) delete ledger[k];
+
 // -- Check 4: queue depth ----------------------------------------------
 const files = (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort();
 let readyCount = 0;
@@ -271,17 +318,20 @@ sheet.push("");
 sheet.push("Post each clip to TikTok + FB Reels, then reply/pin the long-form link.");
 sheet.push("");
 for (const [slug, entry] of Object.entries(ledger).sort()) {
-  if (isTeaserKey(slug) || !entry?.videoId) continue;
+  if (isTeaserKey(slug) || isFbKey(slug) || !entry?.videoId) continue;
   const epPath = path.join(longFormDir, `${slug}.json`);
   if (!existsSync(epPath)) continue;
   const ep = JSON.parse(await readFile(epPath, "utf8"));
   if (ep.locale !== "vi" || !ep.beats?.every((b) => b.speaker === "narrator")) continue;
-  if (!existsSync(path.join(root, "out", `teaser-${slug}.mp4`))) continue;
+  const ytTeaser = path.join(root, "out", `teaser-${slug}.mp4`);
+  const fbReel = path.join(root, "out", `fb-reel-${slug}.mp4`);
+  if (!existsSync(ytTeaser) && !existsSync(fbReel)) continue;
   sheet.push(`## ${slug}`);
-  sheet.push(`- file: out/teaser-${slug}.mp4`);
+  if (existsSync(ytTeaser)) sheet.push(`- youtube/tiktok clip: out/teaser-${slug}.mp4`);
+  if (existsSync(fbReel)) sheet.push(`- facebook clip: out/fb-reel-${slug}.mp4`);
   sheet.push(`- caption: ${ep.thumbTitle ?? ep.title}`);
-  sheet.push(`- link: https://youtube.com/watch?v=${entry.videoId}`);
-  sheet.push(`- tags: #truyenma #truyenmacothat #nghetruyen #truyệnma #cotich`);
+  sheet.push(`- first comment / link: https://youtube.com/watch?v=${entry.videoId}`);
+  sheet.push(`- tags: #truyenma #kechuyendem #truyencotich #reels #xuhuong`);
   sheet.push("");
 }
 await mkdir(path.join(root, "out"), { recursive: true });
