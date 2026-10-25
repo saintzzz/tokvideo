@@ -7,7 +7,7 @@
 // Env: FB_PAGE_ID, FB_PAGE_ACCESS_TOKEN, optional FB_API_VERSION (default v21.0)
 // Without credentials it exits cleanly with a clear note (posting-pack path).
 
-import { createReadStream, existsSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -82,16 +82,17 @@ console.log(`reel session started: ${videoId}`);
 
 // Phase 2: upload binary to rupload host
 const fileSize = (await stat(videoPath)).size;
+const fileBuf = await readFile(videoPath);
 const upRes = await fetch(uploadUrl, {
   method: "POST",
   headers: {
     Authorization: `OAuth ${FB_PAGE_ACCESS_TOKEN}`,
-    file_offset: "0",
+    offset: "0",
+    file_size: String(fileSize),
     "Content-Type": "application/octet-stream",
+    "Content-Length": String(fileSize),
   },
-  body: createReadStream(videoPath),
-  // Node fetch needs duplex for stream bodies
-  duplex: "half",
+  body: fileBuf,
 });
 const upJson = await upRes.json().catch(() => ({}));
 if (!upRes.ok || upJson.error || !upJson.success) {
