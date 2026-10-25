@@ -7,6 +7,7 @@ import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { findFfmpeg } from "./lib/ffmpeg.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const slug = process.argv[2];
@@ -84,8 +85,13 @@ const filter = `
 drawtext=fontfile='${FONT}':textfile=${tmp}/fb-s.txt:fontsize=44:fontcolor=white:borderw=2:bordercolor=black@0.8:line_spacing=14:x=(w-text_w)/2:y=h-430,
 drawtext=fontfile='${FONT}':textfile=${tmp}/fb-brand.txt:fontsize=34:fontcolor=white@0.9:borderw=2:bordercolor=black@0.7:x=(w-text_w)/2:y=h-140[v]`;
 
+const ffmpeg = findFfmpeg();
+if (!ffmpeg) {
+  console.error("No runnable ffmpeg found (FFMPEG_BIN / PATH / remotion bundle).");
+  process.exit(1);
+}
 execFileSync(
-  "ffmpeg",
+  ffmpeg,
   [
     "-y", "-loop", "1", "-framerate", "1", "-t", "52", "-i", img,
     "-i", b0, "-i", b1,

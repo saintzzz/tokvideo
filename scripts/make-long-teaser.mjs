@@ -30,9 +30,16 @@ if (!episode.beats.every((b) => b.speaker === "narrator")) {
   process.exit(1);
 }
 
-const hookPath = path.join(repoRoot, "public", "images", "suckhoe-long", slug, "hook.jpg");
-if (!existsSync(hookPath)) {
-  console.error(`Missing hook image: ${hookPath}`);
+const imgDir = path.join(repoRoot, "public", "images", "suckhoe-long", slug);
+const imgCandidates = [
+  path.join(imgDir, "hook.jpg"),
+  path.join(imgDir, "thumb.jpg"),
+  ...Object.values(episode.sceneImages || episode.images || {}).map((p) =>
+    path.join(repoRoot, "public", p)),
+];
+const hookPath = imgCandidates.find((f) => existsSync(f));
+if (!hookPath) {
+  console.error(`Missing hero image for ${slug} (tried ${imgCandidates.length} paths)`);
   process.exit(1);
 }
 

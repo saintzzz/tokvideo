@@ -1153,6 +1153,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # The Remotion-bundled compositor ffmpeg is built with
+      # --disable-filters (no boxblur/overlay/zoompan/drawtext/afade) —
+      # teaser + FB reel builds need the full-featured Ubuntu binary.
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
       - name: Run pipeline doctor
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
