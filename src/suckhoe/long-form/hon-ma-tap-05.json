@@ -34,7 +34,17 @@
     "last-photo": "a camera display screen showing a wedding photo of two translucent figures holding hands on a pale path, grainy",
     "new-shop": "a small photography shop in a town, a framed photo on the counter showing a misty path, warm daylight, peaceful ending"
   },
-  "sceneImages": {},
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hon-ma-tap-05/hook.jpg",
+    "road-reunion": "images/suckhoe-long/hon-ma-tap-05/road-reunion.jpg",
+    "old-woman-dragged": "images/suckhoe-long/hon-ma-tap-05/old-woman-dragged.jpg",
+    "hands-together": "images/suckhoe-long/hon-ma-tap-05/hands-together.jpg",
+    "dawn-village": "images/suckhoe-long/hon-ma-tap-05/dawn-village.jpg",
+    "elder-goodbye": "images/suckhoe-long/hon-ma-tap-05/elder-goodbye.jpg",
+    "mountain-descent": "images/suckhoe-long/hon-ma-tap-05/mountain-descent.jpg",
+    "last-photo": "images/suckhoe-long/hon-ma-tap-05/last-photo.jpg",
+    "new-shop": "images/suckhoe-long/hon-ma-tap-05/new-shop.jpg"
+  },
   "beats": [
     {
       "speaker": "narrator",

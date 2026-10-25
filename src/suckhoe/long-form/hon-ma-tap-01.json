@@ -34,7 +34,17 @@
     "altar-photo": "an old ancestral altar with a framed photograph of a young woman, incense smoke, faded black and white photo",
     "misty-courtyard": "a stone courtyard of a mountain house at night, heavy fog, red lanterns, a lone figure standing far away"
   },
-  "sceneImages": {},
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hon-ma-tap-01/hook.jpg",
+    "mountain-road": "images/suckhoe-long/hon-ma-tap-01/mountain-road.jpg",
+    "village-gate": "images/suckhoe-long/hon-ma-tap-01/village-gate.jpg",
+    "wedding-house": "images/suckhoe-long/hon-ma-tap-01/wedding-house.jpg",
+    "wedding-hall": "images/suckhoe-long/hon-ma-tap-01/wedding-hall.jpg",
+    "camera-viewfinder": "images/suckhoe-long/hon-ma-tap-01/camera-viewfinder.jpg",
+    "bride-shadow": "images/suckhoe-long/hon-ma-tap-01/bride-shadow.jpg",
+    "altar-photo": "images/suckhoe-long/hon-ma-tap-01/altar-photo.jpg",
+    "misty-courtyard": "images/suckhoe-long/hon-ma-tap-01/misty-courtyard.jpg"
+  },
   "beats": [
     {
       "speaker": "narrator",

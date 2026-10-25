@@ -34,7 +34,17 @@
     "lost-man": "a gaunt middle-aged man in rags kneeling on a forest path at night, weeping, ghostly atmosphere",
     "dawn-coming": "first grey light over a foggy mountain ridge, a lone figure running on a dark path, tense escape mood"
   },
-  "sceneImages": {},
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hon-ma-tap-04/hook.jpg",
+    "burning-contract": "images/suckhoe-long/hon-ma-tap-04/burning-contract.jpg",
+    "grave-open": "images/suckhoe-long/hon-ma-tap-04/grave-open.jpg",
+    "old-woman-true": "images/suckhoe-long/hon-ma-tap-04/old-woman-true.jpg",
+    "souls-rising": "images/suckhoe-long/hon-ma-tap-04/souls-rising.jpg",
+    "village-fire": "images/suckhoe-long/hon-ma-tap-04/village-fire.jpg",
+    "under-road": "images/suckhoe-long/hon-ma-tap-04/under-road.jpg",
+    "lost-man": "images/suckhoe-long/hon-ma-tap-04/lost-man.jpg",
+    "dawn-coming": "images/suckhoe-long/hon-ma-tap-04/dawn-coming.jpg"
+  },
   "beats": [
     {
       "speaker": "narrator",

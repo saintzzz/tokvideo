@@ -34,7 +34,17 @@
     "six-coffins": "a row of old photographs showing six generations of Vietnamese men, sepia, same wedding pose, uncanny repetition",
     "village-dawn": "a mountain village at grey dawn, fog between old roofs, no people, oppressive quiet"
   },
-  "sceneImages": {},
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hon-ma-tap-02/hook.jpg",
+    "dark-room": "images/suckhoe-long/hon-ma-tap-02/dark-room.jpg",
+    "red-ao-dai": "images/suckhoe-long/hon-ma-tap-02/red-ao-dai.jpg",
+    "footsteps": "images/suckhoe-long/hon-ma-tap-02/footsteps.jpg",
+    "old-man-confession": "images/suckhoe-long/hon-ma-tap-02/old-man-confession.jpg",
+    "dead-tree": "images/suckhoe-long/hon-ma-tap-02/dead-tree.jpg",
+    "ledger-book": "images/suckhoe-long/hon-ma-tap-02/ledger-book.jpg",
+    "six-coffins": "images/suckhoe-long/hon-ma-tap-02/six-coffins.jpg",
+    "village-dawn": "images/suckhoe-long/hon-ma-tap-02/village-dawn.jpg"
+  },
   "beats": [
     {
       "speaker": "narrator",

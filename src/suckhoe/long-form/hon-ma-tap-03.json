@@ -34,7 +34,17 @@
     "contract-paper": "an old yellowed paper with handwritten calligraphy and red stamps, held over candle flame, dark room",
     "grave-hill": "a foggy hilltop at night with a dead tree and a concrete-sealed grave mound cracked open, red fabric strips"
   },
-  "sceneImages": {},
+  "sceneImages": {
+    "hook": "images/suckhoe-long/hon-ma-tap-03/hook.jpg",
+    "procession": "images/suckhoe-long/hon-ma-tap-03/procession.jpg",
+    "red-dress-forced": "images/suckhoe-long/hon-ma-tap-03/red-dress-forced.jpg",
+    "altar-candles": "images/suckhoe-long/hon-ma-tap-03/altar-candles.jpg",
+    "ghost-guests": "images/suckhoe-long/hon-ma-tap-03/ghost-guests.jpg",
+    "black-tears": "images/suckhoe-long/hon-ma-tap-03/black-tears.jpg",
+    "dead-mother": "images/suckhoe-long/hon-ma-tap-03/dead-mother.jpg",
+    "contract-paper": "images/suckhoe-long/hon-ma-tap-03/contract-paper.jpg",
+    "grave-hill": "images/suckhoe-long/hon-ma-tap-03/grave-hill.jpg"
+  },
   "beats": [
     {
       "speaker": "narrator",
