@@ -44,3 +44,6 @@ blender/__pycache__
 # Rendered frames/video from the Blender proof-of-concept scripts under
 # blender/ — regenerate by running the script, same convention as out/.
 blender/out
+
+# playwright-cli session artifacts (may contain tokens/sensitive data)
+.playwright-cli/
