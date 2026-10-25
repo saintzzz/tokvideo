@@ -245,6 +245,16 @@ const fbCandidates = Object.entries(ledger)
   .map(([slug]) => slug)
   .sort();
 const MAX_FB = parseInt(process.env.DOCTOR_MAX_FB_REELS || "3", 10);
+// Golden slots for VN horror-story audience (UTC+7): lunch + late evening.
+const VN_OFFSET_MS = 7 * 3600e3;
+const FB_SLOT_HHMM = [[12, 30], [19, 30], [22, 30]];
+const nextFbSlotTs = (i) => {
+  const [h, m] = FB_SLOT_HHMM[i % FB_SLOT_HHMM.length];
+  const vn = new Date(Date.now() + VN_OFFSET_MS);
+  let d = Date.UTC(vn.getUTCFullYear(), vn.getUTCMonth(), vn.getUTCDate(), h, m) - VN_OFFSET_MS;
+  if (d <= Date.now() + 600e3) d += 86400e3; // slot passed -> tomorrow
+  return Math.floor(d / 1000);
+};
 let fbDone = 0;
 for (const slug of fbCandidates) {
   if (fbDone >= MAX_FB) {
@@ -260,7 +270,7 @@ for (const slug of fbCandidates) {
     const postOut = execFileSync("node", ["scripts/post-fb-reel.mjs", slug], {
       cwd: root,
       encoding: "utf8",
-      env: process.env,
+      env: { ...process.env, FB_SCHEDULE_TS: String(nextFbSlotTs(fbDone)) },
     });
     if (postOut.includes("ledger updated")) {
       fbDone++;
@@ -279,6 +289,29 @@ const freshLedger2 = existsSync(ledgerPath)
   : ledger;
 Object.assign(ledger, freshLedger2);
 for (const k of deletedKeys) delete ledger[k];
+
+// Retry first-comments on scheduled FB reels that have since gone live.
+const FB_API = `https://graph.facebook.com/${process.env.FB_API_VERSION || "v21.0"}`;
+if (process.env.FB_PAGE_ACCESS_TOKEN) {
+  for (const [k, v] of Object.entries(ledger)) {
+    if (!k.endsWith("-fb") || !v?.ytCommentPending || !v?.videoId) continue;
+    if (v.scheduledFor && Date.parse(v.scheduledFor) > Date.now()) continue;
+    const ytId = ledger[k.slice(0, -3)]?.videoId;
+    if (!ytId) continue;
+    try {
+      const u = new URL(`${FB_API}/${v.videoId}/comments`);
+      u.searchParams.set("message", `Nghe trọn tập trên YouTube: https://youtu.be/${ytId}`);
+      u.searchParams.set("access_token", process.env.FB_PAGE_ACCESS_TOKEN);
+      const res = await fetch(u, { method: "POST" });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && !json.error) {
+        delete v.ytCommentPending;
+        ledgerDirty = true;
+        fixed.push(`FB first-comment posted on ${k} (${v.videoId}).`);
+      }
+    } catch { /* next run retries */ }
+  }
+}
 
 // -- Check 4: queue depth ----------------------------------------------
 const files = (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort();

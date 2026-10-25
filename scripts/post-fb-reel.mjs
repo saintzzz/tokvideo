@@ -66,10 +66,16 @@ const hook = (episode.beats?.[0]?.text || "").replace(/\s+/g, " ").trim();
 const description = [
   hook.length > 220 ? `${hook.slice(0, 217)}...` : hook,
   "",
-  "Xem video đầu tiên ở comment để nghe trọn tập.",
+  `${title} | Nghe trọn tập - link YouTube ở comment đầu tiên.`,
+  `Bạn đã từng nghe chuyện ${arcName} chưa? Kể bà Tư nghe ở comment nhé.`,
   "",
-  "#truyenma #kechuyendem #truyencotich #reels #xuhuong",
+  "#truyenma #kechuyen #truyencotich #truyendangian #kechuyendemkhuya",
 ].join("\n");
+
+// Optional scheduling: FB_SCHEDULE_TS=<unix seconds> schedules the reel
+// instead of publishing immediately (must be >=10min in the future).
+const scheduleTs = Number(process.env.FB_SCHEDULE_TS || 0);
+const scheduling = scheduleTs > Math.floor(Date.now() / 1000) + 600;
 
 // Phase 1: start
 const start = await fbPost(`${API}/${FB_PAGE_ID}/video_reels`, {
@@ -102,27 +108,38 @@ if (!upRes.ok || upJson.error || !upJson.success) {
 }
 console.log("reel binary uploaded");
 
-// Phase 3: finish + publish
-const fin = await fbPost(`${API}/${FB_PAGE_ID}/video_reels`, {
+// Phase 3: finish + publish (or schedule)
+const finParams = {
   upload_phase: "finish",
   video_id: videoId,
-  video_state: "PUBLISHED",
   title,
   description,
   access_token: FB_PAGE_ACCESS_TOKEN,
-});
-console.log(`reel publish requested: ${JSON.stringify(fin)}`);
+};
+if (scheduling) {
+  finParams.video_state = "SCHEDULED";
+  finParams.scheduled_publish_time = String(scheduleTs);
+} else {
+  finParams.video_state = "PUBLISHED";
+}
+const fin = await fbPost(`${API}/${FB_PAGE_ID}/video_reels`, finParams);
+console.log(
+  `reel ${scheduling ? `scheduled for ${new Date(scheduleTs * 1000).toISOString()}` : "publish requested"}: ${JSON.stringify(fin)}`,
+);
 
 // First comment with the full-episode link (keeps the caption link-free)
+let commentOk = false;
 if (longVideoId) {
   try {
     await fbPost(`${API}/${videoId}/comments`, {
       message: `Nghe trọn tập trên YouTube: ${videoUrl(longVideoId)}`,
       access_token: FB_PAGE_ACCESS_TOKEN,
     });
+    commentOk = true;
     console.log("posted first comment with YT link");
   } catch (e) {
-    console.log(`comment failed (non-fatal): ${e.message}`);
+    // Scheduled reels reject comments until they go live - doctor retries later.
+    console.log(`comment failed (${scheduling ? "will retry after publish" : "non-fatal"}): ${e.message}`);
   }
 }
 
@@ -131,5 +148,7 @@ ledger[fbKey] = {
   publishedAt: new Date().toISOString(),
   platform: "facebook",
 };
+if (scheduling) ledger[fbKey].scheduledFor = new Date(scheduleTs * 1000).toISOString();
+if (longVideoId && !commentOk) ledger[fbKey].ytCommentPending = true;
 await writeFile(ledgerPath, `${JSON.stringify(ledger, null, 2)}\n`);
 console.log(`ledger updated: ${fbKey} -> ${videoId}`);
