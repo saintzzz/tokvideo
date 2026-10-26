@@ -243,5 +243,11 @@
     "publishedAt": "2026-10-25T22:54:13.807Z",
     "platform": "facebook",
     "scheduledFor": "2026-10-26T15:30:00.000Z"
+  },
+  "hon-ma-tap-03": {
+    "videoId": "EtDXkarm76c",
+    "publishedAt": "2026-10-26T00:50:10.837Z",
+    "locale": "vi",
+    "privacyStatus": "public"
   }
 }
