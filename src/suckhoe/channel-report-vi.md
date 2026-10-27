@@ -1,13 +1,13 @@
-# Channel report — 2026-10-26
+# Channel report — 2026-10-27
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 150
-Total videos: 64
+Total views: 152
+Total videos: 69
 
 ## Last 28 days (channel-wide)
 
-Views: 144
+Views: 147
 Watch time (minutes): 92
 Subscribers gained: 1
 Subscribers lost: 1
@@ -21,6 +21,11 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Truyện Ma | Đêm Khâm Liệm - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-26 |
+| Truyện Ma | Chuyến Đò Đêm - Tập 5 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-26 |
+| Truyện Ma | Chuyến Đò Đêm - Tập 4 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-26 |
+| Truyện Ma Có Thật | Hôn Ma - Tập 5: Hồi Kết - Tấm Ảnh Cuối Cùng Trong Máy | 0 | 0 | 0 | 2026-10-26 |
+| Truyện Ma Có Thật | Hôn Ma - Tập 4: Đường Âm - Kẻ Làm Mẹ Sáu Mươi Năm | 0 | 0 | 0 | 2026-10-26 |
 | Truyện Ma Có Thật | Hôn Ma - Tập 3: Lễ Chính - Nàng Không Muốn Cưới | 0 | 0 | 0 | 2026-10-26 |
 | Truyện Ma | Chuyến Đò Đêm - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-25 |
 | Truyện Ma | Chuyến Đò Đêm - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-25 |
@@ -41,9 +46,4 @@ Net subscriber change: 0
 | Truyện Ma | Dung Tra Loi - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-18 |
 | Truyện Ma | Hu Ma Ga - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-18 |
 | Truyện Ma Có Thật | Hũ Ma Gà - Tập 5: Đêm Rằm Trả Hồn - Cái Kết Sau 70 Năm | 1 | 0 | 0 | 2026-10-18 |
-| Truyện Ma Có Thật | Hũ Ma Gà - Tập 4: Người Trong Hũ - Bí Mật Ông Cố Giấu 70 Năm | 0 | 0 | 0 | 2026-10-18 |
-| Truyện Ma Có Thật | Hũ Ma Gà - Tập 3: Đêm Ma Đói - Hũ Không Thể Bỏ | 0 | 0 | 0 | 2026-10-18 |
-| Truyện Ma Có Thật | Hũ Ma Gà - Tập 2: Cái Giá Của Lộc - Nhật Ký Ông Cố | 0 | 0 | 0 | 2026-10-18 |
-| Truyện Ma Có Thật | Hũ Ma Gà - Tập 1: Di Sản Của Bà - Tiếng Gà Gáy Từ Buồng Kho | 0 | 0 | 0 | 2026-10-16 |
-| Truyện Ma Có Thật | Đừng Trả Lời - Tập 5: Hồi Kết - Người Trả Lời Cuối Cùng Của Xóm Cuối Đèo | 0 | 0 | 0 | 2026-10-15 |
 
