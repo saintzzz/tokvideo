@@ -1,0 +1,14 @@
+{
+  "slug": "demo-tam-cam",
+  "locale": "vi",
+  "title": "Tấm Cám - Tập mẫu",
+  "palette": { "shirt": "#C0392B", "hair": "#3A2A1A" },
+  "background": ["#3B2F4A", "#141E28"],
+  "beats": [
+    { "text": "Ngày xưa có hai chị em cùng cha khác mẹ là Tấm và Cám.", "caption": "Ngày xưa, có hai chị em...", "durationSec": 5 },
+    { "text": "Tấm hiền lành chăm chỉ còn Cám thì lười biếng gian xảo.", "caption": "Một hiền - một gian", "durationSec": 5 },
+    { "text": "Một hôm hai chị em đi bắt tép, mẹ nuôi dặn ai bắt được nhiều sẽ được thưởng yếm đỏ.", "caption": "Cuộc thi bắt tép", "durationSec": 6 },
+    { "text": "Tấm bắt được đầy giỏ thì Cám lừa chị ra sông tắm rồi trút hết tép vào giỏ mình.", "caption": "Cám lừa chị", "durationSec": 6 },
+    { "text": "Tấm khóc nức nở, Bụt hiện lên bảo tép đã vào bụng cá nên hãy gọi: Bống bống bang bang.", "caption": "Bụt hiện lên", "durationSec": 7 }
+  ]
+}

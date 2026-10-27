@@ -1,5 +1,14 @@
-import React from "react";
-import { Audio, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import React, { useEffect, useState } from "react";
+import {
+  Audio,
+  continueRender,
+  delayRender,
+  interpolate,
+  spring,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { LongFormSceneBackground, SceneName } from "./LongFormSceneBackground";
 import { HostSilhouette } from "../components/HostSilhouette";
 import { GranddaughterSilhouette } from "../components/GranddaughterSilhouette";
@@ -46,11 +55,46 @@ export const DialogueScene: React.FC<{
   fadeIn?: boolean;
   /** Fade out to black this many frames (image changes on next beat). */
   fadeOut?: boolean;
-}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, variant = 0, fadeIn = false, fadeOut = false }) => {
+  /** Word-aligned caption JSON under public/ (Whisper timings for this
+   *  beat) — enables real synced karaoke captions instead of showing the
+   *  whole beat caption at once. */
+  captionSrc?: string;
+}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, variant = 0, fadeIn = false, fadeOut = false, captionSrc }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
   const isNarrator = beat.speaker === "narrator";
+
+  // Grouped ~5-word subtitle cues with beat-local second timings.
+  type Cue = { start: number; end: number; words: { w: string; start: number; end: number }[] };
+  const [cues, setCues] = useState<Cue[] | null>(null);
+  useEffect(() => {
+    if (!captionSrc || !isNarrator) return;
+    const handle = delayRender();
+    fetch(staticFile(captionSrc))
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        const words: Cue["words"] = Array.isArray(data?.words) ? data.words : [];
+        const grouped: Cue[] = [];
+        for (let i = 0; i < words.length; i += 5) {
+          const chunk = words.slice(i, i + 5);
+          grouped.push({
+            start: chunk[0].start ?? 0,
+            end: chunk[chunk.length - 1].end ?? chunk[0].start ?? 0,
+            words: chunk,
+          });
+        }
+        setCues(grouped);
+        continueRender(handle);
+      })
+      .catch(() => continueRender(handle));
+  }, [captionSrc, isNarrator]);
+
+  // Active cue at the beat-local playhead; highlight the spoken word.
+  const t = frame / fps;
+  const activeCue =
+    cues?.find((c) => t >= c.start - 0.05 && t < c.end + 0.25) ??
+    (cues && cues.length && t >= cues[cues.length - 1].end ? cues[cues.length - 1] : undefined);
   const hostSpeaking = hasAudio && beat.speaker === "grandma";
   const granddaughterSpeaking = hasAudio && beat.speaker === "granddaughter";
   const granddaughterChecking = beat.speaker === "granddaughter" && !!beat.factReveal;
@@ -188,17 +232,48 @@ export const DialogueScene: React.FC<{
             boxShadow: isNarrator ? "0 8px 40px rgba(0,0,0,0.6)" : "0 10px 30px rgba(0,0,0,0.4)",
           }}
         >
-          <KineticText
-            key={beat.caption ?? beat.text}
-            text={beat.caption ?? beat.text}
-            fontSize={isNarrator ? 60 : 46}
-            fontFamily={fonts.sans}
-            fontWeight={800}
-            color={isNarrator ? "#FFFFFF" : "#F2FAEC"}
-            highlightColor={isNarrator ? "#E8B84B" : "#7CB342"}
-            highlightStyle="chip"
-            stagger={2}
-          />
+          {isNarrator && activeCue ? (
+            // Synced karaoke: ~5-word cue following the narration, the
+            // currently-spoken word lit in gold — reads like real
+            // subtitles, not a static caption card.
+            <div
+              style={{
+                fontFamily: fonts.sans,
+                fontWeight: 800,
+                fontSize: 60,
+                textAlign: "center",
+                lineHeight: 1.2,
+              }}
+            >
+              {activeCue.words.map((w, i) => {
+                const spoken = t >= (w.start ?? 0) && t < (w.end ?? 0) + 0.12;
+                return (
+                  <span
+                    key={i}
+                    style={{
+                      color: spoken ? "#E8B84B" : "#FFFFFF",
+                      textShadow: "0 2px 10px rgba(0,0,0,0.9)",
+                      marginRight: 14,
+                    }}
+                  >
+                    {w.w}
+                  </span>
+                );
+              })}
+            </div>
+          ) : (
+            <KineticText
+              key={beat.caption ?? beat.text}
+              text={beat.caption ?? beat.text}
+              fontSize={isNarrator ? 60 : 46}
+              fontFamily={fonts.sans}
+              fontWeight={800}
+              color={isNarrator ? "#FFFFFF" : "#F2FAEC"}
+              highlightColor={isNarrator ? "#E8B84B" : "#7CB342"}
+              highlightStyle="chip"
+              stagger={2}
+            />
+          )}
         </div>
       </div>
       </div>

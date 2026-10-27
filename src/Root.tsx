@@ -9,6 +9,7 @@ import { SucKhoeLongCompositions } from "./SucKhoeLongComposition";
 import { EnglishArenaCompositions } from "./EnglishArenaComposition";
 import { AvatarCompositions } from "./AvatarComposition";
 import { BannerCompositions } from "./BannerComposition";
+import { CartoonShortCompositions } from "./cartoon/CartoonShortComposition";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ export const RemotionRoot: React.FC = () => {
       <EnglishArenaCompositions />
       <AvatarCompositions />
       <BannerCompositions />
+      <CartoonShortCompositions />
     </>
   );
 };

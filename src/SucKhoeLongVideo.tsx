@@ -85,6 +85,11 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
               variant={segment.beatIndex}
               fadeIn={fadeIn}
               fadeOut={fadeOut}
+              captionSrc={
+                segment.hasAudio
+                  ? `captions/suckhoe-long-${episode.slug}/beat-${segment.beatIndex}.json`
+                  : undefined
+              }
               audioSrc={
                 segment.hasAudio
                   ? `audio/suckhoe-long/${episode.slug}/beat-${segment.beatIndex}.mp3`

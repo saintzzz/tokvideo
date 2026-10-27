@@ -349,6 +349,37 @@ export const LongFormSceneBackground: React.FC<{
             transform: `scale(${scale}) translate(${panX}%, ${panY}%)`,
           }}
         />
+        {/* drifting ground fog — two offset haze bands sliding across
+            at different speeds reads as depth, not a static filter */}
+        {[0, 1].map((i) => {
+          const drift = ((frame * (0.12 + i * 0.07) + i * 47) % 120) - 10;
+          return (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                left: `${drift - 30}%`,
+                top: `${52 + i * 22}%`,
+                width: "160%",
+                height: "34%",
+                background: `radial-gradient(ellipse at 50% 50%, rgba(160,175,190,${0.10 - i * 0.03}) 0%, rgba(160,175,190,0) 70%)`,
+                filter: "blur(18px)",
+                pointerEvents: "none",
+              }}
+            />
+          );
+        })}
+        {/* candle-light luminance flicker — barely-perceptible exposure
+            breathing keeps a still image alive without visible strobing */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "#000",
+            opacity: 0.05 + 0.025 * Math.sin(frame * 0.35) + 0.015 * Math.sin(frame * 0.83),
+            pointerEvents: "none",
+          }}
+        />
         {/* heavier vignette + slight desaturation mood grade for horror */}
         <div
           style={{
