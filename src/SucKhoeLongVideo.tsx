@@ -1,5 +1,5 @@
 import React from "react";
-import { Series } from "remotion";
+import { AbsoluteFill, Audio, Series, staticFile } from "remotion";
 import { DialogueScene } from "./scenes-suckhoe-long/DialogueScene";
 import { DiagramScene } from "./scenes-suckhoe-long/DiagramScene";
 import { LongFormEpisode } from "./suckhoe/long-form/types";
@@ -28,7 +28,19 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
   const totalFactReveals = episode.beats.filter((b) => b.factReveal).length;
   let factRevealSeen = 0;
 
+  // Dark ambience drone under narrator-only story arcs (remedy episodes
+  // are dialogue-driven and shouldn't get horror BGM). Synthesized
+  // offline into public/audio/bgm/horror-drone.mp3 — free, loopable.
+  const isNarratorStory = episode.beats.every((b) => b.speaker === "narrator");
+  const imageFor = (beatIndex: number) =>
+    episode.beatImages?.[beatIndex] ??
+    episode.sceneImages?.[episode.beats[beatIndex]?.scene];
+
   return (
+    <AbsoluteFill>
+      {isNarratorStory ? (
+        <Audio loop src={staticFile("audio/bgm/horror-drone.mp3")} volume={0.11} />
+      ) : null}
     <Series>
       {segments.map((segment, i) => {
         if (segment.type === "diagram") {
@@ -53,9 +65,15 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
         // window retention research recommends for pattern interrupts.
         const previousBeat = episode.beats[segment.beatIndex - 1];
         const isSceneStart = segment.beatIndex === 0 || previousBeat?.scene !== beat.scene;
-        const image =
-          episode.beatImages?.[segment.beatIndex] ??
-          episode.sceneImages?.[beat.scene];
+        const image = imageFor(segment.beatIndex);
+        // Fade-through-black whenever the visible still changes — the
+        // previous/next beat's image (or absence of one) differs.
+        const prevImage =
+          segment.beatIndex > 0 ? imageFor(segment.beatIndex - 1) : undefined;
+        const nextBeat = episode.beats[segment.beatIndex + 1];
+        const nextImage = nextBeat ? imageFor(segment.beatIndex + 1) : undefined;
+        const fadeIn = segment.beatIndex === 0 || prevImage !== image;
+        const fadeOut = nextBeat !== undefined && nextImage !== image;
         return (
           <Series.Sequence key={i} durationInFrames={segment.durationInFrames}>
             <DialogueScene
@@ -65,6 +83,8 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
               isSceneStart={isSceneStart}
               image={image}
               variant={segment.beatIndex}
+              fadeIn={fadeIn}
+              fadeOut={fadeOut}
               audioSrc={
                 segment.hasAudio
                   ? `audio/suckhoe-long/${episode.slug}/beat-${segment.beatIndex}.mp3`
@@ -75,5 +95,6 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
         );
       })}
     </Series>
+    </AbsoluteFill>
   );
 };

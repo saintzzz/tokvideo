@@ -42,7 +42,11 @@ export const DialogueScene: React.FC<{
   image?: string;
   /** Beat index - alternates the Ken Burns drift direction. */
   variant?: number;
-}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, variant = 0 }) => {
+  /** Fade in from black this many frames (image changed vs previous beat). */
+  fadeIn?: boolean;
+  /** Fade out to black this many frames (image changes on next beat). */
+  fadeOut?: boolean;
+}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, variant = 0, fadeIn = false, fadeOut = false }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
@@ -76,6 +80,24 @@ export const DialogueScene: React.FC<{
   const flashOpacity = isSceneStart
     ? interpolate(frame, [0, 3, 14], [0.55, 0.55, 0], { extrapolateRight: "clamp" })
     : 0;
+
+  // Fade-through-black on image transitions — smoother than a hard cut
+  // and atmospherically right for horror (MoneyPrinterTurbo-style
+  // crossfade would overlap adjacent beats' audio; black never does).
+  const FADE_FRAMES = 14;
+  const blackOpacity = Math.max(
+    fadeIn
+      ? interpolate(frame, [0, FADE_FRAMES], [1, 0], { extrapolateRight: "clamp" })
+      : 0,
+    fadeOut
+      ? interpolate(
+          frame,
+          [durationInFrames - FADE_FRAMES, durationInFrames - 1],
+          [0, 1],
+          { extrapolateLeft: "clamp" }
+        )
+      : 0
+  );
 
   return (
     <LongFormSceneBackground scene={beat.scene as SceneName} image={image} variant={variant}>
@@ -149,28 +171,31 @@ export const DialogueScene: React.FC<{
           position: "absolute",
           left: 0,
           right: 0,
-          top: "16%",
+          // Narrated horror reads bottom-center (movie subtitle position);
+          // dialogue episodes keep the top placement clear of silhouettes.
+          top: isNarrator ? undefined : "16%",
+          bottom: isNarrator ? "9%" : undefined,
           display: "flex",
           justifyContent: "center",
-          padding: "0 180px",
+          padding: "0 160px",
         }}
       >
         <div
           style={{
-            backgroundColor: isNarrator ? "transparent" : "rgba(14,21,13,0.6)",
+            backgroundColor: isNarrator ? "rgba(0,0,0,0.45)" : "rgba(14,21,13,0.6)",
             borderRadius: 20,
-            padding: isNarrator ? 0 : "18px 36px",
-            boxShadow: isNarrator ? "none" : "0 10px 30px rgba(0,0,0,0.4)",
+            padding: isNarrator ? "14px 40px" : "18px 36px",
+            boxShadow: isNarrator ? "0 8px 40px rgba(0,0,0,0.6)" : "0 10px 30px rgba(0,0,0,0.4)",
           }}
         >
           <KineticText
             key={beat.caption ?? beat.text}
             text={beat.caption ?? beat.text}
-            fontSize={isNarrator ? 58 : 46}
+            fontSize={isNarrator ? 60 : 46}
             fontFamily={fonts.sans}
             fontWeight={800}
-            color="#F2FAEC"
-            highlightColor="#7CB342"
+            color={isNarrator ? "#FFFFFF" : "#F2FAEC"}
+            highlightColor={isNarrator ? "#E8B84B" : "#7CB342"}
             highlightStyle="chip"
             stagger={2}
           />
@@ -187,6 +212,17 @@ export const DialogueScene: React.FC<{
           pointerEvents: "none",
         }}
       />
+      {blackOpacity > 0 ? (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "#000",
+            opacity: blackOpacity,
+            pointerEvents: "none",
+          }}
+        />
+      ) : null}
     </LongFormSceneBackground>
   );
 };

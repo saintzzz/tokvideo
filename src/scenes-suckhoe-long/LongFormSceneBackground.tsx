@@ -318,20 +318,24 @@ export const LongFormSceneBackground: React.FC<{
     []
   );
 
-  // Slow Ken Burns over the generated still: ~4% drift across the beat,
-  // alternating direction and pan focus per variant so the same scene
-  // image never sits twice as an identical frozen frame. Slower than the
-  // Shorts version on purpose - long-form horror reads through
-  // atmosphere, not cuts.
+  // Ken Burns over the generated still — strong enough to read as
+  // motion in the feed, alternating zoom-in/zoom-out and pan focus per
+  // variant so the same scene image never sits twice as an identical
+  // frozen frame. (Bumped from ~4% after the MoneyPrinterTurbo
+  // comparison: its zoom read clearly better on horror stills.)
   if (image) {
     const dir = variant % 2 === 0 ? 1 : -1;
-    const scale = interpolate(frame, [0, durationInFrames], [1.02, 1.08], {
+    const zoomIn = variant % 4 < 2;
+    const scale = interpolate(
+      frame,
+      [0, durationInFrames],
+      zoomIn ? [1.05, 1.17] : [1.17, 1.05],
+      { extrapolateRight: "clamp" }
+    );
+    const panX = interpolate(frame, [0, durationInFrames], [dir * 2.2, -dir * 2.2], {
       extrapolateRight: "clamp",
     });
-    const panX = interpolate(frame, [0, durationInFrames], [dir * 1.2, -dir * 1.2], {
-      extrapolateRight: "clamp",
-    });
-    const panY = interpolate(frame, [0, durationInFrames], [-dir * 0.8, dir * 0.8], {
+    const panY = interpolate(frame, [0, durationInFrames], [-dir * 1.4, dir * 1.4], {
       extrapolateRight: "clamp",
     });
     return (
