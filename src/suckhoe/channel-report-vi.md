@@ -1,9 +1,9 @@
-# Channel report — 2026-10-27
+# Channel report — 2026-10-28
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 152
-Total videos: 69
+Total views: 157
+Total videos: 73
 
 ## Last 28 days (channel-wide)
 
@@ -21,9 +21,13 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Truyện Ma | Đêm Khâm Liệm - Tập 4 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-27 |
+| Truyện Ma | Đêm Khâm Liệm - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-27 |
+| Truyện Ma | Đêm Khâm Liệm - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-27 |
+| #truyenma #audiobook #kinhdi #truyenmadai #kechuyen | 0 | 0 | 0 | 2026-10-27 |
 | Truyện Ma | Đêm Khâm Liệm - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-26 |
-| Truyện Ma | Chuyến Đò Đêm - Tập 5 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-26 |
-| Truyện Ma | Chuyến Đò Đêm - Tập 4 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-26 |
+| Truyện Ma | Chuyến Đò Đêm - Tập 5 (xem trước) #Shorts | 2 | 0 | 0 | 2026-10-26 |
+| Truyện Ma | Chuyến Đò Đêm - Tập 4 (xem trước) #Shorts | 1 | 0 | 0 | 2026-10-26 |
 | Truyện Ma Có Thật | Hôn Ma - Tập 5: Hồi Kết - Tấm Ảnh Cuối Cùng Trong Máy | 0 | 0 | 0 | 2026-10-26 |
 | Truyện Ma Có Thật | Hôn Ma - Tập 4: Đường Âm - Kẻ Làm Mẹ Sáu Mươi Năm | 0 | 0 | 0 | 2026-10-26 |
 | Truyện Ma Có Thật | Hôn Ma - Tập 3: Lễ Chính - Nàng Không Muốn Cưới | 0 | 0 | 0 | 2026-10-26 |
@@ -42,8 +46,4 @@ Net subscriber change: 0
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 3: Xác Ông Nội Đi Về Nghĩa Địa - Tìm Mộ Cô Gái Mất Tích 70 … | 0 | 0 | 0 | 2026-10-20 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 2: Tiếng Gõ Trong Quan Tài - Thầy Cúng Phán Một Câu Lạnh Số… | 0 | 0 | 0 | 2026-10-19 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 1: Con Cháu Đứng Hàng - Đêm Đầu Tiên Người Chết Ngồi Dậy | 0 | 0 | 0 | 2026-10-19 |
-| Truyện Ma | Loi Nguyen Gieng Cu - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-18 |
-| Truyện Ma | Dung Tra Loi - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-18 |
-| Truyện Ma | Hu Ma Ga - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-18 |
-| Truyện Ma Có Thật | Hũ Ma Gà - Tập 5: Đêm Rằm Trả Hồn - Cái Kết Sau 70 Năm | 1 | 0 | 0 | 2026-10-18 |
 
