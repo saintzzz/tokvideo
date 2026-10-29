@@ -1,4 +1,4 @@
-# Pipeline doctor — 2026-10-28
+# Pipeline doctor — 2026-10-29
 
 ## Queue
 
@@ -14,7 +14,7 @@ Ready unpublished episodes: 0
 - Ledger "loi-nguyen-gieng-cu-tap-02-fb" -> 1153591567318579 no longer exists on channel.
 - Ledger "chuyen-do-dem-tap-02-fb" -> 1118955610723284 no longer exists on channel.
 - Ledger "chuyen-do-dem-tap-03-fb" -> 2659591444472347 no longer exists on channel.
-- Teaser backlog: 23 episodes still lack a teaser Short.
+- Teaser backlog: 20 episodes still lack a teaser Short.
 - Queue below one full arc (0/5 ready) — write the next arc before the channel goes quiet.
 - FAILED: FB reel for "chuyen-do-dem-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs chuyen-do-dem-tap-04
 file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
@@ -83,7 +83,7 @@ file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
 
 ## Actions taken
 
-- Built + uploaded teaser for "dem-kham-liem-tap-05".
-- Built + uploaded teaser for "dung-tra-loi-tap-02".
-- Built + uploaded teaser for "dung-tra-loi-tap-03".
+- Built + uploaded teaser for "dung-tra-loi-tap-04".
+- Built + uploaded teaser for "dung-tra-loi-tap-05".
+- Built + uploaded teaser for "hon-ma-tap-01".
 
