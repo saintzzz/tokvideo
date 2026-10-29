@@ -33,6 +33,8 @@ const ARC_SUBJECT = {
     "a demonic pale face with bloodshot eyes and bared teeth emerging from an old clay jar wrapped in blood-soaked red cloth, strands of black hair sticking out of the jar mouth, candlelight horror",
   "dem-kham-liem":
     "a dead old man in a white funeral shroud sitting upright inside an open wooden coffin, grey rotting face, eyes snapped open, funeral candles burning around, incense smoke",
+  "quan-tai-troi":
+    "a black wooden coffin floating on dark floodwater at night with a pale drowned ghost face rising half out of the lid, hollow black eyes, wet hair over grey skin, a hand gripping the coffin edge, thin fog",
 };
 
 const THUMB_STYLE =

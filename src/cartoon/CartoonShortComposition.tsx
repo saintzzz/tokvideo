@@ -1,25 +1,28 @@
-import { Composition } from "remotion";
-import path from "path";
-import { existsSync, statSync } from "fs";
+import { Composition, staticFile } from "remotion";
+import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import { CartoonShortVideo, CartoonEpisode } from "./CartoonShortVideo";
 import { FPS } from "../timing";
 
 // One <Composition> per cartoon short episode (src/cartoon/episodes/*.json).
 // 1080x1920 vertical. Beat durations come from committed mp3s when present
-// (probeDurationSeconds) else durationSec in the JSON — same convention as
-// suckhoe-long so generate-voiceover/RESUME stays reusable.
+// (getAudioDurationInSeconds via staticFile, same convention as
+// suckhoe-long's resolveLongFormDurations) else durationSec in the JSON.
+// No node builtins here — this file is bundled for the browser, so
+// fs/path imports break every composition in the project.
 import demoEpisode from "./episodes/demo-tam-cam.json";
 
 const EPISODES: CartoonEpisode[] = [demoEpisode as CartoonEpisode];
 
-// Beat audio probe: mp3 duration via CBR header read (same math as
-// scripts/lib/audio-probe.mjs, inlined to keep this file type-clean).
-const probe = (slug: string, i: number): number | null => {
-  const p = path.resolve("public", "audio", "cartoon", slug, `beat-${i}.mp3`);
-  if (!existsSync(p) || statSync(p).size < 4096) return null;
-  // Edge-TTS output is 96k CBR mp3 — duration ≈ size*8/96000. Good
-  // enough for scene timing; precise sync uses captions later anyway.
-  return (statSync(p).size * 8) / 96000;
+// Beat audio probe via HTTP on the bundled public/ asset — returns null
+// when the file is missing or undecodable.
+const probe = async (slug: string, i: number): Promise<number | null> => {
+  try {
+    return await getAudioDurationInSeconds(
+      staticFile(`audio/cartoon/${slug}/beat-${i}.mp3`)
+    );
+  } catch {
+    return null;
+  }
 };
 
 export const CartoonShortCompositions = () => (
@@ -38,7 +41,7 @@ export const CartoonShortCompositions = () => (
           const durations: number[] = [];
           const hasAudio: boolean[] = [];
           for (let i = 0; i < episode.beats.length; i++) {
-            const dur = probe(episode.slug, i);
+            const dur = await probe(episode.slug, i);
             hasAudio.push(dur != null);
             durations.push(
               Math.ceil((dur ?? episode.beats[i].durationSec ?? 4) * FPS) + 6
