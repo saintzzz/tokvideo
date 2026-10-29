@@ -1,13 +1,13 @@
-# Channel report — 2026-10-28
+# Channel report — 2026-10-29
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
 Total views: 157
-Total videos: 73
+Total videos: 76
 
 ## Last 28 days (channel-wide)
 
-Views: 147
+Views: 145
 Watch time (minutes): 92
 Subscribers gained: 1
 Subscribers lost: 1
@@ -21,6 +21,9 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| Truyện Ma | Đừng Trả Lời - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-28 |
+| Truyện Ma | Đừng Trả Lời - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-28 |
+| Truyện Ma | Đêm Khâm Liệm - Tập 5 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-28 |
 | Truyện Ma | Đêm Khâm Liệm - Tập 4 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-27 |
 | Truyện Ma | Đêm Khâm Liệm - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-27 |
 | Truyện Ma | Đêm Khâm Liệm - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-27 |
@@ -43,7 +46,4 @@ Net subscriber change: 0
 | Truyện Ma Có Thật | Chuyến Đò Đêm - Tập 1: Bến Đò Cũ - Mười Một Khách Lên, Mười Khách Xuống | 0 | 0 | 0 | 2026-10-22 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 5: Hồi Kết - Lễ Hội Hồn, Hai Người Gặp Nhau Sau 70 Năm | 0 | 0 | 0 | 2026-10-20 |
 | Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 4: Đêm Cuối Nó Quay Lại - Bí Mật Ông Nội Giấu 70 Năm | 0 | 0 | 0 | 2026-10-20 |
-| Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 3: Xác Ông Nội Đi Về Nghĩa Địa - Tìm Mộ Cô Gái Mất Tích 70 … | 0 | 0 | 0 | 2026-10-20 |
-| Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 2: Tiếng Gõ Trong Quan Tài - Thầy Cúng Phán Một Câu Lạnh Số… | 0 | 0 | 0 | 2026-10-19 |
-| Truyện Ma Có Thật | Đêm Khâm Liệm - Tập 1: Con Cháu Đứng Hàng - Đêm Đầu Tiên Người Chết Ngồi Dậy | 0 | 0 | 0 | 2026-10-19 |
 
