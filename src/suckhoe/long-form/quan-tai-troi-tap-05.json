@@ -1,0 +1,168 @@
+{
+  "slug": "quan-tai-troi-tap-05",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "QUAN TÀI TRÔI | Tập 5: Trả Bùa Cho Xác Không Tên - Đêm Giờ Tý Trên Sông | Truyện Ma Dài",
+  "description": "Đêm cuối cùng: Hiếu và ông Thân phải tìm lại lá bùa hộ mệnh đã bị bán cho thầy phù thủy bốn mươi năm trước, đào lại xác người lạ ngoài bãi rùng, và đúng giờ tý đưa chiếc quan tài xuống lòng sông trả vong về đường. Truyện ma dài kết thúc.\n\nTruyện ma dài 5 tập về chiếc quan tài trôi và lời thề bốn mươi năm của một làng quê, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "quan tài trôi",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện",
+    "ma nước lũ"
+  ],
+  "hashtags": "#truyenma #truyenmadai #quantaitroi #manuoclu #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "ĐÊM TRẢ VONG VỀ SÔNG",
+  "scenePrompts": {
+    "hook": "a small sampan on a black flooded river at midnight carrying a black coffin, a single lantern, villagers silhouettes on the far bank, thick fog",
+    "old-witch-house": "a collapsed abandoned sorcerer's hut at a village edge market, broken roof, scattered old ritual objects and jars, overgrown, gloomy",
+    "amulet-box": "a small tarnished copper amulet case held in old hands, opened showing a folded cloth talisman inside, lantern light",
+    "digging-grave": "men digging an old shallow grave in a wild field by lantern light at night, dark soil, exposed old bones wrapped in cloth",
+    "bones-with-amulet": "old wrapped human remains in a shallow grave with a small copper amulet being placed on the chest, ritual by lantern light",
+    "midnight-river": "a black coffin being lowered into a dark river from a sampan at midnight, lantern reflecting on black water, fog",
+    "chief-return": "an old village chief standing silently before a clan house altar at dawn, bowed head, grey hair, incense smoke",
+    "village-dawn": "a Vietnamese village at dawn after the flood receded, wet earth, soft grey morning light, calm river in distance, peaceful"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Đêm cuối cùng",
+      "text": "Đêm trả vong được ông Thân chọn đúng ba ngày sau hội trả đồ - ngày rằm âm lịch, giờ tý, khi hai vựa âm dương mỏng nhất trong tháng. Thầy mo căn dặn: muốn vong đi được đường phải có ba thứ - hòm cho vong nằm, đã có sẵn; của theo người, đã trả về nước; và cuối cùng - bùa hộ mệnh, thứ phải tìm về cho bằng được. Thiếu một thứ thì quan tài hạ xuống sông cũng chỉ trôi đi trống không."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-witch-house",
+      "caption": "Nhà thầy phù thủy",
+      "text": "Nhà thầy phù thủy xưa ngoài chợ quê giờ chỉ còn cái xác nhà đổ nát. Thầy chết không người nối nghiệp, con cháu bỏ đi từ đời nào, đồ đạc trong nhà bị người qua đường lục lọi từ lâu. Hiếu, ông Thân và hai thanh niên lật từng hòm, từng hũ vỡ, từng giẻ rách trong căn nhà mùi ngải khô - ba giờ liền, đến chập tối, tìm được một hòm thiếc nhỏ kẹt giữa đống gạch vỡ sau bếp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "amulet-box",
+      "caption": "Hòm bùa của thầy",
+      "text": "Trong hòm thiếc là bảy lá bùa đồng bọc vải, xếp một chồng - đồ mà thầy phù thủy mua được của người ta từ xác người chết khắp mấy vùng, tích trữ làm phép. Ông Thân đưa đèn soi từng lá: sáu lá khắc chữ văn, một lá không chữ - chỉ khắc một mặt nước và một con thuyền, mặt sau khắc một nét rồng quấn đã mòn. Bùa của người chết đuối. Không tên - vì bùa hộ mệnh không ghi tên, tên nằm trong người đeo. Ông Thân gói riêng lá ấy: đúng rồi, của ông Lãnh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "amulet-box",
+      "caption": "Tên người lạ",
+      "text": "Ông Lãnh - cái tên viết trong mẩu giấy trong chiếc khóa cổ Hiếu đeo suốt hai mươi năm. Bốn mươi năm làng gọi người lạ, người trôi sông, vong không tên - trong khi tên ông nằm ngay trong lá thư gấp trong một món đồ đeo trên người con trai của người giữ hộ. Vong nhân dẫn đường qua từng món đồ một - khóa cổ cho Hiếu, khóa đồng cho hòm đồ nghề, lá thư cho giếng - như một người mù sờ tay nhau từng cây cột mốc mà đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-witch-house",
+      "caption": "Đồ trong nhà thầy",
+      "text": "Trước khi rời căn nhà đổ nát của thầy phù thủy, ông Thân làm thêm một việc: gom hết sáu lá bùa còn lại - bùa của sáu người chết khác không ai tìm được - mang về nhà thờ họ đốt trong một lễ nhỏ. Ông nói: của thầy thì trả thầy, của vong thì trả vong, chứ giữ mấy lá này là giữ nợ của sáu nhà khác nữa. Làng đã trả một món nợ bốn mươi năm - không ai muốn vay thêm món nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging-grave",
+      "caption": "Đêm trước giờ đào",
+      "text": "Đêm trước hôm đào hố, ông Thân dặn năm người đi cùng ba điều: không ai nói tên mình to khi đứng trên bãi rùng, không ai gọi nhau bằng tên sau khi trời tối, và khi đào thấy vải thì dừng tay để ông Thân làm tiếp. Bốn mươi năm trước không ai dặn những điều này - bảy người đàn ông khỏe mạnh đào bới trên xác người ta giữa trưa, gọi nhau om sòm bằng tên, và vong nhân nghe được hết. Đêm đào lại, cả bãi rùng chỉ có tiếng cuốc và tiếng thở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging-grave",
+      "caption": "Đào lại hố cạn",
+      "text": "Chiều hôm ấy, năm người ra bãi rùng đào lại hố cạn bốn mươi năm. Đất ở chỗ ấy ai cũng nhớ - không ai quên được chỗ nào bảy mạng người quanh đó. Đào xuống độ ba thước, cuốc chạm vải - vải áo cánh nâu mục nát bọc lấy một bộ xương nằm úp mặt, hai tay gấp dưới bụng, đúng tư thế bị xoay vào vách năm ấy. Cả năm người đứng nín trước hố mở. Ông Thân vái ba vái xuống hố: bốn mươi năm, ông nằm úp. Hôm nay bọn con sửa lại cho ông - như thế này phải gọi là trễ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bones-with-amulet",
+      "caption": "Trả bùa cho xác",
+      "text": "Hai người xuống hố, chầm chậm, từng động tác như nhấc trẻ sơ sinh, lật bộ xương ngửa lên - hướng mặt về phía trời, hướng chân về phía sông, kiểu nằm của người được đi đường. Ông Thân đặt lá bùa đồng khắc thuyền lên ngực áo mục của xác - đúng vị trí tim. Và ông nói tên thật, ba lần, rõ từng chữ: ông Lãnh - ông Lãnh - ông Lãnh - về nhận bùa, nhận hòm, đi đường của ông. Ngọn đèn bất chợt tắt phụt - trong mắt mọi người chỉ còn màu đen và tiếng nước sông róc rách."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midnight-river",
+      "caption": "Rước hòm xuống sông",
+      "text": "Giờ tý, đoàn người rước xác ông Lãnh - nằm trong chiếc hòm đen trôi vào làng, chiếc hòm mà cha Hiếu đóng trả nợ cho thợ Tâm bốn mươi năm trước - ra bờ sông. Kỳ lạ là chiếc hòm nặng trịch sáu người không khiêng nổi hôm trước, đêm nay bốn người nhấc nhẹ như khiêng võng. Thầy mo nói: nó đã nhận chỗ nằm - nó không làm khó nữa. Hai chiếc xuồng chở hòm ra giữa dòng, một ngọn đèn cầy duy nhất treo đầu xuồng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midnight-river",
+      "caption": "Lễ trên lòng sông",
+      "text": "Giữa dòng nước đen, ông Thân đọc văn tế cuối: kể tên ông Lãnh, kể tội của làng, kể đồ đã trả, xin cho đi. Rồi chiếc hòm được hạ từ từ xuống mặt sông. Lần này không ai đẩy - hòm tự lênh đênh rời xuồng, trôi ra xa một đoạn, đứng im giữa dòng. Ngọn đèn trên xuồng cháy yếu đi. Người trên bờ - cả làng đứng đen kịt theo mép nước - thấy rõ chiếc hòm chậm rãi xoay mình, đầu quay về phía thượng nguồn, như người quay lại chắp tay chào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midnight-river",
+      "caption": "Hòm chìm xuống",
+      "text": "Rồi chiếc hòm chìm. Không phải chìm lủi - mà lắng xuống từ từ, ngay ngắn, đầu trước đuôi sau, như một người nằm xuống giường. Mặt nước khép lại trên nắp hòm, không một gợn thừa. Ngọn đèn trên xuồng run một cái rồi lại cháy đều. Ông Thân cúi đầu vái bốn vái theo bốn hướng: xong - ông đi rồi. Mặt sông phẳng lặng như chưa từng có chiếc hòm nào trôi vào làng Đoài bao giờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dawn",
+      "caption": "Nước rút sáng hôm sau",
+      "text": "Sáng hôm sau, nước lũ rút. Sau gần hai tháng đứng im, mặt sông hạ xuống rõ rệt trong một đêm - như cái gì đó chặn ở đâu đó đã được tháo ra. Nắng sớm chiếu lên đất những vệt bùn còn lại, và trên bãi đất trống trước nhà họ Trịnh - nơi chiếc hòm đỗ ba lần - vệt sẫm hình chữ nhật đã biến mất, chỉ còn đất bình thường. Ông Tư Bẩy nằm liệt đứng dậy đi lại được. Bà Hợi thôi lảm nhảm. Những căn bệnh lạ ấy rút đi cùng nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chief-return",
+      "caption": "Cụ Đoàn trở về",
+      "text": "Trưa hôm ấy, cụ Đoàn trở về làng. Cụ đi đâu bảy ngày không ai biết - chỉ biết cụ về trên một chiếc đò khách từ thượng nguồn xuôi xuống, quần áo rách, người gầy hẳn đi, nhưng mắt cụ sáng lại. Cụ không vào nhà - cụ đi thẳng đến nhà thờ họ, thắp nén hương đầu tiên sau bốn mươi năm, đứng trước bàn thờ cả một buổi trưa. Người hỏi cụ đi đâu, cụ nói đúng một câu: ta đi theo nó xem nó về đâu. Nó về đúng bến rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chief-return",
+      "caption": "Lời thề của làng",
+      "text": "Hôm sau cụ Đoàn cho người đục một tấm bia đá dựng ở bãi đất trống - không phải bia cho người lạ, mà bia cho cả làng. Trên bia khắc bốn dòng do cụ tự đặt: đất này có người lạ từng nằm - của người khuất không phải của trời rơi - đời sau đi qua nhớ dừng lại - chớ đụng vào của chớ vơ của ai. Tấm bia đến nay vẫn đứng đó. Người làng Đoài dạy con cháu từ nhỏ: đi ngang bãi đất ấy thì đi vòng, đừng bao giờ nhặt gì trên bãi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dawn",
+      "caption": "Bảy mộ được lập bia",
+      "text": "Còn một việc nữa làng làm trước khi khép lại chuyện cũ: bảy ngôi mộ không tên ngoài bãi rùng được lập bia đầy đủ - bảy cái tên bảy tấm bia nhỏ, hướng quay vào làng, không quay ra sông. Và giếng bỏ hoang được lấp đi tử tế - người ta lấp bằng đất chứ không đá, ông Thân nói nước giếng âm không nên bịt kín, cho nó thấm xuống lòng đất là nó về đúng nơi nó thuộc. Chỗ giếng cũ trồng một cây gạo - gạo giữ đất, giữ hồn cây cho khu vực ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bones-with-amulet",
+      "caption": "Ông Lãnh là ai",
+      "text": "Về ông Lãnh - người trong chiếc quan tài trôi - làng chỉ tìm ra được chút ít từ đồ còn lại: đồ tây cũ kiểu thương nhân, bọc của tế chu đáo chỉ người nhà giàu thành thị mới sắm nổi, và lá bùa khắc thuyền - nghề trên nước. Ông Thân đoán ông Lãnh là lái buôn đường sông, chết đuối trên đường chở hàng về nhà, gia đình chôn cất đúng lễ nhưng mồ ngoài sông nên trận lũ kia cuốn xác đi lạc. Người nhà của ông, nếu còn, ở đâu đó phía thượng nguồn - không ai biết được nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bones-with-amulet",
+      "caption": "Bia không tên trên sông",
+      "text": "Nhưng làng làm thêm một việc không ai bắt: trên bãi đất trống, cạnh tấm bia răn dạy, người ta đẽo thêm một tấm bia nhỏ hơn - bia cho ông Lãnh - khắc ba chữ: Ông Lãnh - khách sông. Không năm sinh, không quê quán - vì không ai biết - chỉ có tên và nghề. Mỗi năm đến ngày hòm trôi vào làng, ông Thân hoặc người kế chức ra đốt một nén hương cho ông khách sông ấy - để vong biết chỗ đất này còn người nhớ tên mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dawn",
+      "caption": "Hiếu và chiếc khóa",
+      "text": "Hiếu, sau đêm ấy, không đeo lại chiếc khóa cổ. Nó đã nằm trong bọc đồ trả về sông - đúng nơi nó phải về. Thay vào đó anh giữ một thứ khác: chiếc chìa khóa đồng nhỏ mở hòm đồ nghề của cha - chiếc chìa đã mở ra lá thư cuối cùng cha để lại. Anh bỏ nghề phụ hồ, theo thầy mộc già học nghề của cha - và năm sau, người đầu tiên anh đóng hòm cho là một cụ già nghèo trong làng không có tiền, anh đóng không lấy công - khắc lên nắp con rồng đuôi ngoặt vào trong, giữ lộc cho người nằm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midnight-river",
+      "caption": "Tiếng gõ mỗi mùa lũ",
+      "text": "Và chuyện chưa hẳn đã hết, các con ạ. Người làng Đoài kể rằng mỗi mùa nước lên, những đêm mưa to gió lớn, ai đi đò khuya về ngang bãi đất trống vẫn đôi khi nghe tiếng gõ - cộp, cộp - từ lòng sông đi vào bờ, nhịp đều, chậm rãi. Nhưng giờ người ta không sợ nữa - vì người ta biết đó là ông khách sông đi ngang, ghé nhìn tấm bia có tên mình. Người được nhớ tên thì đi đường không oán. Của của người khuất, khi được trả đúng nghĩa, hóa ra không phải đồ chết - là phần đường cho người đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dawn",
+      "caption": "Lời Bà Tư cuối truyện",
+      "text": "Chuyện QUAN TÀI TRÔI đến đây là hết - năm tập, bốn mươi năm, một chiếc hòm cuối cùng cũng đưa được chủ nhân về đường. Nhưng các con nghe Bà Tư nói này: những vùng sông nước mỗi mùa lũ vẫn đưa về đủ thứ trôi - đồ đạc, gia súc, đôi khi cả những thứ không nên nhìn kỹ. Cho nên nếu một ngày các con thấy vật gì trôi đỗ ngay trước cửa mình - nhớ đừng mở ra tò mò, cũng đừng vơ vào nhà. Của trôi không có chủ thì phải trả về nước - đó là luật người sống chung với sông từ ngàn đời. Bà Tư hẹn các con ở câu chuyện sau."
+    }
+  ],
+  "sceneImages": {
+    "hook": "images/suckhoe-long/quan-tai-troi-tap-05/hook.jpg",
+    "old-witch-house": "images/suckhoe-long/quan-tai-troi-tap-05/old-witch-house.jpg",
+    "amulet-box": "images/suckhoe-long/quan-tai-troi-tap-05/amulet-box.jpg",
+    "digging-grave": "images/suckhoe-long/quan-tai-troi-tap-05/digging-grave.jpg",
+    "bones-with-amulet": "images/suckhoe-long/quan-tai-troi-tap-05/bones-with-amulet.jpg",
+    "midnight-river": "images/suckhoe-long/quan-tai-troi-tap-05/midnight-river.jpg",
+    "chief-return": "images/suckhoe-long/quan-tai-troi-tap-05/chief-return.jpg",
+    "village-dawn": "images/suckhoe-long/quan-tai-troi-tap-05/village-dawn.jpg"
+  }
+}

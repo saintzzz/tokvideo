@@ -1,0 +1,168 @@
+{
+  "slug": "quan-tai-troi-tap-04",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "QUAN TÀI TRÔI | Tập 4: Đêm Quan Tài Đứng Trước Từng Cửa - Hội Trả Đồ Của Làng | Truyện Ma Dài",
+  "description": "Mỗi đêm, chiếc quan tài đen lại đứng trước cửa một nhà - nhà nào từng có người động vào của tế năm xưa. Làng Đoài buộc phải mở hội trả đồ: mọi món còn giữ lại đều phải mang ra nhà thờ họ. Nhưng khi đến phiên nhà Hiếu, món phải trả lại đang đeo trên người anh - chiếc khóa cổ mẹ trao từ nhỏ như bùa bình mệnh.\n\nTruyện ma dài 5 tập về chiếc quan tài trôi và lời thề bốn mươi năm của một làng quê, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "quan tài trôi",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện",
+    "ma nước lũ"
+  ],
+  "hashtags": "#truyenma #truyenmadai #quantaitroi #manuoclu #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "QUAN TÀI ĐỨNG TRƯỚC CỬA",
+  "scenePrompts": {
+    "hook": "a black wooden coffin standing upright in front of a house door at night in a flooded Vietnamese village, fog, dim windows",
+    "door-coffin": "view from inside a dark house looking through a door gap at a black coffin standing outside in the mud at night, moonlight",
+    "village-houses": "a flooded Vietnamese village street at night, rows of dark houses, one coffin silhouette standing before a distant door, moon haze",
+    "village-gathering": "villagers gathered in a lantern-lit clan house courtyard at night, laying small old objects on a cloth on the ground, solemn faces",
+    "return-goods": "old objects on a red cloth: tarnished gold rings, silk fabric, incense, coins, placed before an altar with candles, night",
+    "mother-son": "an old Vietnamese mother holding her grown son's hand in a dark kitchen, oil lamp light, both faces sad, a small pendant on the table",
+    "empty-chest": "an opened small wooden chest empty inside except dust and a dark stain, on a well rope above black water",
+    "river-night": "a wide black flooded river at night under a thin moon, a small sampan with a single lantern, total silence atmosphere"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Quan tài đứng trước cửa",
+      "text": "Sau đêm Hiếu ra giếng, làng Đoài bước vào những đêm mà từ đó về sau không ai muốn nhắc lại. Mỗi đêm, đúng giờ hợi, chiếc quan tài đen lại đứng trước cửa một nhà. Không ai thấy nó đi - chỉ thấy nó đã đứng đó, thẳng đứng, đầu hơi ngả về phía cánh cửa, như một người khách lịch sự đang đợi chủ nhà ra mở. Sáng hôm sau nó lại không thấy - chỉ còn vệt bùn hình chữ nhật trước thềm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-houses",
+      "caption": "Đi từng nhà một",
+      "text": "Nhà ông Thân bị đứng đầu tiên - rồi đêm kế, nó đứng trước cửa nhà ông Tư Bẩy, con trai một trong bảy người chết năm xưa. Đêm nữa, nhà bà Hợi - góa phụ một người khác. Đêm tiếp nữa, nhà chú Già - cháu nội của cụ đã từng chia của tế. Người ta nhận ra quy luật rợn tóc gáy: nó đi theo huyết thống. Nhà nào trong làng có máu của một trong bảy người lấy của tế năm ấy - từng nhà một, đêm nào cũng có một cửa bị đứng trước. Và nhà bị đứng đêm đó - sáng hôm sau trong nhà ấy có người phát bệnh nặng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-coffin",
+      "caption": "Nhà bị đứng thì ốm",
+      "text": "Không phải bệnh thường. Ông Tư Bẩy sau đêm quan tài đứng cửa thì nằm liệt mê man, miệng lảm nhảm đếm vàng - đếm suốt đêm, vàng nén, vàng chiếc, vàng ròng - dù nhà ông không có lấy một đồng. Bà Hợi sau đêm đó đi lê la trong nhà xúm những thứ gì cũ nhất đem chôn dưới bếp, vừa chôn vừa khóc nói trả cho người ta. Bác sĩ không giải thích được. Thầy mo thì nói thẳng: nó đang đi gõ cửa đòi nợ từng nhà - và bệnh ấy chỉ hết khi nợ ấy được trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-gathering",
+      "caption": "Họp làng lần thứ hai",
+      "text": "Ông Thân triệu tập họp cả làng - lần này không chỉ nhà thờ họ, mà mọi nhà liên quan. Bảy nhà máu của bảy người năm xưa, cộng với những nhà hưởng hơi nhà thờ họ được tu từ của ấy. Ông Thân nói trước toàn thể: của tế lấy là không trả được, nhưng của tế giữ là phải trả. Nó đi đòi từng nhà bằng cách riêng của nó - chúng ta trả trước khi nó đòi được cách nó muốn. Đêm rằm sắp tới - làng mở hội trả đồ. Mọi món còn giữ, dù nhỏ, đều mang ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-gathering",
+      "caption": "Lục lại từng nhà",
+      "text": "Ba ngày liền, bảy nhà lục lại từng ngăn tủ, từng hòm cũ. Đồ quý năm ấy phần lớn đã tiêu hết - vàng đổi gạo, lụa đổi thuốc - thời đói kém ai giữ được. Nhưng vẫn còn sót: một đôi bông tai vàng mờ trong hộp bà Hợi, mảnh lụa thêu hồng sẫm màu nhà chú Già dùng gói bát hương, một ít trần hương nén thành nhang trong nhà thờ họ từ đời nào. Mỗi món tìm ra là một món ông Thân lập sổ: của vong, của vong, của vong."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-gathering",
+      "caption": "Món đồ không ai nhận",
+      "text": "Có một món không ai dám nhận là của nhà mình: một nén nhang nhỏ, nặng tay, gói trong giấy bản đỏ - tìm thấy trong hòm gỗ thờ của nhà ông Tư Bẩy, nơi bà cố ông để lại. Mùi trầm hương từ nén nhang thơm đến rợn, mà ông Tư thề nhà mình chưa từng mua trầm bao giờ. Ông Thân cầm lên soi thì tay run: giấy gói nhang còn sót nửa con dấu - dấu của tiệm thuốc bắc lớn nhất tỉnh, loại chỉ có người nhà giàu đi lễ mới mua. Của tế đấy - nửa đã chia đã thấm vào nhà cửa mà không ai nhớ mình để đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-coffin",
+      "caption": "Ông Thân hiểu vì sao",
+      "text": "Riêng ông Thân - nhà bị đứng đầu tiên - vẫn tự hỏi mình có tội gì. Ông không lấy của năm xưa, ông chỉ làm lễ. Nhưng đến lúc này ông mới hiểu: chính ông là người đứng ra làm lễ cho đám tang cắt ngang ấy, là người đọc văn khấn che mắt thần linh cho một việc sai. Không động của, nhưng đã động lễ - nên nó tìm ông trước nhất, vì ông là người duy nhất còn sống đọc được lời nó. Từ đó ông Thân không cãi lại câu nào của thầy mo nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mother-son",
+      "caption": "Đến phiên nhà Hiếu",
+      "text": "Riêng nhà Hiếu - nhà thứ tám ngoài bảy nhà máu - có một món duy nhất: chiếc khóa cổ đồng khắc rồng đang đeo trên người anh. Mẹ Hiếu đêm đó ngồi với con trong bếp, giữa hai bàn tay nắm lấy chiếc khóa, không trả lời được câu hỏi của chính mình: trả thì lấy gì giữ bình an cho con - hay không trả thì lấy gì đỡ cho cả làng. Bà nói rất khẽ: cha con lấy nó cho con - cha con đã trả bằng chính mạng mình rồi. Hay là đủ?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mother-son",
+      "caption": "Nợ của cha trả thế nào",
+      "text": "Hiếu lắc đầu. Cha anh đã trả mạng - nhưng món đồ vẫn trên người anh, không phải trên người cha. Vong đếm đồ không đếm mạng, ông Thân đã nói thế - nó đếm cái gì của nó, không đếm ai chết thay. Anh tháo chiếc khóa cổ khỏi cổ - lần đầu tiên sau hơn hai mươi năm - đặt lên bàn cùng chiếc khóa đồng vong để lại trước cửa. Hai món nằm cạnh nhau trong ánh đèn: một để mở, một để trả. Cả hai đều khắc con rồng giống hệt nhau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "return-goods",
+      "caption": "Đêm rằm hội trả đồ",
+      "text": "Đêm rằm, nhà thờ họ mở cửa sáng đèn. Giữa sân trải một tấm vải đỏ - đúng màu bọc của tế năm xưa người ta còn nhớ. Từng nhà lần lượt bước ra đặt đồ lên: đôi bông tai, mảnh lụa, nhang trần, vài đồng tiền xưa bác nào đó giữ làm kỷ niệm không biết gốc tích. Hiếu đặt chiếc khóa cổ của mình xuống cùng chiếc khóa đồng vong gửi - hai món cạnh nhau, nằm trong nắp một chiếc khay quay tay làm từ gỗ nhà thờ họ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "return-goods",
+      "caption": "Ông Thân đọc lễ",
+      "text": "Ông Thân - chức sắc duy nhất còn lại - đứng đọc lễ trả của. Không phải lễ cầu siêu - lễ này là lễ xin trả nợ, lời lẽ khác, khúc chiết khác: xưa bọn con lầm lỡ đụng vào của ông, nay trả lại nguyên trạng, có đủ có thiếu xin ông lượng thứ, xin ông nhận lấy mà đi phần đường của ông. Hương nhang cắm đầy ba chân hương đồng. Ông Thân khấn xong thì rắc vải đỏ buộc lại tất cả, nhấc lên - và rùng mình: bọc vải đỏ nặng hơn nhiều so với đống đồ vừa gói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "empty-chest",
+      "caption": "Hòm trong giếng trống",
+      "text": "Trước đó, chiều hôm ấy Hiếu cùng ba thanh niên đã quay lại giếng bãi rùng để rước chiếc hòm nhỏ của chú Tâm lên trả cùng. Dây kéo lên - chiếc hòm gỗ lim nhỏ còn đó, vẫn nổi trên nước. Nhưng mở ra, cả bốn người đứng im: trong hòm trống không - chỉ có bụi khô và một vệt sẫm hình chiếc bọc vải đã mục tiêu. Của tế nửa kia không còn. Ai lấy? Giếng hoang bốn mươi năm - và chiếc hòm chỉ mở được bằng chiếc chìa khóa đồng mà chỉ hai người từng giữ: Tâm đã chết, cha Hiếu cũng đã chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "empty-chest",
+      "caption": "Cha đã lấy trước khi chết",
+      "text": "Hiếu về tra lại lá thư trong hòm đồ nghề - đọc kỹ dòng cuối thì rùng mình: Nếu làng quên mất - con nhớ giùm cha: của của người khuất phải trả về nước. Cha anh không bảo con lấy hòm lên - cha chỉ bảo con nhớ điều cuối. Nghĩa là chiếc hòm trong giếng vốn đã trống từ trước: cha anh đã lấy của tế ra khỏi giếng từ năm nào - và đem nó đi đâu không ghi trong thư. Một nửa của tế vẫn nằm ngoài kia, ở một chỗ chỉ người chết biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-night",
+      "caption": "Bọc đồ xuống sông",
+      "text": "Đêm rằm, sau lễ trả đồ, ông Thân và bốn người khỏe nhất chở bọc vải đỏ xuống sông bằng chiếc xuồng nhỏ - đúng giờ tý, đúng lời thầy mo dạy: của của người khuất phải trả về nước. Giữa dòng đen thẳm, bọc vải được thả xuống. Nó không chìm ngay - nó nổi lững lờ một lúc, trôi theo dòng, rồi từ từ lắng xuống như có ai đỡ lấy từ dưới. Mặt sông lặng. Không ai nói một lời nào trên đường về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-night",
+      "caption": "Quan tài vẫn về",
+      "text": "Nhưng đêm rằm ấy - đêm cả làng thở ra vì đã trả đồ - quan tài vẫn về. Giờ hợi, người ta nghe tiếng gõ quen thuộc - cộp, cộp - không phải một hướng, mà từ phía sông đi vào, dừng lại ở bãi đất trống. Sáng hôm sau chiếc hòm đen lại nằm đó - lần này nằm ngang như lúc đầu, nắp khép kín, trên nắp để một thứ mới: bọc vải đỏ làng vừa thả xuống sông - nguyên đồ bên trong, vải ướt sũng - đặt ngay ngắn trên nắp, như một lời từ chối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "door-coffin",
+      "caption": "Nó từ chối của trả",
+      "text": "Ông Thân đứng nhìn bọc vải đỏ trên nắp hòm, tái mặt: nó không nhận - của trả nó không nhận. Thầy mo được mời đến, xem xong lắc đầu nói câu làm cả làng lạnh người: của tế trả một lần, hai lần - vong nhận hay không là việc vong. Nhưng vong mà trả lại của cho - tức là nó không đòi của. Nó đòi thứ khác. Các ông phải hỏi lại cho kỹ: bốn mươi năm trước, ngoài của tế - các ông còn lấy thêm cái gì của người ta nữa không?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-gathering",
+      "caption": "Câu hỏi cuối cùng",
+      "text": "Câu hỏi ấy treo lơ lửng trong nhà thờ họ suốt một buổi. Bảy người chết hết, cụ Đoàn bỏ đi, chỉ còn bà Nhàn mù và ông Thân là nhớ được ngày ấy. Bà Nhàn ngồi im rất lâu trên sập tre rồi mở miệng: có. Ngoài của tế - bọn nó còn lấy một thứ nữa. Xác người lạ khi vớt lên, trên cổ có đeo một sợi dây treo một lá bùa bọc đồng mỏng - bùa hộ mệnh của người chết. Bọn nó tháo lấy, bảo đồng quý, đem bán cho thầy phù thủy ngoài chợ quê."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-gathering",
+      "caption": "Lá bùa hộ mệnh",
+      "text": "Lá bùa hộ mệnh - bà nói - là thứ cuối cùng người chết còn giữ: của tế là của mang theo, còn bùa hộ mệnh là linh tính gắn với xác, là thứ giữ cho vong được đi đường, được nhận biết mình là ai. Tháo bùa khỏi xác - xác trôi lũ không bùa - vong lưu lạc không còn tên mình, không còn đường về. Bốn mươi năm trôi nổi không phải vì thiếu hòm - mà vì không còn bùa dẫn đường. Muốn nó đi - phải trả lại bùa cho xác trước đã."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mother-son",
+      "caption": "Bùa đã bán cho thầy",
+      "text": "Nhưng lá bùa đã bán cho thầy phù thủy ngoài chợ quê bốn mươi năm trước - thầy ấy chết lâu rồi, nhà cửa tán loạn. Và xác người lạ - hố cạn ngoài bãi rùng - sau bốn mươi năm lũ dữ còn gì? Ông Thân ngồi nghĩ suốt đêm rồi đứng dậy: tìm xác là việc của đất - đất còn thì xác còn. Tìm bùa là việc của người - thầy phù thủy chết nhưng đồ của thầy không chết theo. Ngày mai, đi chợ quê, tìm nhà thầy phù thủy xưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hồi kết tập 4",
+      "text": "Đêm đó, quan tài không đứng trước cửa nhà nào cả - nó quay lại bãi đất trống, nằm yên như chờ. Và Hiếu, nằm trên gác nghe tiếng nước róc rách, chợt nhớ ra một chi tiết trong lá thư của cha mà anh đã đọc qua quá nhanh: cha viết của của người khuất phải trả về nước - không phải trả về đất. Cha anh đã lấy của tế ra khỏi giếng và thả xuống sông từ rất lâu rồi. Vậy chiếc quan tài trôi vào làng không đến đòi của - nó đến báo cho biết: của đã về nước, bây giờ đến lượt người. Tập cuối, Bà Tư kể nốt."
+    }
+  ],
+  "sceneImages": {
+    "hook": "images/suckhoe-long/quan-tai-troi-tap-04/hook.jpg",
+    "door-coffin": "images/suckhoe-long/quan-tai-troi-tap-04/door-coffin.jpg",
+    "village-houses": "images/suckhoe-long/quan-tai-troi-tap-04/village-houses.jpg",
+    "village-gathering": "images/suckhoe-long/quan-tai-troi-tap-04/village-gathering.jpg",
+    "return-goods": "images/suckhoe-long/quan-tai-troi-tap-04/return-goods.jpg",
+    "mother-son": "images/suckhoe-long/quan-tai-troi-tap-04/mother-son.jpg",
+    "empty-chest": "images/suckhoe-long/quan-tai-troi-tap-04/empty-chest.jpg",
+    "river-night": "images/suckhoe-long/quan-tai-troi-tap-04/river-night.jpg"
+  }
+}

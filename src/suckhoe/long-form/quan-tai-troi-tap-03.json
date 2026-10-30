@@ -1,0 +1,164 @@
+{
+  "slug": "quan-tai-troi-tap-03",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "QUAN TÀI TRÔI | Tập 3: Giếng Bỏ Hoang Ngoài Bãi Rùng - Nơi Giấu Của Tế | Truyện Ma Dài",
+  "description": "Bà cô mù tiết lộ đoạn cuối bị giấu bốn mươi năm: hố cạn ngoài bãi rùng không chỉ có xác người lạ, và thợ mộc Tâm đã giấu nửa của tế ở một giếng bỏ hoang trước khi chết. Hiếu mở hòm đồ nghề của cha tìm ra những gì bị chôn - và nhận ra mình cũng đang đeo trên người một món của tế.\n\nTruyện ma dài 5 tập về chiếc quan tài trôi và lời thề bốn mươi năm của một làng quê, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "quan tài trôi",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện",
+    "ma nước lũ"
+  ],
+  "hashtags": "#truyenma #truyenmadai #quantaitroi #manuoclu #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "GIẾNG HOANG GIỮA BÃI RÙNG",
+  "scenePrompts": {
+    "hook": "an abandoned stone well in a wild overgrown field at dusk, black water inside, mist, dead trees around, Vietnamese countryside horror",
+    "blind-aunt": "an old blind Vietnamese woman sitting on a bamboo bed inside a dark hut, white clouded eyes, oil lamp beside her, weathered face",
+    "toolbox-attic": "a dusty old carpenter wooden toolbox hanging on a beam inside a dark attic, a copper padlock with carved serpent, cobwebs",
+    "secret-letter": "an old folded yellowed letter and a small bronze key on a wooden table by candlelight, Vietnamese handwriting, dark room",
+    "flood-memory": "memory scene of a terrible flood long ago, dark brown water covering everything, a coffin floating between drowned trees, monsoon night",
+    "seven-graves": "seven small unmarked earthen graves on a bare mound, no headstones, grey sky, a desolate flooded plain behind",
+    "well-approach": "a young man with a lantern approaching an abandoned stone well in a dark flooded field at night, fog, dead grass",
+    "water-in-well": "looking down into a dark stone well, black water surface reflecting a pale circle of sky, something pale barely visible under water",
+    "bronze-locket": "a small antique copper locket pendant held in a palm, carved serpent design, opened to show a tiny folded paper inside, candlelight"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "blind-aunt",
+      "caption": "Bà cô mù kể đoạn cuối",
+      "text": "Bà cô mù tên thật là bà Nhàn - tám mươi mốt tuổi, mù từ năm mười bảy, nhưng tai bà nghe được cả tiếng giun đào đất. Năm ấy bà là vợ của một người trong hội đồng làng - một trong bảy người đã chết. Bà kể cho Hiếu nghe đoạn cuối mà nhà thờ họ không ghi vào sổ: hố cạn ngoài bãi rùng hồi ấy, người ta không chỉ vùi xác người lạ - người ta còn vùi luôn cả đám tang cắt ngang: không khấn, không hương, không mã, xác xoay mặt vào vách đất vì đào vội."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "blind-aunt",
+      "caption": "Chôn người như chôn rác",
+      "text": "Chôn người mà xoay mặt vào vách - bà nói - là chôn rác, không phải chôn người. Người xưa giữ kỹ lắm mặt xác phải ngửa lên trời, vì mặt úp xuống đất là người ấy đi không đường - phải bò dưới đất tìm lối ra. Chồng bà về kể với bà hôm ấy, bà đã khuyên đào lại sửa cho ngửa, ít nhất là thế. Chồng bà cười: vàng đã chia rồi, ai nhọc đào lại. Một năm sau chồng bà là người thứ ba trong bảy người nằm xuống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flood-memory",
+      "caption": "Của tế chia làm hai",
+      "text": "Của tế trong bọc vải đỏ được chia làm hai phần, bà kể tiếp. Một nửa - vàng nhẫn, lụa - hội đồng chia ngay trong đêm cho bảy nhà. Nửa còn lại - trần hương quý và chiếc khóa cổ bằng đồng - thợ mộc Tâm xin giữ, nói để anh giữ, mai anh đem bán được giá hơn rồi chia. Nhưng Tâm không bán. Tâm là người cuối cùng còn thức tỉnh: hôm sau Tâm đi tìm thầy mo, được dạy rằng của tế đã đụng tay thì không trả được bằng cách quăng đi - phải có lễ, phải có chỗ xin. Tâm giấu nửa ấy đi để cúng kiến trả vong."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flood-memory",
+      "caption": "Tâm chết trước lễ",
+      "text": "Nhưng Tâm không kịp làm lễ. Đêm trước hôm định cúng, Tâm đi một mình ra bãi rùng - người ta đoán là để xem lại chỗ chôn xác người lạ - và không về. Sáng hôm sau tìm thấy Tâm nằm chết cứng trên mô đất hố chôn, mặt úp xuống, hai tay đào đất đến nứt móng - như Tâm đã đào suốt đêm để sửa lại cái mồ cho ngửa, và cái gì dưới đất không đợi được. Tâm chết úp mặt - đúng tư thế cả hội đồng đã chôn người ta."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "seven-graves",
+      "caption": "Bảy ngôi mộ không tên",
+      "text": "Bảy người chết trong năm ấy - bà đếm từng người trên đầu ngón tay cho Hiếu nghe - đều được chôn ở mấy quả đất cạnh bãi rùng, mộ không bia, vì sợ ai đó hỏi sao cùng một hội đồng lại đi hết trong một năm. Bảy mộ không tên nằm nhìn ra sông, cách chỗ vùi xác người lạ có trăm bước. Từ đó đất ấy gọi là bãi rùng - bãi của người chết rùng mình - không ai đi đêm, không ai cắt cỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "blind-aunt",
+      "caption": "Điều bà nghe đêm lụt",
+      "text": "Bà Nhàn còn kể một điều bà giữ mãi đến tận bây giờ: mù bà không nhìn, nhưng đêm động mồ ấy - đêm hội đồng chia của - bà nằm trong nhà nghe thấy tiếng nước gầm lên bất thường ở chỗ bãi rùng, và trong tiếng nước ấy có tiếng người đàn ông nói. Không phải khóc, không phải gọi - nói. Nói đều đều như đọc, kéo dài cả canh, mà bà nghe mãi không ra chữ nào. Chồng bà về nhà đêm ấy run bắn người - ông cũng nghe thấy. Ông nói với bà đúng một câu rồi cấm bà kể lại: nó đọc tên từng người bọn mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "toolbox-attic",
+      "caption": "Mở hòm đồ nghề của cha",
+      "text": "Hiếu về nhà, trèo lên xà, hạ cái hòm đồ nghề của cha xuống - lần đầu tiên sau mười lăm năm. Chiếc khóa đồng treo trên đó vẫn còn. Anh lấy chiếc khóa thứ hai - chiếc từ vệt bùn - tra vào ổ. Khớp khít như đúc một khuôn. Nắp hòm mở ra, mùi gỗ lim khô và mùi thuốc diệt mốc xộc lên. Bên trong: bào, đục, thước, búa - xếp ngăn nắp theo đúng thứ tự cha anh sắp đặt từ hồi còn sống. Và dưới đáy hòm, lót dưới tấm ván, một thứ không phải đồ nghề."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "secret-letter",
+      "caption": "Lá thư trong đáy hòm",
+      "text": "Dưới tấm ván đáy là một gói vải dầu buộc kỹ: bên trong một lá thư gấp tư đã vàng, và một chiếc chìa khóa đồng nhỏ. Lá thư cha Hiếu viết tay, nét gấp gáp, không ghi ngày: Gửi lại cho con, nếu con tìm được tờ này. Cha đóng chiếc hòm thứ hai để trả nợ cho chú Tâm - chú ấy bảo cha giữ hộ của ấy. Trong giếng bỏ hoang ngoài bãi rùng có cái hòm nhỏ của chú Tâm, khóa bằng chiếc chìa này. Nếu làng quên mất - con nhớ giùm cha: của của người khuất phải trả về nước, không được giữ trong nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "secret-letter",
+      "caption": "Cha đã giữ thay",
+      "text": "Nghĩa là nửa của tế Tâm giấu đi - không phải mất. Tâm đã giao cho người bạn thân duy nhất mình tin là thợ mộc Dậu, cha Hiếu. Cha Hiếu giấu nó trong giếng bỏ hoang, và viết lá thư này để lại - phòng thân. Một năm sau cha Hiếu chết đuối mùa lũ, đi đánh cá đêm. Câu hỏi làm Hiếu lạnh sống lưng: cha anh chết khi nào - trước hay sau khi giấu của tế vào giếng? Và nếu là trước - thì ai đã giấu chiếc hòm nhỏ ấy xuống giếng thay cha?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "toolbox-attic",
+      "caption": "Dấu tay trên tấm ván",
+      "text": "Hiếu lật lại tấm ván đáy hòm lần nữa thì thấy ở mặt dưới, chỗ khuất mắt, có một vết xước chạy dọc - không phải vết bào, vết đục - mà như vệt móng tay ai cào khi đóng hòm gấp. Dưới vết xước là một nét khắc nhỏ, nông và lộn xộn, khác hẳn nét chữ trong thư: chỉ một nét cong móc vào trong. Như ai đó muốn khắc nốt một câu mà không kịp. Cha anh đóng hòm này trong một đêm - đêm nào, và đang sợ điều gì, thì lá thư không nói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bronze-locket",
+      "caption": "Chiếc khóa cổ Hiếu đeo",
+      "text": "Và rồi, xúc động chưa nguội, Hiếu nhớ ra một thứ - tay anh nắm lấy chiếc khóa cổ trên ngực áo mình, thứ anh đeo từ nhỏ đến lớn không rời. Mẹ từng bảo: khóa này cha con kiếm được trong một lần đi làm, quý lắm, đeo cho con giữ bình an. Chiếc khóa cổ đồng khắc rồng quấn - trong danh sách của tế bà Nhàn kể, có một chiếc khóa cổ bằng đồng. Hiếu tháo nó ra, mở nắp bấm: bên trong không có ảnh - chỉ có một mẩu giấy cuộn nhỏ, vàng ố, viết một dòng không phải nét cha anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bronze-locket",
+      "caption": "Dòng chữ trong khóa",
+      "text": "Dòng chữ trong chiếc khóa cổ, viết bằng nét chữ nho cổ, mực đã nhạt nhưng đọc được: đồ của ông Lãnh - người mặc nhớ trả. Hiếu ngồi đó rất lâu. Cha anh đã lấy một món của tế - không nói cho ai - và trao nó cho con trai đeo như bùa bình mệnh. Vậy là nhà anh cũng có phần trong món nợ bốn mươi năm. Và chiếc khóa cổ ấy - vong nhân để lại một chiếc khóa giống hệt trước cửa nhà anh - chính là nó đang đếm đồ: cái gì của nó, nó biết nhà nào giữ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-approach",
+      "caption": "Ra giếng bỏ hoang",
+      "text": "Chiều hôm ấy, một mình một đèn một chiếc chìa khóa đồng, Hiếu đi ra bãi rùng. Bảy ngôi mộ không tên lởm chởm trên mô đất, cỏ cao quá đầu. Giữa chúng là cái giếng đá xây kiểu xưa - miệng nhỏ, thành cao, thạch anh rêu đen - giếng của một nhà đã chết hết người từ đời nào, nước giếng đen đứng không ai vớt. Người xưa gọi giếng không người dùng là giếng âm - nước trong đó chỉ có người dưới kia uống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "water-in-well",
+      "caption": "Nhìn xuống đáy giếng",
+      "text": "Hiếu hạ đèn xuống miệng giếng. Đáy sâu hun hút, mặt nước đen láy phản chiếu cái vòng trời xám lợt - và ngay dưới mặt nước, chỗ tối chỗ sáng, một cái gì đó trắng nhạt lờ đờ - như cái nắp hòm nhỏ đang nổi lững lờ. Anh kéo dây thăm dò: chiếc hòm nhỏ bằng hai bàn tay, gỗ lim, khắc con rồng quấn đuôi thả ra - cùng một bàn tay với chiếc quan tài trôi. Của tế của chú Tâm - và cả đồ cha anh giấu đi - vẫn còn trong giếng, chờ ai đó mở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "water-in-well",
+      "caption": "Hòm nổi trong giếng",
+      "text": "Nhưng khi Hiếu hạ gầu xuống thì chiếc hòm nhỏ lùi ra xa mũi gầu - nhẹ nhàng, chậm rãi, như có ai dưới nước kéo nó đi. Anh hạ dây sâu hơn, nghiêng người quá miệng giếng - và thấy, lọt trong vòng sáng của ngọn đèn, mặt nước phía dưới có một vệt ngời lên - hai chấm sáng mờ như ánh đom đom, hướng thẳng lên nhìn anh. Hiếu giật mình ngả ra sau, dây gầu tuột tay rơi tõm xuống giếng. Không một tiếng động."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-approach",
+      "caption": "Có mùi hương trầm",
+      "text": "Khi lấy lại bình tĩnh ngồi bệt bên thành giếng, Hiếu mới để ý mùi. Trong cái mùi đất ẩm cỏ úa của bãi rùng có một mùi khác thấm vào - thơm, nóng, quen nhưng không gọi tên được ngay. Rồi anh nhận ra: trầm hương. Mùi trầm quý mà nhà thờ họ chỉ đốt trong đám giỗ lớn. Trong giếng hoang bốn mươi năm không ai thắp nhang, mùi trầm ấy chỉ có thể bốc lên từ một chỗ: từ bọc của tế còn nguyên trong hòm, đang nổi dưới mặt nước đen kia."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "seven-graves",
+      "caption": "Có người đứng xem",
+      "text": "Anh lồm cồm đứng dậy, cầm đèn rảo bước về - và dừng cứng khi ngoảnh lại: trên mô đất bảy ngôi mộ, giữa màn sương chiều đặc quánh, có một bóng người đứng im nhìn về phía giếng. Gầy, cao, đứng nghiêng đầu sang một bên, hai tay buông dài tới gối - không động đậy, không mờ đi, cứ đứng đó. Hiếu không dám nhìn lần hai. Anh chạy, ngã, đứng dậy chạy tiếp - về tới nhà mới nhận ra mình đánh mất ngọn đèn dầu ngoài bãi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "well-approach",
+      "caption": "Đèn trên miệng giếng",
+      "text": "Tối hôm ấy người đi đánh cá về ngang bãi rùng kể lại: trên miệng giếng hoang có một ngọn đèn dầu đứng sáng cháy - đúng ngọn đèn Hiếu đánh rơi. Ngọn đèn không tắt, cháy đứng ngay ngắn trên thành giếng, như có ai nhặt lên đặt lại và châm mồi cho. Người đánh cá không dám lại gần - chỉ nhìn xa thấy quanh giếng, đất in dấu chân trần - nhiều dấu chân, vòng quanh giếng - tất cả đều quay mũi vào trong giếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hồi kết tập 3",
+      "text": "Đêm ấy, Hiếu kể hết cho mẹ nghe. Mẹ anh ngồi im, rồi khóc không tiếng - và chính miệng bà nói ra sự thật cuối cùng: chiếc khóa cổ ấy không phải cha con kiếm được. Cha con lấy nó trong bọc của tế, bà biết từ đầu, bà cãi nhau với chồng một trận lớn vì nó - và sau khi chồng chết, bà vẫn để con đeo, vì bà sợ tháo ra thì vong tìm đến. Bà khóc nói: nó để khóa ở cửa là nó đến đòi - của nó ở trên người con, con ạ. Tập sau là đêm làng mở hội trả đồ - và đêm quan tài đứng trước từng cửa."
+    }
+  ],
+  "sceneImages": {
+    "hook": "images/suckhoe-long/quan-tai-troi-tap-03/hook.jpg",
+    "blind-aunt": "images/suckhoe-long/quan-tai-troi-tap-03/blind-aunt.jpg",
+    "toolbox-attic": "images/suckhoe-long/quan-tai-troi-tap-03/toolbox-attic.jpg",
+    "secret-letter": "images/suckhoe-long/quan-tai-troi-tap-03/secret-letter.jpg",
+    "flood-memory": "images/suckhoe-long/quan-tai-troi-tap-03/flood-memory.jpg",
+    "seven-graves": "images/suckhoe-long/quan-tai-troi-tap-03/seven-graves.jpg",
+    "well-approach": "images/suckhoe-long/quan-tai-troi-tap-03/well-approach.jpg",
+    "water-in-well": "images/suckhoe-long/quan-tai-troi-tap-03/water-in-well.jpg",
+    "bronze-locket": "images/suckhoe-long/quan-tai-troi-tap-03/bronze-locket.jpg"
+  }
+}

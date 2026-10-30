@@ -1,0 +1,210 @@
+{
+  "slug": "quan-tai-troi-tap-01",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "QUAN TÀI TRÔI | Tập 1: Quan Tài Đen Trôi Vào Làng - Dấu Khắc Giống Mộ Cha | Truyện Ma Dài",
+  "description": "Mùa nước lũ, một chiếc quan tài gỗ lim đen ngòm trôi vào bãi đất trống đầu làng. Cụ trưởng làng ra lệnh cấm mở, cấm đốt, chỉ được đẩy trôi đi. Nhưng Hiếu nhận ra trên nắp quan tài có khắc một dấu rồng quấn - giống hệt dấu trên nắp hòm của cha mình, người vừa phải chôn vội trong trận lũ năm ngoái.\n\nTruyện ma dài 5 tập về chiếc quan tài trôi và lời thề bốn mươi năm của một làng quê, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "quan tài trôi",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện",
+    "ma nước lũ"
+  ],
+  "hashtags": "#truyenma #truyenmadai #quantaitroi #manuoclu #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "QUAN TÀI TRÔI VÀO LÀNG",
+  "scenePrompts": {
+    "hook": "a black wooden coffin drifting alone on a vast flooded river at dusk, thick fog, a Vietnamese village silhouette far behind, cinematic horror",
+    "flooded-village": "a Vietnamese rural village half-submerged in brown floodwater, tiled roofs and treetops above water, grey monsoon sky, no people visible",
+    "river-bank": "a muddy riverbank at a Vietnamese village, floodwater carrying debris, a crowd of small villager silhouettes standing still watching the water, evening",
+    "village-meeting": "interior of an old Vietnamese communal clan house at night, oil lamps, elderly men in dark clothes sitting around a low table, shadows on wooden pillars",
+    "coffin-closeup": "close-up of an old black wooden coffin lid covered in river mud and moss, a faded carved serpent-dragon mark on the wood, wet surface reflecting faint lantern light",
+    "hieu-house": "a small Vietnamese stilt house above floodwater at night, one dim oil lamp in a window, dark water reflecting below, lonely atmosphere",
+    "night-window": "view from inside a dark room through a wooden window toward a black river at night, thin mist, a faint pale shape on the water far away",
+    "knocking-dark": "a pitch-black flooded river at night, a black coffin silhouette barely visible near the bank, a single distant lantern glow, oppressive darkness"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Quan tài trôi vào làng",
+      "text": "Chiếc quan tài trôi vào làng Đoài vào một buổi chiều nước lên - lặng lẽ, ngang nhiên, như một cỗ thuyền không người chèo biết đường về nhà. Nó không mắc vào đám bèo tây đang chảy cuồn cuộn giữa dòng. Nó cứ lênh đênh men theo mép nước, qua cây đa đầu làng, rồi xoay mình - đúng nghiệp xoay - đỗ vào bãi đất trống trước nhà họ Trịnh, như hành khách xuống đúng bến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flooded-village",
+      "caption": "Mùa nước lũ",
+      "text": "Năm đó là năm lụt lớn. Nước sông Hồng dâng lên từ đầu tháng bảy, ngập qua đê điếu, tràn vào tận sân nhà. Làng Đoài nằm thấp lọt thỏm giữa một vùng trũng, quanh năm quen sống chung với lũ - nhưng nước năm ấy khác. Nó đen hơn, đứng lại lâu hơn, và nó mang về những thứ mà mấy đời nay làng không từng thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flooded-village",
+      "caption": "Làng trong nước",
+      "text": "Người làng Đoài kể lại rằng trưa hôm ấy trời âm u như sắp tối, ếch nhái kêu râm ran từ giữa bữa. Mấy bà con đi gánh nước về nhìn thấy vật đen nổi lờ đờ ngoài đầu bãi, tưởng thân cây. Đến gần mới rùng mình: không phải cây - là một chiếc hòm. Gỗ lim đen ngòm, đầu to đuôi nhỏ, đúng kiểu hòm già xưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Dân làng kéo ra xem",
+      "text": "Tin đồn chạy nhanh hơn nước lũ. Chưa đầy một khắc, bãi đất trống đã kín người. Ai cũng đứng xa một khoảng, đan tay, rỉ tai. Không ai động vào. Ở làng quê, quan tài trôi không phải chuyện lạ một trăm phần trăm - lũ cuốn mồ mả, cuốn hòm từ những làng thượng nguồn là chuyện có. Nhưng cách nó đỗ - tự quay đầu, tự tìm bến, đỗ ngay trước cửa nhà họ lớn nhất làng - thì chưa ai thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Ba điều lạ",
+      "text": "Bà Sáu bán thuốc đầu ngõ nói ba điều lạ. Một: hòm không nghiêng, không lật, nổi ngay băng như có người nằm bên trong giữ thăng bằng. Hai: quanh hòm không có rác - bèo, rơm, cành cây đều né ra xa nửa sải. Ba: mặt nước quanh cái bãi đỗ ấy đen hơn hẳn chỗ khác, đen như ai đổ một vũng mực."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Cụ trưởng làng ra lệnh",
+      "text": "Cụ Đoàn - trưởng làng, bảy mươi tám tuổi, điếu cày cắm ngược túi áo - được mời ra xem. Cụ đứng nhìn chiếc hòm rất lâu, lâu đến mức người ta nghe rõ tiếng nước róc rách vào mép gỗ. Rồi cụ quay lưng, nói một trận to nhất từ sáng đến giờ: cấm mở. Cấm đốt. Cấm ai đụng tay vào. Chờ nước xuống một tý, lấy thuyền kéo nó ra giữa dòng, buông cho trôi. Quan tài trôi thì phải trả về sông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Luật cũ của sông",
+      "text": "Đó là luật cũ, cụ nói, luật mấy đời sống với sông. Quan tài trôi vào đất mình là vong nhà người ta lạc đường - đẩy trôi đi là tiễn khách, giữ lại là rước họa. Chôn nó trong đất làng thì đất làng gánh nghiệp. Đốt nó thì khói vỡ ra là bệnh. Mở nó thì - cụ ngừng lại, hút một hơi điếu cày dài - mở nó thì ai mở người đó đền."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-closeup",
+      "caption": "Hiếu nhìn thấy dấu khắc",
+      "text": "Giữa đám đông lùi ra theo lệnh cụ, chỉ có một người đứng lại. Hiếu - con trai bác Dậu vừa mất đầu năm - nín thở nhìn vào mặt nắp quan tài. Dưới lớp bùn đen còn sót một nét khắc: con rồng quấn thành vòng, đầu ngậm đuôi, đuôi ngoặt ngược vào trong - một nét khắc lệch tay, móng cuối cùng hơi đứt. Hiếu biết nét đứt ấy. Anh đã nhìn nó cả trăm lần - trên nắp hòm của cha mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-closeup",
+      "caption": "Giống hệt hòm của cha",
+      "text": "Cha Hiếu - bác Dậu - là thợ mộc, tự đóng lấy hòm cho mình từ mười năm trước, khắc lên nắp con rồng quấn theo kiểu riêng ông nghĩ ra: đuôi ngoặt vào thay vì thả ra, ông bảo để giữ lộc không cho chảy đi. Cả vùng không ai khắc kiểu ấy. Hòm bác Dậu được chôn vội năm ngoái giữa trận lũ, trên gò đất cao ngoài bãi đậu. Vậy chiếc hòm đen trôi vào làng hôm nay - khắc cùng một con rồng, cùng một nét đứt - là của ai?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hieu-house",
+      "caption": "Cha chôn vội trong lũ",
+      "text": "Hiếu về nhà trong nước mắt nhoà đi không biết. Mẹ anh đang chắt nước khỏi sập, nghe con kể thì ngồi bệt xuống, đèn dầu trong tay rung lẩy bẩy. Bà không nói gì một lúc lâu, rồi lầm bầm đúng một câu: hòm nhà mình con ạ - ta mua gỗ của chính tay cha con đóng. Nét rồng ấy, trời đất chỉ có một thợ làm. Nếu hòm ngoài bãi là hòm ấy - thì người nằm trong mồ cha con là ai?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hieu-house",
+      "caption": "Mồ cha còn nguyên không",
+      "text": "Câu hỏi ấy đốt Hiếu cả buổi tối. Trận lũ năm ngoái, nước lên nhanh đến mức người ta chỉ kịp chuyển người già trẻ con lên gác. Xác bác Dậu được con đò khiên ra bãi đậu, đào hố vội, chôn tạm định năm sau cải táng. Sau đó nước đứng mấy tháng. Gò đất ngoài ấy - nếu nước cuốn mất mồ, xác cha trôi đi đâu, và chiếc hòm thừa quay về làng làm gì?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Canh quan tài đêm đó",
+      "text": "Tối đó, theo lệnh cụ Đoàn, bốn thanh niên được cử canh chiếc hòm - canh không phải sợ ai lấy, mà sợ có kẻ tò mò mở ra. Hiếu xin vào ca đầu. Anh ngồi trong lều bạt dựng tạm, nhìn cái bóng đen nằm chơ vơ trên bãi đất cằn. Nước rút chậm, để lại quanh hòm một vệt bùn nhẵn bóng - trông như ai quệt một vòng tròn vây kín."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "knocking-dark",
+      "caption": "Tiếng gõ trong đêm",
+      "text": "Khoảng giờ hợi, Hiếu nghe thấy tiếng gõ. Khẽ thôi - cộp - rồi lại cộp - đều đặn, chậm rãi, như đầu ngón tay gõ vào gỗ ướt. Anh tưởng nước đập vào mép hòm. Nhưng nước đã rút khỏi bãi từ chập tối, hòm nằm khô trên bùn. Tiếng gõ vẫn đều: cộp - cộp - cộp - và hướng của nó, lạ thay, không phải từ trong hòm đi ra. Nó đi từ phía sông, đi vào bờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "knocking-dark",
+      "caption": "Tiếng gõ từ lòng sông",
+      "text": "Hiếu thò đầu ra khỏi lều. Mặt sông đen thẳm, không một ngọn đèn. Giữa màn đen ấy, tiếng gõ nghe rõ mồn một - không phải một tiếng, mà nhiều tiếng chồng nhau, thưa thớt, lêu đêu, như một hàng người đi dưới nước cùng gõ vào mạn thuyền từ dưới lên. Và trong lúc lắng nghe, anh chợt nhận ra điều làm lưng anh lạnh toát: tiếng gõ ấy, nhịp của nó giống hệt nhịp gõ từ chiếc hòm đang nằm trên bãi - như hai đầu dây đang trả lời nhau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-window",
+      "caption": "Cả làng đều nghe thấy",
+      "text": "Sáng hôm sau, Hiếu không phải người duy nhất mất ngủ. Bà Sáu bán thuốc nói bà nghe tiếng gõ suốt từ giờ hợi đến giờ sửu. Nhà thầy cả cuối ngõ nghe rõ hơn nữa - tiếng gõ như đi một vòng quanh làng, từ bãi đất trống đi dần ra đê, rồi lại quay vào. Mấy cụ già nhìn nhau không nói. Chỉ cụ Đoàn nghiến răng: nước lên. Nó đi dò đê đấy. Giữ vững hai bữa nữa là nó đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Cụ giấu một điều",
+      "text": "Nhưng Hiếu nhìn thấy điều mấy đứa thanh niên không thấy: khi nói câu ấy, tay cụ Đoàn rút điếu cày ra khỏi miệng - và điếu cày đã tắt từ đời nào, cụ vẫn hút, vẫn rít, như một người đang mút lấy cái gì để không phải nói ra. Cụ trưởng làng Đoài biết chiếc hòm ấy là gì. Cụ biết từ cái nhìn đầu tiên, từ hôm qua, đứng rất lâu trên bãi đất ấy. Và cụ đã chọn nói dối cả làng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Bốn mươi năm trước",
+      "text": "Bốn mươi năm trước, làng Đoài cũng gặp một trận lụt lớn như vậy. Cũng có một chiếc quan tài trôi vào đúng cái bãi đất trống ấy. Làng xưa chuyện ấy lắm người còn nhớ - nhưng không ai kể, vì những người kể được đều đã nằm xuống cả. Chỉ còn một bà cô mù sống cuối ngõ, và một cụ già giữ sổ nhà thờ họ - và một cụ trưởng làng năm ấy còn là trai trẻ, đứng trong nhóm người ra quyết định sai lầm nhất đời mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-closeup",
+      "caption": "Nước không chịu rút",
+      "text": "Hai hôm sau, nước không rút như cụ Đoàn trông. Nó cứ đứng im, đen ngòm, và chiếc hòm cứ nằm im trên bãi - không ai đẩy được, vì lạ một điều nữa: khi bốn thanh niên kèo nhau rước hòm ra thuyền, nó nặng như chì. Sáu người hì hục không nhúc nhích. Thuyền đậu sẵn sàng ngoài bãi, ai cũng nhìn nhau. Cuối cùng người ta buông xuống, nói với nhau đợi nước lên thêm tí cho nổi - câu chữa lỗi ai cũng biết là lỡ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "knocking-dark",
+      "caption": "Đêm thứ ba",
+      "text": "Đêm thứ ba, tiếng gõ không còn ở ngoài sông nữa. Nó vào trong làng. Người ta nghe thấy nó đi trên những con đường ngập nước - cộp, cộp - dừng lại trước một cửa, lặng một lúc, rồi đi tiếp. Không ai dám mở cửa. Sáng ra, trước cửa nhà ông Thân - chức sắc già nhất dòng họ Trịnh - có một vệt bùn loang hình chữ nhật, dài bằng một chiếc hòm. Còn chiếc hòm thật vẫn nằm nguyên trên bãi, yên ắng như chưa từng đi đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-closeup",
+      "caption": "Vệt bùn trước cửa",
+      "text": "Vệt bùn trước cửa ông Thân không giống vệt kéo lê. Hai mép dài song song, bốn góc vuông vắn, đầu hơi to hơn đuôi - đúng dáng cái bóng quan tài in xuống đất. Giữa vệt bùn, người ta nhặt được một thứ nhỏ: một cánh trầu nhai dở, tươm nước trầu đỏ, thơm mùi vôi chát - loại trầu chỉ mấy bà già sống một thời mới còn nhai. Mà ông Thân không có bà nào trong nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hieu-house",
+      "caption": "Hiếu đào mồ cha",
+      "text": "Sáng hôm ấy, không nói với ai, Hiếu đội nước ra bãi đậu. Gò đất chôn cha vẫn còn - đống đất mốc mò, cây dại mọc lấp. Nhưng khi anh cắm cuốc xuống thì biết ngay không cần đào sâu: đất mềm nhũn, hố sập, lớp đất trên cùng đã bị nước vét rỗng như ruột. Anh đào đến mạch nước ngầm, chỉ thấy bùn và một mảnh ván mục - góc nắp hòm, có vài nét khắc còn sót lại. Hòm của cha đã vỡ. Xác cha không còn trong đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-closeup",
+      "caption": "Nắp hòm khắc ngược",
+      "text": "Hiếu quay lại bãi đất trống, quỳ xuống cạnh chiếc hòm đen, lần tay theo nét khắc con rồng trên nắp - và lạnh người nhận ra điều hôm qua anh không đủ bình tĩnh để thấy: con rồng này khắc ngược chiều. Trên hòm cha, đuôi rồng ngoặt vào trong - giữ lộc. Trên chiếc hòm này, cùng một bàn tay, cùng một nét đứt - nhưng đuôi rồng thả ra ngoài, chỉ xuống đất. Cùng một người khắc. Hai chiếc hòm sinh đôi. Và chiếc thứ hai - cha anh đóng cho ai?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-bank",
+      "caption": "Chiếc hòm thứ hai",
+      "text": "Bởi vì những người thợ mộc già trong vùng đều biết một điều ít ai nói ra: người ta chỉ đóng sẵn hòm cho mình khi tuổi thọ cho phép - hòm riêng của mỗi người chỉ có một. Nếu một thợ mộc đóng chiếc thứ hai - cùng kiểu, cùng dấu, khắc ngược - thì chiếc ấy không phải hòm cho người sống. Đó là hòm trả nợ. Cho một vong đã có hòm mà mất hòm - phải trả một chiếc giống hệt, nét ngược, để vong ấy có chỗ nằm lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "knocking-dark",
+      "caption": "Cộp - cộp - cộp",
+      "text": "Tối đó, tiếng gõ vòng quanh làng lần thứ tư. Nhưng lần này nó không dừng trước cửa nhà ông Thân nữa. Nó đi qua ngõ nhỏ, men theo mương nước, dừng lại trước cửa nhà Hiếu. Cộp - cộp - cộp - ba tiếng chậm rãi, rõ ràng, kiên nhẫn như người quen ghé thăm. Hiếu và mẹ ngồi im trong bóng tối, không thắp đèn, nghe nó đứng ở đó cả một khắc đồng hồ. Rồi nó đi - và sáng hôm sau, trước cửa nhà Hiếu có một vệt bùn hình chữ nhật. Và trong vệt bùn ấy - một chiếc khóa cổ bằng đồng, đen xỉn, khắc hình con rồng quấn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hieu-house",
+      "caption": "Chiếc khóa quen thuộc",
+      "text": "Mẹ Hiếu nhìn chiếc khóa đồng trên tay con trai mà mặt không còn giọt máu. Bà biết chiếc khóa ấy - nó khóa cái hòm gỗ đựng đồ nghề của chồng bà, treo chéo trên xà nhà mười lăm năm trời. Sáng nay cái hòm đồ nghề vẫn còn trên xà - mở ra xem, khóa vẫn còn đó. Vậy chiếc khóa nằm trong vệt bùn trước cửa - giống đến từng vết xước - là của cái hòm nào? Của chiếc hòm thứ hai - chiếc mà cha con đã đóng trả nợ cho ai đó, và người ta đã không cho nó nằm yên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hồi kết tập 1",
+      "text": "Đêm ấy, Hiếu ngồi nhìn chiếc hòm đen trên bãi từ cửa sổ gác. Nửa đêm, dưới ánh trăng xanh lọt qua mây mù, anh thấy rõ một điều mà ban ngày nước đục đã giấu: bốn góc chiếc hòm có bốn vệt trầu đỏ loang, như ai ngồi bệt bên dưới nhai trầu, khắc nhổ suốt bốn phía. Người canh gác nói không ai đến gần. Vậy thì từ phía nước sông ấy - có bốn người, hay một cái gì đó đi bốn chân - đã lên bờ, ngồi quanh chiếc hòm trọn một đêm, như một đám tang không khóc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "knocking-dark",
+      "caption": "Nghe tiếp tập 2",
+      "text": "Sáng hôm sau làng Đoài họp bất thường, vì ông Thân - chức sắc nhà họ Trịnh - đã lén mở chiếc hòm trong đêm, theo cái vệt bùn dẫn về tận cửa nhà mình. Và những gì ông kể lại khiến cụ Đoàn đánh rơi cả điếu cày: bên trong chiếc quan tài trôi bốn mươi năm ấy, không có xác - chỉ có một bộ đồ tang ướt sũng và một tấm bia gỗ khắc tên một người đang còn sống trong làng. Tập sau, Bà Tư kể tiếp cho các con nghe."
+    }
+  ],
+  "sceneImages": {
+    "hook": "images/suckhoe-long/quan-tai-troi-tap-01/hook.jpg",
+    "flooded-village": "images/suckhoe-long/quan-tai-troi-tap-01/flooded-village.jpg",
+    "river-bank": "images/suckhoe-long/quan-tai-troi-tap-01/river-bank.jpg",
+    "village-meeting": "images/suckhoe-long/quan-tai-troi-tap-01/village-meeting.jpg",
+    "coffin-closeup": "images/suckhoe-long/quan-tai-troi-tap-01/coffin-closeup.jpg",
+    "hieu-house": "images/suckhoe-long/quan-tai-troi-tap-01/hieu-house.jpg",
+    "night-window": "images/suckhoe-long/quan-tai-troi-tap-01/night-window.jpg",
+    "knocking-dark": "images/suckhoe-long/quan-tai-troi-tap-01/knocking-dark.jpg"
+  }
+}

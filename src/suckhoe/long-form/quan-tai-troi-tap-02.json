@@ -1,0 +1,184 @@
+{
+  "slug": "quan-tai-troi-tap-02",
+  "locale": "vi",
+  "queuePriority": 1,
+  "title": "QUAN TÀI TRÔI | Tập 2: Mở Quan Tài - Không Có Xác, Chỉ Có Tên Người Còn Sống | Truyện Ma Dài",
+  "description": "Ông Thân lén mở chiếc quan tài trôi trong đêm - bên trong không có xác, chỉ một bộ đồ tang ướt sũng và tấm bia gỗ khắc tên một người đang sống trong làng. Cụ trưởng làng ra lệnh đốt ngay đêm đó, nhưng lửa không cháy được gỗ lim ngấm nước đen. Đêm ấy cụ bỏ làng đi không về.\n\nTruyện ma dài 5 tập về chiếc quan tài trôi và lời thề bốn mươi năm của một làng quê, kể bởi Bà Tư.",
+  "prosody": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "volume": "+10%"
+  },
+  "tags": [
+    "truyện ma",
+    "truyện ma dài",
+    "quan tài trôi",
+    "truyện ma dân gian",
+    "truyện ma làng quê",
+    "truyện ma có thật",
+    "kinh dị việt nam",
+    "truyện ma audio",
+    "bà tư kể chuyện",
+    "ma nước lũ"
+  ],
+  "hashtags": "#truyenma #truyenmadai #quantaitroi #manuoclu #nghetruyen #truyenmacothat #kinhdi #audiobook",
+  "thumbTitle": "BIÊN BIA KHẮC TÊN NGƯỜI SỐNG",
+  "scenePrompts": {
+    "hook": "an open black wooden coffin on a muddy riverbank at night, inside only wet folded burial clothes and a small wooden tablet, lantern light, Vietnamese village",
+    "coffin-inside": "looking down into an open old coffin containing only a neatly folded set of wet dark burial garments and a small carved wooden name tablet, no body",
+    "wooden-tablet": "close-up of a small weathered wooden memorial tablet with carved Vietnamese-style characters, wet surface, lit by a single oil lamp flame",
+    "chief-shock": "an elderly Vietnamese village chief's face lit from below by lantern light, expression of deep shock and fear, dark clan house background",
+    "bonfire-attempt": "villagers with torches around a black coffin failing to burn on a muddy bank at night, thick wet smoke, orange flames on black wood",
+    "black-ooze": "black tar-like liquid seeping from a burning wooden coffin, orange fire reflecting on black ooze, night scene",
+    "clan-house-night": "inside an old Vietnamese clan house at night, ancestral altar with burning incense and flickering candles, long shadows",
+    "night-window": "view from inside a dark room through a wooden window toward a black flooded river at night, thin mist, a faint pale shape on the water far away",
+    "hieu-house": "a small Vietnamese stilt house above floodwater at night, one dim oil lamp in a window, dark water reflecting below, lonely atmosphere",
+    "river-return": "empty muddy riverbank at dawn where a coffin once lay, only a dark rectangular stain of mud left, grey misty river"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Đêm ông Thân mở hòm",
+      "text": "Ông Thân - chức sắc bảy mươi hai tuổi, cả đời lo việc ma chay cho dòng họ Trịnh - không thể ngủ được sau đêm có vệt bùn trước cửa. Chức sắc là người đứng giữa ranh giới: người sống hỏi ông, vong nhân cũng tìm ông. Bốn mươi năm trước, chính ông là người làm lễ cho một đám tang không có xác. Chiếc hòm trôi vào làng hôm nay - ông đoán là nó. Và ông phải biết chắc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coffin-inside",
+      "caption": "Không có xác",
+      "text": "Nửa đêm, một mình một đèn, ông Thân men theo mương ra bãi đất trống. Hai thanh niên canh gác ngủ gục trong lều - ông cố tình đi ca khi người ta mệt nhất. Nắp hòm không đóng then - nhấc lên nhẹ tênh, như nó chờ sẵn. Ông hạ đèn xuống nhìn vào trong và đứng hình: không có xác. Không có xương. Chỉ có một bộ đồ tang gấp vuông vứn - áo cánh nâu, quần thụng, khăn đóng - ướt sũng như vừa vớt lên khỏi nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wooden-tablet",
+      "caption": "Tấm bia gỗ",
+      "text": "Trên bộ đồ tang, đặt ngay ngắn chỗ phải đặt đầu người nằm, là một tấm bia gỗ nhỏ bằng bàn tay - kiểu bia tạm người ta khắc vội khi chưa kịp đục đá. Ông đưa đèn lại gần đọc dòng chữ mài mòn. Đọc xong, ông Thân ngồi thụp xuống bùn, đèn dầu suýt đổ. Trên tấm bia, nét khắc còn rõ từng đường, là ba chữ: tên đầy đủ, tên húy, của cụ Đoàn - trưởng làng Đoài. Người còn đang sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wooden-tablet",
+      "caption": "Người sống có bia",
+      "text": "Các con phải hiểu thế này - trong lễ cũ, khắc bia cho người còn sống là điều tày trời. Bia là đồ của người chết; viết tên người sống lên bia tức là đã báo trước một ngôi mộ, mời vong khác về ở thay. Người xưa gọi là bia dẫn vong. Chiếc hòm trôi vào làng này không phải đi lạc - nó đi đòi. Và người nó đòi, nằm ngay trong làng mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chief-shock",
+      "caption": "Cụ Đoàn đánh rơi điếu cày",
+      "text": "Ông Thân ôm tấm bia chạy về gõ cửa cụ Đoàn lúc gần sáng. Cụ ra mở cửa chưa kịp mắng, thì thấy mặt ông Thân - và cái cụ thấy tiếp sau đó làm cụ đánh rơi điếu cày xuống nền. Cụ không cầm tấm bia. Cụ chỉ nhìn nó trên tay ông Thân, lùi lại một bước, và nói câu đầu tiên sau một hồi lâu: đốt nó. Hôm nay, trước khi trời tối - đốt cả hòm lẫn đồ trong đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chief-shock",
+      "caption": "Ngược lời thề",
+      "text": "Ông Thân hỏi: nhưng cụ bảo cấm đốt - đốt hòm trôi thì khói vỡ ra là bệnh, lời cụ nói cả làng nghe. Cụ Đoàn nhìn ông ta bằng một con mắt mà ông Thân sau này kể lại là con mắt của người biết mình hết đường: ta nói cấm đốt - là ta sợ nó cháy không được. Ta biết gỗ của nó. Bốn mươi năm trước ta đã đốt nó một lần rồi. Nó không cháy. Ta đã đẩy nó xuống sông - và nó quay về tìm ta đấy, Thân ạ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bonfire-attempt",
+      "caption": "Đốt quan tài",
+      "text": "Chiều hôm ấy, trước mắt cả làng, người ta chất củi khô quanh chiếc hòm đen, tưới dầu, châm lửa. Lửa bùng lên cao người, khói đen cuồn cuộn. Nhưng cháy đến đâu, từ trong thớ gỗ lim rỉ ra một thứ nước đen sánh như nhựa đường, tắt lửa đến đấy. Củi cháy thành than, dầu cháy thành khói - chiếc hòm đứng giữa đống than hồng, mặt ngoài chỉ sạm đen thêm, như mặt người đứng trong nắng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "black-ooze",
+      "caption": "Nước đen chảy ra",
+      "text": "Bà Sáu bán thuốc đứng gần nhất, ngửi thấy mùi nước đen ấy - bà kể lại là mùi nước ngâm xác lâu ngày, hăng và ngọt sắc đến buồn nôn. Cụ Đoàn đứng nhìn đống lửa tắt dần, hai tay chắp sau lưng, nói rất khẽ với ông Thân - chỉ hai người nghe: nó về đúng như năm ấy rồi. Đốt không được, đẩy trôi nó lại quay về, chôn thì đất không nhận. Bốn mươi năm trước ta đã thử hết rồi. Chỉ còn một cách cuối - và cách ấy phải có người trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "clan-house-night",
+      "caption": "Họp nhà thờ họ",
+      "text": "Đêm đó nhà thờ họ Trịnh thắp đèn suốt. Những cụ già còn lại của thế hệ năm xưa - bảy người, người ít nhất cũng bảy mươi - ngồi quanh chiếc bàn thờ. Cụ Đoàn đứng giữa, lần đầu tiên sau bốn mươi năm, kể lại trọn vẹn chuyện trận lụt năm ấy cho con cháu nghe. Không ai ngắt lời. Bên ngoài, mưa rơi lất phất trên mái ngói, và dưới chân tường nhà thờ họ, nước lũ bắt đầu rỉ vào sân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "clan-house-night",
+      "caption": "Trận lụt năm ấy",
+      "text": "Năm ấy cụ Đoàn mới ba mươi tám, là người trẻ nhất trong hội đồng làng. Lụt lên, một chiếc hòm trôi vào bãi đất trống - giống hệt bây giờ. Trong hòm có xác một người đàn ông lạ, mặc đồ tây cũ, chết đuối đã nhiều ngày - và trong hòm, gối dưới đầu xác, có một bọc vải đỏ: vàng nhẫn, lụa, trần hương quý, và một chiếc khóa cổ bằng đồng. Đồ tế theo người chết - của cải cả một đời người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "clan-house-night",
+      "caption": "Lấy của tế",
+      "text": "Hội đồng làng năm ấy họp và quyết định sai lầm nhất đời mình, cụ nói. Năm đói, năm lũ - bọn con bảo nhau: người chết không mang được, để trôi thì kẻ khác lấy, chi bằng làng giữ lại tu bổ nhà thờ họ, dứt điểm có lễ bái cho vong. Thế là chia nhau của tế, đập nát tấm bia gỗ khắc tên người lạ - để mất dấu vong - và đào một hố cạn chôn xác vội ngoài bãi rùng, không lễ, không mã."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "clan-house-night",
+      "caption": "Bảy mạng người",
+      "text": "Trận lụt năm ấy rút đi thì làng đếm lại: bảy mạng người mất. Không phải chết đuối - nước không nhận ai cả. Bảy người, đúng bảy người trong hội đồng hôm ấy quyết lấy của tế, đều chết trong một năm - người thì đau ốm gầy mòn, người thì đi đâu không về, người thì chết ngay trong giấc ngủ mà mặt nhăn như gặp sợ. Chỉ sót lại người trẻ nhất - thằng Đoàn ba mươi tám tuổi - vì khi chia của, nó là đứa duy nhất lắc đầu không lấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wooden-tablet",
+      "caption": "Bia dẫn vong quay về",
+      "text": "Bảy người chết - và bây giờ tấm bia thứ tám quay về. Ông Thân đặt tấm bia gỗ lên bàn thờ, dưới ánh nến. Bảy cụ già cúi xuống nhìn - và bà cụ già nhất, bảy mươi chín tuổi, mở miệng run: nét chữ này - ta nhận ra. Nét khắc này là của thợ mộc Tâm, người đã đóng chiếc hòm chúng ta đẩy trôi năm ấy. Nhưng Tâm chết trong bảy người kia rồi - ai khắc được nét này? Trừ phi - bà ngừng lại - trừ phi tấm bia này được khắc từ trước khi Tâm chết. Khắc sẵn. Từ bốn mươi năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chief-shock",
+      "caption": "Cụ Đoàn biết từ đầu",
+      "text": "Cả phòng quay nhìn cụ Đoàn. Và cụ - người cả đời nói ít - đứng im thú nhận điều cuối cùng: năm ấy, sau khi chôn vội xác người lạ, chính cụ - người trẻ nhất - đã thấy ám ảnh trong mơ, đã lén đi tìm thợ mộc Tâm, nhờ đóng một chiếc hòm y hệt và một tấm bia khắc tên mình - để trả nợ thay làng. Bia khắc tên cụ vì cụ tình nguyện đứng tên đền. Hòm khắc rồng đuôi thả ra - vì hòm trả nợ phải khắc ngược. Nhưng hòm chưa kịp đưa xuống sông thì Tâm chết, và chiếc hòm trả nợ bị trận lụt cuốn mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bonfire-attempt",
+      "caption": "Bốn mươi năm lưu lạc",
+      "text": "Bốn mươi năm, chiếc hòm trả nợ lưu lạc trên sông, và vong người lạ không có bia - vì làng đập nát rồi - không tìm được đường về nhận nó. Bây giờ trận lụt thứ hai đưa nó về - đúng bãi đất cũ, đúng mùa lũ cũ. Nhưng vong bốn mươi năm không được nghỉ thì không còn là vong của người lữ khách chết đuối nữa, ông Thân nói. Nó đã hóa oán. Nó về không phải nhận hòm - nó về đòi người ghi tên trên bia."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "black-ooze",
+      "caption": "Cụ bỏ làng đi",
+      "text": "Họp xong gần sáng. Cụ Đoàn về nhà, và người ta không thấy cụ nữa. Buổi trưa, nhà cụ mở cửa - cụ đi đâu không ai biết, chỉ để lại trên bàn một mảnh giấy viết nắn nót: ta đi trả nợ của ta. Đừng tìm. Chiếc hòm ở lại - là nó đợi ta, không phải đợi các con. Các con cứ sống - và đừng bao giờ động vào của người đã khuất, dù đói đến mấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-return",
+      "caption": "Hòm biến mất khỏi bãi",
+      "text": "Cùng buổi trưa ấy, người ta ra bãi đất trống thì chiếc hòm đen đã không còn. Không dấu kéo, không vệt lê trên bùn - chỉ còn vệt sẫm hình chữ nhật in trên đất như ảnh chụp âm bản. Bốn thanh niên canh nói suốt đêm không ai đến gần, chỉ nghe tiếng nước róc rách to hơn bình thường - như có gì rất nặng tự mình đi xuống dòng. Chiếc hòm không được đẩy trôi - nó tự về sông. Và nó đi cùng ngày cụ Đoàn biến mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-return",
+      "caption": "Nước đứng chờ",
+      "text": "Làng Đoài thở phào được đúng một ngày. Rồi người ta nhận ra: nước lũ vẫn đứng. Lũ dâng không rút, mặt sông vẫn đen, và cái vệt bùn hình chữ nhật trên bãi đất trống không mờ đi - mỗi đêm nó lại sậm lên một chút, như ai cứ in lại cái bóng ấy lên đất cho khỏi phai. Ông Thân lắc đầu: nó chưa xong đâu. Nó chỉ đi chờ - như con mèo rình con chuột ra khỏi hang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-window",
+      "caption": "Hiếu đêm ấy",
+      "text": "Đêm ấy Hiếu không ngủ. Anh ngồi bên cửa sổ gác, nắm trong tay chiếc khóa đồng khắc rồng - chiếc khóa vong nhân để lại trước cửa nhà mình. Trong câu chuyện cụ Đoàn kể, anh nghe thấy điều cụ không nói ra: chiếc hòm trả nợ là do cha anh - thợ mộc Dậu - đóng thay cho người anh em đồng nghiệp đã chết, thợ mộc Tâm. Cha anh đóng xong chiếc hòm ấy. Và một năm sau cha anh chết - chết đuối, ngay mùa lũ, đi đánh cá đêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hieu-house",
+      "caption": "Nợ của cha",
+      "text": "Nghĩa là chiếc hòm đen trôi vào làng không chỉ đòi mạng cụ Đoàn. Nó còn mang theo dấu tay cha Hiếu - người đã hoàn thành nốt việc của Tâm - và nó đã để lại trước cửa nhà anh một chiếc khóa. Khóa là đồ để mở. Cái đó để lại khóa tức là nó đợi có người mở ra một thứ gì đó mà cha anh đã khóa lại. Hiếu nhìn sang cái hòm đồ nghề trên xà nhà - hòm treo chéo mười lăm năm chưa ai động - và lần đầu tiên anh tự hỏi: trong đó thật sự chỉ có đồ nghề không?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "clan-house-night",
+      "caption": "Bà cô mù",
+      "text": "Sáng hôm sau, trước khi động vào cái hòm đồ nghề, Hiếu đi tìm bà cô mù cuối ngõ - người duy nhất còn sống nghe tai mắt thấy chuyện năm ấy. Bà ngồi trên sập tre, mắt trắng dã, nghe Hiếu kể xong thì hỏi đúng một câu: chiếc khóa nó cho con ở trong vệt bùn à? Rồi bà lẩm bẩm: vậy là nó nhớ - nó nhớ hết. Nó để lại khóa cho con vì con là con của thợ Dậu. Nó không đòi trả đồ đâu cháu - đồ nó cho là để mở chuyện bị chôn. Bà cô nói cho con nghe chuyện mà cụ Đoàn không dám kể đoạn cuối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hook",
+      "caption": "Hồi kết tập 2",
+      "text": "Bà cô mù kể đoạn cuối đó - đoạn mà cả cụ Đoàn lẫn nhà thờ họ đều giấu - là về cái giếng. Hố cạn ngoài bãi rùng không chỉ có xác người lạ. Và việc thợ mộc Tâm chết không phải chết ốm - Tâm là người cuối cùng còn giữ một nửa của tế, và đêm trước khi chết, Tâm đã mang nửa ấy đi giấu ở một chỗ mà chỉ có hai người biết: Tâm, và thằng bạn thân nhất của Tâm - thợ mộc Dậu, cha của Hiếu. Tập sau Bà Tư kể tiếp."
+    }
+  ],
+  "sceneImages": {
+    "hook": "images/suckhoe-long/quan-tai-troi-tap-02/hook.jpg",
+    "coffin-inside": "images/suckhoe-long/quan-tai-troi-tap-02/coffin-inside.jpg",
+    "wooden-tablet": "images/suckhoe-long/quan-tai-troi-tap-02/wooden-tablet.jpg",
+    "chief-shock": "images/suckhoe-long/quan-tai-troi-tap-02/chief-shock.jpg",
+    "bonfire-attempt": "images/suckhoe-long/quan-tai-troi-tap-02/bonfire-attempt.jpg",
+    "black-ooze": "images/suckhoe-long/quan-tai-troi-tap-02/black-ooze.jpg",
+    "clan-house-night": "images/suckhoe-long/quan-tai-troi-tap-02/clan-house-night.jpg",
+    "night-window": "images/suckhoe-long/quan-tai-troi-tap-02/night-window.jpg",
+    "hieu-house": "images/suckhoe-long/quan-tai-troi-tap-02/hieu-house.jpg",
+    "river-return": "images/suckhoe-long/quan-tai-troi-tap-02/river-return.jpg"
+  }
+}
