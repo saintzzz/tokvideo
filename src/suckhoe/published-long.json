@@ -369,5 +369,23 @@
     "publishedAt": "2026-10-31T20:22:12.601Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "hu-ma-ga-tap-04-teaser": {
+    "videoId": "oh9YAHYD5Rs",
+    "publishedAt": "2026-11-01T20:51:33.769Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "hu-ma-ga-tap-05-teaser": {
+    "videoId": "A4_kYtOGN6E",
+    "publishedAt": "2026-11-01T20:52:04.551Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "loi-nguyen-gieng-cu-tap-02-teaser": {
+    "videoId": "LvjIJAA6D-U",
+    "publishedAt": "2026-11-01T20:52:37.170Z",
+    "locale": "vi",
+    "privacyStatus": "public"
   }
 }
