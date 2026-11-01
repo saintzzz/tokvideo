@@ -1,9 +1,9 @@
-# Channel report — 2026-10-31
+# Channel report — 2026-11-01
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 250
-Total views: 159
-Total videos: 82
+Total views: 163
+Total videos: 85
 
 ## Last 28 days (channel-wide)
 
@@ -21,11 +21,14 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Truyện Ma | Hôn Ma - Tập 4 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-30 |
-| Truyện Ma | Hôn Ma - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-30 |
-| Truyện Ma | Hôn Ma - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-30 |
+| Truyện Ma | Hũ Ma Gà - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-31 |
+| Truyện Ma | Hũ Ma Gà - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-31 |
+| Truyện Ma | Hôn Ma - Tập 5 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-31 |
+| Truyện Ma | Hôn Ma - Tập 4 (xem trước) #Shorts | 1 | 0 | 0 | 2026-10-30 |
+| Truyện Ma | Hôn Ma - Tập 3 (xem trước) #Shorts | 1 | 0 | 0 | 2026-10-30 |
+| Truyện Ma | Hôn Ma - Tập 2 (xem trước) #Shorts | 1 | 0 | 0 | 2026-10-30 |
 | Truyện Ma | Hôn Ma - Tập 1 (xem trước) #Shorts | 1 | 0 | 0 | 2026-10-29 |
-| Truyện Ma | Đừng Trả Lời - Tập 5 (xem trước) #Shorts | 1 | 0 | 0 | 2026-10-29 |
+| Truyện Ma | Đừng Trả Lời - Tập 5 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-29 |
 | Truyện Ma | Đừng Trả Lời - Tập 4 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-29 |
 | Truyện Ma | Đừng Trả Lời - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-28 |
 | Truyện Ma | Đừng Trả Lời - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-28 |
@@ -43,7 +46,4 @@ Net subscriber change: 0
 | Truyện Ma | Chuyến Đò Đêm - Tập 3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-25 |
 | Truyện Ma | Chuyến Đò Đêm - Tập 2 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-25 |
 | Truyện Ma | Chuyến Đò Đêm - Tập 1 (xem trước) #Shorts | 0 | 0 | 0 | 2026-10-25 |
-| Truyện Ma Có Thật | Hôn Ma - Tập 2: Người Trong Ảnh Thờ - Lời Thừa Nhận Của Ông Phóng | 0 | 0 | 0 | 2026-10-25 |
-| Truyện Ma Có Thật | Hôn Ma - Tập 1: Đám Cưới Trên Đèo - Bức Ảnh Không Có Bóng Cô Dâu | 0 | 0 | 0 | 2026-10-25 |
-| Truyện Ma Có Thật | Chuyến Đò Đêm - Tập 5: Chuyến Đò Một Chiều - Ai Chèo Đò Bên Kia | 0 | 0 | 0 | 2026-10-23 |
 
