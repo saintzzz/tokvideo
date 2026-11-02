@@ -30,6 +30,11 @@ import honMaTap02 from "./hon-ma-tap-02.json";
 import honMaTap03 from "./hon-ma-tap-03.json";
 import honMaTap04 from "./hon-ma-tap-04.json";
 import honMaTap05 from "./hon-ma-tap-05.json";
+import quanTaiTroiTap01 from "./quan-tai-troi-tap-01.json";
+import quanTaiTroiTap02 from "./quan-tai-troi-tap-02.json";
+import quanTaiTroiTap03 from "./quan-tai-troi-tap-03.json";
+import quanTaiTroiTap04 from "./quan-tai-troi-tap-04.json";
+import quanTaiTroiTap05 from "./quan-tai-troi-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -94,4 +99,12 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   honMaTap03,
   honMaTap04,
   honMaTap05,
+  // Horror arc 7: "Quan tai troi" - a drifting black coffin returns to
+  // a flooded village, carved with the mark of the local carpenter's
+  // own craft, seeking the unpaid debt of a 40-year-old desecration.
+  quanTaiTroiTap01,
+  quanTaiTroiTap02,
+  quanTaiTroiTap03,
+  quanTaiTroiTap04,
+  quanTaiTroiTap05,
 ] as LongFormEpisode[];
