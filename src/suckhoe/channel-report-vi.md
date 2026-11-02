@@ -2,7 +2,7 @@
 
 Channel: Truyện Ma Dài Kỳ
 Subscribers: 261
-Total views: 168
+Total views: 597
 Total videos: 88
 
 ## Last 28 days (channel-wide)
@@ -21,12 +21,12 @@ Net subscriber change: 0
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 2 (xem trước) #Shorts | 402 | 8 | 0 | 2026-11-01 |
-| Truyện Ma | Hũ Ma Gà - Tập 5 (xem trước) #Shorts | 104 | 5 | 0 | 2026-11-01 |
-| Truyện Ma | Hũ Ma Gà - Tập 4 (xem trước) #Shorts | 395 | 11 | 0 | 2026-11-01 |
-| Truyện Ma | Hũ Ma Gà - Tập 3 (xem trước) #Shorts | 141 | 3 | 0 | 2026-10-31 |
-| Truyện Ma | Hũ Ma Gà - Tập 2 (xem trước) #Shorts | 179 | 7 | 0 | 2026-10-31 |
-| Truyện Ma | Hôn Ma - Tập 5 (xem trước) #Shorts | 242 | 6 | 0 | 2026-10-31 |
+| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 2 (xem trước) #Shorts | 465 | 8 | 0 | 2026-11-01 |
+| Truyện Ma | Hũ Ma Gà - Tập 5 (xem trước) #Shorts | 116 | 6 | 0 | 2026-11-01 |
+| Truyện Ma | Hũ Ma Gà - Tập 4 (xem trước) #Shorts | 508 | 11 | 0 | 2026-11-01 |
+| Truyện Ma | Hũ Ma Gà - Tập 3 (xem trước) #Shorts | 152 | 3 | 0 | 2026-10-31 |
+| Truyện Ma | Hũ Ma Gà - Tập 2 (xem trước) #Shorts | 191 | 7 | 0 | 2026-10-31 |
+| Truyện Ma | Hôn Ma - Tập 5 (xem trước) #Shorts | 259 | 6 | 0 | 2026-10-31 |
 | Truyện Ma | Hôn Ma - Tập 4 (xem trước) #Shorts | 13 | 0 | 0 | 2026-10-30 |
 | Truyện Ma | Hôn Ma - Tập 3 (xem trước) #Shorts | 2 | 0 | 0 | 2026-10-30 |
 | Truyện Ma | Hôn Ma - Tập 2 (xem trước) #Shorts | 8 | 0 | 0 | 2026-10-30 |
