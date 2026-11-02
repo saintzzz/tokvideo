@@ -1167,7 +1167,9 @@ jobs:
           YOUTUBE_TEASER_PRIVACY_STATUS: public
           # 3 teasers/run — backfills the backlog over a few days without
           # pushing the channel near the daily upload cap.
-          DOCTOR_MAX_TEASERS: "3"
+          # Bumped to 5 while Shorts distribution is hot (Nov-2026 data:
+          # recent teasers landing 100-400+ views vs 0-2 before).
+          DOCTOR_MAX_TEASERS: "5"
           # Facebook Page automation — system-user token, never expires.
           # Absent creds -> doctor still builds reels for the posting pack.
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
