@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Img, Video, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
 // Scene names are freeform per-arc (each horror series invents its own
 // locations). The union below documents the canonical names for IDE
@@ -300,8 +300,16 @@ export const LongFormSceneBackground: React.FC<{
    * scene don't sit on an identical frozen frame.
    */
   image?: string;
+  /**
+   * Path under public/ to a real motion clip for this scene
+   * (public/videos/... — see scripts/fetch-scene-footage.mjs). When
+   * present it wins over `image`: real moving footage reads as film,
+   * not an animated still. Looped, muted, lightly darkened so captions
+   * and fog bands sit on top the same way.
+   */
+  video?: string;
   variant?: number;
-}> = ({ scene, children, image, variant = 0 }) => {
+}> = ({ scene, children, image, video, variant = 0 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const [from, to] = GRADIENTS[scene] ?? FALLBACK_GRADIENT;
@@ -317,6 +325,51 @@ export const LongFormSceneBackground: React.FC<{
       })),
     []
   );
+
+  // Real motion footage — the strongest look: a looped stock clip under
+  // the same fog/flicker layers. Muted (narration carries the audio) and
+  // dimmed ~20% so the burned-in atmosphere still reads as ours, not the
+  // stock clip's grade.
+  if (video) {
+    return (
+      <AbsoluteFill style={{ background: "#000" }}>
+        <Video
+          src={staticFile(video)}
+          muted
+          loop
+          style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.82) saturate(0.9)" }}
+        />
+        {[0, 1].map((i) => {
+          const drift = ((frame * (0.12 + i * 0.07) + i * 47) % 120) - 10;
+          return (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                left: `${drift - 30}%`,
+                top: `${52 + i * 22}%`,
+                width: "160%",
+                height: "34%",
+                background: `radial-gradient(ellipse at 50% 50%, rgba(160,175,190,${0.10 - i * 0.03}) 0%, rgba(160,175,190,0) 70%)`,
+                filter: "blur(18px)",
+                pointerEvents: "none",
+              }}
+            />
+          );
+        })}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "#000",
+            opacity: 0.05 + 0.025 * Math.sin(frame * 0.35) + 0.015 * Math.sin(frame * 0.83),
+            pointerEvents: "none",
+          }}
+        />
+        {children}
+      </AbsoluteFill>
+    );
+  }
 
   // Ken Burns over the generated still — strong enough to read as
   // motion in the feed, alternating zoom-in/zoom-out and pan focus per

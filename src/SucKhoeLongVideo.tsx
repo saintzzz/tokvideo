@@ -35,6 +35,8 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
   const imageFor = (beatIndex: number) =>
     episode.beatImages?.[beatIndex] ??
     episode.sceneImages?.[episode.beats[beatIndex]?.scene];
+  const videoFor = (beatIndex: number) =>
+    episode.sceneVideos?.[episode.beats[beatIndex]?.scene];
 
   return (
     <AbsoluteFill>
@@ -82,6 +84,7 @@ export const SucKhoeLongVideo: React.FC<SucKhoeLongVideoProps> = ({ episode, seg
               hasAudio={segment.hasAudio}
               isSceneStart={isSceneStart}
               image={image}
+              video={videoFor(segment.beatIndex)}
               variant={segment.beatIndex}
               fadeIn={fadeIn}
               fadeOut={fadeOut}

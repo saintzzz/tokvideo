@@ -108,6 +108,12 @@ export type LongFormEpisode = {
    */
   scenePrompts?: Partial<Record<LongFormBeat["scene"], string>>;
   /**
+   * Real motion clip per scene (public/videos/... - populated by
+   * scripts/fetch-scene-footage.mjs from free stock sources). When a
+   * scene has a clip it wins over the still in the renderer.
+   */
+  sceneVideos?: Partial<Record<LongFormBeat["scene"], string>>;
+  /**
    * Per-beat image override for a one-off visual beat inside a scene
    * (rare - sceneImages covers the common case).
    */

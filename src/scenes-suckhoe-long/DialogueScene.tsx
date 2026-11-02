@@ -49,6 +49,9 @@ export const DialogueScene: React.FC<{
   isSceneStart: boolean;
   /** AI still for this beat's scene (public/ path) - see sceneImages. */
   image?: string;
+  /** Real motion clip for this scene (public/ path) - see sceneVideos.
+   *  Wins over `image` inside LongFormSceneBackground. */
+  video?: string;
   /** Beat index - alternates the Ken Burns drift direction. */
   variant?: number;
   /** Fade in from black this many frames (image changed vs previous beat). */
@@ -59,7 +62,7 @@ export const DialogueScene: React.FC<{
    *  beat) — enables real synced karaoke captions instead of showing the
    *  whole beat caption at once. */
   captionSrc?: string;
-}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, variant = 0, fadeIn = false, fadeOut = false, captionSrc }) => {
+}> = ({ beat, locale, audioSrc, hasAudio, isSceneStart, image, video, variant = 0, fadeIn = false, fadeOut = false, captionSrc }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
@@ -144,7 +147,7 @@ export const DialogueScene: React.FC<{
   );
 
   return (
-    <LongFormSceneBackground scene={beat.scene as SceneName} image={image} variant={variant}>
+    <LongFormSceneBackground scene={beat.scene as SceneName} image={image} video={video} variant={variant}>
       {audioSrc ? <Audio src={staticFile(audioSrc)} /> : null}
 
       <div style={{ position: "absolute", inset: 0, transform: `scale(${cameraScale * punchScale})` }}>
