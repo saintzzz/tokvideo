@@ -35,6 +35,8 @@ const ARC_SUBJECT = {
     "a dead old man in a white funeral shroud sitting upright inside an open wooden coffin, grey rotting face, eyes snapped open, funeral candles burning around, incense smoke",
   "quan-tai-troi":
     "a black wooden coffin floating on dark floodwater at night with a pale drowned ghost face rising half out of the lid, hollow black eyes, wet hair over grey skin, a hand gripping the coffin edge, thin fog",
+  "mieu-hoang":
+    "a pale drowned ghost girl in a soaked old-fashioned white ao dai standing in the doorway of a ruined Vietnamese village shrine at night, hollow black eyes, wet hair covering half her rotting face, dripping dark water, faint red glow behind her",
 };
 
 const THUMB_STYLE =
