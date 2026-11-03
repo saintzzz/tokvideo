@@ -1,0 +1,45 @@
+{
+  "id": "mieu-hoang-tap-01",
+  "arc": "mieu-hoang",
+  "arcTitle": "MIẾU HOANG",
+  "episode": 1,
+  "title": "Miếu Thần Bỏ Hoang Sau Rẫy - Tối Mùng Một Không Được Nhìn Vào",
+  "description": "Tập 1 arc MIẾU HOANG: Làng Đồng Cỏ có miếu thần bỏ hoang ngoài rẫy, người già cấm ai nhìn vào tối mùng một. Anh Phước về quê xây nhà, không tin lời răn, đêm khuya trèo qua cửa nát xem trong miếu có gì. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #mieuthan",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "miếu thần hoang", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a weathered abandoned Vietnamese village shrine at dusk, cracked roof tiles, red incense ash spilling from the altar, dense fog, ominous atmosphere, photorealistic horror",
+    "a man holding a flashlight peering through the broken door of a dark ancient shrine, terrified expression, night, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "village-road": "an empty dirt road into a rural Vietnamese village at late afternoon, rice fields on both sides, distant bamboo groves, low grey sky, photorealistic, cinematic",
+    "shrine-exterior-day": "an abandoned Vietnamese village shrine in a cassava field, cracked mossy walls, collapsed tiled roof, faded red door paint, dry weeds chest-high, overcast daylight, photorealistic horror",
+    "shrine-exterior-night": "the same abandoned shrine at night, moonless, thick fog pooling around it, faint warm glow leaking through the broken door gap, photorealistic horror",
+    "old-woman-warning": "an elderly Vietnamese woman in dark traditional clothes sitting on a wooden house doorstep at dusk, face half shadowed, holding betel quid, solemn expression, photorealistic",
+    "construction-site": "a half-built brick house foundation in a Vietnamese village, cement bags, bamboo scaffolding, dusk light, workers gone home, quiet, photorealistic",
+    "shrine-door-gap": "extreme close view of a broken wooden shrine door at night, a narrow gap glowing faint red from inside, fog, a hand reaching toward it, photorealistic horror",
+    "inside-shrine": "inside a dark abandoned shrine, collapsed altar with red cloth, old incense bowl full of ash, a row of small clay statues facing the door, flashlight beam cutting through dust, photorealistic horror",
+    "altar-close": "close view of a small shrine altar at night, red cloth stained dark, an upside-down spirit tablet with characters scratched out, fresh incense sticks still smoking, photorealistic horror",
+    "running-field": "a man running through a dark cassava field at night looking back over his shoulder in terror, flashlight beam swinging, fog, photorealistic horror"
+  },
+  "beats": [
+    { "scene": "village-road", "text": "Nghề của tôi thuở trước là buôn trâu, đi đâu cũng phải ngang làng Đồng Cỏ. Bà con làng này hiền lành lắm, nhưng có một điều ai cũng dặn khách lạ: ngoài rẫy sắn có cái miếu bỏ hoang, đừng bao giờ để ý tới nó, nhất là vào tối mùng một." },
+    { "scene": "village-road", "text": "Hỏi tại sao thì người ta chỉ lắc đầu. Có bà cụ tám mươi mấy tuổi ngồi trước hiên nhà, nhai trầu đỏ tươm cả môi, nói với tôi đúng một câu: miếu đó không phải bỏ hoang đâu con, người ta bỏ nó lại chứ nó đâu có bỏ người ta." },
+    { "scene": "old-woman-warning", "text": "Tôi hỏi lại thì bà cụ quay mặt đi, không nói nữa. Chỉ thấy bà lẩm bẩm: thờ ai thì thờ, chứ cái miếu đó thờ đứa chết đuối dưới sông Bến Lội năm nào, mà xác nó tới giờ người ta vẫn chưa vớt lên được." },
+    { "scene": "shrine-exterior-day", "text": "Cái miếu đó tôi có đi ngang một lần ban ngày. Nhỏ thôi, bằng cái chuồng trâu, tường loang lổ rêu đen, mái ngói sập một góc. Cửa sơn đỏ đã bạc thếch. Lạ ở chỗ quanh miếu cỏ mọc um tùm cao tới ngực, nhưng ngay trước cửa miếu có một khoảnh đất trọc, sạch bóng, không một cọng cỏ." },
+    { "scene": "shrine-exterior-day", "text": "Trên khoảnh đất trọc đó lại có tro trầu, có vỏ kẹo, có cả ly trà đá còn ướt. Nghĩa là người ta vẫn lui tới, vẫn thắp hương, nhưng không ai chịu nhận. Tôi hỏi thằng nhóc chăn vịt gần đó, nó chỉ về cái miếu nói: tối mùng một mà nhìn vào là nó biết mình." },
+    { "scene": "construction-site", "text": "Chuyện sẽ không có gì nếu anh Phước không về quê. Anh Phước là con trai ông Thuyền, đi Sài Gòn mười mấy năm làm mướn, dành dụm được ít vốn về xây cái nhà ngay đầu làng. Người bản tính cộc, không tin thứ gì, nghe dân làng rủ đi thắp hương cái miếu trước khi động thổ thì anh cười khẩy." },
+    { "scene": "old-woman-warning", "text": "Bà cụ nhai trầu nghe vậy liền đứng dậy, bước tới giữa sân chỗ đám thợ đang ngồi ăn cơm, nói to cho cả xóm nghe: cậu không thờ cũng được, nhưng tối mùng một đừng có đi ngang cái miếu đó, đừng có nhìn vào, đừng có tò mò. Anh Phước gạt đi: mấy bà lo chuyện bao đồng." },
+    { "scene": "construction-site", "text": "Cái nhà cất nhanh. Hai tuần đã lên mái. Đêm rằm tháng bảy công trình xong phần thô, anh Phước khao thợ một bữa, nhậu tới khuya. Rồi trớt quớt mười mấy ngày sau, đúng ngay tối mùng một, anh đi nhậu làng bên về khuya, đường tắt phải đi ngang cái rẫy sắn." },
+    { "scene": "shrine-exterior-night", "text": "Đêm đó không trăng, sương dày đặc lại như ai trải bông. Anh Phước vừa say vừa bực vì nhớ lời dân làng, cố tình đi sát qua cái miếu, vừa đi vừa nói lớn: miếu gì mà miếu, tao nhìn vào cho coi, tối nay tao nhìn luôn cho tụi bây hết sợ." },
+    { "scene": "shrine-door-gap", "text": "Anh bước tới gần thì khựng lại. Khoảnh đất trọc trước cửa miếu bữa nay không trống nữa. Có người ngồi đó, lưng quay về phía anh, trước mặt đống hương đỏ rực như than hồng. Người đó mặc áo dài đen, tóc búi cao kiểu xưa, ngồi im thin thít." },
+    { "scene": "shrine-door-gap", "text": "Anh Phước tỉnh hết rượu. Muốn quay lưng chạy mà chân như đóng đinh. Người đó từ từ đứng dậy, không quay lại, chỉ đứng yên, rồi bước vào trong miếu qua cái khe cửa hẹp xíu, hẹp tới mức người bình thường không thể chui lọt." },
+    { "scene": "shrine-exterior-night", "text": "Anh đứng đó hồi lâu mới nhúc nhích được. Trong đầu chỉ có một ý nghĩ ngu ngốc của người cứng đầu: mình say, mình hoa mắt, hay có đứa nào trong làng giả ma dọa mình. Anh lấy cái đèn pin điện thoại ra, chĩa thẳng vào khe cửa." },
+    { "scene": "inside-shrine", "text": "Bên trong miếu là một căn phòng đổ nát. Bàn thờ sập nửa, khăn phủ đỏ sẫm màu. Giữa nhà là một hàng tượng đất nhỏ, chừng mười mấy con, tất cả đều quay mặt ra cửa. Mà quay mặt ra cửa nghĩa là quay thẳng vào mặt anh, như đứng đợi anh từ nãy giờ." },
+    { "scene": "altar-close", "text": "Anh rọi đèn lên bàn thờ. Trên đó có một cái bài vị lật ngửa mặt xuống. Có người vừa lật nó, vì bài vị còn đang lắc nhẹ. Anh không hiểu sao mình lại đưa tay lật cái bài vị lên, có lẽ vì rượu chưa tan hết. Trên mặt bài vị khắc một cái tên: Nguyễn Văn Phước." },
+    { "scene": "inside-shrine", "text": "Anh lùi lại đập lưng vào cột. Đèn pin rơi xuống đất, tắt phụt. Trong bóng tối anh nghe rõ tiếng hương cháy xèo xèo ngay sát tai, và một giọng đàn bà khàn đặc nói vào gáy mình: lật rồi thì ở lại luôn đi." },
+    { "scene": "running-field", "text": "Anh Phước chạy như ma đuổi qua cái rẫy sắn, ngã lên ngã xuống, không dám ngoái lại. Về tới công trình anh đóng sầm cửa, bật hết đèn, thở như trâu tới sáng. Sáng hôm sau người ta thấy anh ngồi co ro trong góc nhà dở, tóc bạc đi một mảng ngay trán, miệng cứ lẩm bẩm: nó khắc tên tôi rồi, nó khắc tên tôi rồi." },
+    { "scene": "old-woman-warning", "text": "Bà cụ nhai trầu nghe chuyện chỉ thở dài: tao nói rồi mà không nghe. Bài vị khắc tên ai là miếu đó đã nhận người đó. Giờ chỉ còn nước mời thầy về xem còn cứu được không, chứ trễ rồi thì tên đã lên bài vị, người sớm muộn cũng phải về ở với miếu." },
+    { "scene": "shrine-exterior-day", "text": "Từ hôm đó anh Phước không dám ra khỏi nhà sau giờ chiều. Còn cái miếu ngoài rẫy, ban ngày người ta ghé mắt nhìn vào, thấy hàng tượng đất nhỏ trong miếu đông hơn trước một con. Và nghe đâu trước cửa miếu bây giờ thỉnh thoảng có người đặt thêm một vỏ trầu, như lỡ hẹn ai đó một cuộc nhậu." }
+  ]
+}

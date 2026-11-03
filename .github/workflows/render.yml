@@ -46,13 +46,20 @@ on:
     # one upload per peak window instead of two, and every slot is at
     # least 5h from the next: 10h, 16h, 22h Vietnam time (UTC+7, no DST)
     # = 03, 09, 15 UTC.
-    - cron: "0 3,9,15 * * *"
+    # DISABLED 2026-11-03 (owner directive): "Truyện Ma Dài Kỳ" is a
+    # horror-story channel — mixing health-remedy Shorts confused the
+    # audience signal. Horror teasers via pipeline-doctor carry Shorts
+    # now. Restore by uncommenting the cron below.
+    # - cron: "0 3,9,15 * * *"
     # Same fix for the English-market channel — was also 7/day clustered
     # (00,01 / 12,13 / 17,18 / 23 UTC) and showed the identical
     # views-collapse pattern from 2026-08-23. Now one upload per peak
     # window, each slot >=5h from the next: 8h, 14h, 20h ET = 12, 18, 0
     # UTC (EDT, UTC-4; shifts 1h during EST, Nov-Mar).
-    - cron: "0 0,12,18 * * *"
+    # DISABLED 2026-11-03 (owner directive): focus all effort on the VI
+    # horror channel; the EN channel was doing 22 views/28d. Restore by
+    # uncommenting the cron below.
+    # - cron: "0 0,12,18 * * *"
     # Once daily — pulls real channel/video stats (subscribers, views,
     # watch time, per-video performance) into the job log via
     # scripts/channel-report.mjs, so cadence/content decisions have actual
