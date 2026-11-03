@@ -43,17 +43,31 @@ def norm_vol(value: str) -> str:
 
 
 async def gen_beat(text: str, out_path: str, prosody: dict) -> None:
-    communicate = edge_tts.Communicate(
-        text,
-        VOICE,
-        rate=norm_rate(prosody.get("rate", "+0%")),
-        pitch=pct_to_hz(prosody.get("pitch", "+0%")),
-        volume=norm_vol(prosody.get("volume", "+0%")),
-    )
-    with open(out_path, "wb") as f:
-        async for chunk in communicate.stream():
-            if chunk["type"] == "audio":
-                f.write(chunk["data"])
+    async def dump(communicate) -> int:
+        n = 0
+        with open(out_path, "wb") as f:
+            async for chunk in communicate.stream():
+                if chunk["type"] == "audio":
+                    f.write(chunk["data"])
+                    n += len(chunk["data"])
+        return n
+
+    try:
+        # Communicate.stream() is single-use — if the prosody variant is
+        # rejected mid-stream we must rebuild, not re-stream.
+        await dump(
+            edge_tts.Communicate(
+                text,
+                VOICE,
+                rate=norm_rate(prosody.get("rate", "+0%")),
+                pitch=pct_to_hz(prosody.get("pitch", "+0%")),
+                volume=norm_vol(prosody.get("volume", "+0%")),
+            )
+        )
+    except edge_tts.exceptions.NoAudioReceived:
+        # Endpoint intermittently rejects non-default prosody — retry
+        # with the voice's stock delivery rather than failing the beat.
+        await dump(edge_tts.Communicate(text, VOICE))
 
 
 async def gen_episode(slug: str) -> None:
