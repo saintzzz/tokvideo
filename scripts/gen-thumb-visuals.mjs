@@ -37,9 +37,9 @@ const ARC_SUBJECT = {
     "a black wooden coffin floating on dark floodwater at night with a pale drowned ghost face rising half out of the lid, hollow black eyes, wet hair over grey skin, a hand gripping the coffin edge, thin fog",
   "mieu-hoang":
     "a pale drowned ghost girl in a soaked old-fashioned white ao dai standing in the doorway of a ruined Vietnamese village shrine at night, hollow black eyes, wet hair covering half her rotting face, dripping dark water, faint red glow behind her",
-  "cay-da-dau-lang":
+  "cay-da":
     "a massive ancient banyan tree at night with aerial roots hanging like ropes, a rotting ghost girl's face emerging from the bark, hollow black eyes, red cloth strips torn around the trunk, thin fog",
-  "cau-khi-dem":
+  "cau-khi":
     "a pale drowned woman in a soaked ao ba ba and checkered khan ran rising from black canal water under a bamboo monkey bridge at night, hollow eyes, wet hair dripping, hands reaching up",
 };
 
