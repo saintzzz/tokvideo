@@ -1,0 +1,109 @@
+{
+  "id": "cau-khi-tap-04",
+  "arc": "cau-khi-dem",
+  "arcTitle": "CẦU KHỈ ĐÊM",
+  "episode": 4,
+  "title": "Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch",
+  "description": "Tập 4 arc CẦU KHỈ ĐÊM: Đêm rằm, anh Tấn dìu thân vợ ra giữa cầu khỉ gọi tên thật. Mười vong lên theo dây đỏ, mỗi vong được gọi đúng tên mới được về mả - riêng chị Tư phải buông thân người để trả chị Ba về cho chồng. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #caukhi",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cầu khỉ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a couple standing on a bamboo bridge at night in torchlight, a translucent woman rising from the water between them, photorealistic horror",
+    "ten ghostly figures climbing a red rope from black water up to a bamboo bridge, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "bridge-ritual": "a bamboo bridge at night strung with red ropes, a couple standing mid-bridge, a shaman at the bank with torches and offerings, photorealistic horror",
+    "call-name": "a man on a bamboo bridge at night calling out with his hands cupped, wife beside him slumped, torchlight, photorealistic horror",
+    "climb-rope": "translucent ghostly figures climbing a red rope from black water toward a bridge, night, photorealistic horror",
+    "wife-return": "a woman collapsing on a bamboo bridge caught by her husband, dawn light, photorealistic",
+    "shaman-chant": "a shaman kneeling on the riverbank chanting over a bowl of water, ten small spirit tablets in a row, photorealistic",
+    "torn-ghost": "a translucent woman clinging to a living woman's back reluctant to let go, both on a bridge at night, photorealistic horror",
+    "ghost-farewell": "the ghost woman stepping off the bridge onto a path of light over the water, looking back once, photorealistic",
+    "village-dawn": "the village waking at dawn, people lighting incense at ten new small graves, photorealistic",
+    "husband-cry": "the husband kneeling on the bridge holding his wife crying with relief, torchlight, photorealistic",
+    "bridge-quiet": "the bamboo bridge at deep night after the ritual, red ropes hanging limp, water calm, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "bridge-ritual",
+      "caption": "Cầu khỉ đêm rằm giăng đầy dây đỏ",
+      "text": "Cầu khỉ đêm rằm giăng đầy dây đỏ, đầu này buộc cột đình, đầu kia buộc vào mả mới của chị Tư. Thầy Út Sông quỳ trên bờ đốt lửa lễ. Anh Tấn dìu vợ - người đang ở trong thân vợ anh - ra đúng giữa cầu, nơi ghe chị Tư lật bảy mươi năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "torn-ghost",
+      "caption": "Đứng giữa cầu",
+      "text": "Đứng giữa cầu, cái bóng của chị Ba dưới nước rung lên thành hai bóng chồng nhau - một là chị, một là nó. Thầy ra hiệu. Anh Tấn hít hơi sâu, gọi to tên thật vợ mình về phía nước: Nguyễn Thị Ba - vợ tôi - quay về với tôi. Lần một."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "climb-rope",
+      "caption": "Vừa gọi lần một thì nước dưới cầu sôi lên",
+      "text": "Vừa gọi lần một thì nước dưới cầu sôi lên - không phải sóng, là người. Từng cái bóng trắng đục từ dưới lòng rạch bám vào sợi dây đỏ trèo lên, một, hai, ba... chín bóng. Chúng không nhìn ai, cứ bò theo dây đỏ về phía mả mới của mình như người đi đường quen."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "call-name",
+      "caption": "Nguyễn Thị Ba",
+      "text": "Nguyễn Thị Ba - lần hai. Chị Ba trên cầu giật bắn người, hai tay ôm đầu kêu lên một tiếng - tiếng của cả hai người cùng lúc, một khàn một trong. Thầy hô: đừng sợ, gọi nốt, người vợ đang bám theo tiếng mình lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "torn-ghost",
+      "caption": "Lần ba anh gào lên hết cỡ: NGUYỄN THỊ BA VỀ VỚI TÔI",
+      "text": "Lần ba anh gào lên hết cỡ: NGUYỄN THỊ BA VỀ VỚI TÔI. Thân chị cứng đờ người ngã nhào, anh đỡ kịp. Từ lưng chị, một thứ bóng nhờn nhờn trắng đục tách ra, quằn quại níu lấy vai chị không chịu buông - nó không muốn về nước lạnh nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shaman-chant",
+      "caption": "Thầy Út Sông đọc nhanh một tràng chú",
+      "text": "Thầy Út Sông đọc nhanh một tràng chú, rồi nói ra nước như nói với người: Tư Ngân, con đã có nhà, có tên, có mả. Bảy mươi năm con ở nước lạnh, hôm nay làng trả con về người. Buông thân người ta - thân đó không phải của con, con có chỗ của con rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-farewell",
+      "caption": "Cái bóng Tư Ngân tách hẳn khỏi chị Ba",
+      "text": "Cái bóng Tư Ngân tách hẳn khỏi chị Ba, đứng trên cầu thành hình người mờ - đàn bà mặc áo bà ba, đầu đội khăn rằn, mặt buồn mà hiền. Nó nhìn anh Tấn đang ôm vợ, rồi cúi đầu vái anh một vái, vái của người xin lỗi và cảm ơn cùng lúc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-farewell",
+      "caption": "Rồi nó bước ra khỏi cầu",
+      "text": "Rồi nó bước ra khỏi cầu - xuống mặt nước nhưng không chìm, đi trên một quầng sáng mờ như đường nước biết đường, về phía mả mới của nó. Tới nơi nó quay lại nhìn cây cầu lần cuối, rồi tan vào sương. Từ đó không ai thấy bóng nó dưới rạch nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wife-return",
+      "caption": "Chị Ba mở mắt trên cầu",
+      "text": "Chị Ba mở mắt trên cầu. Câu đầu tiên chị nói với chồng: em lạnh quá anh ơi, em ở dưới đó lâu lắm, em kêu anh hoài mà anh không nghe. Anh Tấn ôm vợ khóc như mưa, chín thân ấm mà anh thấy vợ mình lạnh như vừa vớt từ nước lên - đúng vậy thôi, vì linh hồn chị vừa từ dưới lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "husband-cry",
+      "caption": "Thầy Út Sông xem mạch chị Ba: về đủ rồi",
+      "text": "Thầy Út Sông xem mạch chị Ba: về đủ rồi, chỉ yếu thôi. Nhưng thầy nói với anh Tấn một điều làm anh lạnh người: vợ cậu đã chạm vong, từ nay nó nghe được tiếng dưới nước. Đêm nào cũng sẽ nghe. Cách duy nhất là không ở gần rạch nữa - hoặc học cách chung sống với cái tai đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dawn",
+      "caption": "Sáng hôm sau cả hai ấp ra mười ngôi mả mới thắp hương",
+      "text": "Sáng hôm sau cả hai ấp ra mười ngôi mả mới thắp hương. Mả chị Tư Ngân to nhất, bia khắc đủ tên, ngày mất bảy mươi năm trước giờ mới có nơi ghi. Chín mả kia bia chỉ có tên thầy đặt, nhưng lần đầu tiên trong đời chúng có người thắp cho mình một nén nhang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bridge-quiet",
+      "caption": "Về nhà",
+      "text": "Về nhà, chị Ba hồi phục nhanh lạ. Chỉ có một di chứng: mỗi đêm chị vẫn ra đầu hồi ngồi một lát, nhưng không phải ngắm rạch như trước - chị ngồi nghe. Anh hỏi nghe gì, chị nói: nghe họ nói chuyện với nhau dưới đó. Họ vẫn còn người chưa được vớt, anh à."
+    }
+  ],
+  "slug": "cau-khi-tap-04"
+}

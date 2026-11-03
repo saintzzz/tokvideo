@@ -40,6 +40,16 @@ import mieuHoangTap02 from "./mieu-hoang-tap-02.json";
 import mieuHoangTap03 from "./mieu-hoang-tap-03.json";
 import mieuHoangTap04 from "./mieu-hoang-tap-04.json";
 import mieuHoangTap05 from "./mieu-hoang-tap-05.json";
+import cayDaTap01 from "./cay-da-tap-01.json";
+import cayDaTap02 from "./cay-da-tap-02.json";
+import cayDaTap03 from "./cay-da-tap-03.json";
+import cayDaTap04 from "./cay-da-tap-04.json";
+import cayDaTap05 from "./cay-da-tap-05.json";
+import cauKhiTap01 from "./cau-khi-tap-01.json";
+import cauKhiTap02 from "./cau-khi-tap-02.json";
+import cauKhiTap03 from "./cau-khi-tap-03.json";
+import cauKhiTap04 from "./cau-khi-tap-04.json";
+import cauKhiTap05 from "./cau-khi-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -117,4 +127,14 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   mieuHoangTap03,
   mieuHoangTap04,
   mieuHoangTap05,
+  cayDaTap01,
+  cayDaTap02,
+  cayDaTap03,
+  cayDaTap04,
+  cayDaTap05,
+  cauKhiTap01,
+  cauKhiTap02,
+  cauKhiTap03,
+  cauKhiTap04,
+  cauKhiTap05,
 ] as LongFormEpisode[];

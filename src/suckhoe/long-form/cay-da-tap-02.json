@@ -5,7 +5,15 @@
   "episode": 2,
   "title": "Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương Người",
   "description": "Tập 2 arc CÂY ĐA ĐẦU LÀNG: Thầy được mời về làm lễ trước khi chặt nốt cây đa. Đào hố cúng dưới gốc cây, người ta đào trúng thứ mà cả làng không ai dám gọi tên - và mới hiểu cây đa giữ cái gì suốt mấy trăm năm. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #cayda",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "cây đa đầu làng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cây đa đầu làng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "narrator": "vi-VN-NamMinhNeural",
   "thumbnailSubjects": [
     "a Vietnamese shaman digging at the base of a giant banyan tree at night, unearthing a buried clay jar wrapped in rotting cloth, torch light, photorealistic horror",
@@ -25,16 +33,72 @@
     "night-road": "an empty dirt road out of the village at night, fog, a figure walking away carrying a bundle, photorealistic horror"
   },
   "beats": [
-    { "scene": "village-meeting", "text": "Thầy được mời về là thầy Hòe, danh tiếng ở huyện chuyên làm lễ chuyển miếu, chuyển mả. Thầy nghe xong đầu đuôi hỏi ngay: ai bảo đào lễ ở gốc cây? Đám cán sự bảo theo thông lệ là đào hố tế giao cho cây trước khi đốn. Thầy lắc đầu: cây này tôi chưa xem, nhưng mùi đất quanh nó không phải mùi cây thường." },
-    { "scene": "ritual-dig", "text": "Chiều hôm đó thầy chọn giờ, bày lễ, rồi sai đào hố cúng cách gốc cây ba thước. Mới đào được gang tay, cuốc vang lên tiếng đụng sành. Người ta tưởng đá, móc ra thì thấy miệng một cái vại đất nung, to bằng cái thúng, bịt kín bằng sáp nến đen và vải đỏ mục." },
-    { "scene": "buried-jar", "text": "Cái vại nằm chình ình giữa đám rễ cây, mà rễ cây không xuyên qua nó - chúng cuộn quanh nó, ôm lấy nó, giữ nó xuống như hàng chục cánh tay đè một vật xuống đáy đất. Trên nắp vại dán đầy giấy phù vàng loét, chữ tàu đã mờ hết nét." },
-    { "scene": "shaman-shock", "text": "Thầy Hòe vừa thấy cái vại thì lùi lại ba bước, mặt xám ngoét. Ông hạ giọng gọi đám cán sự lại gần nói nhỏ: đây không phải thứ để đào lên, càng không phải thứ để phá. Đậy lại ngay, cúng tạ, rồi triệu ai cũng đi về hết, không ai được lưu lại." },
-    { "scene": "village-meeting", "text": "Trong đình, thầy mới giải thích. Cái vại đó gọi là vại trấn - đời xưa thầy pháp dùng để giam vong ác không siêu thoát được. Dán phù là niêm phong. Rễ cây đa ôm lấy nó không phải ngẫu nhiên: cây đa là cụ giữ trấn, bộ rễ là xiềng. Cây đó được trồng lên để đè cái vại xuống." },
-    { "scene": "village-meeting", "text": "Thầy nói tiếp làm cả đám lạnh sống lưng: cái mà làng này chặn cửa không phải vong lang thang bên ngoài - là vong đang bị giam ngay dưới gốc. Chặt cây là chặt xiềng. Hai nhát cưa hôm trước đã làm xiềng lỏng ra một khúc - nên đêm đó mới có tiếng khóc, và đất mới đỏ." },
-    { "scene": "records-old", "text": "Lật lại làng chí viết tay đời cụ kỵ - quyển sổ da trâu mốc meo giữ trong tủ đình - người ta tìm được mấy dòng: năm xưa trước khi lập làng, đất này là nghĩa địa chôn người chết dịch, có một thây ma dữ phá nắp quan tài, thầy Từ Đạt trấn nó vào vại, trồng cây đa lên để trấn giữ, dặn dòng tộc đời đời coi cây." },
-    { "scene": "records-old", "text": "Dòng cuối ghi làm người đọc rùng mình: thây ma đó không phải người ngoài, là con gái làng chết oan vì bị vu tội trộm cắp, đuổi ra nghĩa địa sống lương thiến tới chết. Oán nặng nên thành thây. Họ cô, người làng tự tay hại cô rồi phải mời thầy trấn cô." },
-    { "scene": "dead-livestock", "text": "Đêm hôm đào vại, cả làng không ai ngủ yên. Sáng ra gia cầm chết hàng loạt - gà vịt nằm ngửa đầy sân, mắt trắng dã, không dấu thú cắn. Trâu ủ rũ không ăn. Mấy đứa nhỏ quấn khăn tang cụ chín mươi chạy qua rẫy kể thấy bóng người đứng trong đám dễ cây, đứng yên cả canh." },
-    { "scene": "jar-whisper", "text": "Ban cán sự vẫn nửa tin nửa ngờ, cử hai thanh niên ra coi vại đã đậy chưa. Hai đứa về mặt cắt không còn hột máu: đất đậy lại từ chiều đã tụt hết, nắp vại lệch ra một khe ngón tay - và từ trong khe đó, có tiếng như ai thì thầm, khe kẽ, không ngớt, nghe không rõ chữ nhưng rõ là tiếng người." },
-    { "scene": "night-road", "text": "Tới đêm đó thầy Hòe bỏ đi. Ông xách hòm ra đầu làng lúc nửa đêm, gặp thằng canh rẫy thì để lại đúng một câu: về bảo làng, chuyện này không phải chuyện làm lễ cho xong - nó đòi người làng nhận lại món nợ cả đời này giấu. Tôi làm không nổi. Mời ông thầy pháp cao tay hơn tôi đi, nhanh lên trước khi vại nứt." }
-  ]
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Thầy được mời về là thầy Hòe",
+      "text": "Thầy được mời về là thầy Hòe, danh tiếng ở huyện chuyên làm lễ chuyển miếu, chuyển mả. Thầy nghe xong đầu đuôi hỏi ngay: ai bảo đào lễ ở gốc cây? Đám cán sự bảo theo thông lệ là đào hố tế giao cho cây trước khi đốn. Thầy lắc đầu: cây này tôi chưa xem, nhưng mùi đất quanh nó không phải mùi cây thường."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-dig",
+      "caption": "Chiều hôm đó thầy chọn giờ",
+      "text": "Chiều hôm đó thầy chọn giờ, bày lễ, rồi sai đào hố cúng cách gốc cây ba thước. Mới đào được gang tay, cuốc vang lên tiếng đụng sành. Người ta tưởng đá, móc ra thì thấy miệng một cái vại đất nung, to bằng cái thúng, bịt kín bằng sáp nến đen và vải đỏ mục."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "buried-jar",
+      "caption": "Cái vại nằm chình ình giữa đám rễ cây",
+      "text": "Cái vại nằm chình ình giữa đám rễ cây, mà rễ cây không xuyên qua nó - chúng cuộn quanh nó, ôm lấy nó, giữ nó xuống như hàng chục cánh tay đè một vật xuống đáy đất. Trên nắp vại dán đầy giấy phù vàng loét, chữ tàu đã mờ hết nét."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shaman-shock",
+      "caption": "Thầy Hòe vừa thấy cái vại thì lùi lại ba bước",
+      "text": "Thầy Hòe vừa thấy cái vại thì lùi lại ba bước, mặt xám ngoét. Ông hạ giọng gọi đám cán sự lại gần nói nhỏ: đây không phải thứ để đào lên, càng không phải thứ để phá. Đậy lại ngay, cúng tạ, rồi triệu ai cũng đi về hết, không ai được lưu lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Trong đình",
+      "text": "Trong đình, thầy mới giải thích. Cái vại đó gọi là vại trấn - đời xưa thầy pháp dùng để giam vong ác không siêu thoát được. Dán phù là niêm phong. Rễ cây đa ôm lấy nó không phải ngẫu nhiên: cây đa là cụ giữ trấn, bộ rễ là xiềng. Cây đó được trồng lên để đè cái vại xuống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Thầy nói tiếp làm cả đám lạnh sống lưng: cái mà làng này chặ",
+      "text": "Thầy nói tiếp làm cả đám lạnh sống lưng: cái mà làng này chặn cửa không phải vong lang thang bên ngoài - là vong đang bị giam ngay dưới gốc. Chặt cây là chặt xiềng. Hai nhát cưa hôm trước đã làm xiềng lỏng ra một khúc - nên đêm đó mới có tiếng khóc, và đất mới đỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "records-old",
+      "caption": "Lật lại làng chí viết tay đời cụ kỵ",
+      "text": "Lật lại làng chí viết tay đời cụ kỵ - quyển sổ da trâu mốc meo giữ trong tủ đình - người ta tìm được mấy dòng: năm xưa trước khi lập làng, đất này là nghĩa địa chôn người chết dịch, có một thây ma dữ phá nắp quan tài, thầy Từ Đạt trấn nó vào vại, trồng cây đa lên để trấn giữ, dặn dòng tộc đời đời coi cây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "records-old",
+      "caption": "Dòng cuối ghi làm người đọc rùng mình: thây ma đó không phải",
+      "text": "Dòng cuối ghi làm người đọc rùng mình: thây ma đó không phải người ngoài, là con gái làng chết oan vì bị vu tội trộm cắp, đuổi ra nghĩa địa sống lương thiến tới chết. Oán nặng nên thành thây. Họ cô, người làng tự tay hại cô rồi phải mời thầy trấn cô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dead-livestock",
+      "caption": "Đêm hôm đào vại",
+      "text": "Đêm hôm đào vại, cả làng không ai ngủ yên. Sáng ra gia cầm chết hàng loạt - gà vịt nằm ngửa đầy sân, mắt trắng dã, không dấu thú cắn. Trâu ủ rũ không ăn. Mấy đứa nhỏ quấn khăn tang cụ chín mươi chạy qua rẫy kể thấy bóng người đứng trong đám dễ cây, đứng yên cả canh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-whisper",
+      "caption": "Ban cán sự vẫn nửa tin nửa ngờ",
+      "text": "Ban cán sự vẫn nửa tin nửa ngờ, cử hai thanh niên ra coi vại đã đậy chưa. Hai đứa về mặt cắt không còn hột máu: đất đậy lại từ chiều đã tụt hết, nắp vại lệch ra một khe ngón tay - và từ trong khe đó, có tiếng như ai thì thầm, khe kẽ, không ngớt, nghe không rõ chữ nhưng rõ là tiếng người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-road",
+      "caption": "Tới đêm đó thầy Hòe bỏ đi",
+      "text": "Tới đêm đó thầy Hòe bỏ đi. Ông xách hòm ra đầu làng lúc nửa đêm, gặp thằng canh rẫy thì để lại đúng một câu: về bảo làng, chuyện này không phải chuyện làm lễ cho xong - nó đòi người làng nhận lại món nợ cả đời này giấu. Tôi làm không nổi. Mời ông thầy pháp cao tay hơn tôi đi, nhanh lên trước khi vại nứt."
+    }
+  ],
+  "slug": "cay-da-tap-02"
 }

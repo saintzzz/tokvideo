@@ -1,0 +1,103 @@
+{
+  "id": "cau-khi-tap-05",
+  "arc": "cau-khi-dem",
+  "arcTitle": "CẦU KHỈ ĐÊM",
+  "episode": 5,
+  "title": "Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm",
+  "description": "Tập cuối arc CẦU KHỈ ĐÊM: Chị Ba về rồi nhưng mang theo cái tai nghe được vong dưới nước. Bảy mươi năm xác người chết đuối vẫn còn sót dưới lòng rạch - và chị quyết định dùng cái tai đó để tìm nốt họ về. Kết thúc arc. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #caukhi",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cầu khỉ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a Vietnamese woman standing at a canal bank at dawn listening to the water, faint faces visible below the surface, photorealistic",
+    "a woman holding a lantern over dark canal water at night, a pale hand reaching up to touch the light, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "listen-bank": "a woman sitting at the canal bank at dusk listening intently to the dark water, lantern beside her, photorealistic",
+    "voices-under": "faint pale faces in dark canal water looking up, mouths open as if speaking, photorealistic horror",
+    "dredge-more": "men dredging a canal with nets guided by a woman pointing to a spot, dawn, photorealistic",
+    "small-bones": "a small cloth bundle of fragile bones being placed in a tiny coffin, villagers around, photorealistic",
+    "family-reunion": "an old woman weeping over a newly recovered set of remains on the riverbank, holding a faded photo, photorealistic",
+    "bridge-day-crowd": "the bamboo bridge by day with villagers crossing freely, children running, photorealistic",
+    "new-bridge": "a new concrete bridge under construction beside the old bamboo bridge, workers, daytime, photorealistic",
+    "temple-row": "a row of small spirit tablets in the communal temple with fresh incense, daylight, photorealistic",
+    "woman-smile": "the woman at the canal bank at sunset, a faint peaceful smile, warm light, photorealistic",
+    "bridge-gone": "the empty canal where the old bamboo bridge stood, only posts remaining, calm water, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "listen-bank",
+      "caption": "Chị Ba khỏe hẳn sau một tháng",
+      "text": "Chị Ba khỏe hẳn sau một tháng, chỉ trừ cái tai. Đêm nào chị cũng nghe dưới rạch có tiếng người - không phải một giọng, là nhiều, xa xôi, nhỏ như người gọi qua tường. Chị không sợ nữa. Chị nói với anh Tấn: mình nợ họ một lần được nghe, thì mình trả bằng cách nghe cho tới khi họ được lên hết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "voices-under",
+      "caption": "Thầy Út Sông xác nhận: mười vong là số vớt được",
+      "text": "Thầy Út Sông xác nhận: mười vong là số vớt được, nhưng lòng rạch còn - bao đời nước lũ đẩy xác trôi vào xoáy, kẹt lại, ai đếm nổi. Tai chị Ba bây giờ là cái máy dò duy nhất: chỗ nào chị nghe rõ nhất là chỗ đó có xác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dredge-more",
+      "caption": "Hai ấp lại xuống rạch",
+      "text": "Hai ấp lại xuống rạch, lần này không vì sợ mà vì muốn làm. Chị Ba ngồi bờ chỉ: chỗ này, chìm sâu, có tiếng đàn ông gọi mẹ. Mò một buổi lên được một bộ. Hôm khác chị chỉ gần cọc cầu cũ: chỗ này tiếng nhỏ, nghe như đứa bé."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "small-bones",
+      "caption": "Đứa bé đó là bộ xương nhỏ nhất từ trước tới giờ",
+      "text": "Đứa bé đó là bộ xương nhỏ nhất từ trước tới giờ - chừng bảy tám tuổi, cột bên mình một cái tù và bằng lá chuối đã mục. Không ai biết nó đời nào, chỉ biết nó nằm đó từ rất lâu. Làng đặt tên nó là Cậu Út, chôn cạnh mả mười người trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-reunion",
+      "caption": "Chuyện lạ nhất: một bộ xương mò được có giây chuyền đồng khắ",
+      "text": "Chuyện lạ nhất: một bộ xương mò được có giây chuyền đồng khắc chữ - truy được ra là con trai bà Tám Bẩy xóm trên, mất tích đi đánh cá năm đói sáu mươi mấy năm trước. Bà Tám chín mươi mấy tuổi được báo tin con về, đế bà ngồi bên xương con ôm tấm hình cũ khóc cả buổi - rồi khóc cười: mẹ chờ con sáu mươi năm rồi mới được lo ma cho con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-bridge",
+      "caption": "Chuyện rạch Ông Bưởi đồn tới huyện",
+      "text": "Chuyện rạch Ông Bưởi đồn tới huyện. Năm sau nhà nước cho làm cầu bê tông qua rạch luôn, ngay cạnh cầu khỉ. Cầu mới rộng xe máy qua được, không còn ai phải đi tre giữa đêm nữa. Cây cầu khỉ cũ người ta để lại - không phá, coi như cái chứng tích."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bridge-day-crowd",
+      "caption": "Nhưng lạ một điều: từ sau đêm rằm đó",
+      "text": "Nhưng lạ một điều: từ sau đêm rằm đó, cây cầu khỉ không còn người sợ nữa. Trẻ con chạy qua chơi ban ngày, đám già ngồi câu cá đầu cầu, đêm hôm vẫn có người qua mà không ai thấy gì. Bà cụ Hai nói: nước độc hết độc rồi - họ được về hết rồi, ai mà giữ người nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple-row",
+      "caption": "Trong đình làng bây giờ có hẳn một dãy bài vị cho người chết",
+      "text": "Trong đình làng bây giờ có hẳn một dãy bài vị cho người chết đuối không tên - chỗ nào mò được xác là thêm một bài vị, ghi tên thầy đặt và ngày vớt. Ngày rằm tháng bảy cả làng ăn chay cúng một mâm lễ cho họ, gọi là lễ người trôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-smile",
+      "caption": "Chị Ba bây giờ người ta gọi đùa là bà Hai cái tai",
+      "text": "Chị Ba bây giờ người ta gọi đùa là bà Hai cái tai - nhưng là gọi thương. Chị vẫn ra bờ rạch ngồi mỗi chiều, nghe người dưới nước. Chị nói tiếng họ nhỏ dần mỗi năm - không phải vì họ yếu, mà vì người còn lại dưới đó ít dần, ai cũng được vớt được về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bridge-gone",
+      "caption": "Năm ngoái chị Ba nói với anh Tấn: hôm nay dưới rạch im hẳn r",
+      "text": "Năm ngoái chị Ba nói với anh Tấn: hôm nay dưới rạch im hẳn rồi, không còn ai nữa. Tối đó chị ngủ một giấc tới sáng - giấc ngủ đầu tiên không mơ từ đêm qua cầu. Cái tai vẫn còn, nhưng giờ chị chỉ nghe được tiếng nước chảy như ai thì thầm kể chuyện xa xưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bridge-gone",
+      "caption": "Chuyện rạch Ông Bưởi tới đây là hết",
+      "text": "Chuyện rạch Ông Bưởi tới đây là hết. Bài học dân hai ấp truyền con cháu: cây cầu nào cũng đi qua được, nhưng người chết đuối nào cũng cần được vớt về - vì dưới nước nào cũng có người, và họ không đòi gì nhiều, chỉ đòi được gọi đúng tên một lần rồi được đưa về nhà."
+    }
+  ],
+  "slug": "cau-khi-tap-05"
+}

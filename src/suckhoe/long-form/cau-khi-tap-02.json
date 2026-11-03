@@ -1,0 +1,109 @@
+{
+  "id": "cau-khi-tap-02",
+  "arc": "cau-khi-dem",
+  "arcTitle": "CẦU KHỈ ĐÊM",
+  "episode": 2,
+  "title": "Bóng Dưới Nước Gọi Tên - Người Chết Đuối Chờ Đổi Xác",
+  "description": "Tập 2 arc CẦU KHỈ ĐÊM: Bà cụ Hai kể lại chuyện đời xưa - rạch Ông Bưởi từng nuốt một phụ nữ về gặm, không tìm được xác. Vong dưới nước sống cô độc bảy mươi năm, chỉ đợi đêm nào có người yếu qua cầu là đổi lấy một thân. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #caukhi",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cầu khỉ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a drowned woman in an old checkered khăn rằn rising from black canal water at night, reaching for the bamboo bridge above, photorealistic horror",
+    "an elderly Vietnamese woman telling a story by oil lamp, fearful listeners, photorealistic"
+  ],
+  "scenePrompts": {
+    "old-woman-warning": "an elderly woman on a doorstep at dusk, face half shadowed, solemn expression, photorealistic",
+    "past-catch": "a woman in old-fashioned clothes crabbing in a dark canal at dusk decades ago, wooden boat, photorealistic",
+    "drowning-past": "a woman slipping from a sampan into dark water at dusk, hand grasping at the boat edge, photorealistic horror",
+    "search-party": "men with torches on boats searching a dark canal at night decades ago, photorealistic",
+    "monkey-bridge-night": "a bamboo bridge at night over black water, thick fog, photorealistic horror",
+    "ghost-under": "a pale drowned woman standing on the canal bed looking up at the bridge silhouette above, dark water, photorealistic horror",
+    "kitchen-stare": "a woman standing motionless in a dark kitchen staring at the wall, husband watching from doorway, photorealistic horror",
+    "water-call": "a canal bank at night, the water surface forming a face calling upward, photorealistic horror",
+    "village-meeting": "villagers in a communal house at night around kerosene lamps, worried faces, photorealistic",
+    "rope-ritual": "a red string tied from a house pillar leading out toward the canal at dusk, small offerings, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Bà cụ Hai kể lại cho nguyên xóm nghe",
+      "text": "Bà cụ Hai kể lại cho nguyên xóm nghe, vì giờ không giấu được nữa. Chuyện xảy ra đời bà mới mười lăm. Rạch Ông Bưởi năm đó chưa có cầu khỉ, qua sông bằng ghe. Chị Tư Ngân - dâu mới nhà ông Sớm - chiều nào cũng chèo ghe ra rạch bắt cua bắt ốc về gặm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "drowning-past",
+      "caption": "Chiều hôm đó mưa to",
+      "text": "Chiều hôm đó mưa to, chị Tư ra rạch dội lạy mấy rọ cua bỏ quên. Ghe lật giữa dòng. Chị kêu cứu mà gió lớn, người trên bờ nghe được chạy ra thì mặt nước đã phẳng. Mò ba ngày, kéo lưới cả chục lần - không thấy xác. Rạch đó người ta nói có cái xoáy dưới đáy, xác chìm là cuốn đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "search-party",
+      "caption": "Không xác nên không làm ma được",
+      "text": "Không xác nên không làm ma được. Nhà chị Tư đành thờ bài vị ký gửi đình làng. Mấy năm sau dân làng góp công bắc cây cầu khỉ qua rạch cho tiện - ngay đúng chỗ ghe chị Tư lật. Và từ đêm đầu tiên có cầu, chuyện lạ bắt đầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-under",
+      "caption": "Bà cụ nói: vong dưới nước độc không siêu thoát được vì xác n",
+      "text": "Bà cụ nói: vong dưới nước độc không siêu thoát được vì xác nằm kẹt trong cái xoáy lòng rạch, lạnh, tối, một mình. Bảy mươi năm nó chỉ biết chờ - đêm nào có người yếu vía qua cầu, nó nắm lấy cái bóng của người đó kéo xuống, rồi đẩy chính mình lên thay vào thân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Năm mươi năm trước nó đổi được một người",
+      "text": "Năm mươi năm trước nó đổi được một người - cô dâu mới nhà kia qua cầu đêm đi ốm. Về nhà cô khác người, ăn sống, ngồi nhìn nước. Làng phải mời thầy, thầy nói đổi rồi thì chỉ đổi ngược được trong bảy ngày đầu, quá bảy ngày vong ngủ trong thân người thành ruột thịt không tách được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "kitchen-stare",
+      "caption": "Hồi đó làng đổi được cô dâu lại kịp ngày thứ sáu",
+      "text": "Hồi đó làng đổi được cô dâu lại kịp ngày thứ sáu - đem cái thân có vong lạ ra giữa cầu khỉ đêm, thầy đọc chú bắt đổi ngược. Chuyện đó giấu kín, chỉ đám già đời bà cụ biết. Bà dặn giờ cấm chín giờ là vì vậy, mà không dám kể đầy đủ sợ con cháu không tin."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "water-call",
+      "caption": "Bây giờ tới phiên vợ anh Tấn",
+      "text": "Bây giờ tới phiên vợ anh Tấn - ngày thứ tư rồi. Bà cụ chỉ đường cứu: đêm nay phải đem cái thân giả ra lại cầu, lừa nó đổi ngược. Nhưng có một điều kiện chí mạng: người đi theo phải là người thân ruột gọi tên thật của vợ, để vong thật dưới nước nghe tên mà bám theo về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "kitchen-stare",
+      "caption": "Trong khi đó ở nhà anh Tấn",
+      "text": "Trong khi đó ở nhà anh Tấn, cái thân giả ngày càng lộ. Chị Ba giờ không ăn cơm nữa, chỉ ăn đồ sống. Tóc chị rụng từng mảng, da bắt đầu xanh xám lại như người ngâm nước lâu ngày. Nó không giấu nữa - đêm ngồi khóc nghe tiếc thương, khóc không phải vì anh, mà khóc vì bảy mươi năm dưới nước lạnh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "water-call",
+      "caption": "Anh Tấn một đêm nghe nó khóc mà lòng xiết lại",
+      "text": "Anh Tấn một đêm nghe nó khóc mà lòng xiết lại. Nó kể qua miệng vợ anh: em tên Tư Ngân, xuống nước năm mười chín, em không cố ý lấy thân đâu anh, em lạnh quá em chỉ muốn lên hít một hơi không khí ấm thôi. Nghe mà không biết nên hận hay nên thương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Họp xóm bàn cách đổi ngược",
+      "text": "Họp xóm bàn cách đổi ngược. Khó ở chỗ: lần trước thầy bắt buộc đổi vì vong yếu sau năm mươi năm. Giờ nó vừa lên khỏi nước, mạnh lắm, nó có chịu buông thân không? Bà cụ nói: phải cho nó cái nó muốn hơn thân người - một ngôi mộ có tên, có người thờ, và được tha về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rope-ritual",
+      "caption": "Kế hoạch: đêm rằm",
+      "text": "Kế hoạch: đêm rằm, trên cầu khỉ giăng dây đỏ từ bờ này sang bờ kia như cái lưới mềm. Anh Tấn dìu vợ - thân giả - ra giữa cầu gọi tên thật chị ba lần. Vong thật dưới nước nghe tên sẽ lên theo dây đỏ về, còn vong giả mất đất bám phải buông thân chị rơi xuống - thầy hứng bằng võng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "monkey-bridge-night",
+      "caption": "Nhưng trước khi tới đêm rằm",
+      "text": "Nhưng trước khi tới đêm rằm, có biến: tối mười ba cả xóm nghe chuông gió nhà nào cũng kêu inh ỏi cùng lúc, rồi im bặt. Và người ta thấy bóng chị Ba đứng ngoài bờ rạch, ngắm xuống nước, miệng mấp máy - nghe đồn qua đám nhóc rình: nó đang nói chuyện với người dưới nước, mà người dưới nước không phải một mình như bà cụ tưởng."
+    }
+  ],
+  "slug": "cau-khi-tap-02"
+}

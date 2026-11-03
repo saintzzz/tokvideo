@@ -5,7 +5,15 @@
   "episode": 3,
   "title": "Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả",
   "description": "Tập 3 arc CÂY ĐA ĐẦU LÀNG: Mở lại chuyện xưa - cô gái tên Sen bị cả làng vu cho tội trộm vàng, đuổi ra nghĩa địa chết dần. Kẻ trộm thật vẫn sống nhởn nhơ và con cháu hắn đang giữ chức to trong làng. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #cayda",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "cây đa đầu làng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cây đa đầu làng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "narrator": "vi-VN-NamMinhNeural",
   "thumbnailSubjects": [
     "a gaunt wronged ghost girl in tattered clothes standing in an overgrown graveyard at dusk, hollow accusing eyes, photorealistic horror",
@@ -25,17 +33,78 @@
     "council-dark": "men whispering in a dark corner of the communal house at night, conspiratorial, photorealistic"
   },
   "beats": [
-    { "scene": "village-past", "text": "Chuyện xưa kể đầy đủ thế này. Năm đó làng Tây Trà còn nghèo, nhà nào giàu nhất đếm được trên đầu ngón tay. Cô Sen là con gái nhà nghèo nhất làng, cha mất sớm, ở với mẹ điếc, đi ở cho nhà ông hội đồng - cán bộ to nhất làng đời đó." },
-    { "scene": "gold-hidden", "text": "Nhà hội đồng mất hai chỉ vàng cất trong đòn cảnh. Tra khắp nhà không thấy, thì có người mách: đêm mất vàng chỉ có cô Sen vào buồng trong dọn giường. Cô khai oan không ai nghe - đời đó con ở nói gì cũng là chối." },
-    { "scene": "accusation", "text": "Họp làng giữa sân đình đêm hôm đó. Cả xóm đứng vây quanh cô gái mười bảy quỳ giữa đất, đuốc soi rực mặt. Không một ai đứng ra bênh, kể cả người từng nhận gạo nhà cô đi ở. Phán: đuổi ra khỏi làng, cấm ai cấp một bát cơm." },
-    { "scene": "graveyard-old", "text": "Cô Sen không có nơi đi, đành trú lại nghĩa địa đầu làng - chỗ người ta vốn chẳng ai dám lại gần. Mẹ điếc chết trước đó một năm. Cô sống lương thiến ăn mày xóm bên, đêm về nằm trong lều lá giữa những gò mồ không bia. Người ta kể đêm đêm nghe tiếng cô khóc thầm gọi mẹ." },
-    { "scene": "dying-girl", "text": "Ba tháng sau đó mưa dịch. Cô Sen ốm nằm liệt trong lều lá, không ai dám lại gần vì sợ mang tiếng tiếp tên trộm. Sáng một hôm người chăn trâu đi ngang thấy lều im quá - vào thì cô đã cứng, hai tay vẫn nắm chặt mảnh vải áo mẹ để lại, mắt mở trừng nhìn lên trần." },
-    { "scene": "burial-hasty", "text": "Làng chôn vội cô ngay đêm đó, không khâm liệm, không bài vị, cuộn chiếu đào hố nghĩa địa vùi cho xong. Rồi chuyện lạ bắt đầu: đêm nào cũng có tiếng đàn bà khóc dọc nghĩa địa, trâu bò đi ngang đồng cỏ sát đó là hồn xiêu phách lạc. Có người đi đêm ngang qua bị vật xuống đường, quỳ bắt khấn mới tha." },
-    { "scene": "jar-sealing", "text": "Làng phải mời thầy Từ Đạt - pháp sư nổi tiếng vùng này. Ông xem xong nói: cô này chết oan, oán thành thây, giết thì tội nghiệp vì nó đã oan, thả thì làng mang họa. Đành phương trấn: đọc chú nhốt vong vào vại, chôn sâu, trồng cây đa lên làm xiềng sống - cây sống ngày nào trấn giữ ngày đó." },
-    { "scene": "planting-tree", "text": "Thầy dặn dòng tộc ông nội cụ chín mươi coi cây đời đời, và dặn làng một điều làm tới nay mới lòi ra: muốn thây siêu thoát, người làng phải minh oan cho cô, tìm đúng kẻ trộm thật nhận tội. Làng hứa với thầy rồi làm mờ đi. Ba đời sau, không ai còn nhớ lời hứa đó." },
-    { "scene": "council-dark", "text": "Còn kẻ trộm thật, chuyện này đám già nghe lén đời trước kể lại: đêm mất vàng có người thấy thằng con trai cả của hội đồng lén lút về khuya, sáng hôm sau hắn có tiền đồ sổ ở chợ huyện. Nhưng hắn là con ông to, làng im cho xong chuyện, đổ hết lên đầu con ở." },
-    { "scene": "wealthy-house", "text": "Và đây là nút thắt làm cả làng bây giờ lạnh sống lưng: dòng họ con trai hội đồng năm đó không đứt - cháu nội hắn chính là ông chủ tịch làng đương nhiệm, người ký quyết định chặt cây đa để mở đường. Nghĩa là cháu của kẻ vu oan vừa tự tay tháo xiềng của vong bị vu." },
-    { "scene": "banyan-night", "text": "Đêm sau khi biết chuyện, người ta thấy dưới gốc cây đa cái vại lộ ra hẳn một nửa, đất tự tụt xuống không ai đào. Phù dán trên nắp bay hết, vải đỏ rách nát. Và trong làng, nhà ông chủ tịch - nhà to nhất xóm - đêm đó sáng đèn tới gần sáng." },
-    { "scene": "banyan-night", "text": "Bây giờ làng Tây Trà đứng trước con đường duy nhất: cháu nội của kẻ hại cô Sen phải đứng trước mặt vong mà nhận tội thay - như ông Hai Tàu bên làng Đồng Cỏ từng phải làm. Nhưng nhận tội với người đã chết ba đời thì dễ, còn nhận trước mặt cả làng rằng ông nội mình là kẻ trộm vàng và hại một con người chết oan - đó mới là điều cả làng không chắc ông ta dám làm." }
-  ]
+    {
+      "speaker": "narrator",
+      "scene": "village-past",
+      "caption": "Chuyện xưa kể đầy đủ thế này",
+      "text": "Chuyện xưa kể đầy đủ thế này. Năm đó làng Tây Trà còn nghèo, nhà nào giàu nhất đếm được trên đầu ngón tay. Cô Sen là con gái nhà nghèo nhất làng, cha mất sớm, ở với mẹ điếc, đi ở cho nhà ông hội đồng - cán bộ to nhất làng đời đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "gold-hidden",
+      "caption": "Nhà hội đồng mất hai chỉ vàng cất trong đòn cảnh",
+      "text": "Nhà hội đồng mất hai chỉ vàng cất trong đòn cảnh. Tra khắp nhà không thấy, thì có người mách: đêm mất vàng chỉ có cô Sen vào buồng trong dọn giường. Cô khai oan không ai nghe - đời đó con ở nói gì cũng là chối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "accusation",
+      "caption": "Họp làng giữa sân đình đêm hôm đó",
+      "text": "Họp làng giữa sân đình đêm hôm đó. Cả xóm đứng vây quanh cô gái mười bảy quỳ giữa đất, đuốc soi rực mặt. Không một ai đứng ra bênh, kể cả người từng nhận gạo nhà cô đi ở. Phán: đuổi ra khỏi làng, cấm ai cấp một bát cơm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-old",
+      "caption": "Cô Sen không có nơi đi",
+      "text": "Cô Sen không có nơi đi, đành trú lại nghĩa địa đầu làng - chỗ người ta vốn chẳng ai dám lại gần. Mẹ điếc chết trước đó một năm. Cô sống lương thiến ăn mày xóm bên, đêm về nằm trong lều lá giữa những gò mồ không bia. Người ta kể đêm đêm nghe tiếng cô khóc thầm gọi mẹ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dying-girl",
+      "caption": "Ba tháng sau đó mưa dịch",
+      "text": "Ba tháng sau đó mưa dịch. Cô Sen ốm nằm liệt trong lều lá, không ai dám lại gần vì sợ mang tiếng tiếp tên trộm. Sáng một hôm người chăn trâu đi ngang thấy lều im quá - vào thì cô đã cứng, hai tay vẫn nắm chặt mảnh vải áo mẹ để lại, mắt mở trừng nhìn lên trần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "burial-hasty",
+      "caption": "Làng chôn vội cô ngay đêm đó",
+      "text": "Làng chôn vội cô ngay đêm đó, không khâm liệm, không bài vị, cuộn chiếu đào hố nghĩa địa vùi cho xong. Rồi chuyện lạ bắt đầu: đêm nào cũng có tiếng đàn bà khóc dọc nghĩa địa, trâu bò đi ngang đồng cỏ sát đó là hồn xiêu phách lạc. Có người đi đêm ngang qua bị vật xuống đường, quỳ bắt khấn mới tha."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-sealing",
+      "caption": "Làng phải mời thầy Từ Đạt",
+      "text": "Làng phải mời thầy Từ Đạt - pháp sư nổi tiếng vùng này. Ông xem xong nói: cô này chết oan, oán thành thây, giết thì tội nghiệp vì nó đã oan, thả thì làng mang họa. Đành phương trấn: đọc chú nhốt vong vào vại, chôn sâu, trồng cây đa lên làm xiềng sống - cây sống ngày nào trấn giữ ngày đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "planting-tree",
+      "caption": "Thầy dặn dòng tộc ông nội cụ chín mươi coi cây đời đời",
+      "text": "Thầy dặn dòng tộc ông nội cụ chín mươi coi cây đời đời, và dặn làng một điều làm tới nay mới lòi ra: muốn thây siêu thoát, người làng phải minh oan cho cô, tìm đúng kẻ trộm thật nhận tội. Làng hứa với thầy rồi làm mờ đi. Ba đời sau, không ai còn nhớ lời hứa đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "council-dark",
+      "caption": "Còn kẻ trộm thật",
+      "text": "Còn kẻ trộm thật, chuyện này đám già nghe lén đời trước kể lại: đêm mất vàng có người thấy thằng con trai cả của hội đồng lén lút về khuya, sáng hôm sau hắn có tiền đồ sổ ở chợ huyện. Nhưng hắn là con ông to, làng im cho xong chuyện, đổ hết lên đầu con ở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wealthy-house",
+      "caption": "Và đây là nút thắt làm cả làng bây giờ lạnh sống lưng: dòng ",
+      "text": "Và đây là nút thắt làm cả làng bây giờ lạnh sống lưng: dòng họ con trai hội đồng năm đó không đứt - cháu nội hắn chính là ông chủ tịch làng đương nhiệm, người ký quyết định chặt cây đa để mở đường. Nghĩa là cháu của kẻ vu oan vừa tự tay tháo xiềng của vong bị vu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "banyan-night",
+      "caption": "Đêm sau khi biết chuyện",
+      "text": "Đêm sau khi biết chuyện, người ta thấy dưới gốc cây đa cái vại lộ ra hẳn một nửa, đất tự tụt xuống không ai đào. Phù dán trên nắp bay hết, vải đỏ rách nát. Và trong làng, nhà ông chủ tịch - nhà to nhất xóm - đêm đó sáng đèn tới gần sáng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "banyan-night",
+      "caption": "Bây giờ làng Tây Trà đứng trước con đường duy nhất: cháu nội",
+      "text": "Bây giờ làng Tây Trà đứng trước con đường duy nhất: cháu nội của kẻ hại cô Sen phải đứng trước mặt vong mà nhận tội thay - như ông Hai Tàu bên làng Đồng Cỏ từng phải làm. Nhưng nhận tội với người đã chết ba đời thì dễ, còn nhận trước mặt cả làng rằng ông nội mình là kẻ trộm vàng và hại một con người chết oan - đó mới là điều cả làng không chắc ông ta dám làm."
+    }
+  ],
+  "slug": "cay-da-tap-03"
 }

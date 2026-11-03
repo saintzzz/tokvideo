@@ -1,0 +1,121 @@
+{
+  "id": "cay-da-tap-05",
+  "arc": "cay-da-dau-lang",
+  "arcTitle": "CÂY ĐA ĐẦU LÀNG",
+  "episode": 5,
+  "title": "Phiên Tòa Giữa Đêm Khuya - Cả Làng Phải Xét Lại Tội Mình",
+  "description": "Tập cuối arc CÂY ĐA ĐẦU LÀNG: Thầy Bảy từ chùa hoang xuống núi mở phiên tòa giữa đêm - không phải xử thây ma, mà để cô Sen xử lại cả làng. Từng nhà đứng ra nhận phần tội của mình. Kết thúc arc. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #cayda",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cây đa đầu làng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a midnight trial at the village communal house, a ghost girl standing before rows of kneeling villagers, an ancient shaman presiding, torchlight, photorealistic horror",
+    "villagers kneeling in a line before a banyan tree at dawn, a ghostly girl fading into morning mist, photorealistic"
+  ],
+  "scenePrompts": {
+    "mountain-temple": "a ruined temple on a misty mountain at dawn, an ancient shaman descending stone steps carrying a wooden staff, photorealistic",
+    "night-trial": "the village communal house yard at midnight, villagers kneeling in rows, a ghost girl standing at the front, an old shaman with a staff presiding, torches, photorealistic horror",
+    "shaman-old": "an ancient Vietnamese shaman with white beard and cracked ceremonial robe, holding a wooden staff topped with a brass ring, torchlight, photorealistic",
+    "ghost-girl-face": "the ghost girl's face close up, rotted cheeks but human sorrowful eyes, ragged clothes, torchlight, photorealistic horror",
+    "kneel-confess": "a row of villagers kneeling and bowing foreheads to the ground at night, one raising a hand to speak, photorealistic",
+    "gold-return": "a small gold bar placed on a ceremonial tray before a ghost, hands trembling, photorealistic horror",
+    "chairman-kneel": "the village chairman kneeling in white shirt before the ghost, forehead to the ground, crying, photorealistic horror",
+    "reburial": "a proper reburial at dawn, villagers lowering a new coffin into a grave with a stone marker, incense, photorealistic",
+    "banyan-heal": "the banyan tree at dawn, villagers replanting and watering the roots, red cloths restored, morning light, photorealistic",
+    "fading-ghost": "the ghost girl's form dissolving into morning mist beside her new grave, peaceful, first sunlight, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "mountain-temple",
+      "caption": "Thầy Bảy Đốt Ngón xuống núi ngay sáng hôm được mời",
+      "text": "Thầy Bảy Đốt Ngón xuống núi ngay sáng hôm được mời, không đợi thuyết phục. Ông chín mươi mấy, gậy trúc chống run rẩy, nhưng đi tới gốc đa đứng trước cái vại trống thì ông nói câu đầu tiên: sư phụ tôi trấn nó năm mười bảy tuổi tôi theo hầu, nó khóc cả đêm kêu oan chứ không gầm gừ. Vong oan không trấn được mãi - chỉ trả được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-trial",
+      "caption": "Thầy chọn đêm hai mươi chín",
+      "text": "Thầy chọn đêm hai mươi chín, bày không phải lễ cúng mà là phiên tòa. Giữa sân đình thắp chín ngọn đuốc, cả làng quỳ thành hàng phía dưới, thầy ngồi ghế trên giơ gậy gõ đất ba tiếng như vỗ án. Rồi thầy gọi to: cô Sen, ra đây đứng đầu phiên, hôm nay người ta để cô xét xử lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-girl-face",
+      "caption": "Cô Sen hiện ra giữa sân đình",
+      "text": "Cô Sen hiện ra giữa sân đình - không phải từ cửa bước vào, mà từ làn sương đọng lại thành người. Áo rách, da mục, nhưng đôi mắt là mắt con người, đỏ hoe nhìn xuống từng hàng người quỳ. Cả sân đình không một tiếng động, chỉ nghe thầy nói: hôm nay không ai hại cô nữa. Cô muốn hỏi gì thì hỏi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "kneel-confess",
+      "caption": "Người đầu tiên đứng ra không phải ông chủ tịch",
+      "text": "Người đầu tiên đứng ra không phải ông chủ tịch - là bà cụ nhai trầu. Bà lê ra trước, khấu đầu xuống đất lạnh: năm đó con mười sáu, thấy hết mà không nói, sợ. Sáu mươi năm con mang tội đó. Cô muốn lấy mạng con cũng được, con chỉ xin được nói câu này trước: cô Sen không trộm vàng, con xin nhân chứng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "kneel-confess",
+      "caption": "Rồi từng nhà đứng ra",
+      "text": "Rồi từng nhà đứng ra - nhà nào người đời xưa trong phiên đuổi cô thì người đời nay nhận thay. Mười mấy nhà, mười mấy cái đầu cúi xuống đất. Có người khóc vì tội ông cha để lại, có người run vì sợ, nhưng không ai bỏ đi. Phiên tòa kéo tới gần canh ba."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chairman-kneel",
+      "caption": "Cuối cùng là ông chủ tịch",
+      "text": "Cuối cùng là ông chủ tịch. Ông bước ra, áo trắng nhàu nhĩ, quỳ giữa sân đình trước cô Sen mà ông hôm trước còn gọi là mê tín. Ông nói lớn cho cả làng nghe, tiếng nghẹn: tôi xin thay ông nội nhận tội. Năm đó ổng lấy vàng nhà hội đồng rồi để cô Sen gánh tội. Nhà tôi giàu từ hai chỉ vàng đó - của cô đó, không phải của nhà tôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "gold-return",
+      "caption": "Ông đặt lên mâm lễ vật hai chỉ vàng",
+      "text": "Ông đặt lên mâm lễ vật hai chỉ vàng - vàng mới mua đủ chỉ, vì vàng gốc đã tiêu từ đời ông nội - quỳ đẩy mâm về phía cô Sen: trả cô. Và tôi xin trả thêm cái chức chủ tịch này, mai tôi từ chức, vì chức này cũng mọc lên từ cái gốc bất nhân đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-girl-face",
+      "caption": "Cô Sen đứng im nghe hết",
+      "text": "Cô Sen đứng im nghe hết. Rồi cô đưa tay - bàn tay gân xanh móng mục - chỉ về phía ông chủ tịch. Cả sân đình nín thở chờ án. Nhưng cô chỉ nói một câu, giọng con gái rè khàn đã ba đời không được ai nghe: tôi không cần vàng. Tôi chỉ cần người làng nói đúng một câu - Sen không trộm. Ba đời tôi chờ câu đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-trial",
+      "caption": "Thầy Bảy đứng lên gậy giơ cao",
+      "text": "Thầy Bảy đứng lên gậy giơ cao, tuyên án cho cả làng nghe: làng Tây Trà vu oan Nguyễn Thị Sen, hôm nay minh oan chính thức, ghi lại vào làng chí. Xác cô được cải táng về đất thờ riêng, lập bài vị đầy đủ họ tên. Từ đây ngày giỗ cô làng thờ như thờ người thân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "reburial",
+      "caption": "Sáng hôm sau cải táng",
+      "text": "Sáng hôm sau cải táng. Xương cô Sen nằm trong quan tài mới, bia mộ khắc đủ tên. Người ta để cái mảnh vải áo của mẹ cô - thứ cô nắm chặt lúc chết - vào cùng huyệt. Ông chủ tịch đích thân khiêng quan, hai chỉ vàng đặt trong mâm cúng không ai lấy lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fading-ghost",
+      "caption": "Lễ xong",
+      "text": "Lễ xong, người ta thấy cô Sen đứng bên mồ mới - lần này áo không còn rách, mặt không còn mục, là mặt con gái mười bảy xưa kia. Cô cúi đầu chào cả làng một cái, rồi tan dần trong sương sớm như sương tan trong nắng. Không ai khóc vì sợ nữa - người ta khóc vì thương."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "banyan-heal",
+      "caption": "Cây đa không chặt nữa",
+      "text": "Cây đa không chặt nữa - đường bê tông vòng lên một quảng, huyện duyệt lại quy hoạch vì cổ thụ cấp bảo tồn. Người làng trồng lại đất quanh gốc, treo lại khăn đỏ, bát hương mới. Cây từ đó xanh trở lại nhanh lạ thường, dễ buông xuống tành tạch như người mới khỏi bệnh thở phào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fading-ghost",
+      "caption": "Cái vại trấn thầy Bảy cho chôn lại nguyên vị trí",
+      "text": "Cái vại trấn thầy Bảy cho chôn lại nguyên vị trí, không phù không niêm, chỉ để trống - vì không còn gì để giam nữa. Thầy trước khi về núi nói câu cuối: người làng trả nợ xong thì cây đa không cần làm xiềng nữa, nó làm cây thôi. Oan mà trả, vong thành người nhà mình mà thờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fading-ghost",
+      "caption": "Chuyện tới đây là hết",
+      "text": "Chuyện tới đây là hết. Làng Tây Trà đời sau có thêm một điều dạy con cháu: đừng bao giờ bỏ phiếu đuổi một người vô tội, dù cả làng cùng giơ tay - vì phiếu đó có ngày con cháu phải quỳ xuống rút lại. Và cây đa đầu làng giờ đây người ta không sợ nữa, chỉ thương - vì ai cũng biết nó từng gánh oán của cả một làng im lặng."
+    }
+  ],
+  "slug": "cay-da-tap-05"
+}

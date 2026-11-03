@@ -1,0 +1,103 @@
+{
+  "id": "cay-da-tap-04",
+  "arc": "cay-da-dau-lang",
+  "arcTitle": "CÂY ĐA ĐẦU LÀNG",
+  "episode": 4,
+  "title": "Đêm Thây Ma Đi Vào Làng - Kẻ Vu Oan Từ Chối Nhận Tội",
+  "description": "Tập 4 arc CÂY ĐA ĐẦU LÀNG: Ông chủ tịch từ chối nhận tội thay ông nội, gọi chuyện là mê tín. Đêm đó thây ma rời vại lần đầu tiên sau ba đời, đi vào làng - và người chết đầu tiên không phải người làng mong đợi. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #cayda",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cây đa đầu làng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a rotting ghost girl in tattered clothes standing inside a village house bedroom at night, a man asleep unaware, photorealistic horror",
+    "a terrified village chairman in white shirt surrounded by darkness, a skeletal hand on his shoulder, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "chairman-house": "a large modern village house at night, lights on, a middle-aged official pacing angrily inside, photorealistic",
+    "ghost-street": "a gaunt ghost girl in rags standing in the middle of an empty village street at night, fog swirling, photorealistic horror",
+    "jar-open": "the terracotta jar at the banyan base with its lid fully off lying beside it, empty dark interior, photorealistic horror",
+    "scratch-door": "deep scratch marks on a house door, as if clawed by fingernails, flashlight beam, photorealistic horror",
+    "family-cower": "a family huddled together in a bedroom corner at night, terrified, candlelight, photorealistic horror",
+    "death-morning": "a village house at dawn with a crowd outside, someone being carried out covered in cloth, photorealistic",
+    "banyan-empty": "the banyan tree base at night with the jar open and empty, roots slack like dead ropes, photorealistic horror",
+    "old-shaman-call": "an elderly woman on a telephone at night, urgent expression, kerosene lamp, photorealistic",
+    "chairman-collapse": "the village chairman collapsed at his desk at night, face ashen, papers scattered, photorealistic horror",
+    "villagers-armed": "villagers standing in the street at night holding torches, sticks and salt bags, frightened but together, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "chairman-house",
+      "caption": "Đưa chuyện lên ông chủ tịch",
+      "text": "Đưa chuyện lên ông chủ tịch. Ông nghe xong gãy đôi đũa đang ăn cơm: tổ chức chính quyền mà đi nhận tội với ma à? Ông nội tôi mất ba mươi năm rồi, ai chứng minh được chuyện trộm vàng? Mấy ông mê tín quá rồi. Cây đó cứ chặt, trách nhiệm tôi chịu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chairman-house",
+      "caption": "Ông nói xong câu đó đúng lúc chuông đình điểm chín giờ tối",
+      "text": "Ông nói xong câu đó đúng lúc chuông đình điểm chín giờ tối. Người ta sau này mới để ý: cùng giờ đó, cái vại dưới gốc đa im thì thầm hẳn - không còn tiếng khe kẽ nữa. Im như người ta đã nghe xong lời cần nghe và quyết định tự đi lấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-open",
+      "caption": "Nửa đêm thằng canh rẫy chạy vào làng khóc lóc: nắp vại văng ",
+      "text": "Nửa đêm thằng canh rẫy chạy vào làng khóc lóc: nắp vại văng hẳn ra ba thước, trong vại trống không. Đám dễ cây đa rũ xuống như dây thừng chết, không còn ôm gì nữa. Ba đời giam giữ hết hạn - thây ma đã ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-street",
+      "caption": "Đêm đó cả làng nghe tiếng chân trần đi trên đường đất",
+      "text": "Đêm đó cả làng nghe tiếng chân trần đi trên đường đất, lộp bộp, lộp bộp, đi chậm từ cửa làng vào tận giữa xóm. Chó không sủa - chó nằm im run hết. Người nào liều hé rèm đều kể một thứ giống nhau: con gái áo rách, đầu gối lên ngực đi bằng cái kiểu không giống người, chân như không chạm đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "scratch-door",
+      "caption": "Nó đi qua từng nhà",
+      "text": "Nó đi qua từng nhà, dừng lại ở cửa nhà nào là nhà đó đèn tắt phụt, rồi đi tiếp. Sáng ra kiểm tra: mười mấy nhà có vết cào trên cửa, năm vệt một bụm, sâu hoắm vào gỗ - và mười mấy nhà đó đều là nhà có người đời xưa trong phiên phán đuổi cô Sen."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-cower",
+      "caption": "Riêng nhà ông chủ tịch nó không đi ngang",
+      "text": "Riêng nhà ông chủ tịch nó không đi ngang. Nó đứng hẳn lại trước cổng tới gần sáng. Nhà ông kể lại: không nghe tiếng gì hết, chỉ thấy qua khe cửa bóng nó đứng im thin thít ngoài sân, mặt quay thẳng vào phòng khách, đứng tới khi gà gáy mới biến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "death-morning",
+      "caption": "Người chết đầu tiên không phải ông chủ tịch",
+      "text": "Người chết đầu tiên không phải ông chủ tịch, cũng không phải đám trẻ trong ban cán sự. Là bà Tư Lụa, chín mươi hai tuổi - người duy nhất trong phiên xử năm xưa từng lén đem cơm cho cô Sen, mà sau đó bị làng ép phải bỏ phiếu đuổi như mọi người. Bà chết trong giấc ngủ, mặt bình an."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "villagers-armed",
+      "caption": "Người làng tỉnh ngộ ra một điều ớn lạnh: cô Sen không giết b",
+      "text": "Người làng tỉnh ngộ ra một điều ớn lạnh: cô Sen không giết bừa. Bà Tư Lụa là người duy nhất từng tốt với cô - cô không giết bà, cô đón bà đi cho khỏi thấy những đêm sắp tới. Người còn lại trong làng, cái vết cào trên cửa chính là cái thiếp hẹn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-shaman-call",
+      "caption": "Bà cụ nhai trầu",
+      "text": "Bà cụ nhai trầu - cũng đã có tuổi trong phiên xử năm xưa - đêm đó gọi điện khắp nơi tìm thầy giỏi hơn thầy Hòe. Người ta chỉ về thầy Bảy Đốt Ngón, pháp sư cuối cùng còn sót lại của phái Từ Đạt, già lắm, sống ẩn ở chùa hoang trên núi. Bà cụ nói: chỉ còn ông đó biết câu chuyện trọn vẹn, vì chính thầy Bảy là đồ đệ theo thầy Từ Đạt trấn vong năm đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chairman-collapse",
+      "caption": "Ông chủ tịch đêm đó không về nhà",
+      "text": "Ông chủ tịch đêm đó không về nhà, ngủ lại ở phòng làm việc khóa kín. Người gác nghe trong buồng ông nói chuyện một mình suốt đêm, lúc van xin lúc chửi bới, có lúc khóc. Sáng ra mở cửa thấy ông ngồi dưới gầm bàn, giấy tờ văng tung tóe, trên mặt bàn có năm vệt ngón tay in bùn - và ông lảm nhảm mãi một câu: nó đọc sổ hộ khẩu từng nhà, nó biết hết rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-street",
+      "caption": "Sáng hôm đó",
+      "text": "Sáng hôm đó, thằng nhóc phụ làng chí mở sổ cũ ra kiểm chứng câu nói của ông chủ tịch thì tay nó run lên: trong quyển sổ da trâu ghi lời thầy Từ Đạt dặn, dòng cuối cùng - nét mực trước nay không ai đọc ra vì mờ - nay đen rõ lên: ngày phù rơi, thây đi từng nhà đọc tội, nhà nào oan nặng nhất, thây nương nhẹ nhất. Nhà nào oan nhẹ, chết đầu tiên."
+    }
+  ],
+  "slug": "cay-da-tap-04"
+}

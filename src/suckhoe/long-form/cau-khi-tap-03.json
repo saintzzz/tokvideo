@@ -1,0 +1,110 @@
+{
+  "id": "cau-khi-tap-03",
+  "arc": "cau-khi-dem",
+  "arcTitle": "CẦU KHỈ ĐÊM",
+  "episode": 3,
+  "title": "Dưới Rạch Không Chỉ Có Một Mình - Xoáy Nước Nuốt Cả Đò",
+  "description": "Tập 3 arc CẦU KHỈ ĐÊM: Đêm đổi người sắp tới mà phát hiện dưới rạch Ông Bưởi không chỉ có vong chị Tư - cái xoáy lòng sông đã giữ cả chục xác người chết đuối không tên từ đời nào. Đổi ngược lúc này là giải phóng tất cả. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #caukhi",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cầu khỉ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "dozens of pale drowned figures standing on the dark canal bed looking up at a bamboo bridge, photorealistic horror underwater view",
+    "a frightened shaman on a riverbank at night seeing multiple hands rising from black water, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "ghost-under": "a pale drowned woman standing on the canal bed looking up at the bridge, dark water, photorealistic horror",
+    "many-under": "dozens of pale drowned human figures of different eras standing on a canal bed, hair drifting, all looking up, photorealistic horror",
+    "monkey-bridge-night": "a bamboo bridge at night over black water, thick fog, photorealistic horror",
+    "talking-water": "the woman in borrowed body kneeling at the canal edge at night speaking to the water, multiple faint faces in the surface, photorealistic horror",
+    "old-woman-warning": "an elderly woman on a doorstep at dusk, solemn face, photorealistic",
+    "village-meeting": "villagers in a communal house at night, arguing and fear, kerosene lamps, photorealistic",
+    "shaman-arrive": "a middle-aged shaman arriving at the canal bank at dusk with ritual items, rope and nets, photorealistic",
+    "dredge-river": "men on boats dredging the canal with long nets at dawn, tense faces, photorealistic",
+    "bones-found": "human bones of different sizes caught in a dredging net pulled from dark water, photorealistic horror",
+    "mass-grave": "many small cloth bundles of bones lined up on the riverbank at dusk, incense burning, photorealistic",
+    "bridge-dawn": "the bamboo bridge at dawn, quiet, mist rising off calm water, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "talking-water",
+      "caption": "Đám nhóc rình chị Ba ngoài rạch nghe được trọn cuộc nói chuy",
+      "text": "Đám nhóc rình chị Ba ngoài rạch nghe được trọn cuộc nói chuyện - hay đúng hơn là buổi đối thoại. Chị Ba - hay đúng hơn là vong Tư Ngân trong thân chị - quỳ bên bờ nói xuống nước, mà nước nổi lên không phải một mặt: mấy cái mặt nhợt nhợt lồ lộ lên mặt nước, chen nhau nghe."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "many-under",
+      "caption": "Bà cụ Hai nghe kể mặt trắng bệch: bà lầm to",
+      "text": "Bà cụ Hai nghe kể mặt trắng bệch: bà lầm to. Dưới đó không phải chỉ chị Tư một mình. Cái xoáy lòng rạch Ông Bưởi nó giữ xác người chết đuối từ đời nào - đò lật, nạn đói, chạy loạn, toàn xác không tên không mồ - bảy mươi năm nó tích tụ chừng mười mấy vong."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Chị Tư chỉ là đứa ra trước được vì nó mạnh nhất",
+      "text": "Chị Tư chỉ là đứa ra trước được vì nó mạnh nhất - oán nặng nhất. Và bây giờ đám dưới nước biết mình có thể lên được: nếu đêm rằm mở đường cho Tư Ngân đổi ngược, chín con kia cũng theo dây đỏ trèo lên. Lên làng thì không còn đổi người nữa - mà chiếm luôn thân người sống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Họp khẩn nửa đêm",
+      "text": "Họp khẩn nửa đêm. Cán câu nảy giữa hai dữ: cứu vợ anh Tấn thì mở cửa cho chục vong, còn đóng cửa thì vợ anh Tấn mãi mãi nằm dưới rạch. Anh Tấn ngồi giữa đình không nói, đầu cúi xuống đất, tay nắm chặt tới bật máu móng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Cuối cùng anh Tấn đứng dậy nói một câu làm cả đình im: tôi k",
+      "text": "Cuối cùng anh Tấn đứng dậy nói một câu làm cả đình im: tôi không đổi mạng vợ tôi lấy mạng cả làng. Nhưng tôi cũng không để vợ tôi dưới đó thêm một đêm. Cho tôi cách thứ ba, hoặc tôi tự nhảy xuống rạch ở với vợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shaman-arrive",
+      "caption": "Thầy được mời về là thầy Út Sông",
+      "text": "Thầy được mời về là thầy Út Sông - chuyên nghề rạch, chuyên nghề vong nước. Nghe xong thầy không hoảng như mọi người tưởng: mười vong thì trả cho mười vong. Vấn đề làng mình nghĩ chỉ có một người chết đuối - còn tôi thấy cả một nghĩa trang dưới nước mà không ai thờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dredge-river",
+      "caption": "Thầy ra phương: trước đêm rằm phải vớt xác",
+      "text": "Thầy ra phương: trước đêm rằm phải vớt xác. Mười vong lên rồi để chúng thấy - làng này không giấu xương họ nữa. Đặt tên cho từng người, dù phải đặt tên gọi đại, lập mả giả tử rồi cúng - vong có nhà rồi nó không cần thân người nữa. Chị Tư thì cho đổi ngược đàng hoàng vì nó có tên có nhà sẵn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dredge-river",
+      "caption": "Ba ngày liền hai ấp xuống rạch mò xác theo chỉ điểm của thầy",
+      "text": "Ba ngày liền hai ấp xuống rạch mò xác theo chỉ điểm của thầy. Lưới vứt xuống đúng chỗ xoáy. Ngày đầu lên được ba bộ - xương nhỏ xương lớn, có bộ còn nguyên đôi guốc mộc, có bộ tay vẫn cầm tấm ván ghe mục."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bones-found",
+      "caption": "Ngày hai lên bốn bộ nữa",
+      "text": "Ngày hai lên bốn bộ nữa. Ngày ba - ngày cuối trước rằm - kéo lên hai bộ còn lại và một thứ làm người kéo lưới rùng mình: bộ xương của chị Tư Ngân, nằm cuộn trong lòng cái xoáy đúng chỗ ghe lật, cổ tay còn đeo vòng đồng xanh xỉn. Bảy mươi năm nó nằm đó đợi người ta vớt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mass-grave",
+      "caption": "Mười bộ xương lót vải trắng xếp trên bờ chờ lễ",
+      "text": "Mười bộ xương lót vải trắng xếp trên bờ chờ lễ. Thầy Út Sông đi dọc dãy xương đặt tên cho từng người: bộ này đàn ông đặt Ông Hai Sông, bộ này đàn bà đặt Bà Năm Nước... đứa nhỏ nhất đặt Cậu Tý - đứa không có ai đặt tên bao giờ. Đến chị Tư thì thầy ghi đủ: bài vị cũ đình làng đã có, chỉ cần đem về đúng mả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bridge-dawn",
+      "caption": "Bây giờ mới tới đêm rằm",
+      "text": "Bây giờ mới tới đêm rằm. Kế hoạch thay đổi: không chỉ đổi ngược mỗi chị Ba - làm luôn lễ siêu độ cho cả mười vong ngay trên cầu khỉ. Nhưng một điều thầy căn dặn kỹ: lễ chỉ thành nếu người đứng trên cầu là người thân ruột gọi tên thật vợ - và không được sợ, vì vong nước ngửi được mùi sợ từ ba sống nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "monkey-bridge-night",
+      "caption": "Đêm rằm trăng tròn sáng vằng vặc",
+      "text": "Đêm rằm trăng tròn sáng vằng vặc, nhưng khi anh Tấn dìu vợ - hay đúng hơn là thân vợ anh đang được mượn - bước chân lên cây cầu khỉ, thì trăng tắt. Không phải mây che - người coi kể trăng cứ tối dần như ai vặn đèn, tới khi chỉ còn quầng lửa của thầy và cái bóng mỏng của hai người trên cầu lung lay giữa dòng."
+    }
+  ],
+  "slug": "cau-khi-tap-03"
+}

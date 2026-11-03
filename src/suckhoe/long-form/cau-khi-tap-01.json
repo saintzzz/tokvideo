@@ -1,0 +1,110 @@
+{
+  "id": "cau-khi-tap-01",
+  "arc": "cau-khi-dem",
+  "arcTitle": "CẦU KHỈ ĐÊM",
+  "episode": 1,
+  "title": "Cây Cầu Khỉ Qua Rạch Ông Bưởi - Người Qua Đêm Về Là Người Khác",
+  "description": "Tập 1 arc CẦU KHỈ ĐÊM: Cây cầu khỉ duy nhất nối hai ấp qua rạch Ông Bưởi, người già cấm qua sau giờ Hợi. Anh Tấn phải đưa vợ đi cấp cứu đêm khuya bắt buộc qua cầu - và từ đêm đó người vợ về nhà không còn là người anh cưới. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #caukhi",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "cầu khỉ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a rickety bamboo monkey bridge over a dark canal at night, a woman's pale figure standing halfway across looking back, fog, photorealistic horror",
+    "a man carrying a lantern on a bamboo bridge at night, the reflection in the black water below showing a different person, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "monkey-bridge-day": "a fragile bamboo monkey bridge spanning a dark canal in the Vietnamese countryside, water coconut palms, late afternoon, photorealistic",
+    "monkey-bridge-night": "the same bamboo bridge at night, black water below, thick fog, a single figure halfway across, photorealistic horror",
+    "village-path": "a dirt path between village houses at dusk, banana trees, distant hammocks, photorealistic",
+    "sick-wife": "a young woman lying feverish on a mat at night, husband pressing a wet cloth to her forehead, oil lamp, photorealistic",
+    "motorbike-night": "a man pushing a motorbike across a narrow bamboo bridge at night, a sick woman sitting behind, lantern swinging, photorealistic horror",
+    "water-reflection": "black canal water at night showing the reflection of two bridge crossers as different pale figures, photorealistic horror",
+    "woman-different": "the same woman at home next morning, standing still by the stove but with a strange vacant expression, dawn light, photorealistic horror",
+    "old-woman-warning": "an elderly woman on a doorstep at dusk warning with raised finger, solemn face, photorealistic",
+    "clinic-night": "a small rural clinic at night, fluorescent light, a nurse at a desk, photorealistic",
+    "bridge-end": "the far end of the bamboo bridge at night looking back, the near end swallowed by fog, photorealistic horror",
+    "eating-raw": "a woman in a dark kitchen at night eating raw fish straight from a basin, caught in flashlight beam, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "village-path",
+      "caption": "Ấp Hai với Ấp Bảy nằm hai bên rạch Ông Bưởi",
+      "text": "Ấp Hai với Ấp Bảy nằm hai bên rạch Ông Bưởi, muốn qua nhau chỉ có một cây cầu khỉ - thân cầu bằng ba cây tre ghép, tay vịn một sợi dây thừng, đi qua phải giang tay giữ thăng bằng. Đường vòng đi ghe thì xa mấy cây số nên dân hai ấp ngày nào cũng qua."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Nhưng cây cầu đó có một cái giờ cấm ai cũng biết: qua giờ Hợ",
+      "text": "Nhưng cây cầu đó có một cái giờ cấm ai cũng biết: qua giờ Hợi - tầm chín giờ tối trở đi - không được qua cầu. Hỏi tại sao, người già nói: nước dưới rạch Ông Bưởi là nước độc, đêm nó đổi người. Ai cũng cười cho qua, trừ đám già không cười."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Bà cụ Hai trong xóm dặn kỹ nhất: qua cầu đêm phải đi ngược",
+      "text": "Bà cụ Hai trong xóm dặn kỹ nhất: qua cầu đêm phải đi ngược - người khỏe đi trước, người đi sau phải quay lưng nhìn về bờ vừa đi vừa lùi, tuyệt đối không nhìn xuống nước. Ai hỏi lý do bà chỉ nói: đời tôi thấy một người qua cầu đêm về là đứa khác rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sick-wife",
+      "caption": "Chuyện xảy ra với anh Tấn",
+      "text": "Chuyện xảy ra với anh Tấn. Vợ anh - chị Ba - đêm đó lên cơn sốt cao co giật, mặt mũi tím bầm. Trạm xá Ấp Bảy bên kia rạch. Không kịp chờ ghe, anh Tấn cõng vợ lên xe đạp máy chạy thẳng ra cầu khỉ - đúng mười giờ đêm, giờ cấm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "motorbike-night",
+      "caption": "Anh dắt xe đạp máy lên cầu",
+      "text": "Anh dắt xe đạp máy lên cầu, vợ ôm eo ngồi sau rên rỉ. Giữa cầu anh nghe vợ nói khẽ: anh Tấn, em lạnh. Giọng chị vẫn vậy nhưng có gì đó đặt sai - sau này anh mới nhận ra: chị kêu em lạnh bằng giọng trầm hơn người thường, và tay ôm eo anh lạnh ngắt như vừa rời khỏi nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "water-reflection",
+      "caption": "Tới bốn phần năm cây cầu",
+      "text": "Tới bốn phần năm cây cầu, anh Tấn vô tình liếc xuống nước - mất nếp luôn vì nhớ lời bà cụ. Đen kịt mà anh vẫn thấy rõ: dưới nước có hai cái bóng đi theo cầu, một là mình, một cao hơn vợ mình nhiều, đầu đội khăn rằn kiểu bà già xưa - không phải bóng vợ anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bridge-end",
+      "caption": "Anh không dám quay lại",
+      "text": "Anh không dám quay lại, rảo chân qua nốt. Tới đầu cầu bên kia, vợ tự đứng dậy đi được luôn, không cần dìu, không còn rên. Anh mừng tưởng sốt hạ, chỉ hơi lạ là chị đi trước anh cả một đoạn, chân lê đất nghe lạch cạch như chân người vừa ốm dậy - mà chị đang sốt co giật khi nãy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "clinic-night",
+      "caption": "Ở trạm xá bác sĩ đo sốt: ba mươi sáu độ rưỡi",
+      "text": "Ở trạm xá bác sĩ đo sốt: ba mươi sáu độ rưỡi, người bình thường, không sốt không giật. Bác sĩ mắng anh Tấn nửa đêm kêu gì. Chị Ba ngồi ghế đá cười nhẹ: em qua cầu cái hết bệnh rồi. Cái giọng chị nói câu đó - anh Tấn kể lại mà rùng mình - sao giống giọng bà cụ Hai quá vậy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-different",
+      "caption": "Về nhà từ đêm đó",
+      "text": "Về nhà từ đêm đó, chị Ba khác hẳn. Không khác kiểu bệnh - khác kiểu người. Chị vốn mắc cười, nay ngồi yên cả buổi mắt nhìn xa xăm. Chị ghét ăn mắm, nay đêm đêm nghe động trong buồng bếp. Và cái lạ nhất: chị hay đứng đầu hồi nhìn về phía rạch Ông Bưởi, đứng lâu lắm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "eating-raw",
+      "caption": "Đêm thứ ba anh Tấn giả vờ ngủ",
+      "text": "Đêm thứ ba anh Tấn giả vờ ngủ, theo dõi. Nửa khuya chị lọt xuống bếp. Anh rọi đèn pin vào thì suýt kêu lên: vợ anh ngồi xổm trước chậu cá, cầm con cá rô sống nhăm nhăm ăn từ đầu, vảy dính đầy cằm, nhai ngau ngáu trong bóng tối, mắt không chớp nhìn thẳng vào đèn anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "eating-raw",
+      "caption": "Chị nhìn anh",
+      "text": "Chị nhìn anh, không hoảng, không giấu - cứ nhai tiếp, chậm rãi, rồi nói bằng cái giọng trầm không phải giọng vợ: đói. Bao nhiêu năm rồi mới được ăn lại. Anh Tấn lùi ra khỏi bếp, đêm đó không dám vào buồng, ngồi co ngoài sân tới sáng với câu hỏi không dám nói thành lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Sáng hôm sau anh chạy tới nhà bà cụ Hai",
+      "text": "Sáng hôm sau anh chạy tới nhà bà cụ Hai. Nghe xong đầu đuôi, bà im một lúc lâu rồi nói: con qua cầu đêm đưa người yếu theo - nước độc nó đổi rồi. Đứa về nhà với con không phải vợ con. Còn vợ con - nó giữ lại dưới rạch. Muốn lấy lại thì phải đổi ngược lại, mà đổi người lần hai khó hơn lần đầu nhiều."
+    }
+  ],
+  "slug": "cau-khi-tap-01"
+}
