@@ -1,8 +1,8 @@
-# Pipeline doctor — 2026-11-02
+# Pipeline doctor — 2026-11-03
 
 ## Queue
 
-Ready unpublished episodes: 5
+Ready unpublished episodes: 20
 
 ## Findings
 
@@ -15,73 +15,8 @@ Ready unpublished episodes: 5
 - Ledger "chuyen-do-dem-tap-02-fb" -> 1118955610723284 no longer exists on channel.
 - Ledger "chuyen-do-dem-tap-03-fb" -> 2659591444472347 no longer exists on channel.
 - FAILED: Teaser for "loi-nguyen-gieng-cu-tap-05" failed: Command failed: node scripts/make-long-teaser.mjs loi-nguyen-gieng-cu-tap-05
-- FAILED: FB reel for "chuyen-do-dem-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs chuyen-do-dem-tap-04
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "chuyen-do-dem-tap-05" failed: Command failed: node scripts/post-fb-reel.mjs chuyen-do-dem-tap-05
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "dem-kham-liem-tap-01" failed: Command failed: node scripts/post-fb-reel.mjs dem-kham-liem-tap-01
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "dem-kham-liem-tap-02" failed: Command failed: node scripts/post-fb-reel.mjs dem-kham-liem-tap-02
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "dem-kham-liem-tap-03" failed: Command failed: node scripts/post-fb-reel.mjs dem-kham-liem-tap-03
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "dem-kham-liem-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs dem-kham-liem-tap-04
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "dem-kham-liem-tap-05" failed: Command failed: node scripts/post-fb-reel.mjs dem-kham-liem-tap-05
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messa
-- FAILED: FB reel for "dung-tra-loi-tap-02" failed: Command failed: node scripts/post-fb-reel.mjs dung-tra-loi-tap-02
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messag
-- FAILED: FB reel for "dung-tra-loi-tap-03" failed: Command failed: node scripts/post-fb-reel.mjs dung-tra-loi-tap-03
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messag
-- FAILED: FB reel for "dung-tra-loi-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs dung-tra-loi-tap-04
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messag
-- FAILED: FB reel for "dung-tra-loi-tap-05" failed: Command failed: node scripts/post-fb-reel.mjs dung-tra-loi-tap-05
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.messag
-- FAILED: FB reel for "hon-ma-tap-03" failed: Command failed: node scripts/post-fb-reel.mjs hon-ma-tap-03
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message || r
-- FAILED: FB reel for "hon-ma-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs hon-ma-tap-04
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message || r
-- FAILED: FB reel for "hon-ma-tap-05" failed: Command failed: node scripts/post-fb-reel.mjs hon-ma-tap-05
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message || r
-- FAILED: FB reel for "hu-ma-ga-tap-01" failed: Command failed: node scripts/post-fb-reel.mjs hu-ma-ga-tap-01
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message ||
-- FAILED: FB reel for "hu-ma-ga-tap-02" failed: Command failed: node scripts/post-fb-reel.mjs hu-ma-ga-tap-02
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message ||
-- FAILED: FB reel for "hu-ma-ga-tap-03" failed: Command failed: node scripts/post-fb-reel.mjs hu-ma-ga-tap-03
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message ||
-- FAILED: FB reel for "hu-ma-ga-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs hu-ma-ga-tap-04
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message ||
-- FAILED: FB reel for "hu-ma-ga-tap-05" failed: Command failed: node scripts/post-fb-reel.mjs hu-ma-ga-tap-05
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?.message ||
-- FAILED: FB reel for "loi-nguyen-gieng-cu-tap-03" failed: Command failed: node scripts/post-fb-reel.mjs loi-nguyen-gieng-cu-tap-03
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?
-- FAILED: FB reel for "loi-nguyen-gieng-cu-tap-04" failed: Command failed: node scripts/post-fb-reel.mjs loi-nguyen-gieng-cu-tap-04
-file:///home/runner/work/tokvideo/tokvideo/scripts/post-fb-reel.mjs:57
-    throw new Error(`FB API ${res.status}: ${json.error?
-- FAILED: FB reel for "loi-nguyen-gieng-cu-tap-05" failed: Command failed: node scripts/build-fb-reel.mjs loi-nguyen-gieng-cu-tap-05
 
 ## Actions taken
 
-- Built + uploaded teaser for "loi-nguyen-gieng-cu-tap-03".
-- Built + uploaded teaser for "loi-nguyen-gieng-cu-tap-04".
+None needed.
 
