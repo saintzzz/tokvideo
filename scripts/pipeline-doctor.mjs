@@ -241,7 +241,10 @@ for (const k of deletedKeys) delete ledger[k];
 // title, captions link-free) + a first comment carrying the YT link.
 // Ledger key `<slug>-fb`. Without FB creds the reel is still built so the
 // posting sheet can ship it as an artifact.
-const fbCandidates = Object.entries(ledger)
+const FB_ENABLED = !!process.env.ENABLE_FB; // YouTube-only mode (2026-11-03):
+// FB page token kept dying on session invalidation — owner dropped all
+// non-YouTube platforms. Set ENABLE_FB=1 to restore reels/comments.
+const fbCandidates = !FB_ENABLED ? [] : Object.entries(ledger)
   .filter(([k, v]) => !isTeaserKey(k) && !isFbKey(k) && v?.videoId)
   .filter(([slug]) => !ledger[`${slug}-fb`]?.videoId)
   .map(([slug]) => slug)
@@ -294,7 +297,7 @@ for (const k of deletedKeys) delete ledger[k];
 
 // Retry first-comments on scheduled FB reels that have since gone live.
 const FB_API = `https://graph.facebook.com/${process.env.FB_API_VERSION || "v21.0"}`;
-if (process.env.FB_PAGE_ACCESS_TOKEN) {
+if (FB_ENABLED && process.env.FB_PAGE_ACCESS_TOKEN) {
   for (const [k, v] of Object.entries(ledger)) {
     if (!k.endsWith("-fb") || !v?.ytCommentPending || !v?.videoId) continue;
     if (v.scheduledFor && Date.parse(v.scheduledFor) > Date.now()) continue;
