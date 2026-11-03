@@ -140,37 +140,68 @@ async function main() {
     // (impressions ok, CTR < ~4%) from "clicked but abandoned"
     // (CTR ok, averageViewPercentage low).
     if (videoIds.length > 0) {
-      try {
-        const perVideo = await youtubeAnalytics.reports.query({
-          ids: "channel==MINE",
-          startDate: fmtDate(start),
-          endDate: fmtDate(end),
-          metrics: "views,impressions,impressionClickThroughRate,averageViewDuration,averageViewPercentage",
-          dimensions: "video",
-          filters: `video==${videoIds.join(",")}`,
-          sort: "-views",
-        });
-        const rows = perVideo.data.rows ?? [];
-        if (rows.length > 0) {
-          lines.push(`## Funnel per video (last 28 days)`);
-          lines.push("");
-          lines.push("| videoId | Views | Impressions | CTR% | AvgView(s) | AvgView% |");
-          lines.push("|---|---|---|---|---|---|");
-          for (const r of rows) {
-            lines.push(
-              `| ${r[0]} | ${r[1]} | ${r[2]} | ${(+r[3]).toFixed(1)} | ${Math.round(r[4])} | ${(+r[5]).toFixed(1)} |`
-            );
+      // Impressions/CTR are "extended" metrics that require the
+      // yt-analytics.readonly scope — our token may not carry it, in
+      // which case the API rejects the whole query with "Unknown
+      // identifier". Try the full funnel first; on failure retry with
+      // retention-only metrics so the report still lands.
+      const attempts = [
+        {
+          metrics:
+            "views,impressions,impressionClickThroughRate,averageViewDuration,averageViewPercentage",
+          header: "| videoId | Views | Impressions | CTR% | AvgView(s) | AvgView% |",
+          format: (r) =>
+            `| ${r[0]} | ${r[1]} | ${r[2]} | ${(+r[3]).toFixed(1)} | ${Math.round(r[4])} | ${(+r[5]).toFixed(1)} |`,
+          zeroNote: (rows) => {
+            const zeroImp = rows.filter((r) => (r[2] ?? 0) === 0).length;
+            return `Videos with zero impressions: ${zeroImp}/${rows.length} — 0 means YouTube never surfaced it (distribution problem), not a click problem.`;
+          },
+        },
+        {
+          metrics:
+            "views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage",
+          header: "| videoId | Views | WatchMin | AvgView(s) | AvgView% |",
+          format: (r) =>
+            `| ${r[0]} | ${r[1]} | ${(+r[2]).toFixed(1)} | ${Math.round(r[3])} | ${(+r[4]).toFixed(1)} |`,
+          zeroNote: (rows) => {
+            const dead = rows.filter((r) => (+r[4] ?? 0) < 15).length;
+            return `Videos under 15% avg retention: ${dead}/${rows.length} — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)`;
+          },
+        },
+      ];
+      let done = false;
+      let lastErr = null;
+      for (const a of attempts) {
+        try {
+          const perVideo = await youtubeAnalytics.reports.query({
+            ids: "channel==MINE",
+            startDate: fmtDate(start),
+            endDate: fmtDate(end),
+            metrics: a.metrics,
+            dimensions: "video",
+            filters: `video==${videoIds.join(",")}`,
+            sort: "-views",
+          });
+          const rows = perVideo.data.rows ?? [];
+          if (rows.length > 0) {
+            lines.push(`## Funnel per video (last 28 days)`);
+            lines.push("");
+            lines.push(a.header);
+            lines.push("|---|---|---|---|---|---|");
+            for (const r of rows) lines.push(a.format(r));
+            lines.push("");
+            lines.push(a.zeroNote(rows));
+            lines.push("");
           }
-          lines.push("");
-          const zeroImp = rows.filter((r) => (r[2] ?? 0) === 0).length;
-          lines.push(
-            `Videos with zero impressions: ${zeroImp}/${rows.length} — 0 means YouTube never surfaced it (distribution problem), not a click problem.`
-          );
-          lines.push("");
+          done = true;
+          break;
+        } catch (err) {
+          lastErr = err;
         }
-      } catch (err) {
+      }
+      if (!done) {
         lines.push(
-          `## Funnel per video\n\n(Impressions query failed: ${err.message ?? err})`
+          `## Funnel per video\n\n(Per-video analytics failed: ${lastErr?.message ?? lastErr})`
         );
         lines.push("");
       }
