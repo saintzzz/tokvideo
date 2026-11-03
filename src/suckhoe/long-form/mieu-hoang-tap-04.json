@@ -1,0 +1,121 @@
+{
+  "id": "mieu-hoang-tap-04",
+  "arc": "mieu-hoang",
+  "arcTitle": "MIẾU HOANG",
+  "episode": 4,
+  "title": "Người Cột Dây Vẫn Còn Sống Trong Làng - Giấy Khai Sinh 60 Năm",
+  "description": "Tập 4 arc MIẾU HOANG: Tìm tên thật của cô Tư để ghi bài vị, người làng mở ra bí mật sáu mươi năm: kẻ cột tay cô Tư để cướp lắc bạc vẫn còn sống, và đang ở ngay trong làng. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #mieuthan",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "miếu thần hoang",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "an old Vietnamese man in his house at night looking at his trembling hands, a corroded silver bracelet on the table before him, lamplight, photorealistic horror",
+    "a moldy birth certificate document held under flashlight, faded handwriting, photorealistic horror close-up"
+  ],
+  "scenePrompts": {
+    "village-meeting": "villagers gathered in a rustic communal house at night around kerosene lamps, solemn faces, photorealistic",
+    "old-woman-warning": "an elderly Vietnamese woman in dark traditional clothes sitting on a doorstep at dusk, face half shadowed, solemn expression, photorealistic",
+    "old-man-house": "a wealthy old Vietnamese man's stilt house at night, dark interior, a frail old man sitting alone at a tea table, guilt on his face, photorealistic horror",
+    "papers-old": "old yellowed papers and a commune record book spread on a table under lamplight, a hand pointing at an entry, photorealistic",
+    "bracelet": "a corroded silver bracelet with a tiny engraved character lying on dark wood, candlelight, photorealistic horror close-up",
+    "sick-man": "a middle-aged Vietnamese man on a bed at night, hair streaked white, hollow eyes, lamplight, photorealistic horror",
+    "shrine-door-gap": "a broken wooden shrine door at night, a narrow gap glowing faint red, fog, photorealistic horror",
+    "confession": "an old man kneeling in the communal house before villagers, head down, hands shaking, night, oil lamps, photorealistic",
+    "river-edge": "a dark slow river at dusk, old collapsed ferry dock, fog on the water, photorealistic horror",
+    "walking-dead": "a gaunt old man walking alone on a foggy village path at night looking back over his shoulder in terror, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Bảy ngày còn lại",
+      "text": "Bảy ngày còn lại. Cả xóm nhào vào một việc: tìm họ tên cô Tư. Người ta mở lại sổ hộ khẩu cũ của ấp - loại sổ viết tay thời bao cấp - lật từng trang giấy ráp mối mọt. Cô Tư quê Cái Răng, đi đò qua sông năm đó, nhà để lại làng này chỉ đúng một mối: người dì họ hàng xa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "papers-old",
+      "caption": "Sổ ghi: Nguyễn Thị Tư",
+      "text": "Sổ ghi: Nguyễn Thị Tư, sinh năm tỵ, ngụ ấp Ba. Nhưng đời đó đặt tên đàn bà chừng nửa làng là Tư. Phải tìm người dì. Bà dì đó mất hai chục năm trước, nhưng con trai bà - ông Chín Lựa - vẫn còn sống, già yếu ở cuối xóm. Ông Chín là người duy nhất còn nhớ mặt cô Tư."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-house",
+      "caption": "Đưa ông Chín tới coi chiếc lắc bạc vớt được cùng xương",
+      "text": "Đưa ông Chín tới coi chiếc lắc bạc vớt được cùng xương. Ông run tay cầm lên, lật mặt trong. Trong lắc khắc li ti hai chữ: DUYÊN. Ông Chín ngồi thừ một lúc rồi nói: đúng rồi, cô Tư tên đầy đủ là Nguyễn Thị Tư Duyên, mẹ đặt tên Duyên mong nó có duyên lành. Chiếc lắc này má nó bán lúa mua cho nó năm mười sáu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "papers-old",
+      "caption": "Vậy là có tên",
+      "text": "Vậy là có tên. Nhưng ông Chín nói tiếp một câu làm cả nhà im phăng phắc: chuyện cô Tư chết không phải chỉ mình tôi biết. Hồi đó có ba người đi cùng chuyến đò sống sót kể lại - mà hai người trong đó vẫn còn sống đến giờ. Một người là bà cụ nhai trầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Người ta ùa về nhà bà cụ",
+      "text": "Người ta ùa về nhà bà cụ. Bà không chối: tao ngồi đầu đò, tao thấy hết. Đò lật, tao bơi vào mé. Quay lại thì thấy thằng Hai Tàu - người chèo đò - đang lặn theo con Tư bám mạn. Tao tưởng nó cứu. Hóa ra nó cột tay con bé vào đò để bóc cái lắc, rồi nó bơi vào một mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Bà nhai chậm rãi",
+      "text": "Bà nhai chậm rãi, nước trầu đỏ chảy dài khóe miệng: tao không nói vì năm đó tao mười mấy tuổi, sợ. Sau này lớn rồi thì con Tư đã thành chuyện xưa, làng này người ta chết đuối như cơm bữa. Tao chỉ làm được một chuyện: đời này tới đời khác, ngày nào tao cũng sai con cháu ra thắp hương cái miếu đó cho nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-house",
+      "caption": "Còn thằng Hai Tàu",
+      "text": "Còn thằng Hai Tàu. Nghe tên mà ai cũng rùng: nó chính là ông Hai Tàu giàu nhất xóm bây giờ, chủ ba trăm công đất, cha của ông Thuyền - tức là ông nội anh Phước. Máu của kẻ cột dây chảy trong người thằng cháu bị khắc tên lên bài vị."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Bây giờ mọi thứ sáng tỏ",
+      "text": "Bây giờ mọi thứ sáng tỏ. Miếu không phải khắc bừa tên anh Phước. Nó chọn đúng hậu duệ của kẻ hại mình - con cháu trả nợ thay. Nó đòi hai món: có lại xác có lại tên, và kẻ cột dây phải đứng ra nhận tội trước vong. Đòi nợ sáu mươi năm, nó đòi đủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession",
+      "caption": "Ông Thuyền về quỳ trước mặt cha mình",
+      "text": "Ông Thuyền về quỳ trước mặt cha mình. Ông Hai Tàu tám mươi mốt tuổi, tai đã điếc, mắt đã mờ, nhưng nghe ba chữ Nguyễn Thị Tư Duyên thì cả người ông co lại như tôm luộc. Đêm đó ông bắt con đưa ra nhà bờ, quỳ giữa xóm, khấu đầu xuống đất tới khi trán chảy máu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession",
+      "caption": "Ông Hai Tàu nhận tất",
+      "text": "Ông Hai Tàu nhận tất. Năm đó ông hai mươi mốt, thấy chiếc lắc bạc trên tay con gái đang chới với thì lòng tham trỗi dậy. Ông nói: tao cột tay nó vào đò để bóc lắc cho dễ, tao tính lấy xong thả nó ra mà nước xoáy tao lúc, tao sợ tao bỏ chạy. Chiếc lắc đó tao đem bán đổi được hai chỉ vàng - vốn làm ăn đầu đời của tao."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-house",
+      "caption": "Cả xóm im lặng nghe ông kể",
+      "text": "Cả xóm im lặng nghe ông kể. Hai chỉ vàng cột bằng một mạng người. Cái nhà ba trăm công đất, cái của cải giàu nhất xóm, móng đầu tiên là xương của cô Tư Duyên dưới sông Bến Lội. Ông Thuyền ngồi bên cạnh mà như không tin mình đang nghe cha ruột nói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sick-man",
+      "caption": "Đêm đó anh Phước tỉnh hẳn",
+      "text": "Đêm đó anh Phước tỉnh hẳn, ngồi dậy ăn cơm được, nhưng vẫn chưa hết: anh kể cứ đến nửa đêm là có bà áo ướt đứng ngoài cửa sổ, không vào nhà, chỉ đứng nhìn vào trong và khóc. Anh hỏi bà muốn gì, bà chỉ nói một câu: tôi muốn nghe nó nói xin lỗi trước mặt tôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "walking-dead",
+      "caption": "Ông Hai Tàu phải ra miếu xin lỗi trực tiếp",
+      "text": "Ông Hai Tàu phải ra miếu xin lỗi trực tiếp. Người già nhất xóm, chân đi không nổi, đêm mười hai người ta khiêng ông ra rẫy sắn. Chưa tới nơi ông đã kêu đường tối quá xuống bỏ tôi đi - nhưng đám khiêng nói đường có đuốc sáng rực cả mà ông cứ kêu tối. Bà cụ nhai trầu đi theo thì thở dài: không phải đường tối, là nó đang làm mù mắt ông để ông tự đi vào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shrine-door-gap",
+      "caption": "Và đây là chỗ đáng sợ nhất: cái đêm khiêng ông Hai Tàu ra mi",
+      "text": "Và đây là chỗ đáng sợ nhất: cái đêm khiêng ông Hai Tàu ra miếu đó, tôi cũng có mặt trong đám. Tôi nhìn tận mắt thấy khi họ đặt ông xuống đất trước cửa miếu, cái khe cửa hẹp xíu hôm trước đã mở toang ra. Không ai mở. Nó tự mở - và bên trong miếu sáng lên một màu đỏ như lúc nhà nào cưới hỏi, chỉ khác là đám cưới này dọn để đón người về ở."
+    }
+  ],
+  "slug": "mieu-hoang-tap-04"
+}

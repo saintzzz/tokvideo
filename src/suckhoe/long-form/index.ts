@@ -35,6 +35,11 @@ import quanTaiTroiTap02 from "./quan-tai-troi-tap-02.json";
 import quanTaiTroiTap03 from "./quan-tai-troi-tap-03.json";
 import quanTaiTroiTap04 from "./quan-tai-troi-tap-04.json";
 import quanTaiTroiTap05 from "./quan-tai-troi-tap-05.json";
+import mieuHoangTap01 from "./mieu-hoang-tap-01.json";
+import mieuHoangTap02 from "./mieu-hoang-tap-02.json";
+import mieuHoangTap03 from "./mieu-hoang-tap-03.json";
+import mieuHoangTap04 from "./mieu-hoang-tap-04.json";
+import mieuHoangTap05 from "./mieu-hoang-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -107,4 +112,9 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   quanTaiTroiTap03,
   quanTaiTroiTap04,
   quanTaiTroiTap05,
+  mieuHoangTap01,
+  mieuHoangTap02,
+  mieuHoangTap03,
+  mieuHoangTap04,
+  mieuHoangTap05,
 ] as LongFormEpisode[];

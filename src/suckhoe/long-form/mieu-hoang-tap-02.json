@@ -1,0 +1,122 @@
+{
+  "id": "mieu-hoang-tap-02",
+  "arc": "mieu-hoang",
+  "arcTitle": "MIẾU HOANG",
+  "episode": 2,
+  "title": "Bài Vị Khắc Tên Người Sống - Thầy Pháp Bỏ Về Giữa Chừng",
+  "description": "Tập 2 arc MIẾU HOANG: Anh Phước bị khắc tên lên bài vị trong miếu hoang. Thầy Pháp được mời về làm lễ gỡ tên, nhưng giữa chừng thầy bỏ về, chỉ để lại đúng một câu. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #mieuthan",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "miếu thần hoang",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "an old Vietnamese shaman in dark ceremonial robe holding burning incense before a cracked spirit tablet, candlelight, terrified villagers behind, photorealistic horror",
+    "a wooden spirit tablet with a name carved deep, black ink still wet, surrounded by smoke, photorealistic horror close-up"
+  ],
+  "scenePrompts": {
+    "village-road": "an empty dirt road into a rural Vietnamese village at late afternoon, rice fields on both sides, distant bamboo groves, low grey sky, photorealistic, cinematic",
+    "shrine-exterior-day": "an abandoned Vietnamese village shrine in a cassava field, cracked mossy walls, collapsed tiled roof, faded red door paint, dry weeds chest-high, overcast daylight, photorealistic horror",
+    "shrine-exterior-night": "the same abandoned shrine at night, moonless, thick fog pooling around it, faint warm glow leaking through the broken door gap, photorealistic horror",
+    "old-woman-warning": "an elderly Vietnamese woman in dark traditional clothes sitting on a wooden house doorstep at dusk, face half shadowed, holding betel quid, solemn expression, photorealistic",
+    "shaman-arrival": "an old Vietnamese shaman in a dark faded ceremonial robe arriving at a village house carrying a cloth bundle and wooden box, villagers bowing, dusk, photorealistic",
+    "ritual-shrine": "a ritual set before an abandoned shrine at night, candles in a row, offerings on banana leaves, a shaman kneeling holding incense to his forehead, fog, photorealistic horror",
+    "tablet-close": "close view of a wooden spirit tablet with a name carved deep into the wood, black stain still wet in the grooves, candlelight, smoke, photorealistic horror",
+    "shaman-flee": "an old shaman standing up abruptly mid-ritual looking terrified, candles blown flat by wind, villagers frozen, night, photorealistic horror",
+    "river-edge": "a dark slow river at dusk bordered by mangrove and nipa palm, an old collapsed ferry dock, fog on the water, ominous stillness, photorealistic horror",
+    "sick-man": "a middle-aged Vietnamese man sitting on a bed at night, hair streaked white, eyes hollow, clutching his chest, lamplight, photorealistic horror",
+    "torn-cloth": "a strip of red altar cloth found tied on a house door handle at night, wet and smelling of river water, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "sick-man",
+      "caption": "Anh Phước sau đêm đó tàn hẳn",
+      "text": "Anh Phước sau đêm đó tàn hẳn. Không ăn, không ngủ, tóc bạc từng mảng. Cái nhà dở đành bỏ đó, thợ không ai dám làm tiếp. Người ta nói anh cứ ngồi nhìn ra cửa, hễ ai đi ngang là giật mình tưởng người từ miếu tới đón."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Ông Thuyền cha anh quỳ lạy bà cụ nhai trầu xin đường",
+      "text": "Ông Thuyền cha anh quỳ lạy bà cụ nhai trầu xin đường. Bà cụ nói: tao chỉ là người biết chuyện, không phải người làm chuyện. Muốn gỡ tên khỏi bài vị thì phải mời thầy Pháp ở Đồng Bằng, ông đó từng hạ được miếu thầy người ở Cái Răng. Nhưng nói trước, gỡ được hay không còn tùy miếu đó có chịu nhả không."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shaman-arrival",
+      "caption": "Thầy Pháp tới làng chiều mùng ba",
+      "text": "Thầy Pháp tới làng chiều mùng ba. Người gầy nhom, đội khăn đóng cũ, tay ôm cái hòm gỗ trạm rồng. Ông đi vòng quanh nhà anh Phước ba vòng, không vào, chỉ đứng ngửi gió. Xong ông hỏi đúng một câu: nó khắc tên bao giờ? Nghe trả lời tối mùng một thì mặt ông tối sầm lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shaman-arrival",
+      "caption": "Thầy Pháp nói: miếu mà khắc tên người sống là miếu đang đổi ",
+      "text": "Thầy Pháp nói: miếu mà khắc tên người sống là miếu đang đổi chủ. Vong trong đó ở lâu rồi muốn thoát, mà muốn thoát thì phải có người vào thay. Tên lên bài vị là giấy nhận nhà. Mười lăm ngày nữa, người đó đi đâu cũng về ở với miếu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-shrine",
+      "caption": "Tối hôm đó thầy chọn giờ Hợi",
+      "text": "Tối hôm đó thầy chọn giờ Hợi, sai dọn lễ ngay trước cửa miếu. Ba con gà trống, năm đĩa trầu, rượu nếp đổ thành vòng quanh đống hương. Thầy cấm ai nói năng, chỉ để mình ông quỳ trước cửa miếu, lưng quay ra đám người làng đứng coi xa xa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ritual-shrine",
+      "caption": "Thầy khấn gần một khắc",
+      "text": "Thầy khấn gần một khắc. Ngọn nến thẳng đứng không gió. Rồi thầy nói bằng một thứ giọng khác, trầm xuống như nói với ai trong bụng đất: người này lỡ chân, xin trả tên, xóm này tế lễ ba đời không dám thiếu. Chờ một lúc lâu, thầy đứng phắt dậy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shaman-flee",
+      "caption": "Thầy quay lại",
+      "text": "Thầy quay lại, mặt cắt không còn hột máu. Ông vơ hòm, đi nhanh ra khỏi rẫy sắn, không nói không rằng. Ông Thuyền chạy theo níu áo, thầy chỉ nói đúng một câu: nó không thèm gà, không thèm lễ, nó đòi đúng món nó chờ sáu mươi năm. Làm không được, chuẩn bị lo hậu sự đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-road",
+      "caption": "Thầy đi mất",
+      "text": "Thầy đi mất. Dân làng náo loạn, người ta đồn nhau hỏi món gì mà chờ sáu mươi năm. Bà cụ nhai trầu nghe xong ngồi im rất lâu, rồi mới mở miệng: sáu mươi năm trước, đúng đời tao mười mấy tuổi, sông Bến Lội có vụ lật đò. Cả đò chìm, mười mấy mạng, chỉ một xác không vớt được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-warning",
+      "caption": "Bà kể xác đó là cô con gái nhà nghèo",
+      "text": "Bà kể xác đó là cô con gái nhà nghèo, quê ở Cái Răng, đi đò về thăm mẹ thì gặp nạn. Người ta mò ba ngày không thấy, đành lập cái miếu nhỏ thờ ký gửi, đặt bài vị trống tên vì chỉ biết cô tên Tư mà không rõ họ. Miếu có từ đó, hương khói có từ đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-edge",
+      "caption": "Bà cụ nói tiếp",
+      "text": "Bà cụ nói tiếp, giọng nhỏ hẳn: vong không tên không về được nhà, đứng ở miếu chờ người gọi đúng tên. Nó chờ sáu mươi năm, bây giờ nó không chờ nữa - nó tự khắc tên người khác lên để có cớ giữ một mạng lại. Món nó đòi không phải của anh Phước, mà là cái xác của nó dưới sông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sick-man",
+      "caption": "Trong lúc đó anh Phước nặng thêm",
+      "text": "Trong lúc đó anh Phước nặng thêm. Đêm đó anh tỉnh dậy kêu mọi người: có bà đứng đầu giường, áo ướt sũng, tóc rủ mặt, cứ hỏi tới khi nào mới chịu đưa tôi về. Anh van xin được đưa ra bệnh viện tỉnh, nhưng xe chưa tới cổng làng đã chết máy ba lần liền."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "torn-cloth",
+      "caption": "Sáng hôm sau người ta thấy trước cửa nhà ông Thuyền có buộc ",
+      "text": "Sáng hôm sau người ta thấy trước cửa nhà ông Thuyền có buộc một dải vải đỏ - chính miếng khăn phủ trên bàn thờ trong miếu, ướt nhẹp, mùi tanh nồng của bùn sông. Và trong miếu, bài vị khắc tên anh Phước không còn úp nữa, đã quay mặt ra cửa, như vừa được đặt lại cho ai dễ đọc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shrine-exterior-day",
+      "caption": "Mười lăm ngày chỉ còn mười ba",
+      "text": "Mười lăm ngày chỉ còn mười ba. Ông Thuyền rủ mấy thanh niên trong xóm ra bến đò cũ trên sông Bến Lội - nơi con đò chìm năm xưa - chuẩn bị mò xác cô Tư. Ai cũng biết mò xác sáu mươi năm dưới sông là chuyện biển, nhưng còn nước còn tát, chứ ngồi yên thì nhà này lo đám ma."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-edge",
+      "caption": "Nhưng điều không ai ngờ: đêm trước hôm xuống sông",
+      "text": "Nhưng điều không ai ngờ: đêm trước hôm xuống sông, mấy đứa nhỏ chăn vịt chạy về báo là thấy đóm lửa trên mặt nước ngay chỗ bến đò cũ, đứng im giữa dòng tới nửa đêm. Người già trong làng nghe vậy mặt ai cũng tái đi - vong dẫn đường rồi, nó đang chỉ đúng chỗ xác nó nằm."
+    }
+  ],
+  "slug": "mieu-hoang-tap-02"
+}

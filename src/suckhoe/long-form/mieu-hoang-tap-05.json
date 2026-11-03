@@ -1,0 +1,121 @@
+{
+  "id": "mieu-hoang-tap-05",
+  "arc": "mieu-hoang",
+  "arcTitle": "MIẾU HOANG",
+  "episode": 5,
+  "title": "Đêm Đối Chất Trước Miếu - Trả Nợ Sáu Mươi Năm",
+  "description": "Tập cuối arc MIẾU HOANG: Ông Hai Tàu bị mù mắt khiêng ra miếu nhận tội trước vong cô Tư Duyên. Lời xin lỗi sáu mươi năm có đủ để cứu cháu ông khỏi bài vị? Kết thúc arc. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #mieuthan",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "miếu thần hoang",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "an old man kneeling before a glowing abandoned shrine at night, a translucent woman in a wet ao dai standing in the doorway, villagers holding torches behind, photorealistic horror",
+    "a wooden spirit tablet burning clean in ritual fire while a crowd watches at night, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "shrine-open-night": "an abandoned shrine at night with its broken door swung fully open, warm red glow pouring out, an old man kneeling before it, torch-bearing villagers behind, fog, photorealistic horror",
+    "ghost-woman": "a translucent young woman in a soaked old-fashioned ao dai standing in a shrine doorway, hair covering half her face, water dripping, moonlight through her body, photorealistic horror",
+    "old-man-kneel": "a frail old man kneeling on bare earth pressing his forehead to the ground, weeping, torchlight, fog, photorealistic horror",
+    "tablet-name-fade": "a wooden spirit tablet where a carved name glows then fades to blank wood, candlelight, photorealistic horror close-up",
+    "funeral-dawn": "a small proper burial at dawn by a river, a new grave with a carved headstone reading a full name, incense smoke, villagers bowing, soft light, photorealistic",
+    "shrine-calm": "the abandoned shrine at morning, door closed, fresh incense burning peacefully in the bowl, fog lifting, a sense of rest, photorealistic",
+    "sick-man-recover": "a middle-aged Vietnamese man sitting up in bed at dawn, color returning to his face, first sunlight through window, photorealistic",
+    "river-dawn": "a wide river at dawn, fog lifting off calm water, birds, quiet, photorealistic",
+    "old-woman-smile": "an elderly Vietnamese woman sitting on a doorstep at dawn, a faint relieved smile, betel quid in hand, warm light, photorealistic",
+    "shrine-new-tablet": "inside the shrine, a clean new spirit tablet with a full name carved clearly, fresh flowers, incense burning peacefully, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "shrine-open-night",
+      "caption": "Cửa miếu mở toang",
+      "text": "Cửa miếu mở toang, trong đỏ rực. Đám người làng cầm đuốc đứng thụp xuống hết, không đứa nào dám thở mạnh. Ông Hai Tàu được đặt quỳ ngay ngưỡng cửa, hai tay chống đất, mắt ông trợn lên mà không thấy gì - nó làm mù ông thật rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-woman",
+      "caption": "Rồi nó hiện ra trong cửa miếu",
+      "text": "Rồi nó hiện ra trong cửa miếu. Con gái mười bảy mười tám, áo dài trắng ướt sũng như vừa vớt lên từ sông, tóc rủ một bên mặt, da trắng bệch không màu máu. Nó đứng im nhìn xuống ông già quỳ dưới chân, không bước ra, chỉ đứng đó. Nước từ tà áo nó chảy xuống đất thành vũng mà đất không hề ướt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-kneel",
+      "caption": "Ông Hai Tàu không nhìn thấy nó nhưng ông ngửi thấy mùi sông",
+      "text": "Ông Hai Tàu không nhìn thấy nó nhưng ông ngửi thấy mùi sông, mùi bùn, mùi tà áo ướt sáu mươi năm. Ông lạc cả giọng: cô Tư Duyên, tôi tới xin lỗi cô. Năm đó tôi hai mươi mốt tuổi, tôi cột tay cô vào đò để bóc lắc. Tôi để cô chết dưới đó mà đem vàng về dựng nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-kneel",
+      "caption": "Ông đập đầu xuống đất cái một: tôi nhận tội",
+      "text": "Ông đập đầu xuống đất cái một: tôi nhận tội, cô đòi mạng tôi tôi cũng chịu, nhưng cô tha cho thằng cháu - nó không biết gì hết, nợ tôi mang để tôi trả. Ông đập đầu cái hai, cái ba. Trán ông rạn máu, tới cái thứ mười mấy không ai đếm nữa vì cả đám đang nhìn thứ khác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-woman",
+      "caption": "Con Tư Duyên cúi xuống",
+      "text": "Con Tư Duyên cúi xuống - cúi xuống tới ngang mặt ông già, gần tới mức tóc nó chạm vào má ông - và mọi người nghe rõ một giọng con gái trẻ măng, run run, nói ngay tai ông: sáu mươi năm tôi chỉ đợi ba chữ đó thôi, chú Tàu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-woman",
+      "caption": "Rồi nó đứng thẳng lại",
+      "text": "Rồi nó đứng thẳng lại. Ánh sáng đỏ trong miếu từ từ hạ xuống còn màu vàng nhạt như đèn dầu. Nó nói câu cuối, giọng đã nhẹ hẳn: đem xương tôi về an táng có mồ mả có bài vị đầy đủ, tôi đi. Bài vị trong miếu cô tự gỡ tên cháu cô. Còn chú - chú sống nốt phần đời còn lại nhớ tới tôi mỗi tối mùng một là đủ trả rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "tablet-name-fade",
+      "caption": "Thằng Hai can đảm nhất đám lấy hết can đảm bước tới bàn thờ",
+      "text": "Thằng Hai can đảm nhất đám lấy hết can đảm bước tới bàn thờ. Bài vị khắc tên anh Phước - ba chữ khắc sâu hoắm đêm trước - đang nhạt dần ngay trước mắt, mờ đi như mực gặp nước, tới khi mặt gỗ trắng trơn không còn nét nào. Trên bàn, tàn hương đổ xuống thành một vòng tròn khép kín."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-dawn",
+      "caption": "Ba hôm sau cô Tư Duyên được an táng đàng hoàng trên mảnh đất",
+      "text": "Ba hôm sau cô Tư Duyên được an táng đàng hoàng trên mảnh đất nhìn ra sông Bến Lội - đất ông Hai Tàu đứng tên cho luôn không lấy tiền. Bia mộ khắc đủ: Nguyễn Thị Tư Duyên, sinh năm tỵ, mất năm mùi, ngụ ấp Ba, thân đi đò qua sông gặp nạn. Sáu mươi năm vong không tên cuối cùng đã có nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sick-man-recover",
+      "caption": "Anh Phước khỏi hẳn",
+      "text": "Anh Phước khỏi hẳn. Tóc bạc từ đó không đen lại được, nhưng người lại như cũ, chỉ khác một điều: anh không còn cộc cằn nữa, và cái nhà đang xây anh đổi hướng cửa, không cho mặt tiền nhìn về phía rẫy sắn nữa. Chuyện xưa anh không bao giờ nhắc, nhưng đêm mùng một nào anh cũng đốt nến trong nhà tới sáng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shrine-new-tablet",
+      "caption": "Còn cái miếu",
+      "text": "Còn cái miếu - người ta không phá. Thầy Pháp được mời lại đợt sau nghe chuyện chỉ nói: miếu có vong thành chính quả thì đừng phá, cứ để đó thờ tiếp. Trong miếu bây giờ có một bài vị mới khắc rõ ràng: Nguyễn Thị Tư Duyên. Hương ngày nào cũng có người thắp, lần nào cũng cháy đều, không còn ai thấy lửa lạ nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-man-kneel",
+      "caption": "Ông Hai Tàu mù hẳn từ đêm đó",
+      "text": "Ông Hai Tàu mù hẳn từ đêm đó, sống thêm hai năm rồi mất. Hai năm đó tối nào ông cũng bắt con cháu đưa ra đầu giường ngồi, nói ông đang kể chuyện cho cô Tư nghe, kể hết chuyện đời ông, thiếu đúng một chuyện ông không bao giờ kể lại - chuyện ông đã kể rồi trước cửa miếu đêm đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-woman-smile",
+      "caption": "Bà cụ nhai trầu mất trước ông Tàu vài tháng",
+      "text": "Bà cụ nhai trầu mất trước ông Tàu vài tháng, ra đi bình an trong giấc ngủ. Người ta dọn đồ bà thấy trong cái hộp trầu có bọc một mảnh giấy bạc nhỏ, viết nét run rẩy: Nguyễn Thị Tư Duyên. Hóa ra cả đời bà vẫn giữ cái tên đó, sợ quên mất thì không còn ai gọi đúng tên nó nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-dawn",
+      "caption": "Sông Bến Lội bây giờ vẫn chảy",
+      "text": "Sông Bến Lội bây giờ vẫn chảy, bến đò cũ người ta cho đập bỏ hẳn. Làng Đồng Cỏ đời sau có thêm một điều dặn con cháu: đừng bao giờ để vong người không tên không nhà. Có xác thì vớt, có tên thì gọi. Còn ai lỡ hại người thì sớm muộn cũng có ngày phải quỳ trước mặt họ mà nói đúng ba chữ - xin lỗi cô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shrine-calm",
+      "caption": "Chuyện kể tới đây là hết",
+      "text": "Chuyện kể tới đây là hết. Mà bà con nghe xong nhớ: miếu hoang nào cũng có người ở trong đó, chỉ là mình chưa hỏi tên họ thôi. Tối nay đi đường ngang miếu nào bỏ hoang, đừng tò mò nhìn vào - nhưng cũng đừng quên thắp cho họ một nén hương, biết đâu họ cũng đang đợi ai gọi đúng tên mình như cô Tư Duyên năm nào."
+    }
+  ],
+  "slug": "mieu-hoang-tap-05"
+}

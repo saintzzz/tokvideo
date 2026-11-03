@@ -1,0 +1,127 @@
+{
+  "id": "mieu-hoang-tap-03",
+  "arc": "mieu-hoang",
+  "arcTitle": "MIẾU HOANG",
+  "episode": 3,
+  "title": "Mò Xác Dưới Sông Bến Lội - Đóm Lửa Đứng Giữa Dòng",
+  "description": "Tập 3 arc MIẾU HOANG: Để cứu anh Phước khỏi bài vị, người làng xuống sông Bến Lội mò xác cô Tư chết đuối sáu mươi năm trước. Đóm lửa trên mặt nước chỉ đúng một chỗ - và dưới đó họ tìm thấy thứ không ngờ tới. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #mieuthan",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "miếu thần hoang",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "men on small wooden boats probing a dark foggy river at night with long bamboo poles, a single ghostly flame standing on the water, photorealistic horror",
+    "a human skeleton tangled in the rotten wood of a sunken ferry boat under dark river water, eerie glow, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "river-dawn": "a wide dark river at dawn, thick fog on the water, small wooden boats with men holding long bamboo poles, mangrove banks, muted grey light, photorealistic",
+    "ghost-flame": "a single small blue-white flame standing motionless on the surface of a dark foggy river at night, reflections, absolute stillness, photorealistic horror",
+    "boat-probe": "a wooden boat on a foggy river at night, two men pushing a long bamboo pole into the water, tense faces, lantern light, photorealistic horror",
+    "sunken-ferry": "underwater view of a rotten sunken wooden ferry boat on a dark riverbed, tangled nets, a human skeleton in a tattered ao dai trapped under the hull, murky water, photorealistic horror",
+    "skull-mud": "a human skull half buried in black river mud, a corroded silver bracelet still on the wrist bone nearby, lamplight, photorealistic horror",
+    "village-meeting": "villagers gathered in a rustic communal house at night around kerosene lamps, solemn faces, an old shaman drawing a diagram on paper, photorealistic",
+    "sick-man": "a middle-aged Vietnamese man sitting on a bed at night, hair streaked white, eyes hollow, clutching his chest, lamplight, photorealistic horror",
+    "shrine-exterior-night": "an abandoned shrine at night, moonless, thick fog pooling around it, faint warm glow leaking through the broken door gap, photorealistic horror",
+    "funeral-prepare": "a small coffin made of new wood in a village house yard, women folding a new ao dai as burial clothes, incense, afternoon light, photorealistic",
+    "water-hand": "a pale hand rising out of dark river water gripping the side of a wooden boat, night, fog, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Họp xóm ngay đêm đó",
+      "text": "Họp xóm ngay đêm đó. Thầy Pháp đã đi, không ai dám mời lại vì ông để lại câu làm không được. Nhưng bà cụ nhai trầu nói: thầy bỏ đi vì thầy nghĩ xóm này không đủ gan làm món nó đòi. Còn mình, không làm thì nhà ông Thuyền đứt con trai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Bà cụ phân việc: năm xuồng",
+      "text": "Bà cụ phân việc: năm xuồng, mười người khỏe vía, xuống bến đò cũ lúc chập tối. Vong đã dẫn đường bằng đóm lửa thì phải tới đúng chỗ đóm đứng. Đứa nào trên xuồng tuyệt đối không được gọi tên nhau - trên sông đêm, kêu tên là nó biết nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-dawn",
+      "caption": "Chiều hôm sau cả đoàn xuống sông",
+      "text": "Chiều hôm sau cả đoàn xuống sông. Bến đò cũ bỏ hoang từ đời nào, cầu gỗ mục lữa chân còn trồi lên mặt nước như xương sườn. Người già chỉ tay: đò chìm ngay đoạn này, nước đoạn này xoáy, người ta mò ba ngày chỉ vớt được xác trong mé, xác cô Tư nó cuốn đi đâu không biết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-flame",
+      "caption": "Trời nhá nhem",
+      "text": "Trời nhá nhem. Người ta vừa buông xuồng thì thấy - giữa dòng, chừng ba chục thước trên chỗ bến đò, đứng một ngọn lửa nhỏ bằng ngọn nến, trắng xanh, không lay không tắt, soi một quầng mờ lên mặt nước. Cả đoàn không ai nói, chỉ chèo tới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boat-probe",
+      "caption": "Xuồng đậu hai bên quầng lửa",
+      "text": "Xuồng đậu hai bên quầng lửa, không ai dám chèo qua đúng chỗ nó đứng. Sào tre đóng xuống - đụng vật cứng. Không phải đá. Là gỗ, một mảng gỗ lớn nằm chếch dưới đáy, móc sào lên thấy mặt ván còn dính vết sơn xanh - màu sơn đò ngang đời xưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sunken-ferry",
+      "caption": "Người mò bằng sào dò dọc mảng gỗ: đây chính là thân con đò c",
+      "text": "Người mò bằng sào dò dọc mảng gỗ: đây chính là thân con đò chìm năm xưa, nằm nghiêng cách bến chỉ ba chục thước mà nước xoáy đẩy nó chôn vào bùn sâu. Người ta mò ba ngày năm đó chỉ tìm quanh mé sông, ai ngờ nó nằm ngay giữa dòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "water-hand",
+      "caption": "Đang dò thì xuồng ngoài cùng chợt nghiêng",
+      "text": "Đang dò thì xuồng ngoài cùng chợt nghiêng. Thằng Hòa la lên bật lại: có tay nắm mạn xuồng. Mọi người chĩa đèn xuống - chỉ thấy nước đục và một vệt bọt. Nhưng từ chỗ đó ai cũng thấy: mạn xuồng thằng Hòa có năm vết ngón tay in bùn, rõ từng đốt ngón."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boat-probe",
+      "caption": "Bà cụ từ bờ gọi vào: nó không hại đâu",
+      "text": "Bà cụ từ bờ gọi vào: nó không hại đâu, nó muốn người ta đào cho sớm thôi. Cả đoàn liều. Thằng Hai cộm nhất đám nhịn hơi lặn xuống theo dây, mò phần dưới thân đò. Lên mặt nước nó run cầm cập: dưới đó có xác, nằm kẹt dưới mạn đò, còn nguyên cả bộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "skull-mud",
+      "caption": "Họ không vớt đêm",
+      "text": "Họ không vớt đêm. Lặn ngày hôm sau, dùng cọc nâng mạn đò lên khỏi bùn. Xác cô Tư đã thành bộ xương, nhưng lạ một điều: xương nằm gọn trong tà áo dài cũ, đầu gối lên ngực như đang ngủ co, và cổ tay trái vẫn đeo chiếc lắc bạc đen xỉn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "skull-mud",
+      "caption": "Nâng xương lên xuồng",
+      "text": "Nâng xương lên xuồng, lọt từng khúc xương vào cái hộc vải trắng chuẩn bị sẵn. Tới khúc xương sống, người ta thấy quấn quanh nó một cuộn dây thừng - không phải dây buộc đò. Dây này cột kiểu cột tay, có nút thắt đặc biệt. Mấy người đi biển nhìn nhau: đây là nút cột người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river-dawn",
+      "caption": "Bà cụ trên bờ nghe kể nút dây thì mặt bà trắng bệch",
+      "text": "Bà cụ trên bờ nghe kể nút dây thì mặt bà trắng bệch. Hồi lâu bà mới nói: lật đò năm đó không phải trời khiến. Nghe má tao kể lại, con đò đông khách, có mấy thằng cướp đò tiền qua sông. Cô Tư có đeo lắc bạc - của mẹ cho - là thứ duy nhất đáng tiền trên đò."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-meeting",
+      "caption": "Đò lật giữa dòng",
+      "text": "Đò lật giữa dòng, thằng nào cũng lo thân mình. Nhưng có đứa nhìn thấy cô Tư bơi được, bám vào mạn đò chìm - và có đứa đã dùng dây cột tay nó lại để lột cái lắc. Nước lớn cuốn đò lật úp lên mình cô. Vậy nên sáu mươi năm nó không đi được: nó chết oan, xác kẹt, danh không tên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-prepare",
+      "caption": "Xóm làng gom tiền mua quan tài mới",
+      "text": "Xóm làng gom tiền mua quan tài mới, khâm liệm bộ xương đàng hoàng, đặt xuống chỗ gần bờ chờ ngày an táng. Cô Tư bây giờ có xác rồi, chỉ còn thiếu đúng một thứ: cái tên đầy đủ để ghi lên bài vị thay chỗ anh Phước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sick-man",
+      "caption": "Tin mừng: cùng đêm mò xác",
+      "text": "Tin mừng: cùng đêm mò xác, anh Phước đỡ hẳn, ăn được cháo, đi được ra sân. Nhưng trong miếu bài vị tên anh vẫn chưa biến mất - nó chỉ nhạt đi một nửa. Bà cụ nói: nó đang đợi. Trả đúng món nó đòi thì tên mới rơi. Mà món nó đòi bây giờ là: điện tử đầy đủ của nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "shrine-exterior-night",
+      "caption": "Vấn đề là cả làng không ai biết họ cô Tư",
+      "text": "Vấn đề là cả làng không ai biết họ cô Tư. Gia đình ở Cái Răng sáu mươi năm trước, lụt lội dời đi đâu không ai hay. Mà không có họ tên thì không có bài vị đúng, không có bài vị đúng thì tên anh Phước vẫn nằm đó. Và cái hẹn mười lăm ngày đã trôi qua tám."
+    }
+  ],
+  "slug": "mieu-hoang-tap-03"
+}
