@@ -118,5 +118,18 @@
       "text": "Nhưng điều không ai ngờ: đêm trước hôm xuống sông, mấy đứa nhỏ chăn vịt chạy về báo là thấy đóm lửa trên mặt nước ngay chỗ bến đò cũ, đứng im giữa dòng tới nửa đêm. Người già trong làng nghe vậy mặt ai cũng tái đi - vong dẫn đường rồi, nó đang chỉ đúng chỗ xác nó nằm."
     }
   ],
-  "slug": "mieu-hoang-tap-02"
+  "slug": "mieu-hoang-tap-02",
+  "sceneImages": {
+    "village-road": "images/suckhoe-long/mieu-hoang-tap-02/village-road.jpg",
+    "shrine-exterior-day": "images/suckhoe-long/mieu-hoang-tap-02/shrine-exterior-day.jpg",
+    "shrine-exterior-night": "images/suckhoe-long/mieu-hoang-tap-02/shrine-exterior-night.jpg",
+    "old-woman-warning": "images/suckhoe-long/mieu-hoang-tap-02/old-woman-warning.jpg",
+    "shaman-arrival": "images/suckhoe-long/mieu-hoang-tap-02/shaman-arrival.jpg",
+    "ritual-shrine": "images/suckhoe-long/mieu-hoang-tap-02/ritual-shrine.jpg",
+    "tablet-close": "images/suckhoe-long/mieu-hoang-tap-02/tablet-close.jpg",
+    "shaman-flee": "images/suckhoe-long/mieu-hoang-tap-02/shaman-flee.jpg",
+    "river-edge": "images/suckhoe-long/mieu-hoang-tap-02/river-edge.jpg",
+    "sick-man": "images/suckhoe-long/mieu-hoang-tap-02/sick-man.jpg",
+    "torn-cloth": "images/suckhoe-long/mieu-hoang-tap-02/torn-cloth.jpg"
+  }
 }

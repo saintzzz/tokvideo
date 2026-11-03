@@ -140,5 +140,16 @@
       "text": "Từ hôm đó anh Phước không dám ra khỏi nhà sau giờ chiều. Còn cái miếu ngoài rẫy, ban ngày người ta ghé mắt nhìn vào, thấy hàng tượng đất nhỏ trong miếu đông hơn trước một con. Và nghe đâu trước cửa miếu bây giờ thỉnh thoảng có người đặt thêm một vỏ trầu, như lỡ hẹn ai đó một cuộc nhậu."
     }
   ],
-  "slug": "mieu-hoang-tap-01"
+  "slug": "mieu-hoang-tap-01",
+  "sceneImages": {
+    "village-road": "images/suckhoe-long/mieu-hoang-tap-01/village-road.jpg",
+    "shrine-exterior-day": "images/suckhoe-long/mieu-hoang-tap-01/shrine-exterior-day.jpg",
+    "shrine-exterior-night": "images/suckhoe-long/mieu-hoang-tap-01/shrine-exterior-night.jpg",
+    "old-woman-warning": "images/suckhoe-long/mieu-hoang-tap-01/old-woman-warning.jpg",
+    "construction-site": "images/suckhoe-long/mieu-hoang-tap-01/construction-site.jpg",
+    "shrine-door-gap": "images/suckhoe-long/mieu-hoang-tap-01/shrine-door-gap.jpg",
+    "inside-shrine": "images/suckhoe-long/mieu-hoang-tap-01/inside-shrine.jpg",
+    "altar-close": "images/suckhoe-long/mieu-hoang-tap-01/altar-close.jpg",
+    "running-field": "images/suckhoe-long/mieu-hoang-tap-01/running-field.jpg"
+  }
 }

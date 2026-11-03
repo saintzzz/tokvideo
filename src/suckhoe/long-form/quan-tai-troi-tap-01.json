@@ -206,5 +206,8 @@
     "hieu-house": "images/suckhoe-long/quan-tai-troi-tap-01/hieu-house.jpg",
     "night-window": "images/suckhoe-long/quan-tai-troi-tap-01/night-window.jpg",
     "knocking-dark": "images/suckhoe-long/quan-tai-troi-tap-01/knocking-dark.jpg"
+  },
+  "sceneVideos": {
+    "knocking-dark": "videos/suckhoe-long/quan-tai-troi-tap-01/knocking-dark.mp4"
   }
 }

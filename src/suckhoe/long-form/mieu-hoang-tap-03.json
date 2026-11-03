@@ -123,5 +123,17 @@
       "text": "Vấn đề là cả làng không ai biết họ cô Tư. Gia đình ở Cái Răng sáu mươi năm trước, lụt lội dời đi đâu không ai hay. Mà không có họ tên thì không có bài vị đúng, không có bài vị đúng thì tên anh Phước vẫn nằm đó. Và cái hẹn mười lăm ngày đã trôi qua tám."
     }
   ],
-  "slug": "mieu-hoang-tap-03"
+  "slug": "mieu-hoang-tap-03",
+  "sceneImages": {
+    "river-dawn": "images/suckhoe-long/mieu-hoang-tap-03/river-dawn.jpg",
+    "ghost-flame": "images/suckhoe-long/mieu-hoang-tap-03/ghost-flame.jpg",
+    "boat-probe": "images/suckhoe-long/mieu-hoang-tap-03/boat-probe.jpg",
+    "sunken-ferry": "images/suckhoe-long/mieu-hoang-tap-03/sunken-ferry.jpg",
+    "skull-mud": "images/suckhoe-long/mieu-hoang-tap-03/skull-mud.jpg",
+    "village-meeting": "images/suckhoe-long/mieu-hoang-tap-03/village-meeting.jpg",
+    "sick-man": "images/suckhoe-long/mieu-hoang-tap-03/sick-man.jpg",
+    "shrine-exterior-night": "images/suckhoe-long/mieu-hoang-tap-03/shrine-exterior-night.jpg",
+    "funeral-prepare": "images/suckhoe-long/mieu-hoang-tap-03/funeral-prepare.jpg",
+    "water-hand": "images/suckhoe-long/mieu-hoang-tap-03/water-hand.jpg"
+  }
 }

@@ -1,0 +1,42 @@
+{
+  "id": "cay-da-tap-01",
+  "arc": "cay-da-dau-lang",
+  "arcTitle": "CÂY ĐA ĐẦU LÀNG",
+  "episode": 1,
+  "title": "Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết Nhánh Đó",
+  "description": "Tập 1 arc CÂY ĐA ĐẦU LÀNG: Làng Tây Trà có cây đa ngàn năm chặn ngay cửa làng, người già truyền nhau đừng động vào nó. Ban lãnh đạo làng quyết đốn cây để mở đường bê tông - người chặt nhánh đầu tiên chết đúng cách nhánh đó gãy. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #cayda",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "cây đa đầu làng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "narrator": "vi-VN-NamMinhNeural",
+  "thumbnailSubjects": [
+    "a massive ancient banyan tree at night with aerial roots hanging like curtains, a pale ghost face emerging from the trunk, red cloth offerings at the base, fog, photorealistic horror",
+    "villagers with an axe frozen before a giant banyan tree at dusk, a severed branch bleeding dark sap, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "banyan-day": "a colossal ancient banyan tree beside a rural Vietnamese village gate, aerial roots forming a curtain, red cloth strips and incense bowls at the trunk base, overcast day, photorealistic",
+    "banyan-night": "the same giant banyan tree at night, moonless, aerial roots swaying without wind, faint red glow between the roots, thick fog, photorealistic horror",
+    "village-meeting": "villagers in a communal house at dusk, officials pointing at a road plan map, old men shaking heads, kerosene lamps, photorealistic",
+    "chainsaw-man": "a stocky man starting a chainsaw before a giant banyan trunk, arrogant grin, villagers watching nervously behind, dusk light, photorealistic",
+    "branch-fall": "a huge banyan branch crashing down in dust, a man underneath looking up in terror, photorealistic horror",
+    "funeral": "a rural Vietnamese funeral procession at dawn, white headbands, a coffin carried past the banyan tree, incense smoke, photorealistic",
+    "sap-close": "close view of a freshly cut banyan branch stump oozing dark red sap that looks like blood, photorealistic horror",
+    "old-man-shrine": "an old man kneeling at the banyan base lighting incense among red cloth strips, dusk, photorealistic",
+    "roots-move": "aerial banyan roots at night visibly curled around a dropped axe on the ground, as if gripping it, photorealistic horror",
+    "village-gate": "the village gate at dusk with the banyan looming over it, a new concrete road plan sign planted beside, photorealistic"
+  },
+  "beats": [
+    { "scene": "village-gate", "text": "Làng Tây Trà tôi từng buôn qua năm nào. Cửa làng có cây đa không ai biết bao nhiêu tuổi, gốc to bằng cái sân đình, dễ buông xuống thành rèm che kín một bên đường. Người làng gọi nó là cây cụ, dưới gốc bày toàn khăn đỏ, bát hương, trầu cau - thờ như thờ người." },
+    { "scene": "village-gate", "text": "Người già truyền nhau một câu: cây đó không phải cây, là cái chốt. Nó chặn đúng cửa làng để giữ cái gì ở ngoài không vào được, và giữ cái gì trong làng không ra được. Đừng động vào nó. Trẻ con hái lá đá cầu cũng bị đám già chửi cho trầy trật." },
+    { "scene": "old-man-shrine", "text": "Cụ ông chín mươi tuổi ngày nào cũng ra gốc cây thắp nén hương, bảo đó là bổn phận của dòng tộc ông từ đời lập làng. Cụ hay nói: ngày nào cụ tao chết, cây này mất người coi, làng này mới phiền. Ai cũng nghe cho qua chuyện." },
+    { "scene": "village-meeting", "text": "Rồi huyện về quy hoạch đường qua làng, con đường bê tông mới đi đúng qua chỗ cây đa. Họp làng bàn ba buổi. Đám trẻ trong ban cán sự xúm vào: một gốc cây thôi mà, đốn đi mở đường rộng ra cho xe tải vào tận xóm, làng giàu lên nhờ đường chứ nhờ cây à." },
+    { "scene": "village-meeting", "text": "Đám già phản đối cực gắt. Cụ chín mươi đứng giữa đình nói run cả giọng: chặt cây đó là tháo chốt, cái nó giữ nó thả ra hết thì làng này gánh không nổi. Chủ tịch xã về thuyết phục, hứa lập miếu thờ mới to hơn, chuyển cốt thờ cúng sang. Cụ ngồi xuống không nói nữa, chỉ lắc đầu." },
+    { "scene": "banyan-day", "text": "Trước hôm chặt cây, tôi đi ngang nhìn cây lần cuối. Lạ một điều chưa từng thấy: khăn đỏ dưới gốc bị xé hết, vứt vòng quanh như ai giận dữ dứt phăng ra. Bát hương đổ ngửa. Và mặt đất quanh gốc nứt toác từng khe, đất bên trong đỏ sẫm như máu khô." },
+    { "scene": "chainsaw-man", "text": "Sáng hôm chặt, cả làng ra coi. Người cầm cưa là thằng Lực, thợ mộc quen tay, khoe khoang: cây này tao cưa hai nhịp là nằm. Nó đề máy cưa ầm ầm, đám trẻ vỗ tay. Chỉ có mấy cụ già đứng xa, cụ chín mươi không thấy mặt - nghe đâu cụ ốm liệt đúng hôm đó." },
+    { "scene": "sap-close", "text": "Nhát cưa đầu tiên vào nhánh lớn phía đông - người ta rùng mình vì cái tiếng: không phải tiếng gỗ bị cắt, mà như tiếng xé vải ướt, rít lên rùn rợn. Nhánh đứt rơi xuống. Từ mặt cắt nhỏ ra một thứ nước đỏ đục, nhầy, mùi tanh nồng - chẳng ai dám nói đó là nhựa." },
+    { "scene": "roots-move", "text": "Thằng Lực đặt cưa xuống định cưa nhánh hai thì cái cưa trượt khỏi tay nó, rơi xuống đám dễ. Người coi sau này kể lại: họ thấy rõ mấy sợi dễ buông cuộn lại ôm lấy cái cưa như bàn tay giữ nó xuống. Thằng Lực vớ lại được cưa thì mặt nó đã tái, nhưng vì máu nóng nó vẫn cưa tiếp." },
+    { "scene": "branch-fall", "text": "Nhánh thứ hai đứt, và đây là lúc tai nạn xảy ra. Nhánh đó đứt xong không rơi ngay - nó lơ lửng một thoáng như có ai đang giữ, rồi tuột xuống đúng chỗ thằng Lực đang đứng. Nó né được ra một bước, nhánh lớn trượt vai, nhưng một cành nhỏ chẻ ngang cổ nó." },
+    { "scene": "branch-fall", "text": "Thằng Lực gục ngay tại gốc cây, máu chảy đỏ cả nền đất nứt. Đưa đi trạm xá cấp cứu kịp, giữ được mạng nhưng cổ nó khâu mười mấy mũi. Cái lạ là vết thương nằm đúng vị trí mặt cắt trên nhánh cây - người đời sau bàn tán: nó chặt nhánh nào, cây trả nhát đó." },
+    { "scene": "funeral", "text": "Nhưng cái chết đầu tiên không phải của thằng Lực. Đêm hôm chặt cây, cụ ông chín mươi - người coi cây cả đời - mất lặng lẽ trong giấc ngủ. Đám tang cụ đi ngang gốc đa sáng hôm sau, người ta thấy dễ cây rũ xuống thấp hơn hẳn, che phủ lối đi như bức rèm khép lại." },
+    { "scene": "banyan-night", "text": "Đêm đó mấy thanh niên trực công trình kể: nghe trong tán cây có tiếng như ai khóc, không phải một người - nhiều người, giọng già giọng trẻ, khóc rất khẽ rất dai. Và gốc cây chỗ đất nứt ban ngày, đêm ấy ẩm đẫm, đỏ sẫm lên như mới tưới nước tanh." },
+    { "scene": "village-meeting", "text": "Họp khẩn. Ban cán sự bây giờ sợ nhưng mặt mũi không cho lùi - quy hoạch huyện đã duyệt, lùi là mang tiếng mê tín. Quyết định: tạm dừng hai ngày, mời thầy về làm lễ tạ cái rồi chặt nốt cho xong. Cái quyết định nửa vời đó mở ra chuỗi chết chóc sau này mà cả làng Tây Trà tới giờ vẫn không ai muốn nhắc." }
+  ]
+}
