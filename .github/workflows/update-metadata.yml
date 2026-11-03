@@ -9,12 +9,38 @@ name: Update long-form metadata
 # An empty slugs list updates every episode in published-long.json.
 on:
   repository_dispatch:
-    types: [update-long-metadata, update-long-thumbnails]
+    types: [update-long-metadata, update-long-thumbnails, pin-teaser-comments]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
+  pin-comments:
+    if: github.event_name == 'repository_dispatch' && github.event.action == 'pin-teaser-comments'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Pin full-episode comments on teasers
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          SLUGS: ${{ join(github.event.client_payload.slugs, ' ') }}
+        run: node scripts/pin-teaser-comments.mjs $SLUGS
+      - name: Commit ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/published-long.json
+          git diff --staged --quiet || git commit -m "Pin teaser comments [skip ci]"
+          git pull --rebase && git push
+
+
   update-thumbnails:
     if: github.event_name == 'repository_dispatch' && github.event.action == 'update-long-thumbnails'
     runs-on: ubuntu-latest
