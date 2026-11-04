@@ -46,6 +46,10 @@ const arcOf = (slug) => slug.replace(/-tap-\d+$/, "");
 const arcStartsToday = () => {
   // VN (UTC+7, no DST) hour of the current tick — the first daily slot
   // is 05:30 VN, so arcs may only begin while vnHour < 9.
+  // ALLOW_ARC_ANYTIME=1 is the manual escape hatch for when GitHub
+  // drops/delays the sole arc-start tick — use via workflow_dispatch
+  // only, never on the schedule.
+  if (process.env.ALLOW_ARC_ANYTIME === "1") return true;
   const vnHour = (new Date().getUTCHours() + 7) % 24;
   return vnHour >= 5 && vnHour < 9;
 };
