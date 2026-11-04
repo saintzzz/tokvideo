@@ -1,4 +1,35 @@
-# Channel analysis & strategy — 2026-09-24
+# Channel analysis & strategy — 2026-11-04 (current)
+
+> Phần 1-4 dưới là tài liệu gốc thời remedies (2026-09). Chiến thuật
+> hiện hành là phần này — horror pivot đã thắng remedies.
+
+## 0. Trạng thái kênh (data mới nhất, channel-report 2/11)
+
+- Kênh VI "Truyện Ma Dài Kỳ": **261 subs / 88 video**
+- Shorts teasers đột phá 2 ngày đầu tháng 11: **402, 395, 242, 179, 141, 104 views** (trước đó 0-13) — thuật toán đã bắt đầu test lại nội dung kênh sau khi pivot sang horror
+- Long-form: gần như 0 view — discovery hoàn toàn đi qua Shorts
+- Kênh EN: đã pause (22 views/28d)
+- Remedy Shorts trên kênh VI: đã tắt — kênh chỉ đăng truyện ma, audience không bị trộn
+
+## 0.1 Chiến thuật hiện hành
+
+**Sản phẩm:** truyện ma dân gian dài tập (arcs 5 tập, narrator-only,
+karaoke caption, horror ambience, footage thật khi có) + teaser Shorts.
+
+**Cadence (giờ VN, UTC+7):**
+- 1 tập dài + 1 teaser đi kèm, **so le nhau** — tick `suckhoe-long-next` upload xong tập là đăng luôn teaser (không còn dồn teaser vào đêm)
+- Slot tập dài: **05:30, 10:30, 13:30, 16:30, 19:30, 22:30 VN** — đủ trọn 1 arc 5 tập/ngày
+- Arc mới chỉ khởi đầu khung 05:00-08:59 VN (atomicity) — nếu GitHub drop tick thì dispatch tay qua `suckhoe-long` hoặc `ALLOW_ARC_ANYTIME=1`
+- Doctor 23:45 VN: backfill teaser thiếu, reconcile ledger, báo failed runs
+
+**Queue:** luôn giữ 15-20 tập sẵn sàng (audio+ảnh+caption committed).
+Hiện: QUAN TÀI TRÔI (đang lên) → MIẾU HOANG → CÂY ĐA ĐẦU LÀNG → CẦU KHỈ ĐÊM.
+
+**Chọn đề tài:** motif dân gian đang thắng theo view — giếng/hũ/quan tài/miếu/cây đa/cầu khỉ. Arc kế chọn theo Shorts nào vượt 400 views.
+
+**Đo lường:** check view tập mới sau 24h/48h — nếu Shorts giữ >100 → sóng còn, tiếp tục; rớt về <20 → đổi hook/format.
+
+# Legacy strategy doc — 2026-09-24 (remedies era, superseded)
 
 Data source: `src/suckhoe/channel-report-vi.md`, `channel-report-en.md`,
 `published.json`, git history. Written by the SDLC Discovery phase; this
