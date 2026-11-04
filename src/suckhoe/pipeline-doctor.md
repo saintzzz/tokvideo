@@ -7,7 +7,6 @@ Ready unpublished episodes: 19
 ## Failed workflow runs (last 24h)
 
 - 2026-11-04T01:39 bae3812 https://github.com/saintzzz/tokvideo/actions/runs/41755529278
-- 2026-11-03T22:01 3e31179 https://github.com/saintzzz/tokvideo/actions/runs/41727085151
 
 ## Findings
 
@@ -22,6 +21,5 @@ Ready unpublished episodes: 19
 
 ## Actions taken
 
-- Built + uploaded teaser for "loi-nguyen-gieng-cu-tap-05".
-- Built + uploaded teaser for "quan-tai-troi-tap-01".
+None needed.
 
