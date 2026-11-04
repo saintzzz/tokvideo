@@ -1,34 +1,54 @@
-# Channel report — 2026-11-03
+# Channel report — 2026-11-04
 
 Channel: Truyện Ma Dài Kỳ
-Subscribers: 261
-Total views: 1913
-Total videos: 90
+Subscribers: 263
+Total views: 1934
+Total videos: 91
 
 ## Last 28 days (channel-wide)
 
-Views: 150
-Watch time (minutes): 92
-Subscribers gained: 1
+Views: 1886
+Watch time (minutes): 340
+Subscribers gained: 12
 Subscribers lost: 1
-Net subscriber change: 0
+Net subscriber change: 11
 
-## Funnel per video
+## Funnel per video (last 28 days)
 
-(Impressions query failed: Unknown identifier (impressions) given in field parameters.metrics.)
+| videoId | Views | WatchMin | AvgView(s) | AvgView% |
+|---|---|---|---|---|---|
+| oh9YAHYD5Rs | 510 | 61.0 | 16 | 32.6 |
+| LvjIJAA6D-U | 467 | 74.0 | 21 | 41.9 |
+| Oxc-ccnaAw0 | 258 | 51.0 | 27 | 53.2 |
+| j5NoHoVYJeM | 194 | 20.0 | 24 | 47.3 |
+| 8h4MxD1jLiw | 156 | 14.0 | 16 | 32.2 |
+| A4_kYtOGN6E | 119 | 17.0 | 17 | 33.8 |
+| wroZ0jQ72YQ | 13 | 4.0 | 39 | 77.1 |
+| OHTmKtHhnQY | 8 | 2.0 | 31 | 62.2 |
+| GNq43flJmIk | 3 | 1.0 | 30 | 46.9 |
+| mi5zJkfuoqQ | 2 | 0.0 | 4 | 9.2 |
+| oixdoI-L2e4 | 2 | 0.0 | 5 | 9.8 |
+| Ygz3Pw6_9Qc | 2 | 0.0 | 0 | 0.0 |
+| YcvcMmOvWhk | 1 | 0.0 | 0 | 0.0 |
+| An6G6qGH8JM | 1 | 0.0 | 0 | 0.0 |
+| -OvXoeVm5Bk | 0 | 0.0 | 0 | 0.0 |
+| rj1leKO9hNM | 0 | 0.0 | 0 | 0.0 |
+
+Videos under 15% avg retention: 7/16 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 4 (xem trước) #Shorts | 8 | 1 | 1 | 2026-11-02 |
-| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 3 (xem trước) #Shorts | 4 | 0 | 1 | 2026-11-02 |
-| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 2 (xem trước) #Shorts | 469 | 8 | 1 | 2026-11-01 |
-| Truyện Ma | Hũ Ma Gà - Tập 5 (xem trước) #Shorts | 125 | 6 | 1 | 2026-11-01 |
-| Truyện Ma | Hũ Ma Gà - Tập 4 (xem trước) #Shorts | 512 | 11 | 1 | 2026-11-01 |
+| Truyện Ma Có Thật | Quan Tài Trôi - Tập 1: Quan Tài Đen Trôi Vào Làng - Dấu Khắc Giống Mộ Cha | 0 | 0 | 0 | 2026-11-04 |
+| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 4 (xem trước) #Shorts | 10 | 1 | 1 | 2026-11-02 |
+| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 3 (xem trước) #Shorts | 5 | 2 | 1 | 2026-11-02 |
+| Truyện Ma | Lời Nguyền Giếng Cũ - Tập 2 (xem trước) #Shorts | 921 | 13 | 1 | 2026-11-01 |
+| Truyện Ma | Hũ Ma Gà - Tập 5 (xem trước) #Shorts | 499 | 8 | 1 | 2026-11-01 |
+| Truyện Ma | Hũ Ma Gà - Tập 4 (xem trước) #Shorts | 901 | 16 | 1 | 2026-11-01 |
 | Truyện Ma | Hũ Ma Gà - Tập 3 (xem trước) #Shorts | 159 | 3 | 1 | 2026-10-31 |
 | Truyện Ma | Hũ Ma Gà - Tập 2 (xem trước) #Shorts | 199 | 7 | 1 | 2026-10-31 |
-| Truyện Ma | Hôn Ma - Tập 5 (xem trước) #Shorts | 262 | 6 | 1 | 2026-10-31 |
+| Truyện Ma | Hôn Ma - Tập 5 (xem trước) #Shorts | 263 | 6 | 1 | 2026-10-31 |
 | Truyện Ma | Hôn Ma - Tập 4 (xem trước) #Shorts | 13 | 0 | 1 | 2026-10-30 |
 | Truyện Ma | Hôn Ma - Tập 3 (xem trước) #Shorts | 1 | 0 | 1 | 2026-10-30 |
 | Truyện Ma | Hôn Ma - Tập 2 (xem trước) #Shorts | 7 | 0 | 1 | 2026-10-30 |
@@ -45,5 +65,4 @@ Net subscriber change: 0
 | Truyện Ma | Đêm Khâm Liệm - Tập 1 (xem trước) #Shorts | 0 | 0 | 1 | 2026-10-26 |
 | Truyện Ma | Chuyến Đò Đêm - Tập 5 (xem trước) #Shorts | 2 | 0 | 1 | 2026-10-26 |
 | Truyện Ma | Chuyến Đò Đêm - Tập 4 (xem trước) #Shorts | 1 | 0 | 1 | 2026-10-26 |
-| Truyện Ma Có Thật | Hôn Ma - Tập 5: Hồi Kết - Tấm Ảnh Cuối Cùng Trong Máy | 0 | 0 | 0 | 2026-10-26 |
 

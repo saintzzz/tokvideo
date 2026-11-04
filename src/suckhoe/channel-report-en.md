@@ -1,4 +1,4 @@
-# Channel report — 2026-11-03
+# Channel report — 2026-11-04
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
@@ -7,15 +7,24 @@ Total videos: 12
 
 ## Last 28 days (channel-wide)
 
-Views: 22
+Views: 23
 Watch time (minutes): 1
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
-## Funnel per video
+## Funnel per video (last 28 days)
 
-(Impressions query failed: Unknown identifier (impressions) given in field parameters.metrics.)
+| videoId | Views | WatchMin | AvgView(s) | AvgView% |
+|---|---|---|---|---|---|
+| 4qS5HKBB3-M | 10 | 0.0 | 8 | 13.4 |
+| dN9w4Ixoqes | 5 | 0.0 | 0 | 0.0 |
+| 1ook5C5HtBs | 5 | 0.0 | 0 | 0.0 |
+| pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
+| HiJsHfuE6o4 | 1 | 0.0 | 0 | 0.0 |
+| e1PQlrGSovM | 1 | 1.0 | 67 | 96.0 |
+
+Videos under 15% avg retention: 5/6 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
 
 ## Most recent 12 videos
 
