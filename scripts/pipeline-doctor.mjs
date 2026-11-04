@@ -385,7 +385,39 @@ for (const [slug, entry] of Object.entries(ledger).sort()) {
 await mkdir(path.join(root, "out"), { recursive: true });
 await writeFile(path.join(root, "out", "teaser-posting-sheet.md"), sheet.join("\n"));
 
-// -- Report -------------------------------------------------------------
+// -- Failed workflow runs (self-monitoring) --------------------------------
+// Every failed run of this workflow in the last 24h gets surfaced into
+// the report, so anyone reading pipeline-doctor.md sees pipeline-level
+// breakage (render crashes, upload failures) without someone forwarding
+// a failure email.
+try {
+  const runsJson = execFileSync(
+    "gh",
+    [
+      "run", "list",
+      "--workflow", "render.yml",
+      "--status", "failure",
+      "--limit", "10",
+      "--json", "displayTitle,conclusion,createdAt,headSha,url",
+    ],
+    { cwd: root, encoding: "utf8", env: process.env }
+  );
+  const runs = JSON.parse(runsJson || "[]");
+  const dayAgo = Date.now() - 24 * 3600 * 1000;
+  const recent = runs.filter((r) => Date.parse(r.createdAt) > dayAgo);
+  lines.push(`## Failed workflow runs (last 24h)`);
+  lines.push("");
+  if (!recent.length) {
+    lines.push("None — all runs green.");
+  } else {
+    for (const r of recent) {
+      lines.push(`- ${r.createdAt.slice(0, 16)} ${r.headSha.slice(0, 7)} ${r.url}`);
+    }
+  }
+  lines.push("");
+} catch {
+  // gh missing or token lacks actions:read — skip silently.
+}
 lines.push(`## Findings`);
 lines.push("");
 if (!findings.length && !failed.length) lines.push("None — pipeline healthy.");

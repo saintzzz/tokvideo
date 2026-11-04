@@ -1145,6 +1145,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
     concurrency:
       group: suckhoe-long-publish
     steps:
@@ -1171,6 +1172,7 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           YOUTUBE_TEASER_PRIVACY_STATUS: public
           # 3 teasers/run — backfills the backlog over a few days without
           # pushing the channel near the daily upload cap.
