@@ -1112,6 +1112,33 @@ jobs:
           YOUTUBE_LONG_PRIVACY_STATUS: public
         run: node scripts/upload-youtube-long.mjs ${{ steps.pick.outputs.slug }}
 
+      # 1-long-1-short rhythm (owner directive 2026-11-04): every
+      # published episode gets its teaser Short immediately, alternating
+      # long/short on the channel instead of batching teasers at night.
+      # The Remotion-bundled ffmpeg lacks filters the teaser graph needs
+      # (zoompan/boxblur/drawtext) — install the real binary.
+      - name: Install ffmpeg (for teaser build)
+        if: success()
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Build teaser Short for this episode
+        if: success()
+        continue-on-error: true # teaser is bonus on top of the long-form
+        # upload — a build hiccup must never red the run; the nightly
+        # doctor retries missing teasers anyway
+        run: node scripts/make-long-teaser.mjs ${{ steps.pick.outputs.slug }}
+
+      - name: Upload teaser Short
+        if: success()
+        continue-on-error: true # long-form already landed; a teaser
+        # hiccup must never red the run (doctor retries it nightly anyway)
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_TEASER_PRIVACY_STATUS: public
+        run: node scripts/upload-long-teaser.mjs ${{ steps.pick.outputs.slug }}
+
       - name: Commit long-form ledger
         if: always()
         run: |
