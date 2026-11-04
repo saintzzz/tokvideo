@@ -100,5 +100,18 @@
       "text": "Tới đêm đó thầy Hòe bỏ đi. Ông xách hòm ra đầu làng lúc nửa đêm, gặp thằng canh rẫy thì để lại đúng một câu: về bảo làng, chuyện này không phải chuyện làm lễ cho xong - nó đòi người làng nhận lại món nợ cả đời này giấu. Tôi làm không nổi. Mời ông thầy pháp cao tay hơn tôi đi, nhanh lên trước khi vại nứt."
     }
   ],
-  "slug": "cay-da-tap-02"
+  "slug": "cay-da-tap-02",
+  "sceneImages": {
+    "banyan-day": "images/suckhoe-long/cay-da-tap-02/banyan-day.jpg",
+    "banyan-night": "images/suckhoe-long/cay-da-tap-02/banyan-night.jpg",
+    "ritual-dig": "images/suckhoe-long/cay-da-tap-02/ritual-dig.jpg",
+    "buried-jar": "images/suckhoe-long/cay-da-tap-02/buried-jar.jpg",
+    "talismans-close": "images/suckhoe-long/cay-da-tap-02/talismans-close.jpg",
+    "shaman-shock": "images/suckhoe-long/cay-da-tap-02/shaman-shock.jpg",
+    "jar-whisper": "images/suckhoe-long/cay-da-tap-02/jar-whisper.jpg",
+    "village-meeting": "images/suckhoe-long/cay-da-tap-02/village-meeting.jpg",
+    "dead-livestock": "images/suckhoe-long/cay-da-tap-02/dead-livestock.jpg",
+    "records-old": "images/suckhoe-long/cay-da-tap-02/records-old.jpg",
+    "night-road": "images/suckhoe-long/cay-da-tap-02/night-road.jpg"
+  }
 }

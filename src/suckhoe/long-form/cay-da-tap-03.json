@@ -106,5 +106,18 @@
       "text": "Bây giờ làng Tây Trà đứng trước con đường duy nhất: cháu nội của kẻ hại cô Sen phải đứng trước mặt vong mà nhận tội thay - như ông Hai Tàu bên làng Đồng Cỏ từng phải làm. Nhưng nhận tội với người đã chết ba đời thì dễ, còn nhận trước mặt cả làng rằng ông nội mình là kẻ trộm vàng và hại một con người chết oan - đó mới là điều cả làng không chắc ông ta dám làm."
     }
   ],
-  "slug": "cay-da-tap-03"
+  "slug": "cay-da-tap-03",
+  "sceneImages": {
+    "graveyard-old": "images/suckhoe-long/cay-da-tap-03/graveyard-old.jpg",
+    "village-past": "images/suckhoe-long/cay-da-tap-03/village-past.jpg",
+    "accusation": "images/suckhoe-long/cay-da-tap-03/accusation.jpg",
+    "gold-hidden": "images/suckhoe-long/cay-da-tap-03/gold-hidden.jpg",
+    "records-old": "images/suckhoe-long/cay-da-tap-03/records-old.jpg",
+    "dying-girl": "images/suckhoe-long/cay-da-tap-03/dying-girl.jpg",
+    "burial-hasty": "images/suckhoe-long/cay-da-tap-03/burial-hasty.jpg",
+    "jar-sealing": "images/suckhoe-long/cay-da-tap-03/jar-sealing.jpg",
+    "planting-tree": "images/suckhoe-long/cay-da-tap-03/planting-tree.jpg",
+    "wealthy-house": "images/suckhoe-long/cay-da-tap-03/wealthy-house.jpg",
+    "council-dark": "images/suckhoe-long/cay-da-tap-03/council-dark.jpg"
+  }
 }

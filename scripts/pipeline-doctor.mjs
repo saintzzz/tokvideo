@@ -226,7 +226,17 @@ for (const slug of teaserCandidates) {
       break; // no creds on this machine — the rest would skip the same way
     }
   } catch (err) {
-    failed.push(`Teaser for "${slug}" failed: ${String(err.message ?? err).slice(0, 200)}`);
+    const msg = String(err.message ?? err).slice(0, 200);
+    // Episodes published before the committed-audio convention have no
+    // local beats on CI — the teaser can't be built, but that's a data
+    // gap to fix locally, not a job failure. Report it and move on.
+    if (/no committed beat audio/i.test(msg)) {
+      findings.push(
+        `Teaser "${slug}" skipped: episode has no committed beat audio (needs a local voiceover run + commit).`
+      );
+      continue;
+    }
+    failed.push(`Teaser for "${slug}" failed: ${msg}`);
   }
 }
 // Re-read ledger after teaser uploads (they wrote to the file).

@@ -106,5 +106,18 @@
       "text": "Sáng hôm sau anh chạy tới nhà bà cụ Hai. Nghe xong đầu đuôi, bà im một lúc lâu rồi nói: con qua cầu đêm đưa người yếu theo - nước độc nó đổi rồi. Đứa về nhà với con không phải vợ con. Còn vợ con - nó giữ lại dưới rạch. Muốn lấy lại thì phải đổi ngược lại, mà đổi người lần hai khó hơn lần đầu nhiều."
     }
   ],
-  "slug": "cau-khi-tap-01"
+  "slug": "cau-khi-tap-01",
+  "sceneImages": {
+    "monkey-bridge-day": "images/suckhoe-long/cau-khi-tap-01/monkey-bridge-day.jpg",
+    "monkey-bridge-night": "images/suckhoe-long/cau-khi-tap-01/monkey-bridge-night.jpg",
+    "village-path": "images/suckhoe-long/cau-khi-tap-01/village-path.jpg",
+    "sick-wife": "images/suckhoe-long/cau-khi-tap-01/sick-wife.jpg",
+    "motorbike-night": "images/suckhoe-long/cau-khi-tap-01/motorbike-night.jpg",
+    "water-reflection": "images/suckhoe-long/cau-khi-tap-01/water-reflection.jpg",
+    "woman-different": "images/suckhoe-long/cau-khi-tap-01/woman-different.jpg",
+    "old-woman-warning": "images/suckhoe-long/cau-khi-tap-01/old-woman-warning.jpg",
+    "clinic-night": "images/suckhoe-long/cau-khi-tap-01/clinic-night.jpg",
+    "bridge-end": "images/suckhoe-long/cau-khi-tap-01/bridge-end.jpg",
+    "eating-raw": "images/suckhoe-long/cau-khi-tap-01/eating-raw.jpg"
+  }
 }

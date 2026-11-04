@@ -106,5 +106,18 @@
       "text": "Đêm rằm trăng tròn sáng vằng vặc, nhưng khi anh Tấn dìu vợ - hay đúng hơn là thân vợ anh đang được mượn - bước chân lên cây cầu khỉ, thì trăng tắt. Không phải mây che - người coi kể trăng cứ tối dần như ai vặn đèn, tới khi chỉ còn quầng lửa của thầy và cái bóng mỏng của hai người trên cầu lung lay giữa dòng."
     }
   ],
-  "slug": "cau-khi-tap-03"
+  "slug": "cau-khi-tap-03",
+  "sceneImages": {
+    "ghost-under": "images/suckhoe-long/cau-khi-tap-03/ghost-under.jpg",
+    "many-under": "images/suckhoe-long/cau-khi-tap-03/many-under.jpg",
+    "monkey-bridge-night": "images/suckhoe-long/cau-khi-tap-03/monkey-bridge-night.jpg",
+    "talking-water": "images/suckhoe-long/cau-khi-tap-03/talking-water.jpg",
+    "old-woman-warning": "images/suckhoe-long/cau-khi-tap-03/old-woman-warning.jpg",
+    "village-meeting": "images/suckhoe-long/cau-khi-tap-03/village-meeting.jpg",
+    "shaman-arrive": "images/suckhoe-long/cau-khi-tap-03/shaman-arrive.jpg",
+    "dredge-river": "images/suckhoe-long/cau-khi-tap-03/dredge-river.jpg",
+    "bones-found": "images/suckhoe-long/cau-khi-tap-03/bones-found.jpg",
+    "mass-grave": "images/suckhoe-long/cau-khi-tap-03/mass-grave.jpg",
+    "bridge-dawn": "images/suckhoe-long/cau-khi-tap-03/bridge-dawn.jpg"
+  }
 }

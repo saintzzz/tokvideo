@@ -99,5 +99,17 @@
       "text": "Chuyện rạch Ông Bưởi tới đây là hết. Bài học dân hai ấp truyền con cháu: cây cầu nào cũng đi qua được, nhưng người chết đuối nào cũng cần được vớt về - vì dưới nước nào cũng có người, và họ không đòi gì nhiều, chỉ đòi được gọi đúng tên một lần rồi được đưa về nhà."
     }
   ],
-  "slug": "cau-khi-tap-05"
+  "slug": "cau-khi-tap-05",
+  "sceneImages": {
+    "listen-bank": "images/suckhoe-long/cau-khi-tap-05/listen-bank.jpg",
+    "voices-under": "images/suckhoe-long/cau-khi-tap-05/voices-under.jpg",
+    "dredge-more": "images/suckhoe-long/cau-khi-tap-05/dredge-more.jpg",
+    "small-bones": "images/suckhoe-long/cau-khi-tap-05/small-bones.jpg",
+    "family-reunion": "images/suckhoe-long/cau-khi-tap-05/family-reunion.jpg",
+    "bridge-day-crowd": "images/suckhoe-long/cau-khi-tap-05/bridge-day-crowd.jpg",
+    "new-bridge": "images/suckhoe-long/cau-khi-tap-05/new-bridge.jpg",
+    "temple-row": "images/suckhoe-long/cau-khi-tap-05/temple-row.jpg",
+    "woman-smile": "images/suckhoe-long/cau-khi-tap-05/woman-smile.jpg",
+    "bridge-gone": "images/suckhoe-long/cau-khi-tap-05/bridge-gone.jpg"
+  }
 }

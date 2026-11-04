@@ -117,5 +117,17 @@
       "text": "Họp khẩn. Ban cán sự bây giờ sợ nhưng mặt mũi không cho lùi - quy hoạch huyện đã duyệt, lùi là mang tiếng mê tín. Quyết định: tạm dừng hai ngày, mời thầy về làm lễ tạ cái rồi chặt nốt cho xong. Cái quyết định nửa vời đó mở ra chuỗi chết chóc sau này mà cả làng Tây Trà tới giờ vẫn không ai muốn nhắc."
     }
   ],
-  "slug": "cay-da-tap-01"
+  "slug": "cay-da-tap-01",
+  "sceneImages": {
+    "banyan-day": "images/suckhoe-long/cay-da-tap-01/banyan-day.jpg",
+    "banyan-night": "images/suckhoe-long/cay-da-tap-01/banyan-night.jpg",
+    "village-meeting": "images/suckhoe-long/cay-da-tap-01/village-meeting.jpg",
+    "chainsaw-man": "images/suckhoe-long/cay-da-tap-01/chainsaw-man.jpg",
+    "branch-fall": "images/suckhoe-long/cay-da-tap-01/branch-fall.jpg",
+    "funeral": "images/suckhoe-long/cay-da-tap-01/funeral.jpg",
+    "sap-close": "images/suckhoe-long/cay-da-tap-01/sap-close.jpg",
+    "old-man-shrine": "images/suckhoe-long/cay-da-tap-01/old-man-shrine.jpg",
+    "roots-move": "images/suckhoe-long/cay-da-tap-01/roots-move.jpg",
+    "village-gate": "images/suckhoe-long/cay-da-tap-01/village-gate.jpg"
+  }
 }

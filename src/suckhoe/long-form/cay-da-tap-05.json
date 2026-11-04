@@ -117,5 +117,17 @@
       "text": "Chuyện tới đây là hết. Làng Tây Trà đời sau có thêm một điều dạy con cháu: đừng bao giờ bỏ phiếu đuổi một người vô tội, dù cả làng cùng giơ tay - vì phiếu đó có ngày con cháu phải quỳ xuống rút lại. Và cây đa đầu làng giờ đây người ta không sợ nữa, chỉ thương - vì ai cũng biết nó từng gánh oán của cả một làng im lặng."
     }
   ],
-  "slug": "cay-da-tap-05"
+  "slug": "cay-da-tap-05",
+  "sceneImages": {
+    "mountain-temple": "images/suckhoe-long/cay-da-tap-05/mountain-temple.jpg",
+    "night-trial": "images/suckhoe-long/cay-da-tap-05/night-trial.jpg",
+    "shaman-old": "images/suckhoe-long/cay-da-tap-05/shaman-old.jpg",
+    "ghost-girl-face": "images/suckhoe-long/cay-da-tap-05/ghost-girl-face.jpg",
+    "kneel-confess": "images/suckhoe-long/cay-da-tap-05/kneel-confess.jpg",
+    "gold-return": "images/suckhoe-long/cay-da-tap-05/gold-return.jpg",
+    "chairman-kneel": "images/suckhoe-long/cay-da-tap-05/chairman-kneel.jpg",
+    "reburial": "images/suckhoe-long/cay-da-tap-05/reburial.jpg",
+    "banyan-heal": "images/suckhoe-long/cay-da-tap-05/banyan-heal.jpg",
+    "fading-ghost": "images/suckhoe-long/cay-da-tap-05/fading-ghost.jpg"
+  }
 }
