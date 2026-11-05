@@ -1,12 +1,12 @@
-# Pipeline doctor — 2026-11-04
+# Pipeline doctor — 2026-11-05
 
 ## Queue
 
-Ready unpublished episodes: 19
+Ready unpublished episodes: 18
 
 ## Failed workflow runs (last 24h)
 
-- 2026-11-04T01:39 bae3812 https://github.com/saintzzz/tokvideo/actions/runs/41755529278
+- 2026-11-05T05:49 63aee1f https://github.com/saintzzz/tokvideo/actions/runs/41976386287
 
 ## Findings
 
@@ -21,5 +21,5 @@ Ready unpublished episodes: 19
 
 ## Actions taken
 
-None needed.
+- Built + uploaded teaser for "quan-tai-troi-tap-02".
 
