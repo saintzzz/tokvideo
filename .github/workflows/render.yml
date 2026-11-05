@@ -966,6 +966,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # Same group as the scheduled suckhoe-long-next picks — a manual
+    # dispatch must serialize behind an in-flight cron render, otherwise
+    # both upload the same episode (race seen 2026-11-05).
+    concurrency:
+      group: suckhoe-long-publish
     env:
       LONG_SLUG: ${{ github.event.inputs.long_form_slug || github.event.client_payload.slug }}
       PRIVACY_OVERRIDE: ${{ github.event.client_payload.privacy }}
