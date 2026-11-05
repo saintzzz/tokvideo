@@ -1025,6 +1025,28 @@ jobs:
           YOUTUBE_LONG_PRIVACY_STATUS: ${{ env.PRIVACY_OVERRIDE || vars.YOUTUBE_LONG_PRIVACY_STATUS }}
         run: node scripts/upload-youtube-long.mjs ${{ env.LONG_SLUG }}
 
+      # 1-long-1-short rhythm (owner directive 2026-11-04): manual
+      # dispatches also carry their teaser immediately — same steps as
+      # the scheduled publish job.
+      - name: Install ffmpeg (for teaser build)
+        if: success()
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Build teaser Short for this episode
+        if: success()
+        continue-on-error: true
+        run: node scripts/make-long-teaser.mjs ${{ env.LONG_SLUG }}
+
+      - name: Upload teaser Short
+        if: success()
+        continue-on-error: true
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_TEASER_PRIVACY_STATUS: public
+        run: node scripts/upload-long-teaser.mjs ${{ env.LONG_SLUG }}
+
       - name: Commit long-form ledger
         if: always()
         run: |
