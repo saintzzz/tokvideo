@@ -2,7 +2,7 @@
 
 ## Queue
 
-Ready unpublished episodes: 18
+Ready unpublished episodes: 16
 
 ## Failed workflow runs (last 24h)
 
@@ -21,5 +21,5 @@ Ready unpublished episodes: 18
 
 ## Actions taken
 
-- Built + uploaded teaser for "quan-tai-troi-tap-02".
+None needed.
 
