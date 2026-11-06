@@ -62,7 +62,15 @@ const PRIVACY_STATUS = process.env.YOUTUBE_TEASER_PRIVACY_STATUS || "public";
 
 const epNum = slug.match(/-tap-(\d+)$/)?.[1] ?? "";
 const arcName = arcDisplayName(episode, slug);
-const title = `Truyện Ma | ${arcName} - Tập ${parseInt(epNum, 10)} (xem trước) #Shorts`;
+// Audit 2026-11-06 (vidIQ): premise-first titles beat the generic
+// "Truyện Ma | Series - Tập X (xem trước)" template - lead with the
+// episode's hook, keep series+ep at the tail for recognition.
+const premise = (episode.title || `Tập ${parseInt(epNum, 10) || "?"}`)
+  .replace(/\s*[-–—]\s*Tập\s*\d+.*$/i, "")
+  .replace(/\s*\|.*$/, "")
+  .trim();
+const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} #Shorts`;
+const title = (premise.length > 100 - suffix.length ? premise.slice(0, 100 - suffix.length).replace(/\s+\S*$/, "") : premise) + suffix;
 
 const playlistId = playlistMap.vi?.["long-form"];
 const description = [

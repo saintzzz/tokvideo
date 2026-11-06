@@ -96,6 +96,8 @@ LUẬT BẮT BUỘC:
 - 14-18 beats mỗi tập. Mỗi beat: speaker="narrator" luôn; scene phải là 1 trong các scene-key đã khai báo trong scenePrompts; caption là bản rút gọn <45 ký tự của text.
 - 8-12 scene-key khác nhau mỗi tập, tái sử dụng scene giữa các beat.
 - Kể ngôi thứ nhất, giọng kể chuyện dân gian Bà Tư: mộc mạc, chậm rãi, có chi tiết quê (tên làng, món ăn, phong tục). Không em-dash.
+- Audit 2026-11-06: tập 2-5 KHÔNG được mở bằng recap dài - tối đa 1 beat nhắc lại rồi vào thẳng tình tiết/hình ảnh mạnh nhất của tập mới trong 1-3 beat đầu.
+- thumbnailSubjects: 2-3 gợi ý ảnh RIÊNG của tập này (cảnh/vật/nhân vật cụ thể xuất hiện trong tập), không lặp subject giữa các tập - tránh cận cảnh tối giống nhau.
 - Tập nào cũng phải có hook mạnh trong 2 beat đầu, leo thang giữa, kết mở dẫn sang tập sau (trừ tập cuối kết trọn, trả nợ minh oan).
 - KHÔNG markdown, KHÔNG giải thích - output chỉ là JSON thuần của 1 episode.`;
 
