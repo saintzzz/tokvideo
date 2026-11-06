@@ -1,0 +1,65 @@
+{
+ "durationSec": 5.112,
+ "words": [
+  {
+   "w": "Three",
+   "start": 0.204,
+   "end": 0.61
+  },
+  {
+   "w": "for",
+   "start": 0.61,
+   "end": 0.853
+  },
+  {
+   "w": "three.",
+   "start": 0.853,
+   "end": 1.461
+  },
+  {
+   "w": "My",
+   "start": 1.461,
+   "end": 1.624
+  },
+  {
+   "w": "kitchen",
+   "start": 1.624,
+   "end": 2.191
+  },
+  {
+   "w": "is",
+   "start": 2.191,
+   "end": 2.353
+  },
+  {
+   "w": "basically",
+   "start": 2.353,
+   "end": 3.083
+  },
+  {
+   "w": "a",
+   "start": 3.083,
+   "end": 3.164
+  },
+  {
+   "w": "pharmacy",
+   "start": 3.164,
+   "end": 3.813
+  },
+  {
+   "w": "at",
+   "start": 3.813,
+   "end": 3.975
+  },
+  {
+   "w": "this",
+   "start": 3.975,
+   "end": 4.299
+  },
+  {
+   "w": "point.",
+   "start": 4.299,
+   "end": 4.908
+  }
+ ]
+}

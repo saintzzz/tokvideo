@@ -1,0 +1,55 @@
+{
+ "durationSec": 3.912,
+ "words": [
+  {
+   "w": "That",
+   "start": 0.156,
+   "end": 0.442
+  },
+  {
+   "w": "morning,",
+   "start": 0.442,
+   "end": 1.119
+  },
+  {
+   "w": "Emma",
+   "start": 1.119,
+   "end": 1.404
+  },
+  {
+   "w": "woke",
+   "start": 1.404,
+   "end": 1.689
+  },
+  {
+   "w": "up",
+   "start": 1.689,
+   "end": 1.831
+  },
+  {
+   "w": "with",
+   "start": 1.831,
+   "end": 2.116
+  },
+  {
+   "w": "a",
+   "start": 2.116,
+   "end": 2.188
+  },
+  {
+   "w": "scratchy,",
+   "start": 2.188,
+   "end": 2.936
+  },
+  {
+   "w": "raw",
+   "start": 2.936,
+   "end": 3.15
+  },
+  {
+   "w": "throat.",
+   "start": 3.15,
+   "end": 3.756
+  }
+ ]
+}

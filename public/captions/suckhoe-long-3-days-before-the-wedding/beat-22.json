@@ -1,0 +1,80 @@
+{
+ "durationSec": 6.072,
+ "words": [
+  {
+   "w": "This",
+   "start": 0.243,
+   "end": 0.539
+  },
+  {
+   "w": "one",
+   "start": 0.539,
+   "end": 0.761
+  },
+  {
+   "w": "I've",
+   "start": 0.761,
+   "end": 0.983
+  },
+  {
+   "w": "always",
+   "start": 0.983,
+   "end": 1.427
+  },
+  {
+   "w": "been",
+   "start": 1.427,
+   "end": 1.723
+  },
+  {
+   "w": "skeptical",
+   "start": 1.723,
+   "end": 2.389
+  },
+  {
+   "w": "of.",
+   "start": 2.389,
+   "end": 2.722
+  },
+  {
+   "w": "It",
+   "start": 2.722,
+   "end": 2.87
+  },
+  {
+   "w": "just",
+   "start": 2.87,
+   "end": 3.165
+  },
+  {
+   "w": "feels",
+   "start": 3.165,
+   "end": 3.535
+  },
+  {
+   "w": "like",
+   "start": 3.535,
+   "end": 3.831
+  },
+  {
+   "w": "comfort",
+   "start": 3.831,
+   "end": 4.349
+  },
+  {
+   "w": "food,",
+   "start": 4.349,
+   "end": 4.83
+  },
+  {
+   "w": "not",
+   "start": 4.83,
+   "end": 5.052
+  },
+  {
+   "w": "medicine.",
+   "start": 5.052,
+   "end": 5.829
+  }
+ ]
+}

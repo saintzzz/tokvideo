@@ -1,0 +1,80 @@
+{
+ "durationSec": 6.36,
+ "words": [
+  {
+   "w": "Wedding",
+   "start": 0.254,
+   "end": 0.804
+  },
+  {
+   "w": "morning.",
+   "start": 0.804,
+   "end": 1.55
+  },
+  {
+   "w": "During",
+   "start": 1.55,
+   "end": 2.022
+  },
+  {
+   "w": "the",
+   "start": 2.022,
+   "end": 2.257
+  },
+  {
+   "w": "final",
+   "start": 2.257,
+   "end": 2.65
+  },
+  {
+   "w": "fitting,",
+   "start": 2.65,
+   "end": 3.396
+  },
+  {
+   "w": "Emma's",
+   "start": 3.396,
+   "end": 3.789
+  },
+  {
+   "w": "arm",
+   "start": 3.789,
+   "end": 4.024
+  },
+  {
+   "w": "broke",
+   "start": 4.024,
+   "end": 4.417
+  },
+  {
+   "w": "out",
+   "start": 4.417,
+   "end": 4.653
+  },
+  {
+   "w": "in",
+   "start": 4.653,
+   "end": 4.81
+  },
+  {
+   "w": "an",
+   "start": 4.81,
+   "end": 4.967
+  },
+  {
+   "w": "itchy",
+   "start": 4.967,
+   "end": 5.359
+  },
+  {
+   "w": "red",
+   "start": 5.359,
+   "end": 5.595
+  },
+  {
+   "w": "rash.",
+   "start": 5.595,
+   "end": 6.106
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "durationSec": 4.464,
+ "words": [
+  {
+   "w": "That",
+   "start": 0.179,
+   "end": 0.452
+  },
+  {
+   "w": "afternoon,",
+   "start": 0.452,
+   "end": 1.24
+  },
+  {
+   "w": "the",
+   "start": 1.24,
+   "end": 1.445
+  },
+  {
+   "w": "family",
+   "start": 1.445,
+   "end": 1.856
+  },
+  {
+   "w": "piled",
+   "start": 1.856,
+   "end": 2.198
+  },
+  {
+   "w": "into",
+   "start": 2.198,
+   "end": 2.472
+  },
+  {
+   "w": "the",
+   "start": 2.472,
+   "end": 2.677
+  },
+  {
+   "w": "car",
+   "start": 2.677,
+   "end": 2.882
+  },
+  {
+   "w": "to",
+   "start": 2.882,
+   "end": 3.019
+  },
+  {
+   "w": "check",
+   "start": 3.019,
+   "end": 3.361
+  },
+  {
+   "w": "out",
+   "start": 3.361,
+   "end": 3.567
+  },
+  {
+   "w": "the",
+   "start": 3.567,
+   "end": 3.772
+  },
+  {
+   "w": "venue.",
+   "start": 3.772,
+   "end": 4.285
+  }
+ ]
+}

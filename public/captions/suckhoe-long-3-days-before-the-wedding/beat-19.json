@@ -1,0 +1,70 @@
+{
+ "durationSec": 4.968,
+ "words": [
+  {
+   "w": "That",
+   "start": 0.199,
+   "end": 0.451
+  },
+  {
+   "w": "night,",
+   "start": 0.451,
+   "end": 0.924
+  },
+  {
+   "w": "after",
+   "start": 0.924,
+   "end": 1.239
+  },
+  {
+   "w": "a",
+   "start": 1.239,
+   "end": 1.302
+  },
+  {
+   "w": "long",
+   "start": 1.302,
+   "end": 1.554
+  },
+  {
+   "w": "day,",
+   "start": 1.554,
+   "end": 1.901
+  },
+  {
+   "w": "Emma's",
+   "start": 1.901,
+   "end": 2.216
+  },
+  {
+   "w": "scratchy",
+   "start": 2.216,
+   "end": 2.72
+  },
+  {
+   "w": "throat",
+   "start": 2.72,
+   "end": 3.099
+  },
+  {
+   "w": "turned",
+   "start": 3.099,
+   "end": 3.477
+  },
+  {
+   "w": "into",
+   "start": 3.477,
+   "end": 3.729
+  },
+  {
+   "w": "something",
+   "start": 3.729,
+   "end": 4.296
+  },
+  {
+   "w": "worse.",
+   "start": 4.296,
+   "end": 4.769
+  }
+ ]
+}

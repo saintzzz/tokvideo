@@ -1,0 +1,115 @@
+{
+ "durationSec": 8.28,
+ "words": [
+  {
+   "w": "Ginger",
+   "start": 0.331,
+   "end": 0.724
+  },
+  {
+   "w": "contains",
+   "start": 0.724,
+   "end": 1.247
+  },
+  {
+   "w": "gingerol,",
+   "start": 1.247,
+   "end": 1.933
+  },
+  {
+   "w": "which",
+   "start": 1.933,
+   "end": 2.26
+  },
+  {
+   "w": "blocks",
+   "start": 2.26,
+   "end": 2.652
+  },
+  {
+   "w": "a",
+   "start": 2.652,
+   "end": 2.718
+  },
+  {
+   "w": "gut",
+   "start": 2.718,
+   "end": 2.914
+  },
+  {
+   "w": "receptor",
+   "start": 2.914,
+   "end": 3.437
+  },
+  {
+   "w": "that",
+   "start": 3.437,
+   "end": 3.699
+  },
+  {
+   "w": "sends",
+   "start": 3.699,
+   "end": 4.026
+  },
+  {
+   "w": "nausea",
+   "start": 4.026,
+   "end": 4.418
+  },
+  {
+   "w": "signals",
+   "start": 4.418,
+   "end": 4.876
+  },
+  {
+   "w": "to",
+   "start": 4.876,
+   "end": 5.006
+  },
+  {
+   "w": "the",
+   "start": 5.006,
+   "end": 5.203
+  },
+  {
+   "w": "brain.",
+   "start": 5.203,
+   "end": 5.693
+  },
+  {
+   "w": "There",
+   "start": 5.693,
+   "end": 6.02
+  },
+  {
+   "w": "are",
+   "start": 6.02,
+   "end": 6.216
+  },
+  {
+   "w": "real",
+   "start": 6.216,
+   "end": 6.478
+  },
+  {
+   "w": "clinical",
+   "start": 6.478,
+   "end": 7.001
+  },
+  {
+   "w": "trials",
+   "start": 7.001,
+   "end": 7.393
+  },
+  {
+   "w": "on",
+   "start": 7.393,
+   "end": 7.524
+  },
+  {
+   "w": "this.",
+   "start": 7.524,
+   "end": 7.949
+  }
+ ]
+}

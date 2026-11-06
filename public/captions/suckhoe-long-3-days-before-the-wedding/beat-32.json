@@ -1,0 +1,75 @@
+{
+ "durationSec": 6.216,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.249,
+   "end": 0.489
+  },
+  {
+   "w": "ceremony",
+   "start": 0.489,
+   "end": 1.128
+  },
+  {
+   "w": "went",
+   "start": 1.128,
+   "end": 1.448
+  },
+  {
+   "w": "off",
+   "start": 1.448,
+   "end": 1.688
+  },
+  {
+   "w": "without",
+   "start": 1.688,
+   "end": 2.248
+  },
+  {
+   "w": "a",
+   "start": 2.248,
+   "end": 2.328
+  },
+  {
+   "w": "hitch.",
+   "start": 2.328,
+   "end": 2.928
+  },
+  {
+   "w": "Everyone",
+   "start": 2.928,
+   "end": 3.568
+  },
+  {
+   "w": "was",
+   "start": 3.568,
+   "end": 3.808
+  },
+  {
+   "w": "healthy,",
+   "start": 3.808,
+   "end": 4.568
+  },
+  {
+   "w": "the",
+   "start": 4.568,
+   "end": 4.808
+  },
+  {
+   "w": "rash",
+   "start": 4.808,
+   "end": 5.128
+  },
+  {
+   "w": "long",
+   "start": 5.128,
+   "end": 5.447
+  },
+  {
+   "w": "gone.",
+   "start": 5.447,
+   "end": 5.967
+  }
+ ]
+}

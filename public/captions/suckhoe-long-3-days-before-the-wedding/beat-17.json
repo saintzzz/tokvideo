@@ -1,0 +1,80 @@
+{
+ "durationSec": 5.4,
+ "words": [
+  {
+   "w": "And",
+   "start": 0.216,
+   "end": 0.432
+  },
+  {
+   "w": "here",
+   "start": 0.432,
+   "end": 0.72
+  },
+  {
+   "w": "I",
+   "start": 0.72,
+   "end": 0.792
+  },
+  {
+   "w": "thought",
+   "start": 0.792,
+   "end": 1.296
+  },
+  {
+   "w": "it",
+   "start": 1.296,
+   "end": 1.44
+  },
+  {
+   "w": "was",
+   "start": 1.44,
+   "end": 1.656
+  },
+  {
+   "w": "just",
+   "start": 1.656,
+   "end": 1.944
+  },
+  {
+   "w": "a",
+   "start": 1.944,
+   "end": 2.016
+  },
+  {
+   "w": "taste",
+   "start": 2.016,
+   "end": 2.376
+  },
+  {
+   "w": "thing.",
+   "start": 2.376,
+   "end": 2.916
+  },
+  {
+   "w": "There's",
+   "start": 2.916,
+   "end": 3.348
+  },
+  {
+   "w": "actual",
+   "start": 3.348,
+   "end": 3.78
+  },
+  {
+   "w": "science",
+   "start": 3.78,
+   "end": 4.284
+  },
+  {
+   "w": "behind",
+   "start": 4.284,
+   "end": 4.716
+  },
+  {
+   "w": "this?",
+   "start": 4.716,
+   "end": 5.184
+  }
+ ]
+}

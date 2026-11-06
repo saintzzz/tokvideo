@@ -1,0 +1,80 @@
+{
+ "durationSec": 5.208,
+ "words": [
+  {
+   "w": "That's",
+   "start": 0.208,
+   "end": 0.519
+  },
+  {
+   "w": "exactly",
+   "start": 0.519,
+   "end": 0.955
+  },
+  {
+   "w": "why",
+   "start": 0.955,
+   "end": 1.142
+  },
+  {
+   "w": "I",
+   "start": 1.142,
+   "end": 1.204
+  },
+  {
+   "w": "need",
+   "start": 1.204,
+   "end": 1.453
+  },
+  {
+   "w": "a",
+   "start": 1.453,
+   "end": 1.515
+  },
+  {
+   "w": "nursing-school",
+   "start": 1.515,
+   "end": 2.324
+  },
+  {
+   "w": "granddaughter,",
+   "start": 2.324,
+   "end": 3.288
+  },
+  {
+   "w": "to",
+   "start": 3.288,
+   "end": 3.413
+  },
+  {
+   "w": "sort",
+   "start": 3.413,
+   "end": 3.662
+  },
+  {
+   "w": "out",
+   "start": 3.662,
+   "end": 3.849
+  },
+  {
+   "w": "which",
+   "start": 3.849,
+   "end": 4.16
+  },
+  {
+   "w": "ones",
+   "start": 4.16,
+   "end": 4.409
+  },
+  {
+   "w": "to",
+   "start": 4.409,
+   "end": 4.533
+  },
+  {
+   "w": "trust.",
+   "start": 4.533,
+   "end": 5
+  }
+ ]
+}

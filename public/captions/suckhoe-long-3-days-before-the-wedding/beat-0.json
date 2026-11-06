@@ -1,0 +1,40 @@
+{
+ "durationSec": 3.024,
+ "words": [
+  {
+   "w": "Does",
+   "start": 0.121,
+   "end": 0.444
+  },
+  {
+   "w": "honey",
+   "start": 0.444,
+   "end": 0.847
+  },
+  {
+   "w": "actually",
+   "start": 0.847,
+   "end": 1.492
+  },
+  {
+   "w": "cure",
+   "start": 1.492,
+   "end": 1.814
+  },
+  {
+   "w": "a",
+   "start": 1.814,
+   "end": 1.895
+  },
+  {
+   "w": "sore",
+   "start": 1.895,
+   "end": 2.218
+  },
+  {
+   "w": "throat?",
+   "start": 2.218,
+   "end": 2.903
+  }
+ ]
+}

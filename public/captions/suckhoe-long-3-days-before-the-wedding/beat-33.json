@@ -1,0 +1,45 @@
+{
+ "durationSec": 4.416,
+ "words": [
+  {
+   "w": "See?",
+   "start": 0.177,
+   "end": 0.69
+  },
+  {
+   "w": "Old",
+   "start": 0.69,
+   "end": 0.971
+  },
+  {
+   "w": "remedies,",
+   "start": 0.971,
+   "end": 1.951
+  },
+  {
+   "w": "still",
+   "start": 1.951,
+   "end": 2.418
+  },
+  {
+   "w": "holding",
+   "start": 2.418,
+   "end": 3.072
+  },
+  {
+   "w": "up",
+   "start": 3.072,
+   "end": 3.259
+  },
+  {
+   "w": "just",
+   "start": 3.259,
+   "end": 3.632
+  },
+  {
+   "w": "fine.",
+   "start": 3.632,
+   "end": 4.239
+  }
+ ]
+}

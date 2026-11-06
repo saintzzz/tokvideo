@@ -1,0 +1,75 @@
+{
+ "durationSec": 5.64,
+ "words": [
+  {
+   "w": "Two",
+   "start": 0.226,
+   "end": 0.453
+  },
+  {
+   "w": "for",
+   "start": 0.453,
+   "end": 0.68
+  },
+  {
+   "w": "two,",
+   "start": 0.68,
+   "end": 1.097
+  },
+  {
+   "w": "Grandma.",
+   "start": 1.097,
+   "end": 1.816
+  },
+  {
+   "w": "But",
+   "start": 1.816,
+   "end": 2.044
+  },
+  {
+   "w": "tonight's",
+   "start": 2.044,
+   "end": 2.65
+  },
+  {
+   "w": "remedy",
+   "start": 2.65,
+   "end": 3.104
+  },
+  {
+   "w": "is",
+   "start": 3.104,
+   "end": 3.256
+  },
+  {
+   "w": "the",
+   "start": 3.256,
+   "end": 3.483
+  },
+  {
+   "w": "one",
+   "start": 3.483,
+   "end": 3.71
+  },
+  {
+   "w": "I've",
+   "start": 3.71,
+   "end": 3.937
+  },
+  {
+   "w": "always",
+   "start": 3.937,
+   "end": 4.392
+  },
+  {
+   "w": "doubted",
+   "start": 4.392,
+   "end": 4.922
+  },
+  {
+   "w": "most.",
+   "start": 4.922,
+   "end": 5.414
+  }
+ ]
+}

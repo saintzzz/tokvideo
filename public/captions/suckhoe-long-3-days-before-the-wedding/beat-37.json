@@ -1,0 +1,85 @@
+{
+ "durationSec": 6.504,
+ "words": [
+  {
+   "w": "Follow",
+   "start": 0.26,
+   "end": 0.678
+  },
+  {
+   "w": "along",
+   "start": 0.678,
+   "end": 1.026
+  },
+  {
+   "w": "for",
+   "start": 1.026,
+   "end": 1.234
+  },
+  {
+   "w": "more",
+   "start": 1.234,
+   "end": 1.513
+  },
+  {
+   "w": "of",
+   "start": 1.513,
+   "end": 1.652
+  },
+  {
+   "w": "us",
+   "start": 1.652,
+   "end": 1.791
+  },
+  {
+   "w": "fact-checking",
+   "start": 1.791,
+   "end": 2.626
+  },
+  {
+   "w": "home",
+   "start": 2.626,
+   "end": 2.904
+  },
+  {
+   "w": "remedies.",
+   "start": 2.904,
+   "end": 3.635
+  },
+  {
+   "w": "Maybe",
+   "start": 3.635,
+   "end": 3.983
+  },
+  {
+   "w": "your",
+   "start": 3.983,
+   "end": 4.261
+  },
+  {
+   "w": "family's",
+   "start": 4.261,
+   "end": 4.748
+  },
+  {
+   "w": "favorite",
+   "start": 4.748,
+   "end": 5.305
+  },
+  {
+   "w": "trick",
+   "start": 5.305,
+   "end": 5.652
+  },
+  {
+   "w": "is",
+   "start": 5.652,
+   "end": 5.792
+  },
+  {
+   "w": "next.",
+   "start": 5.792,
+   "end": 6.244
+  }
+ ]
+}

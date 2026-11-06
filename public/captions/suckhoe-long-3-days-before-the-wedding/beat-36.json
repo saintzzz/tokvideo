@@ -1,0 +1,105 @@
+{
+ "durationSec": 7.512,
+ "words": [
+  {
+   "w": "Folk",
+   "start": 0.3,
+   "end": 0.542
+  },
+  {
+   "w": "wisdom",
+   "start": 0.542,
+   "end": 0.904
+  },
+  {
+   "w": "is",
+   "start": 0.904,
+   "end": 1.025
+  },
+  {
+   "w": "genuinely",
+   "start": 1.025,
+   "end": 1.568
+  },
+  {
+   "w": "worth",
+   "start": 1.568,
+   "end": 1.87
+  },
+  {
+   "w": "something,",
+   "start": 1.87,
+   "end": 2.564
+  },
+  {
+   "w": "but",
+   "start": 2.564,
+   "end": 2.745
+  },
+  {
+   "w": "double-check",
+   "start": 2.745,
+   "end": 3.409
+  },
+  {
+   "w": "it",
+   "start": 3.409,
+   "end": 3.53
+  },
+  {
+   "w": "against",
+   "start": 3.53,
+   "end": 3.952
+  },
+  {
+   "w": "real",
+   "start": 3.952,
+   "end": 4.194
+  },
+  {
+   "w": "science,",
+   "start": 4.194,
+   "end": 4.767
+  },
+  {
+   "w": "and",
+   "start": 4.767,
+   "end": 4.948
+  },
+  {
+   "w": "see",
+   "start": 4.948,
+   "end": 5.129
+  },
+  {
+   "w": "an",
+   "start": 5.129,
+   "end": 5.25
+  },
+  {
+   "w": "actual",
+   "start": 5.25,
+   "end": 5.612
+  },
+  {
+   "w": "doctor",
+   "start": 5.612,
+   "end": 5.974
+  },
+  {
+   "w": "for",
+   "start": 5.974,
+   "end": 6.155
+  },
+  {
+   "w": "anything",
+   "start": 6.155,
+   "end": 6.638
+  },
+  {
+   "w": "serious.",
+   "start": 6.638,
+   "end": 7.212
+  }
+ ]
+}

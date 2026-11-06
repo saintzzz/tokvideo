@@ -1,0 +1,115 @@
+{
+ "durationSec": 10.008,
+ "words": [
+  {
+   "w": "Honey",
+   "start": 0.4,
+   "end": 0.721
+  },
+  {
+   "w": "produces",
+   "start": 0.721,
+   "end": 1.234
+  },
+  {
+   "w": "a",
+   "start": 1.234,
+   "end": 1.299
+  },
+  {
+   "w": "real",
+   "start": 1.299,
+   "end": 1.555
+  },
+  {
+   "w": "antibacterial",
+   "start": 1.555,
+   "end": 2.389
+  },
+  {
+   "w": "compound",
+   "start": 2.389,
+   "end": 2.903
+  },
+  {
+   "w": "called",
+   "start": 2.903,
+   "end": 3.288
+  },
+  {
+   "w": "hydrogen",
+   "start": 3.288,
+   "end": 3.801
+  },
+  {
+   "w": "peroxide,",
+   "start": 3.801,
+   "end": 4.475
+  },
+  {
+   "w": "through",
+   "start": 4.475,
+   "end": 4.924
+  },
+  {
+   "w": "an",
+   "start": 4.924,
+   "end": 5.052
+  },
+  {
+   "w": "enzyme",
+   "start": 5.052,
+   "end": 5.437
+  },
+  {
+   "w": "reaction",
+   "start": 5.437,
+   "end": 5.95
+  },
+  {
+   "w": "with",
+   "start": 5.95,
+   "end": 6.207
+  },
+  {
+   "w": "moisture.",
+   "start": 6.207,
+   "end": 6.881
+  },
+  {
+   "w": "That's",
+   "start": 6.881,
+   "end": 7.202
+  },
+  {
+   "w": "genuinely",
+   "start": 7.202,
+   "end": 7.779
+  },
+  {
+   "w": "calming",
+   "start": 7.779,
+   "end": 8.228
+  },
+  {
+   "w": "to",
+   "start": 8.228,
+   "end": 8.357
+  },
+  {
+   "w": "an",
+   "start": 8.357,
+   "end": 8.485
+  },
+  {
+   "w": "irritated",
+   "start": 8.485,
+   "end": 9.062
+  },
+  {
+   "w": "throat.",
+   "start": 9.062,
+   "end": 9.608
+  }
+ ]
+}

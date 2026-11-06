@@ -1,0 +1,145 @@
+{
+ "durationSec": 10.56,
+ "words": [
+  {
+   "w": "I'll",
+   "start": 0.422,
+   "end": 0.633
+  },
+  {
+   "w": "give",
+   "start": 0.633,
+   "end": 0.913
+  },
+  {
+   "w": "you",
+   "start": 0.913,
+   "end": 1.124
+  },
+  {
+   "w": "that.",
+   "start": 1.124,
+   "end": 1.58
+  },
+  {
+   "w": "But",
+   "start": 1.58,
+   "end": 1.79
+  },
+  {
+   "w": "apple",
+   "start": 1.79,
+   "end": 2.141
+  },
+  {
+   "w": "cider",
+   "start": 2.141,
+   "end": 2.492
+  },
+  {
+   "w": "vinegar",
+   "start": 2.492,
+   "end": 2.983
+  },
+  {
+   "w": "for",
+   "start": 2.983,
+   "end": 3.193
+  },
+  {
+   "w": "digestion,",
+   "start": 3.193,
+   "end": 4
+  },
+  {
+   "w": "or",
+   "start": 4,
+   "end": 4.14
+  },
+  {
+   "w": "Epsom",
+   "start": 4.14,
+   "end": 4.491
+  },
+  {
+   "w": "salt",
+   "start": 4.491,
+   "end": 4.771
+  },
+  {
+   "w": "for",
+   "start": 4.771,
+   "end": 4.982
+  },
+  {
+   "w": "sore",
+   "start": 4.982,
+   "end": 5.262
+  },
+  {
+   "w": "muscles?",
+   "start": 5.262,
+   "end": 5.929
+  },
+  {
+   "w": "The",
+   "start": 5.929,
+   "end": 6.139
+  },
+  {
+   "w": "actual",
+   "start": 6.139,
+   "end": 6.56
+  },
+  {
+   "w": "evidence",
+   "start": 6.56,
+   "end": 7.121
+  },
+  {
+   "w": "there",
+   "start": 7.121,
+   "end": 7.472
+  },
+  {
+   "w": "is",
+   "start": 7.472,
+   "end": 7.612
+  },
+  {
+   "w": "pretty",
+   "start": 7.612,
+   "end": 8.033
+  },
+  {
+   "w": "thin,",
+   "start": 8.033,
+   "end": 8.489
+  },
+  {
+   "w": "mostly",
+   "start": 8.489,
+   "end": 8.91
+  },
+  {
+   "w": "just",
+   "start": 8.91,
+   "end": 9.191
+  },
+  {
+   "w": "word",
+   "start": 9.191,
+   "end": 9.471
+  },
+  {
+   "w": "of",
+   "start": 9.471,
+   "end": 9.612
+  },
+  {
+   "w": "mouth.",
+   "start": 9.612,
+   "end": 10.138
+  }
+ ]
+}

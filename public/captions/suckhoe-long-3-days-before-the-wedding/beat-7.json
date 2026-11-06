@@ -1,0 +1,70 @@
+{
+ "durationSec": 4.608,
+ "words": [
+  {
+   "w": "Grandma,",
+   "start": 0.184,
+   "end": 0.799
+  },
+  {
+   "w": "be",
+   "start": 0.799,
+   "end": 0.929
+  },
+  {
+   "w": "honest,",
+   "start": 0.929,
+   "end": 1.479
+  },
+  {
+   "w": "how",
+   "start": 1.479,
+   "end": 1.673
+  },
+  {
+   "w": "does",
+   "start": 1.673,
+   "end": 1.932
+  },
+  {
+   "w": "honey",
+   "start": 1.932,
+   "end": 2.255
+  },
+  {
+   "w": "and",
+   "start": 2.255,
+   "end": 2.45
+  },
+  {
+   "w": "lemon",
+   "start": 2.45,
+   "end": 2.773
+  },
+  {
+   "w": "actually",
+   "start": 2.773,
+   "end": 3.291
+  },
+  {
+   "w": "help",
+   "start": 3.291,
+   "end": 3.55
+  },
+  {
+   "w": "a",
+   "start": 3.55,
+   "end": 3.615
+  },
+  {
+   "w": "sore",
+   "start": 3.615,
+   "end": 3.874
+  },
+  {
+   "w": "throat?",
+   "start": 3.874,
+   "end": 4.424
+  }
+ ]
+}

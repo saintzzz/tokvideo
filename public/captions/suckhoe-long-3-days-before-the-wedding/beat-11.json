@@ -1,0 +1,75 @@
+{
+ "durationSec": 5.208,
+ "words": [
+  {
+   "w": "One",
+   "start": 0.208,
+   "end": 0.428
+  },
+  {
+   "w": "point",
+   "start": 0.428,
+   "end": 0.794
+  },
+  {
+   "w": "for",
+   "start": 0.794,
+   "end": 1.013
+  },
+  {
+   "w": "you,",
+   "start": 1.013,
+   "end": 1.415
+  },
+  {
+   "w": "Grandma.",
+   "start": 1.415,
+   "end": 2.11
+  },
+  {
+   "w": "But",
+   "start": 2.11,
+   "end": 2.33
+  },
+  {
+   "w": "the",
+   "start": 2.33,
+   "end": 2.549
+  },
+  {
+   "w": "next",
+   "start": 2.549,
+   "end": 2.842
+  },
+  {
+   "w": "one",
+   "start": 2.842,
+   "end": 3.061
+  },
+  {
+   "w": "is",
+   "start": 3.061,
+   "end": 3.207
+  },
+  {
+   "w": "where",
+   "start": 3.207,
+   "end": 3.573
+  },
+  {
+   "w": "it",
+   "start": 3.573,
+   "end": 3.72
+  },
+  {
+   "w": "gets",
+   "start": 3.72,
+   "end": 4.012
+  },
+  {
+   "w": "interesting.",
+   "start": 4.012,
+   "end": 5
+  }
+ ]
+}

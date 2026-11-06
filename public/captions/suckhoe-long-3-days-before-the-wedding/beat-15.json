@@ -1,0 +1,80 @@
+{
+ "durationSec": 5.28,
+ "words": [
+  {
+   "w": "Does",
+   "start": 0.211,
+   "end": 0.457
+  },
+  {
+   "w": "ginger",
+   "start": 0.457,
+   "end": 0.826
+  },
+  {
+   "w": "actually",
+   "start": 0.826,
+   "end": 1.318
+  },
+  {
+   "w": "stop",
+   "start": 1.318,
+   "end": 1.564
+  },
+  {
+   "w": "motion",
+   "start": 1.564,
+   "end": 1.933
+  },
+  {
+   "w": "sickness,",
+   "start": 1.933,
+   "end": 2.579
+  },
+  {
+   "w": "or",
+   "start": 2.579,
+   "end": 2.701
+  },
+  {
+   "w": "is",
+   "start": 2.701,
+   "end": 2.824
+  },
+  {
+   "w": "it",
+   "start": 2.824,
+   "end": 2.947
+  },
+  {
+   "w": "just",
+   "start": 2.947,
+   "end": 3.193
+  },
+  {
+   "w": "the",
+   "start": 3.193,
+   "end": 3.378
+  },
+  {
+   "w": "strong",
+   "start": 3.378,
+   "end": 3.747
+  },
+  {
+   "w": "taste",
+   "start": 3.747,
+   "end": 4.054
+  },
+  {
+   "w": "distracting",
+   "start": 4.054,
+   "end": 4.731
+  },
+  {
+   "w": "her?",
+   "start": 4.731,
+   "end": 5.069
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "durationSec": 2.976,
+ "words": [
+  {
+   "w": "Or",
+   "start": 0.119,
+   "end": 0.278
+  },
+  {
+   "w": "is",
+   "start": 0.278,
+   "end": 0.436
+  },
+  {
+   "w": "that",
+   "start": 0.436,
+   "end": 0.754
+  },
+  {
+   "w": "just",
+   "start": 0.754,
+   "end": 1.071
+  },
+  {
+   "w": "something",
+   "start": 1.071,
+   "end": 1.786
+  },
+  {
+   "w": "grandmas",
+   "start": 1.786,
+   "end": 2.42
+  },
+  {
+   "w": "say?",
+   "start": 2.42,
+   "end": 2.857
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "durationSec": 6.96,
+ "words": [
+  {
+   "w": "We're",
+   "start": 0.278,
+   "end": 0.589
+  },
+  {
+   "w": "an",
+   "start": 0.589,
+   "end": 0.744
+  },
+  {
+   "w": "hour",
+   "start": 0.744,
+   "end": 1.055
+  },
+  {
+   "w": "from",
+   "start": 1.055,
+   "end": 1.365
+  },
+  {
+   "w": "the",
+   "start": 1.365,
+   "end": 1.598
+  },
+  {
+   "w": "ceremony",
+   "start": 1.598,
+   "end": 2.219
+  },
+  {
+   "w": "and",
+   "start": 2.219,
+   "end": 2.452
+  },
+  {
+   "w": "you're",
+   "start": 2.452,
+   "end": 2.84
+  },
+  {
+   "w": "already",
+   "start": 2.84,
+   "end": 3.383
+  },
+  {
+   "w": "thinking",
+   "start": 3.383,
+   "end": 4.004
+  },
+  {
+   "w": "oatmeal.",
+   "start": 4.004,
+   "end": 4.741
+  },
+  {
+   "w": "Classic.",
+   "start": 4.741,
+   "end": 5.479
+  },
+  {
+   "w": "Is",
+   "start": 5.479,
+   "end": 5.634
+  },
+  {
+   "w": "this",
+   "start": 5.634,
+   "end": 5.944
+  },
+  {
+   "w": "one",
+   "start": 5.944,
+   "end": 6.177
+  },
+  {
+   "w": "real?",
+   "start": 6.177,
+   "end": 6.682
+  }
+ ]
+}

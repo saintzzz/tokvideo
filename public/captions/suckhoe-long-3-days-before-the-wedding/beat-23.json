@@ -1,0 +1,120 @@
+{
+ "durationSec": 8.808,
+ "words": [
+  {
+   "w": "Researchers",
+   "start": 0.352,
+   "end": 1.038
+  },
+  {
+   "w": "actually",
+   "start": 1.038,
+   "end": 1.537
+  },
+  {
+   "w": "tested",
+   "start": 1.537,
+   "end": 1.911
+  },
+  {
+   "w": "chicken",
+   "start": 1.911,
+   "end": 2.347
+  },
+  {
+   "w": "soup",
+   "start": 2.347,
+   "end": 2.596
+  },
+  {
+   "w": "against",
+   "start": 2.596,
+   "end": 3.033
+  },
+  {
+   "w": "the",
+   "start": 3.033,
+   "end": 3.22
+  },
+  {
+   "w": "white",
+   "start": 3.22,
+   "end": 3.531
+  },
+  {
+   "w": "blood",
+   "start": 3.531,
+   "end": 3.843
+  },
+  {
+   "w": "cells",
+   "start": 3.843,
+   "end": 4.155
+  },
+  {
+   "w": "that",
+   "start": 4.155,
+   "end": 4.404
+  },
+  {
+   "w": "cause",
+   "start": 4.404,
+   "end": 4.716
+  },
+  {
+   "w": "cold",
+   "start": 4.716,
+   "end": 4.965
+  },
+  {
+   "w": "symptoms,",
+   "start": 4.965,
+   "end": 5.62
+  },
+  {
+   "w": "and",
+   "start": 5.62,
+   "end": 5.807
+  },
+  {
+   "w": "it",
+   "start": 5.807,
+   "end": 5.931
+  },
+  {
+   "w": "slowed",
+   "start": 5.931,
+   "end": 6.305
+  },
+  {
+   "w": "them",
+   "start": 6.305,
+   "end": 6.555
+  },
+  {
+   "w": "down.",
+   "start": 6.555,
+   "end": 6.96
+  },
+  {
+   "w": "A",
+   "start": 6.96,
+   "end": 7.022
+  },
+  {
+   "w": "real,",
+   "start": 7.022,
+   "end": 7.427
+  },
+  {
+   "w": "measured",
+   "start": 7.427,
+   "end": 7.926
+  },
+  {
+   "w": "effect.",
+   "start": 7.926,
+   "end": 8.456
+  }
+ ]
+}

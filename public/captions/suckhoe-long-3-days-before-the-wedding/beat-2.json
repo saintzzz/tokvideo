@@ -1,0 +1,75 @@
+{
+ "durationSec": 4.824,
+ "words": [
+  {
+   "w": "Three",
+   "start": 0.193,
+   "end": 0.524
+  },
+  {
+   "w": "days",
+   "start": 0.524,
+   "end": 0.789
+  },
+  {
+   "w": "before",
+   "start": 0.789,
+   "end": 1.187
+  },
+  {
+   "w": "Emma's",
+   "start": 1.187,
+   "end": 1.518
+  },
+  {
+   "w": "wedding,",
+   "start": 1.518,
+   "end": 2.147
+  },
+  {
+   "w": "her",
+   "start": 2.147,
+   "end": 2.346
+  },
+  {
+   "w": "family",
+   "start": 2.346,
+   "end": 2.743
+  },
+  {
+   "w": "hit",
+   "start": 2.743,
+   "end": 2.942
+  },
+  {
+   "w": "five",
+   "start": 2.942,
+   "end": 3.207
+  },
+  {
+   "w": "health",
+   "start": 3.207,
+   "end": 3.604
+  },
+  {
+   "w": "hiccups",
+   "start": 3.604,
+   "end": 4.068
+  },
+  {
+   "w": "in",
+   "start": 4.068,
+   "end": 4.2
+  },
+  {
+   "w": "a",
+   "start": 4.2,
+   "end": 4.267
+  },
+  {
+   "w": "row.",
+   "start": 4.267,
+   "end": 4.631
+  }
+ ]
+}
