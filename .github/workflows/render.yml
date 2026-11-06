@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long, english-arena, pipeline-doctor]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long, english-arena, pipeline-doctor, pipeline-watchdog]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -118,6 +118,12 @@ on:
     # anyone asking. 16:45 UTC = 23:45 VN — after the day's last
     # long-form tick's upload has had time to land and settle.
     - cron: "45 16 * * *"
+    # Watchdog every 3h at :13 (off-collision with the other crons):
+    # classifies failed runs, reruns transient failures, auto-registers
+    # missing compositions, and refills the story queue when the
+    # unpublished backlog drops below 5 episodes — owner directive
+    # 2026-11-06, pipeline must self-heal without manual intervention.
+    - cron: "13 */3 * * *"
 
 jobs:
   detect-changes:
@@ -1269,6 +1275,68 @@ jobs:
             fi
             node scripts/merge-long-ledger.mjs
             git add src/suckhoe/published-long.json
+            if GIT_EDITOR=true git rebase --continue; then
+              git push && exit 0
+            fi
+            git rebase --abort || true
+            sleep $((i * 15))
+          done
+          exit 0
+
+  pipeline-watchdog:
+    if: (github.event_name == 'schedule' && github.event.schedule == '13 */3 * * *') || github.event.inputs.video == 'pipeline-watchdog'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write   # required to rerun failed jobs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scan failures and auto-remediate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: node scripts/pipeline-watchdog.mjs
+
+      - name: Refill story queue when below 5 episodes
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        run: node scripts/queue-refill.mjs --write
+
+      - name: Top up missing beat audio for unpublished episodes
+        continue-on-error: true
+        env:
+          RESUME: "1"
+        run: node scripts/audio-topup.mjs
+
+      - name: Commit watchdog report and refilled content
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ public/audio/suckhoe-long/ public/captions/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              git push && exit 0
+            fi
+            node scripts/merge-long-ledger.mjs 2>/dev/null || true
+            git add src/suckhoe/published-long.json 2>/dev/null || true
             if GIT_EDITOR=true git rebase --continue; then
               git push && exit 0
             fi
