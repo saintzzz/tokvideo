@@ -143,6 +143,41 @@ for (const run of runs) {
 }
 
 const depth = queueDepth();
+
+// ----------------------------------------------------- missed slots ---
+// 2026-11-07 incident: the only daily tick allowed to START a new arc
+// (05:30 VN) got dropped/misattributed by GitHub, every later tick held
+// the arc outside the 05:00-08:59 window, and a whole day went by with
+// zero uploads - nobody noticed. Now the watchdog asks the picker what
+// SHOULD be next, and if the last long-form upload is stale (>90min) it
+// dispatches the manual publish job itself. upload-youtube-long has a
+// ledger guard so a delayed cron picking the same slug is a no-op.
+try {
+  const nextSlug = execSync("node scripts/next-long-form-slug.mjs", { cwd: ROOT, encoding: "utf8" }).trim();
+  const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
+  const lastUpload = Math.max(0, ...Object.entries(ledger)
+    .filter(([k]) => !k.endsWith("-teaser"))
+    .map(([, v]) => Date.parse(v.publishedAt || 0)));
+  const staleMin = (Date.now() - lastUpload) / 60000;
+  if (nextSlug && staleMin > 90) {
+    if (!DRY) {
+      await api(`/repos/${REPO}/actions/workflows/render.yml/dispatches`, {
+        method: "POST",
+        body: JSON.stringify({ ref: "main", inputs: { video: "suckhoe-long", long_form_slug: nextSlug } }),
+      });
+    }
+    actions.push(`- tick bị drop/delay: upload mới nhất đã ${Math.round(staleMin)} phút trước - tự dispatch \`${nextSlug}\``);
+  } else if (nextSlug) {
+    actions.push(`- picker chờ ${nextSlug}, upload gần nhất ${Math.round(staleMin)} phút - nhịp bình thường`);
+  } else {
+    const vnHour = Number(new Date(Date.now() + 7 * 3600e3).toISOString().slice(11, 13));
+    if (vnHour >= 5 && vnHour <= 8 && depth > 0) {
+      findings.push(`- trong khung arc mới nhưng picker trả rỗng - kiểm tra audio/registration của arc kế tiếp`);
+    }
+  }
+} catch (e) {
+  findings.push(`- missed-slot check lỗi: ${e.message.slice(0, 140)}`);
+}
 if (depth < MIN_QUEUE) findings.unshift(`- **QUEUE LOW**: chỉ còn ${depth} tập chưa đăng (< ${MIN_QUEUE}) - queue-refill cần chạy`);
 if (!actions.length && !findings.length) actions.push("- không có run nào fail trong 48h - pipeline sạch");
 

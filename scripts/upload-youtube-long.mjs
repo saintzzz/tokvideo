@@ -94,6 +94,13 @@ let ledger = {};
 if (existsSync(ledgerPath)) {
   ledger = JSON.parse(await readFile(ledgerPath, "utf8"));
 }
+// Watchdog can dispatch the same slug a delayed cron also picks — bail
+// early when the ledger already has this episode so double-dispatch is
+// a no-op instead of a duplicate upload (2026-11-07 missed-tick fix).
+if (ledger[slug]?.videoId) {
+  console.log(`Already published ${slug}: ${ledger[slug].videoId} - skipping upload.`);
+  process.exit(0);
+}
 const arc = arcBase(slug);
 const epNum = parseInt(slug.match(/-tap-(\d+)$/)?.[1] ?? "0", 10);
 const prevEntry = epNum > 1 ? ledger[`${arc}-tap-${String(epNum - 1).padStart(2, "0")}`] : null;
