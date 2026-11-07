@@ -43,6 +43,22 @@ import enBabaYagaPart1 from "./en-baba-yaga-part-1.json";
 import enBabaYagaPart2 from "./en-baba-yaga-part-2.json";
 import enMothmanPart1 from "./en-mothman-part-1.json";
 import enMothmanPart2 from "./en-mothman-part-2.json";
+import truyenTranHungDaoTap1 from "./truyen-tran-hung-dao-tap-1.json";
+import truyenTranHungDaoTap2 from "./truyen-tran-hung-dao-tap-2.json";
+import truyenTranHungDaoTap3 from "./truyen-tran-hung-dao-tap-3.json";
+import truyenBanhChungBanhGiayTap1 from "./truyen-banh-chung-banh-giay-tap-1.json";
+import truyenBanhChungBanhGiayTap2 from "./truyen-banh-chung-banh-giay-tap-2.json";
+import truyenConRongChauTienTap1 from "./truyen-con-rong-chau-tien-tap-1.json";
+import truyenConRongChauTienTap2 from "./truyen-con-rong-chau-tien-tap-2.json";
+import truyenThanhGiongTap1 from "./truyen-thanh-giong-tap-1.json";
+import truyenThanhGiongTap2 from "./truyen-thanh-giong-tap-2.json";
+import truyenGiengLangNuaDemTap1 from "./truyen-gieng-lang-nua-dem-tap-1.json";
+import truyenGiengLangNuaDemTap2 from "./truyen-gieng-lang-nua-dem-tap-2.json";
+import enHeadlessHorsemanPart1 from "./en-headless-horseman-part-1.json";
+import enHeadlessHorsemanPart2 from "./en-headless-horseman-part-2.json";
+import enPiedPiperPart1 from "./en-pied-piper-part-1.json";
+import enPiedPiperPart2 from "./en-pied-piper-part-2.json";
+import enLincolnDreamPart1 from "./en-lincoln-dream-part-1.json";
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
 //
@@ -92,4 +108,20 @@ export const EPISODES: SucKhoeEpisode[] = [
   enBabaYagaPart2,
   enMothmanPart1,
   enMothmanPart2,
+  truyenTranHungDaoTap1,
+  truyenTranHungDaoTap2,
+  truyenTranHungDaoTap3,
+  truyenBanhChungBanhGiayTap1,
+  truyenBanhChungBanhGiayTap2,
+  truyenConRongChauTienTap1,
+  truyenConRongChauTienTap2,
+  truyenThanhGiongTap1,
+  truyenThanhGiongTap2,
+  truyenGiengLangNuaDemTap1,
+  truyenGiengLangNuaDemTap2,
+  enHeadlessHorsemanPart1,
+  enHeadlessHorsemanPart2,
+  enPiedPiperPart1,
+  enPiedPiperPart2,
+  enLincolnDreamPart1,
 ] as SucKhoeEpisode[];
