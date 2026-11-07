@@ -176,6 +176,16 @@ Claude hiện có, KHÔNG cần API key trả phí riêng:
 | `SucKhoeReplyComments` | 1 lần/ngày, 16h | `scripts/run-reply-comments.ps1` | `scripts/reply-comments-prompt.txt` |
 | `SucKhoeCommentOutreach` | mỗi 3 ngày, 20h | `scripts/run-comment-outreach.ps1` | `scripts/comment-outreach-prompt.txt` |
 
+**macOS (máy chính, 2026-11-07):** cả 3 task chạy qua launchd +
+`scripts/run-agent-task.sh <prompt-name> [--every-N-days N]` - generic
+wrapper chạy `devin -p --prompt-file` thay `claude -p` (binary claude
+SIGILL trên Intel Mac này). Plists: `com.tokvideo.content-writer` (8h),
+`com.tokvideo.reply-comments` (16h), `com.tokvideo.comment-outreach`
+(20h mỗi ngày, wrapper tự gate 3 ngày qua `.<name>.lastrun`). Log ghi
+vào `scripts/<name>.log`. Lưu ý: wrapper chạy `env -i` - env của IDE
+terminal (DEVIN_FD_PATH...) làm `devin -p` báo "Not logged in" sai.
+.ps1 vẫn giữ cho máy Windows phụ.
+
 **Reply-comments:** trả lời comment mới trên chính video của kênh — an toàn
 tuyệt đối (chỉ nói chuyện với khán giả của mình), lại là tín hiệu thuật
 toán thật (YouTube tính hội thoại qua lại dưới video là dấu hiệu cộng đồng
