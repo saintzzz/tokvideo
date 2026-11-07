@@ -45,7 +45,9 @@ const api = async (p, opts = {}) => {
   });
   if (opts.raw) return r;
   if (!r.ok) throw new Error(`GH ${p} -> ${r.status}`);
-  return r.json();
+  if (r.status === 204) return {};
+  const text = await r.text();
+  return text ? JSON.parse(text) : {};
 };
 
 const findings = [];
@@ -92,13 +94,15 @@ function assetFixed(log) {
 }
 
 // ------------------------------------------------------------- queue ---
-function queueDepth() {
+function unpublishedSlugs() {
   const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
   const published = new Set(Object.keys(ledger));
   const src = readFileSync(path.join(ROOT, "src/suckhoe/long-form/index.ts"), "utf8");
   return [...src.matchAll(/from "\.\/([a-z0-9-]+)\.json"/g)]
-    .map(m => m[1]).filter(s => !published.has(s) && !s.endsWith("-teaser")).length;
+    .map(m => m[1]).filter(s => !published.has(s) && !s.endsWith("-teaser"));
 }
+
+const queueDepth = () => unpublishedSlugs().length;
 
 // -------------------------------------------------------------- main ---
 const now = new Date();
@@ -170,8 +174,40 @@ try {
   } else if (nextSlug) {
     actions.push(`- picker chờ ${nextSlug}, upload gần nhất ${Math.round(staleMin)} phút - nhịp bình thường`);
   } else {
-    const vnHour = Number(new Date(Date.now() + 7 * 3600e3).toISOString().slice(11, 13));
-    if (vnHour >= 5 && vnHour <= 8 && depth > 0) {
+    // Picker held. Owner directive 2026-11-07: "mỗi ngày đăng full 5 tập
+    // dài và 5 tập xem trước" - an EMPTY day is worse than an arc that
+    // starts late. If no long-form upload has landed since 05:00 VN
+    // today, the morning arc-start tick was lost; dispatch the first
+    // unpublished episode explicitly (bypasses the arc-start window).
+    const vnNow = new Date(Date.now() + 7 * 3600e3);
+    const vnHour = Number(vnNow.toISOString().slice(11, 13));
+    const today5amVN = Date.parse(`${vnNow.toISOString().slice(0, 10)}T05:00:00+07:00`);
+    if (vnHour >= 9 && lastUpload < today5amVN && unpublishedSlugs().length) {
+      // Reuse the picker's real candidate ordering (priority + narrator
+      // filter + readiness) instead of a naive first-unpublished guess.
+      const slug = execSync("node scripts/next-long-form-slug.mjs", {
+        cwd: ROOT, encoding: "utf8",
+        env: { ...process.env, ALLOW_ARC_ANYTIME: "1" },
+      }).trim();
+      if (!slug) {
+        findings.push(`- ngày trống nhưng picker (ALLOW_ARC_ANYTIME) vẫn trả rỗng - mọi candidate thiếu audio, audio-topup xử lý`);
+      } else {
+      const ep = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/long-form", `${slug}.json`), "utf8"));
+      const audioDir = path.join(ROOT, "public/audio/suckhoe-long", slug);
+      const missing = (ep.beats || []).filter((_, i) => !existsSync(path.join(audioDir, `beat-${i}.mp3`))).length;
+      if (missing === 0) {
+        if (!DRY) {
+          await api(`/repos/${REPO}/actions/workflows/render.yml/dispatches`, {
+            method: "POST",
+            body: JSON.stringify({ ref: "main", inputs: { video: "suckhoe-long", long_form_slug: slug } }),
+          });
+        }
+        actions.push(`- ngày trống (tick sáng bị drop): tự dispatch arc-start \`${slug}\` dù ngoài khung giờ`);
+      } else {
+        findings.push(`- ngày trống nhưng ${slug} thiếu ${missing} beat audio - audio-topup đang xử lý`);
+      }
+      }
+    } else if (vnHour >= 5 && vnHour <= 8 && depth > 0) {
       findings.push(`- trong khung arc mới nhưng picker trả rỗng - kiểm tra audio/registration của arc kế tiếp`);
     }
   }

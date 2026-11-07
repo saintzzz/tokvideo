@@ -69,30 +69,46 @@ const ready = (episode, slug) =>
     sanityCheckAudio(path.join(audioDir(slug), `beat-${i}.mp3`)).ok
   );
 
-const next = candidates[0];
-if (next) {
-  if (!ready(next.episode, next.slug)) {
-    console.error(
-      `Holding "${next.slug}" — committed audio incomplete; CI cannot synthesize (Edge TTS 403s runner IPs).`
-    );
-  } else {
-    const latest = Object.entries(ledger)
-      // -teaser/-fb ledger entries are derived artifacts, not episodes —
-      // if one is the newest publishedAt the arc match below breaks and
-      // every mid-arc episode gets held as a "new arc" (first seen
-      // 2026-11-05 after the interleaved publish added teaser keys).
-      .filter(([k, e]) => !/-(teaser|fb)$/.test(k) && e?.videoId && e.publishedAt)
-      .sort((a, b) => String(a[1].publishedAt).localeCompare(String(b[1].publishedAt)))
-      .at(-1)?.[1];
-    const lastSlug = Object.entries(ledger).find(([, v]) => v === latest)?.[0];
-    const continuingArc = lastSlug && arcOf(lastSlug) === arcOf(next.slug);
-    if (continuingArc || arcStartsToday()) {
-      console.log(next.slug);
-    } else {
-      console.error(
-        `Holding new arc "${arcOf(next.slug)}" — arcs only start on the first daily slot (VN 05:00-08:59).`
-      );
-    }
+// 2026-11-07 starvation bug: candidates are alphabetical, so after
+// mieu-hoang-tap-01 published, EVERY later tick evaluated cau-khi-tap-01
+// (alphabetically first), held it as a new arc outside the window, and
+// never reached the eligible mieu-hoang-tap-02 behind it - a whole
+// publish day went empty. Evaluate ALL candidates in order and pick the
+// first ELIGIBLE one: the in-flight arc always wins, new arcs only in
+// the morning window.
+const latest = Object.entries(ledger)
+  // -teaser/-fb ledger entries are derived artifacts, not episodes —
+  // if one is the newest publishedAt the arc match below breaks and
+  // every mid-arc episode gets held as a "new arc" (first seen
+  // 2026-11-05 after the interleaved publish added teaser keys).
+  .filter(([k, e]) => !/-(teaser|fb)$/.test(k) && e?.videoId && e.publishedAt)
+  .sort((a, b) => String(a[1].publishedAt).localeCompare(String(b[1].publishedAt)))
+  .at(-1)?.[1];
+const lastSlug = Object.entries(ledger).find(([, v]) => v === latest)?.[0];
+const activeArc = lastSlug ? arcOf(lastSlug) : null;
+const canStartArc = arcStartsToday();
+
+let picked = null;
+for (const c of candidates) {
+  const continuing = activeArc && arcOf(c.slug) === activeArc;
+  if (!continuing && !canStartArc) continue; // new arc outside window
+  if (!ready(c.episode, c.slug)) {
+    console.error(`Skipping "${c.slug}" — committed audio incomplete (CI cannot synthesize, Edge TTS 403s runner IPs).`);
+    continue;
   }
+  picked = c.slug;
+  break;
 }
+
+if (picked) {
+  console.log(picked);
+} else if (candidates.length) {
+  const holds = candidates.filter((c) => !(activeArc && arcOf(c.slug) === activeArc));
+  console.error(
+    holds.length
+      ? `Holding new arc "${arcOf(holds[0].slug)}" — arcs only start on the first daily slot (VN 05:00-08:59).`
+      : `Holding "${candidates[0].slug}" — committed audio incomplete; CI cannot synthesize.`
+  );
+}
+// Queue drained — empty stdout, callers should no-op.
 // Queue drained — empty stdout, callers should no-op.

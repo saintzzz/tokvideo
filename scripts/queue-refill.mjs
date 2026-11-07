@@ -189,6 +189,7 @@ function normalizeEpisode(raw, motif, i) {
     description: String(raw.description || `${motif.title} tập ${i + 1}. #truyenma #kechuyen #truyendangian`),
     tags: Array.isArray(raw.tags) ? raw.tags : ["truyện ma", "truyện ma dân gian", "kể chuyện", motif.arc],
     narrator: "vi-VN-NamMinhNeural",
+    locale: "vi", // required by upload-long-teaser (rejects locale!=vi)
     thumbnailSubjects: Array.isArray(raw.thumbnailSubjects) ? raw.thumbnailSubjects : [],
     scenePrompts: raw.scenePrompts && typeof raw.scenePrompts === "object" ? raw.scenePrompts : {},
     beats: [],
