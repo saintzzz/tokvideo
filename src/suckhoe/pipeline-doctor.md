@@ -2,7 +2,7 @@
 
 ## Queue
 
-Ready unpublished episodes: 14
+Ready unpublished episodes: 11
 
 ## Failed workflow runs (last 24h)
 
@@ -22,5 +22,5 @@ None — all runs green.
 
 ## Actions taken
 
-- Built + uploaded teaser for "mieu-hoang-tap-01".
+None needed.
 
