@@ -1,12 +1,12 @@
-# Pipeline doctor — 2026-11-06
+# Pipeline doctor — 2026-11-07
 
 ## Queue
 
-Ready unpublished episodes: 15
+Ready unpublished episodes: 14
 
 ## Failed workflow runs (last 24h)
 
-- 2026-11-06T02:43 bff46e9 https://github.com/saintzzz/tokvideo/actions/runs/42152174286
+None — all runs green.
 
 ## Findings
 
@@ -22,5 +22,5 @@ Ready unpublished episodes: 15
 
 ## Actions taken
 
-None needed.
+- Built + uploaded teaser for "mieu-hoang-tap-01".
 
