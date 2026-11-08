@@ -86,7 +86,13 @@ on:
     # slot (enforced in the picker) so a 5-ep arc always completes the
     # same VN day. :30 offsets avoid exact-minute collisions with the
     # other crons' checkouts.
-    - cron: "30 22,3,6,9,12,15 * * *"
+    # 2026-11-08 PO call: 6 ticks/day = ~10+ uploads on a suppressed
+    # 264-sub channel - re-triggered the spam classifier AND hit the
+    # literal YouTube API upload quota (mieu-hoang-tap-05 failed with
+    # uploadLimitExceeded). Cut to 3 ticks/day (05:30, 13:30, 19:30 VN =
+    # 3 long + 3 teaser) until channel-report shows teaser views back
+    # above ~100/video consistently, then restore 6.
+    - cron: "30 22,6,12 * * *"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -1081,7 +1087,7 @@ jobs:
   # scripts/next-long-form-slug.mjs and exits quietly when every
   # episode in src/suckhoe/long-form/ already has a ledger videoId.
   suckhoe-long-next:
-    if: github.event_name == 'schedule' && github.event.schedule == '30 22,3,6,9,12,15 * * *'
+    if: github.event_name == 'schedule' && github.event.schedule == '30 22,6,12 * * *'
     runs-on: ubuntu-latest
     permissions:
       contents: write
