@@ -133,7 +133,8 @@
           "locale": "vi",
           "category": "co-tich",
           "parts": 2,
-          "priority": 82
+          "priority": 82,
+          "status": "written"
         },
         {
           "id": "thanh-giong",
@@ -276,7 +277,8 @@
           "locale": "vi",
           "category": "ly-ky",
           "parts": 2,
-          "priority": 77
+          "priority": 77,
+          "status": "written"
         },
         {
           "id": "ngoi-mieu-hoang",
@@ -292,7 +294,8 @@
           "locale": "vi",
           "category": "ly-ky",
           "parts": 1,
-          "priority": 70
+          "priority": 70,
+          "status": "written"
         },
         {
           "id": "nguoi-di-dan-mua",
@@ -324,7 +327,8 @@
           "locale": "vi",
           "category": "ly-ky",
           "parts": 2,
-          "priority": 72
+          "priority": 72,
+          "status": "written"
         }
       ]
     },
@@ -346,7 +350,8 @@
           "locale": "vi",
           "category": "giai-thoai-lich-su",
           "parts": 2,
-          "priority": 82
+          "priority": 82,
+          "status": "written"
         },
         {
           "id": "tran-hung-dao",
@@ -363,7 +368,8 @@
           "locale": "vi",
           "category": "giai-thoai-lich-su",
           "parts": 2,
-          "priority": 80
+          "priority": 80,
+          "status": "written"
         },
         {
           "id": "le-loi-tra-kiem",
@@ -452,7 +458,8 @@
           "locale": "en",
           "category": "folk",
           "parts": 2,
-          "priority": 75
+          "priority": 75,
+          "status": "written"
         },
         {
           "id": "liberty-bell",
@@ -492,7 +499,8 @@
           "locale": "en",
           "category": "urban",
           "parts": 2,
-          "priority": 74
+          "priority": 74,
+          "status": "written"
         },
         {
           "id": "graveyard-shift",

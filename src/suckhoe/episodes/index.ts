@@ -59,6 +59,21 @@ import enHeadlessHorsemanPart2 from "./en-headless-horseman-part-2.json";
 import enPiedPiperPart1 from "./en-pied-piper-part-1.json";
 import enPiedPiperPart2 from "./en-pied-piper-part-2.json";
 import enLincolnDreamPart1 from "./en-lincoln-dream-part-1.json";
+import truyenMaDaVucSongTap1 from "./truyen-ma-da-vuc-song-tap-1.json";
+import truyenMaDaVucSongTap2 from "./truyen-ma-da-vuc-song-tap-2.json";
+import truyenNhaBaNoiHoangTap1 from "./truyen-nha-ba-noi-hoang-tap-1.json";
+import truyenNhaBaNoiHoangTap2 from "./truyen-nha-ba-noi-hoang-tap-2.json";
+import truyenTiengKhenChieuTap1 from "./truyen-tieng-khen-chieu-tap-1.json";
+import truyenBaTrieuCuoiVoiTap1 from "./truyen-ba-trieu-cuoi-voi-tap-1.json";
+import truyenBaTrieuCuoiVoiTap2 from "./truyen-ba-trieu-cuoi-voi-tap-2.json";
+import truyenNguyenTraiToSoThanTap1 from "./truyen-nguyen-trai-to-so-than-tap-1.json";
+import truyenNguyenTraiToSoThanTap2 from "./truyen-nguyen-trai-to-so-than-tap-2.json";
+import truyenSuTichTrauCauTap1 from "./truyen-su-tich-trau-cau-tap-1.json";
+import truyenSuTichTrauCauTap2 from "./truyen-su-tich-trau-cau-tap-2.json";
+import enKrampusNightPart1 from "./en-krampus-night-part-1.json";
+import enKrampusNightPart2 from "./en-krampus-night-part-2.json";
+import enRobertTheDollPart1 from "./en-robert-the-doll-part-1.json";
+import enRobertTheDollPart2 from "./en-robert-the-doll-part-2.json";
 // discovers new episode files on its own (it reads this directory), so
 // nothing needs to change there.
 //
@@ -124,4 +139,19 @@ export const EPISODES: SucKhoeEpisode[] = [
   enPiedPiperPart1,
   enPiedPiperPart2,
   enLincolnDreamPart1,
+  truyenMaDaVucSongTap1,
+  truyenMaDaVucSongTap2,
+  truyenNhaBaNoiHoangTap1,
+  truyenNhaBaNoiHoangTap2,
+  truyenTiengKhenChieuTap1,
+  truyenBaTrieuCuoiVoiTap1,
+  truyenBaTrieuCuoiVoiTap2,
+  truyenNguyenTraiToSoThanTap1,
+  truyenNguyenTraiToSoThanTap2,
+  truyenSuTichTrauCauTap1,
+  truyenSuTichTrauCauTap2,
+  enKrampusNightPart1,
+  enKrampusNightPart2,
+  enRobertTheDollPart1,
+  enRobertTheDollPart2,
 ] as SucKhoeEpisode[];
