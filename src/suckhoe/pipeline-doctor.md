@@ -1,8 +1,8 @@
-# Pipeline doctor — 2026-11-07
+# Pipeline doctor — 2026-11-08
 
 ## Queue
 
-Ready unpublished episodes: 11
+Ready unpublished episodes: 10
 
 ## Failed workflow runs (last 24h)
 
