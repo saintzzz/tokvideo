@@ -59,7 +59,7 @@ async function jobLog(jobId) {
   return (await r.text()).slice(-60000); // tail is where the error lives
 }
 
-const TRANSIENT = /edge-tts|edge_tts|HTTP 403|ETIMEDOUT|ECONNRESET|EAI_AGAIN|429|50[0-9] |rate limit|send-pack|rebase|could not push|Connection|timed out/i;
+const TRANSIENT = /edge-tts|edge_tts|HTTP 403|ETIMEDOUT|ECONNRESET|EAI_AGAIN|429|50[0-9] |rate limit|send-pack|rebase|could not push|Connection|timed out|uploadLimitExceeded|quota/i;
 const ASSET_404 = /MEDIA_ELEMENT_ERROR|Format error|404|ENOENT|no such file/i;
 const UNREGISTERED = /Could not resolve|Composition.*not found|does not exist|Cannot find module/i;
 

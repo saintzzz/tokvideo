@@ -20,6 +20,16 @@ export function arcBase(slug) {
 // "dem-kham-liem" -> "Đêm Khâm Liệm" using the episode's own title
 // casing when available, else a title-cased slug.
 export function arcDisplayName(episode, slug) {
+  // New arcs carry an explicit arcTitle ("MIẾU HOANG") - use it before
+  // the legacy title split, which otherwise treats a pipe-less episode
+  // title as the arc name and duplicates it into teaser titles
+  // ("Premise | Premise Full #2 #Shorts", live 2026-11-07).
+  const arcTitle = episode.arcTitle?.trim();
+  if (arcTitle) {
+    return arcTitle
+      .toLocaleLowerCase("vi")
+      .replace(/(^|\s)([\p{L}])/gu, (_, sp, ch) => sp + ch.toLocaleUpperCase("vi"));
+  }
   // Legacy title format: "ARC NAME | Tập N: ...". Reuse the arc part
   // but title-case it so the new title doesn't shout.
   const legacy = episode.title?.split("|")[0]?.trim();
