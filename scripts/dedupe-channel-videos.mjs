@@ -42,20 +42,25 @@ for (const f of (await import("node:fs")).readdirSync(path.join(ROOT, "src/suckh
   const ep = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/long-form", f), "utf8"));
   if (ep.slug) epTitles[ep.slug] = ep.title || "";
 }
-// Slug -> ordered match keys: "tập N" + distinctive premise prefix.
+// Match a video title to a ledger key. Episodes went through several
+// title formats (broken arcDisplayName produced titles with no
+// "Tập N" at all), so match on the distinctive premise text first,
+// then the episode number wherever it appears, with premise-only as
+// the fallback for broken titles.
 const matchSlug = (title) => {
+  let premiseHit = null;
   for (const [slug, epTitle] of Object.entries(epTitles)) {
     const n = slug.match(/-tap-(\d+)$/)?.[1];
     if (!n || !epTitle) continue;
     const premise = epTitle.split("|")[0].split(" - ")[0].trim();
-    if (!premise || premise.length < 8) continue;
+    if (!premise || premise.length < 8 || !title.includes(premise)) continue;
     const isTeaser = /#shorts|xem trước/i.test(title);
     const key = isTeaser ? `${slug}-teaser` : slug;
-    if (title.includes(premise) && (title.includes(`Tập ${Number(n)}`) || title.includes(`#${Number(n)}`) || title.includes(`Tập ${n}`))) {
-      return key;
-    }
+    const numRe = new RegExp(`(Tập\\s*|#)0?${Number(n)}\\b`);
+    if (numRe.test(title)) return key;
+    premiseHit ??= key;
   }
-  return null;
+  return premiseHit;
 };
 
 // List the whole uploads playlist.
@@ -72,10 +77,15 @@ do {
 console.log(`${items.length} videos on channel`);
 
 const groups = {};
+let unmatched = 0;
 for (const it of items) {
   const slug = matchSlug(it.snippet.title || "");
-  if (!slug) continue;
+  if (!slug) { unmatched++; continue; }
   (groups[slug] ??= []).push({ id: it.snippet.resourceId.videoId, title: it.snippet.title, at: it.snippet.publishedAt });
+}
+console.log(`matched ${items.length - unmatched} videos to ${Object.keys(groups).length} episode keys (${unmatched} unmatched)`);
+for (const [slug, vids] of Object.entries(groups)) {
+  if (vids.length > 1) console.log(`  dup group ${slug}: ${vids.map(v => v.id).join(", ")}`);
 }
 
 let deleted = 0;
@@ -83,6 +93,12 @@ for (const [slug, vids] of Object.entries(groups)) {
   const keep = ledger[slug]?.videoId ?? vids.sort((a, b) => a.at.localeCompare(b.at))[0].id;
   for (const v of vids) {
     if (v.id === keep) continue;
+    // Never delete a video the ledger claims for any other slug - a
+    // matcher mistake must not cost a real upload.
+    if (ledgerIds.has(v.id)) {
+      console.log(`  skip ${v.id} - ledger-owned by another key`);
+      continue;
+    }
     console.log(`${APPLY ? "DELETE" : "would delete"} ${v.id} "${v.title.slice(0, 70)}" (dup of ${slug}, keep ${keep})`);
     if (APPLY) {
       await youtube.videos.delete({ id: v.id });
