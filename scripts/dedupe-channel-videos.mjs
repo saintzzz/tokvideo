@@ -47,13 +47,18 @@ for (const f of (await import("node:fs")).readdirSync(path.join(ROOT, "src/suckh
 // "Tập N" at all), so match on the distinctive premise text first,
 // then the episode number wherever it appears, with premise-only as
 // the fallback for broken titles.
+// YouTube can store titles in a different Unicode normalization than
+// our JSON (NFD vs NFC) - includes() then misses a visually identical
+// premise. Normalize both sides before comparing.
+const norm = (s) => s.normalize("NFC");
 const matchSlug = (title) => {
+  const t = norm(title);
   let premiseHit = null;
   for (const [slug, epTitle] of Object.entries(epTitles)) {
     const n = slug.match(/-tap-(\d+)$/)?.[1];
     if (!n || !epTitle) continue;
-    const premise = epTitle.split("|")[0].split(" - ")[0].trim();
-    if (!premise || premise.length < 8 || !title.includes(premise)) continue;
+    const premise = norm(epTitle.split("|")[0].split(" - ")[0].trim());
+    if (!premise || premise.length < 8 || !t.includes(premise)) continue;
     const isTeaser = /#shorts|xem trước/i.test(title);
     const key = isTeaser ? `${slug}-teaser` : slug;
     const numRe = new RegExp(`(Tập\\s*|#)0?${Number(n)}\\b`);
@@ -84,6 +89,12 @@ for (const it of items) {
   (groups[slug] ??= []).push({ id: it.snippet.resourceId.videoId, title: it.snippet.title, at: it.snippet.publishedAt });
 }
 console.log(`matched ${items.length - unmatched} videos to ${Object.keys(groups).length} episode keys (${unmatched} unmatched)`);
+if (process.env.DEDUPE_DEBUG) {
+  for (const it of items.slice(0, 60)) {
+    const slug = matchSlug(it.snippet.title || "");
+    console.log(`  [${slug ?? "--"}] ${it.snippet.resourceId.videoId} ${(it.snippet.title || "").slice(0, 80)}`);
+  }
+}
 for (const [slug, vids] of Object.entries(groups)) {
   if (vids.length > 1) console.log(`  dup group ${slug}: ${vids.map(v => v.id).join(", ")}`);
 }

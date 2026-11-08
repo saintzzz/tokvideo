@@ -1359,6 +1359,7 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          DEDUPE_DEBUG: "1"
         run: node scripts/dedupe-channel-videos.mjs --apply
 
       - name: Commit watchdog report and refilled content
