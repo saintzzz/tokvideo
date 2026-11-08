@@ -69,7 +69,7 @@ const premise = (episode.title || `Tập ${parseInt(epNum, 10) || "?"}`)
   .replace(/\s*[-–—]\s*Tập\s*\d+.*$/i, "")
   .replace(/\s*\|.*$/, "")
   .trim();
-const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} #Shorts`;
+const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} (xem trước) #Shorts`;
 const title = (premise.length > 100 - suffix.length ? premise.slice(0, 100 - suffix.length).replace(/\s+\S*$/, "") : premise) + suffix;
 
 const playlistId = playlistMap.vi?.["long-form"];

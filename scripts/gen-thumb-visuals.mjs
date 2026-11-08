@@ -102,9 +102,15 @@ for (const file of files) {
     continue;
   }
 
-  const subject = episode.thumbPrompt ?? ARC_SUBJECT[arcBase(slug)];
+  // Per-episode subject first (2026-11-08: ARC_SUBJECT gave every
+  // episode in an arc the SAME prompt -> byte-identical thumbs on the
+  // channel). thumbnailSubjects[i] rotates so each tap gets its own
+  // frame; thumbPrompt / arc subject remain fallbacks.
+  const epIdx = Math.max(0, (parseInt(slug.match(/-tap-(\d+)$/)?.[1] ?? "1", 10) - 1));
+  const subjects = Array.isArray(episode.thumbnailSubjects) ? episode.thumbnailSubjects : [];
+  const subject = subjects[epIdx % Math.max(subjects.length, 1)] ?? episode.thumbPrompt ?? ARC_SUBJECT[arcBase(slug)];
   if (!subject) {
-    console.warn(`${slug}: no ARC_SUBJECT and no thumbPrompt — skipping`);
+    console.warn(`${slug}: no thumbnailSubjects, ARC_SUBJECT and no thumbPrompt — skipping`);
     continue;
   }
   const prompt = `${subject}. ${THUMB_STYLE}`;

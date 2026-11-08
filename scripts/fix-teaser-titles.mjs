@@ -28,7 +28,7 @@ const wanted = (episode, slug) => {
   const epNum = slug.match(/-tap-(\d+)$/)?.[1] ?? "";
   const arcName = arcDisplayName(episode, slug);
   const premise = (episode.title || "").split("|")[0].trim();
-  const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} #Shorts`;
+  const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} (xem trước) #Shorts`;
   return (premise.length > 100 - suffix.length ? premise.slice(0, 100 - suffix.length).replace(/\s+\S*$/, "") : premise) + suffix;
 };
 
