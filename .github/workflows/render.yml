@@ -738,7 +738,14 @@ jobs:
   # only reacts to its own schedule now that channel-report shares the
   # 'schedule' event too.
   publish-next-suckhoe:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 3,9,15 * * *') || github.event.inputs.video == 'suckhoe-publish-next'
+    # RETIRED 2026-11-09: the legacy 73-episode story queue (Bà Triệu,
+    # Trần Hưng Đạo, ...) kept auto-publishing onto the horror channel
+    # whenever the old catch-up script on the Windows box saw a >14h gap.
+    # The horror channel now runs on suckhoe-long only. To revive this
+    # job, restore the trigger: (github.event_name == 'schedule' &&
+    # github.event.schedule == '0 3,9,15 * * *') ||
+    # github.event.inputs.video == 'suckhoe-publish-next'
+    if: false
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -804,7 +811,11 @@ jobs:
   # (locale "en" episodes, own queue position within published.json, own
   # credentials). See scripts/publish-next-suckhoe.mjs --locale=en.
   publish-next-suckhoe-en:
-    if: (github.event_name == 'schedule' && github.event.schedule == '0 0,12,18 * * *') || github.event.inputs.video == 'suckhoe-en-publish-next'
+    # RETIRED 2026-11-09: same leak as publish-next-suckhoe - the
+    # catch-up script kept reviving the paused EN channel (Headless
+    # Horseman went live 2026-11-09). Restore trigger if ever needed:
+    # github.event.inputs.video == 'suckhoe-en-publish-next'
+    if: false
     runs-on: ubuntu-latest
     permissions:
       contents: write

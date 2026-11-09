@@ -25,6 +25,18 @@
 // scheduling jitter never triggers this — it should only ever fire when
 // something is actually stuck.
 
+// RETIRED 2026-11-09: this safety net was built for the legacy
+// suckhoe story-shorts publishers, which are now disabled in
+// render.yml (if: false). The old Windows Task Scheduler still fires
+// this hourly and - because the legacy queue's last publish is
+// permanently >14h old - it kept dispatching catch-up uploads of
+// history shorts (Bà Triệu, Headless Horseman) onto the wrong
+// channels. Exit immediately so even a stale scheduled task is a
+// no-op. The horror channel's own watchdog covers missed slots for
+// the suckhoe-long pipeline.
+console.log("check-and-catchup-publish retired 2026-11-09 - legacy publishers disabled, no-op.");
+process.exit(0);
+
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
