@@ -566,5 +566,17 @@
     "publishedAt": "2026-11-09T01:07:15.033Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "cau-khi-tap-02": {
+    "videoId": "CydIPDqaBGM",
+    "publishedAt": "2026-11-09T02:04:29.499Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "cau-khi-tap-02-teaser": {
+    "videoId": "WXlj2TiHA6E",
+    "publishedAt": "2026-11-09T02:05:22.785Z",
+    "locale": "vi",
+    "privacyStatus": "public"
   }
 }
