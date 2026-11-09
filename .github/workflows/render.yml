@@ -1370,7 +1370,11 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
           DEDUPE_DEBUG: "1"
+          # One-off 2026-11-09: user-confirmed off-brand uploads to remove.
+          DELETE_VIDEO_IDS: "DlheqvUrkkE,bQqHePktShI"
+          DELETE_VIDEO_IDS_EN: "p9_DNPFSyX8,P1mKlzSErR0"
         run: node scripts/dedupe-channel-videos.mjs --apply
 
       - name: Commit watchdog report and refilled content

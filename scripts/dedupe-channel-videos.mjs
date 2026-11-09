@@ -16,7 +16,7 @@
 //
 // Usage: node scripts/dedupe-channel-videos.mjs [--apply]
 
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { google } from "googleapis";
@@ -31,6 +31,46 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
 const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
 auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth });
+
+// Explicit deletions first: off-brand uploads confirmed by the user
+// (e.g. legacy Bà Triệu history shorts that leaked onto the horror
+// channel 2026-11-09). DELETE_VIDEO_IDS targets the VI channel,
+// DELETE_VIDEO_IDS_EN uses the EN refresh token for the EN channel.
+// Matching ledger entries are dropped so the video is never re-linked.
+async function explicitDeletes() {
+  const viIds = (process.env.DELETE_VIDEO_IDS || "").split(",").map(s => s.trim()).filter(Boolean);
+  const enIds = (process.env.DELETE_VIDEO_IDS_EN || "").split(",").map(s => s.trim()).filter(Boolean);
+  if (!viIds.length && !enIds.length) return;
+  const ledgerPath = path.join(ROOT, "src/suckhoe/published-long.json");
+  const suckhoePath = path.join(ROOT, "src/suckhoe/published.json");
+  const ledgers = [
+    [ledgerPath, JSON.parse(readFileSync(ledgerPath, "utf8"))],
+    [suckhoePath, JSON.parse(readFileSync(suckhoePath, "utf8"))],
+  ];
+  const drop = (id) => {
+    for (const [p, l] of ledgers) {
+      for (const [k, v] of Object.entries(l)) {
+        if (v?.videoId === id) { delete l[k]; writeFileSync(p, JSON.stringify(l, null, 2) + "\n"); console.log(`  dropped ledger key ${k}`); }
+      }
+    }
+  };
+  for (const id of viIds) {
+    await youtube.videos.delete({ id });
+    console.log(`DELETE ${id} (vi channel)`);
+    drop(id);
+  }
+  if (enIds.length) {
+    const enAuth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
+    enAuth.setCredentials({ refresh_token: process.env.YOUTUBE_EN_REFRESH_TOKEN });
+    const enYoutube = google.youtube({ version: "v3", auth: enAuth });
+    for (const id of enIds) {
+      await enYoutube.videos.delete({ id });
+      console.log(`DELETE ${id} (en channel)`);
+      drop(id);
+    }
+  }
+}
+await explicitDeletes();
 
 const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
 const ledgerIds = new Set(Object.values(ledger).map(v => v?.videoId).filter(Boolean));
