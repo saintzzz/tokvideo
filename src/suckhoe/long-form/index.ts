@@ -50,6 +50,11 @@ import cauKhiTap02 from "./cau-khi-tap-02.json";
 import cauKhiTap03 from "./cau-khi-tap-03.json";
 import cauKhiTap04 from "./cau-khi-tap-04.json";
 import cauKhiTap05 from "./cau-khi-tap-05.json";
+import nguoiDiDanMuaTap01 from "./nguoi-di-dan-mua-tap-01.json";
+import nguoiDiDanMuaTap02 from "./nguoi-di-dan-mua-tap-02.json";
+import nguoiDiDanMuaTap03 from "./nguoi-di-dan-mua-tap-03.json";
+import nguoiDiDanMuaTap04 from "./nguoi-di-dan-mua-tap-04.json";
+import nguoiDiDanMuaTap05 from "./nguoi-di-dan-mua-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -137,4 +142,16 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   cauKhiTap03,
   cauKhiTap04,
   cauKhiTap05,
+  // Horror arc 8 (backlog C: nguoi-di-dan-mua): "Nguoi di danh mua" - a
+  // rain-night soul-retriever who nets the vong of the drowned and jars
+  // them under his stilt house until kin call them home by name. Twist
+  // at tap 4-5: the nameless jar older than his own trade tries to trade
+  // itself for the protagonist's brother; it is finally freed when the
+  // village gives it back the name it forgot - the unmourned ferryman
+  // who was the whirlpool's first soul.
+  nguoiDiDanMuaTap01,
+  nguoiDiDanMuaTap02,
+  nguoiDiDanMuaTap03,
+  nguoiDiDanMuaTap04,
+  nguoiDiDanMuaTap05,
 ] as LongFormEpisode[];

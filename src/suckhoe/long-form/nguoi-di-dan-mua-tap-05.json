@@ -1,0 +1,100 @@
+{
+  "id": "nguoi-di-dan-mua-tap-05",
+  "arc": "nguoi-di-dan-mua",
+  "arcTitle": "NGƯỜI ĐI ĐÁNH MƯA",
+  "episode": 5,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "nguoi-di-dan-mua-tap-05",
+  "title": "Ba Ngọn Đèn Trên Ghe Cuối - Người Đi Không Trở Về",
+  "description": "Tập cuối arc NGƯỜI ĐI ĐÁNH MƯA: Tám gọi được em trai về, xác Hai trôi về bến đúng như lời ông Út. Cái hũ không tên cuối cùng cũng được đặt tên - chú Ba đò mất sáu mươi năm không ai lĩnh xác. Còn ông Út chèo ghe vào vực một đêm mưa cuối cùng, trên ghe có ba ngọn đèn. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #nguoididanhmua",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "người đi đánh mưa", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a small wooden boat on a dark canal at night in rain with three small oil lamps glowing on it, empty boat drifting, photorealistic horror",
+    "a Vietnamese village funeral at dawn by a canal, villagers holding lanterns on the bank at night for the drowned dead, misty, photorealistic"
+  ],
+  "scenePrompts": {
+    "net-struggle": "two men straining to pull a fishing net from black churning water at night in a storm, a pale misty shape in the mesh, photorealistic horror",
+    "soul-release": "a pale translucent human-shaped mist gliding over black water toward a small lamp light on the canal bank at night, rain, photorealistic horror",
+    "name-call": "a young man standing on a boat in heavy rain at night shouting over black water, a dark faceless shape standing on the water surface facing him, photorealistic horror",
+    "bank-dawn": "a misty canal bank at dawn, villagers gathered around a body washed ashore lying peacefully with a red string on the wrist, photorealistic",
+    "funeral": "a Vietnamese village funeral procession by a canal, white headbands, incense smoke, a wooden coffin, somber but peaceful, photorealistic",
+    "temple-records": "old yellowed paper records and a wooden ancestral tablet in a dim Vietnamese communal temple, candlelight, photorealistic",
+    "ut-boat-rain": "a lone old wooden boat drifting into a dark canal bend at night in rain carrying three small oil lamps, no one visible rowing, photorealistic horror",
+    "village-epilogue": "many small oil lamps lit along a canal bank at night in a Vietnamese hamlet, warm glow reflected on dark water, peaceful, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "net-struggle",
+      "caption": "Lưới lên nhẹ như hơi",
+      "text": "Ngọn đèn trên bờ vừa vực lên, sợi lưới trong tay hai người bỗng nhẹ đi như ai tháo hết nước trong đó. Ông Út quát: kéo lên, đừng nhìn. Tám kéo tới khi mắt lưới ra khỏi nước - trong lưới không có xác, không có cá, chỉ có một bóng trắng mỏng như hơi, cuộn lại như đứa trẻ ngủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "soul-release",
+      "caption": "Vong đi theo vệt sáng về bờ",
+      "text": "Bóng trắng tuột khỏi mắt lưới, không rớt xuống nước - nó trườn theo mạn ghe, đi ngang mặt Tám, rồi bắt đầu đi về phía bờ, đi dọc theo cái vệt sáng xanh yếu ớt của ngọn đèn trong tay má nó. Đi được nửa đường nó dừng lại, như quay đầu nhìn cái ghe một lần - rồi tan vào trong ánh đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "name-call",
+      "caption": "Bóng đen bò lên mắt lưới",
+      "text": "Còn bóng đen nắm cổ tay khi nãy - nó không buông ngay. Khi bóng trắng trôi đi, nó bò lên nằm trên mắt lưới, trên mặt nước, không chìm - một bóng người đen nhẵn, không mặt, đầu hơi ngẩng về phía ghe. Ông Út nhìn nó một hồi lâu, rồi nói với Tám: nó không muốn hại em con. Nó muốn con hỏi tên nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "name-call",
+      "caption": "Nó không còn tên để trả lời",
+      "text": "Tám hỏi run: mày tên gì. Bóng đen đứng im giữa mưa - rồi từ đâu đó trong màn nước, một tiếng rên dài như tiếng xương mài vào đá vọng lại. Nó không trả lời được, vì nó không còn tên để trả lời. Ông Út thở dài: sáu mươi năm rồi nó ở dưới vực này một mình, quên sạch mình từng là ai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bank-dawn",
+      "caption": "Xác Hai trôi về bến",
+      "text": "Trời tờ mờ sáng, mưa ngớt. Dân ấp ra bờ kênh thì thấy xác thằng Hai - đúng như lời ông Út từng nói - trôi dạt vào bãi đất nơi bến đò, nằm ngửa, vẹn nguyên như người ngủ, cổ tay còn sợi chỉ đỏ ba vòng xâu đồng tiền. Chìm dưới vực cả năm trời mà nước không làm hư hại nó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral",
+      "caption": "Đám tang đầy đủ đầu tiên",
+      "text": "Tang thằng Hai làm đúng lễ đầy đủ nhất ấp từ trước tới giờ - vì cuối cùng nó có xác, có quan tài, có mồ đàng hoàng. Giỗ đầy năm tới ngày, bà Tư Vạn tự tay nấu mâm cúng đầu tiên không phải cúng chay. Kỳ lạ là từ đêm đó bà đứng dậy đi lại được, cứ như gánh nặng nào vừa rơi khỏi vai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple-records",
+      "caption": "Chú Ba đò - người không ai lĩnh xác",
+      "text": "Còn cái hũ không tên, Tám không quên. Nó lật sổ hương hỏa cũ ở đình, sổ đò ngày xưa ở bến, hỏi mấy cụ chín mươi tuổi còn sót. Ra được một cái tên: chú Ba đò - người chèo đò duy nhất xưa kia, chết đuối ở vực một đêm mưa, không vợ con, không ai lĩnh xác, làng chôn hờ hững không bài vị. Đã sáu mươi mấy năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "name-call",
+      "caption": "Cả ấp gọi tên chú Ba đò",
+      "text": "Đêm rằm sau đó, cả ấp ra bờ vực. Ông Út đặt bài vị viết tên Huỳnh Văn Ba - dân ấp cho chú Ba đò mang họ chung của làng - lên mâm cúng giữa bờ. Tám thay mặt dân ấp gọi ba lần: Huỳnh Văn Ba - về với làng, về với đình. Lần thứ ba vừa dứt, dưới gầm nhà sàn, cái hũ không tên ngừng gõ - im hẳn, từ đó về sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-boat-rain",
+      "caption": "Ba ngọn đèn trên ghe cuối",
+      "text": "Đêm mưa cuối cùng của mùa bão năm đó, có người thức trông con thấy ghe ông Út ra khơi lần cuối. Lạ một điều: trên ghe hôm đó người ta đếm được tới ba ngọn đèn - một ở mũi, một ở lái, và một ngọn nhỏ nữa ở giữa, như có ai ngồi đó cầm. Ghe đi thẳng vào vực rồi không ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-boat-rain",
+      "caption": "Ghe trống trôi về, đèn còn cháy",
+      "text": "Sáng hôm sau ghe ông Út trôi vô bờ, trống không - chỉ còn ngọn đèn kẹo trên mũi còn cháy, dù mưa đêm qua to như trút. Dưới gầm nhà sàn, hai cái hũ đầu hàng - hũ khắc tên vợ ông và tên thằng con bảy tuổi - mở nắp ra, bên trong chỉ còn nước lã trong vắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-epilogue",
+      "caption": "Tục thắp đèn đêm giỗ",
+      "text": "Từ đó Ấp Kênh Chôm có thêm một tục mới: hễ giỗ người chết đuối tới, nhà nào cũng thắp một cây đèn dầu để ngoài bờ kênh suốt đêm. Không phải để dẫn ma - mà để dẫn người. Để vong nào còn lang thang ngoài nước biết đường về nhà, về với người còn nhớ tên mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-epilogue",
+      "caption": "Chuyện tới đây là hết",
+      "text": "Chuyện người đi đánh mưa tới đây là hết. Bà con nghe xong nhớ một điều thôi: người chết đuối không đòi hỏi gì nhiều - họ không cần vàng mã, không cần lễ lớn, họ chỉ cần một người còn sống chịu đứng dưới mưa mà gọi tên mình về. Còn được gọi tên là còn được về nhà."
+    }
+  ]
+}

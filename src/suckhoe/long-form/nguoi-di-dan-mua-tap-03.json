@@ -1,0 +1,93 @@
+{
+  "id": "nguoi-di-dan-mua-tap-03",
+  "arc": "nguoi-di-dan-mua",
+  "arcTitle": "NGƯỜI ĐI ĐÁNH MƯA",
+  "episode": 3,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "nguoi-di-dan-mua-tap-03",
+  "title": "Đò Chìm Ba Mươi Năm Trước - Nghề Vớt Vong Ông Út",
+  "description": "Tập 3 arc NGƯỜI ĐI ĐÁNH MƯA: Ba mươi năm trước vụ lật đò cướp vợ con ông Út, ông đi lang bạt ba năm học nghề đánh mưa - vớt vong người chết đuối giữ trong hũ khắc tên, chờ người nhà gọi về. Chỉ có một hũ không tên gõ suốt đêm - vong quên tên lâu năm đang đói. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #nguoididanhmua",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "vớt vong", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "an old ferry boat capsized in a flooded river in a violent storm decades ago, people in the water, vintage Vietnamese countryside, photorealistic horror",
+    "an old wandering monk with white hair teaching an old fisherman beside an earthen jar and a strange fishing net at night, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "flood-flashback": "a wooden ferry boat capsizing in a swollen muddy river during a huge flood, monsoon rain, people clinging to debris, old Vietnamese countryside, photorealistic horror",
+    "monk-temple": "an old wandering monk with long white hair sitting in a ruined village temple at night lit by candlelight, talking to an old fisherman, photorealistic",
+    "ut-boat-flashback": "a younger version of an old fisherman casting a strange dark fishing net from a boat into a whirlpool at night in rain, photorealistic horror",
+    "jar-room": "under a stilt house floor, dozens of earthen jars in rows lit by a single oil lamp, red cloth seals, names scratched into the clay, photorealistic horror",
+    "jar-knocking": "close up of a single black earthen jar wrapped in rusty wire standing apart in the dark under a house, ominous, photorealistic horror",
+    "family-altar": "a modest Vietnamese home altar at night with a photo of a young man, a rice bowl, burning incense and a small oil lamp, photorealistic",
+    "night-window": "view from inside a dark rural Vietnamese house through a window at night, heavy rain, a canal and distant lantern barely visible, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "flood-flashback",
+      "caption": "Vụ lật đò năm ấy",
+      "text": "Ba mươi mấy năm trước, mùa lũ lớn nhất đời người làng còn nhớ, chiếc đò chở mười mấy người đi chợ ngang qua vực Ông Hổ thì gặp xoáy. Đò lật úp giữa dòng, nước cuốn nhanh tới mức tiếng la còn chưa kịp hết. Mười mốt mạng - người ta mò được bảy xác, bốn người mãi không thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flood-flashback",
+      "caption": "Vợ con ông Út trong số đó",
+      "text": "Trong bốn người không tìm thấy có vợ ông Út và thằng con trai bảy tuổi của ông. Ông lặn mò suốt chín ngày, người ta phải trói ông lại trên bờ vì ông lặn tới khi phổi phè máu. Xong đám tang - đám tang không xác - ông bỏ nhà đi biệt mất ba năm trời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "monk-temple",
+      "caption": "Câu nói của ông thầy lang",
+      "text": "Ba năm sau ông về, theo chân một ông thầy lang bạt tóc trắng mà người ta chỉ gặp đúng một lần. Nghe nói ông thầy đó nói với ông Út một câu: xác trôi theo nước còn có ngày mò được, chứ vong trôi theo quên - quên tên, quên nhà, quên mình từng là người - thì muôn đời không về được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-boat-flashback",
+      "caption": "Nghề đánh mưa không tên",
+      "text": "Ông thầy dạy ông Út một nghề không có tên trong sách: đánh mưa. Chỉ khi trời mưa mặt nước mới mỏng đi - lớp giữa người sống với người chết chảy loãng ra - lúc đó thả lưới đúng chỗ xoáy đứng mới vớt được vong. Lưới phải tết bằng dây mướp đắng ngâm nước lã đình ba mùa, mắt đan ngược."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-room",
+      "caption": "Hũ đất khắc tên là cái neo",
+      "text": "Vớt được vong rồi phải có chỗ giữ, vong không chỗ giữ thì tan theo gió mưa mất. Ông thầy chỉ cách: hũ đất nung chưa men, khắc tên người mất lên thân, đậy vải đỏ. Cái tên khắc đó là cái neo - giữ cho vong nhớ mình là ai, nhớ mình còn nhà, còn người đợi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-room",
+      "caption": "Dân ấp sợ ông mà ngầm cần ông",
+      "text": "Từ đó mấy chục năm, dân ấp sợ ông Út nhưng ngầm cần ông. Ai mất người dưới nước không vớt được xác cứ chờ: một đêm mưa nào đó ghe ông ra khơi, vài bữa sau có người tới gõ cửa nói nhỏ - tới ngày này tháng này, ra vực gọi tên con mình về. Nhiều nhà làm đúng vậy, và xác người mất trôi về bến ít lâu sau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-knocking",
+      "caption": "Vong quên cả tên mình",
+      "text": "Chỉ có một hũ ông Út không khắc được tên. Ngày ông thầy truyền nghề, ông kể: trong mẻ lưới đầu tiên vớt lên thử, có một vong không nói được tên mình - nó quên từ lâu rồi, quên tới mức không còn mặt người nữa. Thầy bảo đậy lại, quấn kẽm, khi nào tìm ra tên nó mới được mở."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-knocking",
+      "caption": "Nó đòi một cái tên bất kỳ",
+      "text": "Cái hũ không tên đó năm nào cũng gõ - cộp cộp đều như nhịp tim - nhưng ba năm nay nó gõ khác: gõ theo giờ, đúng giờ Tý mỗi đêm mưa, gõ mạnh tới rung dây kẽm. Ông Út nói vong quên tên lâu năm thì đói - nó không đòi về nhà nữa, nó đòi một cái tên bất kỳ, và nó biết cách lấy tên của người chết mới mà đổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-knocking",
+      "caption": "Ba đêm mưa nước thu nợ",
+      "text": "Ông Út giải thích cho Tám nghe: ba đêm mưa liền là lúc nước thu nợ. Vực đó nuôi một đám vong - cứ ba đêm bão nó đòi lại một mạng gọi là cân. Đời trước dân làng đánh cá trong đêm bão cứ mất người không hiểu sao. Từ khi có ông đánh mưa, nước lấy lại đúng một vong không chủ trong hũ, dân bớt chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Má Tám nắm sợi chỉ đỏ",
+      "text": "Tám về nhà cầm theo câu nói của ông Út. Má nó nằm trên phản, gầy chỉ còn da bọc xương, tay vẫn nắm chặt sợi chỉ đỏ thứ hai - sợi bà cột cho thằng Hai đợt sau cùng, gỡ lại giữ làm kỷ vật. Bà nói trong mê: Hai ơi, mưa rồi, về nhà đi con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-window",
+      "caption": "Còn bốn ngày tới giỗ đầu",
+      "text": "Giỗ đầy năm của thằng Hai còn đúng bốn ngày. Đợt bão ba đêm bắt đầu đêm nay. Tám hiểu ra: hoặc nó ra vực gọi em về trước khi nước thu nợ, hoặc mãi mãi không còn cơ hội - vì nếu cái hũ không tên đòi một cái tên để đổi, thì cái tên mới khắc nhất trong gầm nhà ông Út chính là tên em nó."
+    }
+  ]
+}

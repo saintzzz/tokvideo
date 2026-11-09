@@ -1,0 +1,99 @@
+{
+  "id": "nguoi-di-dan-mua-tap-01",
+  "arc": "nguoi-di-dan-mua",
+  "arcTitle": "NGƯỜI ĐI ĐÁNH MƯA",
+  "episode": 1,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "nguoi-di-dan-mua-tap-01",
+  "title": "Đò Chỉ Ra Khơi Khi Mưa - Cấm Nhìn Lưới Ông Vớt",
+  "description": "Tập 1 arc NGƯỜI ĐI ĐÁNH MƯA: Ấp Kênh Chôm có ông Út Lội chỉ chèo ghe ra vực khi trời mưa, dân làng cấm ai nhìn lưới ông vớt. Tám phạm điều cấm một đêm mưa - và thấy trong lưới cổ tay đeo sợi chỉ đỏ của em trai mình chết đuối chưa tìm được xác. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #nguoididanhmua",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "người đi đánh mưa", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a lone old man standing on a wooden boat in the middle of a dark canal at night in heavy rain, pulling up a fishing net, a faint white shape tangled in the net, photorealistic horror",
+    "a young Vietnamese man in a raincoat hiding on a canal bank at night watching a distant boat lantern through heavy rain, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "canal-bend-day": "a wide dark bend of a Mekong delta canal in Vietnam at grey dusk, still water like a mirror, dense water coconut palms on both banks, ominous calm, photorealistic",
+    "village-dock": "a small wooden dock on a canal bank in a poor Vietnamese hamlet at dawn, an old wooden boat moored, fishing nets hung on poles to dry, mist, photorealistic",
+    "ut-boat-rain": "an old wooden boat alone in the middle of a dark canal at night in heavy rain, a small oil lamp on the bow, an old man standing pulling a net, photorealistic horror",
+    "family-altar": "a modest Vietnamese home altar at night with an ancestral photo of a young man, a rice bowl, burning incense sticks and a small oil lamp, warm dim light, photorealistic",
+    "mother-sick": "an elderly Vietnamese woman lying frail on a wooden bed in a dim rural house, holding a red string bracelet, a framed photo of her son on the wall, photorealistic",
+    "night-window": "view from inside a dark rural Vietnamese house through a window at night, heavy rain outside, a canal and a distant boat lantern barely visible, photorealistic horror",
+    "net-rise": "close up of a fishing net rising from black water at night in rain, a pale arm tangled in the mesh with a red string bracelet on the wrist, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "canal-bend-day",
+      "caption": "Ấp Kênh Chôm nằm hai bên khúc kênh cong",
+      "text": "Ấp Kênh Chôm nằm hai bên khúc kênh cong nhất của dòng Gành Hào. Khúc kênh đó người ta gọi là vực Ông Hổ - nước đứng màu lá mạ, lặng như gương, nhưng đò ngang qua phải đi sát bờ, không ai dám chèo giữa dòng. Người già nói dưới đó có xoáy đứng - nước chảy vòng từ đáy lên, gặp gì cuốn nấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dock",
+      "caption": "Người chết đuối ở vực không phải chuyện lạ",
+      "text": "Chuyện người chết đuối ở vực Ông Hổ không phải chuyện lạ. Đời nào cũng có - người tắm kênh mất tích giữa ban trưa, đò chở trầu lật trong đêm rằm, đứa nhỏ chạy theo cái phao trôi rồi không lên nổi. Có người mò được xác đưa về, có người mãi mãi nằm lại dưới đó, không mồ không mả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-boat-rain",
+      "caption": "Giữa cái ấp đó có ông Út Lội",
+      "text": "Giữa cái ấp đó có ông Út Lội. Không ai biết ông bao nhiêu tuổi, chỉ biết ông ở một mình trong căn nhà sàn cuối ấp, và chiếc ghe mục của ông chỉ nhổ neo khi trời mưa - mưa càng lớn ông càng chắc chắn ra khơi, dù là giữa khuya. Dân làng gọi ông sau lưng là người đi đánh mưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-boat-rain",
+      "caption": "Ba điều cấm dân ấp thuộc lòng",
+      "text": "Dân ấp truyền nhau ba điều cấm. Một: đừng đứng nhìn ghe ông Út cập bờ. Hai: đừng hỏi ông đêm qua vớt được gì. Ba: nếu đang đi đường mà thấy ngọn đèn kẹo của ghe ông lướt qua bờ nhà mình lúc mưa, về đóng cửa lại, tắt đèn, đừng gọi tên ai ra ngoài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-altar",
+      "caption": "Chuyện này xảy ra với thằng Tám",
+      "text": "Chuyện này xảy ra với thằng Tám, con bà Tư Vạn ở đầu ấp. Em trai nó - thằng Hai - mùa lũ năm ngoái chèo xuồng qua vực hái bông điên điển về nấu canh chua, xuồng lật, người ta mò ba ngày chỉ vớt được cái nón lá. Xác Hai tới giờ vẫn chưa thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mother-sick",
+      "caption": "Bà Tư Vạn từ đó tới giờ không khỏe",
+      "text": "Bà Tư Vạn từ đó tới giờ thân thể cứ rủ xuống. Bà vẫn để chén cơm của Hai trên bàn thờ, vẫn thắp nhang mỗi chiều, nhưng người ta thì thầm: không có xác, không có mồ, cúng giỗ cũng như cúng chay - vong nó không có chỗ để về, bay lơ lửng ngoài kia mãi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-window",
+      "caption": "Đêm đó trời đổ mưa từ giờ Hợi",
+      "text": "Đêm đó trời đổ mưa từ giờ Hợi. Tám nằm trằn trọc nghe nước đổ xuống mái tôn như ai đổ từng thúng đá. Giữa tiếng mưa nó nghe thấy một tiếng khác - tiếng mái chèo khua nước, chậm, đều, kiên nhẫn - đang đi thẳng về hướng vực Ông Hổ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-boat-rain",
+      "caption": "Tám phạm điều cấm thứ nhất",
+      "text": "Tám không hiểu sao mình đứng dậy. Nó khoác áo mưa, lặng lẽ đi theo bờ kênh về phía vực. Nó biết mình đang phạm điều cấm thứ nhất - nhưng giữa màn mưa đó, chiếc ghe của ông Út đang nằm chễm chệ ngay giữa dòng nước chết, và ông đang kéo lưới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "net-rise",
+      "caption": "Lưới dâng lên nặng không phải cá",
+      "text": "Ông Út đứng mũi ghe, hai tay kéo lưới lên từng sợi. Lưới lên chậm, nặng - không phải cái nặng giãy giụa của cá, mà cái nặng đơ, lì, như kéo một khúc cây ngâm nước lâu năm. Tới khi mắt lưới ló khỏi mặt nước, Tám thấy thứ nằm trong đó trắng xanh - không bạc, không vảy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "net-rise",
+      "caption": "Trên cổ tay đó là sợi chỉ đỏ",
+      "text": "Một cái tay tuột khỏi mắt lưới, rớt xuống nước. Và trên cổ tay đó - Tám thấy rõ dù mưa che mờ - là sợi chỉ đỏ buộc ba vòng, xâu một đồng tiền đồng. Sáng hôm thằng Hai chèo xuồng đi, má nó cột sợi chỉ đó vào tay nó, dặn đeo cho đến hết mùa lũ đừng gỡ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-window",
+      "caption": "Ông Út không giật mình",
+      "text": "Tám chạy về nhà, cửa cũng không chịu đóng. Nó nằm co trên phản tới sáng, không kể với ai, kể cả má. Chỉ có một điều nó nhớ hoài: khi cái tay đó rớt xuống nước, ông Út không hề giật mình - ông chỉ cúi xuống, nhẹ nhàng luồn nó lại vào trong lưới, như xếp một món đồ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dock",
+      "caption": "Sáng hôm sau ghe ông Út đã về",
+      "text": "Sáng hôm sau trời tạnh. Ghe ông Út đã neo ở bến cũ, lưới phơi trên sào khô ráo như cả tuần không đụng nước. Tám đứng nhìn căn nhà sàn cuối ấp một hồi lâu. Nó không biết dưới gầm nhà đó ông Út đang giữ những gì - và trong những thứ ông giữ, có một thứ mang tên em nó."
+    }
+  ]
+}

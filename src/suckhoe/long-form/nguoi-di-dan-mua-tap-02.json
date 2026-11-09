@@ -1,0 +1,92 @@
+{
+  "id": "nguoi-di-dan-mua-tap-02",
+  "arc": "nguoi-di-dan-mua",
+  "arcTitle": "NGƯỜI ĐI ĐÁNH MƯA",
+  "episode": 2,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "nguoi-di-dan-mua-tap-02",
+  "title": "Hũ Đất Dưới Gầm Nhà - Mỗi Hũ Một Người Chết Đuối",
+  "description": "Tập 2 arc NGƯỜI ĐI ĐÁNH MƯA: Tám lẻn xuống gầm nhà ông Út và thấy hàng trăm hũ đất - mỗi hũ khắc tên một người chết đuối không xác, kể cả thằng em nó. Ông Út khai ra nghề giữ vong: chỉ có người thân gọi tên giữa vực đêm mưa, vong mới được về nhà. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #nguoididanhmua",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "hũ đất", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "rows of earthen jars under a dark stilt house lit by a single oil lamp, each jar sealed with red cloth, names scratched on the sides, photorealistic horror",
+    "a young man kneeling before a clay jar under a house, an old man with a lantern standing behind him in the dark, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "village-dock": "a small wooden dock on a canal bank in a poor Vietnamese hamlet at dawn, an old wooden boat moored, fishing nets hung on poles to dry, mist, photorealistic",
+    "ut-confront": "an old Vietnamese fisherman with sunken eyes standing by his boat at dawn facing a young man, tense atmosphere, canal mist behind, photorealistic",
+    "stilt-house-night": "a lonely wooden stilt house at the end of a Vietnamese hamlet at night, one tiny oil lamp glowing under the house floor, rain clouds, photorealistic horror",
+    "jar-room": "under a stilt house floor, dozens of earthen jars in rows lit by a single oil lamp, red cloth seals, names scratched into the clay, photorealistic horror",
+    "jar-knocking": "close up of a single black earthen jar wrapped in rusty wire standing apart in the dark under a house, no name on it, ominous, photorealistic horror",
+    "night-window": "view from inside a dark rural Vietnamese house through a window at night, heavy rain, a canal and a distant boat lantern barely visible, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "village-dock",
+      "caption": "Tám hỏi thẳng ông Út ở bến",
+      "text": "Tám đợi ông Út ở bến từ sáng sớm. Thấy ông chống ghe vào bờ, nó nghẹn ngào hỏi thẳng: tối qua chú vớt được gì ở vực. Ông Út không dừng lại, không quay đầu, chỉ nói một câu: nước buông ra cái gì thì tao vớt cái đó - đừng hỏi nữa, con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-confront",
+      "caption": "Ông Út quay lại nhìn nó",
+      "text": "Tám níu lấy mạn ghe: chú vớt được em tôi đúng không, xác em tôi. Ông Út dừng lại, quay nhìn nó bằng đôi mắt trũng sâu. Ông nói khẽ: con nhìn thấy rồi hả. Vậy thì từ nay đừng nhìn nữa - thứ trong lưới tao không phải xác, và cũng không phải cá."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stilt-house-night",
+      "caption": "Dưới gầm nhà có ngọn lửa",
+      "text": "Tối đó Tám không ngủ được. Nó tới gần nhà ông Út, không vào, chỉ đứng xa nhìn. Nhà sàn tối đen, nhưng dưới gầm nhà có một ánh lửa nhỏ xíu, vàng đục, như ai thắp một cây đèn dầu không bao giờ tắt. Và nó nghe thấy tiếng gõ - cộp, cộp - rất khẽ, như ai gõ từ bên trong một cái hũ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-room",
+      "caption": "Hàng trăm hũ đất dưới gầm",
+      "text": "Đêm sau nó len xuống gầm nhà lúc ông Út ra sông. Đèn dầu đặt trên nền đất, soi ra hàng trăm cái hũ đất xếp thành từng dãy, hũ nào cũng đậy nắp, miệng bịt vải đỏ. Trên thân mỗi hũ khắc một cái tên và một ngày - khắc bằng que tre, nét cạn mà rõ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-room",
+      "caption": "Mỗi hũ một người chết đuối",
+      "text": "Tám đi dọc từng hàng, đọc từng cái tên. Có tên nó nghe má kể hồi nhỏ: bác Năm đò chìm đợt rét cắt, chị Tư Hồng mất tích mùa nước nổi, cả đám học trò trong vụ lật đò hai mươi năm trước. Tất cả đều là người chết đuối không mò được xác - người ta tưởng họ trôi mất, nhưng tên họ ở đây hết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-room",
+      "caption": "Hũ mới nhất khắc tên em nó",
+      "text": "Ở cuối hàng gần nhất, trên một cái hũ đất còn mới, vết khắc còn tươi: Hai - ngày mùng ba tháng bảy. Đúng ngày em nó chìm xuồng. Tám quỳ xuống trước cái hũ, định ôm lấy thì nghe tiếng ông Út ngay sau lưng: con bỏ xuống. Bây giờ nó chưa phải em con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ut-confront",
+      "caption": "Tao giữ vong cho khỏi lạc tên",
+      "text": "Ông Út ngồi xuống cạnh đống hũ, nói chậm: xác chìm xuống vực là của nước, nhưng vong thì nước giữ không lâu - vong lơ lửng theo xoáy, lâu năm quên hết tên mình, thành ma đói lang thang. Tao vớt vong về, đậy trong hũ, giữ cho nó còn nhớ tên - tới khi có người nhà gọi nó về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-room",
+      "caption": "Gọi tên ba lần giữa vực đêm mưa",
+      "text": "Cách gọi chỉ có một: người thân ruột thịt phải ra giữa vực đêm mưa, gọi tên khai sinh của người mất ba lần, trong khi người ở bờ giữ ngọn đèn không được tắt. Gọi đúng, vong được buông về nhà theo ánh đèn - vài ngày sau nước thường trả luôn cái xác trôi dạt vào bến. Gọi sai, cả người gọi lẫn vong đều ở lại dưới đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-knocking",
+      "caption": "Hạn chót là giỗ đầy năm",
+      "text": "Ông Út đặt tay lên hũ của Hai: con có tới giỗ đầy năm em mình. Quá giỗ đầu không ai gọi, vong mất hết ký ức tên - tới lúc đó mở hũ ra cũng chỉ thấy nước lã. Tao giữ cho nó khỏi lạc, chứ tao không gọi thay ai được - tiếng gọi phải là tiếng của máu mủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "jar-knocking",
+      "caption": "Cái hũ không tên quấn dây kẽm",
+      "text": "Trước khi Tám đi, ông Út dẫn nó ra góc gầm nhà, chỉ một cái hũ đứng riêng, đen bóng, quấn dây kẽm chằng chịt. Hũ đó không có tên. Ông nói: cái này có trước cả tao - đêm nào nó cũng gõ, nhưng mùa bão này nó gõ dữ hơn mọi năm. Không ai gọi tên được cho nó, thì vong trong đó sẽ tự kiếm một cái tên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-window",
+      "caption": "Đèn trên bàn thờ tự tắt",
+      "text": "Đêm đó Tám về tới nhà thì trời bắt đầu mưa - cơn mưa đầu của đợt bão ba đêm mà ông Út nói là nước đi thu nợ. Trên bàn thờ thằng Hai, ngọn đèn dầu má nó thắp từ năm ngoái bỗng cháy dựng lên cao, rồi tắt phụt - dù không một gió nào luồn vào."
+    }
+  ]
+}

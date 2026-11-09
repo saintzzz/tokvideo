@@ -303,7 +303,9 @@
           "locale": "vi",
           "category": "ly-ky",
           "parts": 1,
-          "priority": 68
+          "priority": 68,
+          "status": "written",
+          "note": "Adapted to long-form horror arc nguoi-di-dan-mua-tap-01..05 (5 eps)"
         },
         {
           "id": "chiec-khan-trang",

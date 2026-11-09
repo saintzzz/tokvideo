@@ -1,0 +1,98 @@
+{
+  "id": "nguoi-di-dan-mua-tap-04",
+  "arc": "nguoi-di-dan-mua",
+  "arcTitle": "NGƯỜI ĐI ĐÁNH MƯA",
+  "episode": 4,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "nguoi-di-dan-mua-tap-04",
+  "title": "Đêm Bão Gọi Tên Giữa Vực - Ngọn Đèn Không Được Tắt",
+  "description": "Tập 4 arc NGƯỜI ĐI ĐÁNH MƯA: Đêm bão đầu tiên, Tám chèo ra giữa vực gọi tên em ba lần trong khi má nó giữ đèn trên bờ - ngọn đèn tắt là vong lạc luôn. Nhưng trong mưa có tiếng khác gọi tên Tám bằng giọng má nó, và dưới gầm nhà ông Út, cái hũ không tên bắt đầu tự rạn chữ. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #nguoididanhmua",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "gọi tên đêm mưa", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "two men on a small boat in a violent storm on a dark whirlpool at night, one shouting into the rain, a frail old woman holding a tiny oil lamp on the bank, photorealistic horror",
+    "an old woman in rain holding a small oil lamp in a glass bottle on a canal bank at night, the flame nearly out, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "storm-night": "a Vietnamese hamlet canal at night in a violent monsoon storm, torrential rain, a small oil lamp ritual under a stilt house, incense smoke blowing sideways, photorealistic horror",
+    "bank-lantern": "a frail old Vietnamese woman standing on a canal bank at night in heavy rain holding a small oil lamp inside a glass bottle wrapped with banana leaf, photorealistic horror",
+    "boat-storm": "a small wooden boat in the middle of a dark whirlpool at night in a violent storm, two men, black water churning like it is breathing, photorealistic horror",
+    "name-call": "a young man standing on a boat in heavy rain at night shouting a name over black water, mouth open, desperate, photorealistic horror",
+    "net-struggle": "two men straining to pull a heavy fishing net from black churning water at night in a storm, a pale shape and a darker shape tangled in the mesh, photorealistic horror",
+    "house-jars": "a black earthen jar wrapped in rusty wire under a dark stilt house, cracks slowly forming letters on its surface, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Lễ sơ sài trước đêm bão",
+      "text": "Đêm đầu bão, mưa đổ như trút cả cái sông xuống ấp. Ông Út làm lễ sơ sài trước gầm nhà: ba nén nhang, một trái cau, một chén rượu đổ xuống đất cho các vong trong hũ - xin chúng nó đêm nay ở yên. Rồi ông đưa Tám đầu lưới: buộc sợi chỉ đỏ của má con vào đây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bank-lantern",
+      "caption": "Má giữ đèn, Tám cầm lưới",
+      "text": "Cách bố trí thế này: Tám - máu mủ ruột rà - chèo ra giữa vực cùng ông Út, tay giữ đầu lưới. Má Tám đứng trên bờ, tay giữ ngọn đèn dầu đựng trong chai thủy tinh bọc lá chuối - ngọn đèn đó là cái chỗ để vong nhận đường về. Đèn tắt giữa chừng là vong lạc luôn trong màn mưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "storm-night",
+      "caption": "Ba điều căn dặn cuối",
+      "text": "Ông Út căn dặn ba điều cuối trước khi xuống ghe. Một: gọi đúng tên khai sinh của em, ba lần, không hơn không kém. Hai: có nghe gì gọi tên mình thì tuyệt đối không quay đầu, không trả lời - dù giọng đó giống má con tới đâu. Ba: lưới động thì kéo, đừng nhìn vào trong."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boat-storm",
+      "caption": "Nước dưới ghe có nhịp thở",
+      "text": "Ghe lọt vào vực lúc giờ Tý đúng. Nước dưới thân ghe không còn là nước nữa - Tám cảm thấy nó đặc, ấm, và có nhịp, như chèo trên lưng một thứ đang thở. Mưa rơi xuống mặt vực không tạo bọt - nước hút mưa vào luôn, đen như cái hứng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "boat-storm",
+      "caption": "Lưới chìm như được đưa xuống",
+      "text": "Ông Út tung lưới. Tám giữ đầu dây, cảm nhận lưới đi xuống từng nhịp - không phải chìm, mà như được đưa xuống, như có bàn tay nào dưới đó nhận lưới rồi trả lại nhẹ nhàng. Tới lần thứ ba hạ lưới, sợi dây trong tay Tám giật mạnh một cái - rồi đứng im."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "name-call",
+      "caption": "Gọi tên khai sinh ba lần",
+      "text": "Ông Út gật đầu. Tám đứng thẳng giữa mưa, gào lên bằng hết hơi: Huỳnh Văn Hai - về với má, về với anh đi em. Tiếng nó bị mưa nuốt mất nửa. Nó gọi lần hai: Huỳnh Văn Hai - má đứng trên bờ giữ đèn chờ em. Mặt nước quanh ghe bắt đầu chuyển động, những vòng xoáy nhỏ nổi lên khắp nơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "name-call",
+      "caption": "Tiếng má gọi từ bờ",
+      "text": "Giữa lúc nó hít hơi chuẩn bị gọi lần ba - từ phía bờ, có tiếng gọi trả lời. Giọng má nó, rõ từng chữ xuyên qua mưa: Tám ơi, quay lại đây với má. Tim nó đứng lại - má nó đứng cách đó chừng trăm thước, làm sao gọi rõ vậy được. Nó nhớ điều cấm thứ hai, cắn chặt răng, không quay đầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bank-lantern",
+      "caption": "Trên bờ má cũng nghe tiếng gọi",
+      "text": "Nhưng trên bờ, má nó cũng nghe - một giọng khác, giọng thằng Hai, gọi: má ơi, con lạnh quá, má vứt đèn xuống cho con mượn. Bà run cả người, ngọn đèn trong tay chao qua chao lại. May sao ông Út đã dặn bà từ trước: nghe con gọi thì càng phải giữ đèn thẳng - con mình không đòi đèn, con mình chỉ đi theo đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "net-struggle",
+      "caption": "Nước sôi vì nhiều thứ tranh lên",
+      "text": "Tám gọi lần ba, khàn cả cổ: Huỳnh Văn Hai - anh nói về liền. Sợi lưới trong tay nó rung lên bần bật, đầu kia ghe ông Út kéo từng sợi, vừa kéo vừa lầm rầm niệm. Nước sôi lên quanh mạn ghe - không phải sôi vì nóng, mà vì có nhiều thứ đang tranh nhau chui lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-jars",
+      "caption": "Hũ không tên tự rạn chữ",
+      "text": "Cùng lúc đó, dưới gầm nhà sàn cuối ấp - nơi không ai trông - cái hũ không tên quấn dây kẽm gõ ba tiếng mạnh chưa từng có. Dây kẽm đứt phựt một sợi. Trên thân hũ, chỗ đất nhẵn chưa từng khắc gì, một nét chữ từ từ rạn ra, như có ai viết từ bên trong: chữ Huỳnh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "net-struggle",
+      "caption": "Bóng đen nắm cổ tay bóng trắng",
+      "text": "Trên vực, sợi lưới nặng tới mức hai người kéo không nổi. Tám thấy trong mắt lưới ló khỏi mặt nước một bóng trắng - và một bóng đen lớn hơn bám theo sau, tay nắm lấy cổ tay bóng trắng như muốn kéo xuống đổi chỗ. Trên bờ, ngọn đèn trong tay má nó chùng xuống, lửa chỉ còn xanh một đầu que diêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bank-lantern",
+      "caption": "Đèn còn đây, con về đây",
+      "text": "Má Tám đứng giữa mưa, hai tay chắp ngọn đèn vào lòng như chắp đứa con sơ sinh. Bà không khóc nữa, không gọi tên ai nữa - bà chỉ nói nhỏ, đều, từng câu một: đèn còn đây, con về đây, đèn còn đây. Và ngọn lửa xanh tí hon đó, chậm rãi, từng ly từng ly một - vực dậy trở lại."
+    }
+  ]
+}
