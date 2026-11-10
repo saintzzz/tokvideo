@@ -269,7 +269,9 @@
           "locale": "vi",
           "category": "ly-ky",
           "parts": 2,
-          "priority": 75
+          "priority": 75,
+          "status": "written",
+          "note": "Adapted to long-form horror arc den-dau-xanh-tap-01..05 (5 eps)"
         },
         {
           "id": "ma-da-song",
@@ -313,7 +315,9 @@
           "locale": "vi",
           "category": "ly-ky",
           "parts": 1,
-          "priority": 66
+          "priority": 66,
+          "status": "written",
+          "note": "Adapted to long-form horror arc chiec-khan-trang-tap-01..05 (5 eps)"
         },
         {
           "id": "cu-ong-ban-la",

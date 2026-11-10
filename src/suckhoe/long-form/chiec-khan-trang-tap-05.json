@@ -1,0 +1,80 @@
+{
+  "id": "chiec-khan-trang-tap-05",
+  "arc": "chiec-khan-trang",
+  "arcTitle": "CHIẾC KHĂN TRẮNG",
+  "episode": 5,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "chiec-khan-trang-tap-05",
+  "title": "Nấm Mộ Không Bia Sau Vườn - Chiếc Khăn Cuối Cùng Treo Cho Bà Mụ",
+  "description": "Tập 5 arc CHIẾC KHĂN TRẮNG: Đám tang bà nội đông đủ cả làng kéo tới, cụ Chính nói câu ai nghe cũng nghẹn. Sau tang, nhà anh Minh phát hiện nấm mộ không bia lún trong vườn - mộ bà mụ Tám Nước chôn vội mấy chục năm trước. Và lần này, có một chiếc khăn trắng được treo lên cho chính bà. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a fresh white cloth hung on a small new village shrine before a restored grave, incense smoke, morning light, Vietnamese countryside, photorealistic",
+    "a crowded Vietnamese village funeral at an old rural house, mourners in white headbands, warm daylight, photorealistic"
+  ],
+  "scenePrompts": {
+    "funeral-crowd": "a crowded Vietnamese village funeral in the yard of an old rural house, mourners in white headbands, wreaths, daylight, photorealistic",
+    "old-grave": "a sunken unmarked dirt grave hidden in an overgrown backyard of an old Vietnamese house, weeds, photorealistic",
+    "grave-digging": "Vietnamese family clearing weeds around a sunken grave in a backyard, an old carpenter pointing at the spot, daylight, photorealistic",
+    "new-tomb": "a restored grave with a new stone marker beside a small brick shrine in a Vietnamese backyard, incense, daylight, photorealistic",
+    "cloth-for-midwife": "a fresh strip of white cloth tied in a special knot hanging at a small village shrine, incense smoke, warm light, photorealistic",
+    "family-reunion": "a big Vietnamese family reunion at the old house on a death anniversary, crowded table, warm afternoon light, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "funeral-crowd",
+      "caption": "Đám tang đông đủ cả làng kéo tới",
+      "text": "Đám tang bà nội làm trong căn nhà cũ mà đông nghẹt từ trong ra ngoài - chuyện khăn trắng lan khắp làng, người tò mò kéo tới xem, người già kéo tới vì nhớ ra chính mình cũng do tay bà mụ đỡ đẻ. Cả làng hóa ra một nửa là con đỡ của bà mụ Tám Nước, chỉ là sống lâu quên mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-crowd",
+      "caption": "Cụ Chính nói một câu cả nhà nghẹn",
+      "text": "Cụ Chính thợ mộc tới vái trước quan tài, đứng lâu rồi nói một câu khiến cả nhà nghẹn ngào: bà mụ chờ mấy chục năm - không phải chờ ai sợ ma, là chờ một đám tang đông đủ trong chính căn nhà mình. Hôm nay bà ấy có rồi. Người chết không cần nhiều đâu, chỉ cần đông người thôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-grave",
+      "caption": "Nấm mộ đất lún sau vườn",
+      "text": "Sau tang, dọn dẹp lại vườn sau nhà, anh Minh thấy một nấm đất lún hình chữ nhật nấp dưới bụi tre, lâu ngày cỏ mọc phủ không ai để ý. Gọi cụ Chính qua xem, cụ quỳ xuống bới nhẹ lớp cỏ, rồi gật đầu: đây rồi - mộ bà mụ Tám Nước, ngày đó chôn vội không kẻng không bia, mấy chục năm nằm lại đây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave-digging",
+      "caption": "Người đỡ cả làng chôn không bia",
+      "text": "Người đỡ hàng trăm đứa con làng chào đời, đến lúc chết bị chôn vội sau vườn như chôn một gánh nợ - không hương hỏa, không giỗ chạp, cả làng không ai nhớ vị trí ngoài ông thợ may quan tài. Anh Minh đứng nhìn nấm mộ mà thấy nghẹn: hóa ra khăn trắng treo mấy chục năm cũng là để gọi người ta tìm ra chỗ này."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-tomb",
+      "caption": "Cải táng bà mụ, dựng miếu nhỏ",
+      "text": "Nhà anh Minh bàn với làng, đứng ra lo cải táng bà mụ ngay trong vườn - lập bia đàng hoàng, khắc dòng chữ: Bà mụ Tám Nước - người đỡ ba đời con làng. Bên cạnh cất một cái miếu nhỏ. Hương khói ngày rằm mùng một từ đó không đứt, khách vái toàn là những người được bà đỡ ra đời, già cả rồi vẫn tới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cloth-for-midwife",
+      "caption": "Khăn trắng treo cho chính bà",
+      "text": "Ngày cúng nhập miếu, anh Minh đích thân treo một dải vải trắng mới tinh lên miếu bà mụ - thắt đúng kiểu thắt mà cụ Chính còn nhớ. Lần này khăn treo cho chính bà, để bà biết cả làng về đông đủ rồi. Từ đó khăn trắng không bao giờ tự xuất hiện trên xà nhà nữa - người giữ khăn đã được người ta nhớ tên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-reunion",
+      "caption": "Giỗ năm sau nhà lại đông nghẹt",
+      "text": "Năm sau ngày giỗ bà nội, cả họ lại tụ về căn nhà đông như đêm đó - thành truyền thống nhà anh Minh luôn. Anh treo một khăn trắng lên xà bằng tay mình, không phải điềm không phải ma - là tín hiệu mới của nhà này: có khăn là có người cần đông đủ, ai thấy cũng biết đường mà về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cloth-for-midwife",
+      "caption": "Nhà nào cũng cần người nhớ treo khăn",
+      "text": "Người ta bây giờ qua làng kể: nhà nào thấy khăn trắng đừng vội sợ - khăn là tiếng gọi con cháu về kịp, không phải tin báo dữ. Và nhà nào cũng nên có một người nhớ nghề của bà mụ: để mắt coi ai trong nhà sắp mệt, rồi gọi người thân về cho kịp, trước khi quá giờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-reunion",
+      "caption": "Chuyện khăn trắng hết rồi",
+      "text": "Chuyện khăn trắng trên xà tới đây là hết - vì cái đáng sợ không phải khăn, mà là một người già nằm một mình không ai hay. Nhà bạn có người già ở xa không, bao lâu rồi bạn chưa gọi - kể Bà Tư nghe ở bình luận, và hôm nay về gọi cho họ một cuộc nhé."
+    }
+  ]
+}

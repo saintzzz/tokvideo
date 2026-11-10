@@ -1,0 +1,86 @@
+{
+  "id": "den-dau-xanh-tap-03",
+  "arc": "den-dau-xanh",
+  "arcTitle": "BÓNG ĐÈN DẦU XANH",
+  "episode": 3,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "den-dau-xanh-tap-03",
+  "title": "Bức Thư Thú Tội Của Ông Nội - Kẻ Phóng Hỏa Thật Sự Năm Xưa",
+  "description": "Tập 3 arc BÓNG ĐÈN DẦU XANH: Bà Ba lục hòm ông nội mở bức thư giấu mấy chục năm - lời thú tội của người làm chứng dối. Kẻ phóng hỏa kho lúa thật sự không phải ông Canh Đèn. Đêm đó Hai Chình mơ thấy ông già xách đèn đứng giữa bãi, chỉ tay về phía cột đèn cũ đã đổ. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "an old yellowed handwritten letter held by trembling hands beside an oil lamp in a dark Vietnamese house, photorealistic",
+    "a dream scene: an old man holding a lamp standing in a foggy marsh at night pointing toward a fallen wooden post, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "old-trunk": "an old wooden trunk opened in a dim Vietnamese house, a yellowed folded paper held in an old woman's hands, oil lamp light, photorealistic",
+    "night-watch-memory": "flashback: a young Vietnamese man crouching beside a fish sauce pot at night, seeing a distant fire start inside a granary compound, photorealistic",
+    "land-deal": "flashback: a wealthy Vietnamese landlord in silk clothes handing money and land papers to a nervous villager in a dark room, photorealistic",
+    "dream-marsh": "a dreamlike foggy marsh at night, an old man holding an oil lamp standing among reeds, pointing toward a fallen rotten post, blue light, photorealistic horror",
+    "house-night": "inside a small Vietnamese rural house at night, family altar with incense, warm dim lamp light, photorealistic",
+    "elder-house": "a very old Vietnamese man in a dim old house listening gravely, single oil lamp, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "old-trunk",
+      "caption": "Bà Ba mở hòm ông nội",
+      "text": "Đêm đó bà Ba lục cái hòm gỗ ông nội để lại. Dưới đáy hòm, gói trong ba lớp vải ni lông, là một tờ giấy vàng ố viết tay, nét chữ run rẩy của người già. Bà mở ra đọc cho Hai Chình nghe - và hai mẹ con ngồi im tới hết một cây nhang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-trunk",
+      "caption": "Lời thú tội để lại cho đời sau",
+      "text": "Đó là lời thú tội. Ông Ba Chình viết: đêm kho lúa cháy, ông đang thức đêm canh nồi cá kho trên bếp sau nhà. Ông thấy rõ ràng người châm lửa - không phải ông Canh Đèn. Ông thấy rõ ngọn lửa bắt đầu từ trong sân kho, chứ không phải từ ngoài bờ rào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "night-watch-memory",
+      "caption": "Kẻ châm lửa là con trai địa chủ",
+      "text": "Kẻ châm lửa là cậu Hai - con trai địa chủ Ba Ngọc. Thằng cu thua bạc ngập đầu, đêm đó lẻn vào kho đốt sổ nợ ghi tay cha mình cho an ủy, lửa liếm vào rơm khô rồi bùng cả kho lúa. Ông Ba Chình thấy hết từ đầu tới cuối, nấp sau gốc me run không dám kêu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "land-deal",
+      "caption": "Hai sào đất mua một lời chứng dối",
+      "text": "Sáng hôm sau địa chủ Ba Ngọc gọi ông Ba Chình vào nhà lớn. Hai sào đất đầu kinh với một nén bạc đặt trên bàn - đổi lấy một lời chứng: đêm đó ông thấy ông Canh Đèn xách dầu đi ngang kho. Thật ra ông có thấy ông già đó - ông ấy đêm nào cũng đi ngang đó để treo đèn, nhưng ông nội đã nhận đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-trunk",
+      "caption": "Cầm đất mà suốt đời không yên",
+      "text": "Ông nội viết tiếp: cầm hai sào đất đó về nhà mà suốt đời không một đêm ngủ yên, ruộng cấy lên lúa nào ăn cũng thấy đắng. Ông ghi lại tất cả, dặn đời sau - nếu có ngày ai đó hỏi về ông Canh Đèn, ai đó bị cây đèn kéo tới - thì đem sự thật này ra trả cho đúng chủ nợ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Nhưng sự thật trả cho ai",
+      "text": "Hai Chình hỏi má: sự thật này trả cho ai. Địa chủ Ba Ngọc chết đời nào rồi, con cháu bỏ làng đi hết, ông Canh Đèn không vợ không con - trả cho bóng đèn hả. Bà Ba không trả lời được. Chỉ có cụ Năm còn sống biết chuyện, mà cụ cũng đã chín chục."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dream-marsh",
+      "caption": "Đêm đó ông già vào mơ",
+      "text": "Đêm đó Hai Chình mơ. Trong mơ anh đứng giữa bãi tha ma, sương dày tới đầu gối. Ông già xách đèn đứng cách anh mười bước - lần đầu anh thấy rõ mặt ông, gầy, hiền, râu bạc ngắn. Ông không gọi tên nữa, chỉ giơ tay chỉ về phía chân bãi, chỗ một cây cột gỗ đổ nát nằm chìm trong cỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dream-marsh",
+      "caption": "Ông chỉ về phía cột đèn cũ",
+      "text": "Hai Chình muốn đi lại gần hỏi thì tỉnh dậy, người đầm đìa mồ hôi, ngoài trời vừa hửng. Cây cột đổ trong mơ anh nhớ rõ từng vết nứt - như thể ông già muốn anh đi tìm nó bằng được, không phải bằng mơ nữa mà bằng chân thiệt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Cụ Năm nghe xong im rất lâu",
+      "text": "Sáng sớm anh đem tờ thú tội qua nhà cụ Năm. Cụ đọc đi đọc lại ba lần, tay run. Rồi cụ nói: ông Canh Đèn chết không nhắm mắt là đúng rồi - không phải ông giận làng giữa đường mà giận làng mãi - ông ấy đợi ai đó chịu nói thật. Giờ người nói thật đã lên tiếng, dù muộn mấy chục năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Cụ dặn một việc duy nhất",
+      "text": "Cụ Năm cầm tay Hai Chình, dặn một việc duy nhất: cột đèn cũ trong mơ là thiệt - nó đổ ngày dân làng đốn, nằm lại chân bãi tới giờ. Rằm tháng này nước ròng, đi tìm cái cột đó. Tìm được thì mày sẽ biết ông Canh Đèn muốn gì - ông ấy chưa bao giờ muốn làng trả nợ bằng máu."
+    }
+  ]
+}

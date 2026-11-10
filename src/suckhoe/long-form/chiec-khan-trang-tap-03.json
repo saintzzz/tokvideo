@@ -1,0 +1,86 @@
+{
+  "id": "chiec-khan-trang-tap-03",
+  "arc": "chiec-khan-trang",
+  "arcTitle": "CHIẾC KHĂN TRẮNG",
+  "episode": 3,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "chiec-khan-trang-tap-03",
+  "title": "Bà Mụ Tám Nước Đỡ Ba Đời Con Làng - Chết Một Mình Không Ai Đến",
+  "description": "Tập 3 arc CHIẾC KHĂN TRẮNG: Khăn trên xà cứ mỗi đêm thêm một dải, đứa nhỏ khóc đêm chỉ trỏ nói bà kia ngồi xổ tóc. Cụ Chính - thợ mộc già nhất làng, người vào lập liệm cho bà mụ năm xưa - kể nốt phần sự thật mà ông mang tội suốt đời. Rồi đêm đó bà nội đổ bệnh, và khăn trắng phủ kín cả gian nhà. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "many strips of white cloth hanging from every roof beam inside a dark old Vietnamese house at night, a small child pointing up, photorealistic horror",
+    "an old Vietnamese carpenter in a workshop telling a story with a guilty expression, wood shavings, dim light, photorealistic"
+  ],
+  "scenePrompts": {
+    "beam-multi-cloth": "inside a dark old Vietnamese house at night, five or six long white cloth strips hanging from every roof beam, dim moonlight, photorealistic horror",
+    "child-point": "a small Vietnamese child in bed at night pointing up at the dark roof beams, parents alarmed, photorealistic horror",
+    "carpenter-shop": "an old Vietnamese carpenter in his wood workshop, tools and shavings around, telling a story with a heavy face, dusk light, photorealistic",
+    "funeral-memory": "flashback: villagers hurriedly carrying a simple coffin out of an old house at dusk, a white cloth still hanging on the beam inside, photorealistic",
+    "grandma-collapse": "an elderly Vietnamese woman collapsed on a bed at night, family rushing around her, white cloths hanging above, photorealistic horror",
+    "house-night": "inside a small Vietnamese rural house at night, family altar, warm dim light, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "beam-multi-cloth",
+      "caption": "Đêm nào khăn cũng thêm một dải",
+      "text": "Từ đêm bà nội kể chuyện, khăn trên xà không còn hai dải nữa - đêm nào cũng thêm một dải, gấp gáp như ai đang đếm ngược. Không ai gỡ nữa vì lệnh của bà nội, nên gian nhà giờ lúc nào cũng mấy dải vải trắng bay nhè nhẹ trên đầu, đi ngang qua là thấy lạnh gáy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "child-point",
+      "caption": "Đứa nhỏ khóc đêm chỉ lên xà",
+      "text": "Đứa cu con ba tuổi của vợ chồng anh mấy đêm nay hay thức giấc khóc. Đêm đó nó khóc to, chỉ tay lên xà nói lí nhí: bà kia ngồi xổ tóc, bà khóc. Anh Minh ôm con nhìn lên - xà tối thui không thấy gì, nhưng mấy dải khăn đang bay như vừa có người đi ngang qua."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "carpenter-shop",
+      "caption": "Đi hỏi cụ Chính thợ mộc",
+      "text": "Anh Minh đi hỏi cụ Chính - thợ mộc già nhất làng, người hồi xưa sửa chính căn nhà này và là người vào lập liệm cho bà mụ. Cụ Chính nghe hỏi thì buông cái bào xuống, ngồi im một lúc, rồi bảo: chuyện đó tui ôm trong người mấy chục năm, giờ nhà chú ở đó thì tui nói cho hết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "carpenter-shop",
+      "caption": "Khăn không chọn ai chết - khăn gọi người về",
+      "text": "Cụ nói: bà mụ Tám Nước không phải điềm dữ, bà là người nghe được người sắp đi mà báo cho người thân về kịp - nghề bà là nghề đón người, từ đỡ đầu đời tới đỡ lúc cuối đời. Khăn trắng không phải chọn ai để chết. Khăn là cái chuông - kêu con cháu đang ở xa về gấp trước khi quá giờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "funeral-memory",
+      "caption": "Cụ Chính cũng từng tránh mặt bà mụ",
+      "text": "Cụ Chính cúi đầu kể tiếp: hồi đó tui cũng sợ như ai, nghe đồn khăn là điềm nên cũng đi vòng tránh nhà bà. Tới ngày nghe bà mất mới cùng mấy người vào lập liệm - vào nhà thấy khăn trắng treo sẵn trên xà, thắt kiểu bà mụ hằng thắt mỗi lần báo cho cả làng. Bà báo cho chính bà, mà không ai tới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "carpenter-shop",
+      "caption": "Tội của cụ ôm mấy chục năm",
+      "text": "Cụ nói giọng nghẹn: tui may quan tài cho bà mà mấy chục năm không đêm nào quên - người cả đời lo cho người khác ra đi có người tiễn, cuối cùng tự treo khăn cho mình mà cả làng trốn hết. Bà không nguyền ai đâu chú ơi - bà chỉ đang làm nốt cái nghề của bà: gọi người thân về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Anh Minh chợt hiểu khăn đang gọi ai",
+      "text": "Anh Minh về nhà ngồi trầm ngâm. Khăn lên nhiều là đang gấp - mà gấp cho ai. Nhà mình đâu có ai ốm. Rồi anh giật mình nhìn sang phản bà nội - bà vẫn khỏe mạnh nói cười, nhưng bảy mươi mấy tuổi rồi, và bà là người duy nhất còn nhớ bà mụ. Móng tay anh bấm vào nhau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grandma-collapse",
+      "caption": "Đêm đó bà nội ngã xuống",
+      "text": "Đêm đó, đang ngồi khâu áo cho chắt, bà nội bỗng đổ kim, tay buông thõng, người tự từ đổ nghiêng xuống phản - méo miệng, không nói được. Vợ chồng anh hốt hoảng đỡ bà. Và đúng lúc đó, trên xà nhà, khăn trắng hiện ra ào ào - không còn từng dải nữa, mà phủ kín cả gian như ai treo cả chục dải một lúc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "beam-multi-cloth",
+      "caption": "Khăn trắng phủ kín cả gian nhà",
+      "text": "Cả nhà ngước lên nhìn, không ai nói nên lời - hàng chục dải vải trắng từ xà chính tới xà phụ bay phần phật dù nhà kín cửa. Chỉ có bà nội, nằm trên phản miệng méo, mắt nhìn lên đống khăn mà khóe mắt rưng rưng - như bà đã biết ngày này từ lúc nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grandma-collapse",
+      "caption": "Bà nội nói được một câu",
+      "text": "Người ta vốc xe định chở bà đi viện đêm. Bà nội lắc đầu, nắm chặt tay anh Minh, từng chữ lơ láo mà rõ nghĩa: khỏi viện - bà mụ gọi má rồi. Khăn treo nhiều vậy là gấp lắm - điện cho con cháu, đưa hết về đây cho má, về đông đủ đi con. Má muốn ở căn nhà này."
+    }
+  ]
+}

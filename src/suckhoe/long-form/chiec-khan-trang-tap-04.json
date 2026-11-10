@@ -1,0 +1,86 @@
+{
+  "id": "chiec-khan-trang-tap-04",
+  "arc": "chiec-khan-trang",
+  "arcTitle": "CHIẾC KHĂN TRẮNG",
+  "episode": 4,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "chiec-khan-trang-tap-04",
+  "title": "Khăn Trắng Phủ Kín Cả Gian Nhà - Đêm Con Cháu Tứ Xứ Kéo Về",
+  "description": "Tập 4 arc CHIẾC KHĂN TRẮNG: Bà nội từ chối vào viện, chỉ muốn ở lại căn nhà của bà mụ và chờ con cháu tứ xứ về đủ. Mỗi người tới thêm một mạng, khăn trên xà lại thêm một dải - cho tới đêm đông đủ nhất, khi bà nội ngồi dậy được và kể cho cả nhà nghe chuyện bà được bà mụ đỡ ra đời. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a big Vietnamese family crowding into an old rural house at night, motorbikes outside, warm light inside with white cloths hanging from beams, photorealistic",
+    "an elderly Vietnamese woman in bed surrounded by her gathered family at night, peaceful expression, white cloths above, warm lamp light, photorealistic"
+  ],
+  "scenePrompts": {
+    "grandma-bed": "an elderly Vietnamese woman lying on a bed in an old house, family beside her, white cloths hanging on beams above, warm lamp light, photorealistic",
+    "phone-calls": "a Vietnamese man on a phone at night, worried face, white cloth strips hanging in background, photorealistic",
+    "family-arriving": "Vietnamese family members arriving at an old rural house at night with motorbikes and luggage, warm doorway light, photorealistic",
+    "crowded-house": "a crowded old Vietnamese house interior at night, big family gathered around a bed, many white cloths hanging above like banners, warm light, photorealistic",
+    "grandma-sits": "an elderly Vietnamese woman sitting up in bed smiling weakly, telling a story to her gathered family at night, photorealistic",
+    "cloth-release": "dozens of white cloth strips gently detaching from roof beams and settling folded on a table before an altar, dawn light, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "grandma-bed",
+      "caption": "Bà nội khăng khăng không vào viện",
+      "text": "Bà nội nằm liệt một bên nhưng đầu óc tỉnh táo, khăng khăng không vào viện. Bà nói lơ láo: vào viện là má đi xa một mình giữa người lạ - ở đây má thấy rõ đường về, nhà bà mụ là nhà đón người mà. Vợ chồng anh Minh nghe vậy đành chiều, thuê y tá về tận nhà chăm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "phone-calls",
+      "caption": "Điện thoại gọi khắp tứ xứ",
+      "text": "Anh Minh cầm điện thoại gọi suốt đêm: cậu út ở Sài Gòn, dì ba ở Cần Thơ, đứa em họ đi làm tận Hà Nội. Không ai cãi, không ai hẹn - nghe bà nội đổ bệnh và nghe kỳ lạ chuyện khăn trắng, người ta bỏ hết công việc mà về. Chuyện khăn báo về kịp giờ, giờ tới lượt nhà mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-arriving",
+      "caption": "Người về thêm - khăn thêm dải",
+      "text": "Từ chiều hôm đó xe máy nối nhau đỗ kín sân. Người về thêm một mạng là trên xà lại hiện thêm một dải khăn - không ai thấy ai treo, nhưng ai cũng thấy khăn nhiều lên. Chị Hạnh đếm được tới mười lăm dải, mười lăm mạng người trong nhà - thiếu đúng một đứa cháu nội đang chạy xe từ Hà Nội về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "family-arriving",
+      "caption": "Dải khăn cuối cùng đúng lúc cháu về tới",
+      "text": "Nửa đêm đứa cháu nội chạy xe hơn ngàn cây về tới, mệt lả gục đầu bên phản bà nội. Đúng lúc đó dải khăn thứ mười sáu hiện lên xà - đủ hết rồi. Cả nhà nhìn nhau rùng mình vừa sợ vừa lạ kỳ: bà mụ đếm đông đủ rồi mới yên. Khăn không còn thêm nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grandma-sits",
+      "caption": "Bà nội tỉnh dậy ngồi được",
+      "text": "Rồi chuyện kỳ lạ xảy ra: giữa đêm khuya bà nội bỗng tỉnh hẳn, đòi ngồi dậy - người tỉnh táo, miệng hết méo, nói năng rõ ràng như chưa từng đổ bệnh. Người ta gọi là cơn hồi quang, cả nhà hiểu mà không ai nói ra. Bà bảo đun chè, gom con cháu quanh phản - má kể chuyện cho nghe."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "crowded-house",
+      "caption": "Đêm đông đủ nhất của căn nhà",
+      "text": "Đêm đó căn nhà của bà mụ đông nghẹt người như chưa từng có: bốn đời quây quần, đứa nào cũng có mặt. Bà nội kể hồi bà năm tuổi sốt co giật, bà mụ Tám Nước chạy đêm mưa qua ôm, nằm cạnh ba ngày ba đêm cứu sống bà. Kể xong bà nói: mạng má là bà mụ cho - nợ tới giờ mới trả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "crowded-house",
+      "caption": "Nhà đón người cuối cùng cũng đông đủ",
+      "text": "Bà nội nói tiếp, giọng bình thản: nhà này là nhà đón người - đón lúc chào đời bằng tay bà mụ, đón lúc ra đi bằng khăn trắng. Bà mụ chết một mình trong nhà đông người nhất làng mà không có ai, nên bà ấy ở lại chờ - chờ có một nhà nào đó chịu hiểu khăn là gì, chịu tụ về đông đủ một lần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grandma-sits",
+      "caption": "Cám ơn bà mụ - má về đông đủ rồi",
+      "text": "Nói tới đó gió đêm lùa vào, mười sáu dải khăn trắng cùng bay nhẹ như chào. Bà nội ngước lên xà, mỉm cười nói rõ ràng vào khoảng tối trên đầu: cám ơn bà mụ nhiều - má về đông đủ rồi, có người tiễn rồi, bà mụ yên đi. Rồi bà nằm xuống, nắm tay đứa cháu nội, nhắm mắt như ngủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grandma-bed",
+      "caption": "Bà nội ra đi lúc gần sáng",
+      "text": "Bà nội ra đi lúc gần sáng, mặt bình yên, có cả nhà quanh mình - không đau đớn, không lẻ loi, đúng cái kiểu ra đi mà cả đời bà mụ lo cho người ta. Người trong nhà này mấy chục năm qua đầu tiên lại có người tiễn. Và đó cũng là điều bà mụ Tám Nước tự tay treo khăn để đợi mà không được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cloth-release",
+      "caption": "Khăn tự rời xuống xếp gọn trước bàn thờ",
+      "text": "Lúc tang bắt đầu, cả nhà chứng kiến điều cuối cùng: mười sáu dải khăn trên xà cùng tự rời xuống, không bay loạn mà từ từ hạ xuống, xếp gọn thành một chồng trắng ngay ngắn trước bàn thờ bà nội - như bà mụ trả lại khăn cho một nhà có tang thật, nghề của bà tới đây là xong."
+    }
+  ]
+}

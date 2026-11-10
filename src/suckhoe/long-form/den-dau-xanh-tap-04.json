@@ -1,0 +1,87 @@
+{
+  "id": "den-dau-xanh-tap-04",
+  "arc": "den-dau-xanh",
+  "arcTitle": "BÓNG ĐÈN DẦU XANH",
+  "episode": 4,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "den-dau-xanh-tap-04",
+  "title": "Chiếc Đèn Đồng Dưới Bãi Lầy - Thư Của Ông Canh Đèn Sau Bốn Chục Năm",
+  "description": "Tập 4 arc BÓNG ĐÈN DẦU XANH: Đêm rằm Hai Chình một mình vào bãi tìm cột đèn cũ. Ngọn lửa xanh dẫn đường anh tới chiếc đèn đồng chôn dưới gốc cột - bên trong là lá thư ông Canh Đèn để lại bốn chục năm trước, và một lời nhắn khiến cụ Năm phải khóc. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a Vietnamese man kneeling in a dark marsh at night digging mud with bare hands, a blue flame hovering above lighting the spot, photorealistic horror",
+    "an old brass oil lamp half-buried in black mud, a small blue flame still on its wick, fog, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "marsh-night": "a dark marsh at night under a full moon, tall reeds, black water, thick fog, photorealistic horror",
+    "guided-path": "a blue-green flame floating ahead of a Vietnamese man walking on a muddy path through a dark marsh at night, photorealistic horror",
+    "fallen-post": "a rotten fallen wooden post half-sunk in marsh mud at night, moonlight, reeds around, photorealistic horror",
+    "digging-lamp": "a young Vietnamese man kneeling digging mud with his hands uncovering an old brass oil lamp, blue flame light, photorealistic horror",
+    "letter-lamp": "close up of hands unrolling a small wrapped paper from inside an old brass lamp, oil lamp and blue flame light, photorealistic",
+    "elder-cry": "a very old Vietnamese man crying silently holding a yellowed letter, single oil lamp, dim house, photorealistic",
+    "dinh-yard": "a Vietnamese communal dinh yard at night, a blue flame hovering in the empty middle of the yard, villagers watching from afar, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "marsh-night",
+      "caption": "Đêm rằm nước ròng vào bãi",
+      "text": "Đêm rằm nước ròng, Hai Chình một mình đi vào bãi tha ma. Lần này không sợ nữa - anh mang theo cuốc, đèn pin, và tờ thú tội của ông nội bọc kỹ trong áo. Mặt trăng soi bãi lau xám bạc. Anh vừa bước qua mấy nấm mộ đầu tiên thì ngọn lửa xanh hiện ra, bay lại gần, rồi đi trước mặt anh chừng ba bước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "guided-path",
+      "caption": "Nó không dọa - nó dẫn đường",
+      "text": "Bóng đèn không dọa anh. Nó dẫn đường. Chỗ nào đất cứng nó bay thẳng, chỗ nào lầy nó vòng qua, thỉnh thoảng dừng lại chờ anh theo kịp. Đi mấy chục năm mới hiểu ra một điều cả làng hiểu sai: cái bóng đèn này chưa từng hại ai - nó chỉ làm đúng việc ông Canh Đèn làm khi còn sống, là dẫn người qua bãi cho lành."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "fallen-post",
+      "caption": "Cây cột đổ trong mơ là thiệt",
+      "text": "Tới chân bãi, ngọn lửa dừng lại trên một khúc gỗ mục nằm chìm trong cỏ - cây cột đèn cũ bị đốn năm xưa, y hệt trong giấc mơ từng vết nứt. Ngọn lửa lượn ba vòng quanh khúc cột rồi hạ thấp xuống gốc, chớp nhẹ ba lần, như nói: đào ở đây."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging-lamp",
+      "caption": "Chiếc đèn đồng còn đầy dầu",
+      "text": "Hai Chình quỳ xuống cuốc. Lầy đen bốc mùi, tay anh trầy hết. Sâu chừng một gang, mũi cuốc chạm vào thứ gì cứng - một chiếc đèn đồng xanh đen, nắp vặn còn nguyên. Anh mở nắp ra run rẩy: dầu trong đèn vẫn đầy tới miệng sau bốn chục năm, và trên cây bấc khô quéo ấy có một đốm lửa xanh tí hon đang cháy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "letter-lamp",
+      "caption": "Cuộn giấy trong thân đèn",
+      "text": "Trong bụng đèn, cất dưới bầu dầu, là một cuộn giấy gói ba lớp lá chuối khô quấn dây. Hai Chình ngồi ngay giữa bãi, dưới ánh trăng và ánh lửa xanh đứng chờ, mở ra đọc. Nét chữ vuông vức của một người ít học nhưng viết cẩn thận - thư của ông Canh Đèn, viết đêm cuối cùng ông còn treo đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "letter-lamp",
+      "caption": "Tôi biết tôi bị oan",
+      "text": "Ông viết: tôi biết tôi bị oan, cũng biết ai làm - nhưng tôi già rồi, không đất không người thân, mở miệng chỉ thêm đổ máu trong làng. Tôi chỉ tiếc một thứ là ngọn đèn. Đường bãi này đêm nguy hiểm lắm, đã có người chết lầy vì tối. Lỡ ai chết vì đường tối thì tội đó lớn hơn nỗi oan của tôi nhiều."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "letter-lamp",
+      "caption": "Xin ai đó treo lại ngọn đèn",
+      "text": "Đoạn cuối ông viết: cây đèn này tôi trả lại cho làng. Ai tìm được xin treo nó lại lên cột cũ, đổ đầy dầu, đừng để nó tắt - coi như tôi còn đi canh đường thêm chút nữa. Còn chuyện oan ức, trời biết là đủ. Người làm chứng dối cũng là người nghèo bị tiền mua, tôi không giận ông ta đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "guided-path",
+      "caption": "Lửa xanh dẫn anh về tới bờ",
+      "text": "Hai Chình ôm chiếc đèn đứng giữa bãi mà khóc. Cả đời ông già bị cả làng quay lưng, chữ cuối cùng ông để lại lại là chữ tha thứ. Anh cẩn thận bọc đèn vào áo, đi về - ngọn lửa xanh đi trước dẫn đường như dẫn một đứa cháu, tới tận mé bờ mới tắt trong ánh hửng đông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-cry",
+      "caption": "Cụ Năm đọc thư rồi khóc",
+      "text": "Cụ Năm đọc lá thư xong ngồi im một lúc lâu rồi khóc - chín chục tuổi rồi mới khóc lại được. Cụ nói: hóa ra ông ấy biết hết, biết cả người làm chứng dối là ai, mà vẫn thương ông ta là người nghèo bị mua. Tội của làng mình không phải đuổi một người - là đuổi một người tốt hơn cả làng mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dinh-yard",
+      "caption": "Bóng đèn xanh đứng giữa sân đình",
+      "text": "Tin chiếc đèn tìm được lan ra cả ấp. Cụ Năm quyết định phải họp bà con - phải trả. Đêm trước ngày họp, chuyện chưa từng có xảy ra: bóng đèn xanh rời khỏi bãi, bay vào tận trong ấp, đứng yên giữa sân đình một khắc trước mặt mấy chục người đang chực nhìn, rồi mới từ từ bay về - như ông Canh Đèn đích thân tới nghe xem làng định làm gì."
+    }
+  ]
+}

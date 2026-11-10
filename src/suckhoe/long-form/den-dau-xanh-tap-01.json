@@ -1,0 +1,86 @@
+{
+  "id": "den-dau-xanh-tap-01",
+  "arc": "den-dau-xanh",
+  "arcTitle": "BÓNG ĐÈN DẦU XANH",
+  "episode": 1,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "den-dau-xanh-tap-01",
+  "title": "Ngọn Lửa Xanh Trên Bãi Tha Ma - Ba Lần Chớp Là Nó Gọi Tên",
+  "description": "Tập 1 arc BÓNG ĐÈN DẦU XANH: Ấp Bãi Cau đêm nào cũng thấy ngọn lửa xanh lơ lửng trên bãi tha ma cũ, dân làng truyền ba điều cấm ai cũng thuộc lòng. Hai Chình cày khuya đi tắt qua bãi, thấy ngọn lửa dừng lại chớp ba lần - rồi nghe tiếng ông già gọi đúng tên mình. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a ghostly blue-green flame hovering low over a dark flooded marsh at night, fog, a faint silhouette of an old man holding a lamp behind the flame, photorealistic horror",
+    "a Vietnamese man on a muddy path between tall reeds at night looking back over his shoulder at a distant blue flame, moonlight, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "marsh-dusk": "a wide marshy field behind a Vietnamese hamlet at grey dusk, old unmarked graves on a far mound, reeds and still black water, ominous calm, photorealistic",
+    "village-lane": "a dirt lane in a poor Vietnamese hamlet at dusk, small houses with warm oil lamps, banana trees, photorealistic",
+    "tractor-home": "an old Vietnamese walking tractor with headlight on a narrow dirt path at night, tired young driver, fields on both sides, photorealistic",
+    "blue-light-far": "a distant blue-green flame floating low over a dark marsh at night seen from a dirt path, thick fog, photorealistic horror",
+    "blue-light-close": "a blue-green flame hovering at eye level over black marsh water, its reflection showing a standing old man holding a lamp though the bank is empty, photorealistic horror",
+    "house-night": "inside a small Vietnamese rural house at night, a family altar with incense, warm dim lamp light, a worried old mother, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "marsh-dusk",
+      "caption": "Ấp Bãi Cau cuối con kênh Lớn",
+      "text": "Ấp Bãi Cau nằm cuối con kênh Lớn, muốn ra đồng phải đi ngang một bãi đất trống đầy lau sậy. Bãi đó xưa là nghĩa địa, lâu quá không ai nhớ mộ nhà nào nữa, cỏ mọc lấp hết bia. Dân ấp gọi nó đơn giản là bãi tha ma, và đường tắt qua bãi là đường ngắn nhất về nhà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-lane",
+      "caption": "Đêm nào bãi cũng có ngọn lửa xanh",
+      "text": "Chuyện lạ ở đây không phải mộ, mà là lửa. Đêm nào trời cũng có một ngọn lửa xanh lơ lửng trên bãi, bay thấp ngang đầu lau, lúc đi nhanh lúc đứng yên như có người xách đèn dạo. Người ta gọi nó là đèn dầu xanh. Cả ấp đều thấy, nhưng không ai nhắc tới ngoài ban ngày."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-lane",
+      "caption": "Ba điều cấm truyền từ đời nào",
+      "text": "Dân ấp truyền nhau ba điều cấm từ đời nào không nhớ. Một: thấy lửa xanh thì đi đường khác, đừng bao giờ đi theo. Hai: nếu nó chớp ba lần liên tiếp thì đứng im, đừng trả lời bất cứ tiếng nào. Ba: đừng cúi nhìn cái bóng nó in xuống nước - vì bóng nó và nó không phải một thứ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "tractor-home",
+      "caption": "Hai Chình cày thuê tới khuya",
+      "text": "Hai Chình làm nghề cày thuê, chiếc máy cày cũ đèn trước vàng đục. Đêm đó anh cày cho ruộng nhà ông Sáu bên kia bãi tới gần giờ Hợi mới xong. Đường vòng qua cầu xa gần hai cây số, đường tắt qua bãi chỉ mấy trăm thước. Mệt quá, anh tắt máy, định đạp xe đạp đi bộ qua cho nhanh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "blue-light-far",
+      "caption": "Ngọn lửa bay ngang qua mặt lau",
+      "text": "Vừa vào bãi chưa đầy một khúc, anh thấy nó. Ngọn lửa xanh như đầu đũa, bay lững thững ngang qua mặt lau cách anh chừng ba chục thước. Không gió mà nó nghiêng, không chân mà nó đi. Hai Chình đứng lại, nín thở - ngọn lửa cũng dừng, như đang quay đầu nhìn anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "blue-light-close",
+      "caption": "Nó chớp ba lần rồi gọi tên",
+      "text": "Rồi nó chớp. Một lần. Hai lần. Ba lần - y như điều cấm thứ hai. Hai Chình đứng cứng, miệng khô, trong đầu chỉ còn một ý nghĩ: đừng trả lời. Thì từ phía ngọn lửa, một giọng ông già khàn khàn gọi vọng qua bãi, rõ từng chữ: Hai Chình ơi - Hai Chình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "blue-light-close",
+      "caption": "Bóng dưới nước không giống trên bờ",
+      "text": "Anh không trả lời, nhưng phạm phải điều cấm thứ ba: anh cúi nhìn xuống vũng nước đọng dưới chân. Trên bãi chỉ có một ngọn lửa trôi. Dưới nước, cái bóng in lại là một ông già đứng thẳng, tay xách cây đèn dầu, đầu hơi cúi như đang dòm mặt anh từ dưới lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "tractor-home",
+      "caption": "Chạy mất cả chiếc dép",
+      "text": "Hai Chình quăng luôn xe đạp, chạy một hơi về tới đầu ấp, mất cả chiếc dép trong bãi. Gió đêm lùa sau gáy mà anh cứ nghe tiếng gọi tên mình đuổi theo, nghe gần ngay bên tai rồi lại xa xăm như từ đáy giếng vọng lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Má nghe xong chỉ lặng lẽ thắp nhang",
+      "text": "Về tới nhà anh gọi cửa dồn dập. Má anh - bà Ba - mở cửa thấy mặt con trắng bệch thì hỏi. Anh kể hết. Bà Ba không mắng, không hỏi thêm, chỉ lặng lẽ rút ba cây nhang cắm lên bàn thờ, vái rất lâu, rồi dặn một câu duy nhất: từ mai đừng bao giờ đi tắt qua bãi nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Tiếng gõ cửa ba lần",
+      "text": "Đêm đó Hai Chình không ngủ. Tới lúc gà xướng canh ba, anh nghe rõ tiếng gõ lên cánh cửa gỗ - ba tiếng, cách đều, nhẹ nhàng kiên nhẫn như người quen ghé thăm. Anh nằm im ôm chăn tới sáng. Hỏi má, bà Ba nói bà không nghe gì hết, nhưng nhang trên bàn thờ đêm đó cháy ngọn xanh."
+    }
+  ]
+}

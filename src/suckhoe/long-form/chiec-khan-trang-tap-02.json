@@ -1,0 +1,86 @@
+{
+  "id": "chiec-khan-trang-tap-02",
+  "arc": "chiec-khan-trang",
+  "arcTitle": "CHIẾC KHĂN TRẮNG",
+  "episode": 2,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "chiec-khan-trang-tap-02",
+  "title": "Bà Nội Vừa Vào Sân Đã Tái Mặt - Cấm Ai Gỡ Khăn Trên Xà",
+  "description": "Tập 2 arc CHIẾC KHĂN TRẮNG: Bà nội từ quê lên, vừa bước vào sân đã đứng sững nhìn cây xà chính rồi ra lệnh cấm tuyệt đối - vì bà sinh ra và lớn lên ở làng này, và căn nhà này ngày xưa là nhà của bà mụ Tám Nước, người đỡ đẻ cho ba đời con làng. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "an elderly Vietnamese woman standing frozen in a yard looking up at the roof beam of an old house, face pale, photorealistic",
+    "flashback: an old Vietnamese midwife in dark clothes hanging a white cloth on a house beam at night, oil lamp, photorealistic"
+  ],
+  "scenePrompts": {
+    "grandma-arrives": "an elderly Vietnamese woman with a cloth bag standing in the yard of an old rural house looking up at the roof in shock, morning light, photorealistic",
+    "beam-cloth": "inside a dark old Vietnamese house, two strips of white cloth hanging from the main roof beam, photorealistic horror",
+    "yard-talk": "an elderly Vietnamese woman sitting on a wooden bench in a yard telling a story to her son's family, dusk, photorealistic",
+    "midwife-memory": "flashback: an old Vietnamese midwife in dark traditional clothes carrying a cloth bag through a village at night, oil lamp, photorealistic",
+    "white-signal": "flashback: a white cloth hanging on a village house beam at night, neighbors hurrying toward the house with lanterns, photorealistic",
+    "midwife-alone": "flashback: an old midwife lying alone on a bed in a dark house, a white cloth already hung on the beam above her, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "grandma-arrives",
+      "caption": "Bà nội vừa vào sân đã đứng sững",
+      "text": "Trưa hôm sau bà nội lên tới. Bà chưa kịp đặt túi xách đã đứng sững giữa sân, mắt dán lên mái nhà. Bà đi thẳng vào trong, ngước nhìn cây xà chính rất lâu, rồi quay ra hỏi vợ chồng anh Minh một câu duy nhất: khăn lên mấy dải rồi. Anh đáp hai dải. Bà nội mặt trắng bệch ngồi phịch xuống ghế."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grandma-arrives",
+      "caption": "Lệnh cấm tuyệt đối của bà nội",
+      "text": "Bà nội nắm tay anh Minh, nói từng chữ nặng như đóng đinh: cấm tuyệt đối - không ai được đụng cây xà, không ai được gỡ khăn, càng cấm đốt. Cháu đốt một dải rồi là đã phạm rồi, may là khăn này hiền. Rồi bà bảo đun nước pha trà - chuyện này kể cho con cháu nghe, kể hết thì mới hiểu vì sao."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "yard-talk",
+      "caption": "Bà nội sinh ra ở làng này",
+      "text": "Bà nội kể: bà sinh ra và lớn lên ở cái làng này, mãi tới khi đi lấy chồng mới về quê ngoại. Căn nhà này ngày xưa không phải nhà thường - là nhà của bà mụ Tám Nước, người đỡ đẻ cho ba đời con làng. Chính bà nội cũng do tay bà mụ đỡ ra đời, hồi đó mẹ bà đẻ ngả nước tưởng chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midwife-memory",
+      "caption": "Bà mụ Tám Nước đỡ ba đời con làng",
+      "text": "Bà mụ Tám Nước không chồng không con, sống một mình trong căn nhà này, đêm nào cũng có thể bị gọi đi đỡ đẻ. Tay bà đỡ hàng trăm đứa nhỏ chào đời - đứa nào khó đẻ nhất làng cũng mang tới bà. Người ta nói bà có cái tai lạ: nghe được tiếng xương người già kêu mỏi trước khi họ ngã bệnh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "white-signal",
+      "caption": "Khăn trắng là tín hiệu gọi người thân",
+      "text": "Hồi đó không có điện thoại, người già nằm liệt con cháu đi làm xa không hay. Mỗi lần bà mụ nghe được nhà nào có người sắp đi, bà treo một dải vải trắng lên xà nhà mình - dân làng quen mắt, thấy khăn là biết có người sắp qua đời, chạy đi báo nhà đó gọi con cháu về cho kịp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "white-signal",
+      "caption": "Nhờ khăn đó biết bao người kịp về",
+      "text": "Nhờ cái khăn đó mà biết bao nhà kịp giờ: ông nọ đang cày được gọi về gặp cha lần cuối, bà kia có con trai từ Sài Gòn chạy về vừa kịp lời trăn trối. Khăn trắng không phải điềm chết - khăn trắng là cái loa của bà mụ, gọi người thân về tụ họp trước khi quá giờ, để người ra đi không lẻ loi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "yard-talk",
+      "caption": "Nhưng dân tình đồn ngược",
+      "text": "Vậy mà dân tình lâu ngày đồn ngược. Người ta quên mất khăn treo là để báo, chỉ nhớ mỗi việc thấy khăn là có người chết - rồi sợ bà mụ, đồn bà biết trước cái chết, đồn nhìn lâu khăn là khăn nhìn lại. Người đỡ hàng trăm đứa chào đời, cuối đời bị coi như điềm dữ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midwife-alone",
+      "caption": "Bà mụ đau nằm một mình",
+      "text": "Rồi bà mụ già yếu, đau nằm liệt trong chính căn nhà này. Trên xà nhà bà hiện lên một dải khăn trắng - lần đầu tiên và cuối cùng, khăn treo cho chính bà. Nhưng làng thì sợ, đi đường vòng tránh hết. Không ai vào thăm, không ai gọi ai về - vì người hiểu khăn nhất là chính bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "midwife-alone",
+      "caption": "Khăn treo cho chính mình mà không ai tới",
+      "text": "Bà mụ chết một mình trong nhà, mấy ngày sau hàng xóm thấy im quá mới dám vào - trên xà khăn trắng vẫn treo nguyên. Người đời đỡ cả làng kịp giờ đoàn viên, đến lượt mình thì không một ai bên cạnh. Người ta chôn bà vội sau vườn, không kẻng không bia, rồi căn nhà bỏ không từ đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "beam-cloth",
+      "caption": "Ai ở cũng thấy khăn, ai cũng chạy",
+      "text": "Bà nội nói tới đó thì nghẹn: từ đó ai vào ở cũng thấy khăn trên xà - tưởng điềm dữ bỏ chạy hết, nhà hoang mấy chục năm. Nhưng con à, khăn không phải điềm - khăn vẫn làm đúng việc bà mụ làm cả đời: báo cho người thân về kịp. Đêm đó hai dải khăn trên xà, như ai đó đang gấp."
+    }
+  ]
+}

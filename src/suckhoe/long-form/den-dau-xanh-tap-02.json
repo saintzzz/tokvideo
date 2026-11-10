@@ -1,0 +1,86 @@
+{
+  "id": "den-dau-xanh-tap-02",
+  "arc": "den-dau-xanh",
+  "arcTitle": "BÓNG ĐÈN DẦU XANH",
+  "episode": 2,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "den-dau-xanh-tap-02",
+  "title": "Ông Canh Đèn Giữ Đèn Ba Mươi Năm - Bị Đuổi Khỏi Làng Vì Vụ Cháy Kho",
+  "description": "Tập 2 arc BÓNG ĐÈN DẦU XANH: Sau đêm gặp lửa xanh Hai Chình phát bệnh, má anh đành dẫn đi gặp cụ Năm - người cuối cùng còn nhớ chuyện ông Canh Đèn, người ba mươi năm treo đèn soi đường qua bãi rồi bị cả làng đuổi đi vì vụ cháy kho lúa nhà địa chủ. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a very old Vietnamese man in a dark rural house speaking under a single oil lamp, deep wrinkles, solemn eyes, photorealistic",
+    "a young sick Vietnamese man lying on a wooden bed covered with a blanket at night, a blue flame glow coming through the window, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "house-night": "inside a small Vietnamese rural house at night, a family altar with incense, warm dim lamp light, photorealistic",
+    "sick-bed": "a young Vietnamese man lying feverish on a wooden bed at night, wet cloth on forehead, blue light glowing through a small window, photorealistic horror",
+    "elder-house": "a very old Vietnamese man sitting on a wooden chair in a dim old house, betel tray beside him, single oil lamp, deep shadow, photorealistic",
+    "lamppost-memory": "flashback: an old Vietnamese man hanging an oil lamp on a wooden post at the edge of a dark marsh at dusk, warm flame, misty fields, photorealistic",
+    "burnt-granary": "flashback: a burning thatched granary at night in a Vietnamese village, villagers carrying water buckets, orange flames against black sky, photorealistic",
+    "marsh-dawn": "a foggy marsh at dawn, an old man lying still among the reeds still holding a lamp post, cold grey light, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "sick-bed",
+      "caption": "Sáng hôm sau Hai Chình đổ bệnh",
+      "text": "Sáng hôm sau Hai Chình dậy không nổi. Người lạnh ngắt mà mồ hôi ướt đẫm, cứ nhắm mắt là thấy ngọn lửa xanh lượn trước mặt. Má chườm khăn, nấu cháo trứng, anh nuốt không vô. Tới trưa người hàng xóm sang chơi nói một câu làm bà Ba rớt cái thìa: đêm qua bà ta thấy bóng đèn xanh lượn quanh bờ rào nhà mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Bà Ba dẫn con đi gặp cụ Năm",
+      "text": "Chiều đó bà Ba đỡ con dậy, dắt qua nhà cụ Năm - cụ chín mươi hai tuổi, người cuối cùng trong ấp còn nhớ chuyện bãi tha ma từ hồi nó chưa là nghĩa địa. Cụ Năm nghe Hai Chình kể xong không ngạc nhiên, chỉ múc nước lạnh rửa mặt cho anh, rồi hỏi đúng một câu: nó gọi mày bằng tên thiệt hả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lamppost-memory",
+      "caption": "Ông Canh Đèn treo đèn ba mươi năm",
+      "text": "Cụ kể: ngày xưa bãi đó là đường tắt duy nhất qua đồng, đêm tối trời người ta hay sặc lầy, có người chết ngập không ai hay. Có ông Canh Đèn - không ai biết tên thiệt - đêm nào cũng treo cây đèn dầu lên cột trước bãi cho người đi đường. Ba mươi năm trời, mưa gió tết tịt gì cũng không tắt một đêm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lamppost-memory",
+      "caption": "Nhờ cây đèn đó biết bao người thoát chết",
+      "text": "Nhờ cây đèn đó mà biết bao người đi khuya thoát sặc lầy - thấy đèn là thấy bờ. Người ta mang khoai, mang gạo qua biếu, ông không nhận, chỉ xin tí dầu đổ thêm vào đèn. Ông ở một mình trong cái chòi cuối bãi, không vợ không con, cả đời chỉ có cái nghề giữ đèn tự đặt ra cho mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "burnt-granary",
+      "caption": "Đêm kho lúa nhà địa chủ cháy rụi",
+      "text": "Rồi một đêm kho lúa nhà địa chủ Ba Ngọc cháy rụi. Đúng lúc đó có người làm chứng thấy ông Canh Đèn xách thùng dầu đi ngang kho - người giữ đèn thì đêm nào chả xách dầu, nhưng dân làng đói ăn, địa chủ nổi giận, cần một cái cổ để trút. Ông Canh Đèn bị quy là kẻ phóng hỏa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "burnt-granary",
+      "caption": "Cả làng đuổi ông đi",
+      "text": "Họp làng, người ta đuổi ông đi, cấm ông đặt chân lại. Ông không chữa, không khóc, chỉ nói một câu trước khi đi: đèn tắt là có người chết lầy, để tôi treo nốt đêm nay. Không ai nghe. Cột đèn bị đốn, cây đèn đồng bị quăng xuống sông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lamppost-memory",
+      "caption": "Ông vẫn lẻn về treo đèn",
+      "text": "Nhưng đêm nào người ta cũng thấy lại có đèn trước bãi. Ông Canh Đèn lẻn về, treo đèn xong lại đi. Bị đuổi vẫn cứ lo cho đường đi của kẻ đuổi mình. Rồi một sáng sương mù, người đi cấy sớm thấy ông nằm cứng trong bãi lầy, tay vẫn nắm chặt cột đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "marsh-dawn",
+      "caption": "Tim đèn cạn mà lửa vẫn xanh",
+      "text": "Chuyện rợn ở chỗ này: cây đèn ông cầm theo đã cạn dầu khô queo, bấc cháy hết - mà trên tim nó vẫn còn một đốm lửa xanh cháy bập bùng. Người ta chôn ông vội ngoài bìa bãi, không bia không giỗ. Từ đêm đó tới nay, lửa xanh hiện ra đều đặn, ai cũng bảo ông Canh Đèn vẫn đi trông đường."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Cụ Năm ngừng lại nhìn Hai Chình",
+      "text": "Cụ Năm kể tới đó thì ngừng, mồi trầu, nhìn Hai Chình rất lâu. Rồi cụ nói chậm rãi: bóng đèn mấy chục năm nay chưa bao giờ gọi tên ai - nó chỉ đi trước hoặc đứng yên. Nó gọi tên mày, nghĩa là nó có việc với nhà mày. Mà chuyện năm đó, nhà mày không phải người ngoài đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Ông nội là người làm chứng năm đó",
+      "text": "Về tới nhà bà Ba mới mở miệng, giọng run: người đứng ra làm chứng thấy ông Canh Đèn xách dầu ngang kho lúa năm đó - chính là ông nội của Hai Chình, ông Ba Chình. Ông nội mất đã mười mấy năm, nhưng trước khi đi ông có giấu lại một thứ trong hòm, dặm má anh tuyệt đối đừng mở."
+    }
+  ]
+}

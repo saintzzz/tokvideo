@@ -55,6 +55,16 @@ import nguoiDiDanMuaTap02 from "./nguoi-di-dan-mua-tap-02.json";
 import nguoiDiDanMuaTap03 from "./nguoi-di-dan-mua-tap-03.json";
 import nguoiDiDanMuaTap04 from "./nguoi-di-dan-mua-tap-04.json";
 import nguoiDiDanMuaTap05 from "./nguoi-di-dan-mua-tap-05.json";
+import denDauXanhTap01 from "./den-dau-xanh-tap-01.json";
+import denDauXanhTap02 from "./den-dau-xanh-tap-02.json";
+import denDauXanhTap03 from "./den-dau-xanh-tap-03.json";
+import denDauXanhTap04 from "./den-dau-xanh-tap-04.json";
+import denDauXanhTap05 from "./den-dau-xanh-tap-05.json";
+import chiecKhanTrangTap01 from "./chiec-khan-trang-tap-01.json";
+import chiecKhanTrangTap02 from "./chiec-khan-trang-tap-02.json";
+import chiecKhanTrangTap03 from "./chiec-khan-trang-tap-03.json";
+import chiecKhanTrangTap04 from "./chiec-khan-trang-tap-04.json";
+import chiecKhanTrangTap05 from "./chiec-khan-trang-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -154,4 +164,25 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   nguoiDiDanMuaTap03,
   nguoiDiDanMuaTap04,
   nguoiDiDanMuaTap05,
+  // Horror arc 9 (backlog C: den-dau-xanh): "Bong den dau xanh" - a
+  // marsh ghost-light that turns out to be a lamplighter banished for a
+  // granary fire he did not set, still guarding the night crossing.
+  // Twist at tap 3: the protagonist's own grandfather was the false
+  // witness; tap 4 unearths the lamplighter's letter forgiving him -
+  // the arc turns from haunting into debt-and-atonement.
+  denDauXanhTap01,
+  denDauXanhTap02,
+  denDauXanhTap03,
+  denDauXanhTap04,
+  denDauXanhTap05,
+  // Horror arc 10 (backlog C: chiec-khan-trang): "Chiec khan trang" -
+  // a white cloth that keeps reappearing on the main roof beam is not a
+  // death omen but a midwife's lifelong signal to gather family before
+  // a passing. Twist at tap 3: the cloth calls the living home, it does
+  // not mark the dying - the arc turns from omen-fear into gratitude.
+  chiecKhanTrangTap01,
+  chiecKhanTrangTap02,
+  chiecKhanTrangTap03,
+  chiecKhanTrangTap04,
+  chiecKhanTrangTap05,
 ] as LongFormEpisode[];

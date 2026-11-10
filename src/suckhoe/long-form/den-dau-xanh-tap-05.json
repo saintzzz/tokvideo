@@ -1,0 +1,86 @@
+{
+  "id": "den-dau-xanh-tap-05",
+  "arc": "den-dau-xanh",
+  "arcTitle": "BÓNG ĐÈN DẦU XANH",
+  "episode": 5,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "den-dau-xanh-tap-05",
+  "title": "Đêm Lửa Xanh Đổi Màu Vàng - Làng Trả Danh Dự Cho Người Giữ Đèn",
+  "description": "Tập 5 arc BÓNG ĐÈN DẦU XANH: Giữa sân đình, bà Ba đứng ra đọc lời thú tội của ông nội trước cả làng. Làng lập lại cột đèn và miếu thờ ông Canh Đèn - và đêm cúng đó, trước mắt cả trăm người, ngọn lửa xanh lần cuối đổi sang màu vàng rồi tắt hẳn. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a Vietnamese village crowd at night watching a small blue flame transform into warm golden light above a new wooden lamppost, photorealistic",
+    "a small village shrine beside a lamppost at dusk with a warm oil lamp burning, incense smoke, peaceful countryside, photorealistic"
+  ],
+  "scenePrompts": {
+    "dinh-meeting": "a Vietnamese communal dinh yard at dusk full of villagers seated on the ground, an old woman standing reading a paper, oil lamps, photorealistic",
+    "new-shrine": "a small newly built brick shrine beside a wooden lamppost at the edge of a marsh, fresh plaster, incense, dusk, photorealistic",
+    "ceremony-night": "a Vietnamese village ceremony at night at a marsh edge, crowd holding incense, a new lamppost with an unlit brass lamp, photorealistic",
+    "flame-gold": "a blue-green flame hovering above a new lamppost slowly turning warm golden yellow, crowd of villagers in background, photorealistic",
+    "lamp-keeper": "a Vietnamese man lighting an oil lamp on a post at a marsh edge at dusk, warm golden flame, peaceful, photorealistic",
+    "marsh-peace": "a marsh at dawn with a warm lit lamppost at its edge, mist lifting, birds, peaceful Vietnamese countryside, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "dinh-meeting",
+      "caption": "Bà Ba đọc thú tội trước sân đình",
+      "text": "Buổi họp sân đình đông nghẹt, người già ngồi trước, đám nhỏ đứng trên bờ rào. Bà Ba đứng ra giữa sân, tay cầm tờ giấy vàng của ông chồng, đọc to cho cả làng nghe từng chữ - kể cả đoạn cha mình nhận hai sào đất và nén bạc. Đọc xong bà cúi đầu trước bà con, nói nhà tôi trả sự thật, còn đất thì xin trả lại làng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dinh-meeting",
+      "caption": "Cả sân đình im như tượng",
+      "text": "Sân đình im một lúc lâu. Rồi cụ Năm gõ gậy xuống đất ba tiếng, đứng dậy nói: địa chủ Ba Ngọc chết rồi, nhà lớn bỏ hoang, con cháu đi tứ xứ - người gây tội không còn đâu để trừng. Nhưng món nợ với ông Canh Đèn thì còn nguyên, và món nợ đó không trả bằng tiền được, phải trả bằng danh dự."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dinh-meeting",
+      "caption": "Làng quyết ba việc đêm đó",
+      "text": "Làng quyết ba việc ngay đêm đó. Một: dựng lại cột đèn trước bãi đúng chỗ cũ, treo lại chiếc đèn đồng của ông. Hai: cất một cái miếu nhỏ thờ ông Canh Đèn, ghi tên ông vào sổ bổn của ấp - từ nay ông là thần giữ đường, không còn là vong không mồ. Ba: đổi tên bãi tha ma thành bãi Ông Đèn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "new-shrine",
+      "caption": "Mộ ông được đưa về bên miếu",
+      "text": "Người ta còn đào lại phần mộ ông Canh Đèn ngoài bìa bãi, đem về an táng ngay bên cái miếu mới, có bia có tên. Hai sào đất nhà Hai Chình trả lại làng được chia làm đất cúng miếu và đường đi - bà Ba nói đất đó vốn đã đắng, bây giờ mới ngọt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ceremony-night",
+      "caption": "Đêm cúng nhập thần cả làng ra bãi",
+      "text": "Đêm cúng nhập thần, cả ấp ra tận bãi - chuyện chưa từng có, vì mấy chục năm nay trời tối là không ai dám tới gần. Hương thắp lên nghi ngút. Hai Chình đích thân trèo lên treo chiếc đèn đồng cũ vào cột mới, đổ đầy dầu, châm lửa - ngọn đèn thật bùng lên màu vàng ấm giữa bãi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flame-gold",
+      "caption": "Lửa xanh bay về lần cuối",
+      "text": "Đúng lúc đó, từ cuối bãi, ngọn lửa xanh quen thuộc hiện ra - lần này cả trăm người cùng thấy, không ai chạy. Nó bay chậm chậm về phía cột đèn mới, lượn một vòng quanh miếu như đi vòng về nhà, rồi hạ xuống ngay trên ngọn đèn thật. Trước mắt cả làng, màu xanh lạnh từ từ ấm lên, đổi thành màu vàng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "flame-gold",
+      "caption": "Rồi nó tắt hẳn - mãi mãi",
+      "text": "Ngọn lửa vàng đứng đó một khắc, lắc nhẹ ba lần như gật đầu chào - rồi nhỏ dần, nhỏ dần, tắt hẳn. Từ đêm đó tới nay, bãi Ông Đèn không ai còn thấy lửa xanh nữa. Cụ Năm nói: ông Canh Đèn đợi đủ rồi - được trả tên, được trả miếu, được trả lại cây đèn - ông ấy đi rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lamp-keeper",
+      "caption": "Hai Chình kế nghiệp ông giữ đèn",
+      "text": "Chỉ còn ngọn đèn thật trên cột trước bãi. Tối nào Hai Chình cũng ra châm dầu thắp đèn, đều như cơm bữa - người ta đùa anh kế nghiệp ông Canh Đèn không công khai. Anh chỉ cười: đường bãi đêm nguy hiểm, cần người giữ đèn - chuyện đó đúng năm xưa thì đúng cả bây giờ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "marsh-peace",
+      "caption": "Người giữ đèn bây giờ có hai người",
+      "text": "Người đi đường khuya qua bãi Ông Đèn bây giờ thấy ngọn đèn vàng hiền từ xa là thấy ấm lòng. Có người bảo những đêm sương dày còn thấy thoáng bóng ông già đứng cạnh người thắp đèn, xách theo cây đèn đồng, đi cùng cho vui. Người giữ đường một đời - giờ có người đi cùng, chắc ông vui lắm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "marsh-peace",
+      "caption": "Chuyện bãi Ông Đèn hết rồi",
+      "text": "Chuyện ma bãi tha ma từ đó hết - vì nó vốn không phải chuyện ma dọa người, mà là chuyện một người tử tế bị quên quá lâu. Bà Tư kể tới đây thôi. Nhà bạn có bãi đồng, có cây cầu nào cũng có cái bóng đèn như vậy không - kể cho Bà Tư nghe ở dưới phần bình luận nhé."
+    }
+  ]
+}

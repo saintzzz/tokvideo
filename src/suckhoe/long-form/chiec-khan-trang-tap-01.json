@@ -1,0 +1,92 @@
+{
+  "id": "chiec-khan-trang-tap-01",
+  "arc": "chiec-khan-trang",
+  "arcTitle": "CHIẾC KHĂN TRẮNG",
+  "episode": 1,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "chiec-khan-trang-tap-01",
+  "title": "Khăn Trắng Tự Treo Lên Xà Nhà - Đốt Rồi Đêm Sau Vẫn Có",
+  "description": "Tập 1 arc CHIẾC KHĂN TRẮNG: Anh Minh mua được căn nhà cũ cuối làng giá rẻ, đêm đầu tiên đã thấy một dải vải trắng treo lủng lẳng trên xà chính mà không ai treo. Gỡ xuống đốt đi, đêm sau nó lại hiện ra nguyên chỗ cũ - và thằng bé hàng xóm nói một câu khiến vợ chồng anh không ngủ được. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
+  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "thumbnailSubjects": [
+    "a strip of white cloth hanging from the main wooden beam inside a dark old Vietnamese house at night, moonlight through window, photorealistic horror",
+    "a Vietnamese couple standing in the doorway of an old house at dusk looking up at something above them, dim light, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "old-house-day": "an old weathered Vietnamese rural house at the end of a village lane at dusk, tiled roof, overgrown yard, forlorn look, photorealistic",
+    "beam-cloth": "inside a dark old Vietnamese house at night, a long strip of white cloth hanging from the main wooden roof beam, moonlight through the door, photorealistic horror",
+    "village-lane": "a dirt lane in a Vietnamese hamlet at dusk, small houses, curious neighbors peeking, photorealistic",
+    "burn-cloth": "a Vietnamese man burning a strip of white cloth in a yard at night, flames with faint incense-smelling smoke, photorealistic horror",
+    "neighbor-kid": "a Vietnamese village boy whispering to a man over a low fence at dusk, scared expression, photorealistic",
+    "cloth-tug": "a man pulling a long white cloth hanging from a roof beam, the cloth taut as if someone holds the other end above, dark house, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "old-house-day",
+      "caption": "Căn nhà cũ cuối làng bán rẻ",
+      "text": "Căn nhà cuối làng có chủ cũ đi Sài Gòn mười mấy năm không về, giao cho người quen bán dùm giá rẻ hơn thị trường một nửa. Anh Minh với vợ là chị Hạnh dồn hết vốn liếng mua về sửa lại ở. Nhà ba gian xây gạch, xà chính còn chắc, sân rộng trồng rau được - vợ chồng mừng như trúng số."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "beam-cloth",
+      "caption": "Đêm đầu tiên đã thấy khăn trắng",
+      "text": "Đêm đầu tiên dọn vào ngủ, nửa khuya chị Hạnh đánh thức chồng, chỉ tay lên xà chính. Trên đó treo một dải vải trắng dài lủng lẳng, đầu vải bay nhè nhẹ dù cửa đóng kín không gió. Anh Minh leo ghế sờ thử - vải lanh cũ, sạch bong, thơm mùi nhang trầm. Nhà vừa dọn, ai treo lên đó được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "beam-cloth",
+      "caption": "Gỡ xuống vứt ra vườn",
+      "text": "Anh gỡ khăn xuống, vo lại quăng ra góc vườn, nói chắc nhà trước quên. Vợ chồng đi ngủ lại. Sáng hôm sau chị Hạnh ra vườn hái rau - đống vải trắng không thấy đâu. Nó lại treo trên xà chính, nguyên chỗ cũ, nguyên nếp gấp cũ, sạch sẽ thơm tho như vừa được giặt phơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "burn-cloth",
+      "caption": "Đốt cho rứt - tro bay mùi nhang",
+      "text": "Anh Minh không tin ma, quyết xử cho rứt. Tối đó anh gỡ khăn đem ra sân, tướt nhỏ, châm lửa đốt trước mặt vợ con. Vải cháy chậm, tro bay lên không phải mùi vải cháy mà mùi trầm hương ngào ngạt như trong miếu. Chị Hạnh đứng ôm con nhìn đống tro tới khi chỉ còn than đỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "beam-cloth",
+      "caption": "Đêm sau khăn lại treo y chỗ cũ",
+      "text": "Đêm sau, lại một dải vải trắng khác treo trên xà - đã đốt rồi mà vẫn có, và lần này không phải một dải mà là hai. Chị Hạnh bật khóc nói bán nhà đi. Anh Minh cắn răng: bán ai mua, hết tiền rồi. Vải này ai treo thì người đó phải ra mặt, ổng bắt đầu canh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-lane",
+      "caption": "Hàng xóm lẩn tránh đường nhà mình",
+      "text": "Anh mới để ý: hàng xóm đi đường tới khúc trước nhà mình là vòng đi chỗ khác, gặp mặt thì cười gượng chào vội. Bà bán tạp hóa đầu làng hỏi han tỉ mỉ nhà cửa có yên không, mà khi anh hỏi lại thì lấp lửng nói nhà đó bỏ lâu lắm rồi, chuyện cũ bỏ qua đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "neighbor-kid",
+      "caption": "Thằng bé hàng xóm nói sự thật",
+      "text": "Chỉ có thằng Bi hàng xóm mười tuổi là nói thiệt. Nó ghé rào thì thầm: chú ơi nhà chú có khăn là có tang - má con bảo nhà nào thấy khăn trắng trên xà là trong nhà sắp có người đi, ai ở cũng dời hết trơn, chủ cũ bán rẻ là vậy đó chú. Nó nói xong chạy biến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house-day",
+      "caption": "Vợ năn nỉ bán, chồng không chịu",
+      "text": "Chị Hạnh khóc năn nỉ: lỡ thằng nhỏ nhà mình có chuyện thì sao. Anh Minh cũng rén, nhưng bán thì trắng tay. Anh quyết định ở lại coi cho ra lẽ - nhà có bí mật thì bí mật đó phải có người làm, có ma hay có người gì anh cũng phải nhìn cho bằng thấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "beam-cloth",
+      "caption": "Đêm canh: tiếng xà rít lên",
+      "text": "Đêm đó anh canh trên chiếc ghế đẩu nhìn xà. Tới gần giờ Tý, anh nghe tiếng xà rít lên kèn kẹt - như có một vật nặng đang được treo lên từ từ. Dải vải trắng hiện ra trên xà từ lúc nào không hay, lần này dài tới chạm đất, đung đưa trước mặt anh."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cloth-tug",
+      "caption": "Kéo khăn xuống - đầu kia có người giữ",
+      "text": "Anh Minh đứng dậy, nắm chặt đầu vải kéo mạnh xuống. Vải căng cứng - phía trên xà tối thui không có gì, nhưng đầu kia sợi vải nặng trĩu như có một bàn tay đang nắm lấy kéo ngược lên. Anh giữ một giây, mồ hôi lạnh chảy dọc sống lưng, rồi buông tay. Sợi vải từ từ thu lên, treo lại chỗ cũ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-house-day",
+      "caption": "Điện thoại của má từ quê",
+      "text": "Sáng hôm sau điện thoại anh đổ chuông - má anh, bà nội ở quê ngoại, gọi. Bà hỏi ngay không đầu không đuôi: con ơi nhà con mới mua ở đâu, có phải căn nhà ba gian cuối làng xà chính cũ không. Anh ngẩn ra hỏi má sao biết. Bà nói một câu rồi cúp: để mai má lên, đừng ai đụng cây xà đó."
+    }
+  ]
+}
