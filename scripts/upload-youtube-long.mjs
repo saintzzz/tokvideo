@@ -142,6 +142,36 @@ const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
+// Race-safe dedupe: two concurrent jobs can BOTH pass the ledger check
+// above before either commits - the first upload's title is already
+// live when the second reaches here (observed 2026-11-09: dispatch +
+// delayed cron tick double-uploaded longs and teasers). Check the
+// channel's own recent uploads for this exact title; if present,
+// adopt its videoId into the ledger instead of double-uploading.
+try {
+  const ch = await youtube.channels.list({ part: ["contentDetails"], mine: true });
+  const uploadsId = ch.data.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+  if (uploadsId) {
+    const recent = await youtube.playlistItems.list({ part: ["snippet"], playlistId: uploadsId, maxResults: 25 });
+    const dup = (recent.data.items || []).find(
+      (i) => (i.snippet.title || "").normalize("NFC") === title.normalize("NFC")
+    );
+    if (dup) {
+      const vid = dup.snippet.resourceId.videoId;
+      console.log(`Title already live on channel (${vid}) - raced double-dispatch; recording into ledger instead of re-uploading.`);
+      ledger[slug] = {
+        videoId: vid,
+        publishedAt: dup.snippet.publishedAt ?? new Date().toISOString(),
+        locale: localeKeyEarly,
+      };
+      await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
+      process.exit(0);
+    }
+  }
+} catch (e) {
+  console.warn(`Channel dedupe pre-check failed (${e.message}) - continuing upload`);
+}
+
 console.log(`Uploading ${videoPath} as "${title}" (privacyStatus=${PRIVACY_STATUS})`);
 
 const res = await youtube.videos.insert({

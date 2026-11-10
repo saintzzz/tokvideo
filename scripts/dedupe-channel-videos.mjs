@@ -55,8 +55,12 @@ async function explicitDeletes() {
     }
   };
   for (const id of viIds) {
-    await youtube.videos.delete({ id });
-    console.log(`DELETE ${id} (vi channel)`);
+    try {
+      await youtube.videos.delete({ id });
+      console.log(`DELETE ${id} (vi channel)`);
+    } catch (e) {
+      console.warn(`delete ${id} failed (already gone? ${e.message.slice(0, 80)})`);
+    }
     drop(id);
   }
   if (enIds.length) {
@@ -64,8 +68,12 @@ async function explicitDeletes() {
     enAuth.setCredentials({ refresh_token: process.env.YOUTUBE_EN_REFRESH_TOKEN });
     const enYoutube = google.youtube({ version: "v3", auth: enAuth });
     for (const id of enIds) {
-      await enYoutube.videos.delete({ id });
-      console.log(`DELETE ${id} (en channel)`);
+      try {
+        await enYoutube.videos.delete({ id });
+        console.log(`DELETE ${id} (en channel)`);
+      } catch (e) {
+        console.warn(`delete ${id} failed (already gone? ${e.message.slice(0, 80)})`);
+      }
       drop(id);
     }
   }
