@@ -1,14 +1,14 @@
-# Channel report — 2026-11-09
+# Channel report — 2026-11-10
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 24
-Total videos: 12
+Total views: 26
+Total videos: 14
 
 ## Last 28 days (channel-wide)
 
-Views: 22
-Watch time (minutes): 1
+Views: 17
+Watch time (minutes): 0
 Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
@@ -17,22 +17,23 @@ Net subscriber change: 0
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
 |---|---|---|---|---|---|
-| 4qS5HKBB3-M | 9 | 0.0 | 8 | 13.4 |
+| 4qS5HKBB3-M | 8 | 0.0 | 8 | 13.4 |
 | dN9w4Ixoqes | 5 | 0.0 | 0 | 0.0 |
-| 1ook5C5HtBs | 5 | 0.0 | 0 | 0.0 |
+| 1ook5C5HtBs | 2 | 0.0 | 0 | 0.0 |
 | pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
 | HiJsHfuE6o4 | 1 | 0.0 | 0 | 0.0 |
-| e1PQlrGSovM | 1 | 1.0 | 67 | 96.0 |
 
-Videos under 15% avg retention: 5/6 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
+Videos under 15% avg retention: 5/5 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
 
-## Most recent 12 videos
+## Most recent 14 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
+| The horseman chased him to the bridge - all they found was a shattered pumpkin - Part 2 #Shorts | 1 | 0 | 0 | 2026-11-09 |
+| Sleepy Hollow, 1820 - the teacher who rode home at midnight and never arrived - Part 1 #Shorts | 0 | 0 | 0 | 2026-11-09 |
 | The Silver Bridge fell at rush hour - 46 people died - was it a warning? - Part 2 #Shorts | 1 | 0 | 0 | 2026-10-10 |
 | Point Pleasant 1966 - the red-eyed thing that warned the town - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-10 |
-| Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 5 | 0 | 0 | 2026-10-09 |
+| Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 6 | 0 | 0 | 2026-10-09 |
 | The hut on chicken legs - the real Baba Yaga story - Part 1 #Shorts | 5 | 0 | 0 | 2026-10-09 |
 | The photograph on the mantel that explains everything - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-29 |
 | The girl in the pale dress on the lonely road - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-29 |
