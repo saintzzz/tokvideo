@@ -76,3 +76,27 @@ Kích hoạt playbook này khi: mọi video mới trên kênh hiện tại < 50
 impressions sau 14 ngày đăng đều, metadata đã đúng, và channel-report
 không cho thấy tín hiệu nào phục hồi. Kênh mới bắt đầu LẠNH HƠN kênh
 cũ - chỉ đổi khi kênh cũ chắc chắn bị suppression.
+
+## Vòng tự cải thiện hàng tuần (khép kín, không cần người)
+
+```
+CN 20:00 VN  CI channel-review: stats thật -> channel-review.md
+             + strategy-directives.json -> commit
+CN 21:00 VN  launchd weekly-improver: devin -p headless doc report,
+             quyet dinh + implement cai tien (prompt:
+             scripts/weekly-improver-prompt.txt), commit+push,
+             ghi src/suckhoe/weekly-improver-log.md
+hang ngay    queue-refill: doc directives -> viet arc theo motif thang
+3 slot/ngay  suckhoe-long: render + upload long + teaser + pin comment
+3h/lan       pipeline-watchdog: dedupe, thumb sync, missed-slot, retry
+hang ngay    channel-report (CI) + doctor: report 28-day funnel
+```
+
+Gioi han cua improver: khong bao gio duoc bat lai cac job legacy da
+retire (publish-next-suckhoe*, release-shelved-suckhoe,
+check-and-catchup), khong cham secrets, khong xoa ledger. Neu khong co
+bang chung du manh, no GHI LOG "no changes" thay vi tao churn.
+
+Log agent: scripts/weekly-improver.log (stdout devin CLI).
+Plist: ~/Library/LaunchAgents/com.tokvideo.weekly-improver.plist
+(Weekday=0, 21:00 local).
