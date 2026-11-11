@@ -31,15 +31,15 @@ Videos under 15% avg retention: 5/7 — low % means viewers abandon early (hook 
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Đêm Thây Ma Đi Vào Làng - Kẻ Vu Oan Từ Chối Nhận Tội | Cây Đa Đầu Làng #4 (xem trước) #Shorts | 0 | 0 | 1 | 2026-11-11 |
+| Đêm Thây Ma Đi Vào Làng - Kẻ Vu Oan Từ Chối Nhận Tội | Cây Đa Đầu Làng #4 (xem trước) #Shorts | 1 | 1 | 1 | 2026-11-11 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 4: Đêm Thây Ma Đi Vào Làng - Kẻ Vu Oan Từ Chối Nhận Tội | 0 | 0 | 0 | 2026-11-11 |
-| Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | Cây Đa Đầu Làng #3 (xem trước) #Shorts | 21 | 1 | 0 | 2026-11-11 |
+| Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | Cây Đa Đầu Làng #3 (xem trước) #Shorts | 28 | 2 | 1 | 2026-11-11 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 3: Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | 1 | 1 | 1 | 2026-11-11 |
-| Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương Người | Cây Đa Đầu Làng #2 (xem trước) #Shorts | 25 | 2 | 1 | 2026-11-11 |
-| Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 2: Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương … | 5 | 0 | 1 | 2026-11-11 |
-| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 119 | 2 | 1 | 2026-11-10 |
+| Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương Người | Cây Đa Đầu Làng #2 (xem trước) #Shorts | 24 | 2 | 1 | 2026-11-11 |
+| Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 2: Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương … | 4 | 0 | 1 | 2026-11-11 |
+| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 122 | 3 | 1 | 2026-11-10 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 1: Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết… | 1 | 0 | 1 | 2026-11-10 |
-| Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | Cầu Khỉ Đêm #5 (xem trước) #Shorts | 896 | 19 | 1 | 2026-11-10 |
+| Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | Cầu Khỉ Đêm #5 (xem trước) #Shorts | 886 | 19 | 1 | 2026-11-10 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 5: Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | 3 | 0 | 1 | 2026-11-10 |
 | Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch | Cầu Khỉ Đêm #4 (xem trước) #Shorts | 4 | 0 | 1 | 2026-11-09 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 4: Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch | 11 | 1 | 1 | 2026-11-09 |
