@@ -1,14 +1,14 @@
-# Channel report — 2026-11-10
+# Channel report — 2026-11-11
 
 Channel: Truyện Ma Dài Kỳ
-Subscribers: 268
-Total views: 3640
-Total videos: 119
+Subscribers: 273
+Total views: 4320
+Total videos: 125
 
 ## Last 28 days (channel-wide)
 
-Views: 4087
-Watch time (minutes): 701
+Views: 4118
+Watch time (minutes): 710
 Subscribers gained: 18
 Subscribers lost: 2
 Net subscriber change: 16
@@ -17,33 +17,36 @@ Net subscriber change: 16
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
 |---|---|---|---|---|---|
-| -8Ugdmtya7E | 225 | 17.0 | 16 | 32.6 |
-| vY0YMuJ9NsQ | 14 | 0.0 | 0 | 0.0 |
+| vY0YMuJ9NsQ | 22 | 4.0 | 251 | 493.7 |
+| WXlj2TiHA6E | 16 | 2.0 | 22 | 44.6 |
 | LOmvmGFtV78 | 13 | 3.0 | 16 | 6.4 |
-| UonKno3ssag | 9 | 0.0 | 8 | 17.4 |
-| K9d6ZQnd8fI | 8 | 11.0 | 98 | 17.0 |
-| auBEThtRoF0 | 4 | 2.0 | 34 | 6.2 |
-| opcH4YmLwss | 3 | 2.0 | 44 | 15.9 |
 | HyqiMsxkCDY | 3 | 1.0 | 34 | 13.9 |
-| bj0Df0Btqbk | 2 | 1.0 | 35 | 6.5 |
+| E8i6NN9EDDE | 2 | 0.0 | 23 | 11.6 |
+| mzFf-zHmYnY | 2 | 0.0 | 13 | 5.7 |
 | P-lYGKYJVMs | 1 | 0.0 | 0 | 0.0 |
 | dR4GvUkknHs | 1 | 0.0 | 0 | 0.0 |
 
-Videos under 15% avg retention: 7/11 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
+Videos under 15% avg retention: 6/8 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
 
 ## Most recent 25 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
-| Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | Cầu Khỉ Đêm #5 (xem trước) #Shorts | 52 | 3 | 0 | 2026-11-10 |
-| Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 5: Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | 2 | 0 | 0 | 2026-11-10 |
-| Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch | Cầu Khỉ Đêm #4 (xem trước) #Shorts | 2 | 0 | 0 | 2026-11-09 |
-| Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 4: Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch | 4 | 0 | 0 | 2026-11-09 |
+| Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | Cây Đa Đầu Làng #3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-11-11 |
+| Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 3: Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | 0 | 0 | 0 | 2026-11-11 |
+| Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương Người | Cây Đa Đầu Làng #2 (xem trước) #Shorts | 17 | 2 | 0 | 2026-11-11 |
+| Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 2: Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương … | 2 | 0 | 0 | 2026-11-11 |
+| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 36 | 1 | 0 | 2026-11-10 |
+| Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 1: Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết… | 1 | 0 | 0 | 2026-11-10 |
+| Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | Cầu Khỉ Đêm #5 (xem trước) #Shorts | 668 | 16 | 0 | 2026-11-10 |
+| Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 5: Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | 3 | 0 | 0 | 2026-11-10 |
+| Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch | Cầu Khỉ Đêm #4 (xem trước) #Shorts | 4 | 0 | 0 | 2026-11-09 |
+| Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 4: Đêm Rằm Trên Cầu Khỉ - Gọi Tên Vợ Ba Lần Giữa Lòng Rạch | 11 | 1 | 0 | 2026-11-09 |
 | Dưới Rạch Không Chỉ Có Một Mình - Xoáy Nước Nuốt Cả Đò | Cầu Khỉ Đêm #3 (xem trước) #Shorts | 0 | 0 | 0 | 2026-11-09 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 3: Dưới Rạch Không Chỉ Có Một Mình - Xoáy Nước Nuốt Cả Đò | 0 | 0 | 0 | 2026-11-09 |
-| Bóng Dưới Nước Gọi Tên - Người Chết Đuối Chờ Đổi Xác | Cầu Khỉ Đêm #2 (xem trước) #Shorts | 84 | 4 | 0 | 2026-11-09 |
+| Bóng Dưới Nước Gọi Tên - Người Chết Đuối Chờ Đổi Xác | Cầu Khỉ Đêm #2 (xem trước) #Shorts | 248 | 9 | 0 | 2026-11-09 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 2: Bóng Dưới Nước Gọi Tên - Người Chết Đuối Chờ Đổi Xác | 0 | 0 | 0 | 2026-11-09 |
-| Cây Cầu Khỉ Qua Rạch Ông Bưởi - Người Qua Đêm Về Là Người Khác | Cầu Khỉ Đêm #1 (xem trước) #Shorts | 5 | 0 | 0 | 2026-11-09 |
+| Cây Cầu Khỉ Qua Rạch Ông Bưởi - Người Qua Đêm Về Là Người Khác | Cầu Khỉ Đêm #1 (xem trước) #Shorts | 8 | 0 | 0 | 2026-11-09 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 1: Cây Cầu Khỉ Qua Rạch Ông Bưởi - Người Qua Đêm Về Là Người … | 5 | 0 | 0 | 2026-11-09 |
 | Đêm Đối Chất Trước Miếu - Trả Nợ Sáu Mươi Năm | Miếu Hoang #5 (xem trước) #Shorts | 0 | 0 | 0 | 2026-11-08 |
 | Truyện Ma Có Thật | Miếu Hoang - Tập 5: Đêm Đối Chất Trước Miếu - Trả Nợ Sáu Mươi Năm | 2 | 0 | 0 | 2026-11-08 |
@@ -54,10 +57,4 @@ Videos under 15% avg retention: 7/11 — low % means viewers abandon early (hook
 | Miếu Thần Bỏ Hoang Sau Rẫy - Tối Mùng Một Không Được Nhìn Vào | Miếu Hoang #1 (xem trước) #Shorts | 23 | 0 | 0 | 2026-11-07 |
 | Bài Vị Khắc Tên Người Sống - Thầy Pháp Bỏ Về Giữa Chừng | Miếu Hoang #2 (xem trước) #Shorts | 1 | 0 | 0 | 2026-11-07 |
 | Truyện Ma Có Thật | Bài Vị Khắc Tên Người Sống - Thầy Pháp Bỏ Về Giữa Chừng - Tập 2: Bài Vị Khắc Tê… | 0 | 0 | 0 | 2026-11-07 |
-| Truyện Ma Có Thật | Miếu Thần Bỏ Hoang Sau Rẫy - Tối Mùng Một Không Được Nhìn Vào - Tập 1: Miếu Thầ… | 3 | 0 | 0 | 2026-11-07 |
-| QUAN TÀI TRÔI | Quan Tài Trôi #5 (xem trước) #Shorts | 9 | 0 | 0 | 2026-11-06 |
-| Truyện Ma Có Thật | Quan Tài Trôi - Tập 5: Trả Bùa Cho Xác Không Tên - Đêm Giờ Tý Trên Sông | 5 | 0 | 0 | 2026-11-06 |
-| QUAN TÀI TRÔI | Quan Tài Trôi #4 (xem trước) #Shorts | 224 | 2 | 0 | 2026-11-05 |
-| Truyện Ma Có Thật | Quan Tài Trôi - Tập 4: Đêm Quan Tài Đứng Trước Từng Cửa - Hội Trả Đồ Của Làng | 8 | 0 | 0 | 2026-11-05 |
-| Truyện Ma Có Thật | Quan Tài Trôi - Tập 3: Giếng Bỏ Hoang Ngoài Bãi Rùng - Nơi Giấu Của Tế | 2 | 0 | 0 | 2026-11-05 |
 
