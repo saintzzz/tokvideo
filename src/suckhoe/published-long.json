@@ -666,8 +666,14 @@
   },
   "cay-da-tap-05": {
     "videoId": "qUFQA-1-ci8",
-    "publishedAt": "2026-11-11T14:50:17.060Z",
+    "publishedAt": "2026-11-11T14:51:41Z",
+    "locale": "vi"
+  },
+  "cay-da-tap-05-teaser": {
+    "videoId": "JEOJw4qUzbU",
+    "publishedAt": "2026-11-11T17:28:13.592Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgyCUbd7QnMFf2-tF4x4AaABAg"
   }
 }
