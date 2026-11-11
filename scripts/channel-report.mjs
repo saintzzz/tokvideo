@@ -41,6 +41,10 @@ const youtubeAnalytics = google.youtubeAnalytics({
   version: "v2",
   auth: oauth2Client,
 });
+const ytReporting = google.youtubereporting({
+  version: "v1",
+  auth: oauth2Client,
+});
 
 function fmtDate(d) {
   return d.toISOString().slice(0, 10);
@@ -140,74 +144,133 @@ async function main() {
     // (impressions ok, CTR < ~4%) from "clicked but abandoned"
     // (CTR ok, averageViewPercentage low).
     if (videoIds.length > 0) {
-      // Impressions/CTR are "extended" metrics that require the
-      // yt-analytics.readonly scope — our token may not carry it, in
-      // which case the API rejects the whole query with "Unknown
-      // identifier". Try the full funnel first; on failure retry with
-      // retention-only metrics so the report still lands.
-      const attempts = [
-        {
-          metrics:
-            "views,impressions,impressionClickThroughRate,averageViewDuration,averageViewPercentage",
-          header: "| videoId | Views | Impressions | CTR% | AvgView(s) | AvgView% |",
-          format: (r) =>
-            `| ${r[0]} | ${r[1]} | ${r[2]} | ${(+r[3]).toFixed(1)} | ${Math.round(r[4])} | ${(+r[5]).toFixed(1)} |`,
-          zeroNote: (rows) => {
-            const zeroImp = rows.filter((r) => (r[2] ?? 0) === 0).length;
-            return `Videos with zero impressions: ${zeroImp}/${rows.length} — 0 means YouTube never surfaced it (distribution problem), not a click problem.`;
-          },
-        },
-        {
+      try {
+        const perVideo = await youtubeAnalytics.reports.query({
+          ids: "channel==MINE",
+          startDate: fmtDate(start),
+          endDate: fmtDate(end),
           metrics:
             "views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage",
-          header: "| videoId | Views | WatchMin | AvgView(s) | AvgView% |",
-          format: (r) =>
-            `| ${r[0]} | ${r[1]} | ${(+r[2]).toFixed(1)} | ${Math.round(r[3])} | ${(+r[4]).toFixed(1)} |`,
-          zeroNote: (rows) => {
-            const dead = rows.filter((r) => (+r[4] ?? 0) < 15).length;
-            return `Videos under 15% avg retention: ${dead}/${rows.length} — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)`;
-          },
-        },
-      ];
-      let done = false;
-      let lastErr = null;
-      for (const a of attempts) {
-        try {
-          const perVideo = await youtubeAnalytics.reports.query({
-            ids: "channel==MINE",
-            startDate: fmtDate(start),
-            endDate: fmtDate(end),
-            metrics: a.metrics,
-            dimensions: "video",
-            filters: `video==${videoIds.join(",")}`,
-            sort: "-views",
-          });
-          const rows = perVideo.data.rows ?? [];
-          if (rows.length > 0) {
-            lines.push(`## Funnel per video (last 28 days)`);
-            lines.push("");
-            lines.push(a.header);
-            lines.push("|---|---|---|---|---|---|");
-            for (const r of rows) lines.push(a.format(r));
-            lines.push("");
-            lines.push(a.zeroNote(rows));
-            lines.push("");
+          dimensions: "video",
+          filters: `video==${videoIds.join(",")}`,
+          sort: "-views",
+        });
+        const rows = perVideo.data.rows ?? [];
+        if (rows.length > 0) {
+          lines.push(`## Funnel per video (last 28 days)`);
+          lines.push("");
+          lines.push("| videoId | Views | WatchMin | AvgView(s) | AvgView% |");
+          lines.push("|---|---|---|---|---|");
+          for (const r of rows) {
+            lines.push(
+              `| ${r[0]} | ${r[1]} | ${(+r[2]).toFixed(1)} | ${Math.round(r[3])} | ${(+r[4]).toFixed(1)} |`
+            );
           }
-          done = true;
-          break;
-        } catch (err) {
-          lastErr = err;
-          console.error(
-            `Per-video analytics attempt failed (${a.metrics}): ${err.message ?? err}`
+          lines.push("");
+          const dead = rows.filter((r) => (+r[4] ?? 0) < 15).length;
+          lines.push(
+            `Videos under 15% avg retention: ${dead}/${rows.length} — low % means viewers abandon early (hook problem), not a click problem.`
           );
+          lines.push("");
         }
-      }
-      if (!done) {
+      } catch (err) {
         lines.push(
-          `## Funnel per video\n\n(Per-video analytics failed: ${lastErr?.message ?? lastErr})`
+          `## Funnel per video\n\n(Per-video analytics failed: ${err.message ?? err})`
         );
         lines.push("");
       }
+    }
+
+    // Thumbnail impressions + CTR per video. These metrics do NOT exist in
+    // the Analytics query API at all — they only ship via the bulk
+    // Reporting API's channel_reach_basic_a1 report (one CSV per day, lag
+    // ~24-72h). Ensure the reporting job exists, then aggregate the most
+    // recent daily CSVs per video.
+    try {
+      const jobs = (await ytReporting.jobs.list()).data.jobs ?? [];
+      let reachJob = jobs.find(
+        (j) => j.reportTypeId === "channel_reach_basic_a1"
+      );
+      if (!reachJob) {
+        const created = await ytReporting.jobs.create({
+          requestBody: {
+            reportTypeId: "channel_reach_basic_a1",
+            name: "channel-reach-basic",
+          },
+        });
+        reachJob = created.data;
+      }
+      const reports =
+        (
+          await ytReporting.jobs.reports.list({
+            jobId: reachJob.id,
+            pageSize: 30,
+          })
+        ).data.reports ?? [];
+      const sorted = reports
+        .filter((r) => r.downloadUrl)
+        .sort((a, b) => (b.endTime ?? "").localeCompare(a.endTime ?? ""))
+        .slice(0, 14);
+
+      if (sorted.length === 0) {
+        lines.push(`## Reach per video (impressions/CTR)`);
+        lines.push("");
+        lines.push(
+          `Reach report job ${reachJob.id} scheduled — first CSV lands ~24-72h after creation.`
+        );
+        lines.push("");
+      } else {
+        const { token } = await oauth2Client.getAccessToken();
+        const byVideo = new Map();
+        for (const rep of sorted) {
+          const res = await fetch(rep.downloadUrl, {
+            headers: { authorization: `Bearer ${token}` },
+          });
+          if (!res.ok) continue;
+          const csv = await res.text();
+          const rowsCsv = csv.trim().split("\n");
+          const header = rowsCsv[0].split(",");
+          const vi = header.indexOf("video_id");
+          const ii = header.indexOf("video_thumbnail_impressions");
+          const ci = header.indexOf("video_thumbnail_impressions_ctr");
+          if (vi < 0 || ii < 0) continue;
+          for (const line of rowsCsv.slice(1)) {
+            const cols = line.split(",");
+            const vid = cols[vi];
+            const imp = +cols[ii] || 0;
+            const cur = byVideo.get(vid) ?? { imp: 0, ctrW: 0 };
+            cur.imp += imp;
+            cur.ctrW += ci >= 0 ? (+cols[ci] || 0) * imp : 0;
+            byVideo.set(vid, cur);
+          }
+        }
+        const recent = new Set(videoIds);
+        const agg = [...byVideo.entries()]
+          .filter(([vid]) => recent.has(vid))
+          .sort((a, b) => b[1].imp - a[1].imp);
+        lines.push(`## Reach per video (impressions/CTR)`);
+        lines.push("");
+        if (agg.length === 0) {
+          lines.push(`(no reach rows yet for the recent uploads)`);
+        } else {
+          lines.push("| videoId | Impressions | CTR% |");
+          lines.push("|---|---|---|");
+          for (const [vid, a] of agg) {
+            lines.push(
+              `| ${vid} | ${a.imp} | ${a.imp ? (a.ctrW / a.imp).toFixed(2) : "0"} |`
+            );
+          }
+          lines.push("");
+          const zero = agg.filter(([, a]) => a.imp === 0).length;
+          lines.push(
+            `Videos with zero impressions: ${zero}/${agg.length} — 0 means YouTube never surfaced it (distribution problem), not a click problem.`
+          );
+        }
+        lines.push("");
+      }
+    } catch (err) {
+      lines.push(`## Reach per video\n\n(Reach report failed: ${err.message ?? err})`);
+      lines.push("");
     }
 
     if (videoIds.length > 0) {
