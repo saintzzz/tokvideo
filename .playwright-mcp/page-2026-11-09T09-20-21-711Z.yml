@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Jump to Content" [ref=e3] [cursor=pointer]:
+      - /url: "#page-content"
+    - generic [ref=e5]:
+      - link "Account" [ref=e9] [cursor=pointer]:
+        - /url: /
+      - navigation "main navigation" [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Google Account Overview" [ref=e18] [cursor=pointer]:
+              - /url: ""
+              - text: Overview
+          - listitem [ref=e19]:
+            - link "Privacy settings" [ref=e20] [cursor=pointer]:
+              - /url: https://myaccount.google.com/intro/data-and-personalization
+          - listitem [ref=e21]:
+            - link "Passkeys" [ref=e22] [cursor=pointer]:
+              - /url: https://www.google.com/account/about/passkeys/
+          - listitem [ref=e23]:
+            - link "Sign in with Google" [ref=e24] [cursor=pointer]:
+              - /url: https://www.google.com/account/about/sign-in-with-google/
+      - generic [ref=e26]:
+        - link "Create a google account" [ref=e27] [cursor=pointer]:
+          - /url: https://accounts.google.com/SignUp?continue=https://myaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button
+          - text: Create an account
+        - link "Go to your Google Account" [ref=e28] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=accountsettings&amp;continue=https%3A%2F%2Fmyaccount%2Egoogle%2Ecom%3Futm%5Fsource%3Daccount%2Dmarketing%2Dpage%26utm%5Fmedium%3Dgo%2Dto%2Daccount%2Dbutton%26gar%3DWzEzMywiMjM2NzM2Il0%26sl%3Dtrue
+          - text: Go to Google Account
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e32]:
+        - generic [ref=e35]:
+          - heading "All of Google, working for you" [level=1] [ref=e36]: All of Google,working for you
+          - paragraph
+          - paragraph [ref=e37]: Sign in to your Google Account, and get the most out of all the Google services you use. Your account helps you do more by personalizing your Google experience and offering easy access to your most important information from anywhere.
+          - paragraph
+        - figure [ref=e39]:
+          - img "Lottie animation" [ref=e41]
+      - generic [ref=e170]:
+        - generic [ref=e174]:
+          - heading "Helps you" [level=2] [ref=e175]
+          - paragraph
+          - paragraph [ref=e176]: When you’re signed in, all of the Google services you use work together seamlessly to offer help with everyday tasks like syncing your Gmail with your Google Calendar and Google Maps to make sure you’re always on top of your schedule.
+          - paragraph
+        - generic [ref=e180]:
+          - heading "Built for you" [level=2] [ref=e181]
+          - paragraph
+          - paragraph [ref=e182]: No matter which device or Google service you’re using, your account gives you a consistent experience you can customize and manage at any time.
+          - paragraph
+        - generic [ref=e186]:
+          - heading "Protects you" [level=2] [ref=e187]
+          - paragraph
+          - paragraph [ref=e188]: Your Google Account is protected by industry-leading security that automatically helps detect and block threats before they ever reach you.
+          - paragraph
+      - img "Ready to help" [ref=e198]
+      - heading "Ready to help" [level=2] [ref=e208]
+      - generic [ref=e211]: Google services, from Chrome to YouTube, work better and help you do more when you’re signed in. Your account gives you access to helpful features like Autofill, personalized recommendations, and much more — any time on any device.
+      - generic [ref=e222]:
+        - tablist [ref=e223]:
+          - tab "Autofill" [selected] [ref=e224] [cursor=pointer]
+          - tab "Works better for you" [ref=e225] [cursor=pointer]
+          - tab "Stay connected, across the internet" [ref=e226] [cursor=pointer]
+        - tabpanel "Autofill" [ref=e228]:
+          - generic [ref=e235]:
+            - paragraph [ref=e239]: Your Google Account helps you save time by automatically filling in passwords, addresses, and payment details using the information you’ve saved to your account.
+            - img "Lottie animation" [ref=e244]
+      - img "Just for you" [ref=e330]
+      - heading "Just for you" [level=2] [ref=e340]
+      - generic [ref=e343]: Your Google Account makes every service you use personalized to you. Just sign into your account to access your preferences, privacy and personalization controls from any device.
+      - generic [ref=e354]:
+        - tablist [ref=e355]:
+          - tab "Instant access" [selected] [ref=e356] [cursor=pointer]
+          - tab "Privacy controls" [ref=e357] [cursor=pointer]
+          - tab "A safe place for your info" [ref=e358] [cursor=pointer]
+        - tabpanel "Instant access" [ref=e360]:
+          - generic [ref=e367]:
+            - paragraph [ref=e371]: You’re never more than a tap away from your data and settings. Just tap your profile picture and follow the link to “Manage your Google Account”. From your profile picture, you can also easily sign in, sign out, or turn on Incognito mode.
+            - img "Lottie animation" [ref=e376]
+      - img "Keeping your information private,safe, and secure" [ref=e450]
+      - heading "Keeping your information private, safe, and secure" [level=2] [ref=e460]
+      - generic [ref=e463]: Protecting all the information in your Google Account has never been more important. That’s why we’ve built powerful protections and tools like the Security Checkup and Google Password Manager into every account.
+      - generic [ref=e474]:
+        - tablist [ref=e475]:
+          - tab "Built-in security" [selected] [ref=e476] [cursor=pointer]
+          - tab "Security Checkup" [ref=e477] [cursor=pointer]
+          - tab "Google Password Manager" [ref=e478] [cursor=pointer]
+        - tabpanel "Built-in security" [ref=e480]:
+          - generic [ref=e487]:
+            - paragraph [ref=e491]: Your Google Account automatically protects your personal information and keeps it private and safe. Every account comes with powerful features like spam filters that block 99.9% of dangerous emails before they ever reach you, and personalized security notifications that alert you of suspicious activity and malicious websites.
+            - img "Lottie animation" [ref=e496]
+      - heading "Your Google starts here" [level=2] [ref=e548]
+      - generic [ref=e558]:
+        - link "Go to your Google Account" [ref=e559] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=accountsettings&amp;continue=https%3A%2F%2Fmyaccount%2Egoogle%2Ecom%3Futm%5Fsource%3Daccount%2Dmarketing%2Dpage%26utm%5Fmedium%3Dgo%2Dto%2Daccount%2Dbutton%26gar%3DWzEzMywiMjM2NzM2Il0%26sl%3Dtrue"
+          - text: Go to Google Account
+        - link "Create your Google account" [ref=e560] [cursor=pointer]:
+          - /url: https://accounts.google.com/SignUp?continue=https://myaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button
+          - text: Create an account
+  - contentinfo [ref=e563]:
+    - heading "Footer links" [level=2] [ref=e564]
+    - generic [ref=e565]:
+      - link "Google" [ref=e567] [cursor=pointer]:
+        - /url: /
+      - list [ref=e570]:
+        - listitem [ref=e571]:
+          - link "About Google" [ref=e572] [cursor=pointer]:
+            - /url: https://about.google/
+        - listitem [ref=e573]:
+          - link "Google products" [ref=e574] [cursor=pointer]:
+            - /url: https://about.google/products/
+        - listitem [ref=e575]:
+          - link "Privacy" [ref=e576] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+        - listitem [ref=e577]:
+          - link "Terms" [ref=e578] [cursor=pointer]:
+            - /url: https://policies.google.com/terms
+      - link "Help" [ref=e579] [cursor=pointer]:
+        - /url: https://support.google.com/
+      - combobox "Change language or region" [ref=e582]:
+        - option "English" [selected]
+        - option "català"
+        - option "မြန်မာ"
+        - option "Afrikaans"
+        - option "Bahasa Melayu"
+        - option "Cymraeg"
+        - option "Deutsch"
+        - option "English (United Kingdom)"
+        - option "Filipino"
+        - option "Gaeilge"
+        - option "Indonesia"
+        - option "Kiswahili"
+        - option "Nederlands"
+        - option "Norsk bokmål (Norge)"
+        - option "Tiếng Việt"
+        - option "Türkçe"
+        - option "azərbaycan dili"
+        - option "bosanski"
+        - option "dansk"
+        - option "eesti"
+        - option "español"
+        - option "euskara"
+        - option "euskara"
+        - option "français"
+        - option "français (Canada)"
+        - option "galego"
+        - option "hrvatski"
+        - option "isiZulu"
+        - option "italiano"
+        - option "latviešu"
+        - option "lietuvių"
+        - option "magyar"
+        - option "o‘zbek"
+        - option "polski"
+        - option "português (Brasil)"
+        - option "português (Portugal)"
+        - option "română"
+        - option "shqip"
+        - option "slovenčina"
+        - option "slovenščina"
+        - option "suomi"
+        - option "svenska"
+        - option "íslenska"
+        - option "čeština"
+        - option "Ελληνικά"
+        - option "беларуская"
+        - option "български"
+        - option "кыргызча"
+        - option "македонски"
+        - option "монгол"
+        - option "русский"
+        - option "српски"
+        - option "українська"
+        - option "қазақ тілі"
+        - option "հայերեն"
+        - option "עברית (ישראל)"
+        - option "اردو"
+        - option "العربية"
+        - option "فارسی"
+        - option "नेपाली"
+        - option "मराठी"
+        - option "हिन्दी"
+        - option "বাংলা"
+        - option "ਪੰਜਾਬੀ"
+        - option "ગુજરાતી"
+        - option "ଓଡ଼ିଆ"
+        - option "தமிழ்"
+        - option "తెలుగు"
+        - option "ಕನ್ನಡ"
+        - option "മലയാളം"
+        - option "සිංහල"
+        - option "ไทย"
+        - option "ລາວ"
+        - option "ქართული"
+        - option "አማርኛ"
+        - option "ខ្មែរ"
+        - option "中文"
+        - option "中文 (简体)"
+        - option "中文 (繁體)"
+        - option "日本語"
+        - option "한국어"

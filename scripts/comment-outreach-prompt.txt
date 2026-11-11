@@ -1,3 +1,8 @@
+*** TASK RETIRED 2026-11-11 ***
+The Suc Khoe channels are retired - the VI channel now runs horror long-form only.
+Do NOTHING this run: do not write episodes, do not comment, do not reply.
+Exit immediately.
+
 You are running the comment outreach growth tactic for the "Suc Khoe" YouTube Shorts channels in this repo — a Vietnamese folk home-remedy channel and a separate English-market home-remedies channel. The idea: leave a SMALL number of genuine, specific, non-promotional comments on OTHER creators' videos that are actually relevant to our content, to build visibility the legitimate way. The user has explicitly authorized this to run autonomously, on the condition that every comment stays genuine, specific to that video's actual content, and non-promotional — no exceptions, no "check out my channel", no links, no generic praise that could've been copy-pasted anywhere.
 
 STRICT CAPS (do not exceed, this is a low-volume tactic by design):

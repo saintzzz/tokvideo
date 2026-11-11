@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, suckhoe-publish-next, suckhoe-en-publish-next, channel-report, set-video-privacy, release-shelved-suckhoe, suckhoe-long, english-arena, pipeline-doctor, pipeline-watchdog]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, channel-report, set-video-privacy, suckhoe-long, english-arena, pipeline-doctor, pipeline-watchdog]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -865,7 +865,10 @@ jobs:
   # one shelved/privated video back to public. See
   # scripts/release-shelved-video.mjs and src/suckhoe/shelved-videos.json.
   release-shelved-suckhoe:
-    if: (github.event_name == 'schedule' && github.event.schedule == '20 2,10,18 * * *') || github.event.inputs.video == 'release-shelved-suckhoe'
+    # RETIRED 2026-11-11: same suckhoe retirement as the publishers -
+    # shelf is empty and the horror channel runs on suckhoe-long only.
+    # Restore: github.event.inputs.video == 'release-shelved-suckhoe'
+    if: false
     runs-on: ubuntu-latest
     permissions:
       contents: write
