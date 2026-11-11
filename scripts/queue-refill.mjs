@@ -74,9 +74,21 @@ function existingArcs() {
   return arcs;
 }
 
+// Weekly review (scripts/channel-review-weekly.mjs) writes
+// strategy-directives.json ranking which story territory actually gets
+// views - steer the pick toward related motifs and away from dead ones.
+function loadDirectives() {
+  const p = path.join(ROOT, "src", "suckhoe", "strategy-directives.json");
+  if (!existsSync(p)) return null;
+  try { return JSON.parse(readFileSync(p, "utf8")); } catch { return null; }
+}
+
 function pickMotif() {
   const used = existingArcs();
-  return MOTIF_POOL.find(m => !used.has(m.arc)) || MOTIF_POOL[Math.floor(Math.random() * MOTIF_POOL.length)];
+  const dirs = loadDirectives();
+  const avoid = new Set(dirs?.avoidMotifs ?? []);
+  const fresh = MOTIF_POOL.filter(m => !used.has(m.arc) && !avoid.has(m.arc));
+  return fresh[0] ?? MOTIF_POOL.find(m => !used.has(m.arc)) ?? MOTIF_POOL[Math.floor(Math.random() * MOTIF_POOL.length)];
 }
 
 // ------------------------------------------------------------- prompt ---
@@ -102,10 +114,14 @@ LUẬT BẮT BUỘC:
 - KHÔNG markdown, KHÔNG giải thích - output chỉ là JSON thuần của 1 episode.`;
 
 function arcPrompt(motif) {
+  const dirs = loadDirectives();
+  const dirNote = dirs?.notes?.length
+    ? `\nData tuần trước (weekly review): ${dirs.notes.join("; ")}. Viết cho hợp motif đang thắng, tránh kiểu đã chết.`
+    : "";
   return `Bạn là nhà biên kịch truyện ma dân gian Việt Nam cho kênh "Truyện Ma Dài Kỳ".
 Viết outline cho 1 arc 5 tập với motif: ${motif.hook} (arc id "${motif.arc}", tên "${motif.title}").
 Output JSON thuần (không markdown): { "arcTitle": "${motif.title}", "premises": ["<tóm tắt 1-2 câu tập 1>", ... 5 phần tử] }
-Quy tắc: tập 1 đặt bối cảnh + lời cấm bị phá; tập 2-4 leo thang + mở bí mật (xác chết, món nợ, kẻ gây nghiệp); tập 5 đối chất + trả nợ + minh oan. Nhân vật quê, tên Việt thật. Không em-dash.`;
+Quy tắc: tập 1 đặt bối cảnh + lời cấm bị phá; tập 2-4 leo thang + mở bí mật (xác chết, món nợ, kẻ gây nghiệp); tập 5 đối chất + trả nợ + minh oan. Nhân vật quê, tên Việt thật. Không em-dash.${dirNote}`;
 }
 
 function epPrompt(motif, premises, i) {
