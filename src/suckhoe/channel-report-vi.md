@@ -16,7 +16,7 @@ Net subscriber change: 16
 ## Funnel per video (last 28 days)
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | vY0YMuJ9NsQ | 22 | 4.0 | 251 | 493.7 |
 | WXlj2TiHA6E | 16 | 2.0 | 22 | 44.6 |
 | LOmvmGFtV78 | 13 | 3.0 | 16 | 6.4 |
@@ -25,7 +25,11 @@ Net subscriber change: 16
 | mzFf-zHmYnY | 2 | 0.0 | 13 | 5.7 |
 | P-lYGKYJVMs | 1 | 0.0 | 0 | 0.0 |
 
-Videos under 15% avg retention: 5/7 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
+Videos under 15% avg retention: 5/7 — low % means viewers abandon early (hook problem), not a click problem.
+
+## Reach per video
+
+(Reach report failed: YouTube Reporting API has not been used in project 1091975850136 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubereporting.googleapis.com/overview?project=1091975850136 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.)
 
 ## Most recent 25 videos
 
@@ -33,11 +37,11 @@ Videos under 15% avg retention: 5/7 — low % means viewers abandon early (hook 
 |---|---|---|---|---|
 | Đêm Thây Ma Đi Vào Làng - Kẻ Vu Oan Từ Chối Nhận Tội | Cây Đa Đầu Làng #4 (xem trước) #Shorts | 1 | 1 | 1 | 2026-11-11 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 4: Đêm Thây Ma Đi Vào Làng - Kẻ Vu Oan Từ Chối Nhận Tội | 0 | 0 | 0 | 2026-11-11 |
-| Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | Cây Đa Đầu Làng #3 (xem trước) #Shorts | 28 | 2 | 1 | 2026-11-11 |
+| Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | Cây Đa Đầu Làng #3 (xem trước) #Shorts | 33 | 2 | 1 | 2026-11-11 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 3: Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | 1 | 1 | 1 | 2026-11-11 |
 | Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương Người | Cây Đa Đầu Làng #2 (xem trước) #Shorts | 24 | 2 | 1 | 2026-11-11 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 2: Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương … | 4 | 0 | 1 | 2026-11-11 |
-| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 122 | 3 | 1 | 2026-11-10 |
+| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 124 | 3 | 1 | 2026-11-10 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 1: Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết… | 1 | 0 | 1 | 2026-11-10 |
 | Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | Cầu Khỉ Đêm #5 (xem trước) #Shorts | 886 | 19 | 1 | 2026-11-10 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 5: Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | 3 | 0 | 1 | 2026-11-10 |

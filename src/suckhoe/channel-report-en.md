@@ -16,14 +16,18 @@ Net subscriber change: 0
 ## Funnel per video (last 28 days)
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 4qS5HKBB3-M | 8 | 0.0 | 8 | 13.4 |
 | dN9w4Ixoqes | 5 | 0.0 | 0 | 0.0 |
 | 1ook5C5HtBs | 2 | 0.0 | 0 | 0.0 |
 | pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
 | HiJsHfuE6o4 | 1 | 0.0 | 0 | 0.0 |
 
-Videos under 15% avg retention: 5/5 — low % means viewers abandon early (hook problem), not a click problem. (Impressions/CTR unavailable: token lacks yt-analytics.readonly.)
+Videos under 15% avg retention: 5/5 — low % means viewers abandon early (hook problem), not a click problem.
+
+## Reach per video
+
+(Reach report failed: YouTube Reporting API has not been used in project 1091975850136 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubereporting.googleapis.com/overview?project=1091975850136 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.)
 
 ## Most recent 14 videos
 
