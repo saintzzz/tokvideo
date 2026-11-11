@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-11-11T13:38:03.112Z",
+  "preferMotifs": [
+    "hu-ma-ga",
+    "cau-khi",
+    "loi-nguyen-gieng-cu"
+  ],
+  "avoidMotifs": [
+    "dung-tra-loi",
+    "chuyen-do-dem",
+    "dem-kham-liem"
+  ],
+  "notes": [
+    "Top motif: hu-ma-ga (352 avg teaser views)",
+    "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views"
+  ]
+}
