@@ -6,9 +6,12 @@
 //
 // Usage: node scripts/pin-teaser-comments.mjs [slug ...]
 
+import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
+import { arcDisplayName, playlistUrl } from "./lib/long-metadata.mjs";
+import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 
 const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN } = {
   CLIENT_ID: process.env.YOUTUBE_CLIENT_ID,
@@ -31,16 +34,34 @@ const youtube = google.youtube({ version: "v3", auth: oauth2 });
 const requested = process.argv.slice(2);
 let dirty = false;
 
+const longPlaylistId = playlistMap.vi?.["long-form"];
+
 for (const [key, entry] of Object.entries(ledger)) {
-  if (!key.endsWith("-teaser") || !entry?.videoId) continue;
+  if (!entry?.videoId) continue;
   if (requested.length && !requested.includes(key)) continue;
   if (entry.pinnedCommentId) continue;
-  const slug = key.replace(/-teaser$/, "");
-  const ytId = ledger[slug]?.videoId;
-  if (!ytId) continue;
-  const text =
-    `Nghe TRỌN TẬP đầy đủ trên kênh 👉 https://youtu.be/${ytId}\n` +
-    `Trọn bộ câu chuyện trong playlist — ghim bình luận này để quay lại nghe tiếp nhé.`;
+  const isTeaser = key.endsWith("-teaser");
+  const slug = isTeaser ? key.replace(/-teaser$/, "") : key;
+  let text;
+  if (isTeaser) {
+    const ytId = ledger[slug]?.videoId;
+    if (!ytId) continue;
+    text =
+      `Nghe TRỌN TẬP đầy đủ trên kênh 👉 https://youtu.be/${ytId}\n` +
+      `Trọn bộ câu chuyện trong playlist — ghim bình luận này để quay lại nghe tiếp nhé.`;
+  } else {
+    // Long-form videos get the playlist + engagement-question pin
+    // (same copy upload-youtube-long posts at upload time).
+    const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
+    let arcLabel = slug;
+    try {
+      if (existsSync(epPath)) arcLabel = arcDisplayName(JSON.parse(await readFile(epPath, "utf8")), slug);
+    } catch { /* fall back to slug */ }
+    text =
+      `📌 Nghe trọn bộ ${arcLabel}: ${longPlaylistId ? playlistUrl(longPlaylistId) : "trên kênh"}\n` +
+      `Tập mới lên mỗi ngày - nhấn chuông để không bỏ lỡ.\n` +
+      `Bạn đoán ai là kẻ đứng sau chuyện này? Kể bên dưới nhé.`;
+  }
   try {
     const res = await youtube.commentThreads.insert({
       part: ["snippet"],

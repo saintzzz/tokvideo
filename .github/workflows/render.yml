@@ -1364,6 +1364,14 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: node scripts/fix-thumbnails.mjs
 
+      - name: Pin comments on videos missing them
+        continue-on-error: true
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: node scripts/pin-teaser-comments.mjs
+
       - name: Delete duplicate uploads not in the ledger
         continue-on-error: true
         env:
@@ -1372,9 +1380,6 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
           DEDUPE_DEBUG: "1"
-          # One-off 2026-11-09: user-confirmed off-brand uploads to remove.
-          DELETE_VIDEO_IDS: "DlheqvUrkkE,bQqHePktShI"
-          DELETE_VIDEO_IDS_EN: "p9_DNPFSyX8,P1mKlzSErR0"
         run: node scripts/dedupe-channel-videos.mjs --apply
 
       - name: Commit watchdog report and refilled content
@@ -1382,7 +1387,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json public/audio/suckhoe-long/ public/captions/ 2>/dev/null || true
+          git add src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           for i in 1 2 3 4 5; do
             git fetch origin main

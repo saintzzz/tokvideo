@@ -135,5 +135,32 @@ ledger[teaserKey] = {
   locale: "vi",
   privacyStatus: PRIVACY_STATUS,
 };
+
+// Pinned comment right at upload - the only clickable bridge from the
+// Shorts feed to the full episode (audit funnel 2026-11-06). Failure
+// must not fail the job; the watchdog's pin-teaser-comments sweep
+// backfills any miss on its next run.
+try {
+  const cmt = await youtube.commentThreads.insert({
+    part: ["snippet"],
+    requestBody: {
+      snippet: {
+        videoId: res.data.id,
+        topLevelComment: {
+          snippet: {
+            textOriginal:
+              `Nghe TRỌN TẬP đầy đủ trên kênh 👉 https://youtu.be/${longVideoId ?? ""}\n` +
+              `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
+          },
+        },
+      },
+    },
+  });
+  ledger[teaserKey].pinnedCommentId = cmt.data.id;
+  console.log(`Pinned comment: ${cmt.data.id}`);
+} catch (e) {
+  console.warn(`Pinned comment failed (watchdog sweep will retry): ${e.message}`);
+}
+
 await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
 console.log(`Ledger updated: published-long.json[${teaserKey}] = ${res.data.id}`);

@@ -213,6 +213,36 @@ ledger[slug] = {
 await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
 console.log(`Ledger updated: published-long.json[${slug}] = ${res.data.id}`);
 
+// Pinned comment on the long video too: playlist funnel + an
+// engagement question (comments are a ranking signal; every episode is
+// a mystery so "who is behind it" works arc-wide). Fail-soft - the
+// watchdog pin-teaser-comments sweep backfills any miss.
+try {
+  const arcLabel = arcDisplayName(episode, slug);
+  const playlistLine = longPlaylistId ? playlistUrl(longPlaylistId) : null;
+  const text = isEn
+    ? `📌 Full ${arcLabel} playlist: ${playlistLine ?? "on the channel"}\n` +
+      `New episode every day - subscribe so you don't miss it.\n` +
+      `Who do you think is behind it all? Drop your guess below.`
+    : `📌 Nghe trọn bộ ${arcLabel}: ${playlistLine ?? "trên kênh"}\n` +
+      `Tập mới lên mỗi ngày - nhấn chuông để không bỏ lỡ.\n` +
+      `Bạn đoán ai là kẻ đứng sau chuyện này? Kể bên dưới nhé.`;
+  const cmt = await youtube.commentThreads.insert({
+    part: ["snippet"],
+    requestBody: {
+      snippet: {
+        videoId: res.data.id,
+        topLevelComment: { snippet: { textOriginal: text } },
+      },
+    },
+  });
+  ledger[slug].pinnedCommentId = cmt.data.id;
+  await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
+  console.log(`Pinned comment: ${cmt.data.id}`);
+} catch (e) {
+  console.warn(`Pinned comment failed (watchdog sweep will retry): ${e.message}`);
+}
+
 // Custom thumbnail if one was rendered alongside the video
 // (scripts/make-long-thumbnail.mjs). Long-form CTR is thumbnail-driven;
 // the auto-picked frame is usually a dark scene. Fail-soft: a missing or
