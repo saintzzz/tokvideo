@@ -109,6 +109,8 @@ LUẬT BẮT BUỘC:
 - 8-12 scene-key khác nhau mỗi tập, tái sử dụng scene giữa các beat.
 - Kể ngôi thứ nhất, giọng kể chuyện dân gian Bà Tư: mộc mạc, chậm rãi, có chi tiết quê (tên làng, món ăn, phong tục). Không em-dash.
 - Audit 2026-11-06: tập 2-5 KHÔNG được mở bằng recap dài - tối đa 1 beat nhắc lại rồi vào thẳng tình tiết/hình ảnh mạnh nhất của tập mới trong 1-3 beat đầu.
+- Retention audit 2026-11-11 (funnel 28 ngày: 5/7 video dưới 15% avg view, khán giả bỏ trong 30s đầu): BEAT 1 của mọi tập PHẢI mở bằng một hình ảnh hoặc sự kiện cụ thể, rùng mình - vật bị cấm, xác chết, tiếng động lạ, hoặc khoảnh khắc lời cấm đang bị phá. CẤM mở bằng: giới thiệu nghề/tên/tuổi người kể, "người ta đồn rằng", tả cảnh làng hay thời tiết chung chung.
+- Beat 2 nâng ngay thành một câu hỏi hoặc mối nguy cụ thể chưa có lời giải (ai/cái gì/tại sao). Bối cảnh, lai lịch, tên làng chỉ được ghép vào từ beat 3 trở đi.
 - thumbnailSubjects: 2-3 gợi ý ảnh RIÊNG của tập này (cảnh/vật/nhân vật cụ thể xuất hiện trong tập), không lặp subject giữa các tập - tránh cận cảnh tối giống nhau.
 - Tập nào cũng phải có hook mạnh trong 2 beat đầu, leo thang giữa, kết mở dẫn sang tập sau (trừ tập cuối kết trọn, trả nợ minh oan).
 - KHÔNG markdown, KHÔNG giải thích - output chỉ là JSON thuần của 1 episode.`;
@@ -121,7 +123,7 @@ function arcPrompt(motif) {
   return `Bạn là nhà biên kịch truyện ma dân gian Việt Nam cho kênh "Truyện Ma Dài Kỳ".
 Viết outline cho 1 arc 5 tập với motif: ${motif.hook} (arc id "${motif.arc}", tên "${motif.title}").
 Output JSON thuần (không markdown): { "arcTitle": "${motif.title}", "premises": ["<tóm tắt 1-2 câu tập 1>", ... 5 phần tử] }
-Quy tắc: tập 1 đặt bối cảnh + lời cấm bị phá; tập 2-4 leo thang + mở bí mật (xác chết, món nợ, kẻ gây nghiệp); tập 5 đối chất + trả nợ + minh oan. Nhân vật quê, tên Việt thật. Không em-dash.${dirNote}`;
+Quy tắc: tập 1 mở thẳng vào khoảnh khắc lời cấm sắp/đang bị phá hoặc hậu quả đầu tiên - bối cảnh làng chỉ ghép dần sau, KHÔNG mở bằng giới thiệu dài dòng; tập 2-4 leo thang + mở bí mật (xác chết, món nợ, kẻ gây nghiệp); tập 5 đối chất + trả nợ + minh oan. Nhân vật quê, tên Việt thật. Không em-dash.${dirNote}`;
 }
 
 function epPrompt(motif, premises, i) {

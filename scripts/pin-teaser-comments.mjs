@@ -48,7 +48,7 @@ for (const [key, entry] of Object.entries(ledger)) {
     if (!ytId) continue;
     text =
       `Nghe TRỌN TẬP đầy đủ trên kênh 👉 https://youtu.be/${ytId}\n` +
-      `Trọn bộ câu chuyện trong playlist — ghim bình luận này để quay lại nghe tiếp nhé.`;
+      `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`;
   } else {
     // Long-form videos get the playlist + engagement-question pin
     // (same copy upload-youtube-long posts at upload time).
