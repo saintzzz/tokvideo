@@ -11,6 +11,7 @@ public/audio/*
 !public/audio/suckhoe-long/
 public/captions/*
 !public/captions/suckhoe-long-*/
+public/videos/*
 scripts/strategy-report.log
 
 # Local Task Scheduler run logs — machine-specific, not part of the repo.

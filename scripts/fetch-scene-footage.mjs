@@ -6,13 +6,15 @@
 // over a still when one exists.
 //
 // Sources, in order:
-//   1. Pexels Videos API — needs PEXELS_API_KEY env (free, no card).
+//   1. Pixabay Videos API — needs PIXABAY_API_KEY env (free, no card).
+//      Good horror-adjacent coverage (fog, rain, candles, forest).
+//   2. Pexels Videos API — needs PEXELS_API_KEY env (free, no card).
 //      Best quality/relevance. 200 req/hr free tier.
-//   2. Internet Archive — keyless. Public-domain stock/archival clips;
+//   3. Internet Archive — keyless. Public-domain stock/archival clips;
 //      hit-or-miss on modern horror looks but works with zero setup.
 //
 // Usage:
-//   PEXELS_API_KEY=xxx node scripts/fetch-scene-footage.mjs <slug> [...]
+//   PIXABAY_API_KEY=xxx node scripts/fetch-scene-footage.mjs <slug> [...]
 //   node scripts/fetch-scene-footage.mjs --keywords <slug>   # dry-run
 //   FORCE=1 ...                                            # re-download
 import { readFile, writeFile, mkdir, access } from "node:fs/promises";
@@ -27,6 +29,7 @@ const dryRun = args.includes("--keywords");
 const force = !!process.env.FORCE;
 const requested = args.filter((a) => !a.startsWith("--"));
 const PEXELS_KEY = process.env.PEXELS_API_KEY;
+const PIXABAY_KEY = process.env.PIXABAY_API_KEY;
 
 // English search queries per scene vibe. The scenePrompts are English
 // already, but they read like image prompts; stock search wants 2-4
@@ -75,6 +78,24 @@ const SCENE_KEYWORDS = {
 const keywordsFor = (scene, prompt) =>
   SCENE_KEYWORDS[scene] ??
   [prompt.split(/\s+/).slice(0, 4).join(" "), prompt.split(/\s+/).slice(0, 3).join(" ")];
+
+// -- Pixabay (free API key) -----------------------------------------------
+const pixabaySearch = async (query) => {
+  const res = await fetch(
+    `https://pixabay.com/api/videos/?key=${PIXABAY_KEY}&q=${encodeURIComponent(query)}&per_page=10&safesearch=true`,
+    { signal: AbortSignal.timeout(30_000) }
+  );
+  if (!res.ok) throw new Error(`pixabay ${res.status}`);
+  const json = await res.json();
+  for (const hit of json.hits ?? []) {
+    if (hit.duration < 5 || hit.duration > 60) continue;
+    // Prefer medium quality — large is often needlessly heavy for a
+    // background layer under captions/dim overlays.
+    const file = hit.videos?.medium ?? hit.videos?.large ?? hit.videos?.small;
+    if (file?.url) return { url: file.url, id: `pixabay-${hit.id}` };
+  }
+  return null;
+};
 
 // -- Pexels ---------------------------------------------------------------
 const pexelsSearch = async (query) => {
@@ -157,7 +178,8 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
     let found = null;
     for (const q of kws) {
       try {
-        if (PEXELS_KEY) found = await pexelsSearch(q);
+        if (PIXABAY_KEY) found = await pixabaySearch(q);
+        if (!found && PEXELS_KEY) found = await pexelsSearch(q);
         if (!found) found = await iaSearch(q);
         if (found) break;
       } catch (err) {

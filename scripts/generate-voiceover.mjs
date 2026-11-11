@@ -1,6 +1,6 @@
 import { createWriteStream, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
-import { mkdir, readdir } from "node:fs/promises";
+import { mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
@@ -336,10 +336,66 @@ const synthesizeOnce = async (outFile, text, voice, prosody) => {
     // it when available — audio is committed anyway (CI reuses beats and
     // skips TTS entirely), so the python dependency only matters on the
     // machine that prepares a new arc.
-    if (!edgeTtsCli) throw err;
-    console.warn(`msedge-tts failed (${err.message}) — retrying via edge-tts CLI`);
-    await synthesizeViaCli(outFile, text, voice, prosody);
+    if (edgeTtsCli) {
+      try {
+        console.warn(`msedge-tts failed (${err.message}) — retrying via edge-tts CLI`);
+        await synthesizeViaCli(outFile, text, voice, prosody);
+        return;
+      } catch (cliErr) {
+        if (!GCP_TTS_KEY) throw cliErr;
+        console.warn(`edge-tts CLI also failed (${cliErr.message}) — falling back to Google Cloud TTS`);
+        await synthesizeViaGcp(outFile, text, voice, prosody);
+        return;
+      }
+    }
+    if (!GCP_TTS_KEY) throw err;
+    console.warn(`msedge-tts failed (${err.message}) — falling back to Google Cloud TTS`);
+    await synthesizeViaGcp(outFile, text, voice, prosody);
   }
+};
+
+// Third-tier fallback: Google Cloud TTS (GCP_TTS_API_KEY, restricted to
+// the TTS API). Exists for the recurring "GitHub runner IP gets 403 from
+// the unofficial Edge endpoint" failure mode — the job still produces
+// audio instead of dying. Free tier is ~1M chars/month at WaveNet/Neural2
+// pricing; a full 5-episode arc is ~60k chars, so even daily fallback use
+// fits. Prosody percent values map approximately onto GCP's controls
+// (rate -> speakingRate multiplier, pitch% -> ~0.2 semitones per point,
+// volume% -> ~0.2 dB per point).
+const GCP_TTS_KEY = process.env.GCP_TTS_API_KEY;
+const gcpVoice = (edgeVoice) =>
+  edgeVoice.startsWith("vi-") ? "vi-VN-Neural2-A" : "en-US-Neural2-F";
+const gcpLang = (edgeVoice) => (edgeVoice.startsWith("vi-") ? "vi-VN" : "en-US");
+const pct = (s) => {
+  const m = String(s ?? "").match(/^([+-]?\d+(?:\.\d+)?)%$/);
+  return m ? +m[1] : 0;
+};
+const synthesizeViaGcp = async (outFile, text, voice, prosody) => {
+  if (!GCP_TTS_KEY) throw new Error("GCP_TTS_API_KEY not set");
+  const res = await fetch(
+    `https://texttospeech.googleapis.com/v1/text:synthesize?key=${GCP_TTS_KEY}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        input: { text },
+        voice: { languageCode: gcpLang(voice), name: gcpVoice(voice) },
+        audioConfig: {
+          audioEncoding: "MP3",
+          speakingRate: Math.min(4, Math.max(0.25, 1 + pct(prosody?.rate) / 100)),
+          pitch: Math.min(20, Math.max(-20, pct(prosody?.pitch) * 0.2)),
+          volumeGainDb: Math.min(16, Math.max(-16, pct(prosody?.volume) * 0.2)),
+        },
+      }),
+      signal: AbortSignal.timeout(60_000),
+    }
+  );
+  if (!res.ok) {
+    throw new Error(`gcp-tts ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  }
+  const { audioContent } = await res.json();
+  if (!audioContent) throw new Error("gcp-tts returned no audioContent");
+  await writeFile(outFile, Buffer.from(audioContent, "base64"));
 };
 
 const synthesizeViaNodeLib = async (outFile, text, voice, prosody) => {

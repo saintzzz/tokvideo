@@ -1024,7 +1024,18 @@ jobs:
       - name: Generate voiceover for this episode
         env:
           RESUME: "1"
+          GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ env.LONG_SLUG }}
+
+      # Real motion b-roll per scene (Pixabay/Pexels -> archive.org). An
+      # enhancement, not a blocker — scenes without a clip keep their
+      # still-image Ken-Burns background.
+      - name: Fetch scene footage
+        continue-on-error: true
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/fetch-scene-footage.mjs ${{ env.LONG_SLUG }}
 
       - name: Render episode
         run: node scripts/render-suckhoe-long.mjs ${{ env.LONG_SLUG }}
@@ -1135,7 +1146,17 @@ jobs:
         if: steps.pick.outputs.slug != ''
         env:
           RESUME: "1"
+          GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ steps.pick.outputs.slug }}
+
+      # Real motion b-roll per scene — enhancement only; stills fallback.
+      - name: Fetch scene footage
+        if: steps.pick.outputs.slug != ''
+        continue-on-error: true
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/fetch-scene-footage.mjs ${{ steps.pick.outputs.slug }}
 
       - name: Render episode
         if: steps.pick.outputs.slug != ''
@@ -1345,6 +1366,7 @@ jobs:
         continue-on-error: true
         env:
           RESUME: "1"
+          GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/audio-topup.mjs
 
       - name: Sync per-series playlists (Shorts -> long-form funnel)

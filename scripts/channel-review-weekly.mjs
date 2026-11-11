@@ -88,15 +88,69 @@ const trend = (arc, f) => {
   return p ? (f > p[f === undefined ? "teaserViews" : "teaserViews"] ? "↑" : f < p.teaserViews ? "↓" : "→") : "new";
 };
 
+// ---- Market scan -------------------------------------------------------
+// What the wider VN horror market is doing right now, so motif steering
+// isn't only navel-gazing at our own (still small) sample. Two cheap
+// calls, both fine with the existing token scope:
+//   - search.list q="truyện ma" order=viewCount over the last 21 days
+//     (~100 units) — the current horror meta on VN YouTube.
+//   - videos.list chart=mostPopular regionCode=VN (1 unit) — sanity
+//     check whether horror even charts this week.
+// Extracts which of our motif keywords show up in winning titles and
+// feeds them to the writer as `motifHints`.
+const MOTIF_LEXICON = [
+  "miếu", "giếng", "nghĩa trang", "mộ", "cây đa", "cầu", "sông", "rạch",
+  "đêm rằm", "mùng một", "lễ", "thầy", "bùa", "vong", "oan", "trả nợ",
+  "chết đuối", "thay ma", "khám liệm", "hũ", "gà", "làng", "rẫy", "rừng",
+  "dây", "bóng", "gọi tên", "đò đêm", "quan tài", "nợ máu", "địa ngục",
+];
+let marketTop = [];
+let motifHints = [];
+try {
+  const since = new Date(Date.now() - 21 * 86400e3).toISOString();
+  const search = await youtube.search.list({
+    part: ["id"],
+    q: "truyện ma",
+    type: ["video"],
+    order: "viewCount",
+    publishedAfter: since,
+    maxResults: 25,
+    regionCode: "VN",
+    relevanceLanguage: "vi",
+  });
+  const hitIds = (search.data.items ?? []).map(i => i.id.videoId).filter(Boolean);
+  if (hitIds.length) {
+    const r = await youtube.videos.list({ part: ["snippet", "statistics"], id: hitIds });
+    marketTop = (r.data.items ?? [])
+      .map(v => ({
+        title: v.snippet.title,
+        views: num(v.statistics.viewCount),
+        channel: v.snippet.channelTitle,
+        publishedAt: v.snippet.publishedAt?.slice(0, 10),
+      }))
+      .sort((a, b) => b.views - a.views);
+    const counts = {};
+    for (const t of marketTop) {
+      const low = t.title.toLowerCase();
+      for (const kw of MOTIF_LEXICON) if (low.includes(kw)) counts[kw] = (counts[kw] ?? 0) + 1;
+    }
+    motifHints = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 6).map(([kw]) => kw);
+  }
+} catch (err) {
+  console.warn(`market scan failed (non-fatal): ${err.message ?? err}`);
+}
+
 const directives = {
   generatedAt: new Date().toISOString(),
   preferMotifs: ranking.slice(0, 3).filter(r => r.teaserViews > 0).map(r => r.arc),
   avoidMotifs: ranking.filter(r => r.episodes >= 3 && r.teaserViews < 5).map(r => r.arc),
+  motifHints,
   notes: [],
 };
 if (ranking[0]) directives.notes.push(`Top motif: ${ranking[0].arc} (${ranking[0].teaserViews.toFixed(0)} avg teaser views)`);
 const dead = directives.avoidMotifs;
 if (dead.length) directives.notes.push(`Avoid: ${dead.join(", ")} - teasers averaging under 5 views`);
+if (motifHints.length) directives.notes.push(`Market hints (3w VN "truyện ma" meta): ${motifHints.join(", ")}`);
 
 // Human report.
 let md = `# Channel Weekly Review - ${week}\n\n`;
@@ -105,7 +159,17 @@ for (const r of ranking) {
   const t = prev ? trend(r.arc, r.teaserViews) : "first";
   md += `| ${r.arc} | ${r.episodes} | ${r.teaserViews.toFixed(1)} | ${r.longViews.toFixed(1)} | ${r.teaserLikes.toFixed(1)} | ${r.longComments.toFixed(1)} | ${t} |\n`;
 }
-md += `\n## Directives for next arcs\n- Prefer: ${directives.preferMotifs.join(", ") || "none yet"}\n- Avoid: ${directives.avoidMotifs.join(", ") || "none"}\n`;
+md += `\n## Market scan - top VN "truyện ma" videos last 21d\n\n`;
+if (marketTop.length) {
+  md += `| Title | Views | Channel | Published |\n|---|---|---|---|\n`;
+  for (const t of marketTop.slice(0, 12)) {
+    md += `| ${t.title.replace(/\|/g, "/")} | ${t.views} | ${t.channel} | ${t.publishedAt} |\n`;
+  }
+  md += `\nMotif signals extracted into directives.motifHints: ${motifHints.join(", ") || "none"}\n`;
+} else {
+  md += `(market scan unavailable this week)\n`;
+}
+md += `\n## Directives for next arcs\n- Prefer: ${directives.preferMotifs.join(", ") || "none yet"}\n- Avoid: ${directives.avoidMotifs.join(", ") || "none"}\n- Market hints: ${directives.motifHints.join(", ") || "none"}\n`;
 md += `\nAuto-applied: motif steering into queue-refill writer prompt. Recommendations needing bigger changes are listed above for the weekly owner review.\n`;
 
 await writeFile(path.join(snapDir, `${week}.json`), JSON.stringify({ week, ranking, directives }, null, 2) + "\n");
