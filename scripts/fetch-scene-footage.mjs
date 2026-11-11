@@ -80,25 +80,38 @@ const keywordsFor = (scene, prompt) =>
   [prompt.split(/\s+/).slice(0, 4).join(" "), prompt.split(/\s+/).slice(0, 3).join(" ")];
 
 // -- Pixabay (free API key) -----------------------------------------------
-const pixabaySearch = async (query) => {
-  const res = await fetch(
-    `https://pixabay.com/api/videos/?key=${PIXABAY_KEY}&q=${encodeURIComponent(query)}&per_page=10&safesearch=true`,
-    { signal: AbortSignal.timeout(30_000) }
-  );
-  if (!res.ok) throw new Error(`pixabay ${res.status}`);
-  const json = await res.json();
-  for (const hit of json.hits ?? []) {
-    if (hit.duration < 5 || hit.duration > 60) continue;
-    // Prefer medium quality — large is often needlessly heavy for a
-    // background layer under captions/dim overlays.
-    const file = hit.videos?.medium ?? hit.videos?.large ?? hit.videos?.small;
-    if (file?.url) return { url: file.url, id: `pixabay-${hit.id}` };
+// Pixabay fronts its API with Cloudflare bot checks that intermittently
+// return the "Just a moment" HTML page (200, not an error status). Retry
+// a few times with backoff — the challenge window usually clears.
+const pixabaySearch = async (query, used) => {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const res = await fetch(
+      `https://pixabay.com/api/videos/?key=${PIXABAY_KEY}&q=${encodeURIComponent(query)}&per_page=10&safesearch=true`,
+      { signal: AbortSignal.timeout(30_000) }
+    );
+    const text = await res.text();
+    if (text.includes("Just a moment")) {
+      await new Promise((r) => setTimeout(r, 8000 * (attempt + 1)));
+      continue;
+    }
+    if (!res.ok) throw new Error(`pixabay ${res.status}`);
+    const json = JSON.parse(text);
+    for (const hit of json.hits ?? []) {
+      if (hit.duration < 5 || hit.duration > 60) continue;
+      const id = `pixabay-${hit.id}`;
+      if (used.has(id)) continue;
+      // Prefer medium quality — large is often needlessly heavy for a
+      // background layer under captions/dim overlays.
+      const file = hit.videos?.medium ?? hit.videos?.large ?? hit.videos?.small;
+      if (file?.url) return { url: file.url, id };
+    }
+    return null;
   }
-  return null;
+  throw new Error("pixabay blocked by bot challenge");
 };
 
 // -- Pexels ---------------------------------------------------------------
-const pexelsSearch = async (query) => {
+const pexelsSearch = async (query, used) => {
   const res = await fetch(
     `https://api.pexels.com/videos/search?query=${encodeURIComponent(query)}&per_page=8&orientation=landscape`,
     { headers: { Authorization: PEXELS_KEY } }
@@ -108,16 +121,49 @@ const pexelsSearch = async (query) => {
   // Prefer 10-30s HD clips; pick the largest hd file that isn't gigantic.
   for (const v of json.videos ?? []) {
     if (v.duration < 6 || v.duration > 60) continue;
+    const id = `pexels-${v.id}`;
+    if (used.has(id)) continue;
     const file = (v.video_files ?? [])
       .filter((f) => f.quality === "hd" || f.quality === "sd")
       .sort((a, b) => (b.width ?? 0) - (a.width ?? 0))[0];
-    if (file) return { url: file.link, id: v.id };
+    if (file) return { url: file.link, id };
+  }
+  return null;
+};
+
+// -- Wikimedia Commons (keyless) -------------------------------------------
+// Atmospheric clips (fog timelapses, rain, candles, forests) live in the
+// File namespace. No API key needed; prefers mp4, accepts webm/ogv since
+// Remotion renders in Chrome.
+const wmcSearch = async (query, used) => {
+  const res = await fetch(
+    `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&srnamespace=6&format=json&srlimit=10`,
+    { signal: AbortSignal.timeout(30_000) }
+  );
+  if (!res.ok) throw new Error(`wikimedia ${res.status}`);
+  const json = await res.json();
+  const files = (json.query?.search ?? [])
+    .map((s) => s.title)
+    .filter((t) => /\.(mp4|webm|ogv)$/i.test(t));
+  for (const title of files) {
+    if (used.has(title)) continue;
+    const info = await fetch(
+      `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=videoinfo&viprop=url|extmetadata&format=json`,
+      { signal: AbortSignal.timeout(30_000) }
+    );
+    const ij = await info.json();
+    const page = Object.values(ij.query?.pages ?? {})[0];
+    const url = page?.videoinfo?.[0]?.url;
+    if (url) {
+      const ext = title.match(/\.(mp4|webm|ogv)$/i)[1];
+      return { url, id: title, ext };
+    }
   }
   return null;
 };
 
 // -- Internet Archive (keyless) -------------------------------------------
-const iaSearch = async (query) => {
+const iaSearch = async (query, used) => {
   const q = encodeURIComponent(`${query} AND mediatype:movies`);
   const res = await fetch(
     `https://archive.org/advancedsearch.php?q=${q}&fl[]=identifier&rows=6&output=json&sort[]=downloads+desc`,
@@ -126,6 +172,7 @@ const iaSearch = async (query) => {
   if (!res.ok) throw new Error(`archive.org ${res.status}`);
   const json = await res.json();
   for (const doc of json.response?.docs ?? []) {
+    if (used.has(doc.identifier)) continue;
     const meta = await fetch(`https://archive.org/metadata/${doc.identifier}`);
     const mjson = await meta.json();
     const mp4 = (mjson.files ?? []).find(
@@ -161,6 +208,9 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
   const outDir = path.join(root, "public", "videos", "suckhoe-long", ep.slug);
   await mkdir(outDir, { recursive: true });
   const sceneVideos = { ...(ep.sceneVideos ?? {}) };
+  // Clips already chosen this episode — avoids two scenes showing the
+  // same stock video, which reads as a cheap repeat.
+  const used = new Set();
 
   for (const scene of scenes) {
     const rel = `videos/suckhoe-long/${ep.slug}/${scene}.mp4`;
@@ -178,9 +228,10 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
     let found = null;
     for (const q of kws) {
       try {
-        if (PIXABAY_KEY) found = await pixabaySearch(q);
-        if (!found && PEXELS_KEY) found = await pexelsSearch(q);
-        if (!found) found = await iaSearch(q);
+        if (PIXABAY_KEY) found = await pixabaySearch(q, used);
+        if (!found && PEXELS_KEY) found = await pexelsSearch(q, used);
+        if (!found) found = await wmcSearch(q, used);
+        if (!found) found = await iaSearch(q, used);
         if (found) break;
       } catch (err) {
         console.warn(`search "${q}" failed: ${err.message}`);
@@ -190,10 +241,14 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
       console.warn(`no footage for ${ep.slug} [${scene}]`);
       continue;
     }
+    const ext = found.ext ?? "mp4";
+    const relExt = `videos/suckhoe-long/${ep.slug}/${scene}.${ext}`;
+    const outFileExt = path.join(outDir, `${scene}.${ext}`);
     try {
-      const bytes = await download(found.url, outFile);
-      sceneVideos[scene] = rel;
-      console.log(`wrote ${rel} (${(bytes / 1e6).toFixed(1)}MB) <- ${found.id ?? found.url.slice(0, 60)}`);
+      const bytes = await download(found.url, outFileExt);
+      used.add(found.id);
+      sceneVideos[scene] = relExt;
+      console.log(`wrote ${relExt} (${(bytes / 1e6).toFixed(1)}MB) <- ${found.id ?? found.url.slice(0, 60)}`);
     } catch (err) {
       console.warn(`download failed ${scene}: ${err.message}`);
     }

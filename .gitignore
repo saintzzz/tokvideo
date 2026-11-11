@@ -12,6 +12,10 @@ public/audio/*
 public/captions/*
 !public/captions/suckhoe-long-*/
 public/videos/*
+
+# Weekly improver launchd runtime state
+scripts/.weekly-improver.lastrun
+scripts/weekly-improver.log
 scripts/strategy-report.log
 
 # Local Task Scheduler run logs — machine-specific, not part of the repo.
