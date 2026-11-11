@@ -197,6 +197,9 @@ async function main() {
           break;
         } catch (err) {
           lastErr = err;
+          console.error(
+            `Per-video analytics attempt failed (${a.metrics}): ${err.message ?? err}`
+          );
         }
       }
       if (!done) {
