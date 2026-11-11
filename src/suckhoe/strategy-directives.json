@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T13:38:03.112Z",
+  "generatedAt": "2026-11-11T17:46:59.257Z",
   "preferMotifs": [
     "hu-ma-ga",
     "cau-khi",
@@ -10,8 +10,17 @@
     "chuyen-do-dem",
     "dem-kham-liem"
   ],
+  "motifHints": [
+    "mộ",
+    "vong",
+    "làng",
+    "thầy",
+    "bùa",
+    "miếu"
+  ],
   "notes": [
     "Top motif: hu-ma-ga (352 avg teaser views)",
-    "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views"
+    "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views",
+    "Market hints (3w VN \"truyện ma\" meta): mộ, vong, làng, thầy, bùa, miếu"
   ]
 }

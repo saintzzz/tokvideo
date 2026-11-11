@@ -3,18 +3,18 @@
   "ranking": [
     {
       "arc": "hu-ma-ga",
-      "teaserViews": 352,
+      "teaserViews": 352.2,
       "longViews": 0.2,
       "teaserLikes": 6.8,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
       "arc": "cau-khi",
-      "teaserViews": 229.6,
+      "teaserViews": 242.4,
       "longViews": 3.8,
       "teaserLikes": 5.6,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
@@ -22,7 +22,7 @@
       "teaserViews": 189.4,
       "longViews": 5.4,
       "teaserLikes": 3.4,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
@@ -30,31 +30,31 @@
       "teaserViews": 70.5,
       "longViews": 6.8,
       "teaserLikes": 0.5,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
       "arc": "hon-ma",
-      "teaserViews": 57.2,
+      "teaserViews": 57.4,
       "longViews": 3.4,
       "teaserLikes": 1.4,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
       "arc": "cay-da",
-      "teaserViews": 41,
-      "longViews": 1.5,
-      "teaserLikes": 1.5,
-      "longComments": 0.75,
-      "episodes": 4
+      "teaserViews": 44.6,
+      "longViews": 1.8,
+      "teaserLikes": 1.8,
+      "longComments": 1.6,
+      "episodes": 5
     },
     {
       "arc": "mieu-hoang",
       "teaserViews": 5,
       "longViews": 4.4,
       "teaserLikes": 0,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
@@ -62,7 +62,7 @@
       "teaserViews": 1,
       "longViews": 0.8,
       "teaserLikes": 0.2,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
@@ -70,7 +70,7 @@
       "teaserViews": 0.6,
       "longViews": 1.4,
       "teaserLikes": 0,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     },
     {
@@ -78,12 +78,12 @@
       "teaserViews": 0,
       "longViews": 0,
       "teaserLikes": 0,
-      "longComments": 1,
+      "longComments": 2,
       "episodes": 5
     }
   ],
   "directives": {
-    "generatedAt": "2026-11-11T13:38:03.112Z",
+    "generatedAt": "2026-11-11T17:46:59.257Z",
     "preferMotifs": [
       "hu-ma-ga",
       "cau-khi",
@@ -94,9 +94,18 @@
       "chuyen-do-dem",
       "dem-kham-liem"
     ],
+    "motifHints": [
+      "mộ",
+      "vong",
+      "làng",
+      "thầy",
+      "bùa",
+      "miếu"
+    ],
     "notes": [
       "Top motif: hu-ma-ga (352 avg teaser views)",
-      "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views"
+      "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views",
+      "Market hints (3w VN \"truyện ma\" meta): mộ, vong, làng, thầy, bùa, miếu"
     ]
   }
 }
