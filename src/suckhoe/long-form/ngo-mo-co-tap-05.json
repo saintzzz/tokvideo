@@ -1,0 +1,102 @@
+{
+  "id": "ngo-mo-co-tap-05",
+  "arc": "ngo-mo-co",
+  "arcTitle": "NGÔI MỘ CỔ",
+  "episode": 5,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "ngo-mo-co-tap-05",
+  "title": "Gọi Đúng Tên Vong Mới Về - Đêm Rằm Cuối Cùng Trên Dốc Gò Ô",
+  "description": "Tập 5 arc NGÔI MỘ CỔ: Sổ hộ tịch cũ trong hòm đình mở ra tên thật của cô Ba Sen. Ba Thiện đục lại tấm bia, đêm rằm khiêng lên dốc lần thứ hai - lần này đọc đúng tên, đồng vàng ông nội nhận xưa được trả về đất, và nấm mộ sáu chục năm cuối cùng cũng khô. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #ngomoco",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "ngôi mộ cổ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "thumbnailSubjects": [
+    "elderly Vietnamese villagers gathered around an opened ancient wooden chest in a communal hall, moth-eaten registry books, morning fog, photorealistic",
+    "a stone grave stele with fresh carved characters at the head of a grave at night, a translucent woman in white bowing deeply, photorealistic horror",
+    "a peaceful hillside cemetery at dawn with villagers sweeping graves and burning incense, warm golden light, photorealistic"
+  ],
+  "scenePrompts": {
+    "dinh-yard": "the yard of an old Vietnamese communal house at misty morning, village elders gathered around a just-opened ancient wooden chest, solemn mood, photorealistic",
+    "registry-book": "a yellowed hand-written household registry book opened on a wooden table, a trembling old finger pointing at a faded line, lamplight, photorealistic",
+    "stone-yard-night": "a Vietnamese stonemason yard at night, a stone stele being re-carved under a single lamp, fresh chisel marks, fog, photorealistic",
+    "graveyard-night": "an abandoned Vietnamese cemetery at night under a full moon, a newly carved stone stele being erected at a grave mound, figures waiting at the hill foot, photorealistic",
+    "woman-on-grave": "a woman with very long black hair standing up from her grave mound for the first time, translucent in the fog, bowing deeply in gratitude, photorealistic horror",
+    "graveyard-dawn": "a hillside cemetery at dawn, the once-fresh grave mound now dry with grass sprouting, golden light burning off fog, peaceful, photorealistic",
+    "village-day": "a Vietnamese village in warm daylight, villagers walking up the cemetery hill with incense and brooms to sweep old graves, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "dinh-yard",
+      "caption": "Hòm đình sáu chục năm mở ra",
+      "text": "Ông trưởng làng đời nay nghe xong chuyện thì im lặng lâu, rồi gọi mấy người lớn tuổi họp lại. Hòm đình đóng sáu chục năm được mở ra trong buổi sáng mù sương - bên trong mốc mọt, sổ sách xưa nở phồng mùi ẩm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "registry-book",
+      "caption": "Nguyễn Thị Tư Liên",
+      "text": "Người ta lật từng trang sổ hộ tịch ố vàng. Rồi một ngón tay run run chỉ xuống dòng chữ: Nguyễn Thị Tư Liên - con út nhà ông Hòe. Và ngay dòng bên cạnh, ngày mất của cô ghi rõ: rằm tháng bảy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "registry-book",
+      "caption": "Rằm nào cũng là ngày cô đi",
+      "text": "Hóa ra vì vậy mà rằm nào cô cũng ngồi trên nấm mộ - đó là ngày cô đi. Cả làng gọi cô Ba Sen cả đời, chỉ cha mẹ với người yêu mới gọi Sen - còn tên để vong được gọi về phải là cái tên trên sổ: Tư Liên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stone-yard-night",
+      "caption": "Đục lại từng nét tên thật",
+      "text": "Ba Thiện mài lại mặt tấm bia, đục lại từng nét: Nguyễn Thị Tư Liên. Bên dưới là câu đối cô tự soạn năm xưa - nét chữ tay cô gái viết khi còn đợi người, giờ do chính tay cháu người nợ khắc lại cho cô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-night",
+      "caption": "Lên dốc lần thứ hai",
+      "text": "Rằm tháng sau, anh khiêng bia lên dốc lần thứ hai - lần này có má anh, cụ Chín và ông trưởng làng đứng chờ ở chân dốc. Sương vẫn dày, nấm mộ vẫn tươi đất, người đàn bà vẫn ngồi đó chải tóc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Trả cả tiền lẫn lời hứa",
+      "text": "Anh dựng bia, đọc to ba lần: Nguyễn Thị Tư Liên - nhà cháu trả cô tấm bia. Rồi anh lấy đồng vàng ông nội nhận năm xưa, chôn xuống chân bia - trả cả tiền lẫn lời hứa, sáu chục năm rồi mới tới hạn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Lần đầu cô đứng xuống mộ",
+      "text": "Người đàn bà ngừng chải tóc. Cô đứng dậy khỏi nấm mộ - lần đầu tiên sau sáu chục năm - nhìn tấm bia rất lâu, rồi quay sang vái anh một vái thật sâu. Cô nói khẽ một tiếng cảm ơn, hình bóng nhạt dần như sương tan."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-dawn",
+      "caption": "Đất mộ sáng ra đã khô",
+      "text": "Không ai thấy cô tan đi đâu - chỉ thấy nấm mộ sáng hôm sau đất khô lại bình thường, cỏ dại bắt đầu mọc. Sáu chục năm đất tươi, chỉ cần một cái tên đúng là xong. Vệt đất đỏ trước sân nhà anh cũng biến mất từ đêm đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-day",
+      "caption": "Dốc Gò Ô thành dốc cô Liên",
+      "text": "Từ đó dân làng gọi dốc Gò Ô là dốc cô Liên. Rằm tháng người ta bắt đầu lên nghĩa địa quét mộ phụ - ngôi mộ không bia giờ đã có bia, có tên, có người thắp nhang, không còn ai phải ngồi đợi trên đó nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-day",
+      "caption": "Đục bia không lấy tiền",
+      "text": "Ba Thiện từ đó có thêm một nghề tay trái: đục bia không lấy tiền cho những ngôi mộ vô chủ trong vùng. Anh bảo nghề ông truyền cho mình, nợ ông mình đã trả - còn phước thì cứ gieo, biết đâu trên kia có người đang đợi tên mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-day",
+      "caption": "Chuyện cô gái đợi được gọi tên",
+      "text": "Chuyện nấm mộ đất tươi tới đây là hết - vì nó vốn không phải chuyện ma dọa người, mà là chuyện một cô gái đợi được gọi đúng tên mình suốt sáu chục năm. Nhà bạn có nấm mộ cổ nào lâu không ai quét không - kể cho Bà Tư nghe ở dưới phần bình luận nhé."
+    }
+  ]
+}

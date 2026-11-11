@@ -1,0 +1,101 @@
+{
+  "id": "ngo-mo-co-tap-02",
+  "arc": "ngo-mo-co",
+  "arcTitle": "NGÔI MỘ CỔ",
+  "episode": 2,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "ngo-mo-co-tap-02",
+  "title": "Cô Gái Trong Nấm Mộ Đất Tươi - Chết Vì Đợi Người Hứa Ba Năm",
+  "description": "Tập 2 arc NGÔI MỘ CỔ: Ba Thiện sau đêm gặp người đàn bà trên nấm mộ thì nằm liệt. Cụ Chín chín mươi lăm tuổi kể lại chuyện đời ông bà ngoại: cô Ba Sen con nhà ông Hòe đợi người yêu ba năm rồi mất trẻ, cha mẹ giận chôn không bia - từ đó nấm mộ không bao giờ khô đất. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #ngomoco",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "ngôi mộ cổ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "thumbnailSubjects": [
+    "an elderly Vietnamese woman helping her feverish son up from a sleeping mat in a dim rural house, incense smoke, photorealistic",
+    "a young Vietnamese woman with very long hair standing at a river ferry landing at dusk watching the horizon, 1960s countryside, photorealistic",
+    "an unmarked grave mound with freshly turned wet red soil in an overgrown abandoned cemetery, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "sick-morning": "a young Vietnamese man lying feverish on a mat in a dim rural house at morning, dark circles under his eyes, mother pressing a wet cloth on his forehead, photorealistic",
+    "elder-house": "a very old Vietnamese man in a dark wooden house sitting by a tea tray, faded photographs on the wall, afternoon light through wooden slats, photorealistic",
+    "village-old": "a Vietnamese village in the 1960s at dusk, thatched houses, a young woman with very long hair in ao dai standing apart from villagers, photorealistic",
+    "ferry-dusk": "a river ferry landing in the Vietnamese countryside at dusk, a young woman with long hair watching the far bank, a boatman poling away into mist, photorealistic",
+    "graveyard-old": "an old hillside cemetery decades ago, a fresh unmarked burial mound of wet red soil among older graves, mourners leaving in haste at dusk, photorealistic",
+    "house-night": "inside a small Vietnamese rural house at night, a family altar with incense, dim oil lamp light, a large locked wooden chest in the corner, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "sick-morning",
+      "caption": "Vệt chân chưa khô đã liệt",
+      "text": "Vệt chân đất đỏ còn chưa khô thì Ba Thiện đã nằm liệt. Người lạnh ngắt mà mồ hôi ướt đẫm, cứ nhắm mắt là thấy bóng đàn bà ngồi chải tóc trên nấm mộ. Bà Hai thấy con không xong, trưa đó dắt thẳng qua nhà cụ Chín."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Cụ Chín buông chén trà",
+      "text": "Cụ Chín năm nay chín mươi lăm, người cuối cùng trong làng Hòa Định còn nhớ chuyện đời ông bà ngoại. Nghe tới câu người đàn bà ngồi trên mộ không bia, cụ buông chén trà xuống bàn, im lặng rất lâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Mộ đất tươi của cô Ba Sen",
+      "text": "Rồi cụ nói chậm rãi: mấy chục năm rồi không ai gọi tên cô ấy - làng cố tình quên, mà cô cố tình không quên. Nấm mộ đất tươi đó là mộ cô Ba Sen, con gái út nhà ông Hòe, nhà giàu nhất vùng ngày trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-old",
+      "caption": "Hoa khôi và chàng trai nghèo",
+      "text": "Ngày xưa cô Sen là hoa khôi của làng, tóc dài đen nhánh, đi đâu cũng có người ngó theo. Cô đã có hôn ước với anh Cảnh - con nhà nghèo kế làng, hai đứa thương nhau từ thuở còn đi chăn vịt chung bờ đê."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ferry-dusk",
+      "caption": "Lời hứa ba năm",
+      "text": "Ông Hòe cấm đoán quyết liệt - nhà giàu sao chịu gả con cho trai nghèo. Anh Cảnh bỏ đi biền biệt, để lại một lời hứa: ba năm nữa làm ra tiền sẽ về cưới cô đàng hoàng. Cô Sen đợi, tóc buông dài không bao giờ cắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-old",
+      "caption": "Tin buồn về đúng đêm rằm",
+      "text": "Ba năm tròn không một lá thư. Rồi người ta đưa tin về: anh Cảnh mất trên đường về, lúc giặc giã loạn lạc. Cô Sen nghe xong không khóc một tiếng, chỉ ốm liệt dần - đi lúc trăng rằm, mái tóc vẫn buông dài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-old",
+      "caption": "Chôn vội không bia không mả",
+      "text": "Trước khi nhắm mắt cô có trăn trối một việc: xin ghi tên cô lên bia mộ, để mai mốt anh Cảnh có về thì còn biết đường tìm. Nhưng ông Hòe giận con gái chết vì trai nghèo - chôn cho xong chuyện, không bia không mả."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-old",
+      "caption": "Nhà ông Hòe đi tản cư",
+      "text": "Ít lâu sau nhà ông Hòe đi tản cư, bỏ làng biền biệt tới giờ. Nấm mộ cô Sen từ đó không bia không tên - mà lạ thay, đất trên mộ đêm nào cũng tươi xốp như có ai vừa vun lại, cỏ dại không bao giờ mọc lên được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Người mất không bia không siêu",
+      "text": "Cụ Chín thở dài: dân gian quan niệm người mất không bia là vong không có nhà, không ai gọi tên thì không siêu được - cứ ngồi trên mộ mà đợi. Cô ấy đợi người hứa, rồi đợi cả cái tên của mình nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Cái hòm mấy chục năm khóa",
+      "text": "Về tới nhà Ba Thiện hỏi má: sao cô ấy không hỏi ai lại hỏi đúng nghề đục bia nhà mình. Bà Hai im lặng không đáp, quay lưng đi khóa cái hòm gỗ lớn cuối nhà - cái hòm nghề mà ông nội để lại, mấy chục năm nay bà chưa từng cho ai đụng vào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Nợ đời trước đời sau trả",
+      "text": "Trước khi hai mẹ con ra về cụ Chín chỉ dặn một câu, mắt nhìn xa xăm: nó đã hỏi tới nghề nhà mày thì chuyện chưa xong đâu. Nợ của đời trước, đời sau phải trả - trả sớm thì nó tha, trả trễ thì nó gọi thêm."
+    }
+  ]
+}

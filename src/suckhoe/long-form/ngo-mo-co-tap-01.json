@@ -1,0 +1,101 @@
+{
+  "id": "ngo-mo-co-tap-01",
+  "arc": "ngo-mo-co",
+  "arcTitle": "NGÔI MỘ CỔ",
+  "episode": 1,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "ngo-mo-co-tap-01",
+  "title": "Ngôi Mộ Không Bia Giữa Nghĩa Địa Bỏ Hoang - Đêm Rằm Có Người Ngồi Chải Tóc",
+  "description": "Tập 1 arc NGÔI MỘ CỔ: Làng Hòa Định có dốc Gò Ô là nghĩa địa bỏ hoang, giữa đó một ngôi mộ không bia mà đất sáu chục năm vẫn tươi. Thợ đục bia Ba Thiện làm việc quá chiều tối ngày rằm, trên đường về thấy người đàn bà ngồi chải tóc trên nấm mộ - và bà ấy hỏi đúng nghề nhà anh. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #ngomoco",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "ngôi mộ cổ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "thumbnailSubjects": [
+    "an old unmarked grass-covered grave in an abandoned Vietnamese hillside cemetery at dusk, a woman with very long black hair sitting on the mound combing her hair in fog, photorealistic horror",
+    "a Vietnamese stonemason carrying a tool bag on a foggy path below a cemetery hill at night, looking over his shoulder, moonlight, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "hill-graveyard-dusk": "an abandoned hillside cemetery outside a Vietnamese village at grey dusk, old leaning graves overgrown with grass, fog pooling between mounds, ominous stillness, photorealistic",
+    "village-dusk": "a dirt lane in a poor Vietnamese hamlet at dusk, small houses with warm oil lamps, banana trees, smoke from kitchen fires, photorealistic",
+    "stone-yard": "a small Vietnamese stonemason yard at day, half-carved stone steles leaning on walls, chisels and stone dust, a young craftsman working, photorealistic",
+    "woman-on-grave": "a woman with very long black hair sitting on an unmarked grave mound combing her hair, seen from behind in thick night fog, abandoned cemetery, photorealistic horror",
+    "graveyard-night": "an abandoned Vietnamese cemetery at night in dense fog, grave mounds looming pale in the mist, a lone figure running on a narrow path, photorealistic horror",
+    "house-night": "inside a small Vietnamese rural house at night, a family altar with burning incense, dim warm oil lamp light, a worried old mother, photorealistic",
+    "yard-morning": "a rural Vietnamese house yard at early morning, a trail of small wet bare footprints in red dirt leading to the front door, photorealistic horror"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hill-graveyard-dusk",
+      "caption": "Dốc Gò Ô - nghĩa địa bỏ hoang",
+      "text": "Dốc Gò Ô ngoài làng Hòa Định là nghĩa địa bỏ hoang từ đời nào. Người ta đi ngang ban ngày còn phải đi lẹ, chứ tới chiều tối là không một bóng người. Giữa nghĩa địa có một ngôi mộ cổ không bia - lạ ở chỗ sáu chục năm rồi mà đất trên nấm mộ lúc nào cũng tươi xốp, như mới đắp sáng hôm qua."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village-dusk",
+      "caption": "Hai điều cấm của làng",
+      "text": "Dân làng truyền nhau hai điều cấm. Một: đêm rằm không ai được lên dốc, dù có việc gì cũng phải đi đường vòng. Hai: lỡ thấy có người ngồi trên nấm mộ không bia thì cắm mặt đi thẳng - tuyệt đối không đáp lời, không ngoái lại, kẻo nó nhớ mặt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stone-yard",
+      "caption": "Thợ đục bia đời thứ ba",
+      "text": "Ba Thiện là thợ đục bia mộ đời thứ ba trong làng - nghề ông nội truyền cho cha, cha truyền lại cho anh. Nghe chuyện ma mà anh chỉ cười, người làm nghề với cõi âm cả đời thì lấy gì mà sợ. Trong xưởng anh, tiếng đục đá ngày nào cũng vang tới tối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stone-yard",
+      "caption": "Ham làm quên mất ngày rằm",
+      "text": "Hôm đó ông Cả Hố thuê anh đục bia cho mộ cha mới tận tu. Anh ham làm nốt cho xong, cứ cặm cụi tới khi mặt trời lặn hẳn mới chợt nhận ra hôm đó đúng ngày rằm - cái đêm mà cả làng Hòa Định không ai dám bén mảng lên dốc Gò Ô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hill-graveyard-dusk",
+      "caption": "Tiếng lược chải qua tóc",
+      "text": "Đường về nhà phải đi ngang chân dốc. Ba Thiện vác bao dụng cụ đi lẹ trong sương mờ, tự nhủ đi chân đất thì chẳng phạm điều cấm nào. Nhưng vừa tới khúc quanh, tai anh nghe một tiếng rất nhỏ - kéo dài, đều đều - như tiếng lược chải qua tóc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Người đàn bà trên nấm mộ",
+      "text": "Giữa nghĩa địa, trên nấm mộ không bia, có người đàn bà đang ngồi chải tóc. Lưng bà quay về phía anh, mái tóc đen dài thả xuống gần chạm đất, lược đi từng nấc chậm rãi. Anh cứng chân định quay đầu thì bà ấy ngừng chải."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Bia của tôi anh đục chưa",
+      "text": "Không quay lại, bà hỏi vọng qua sương: thợ đục bia phải không - bia của tôi, anh đục xong chưa? Ba Thiện lỡ miệng ú ớ nửa tiếng rồi bật chạy. Đúng một tiếng thôi, mà anh biết mình vừa phạm cả hai điều cấm của làng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-night",
+      "caption": "Đường về dài bất thường",
+      "text": "Con đường về đêm đó dài bất thường. Anh chạy mà cứ nghe tiếng lược kéo đều đều ngay sau gáy, dép tuột cũng không dám nhặt. Tới bờ rào đầu làng anh mới dám khụy xuống thở - sau lưng chỉ còn sương trắng, không có ai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Má không mắng, chỉ hỏi",
+      "text": "Về tới nhà mặt anh trắng bệch, kể lại hết cho má. Bà Hai không mắng con như anh tưởng, chỉ lặng người một lúc rồi hỏi rất khẽ: nó hỏi mày đúng câu đó hả - bia của tôi anh đục xong chưa?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Tiếng cạ nhẹ lên cửa gỗ",
+      "text": "Đêm đó anh không sao ngủ được. Giữa canh ba anh nghe tiếng gì đó cạ nhẹ lên cánh cửa gỗ - không phải tiếng gõ, mà là tiếng kéo dài từng nấc, y như tiếng lược chải qua tóc, chậm rãi và kiên nhẫn như người đợi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "yard-morning",
+      "caption": "Vệt chân đất đỏ trước sân",
+      "text": "Sáng hôm sau má anh ra sân sớm thì đứng sững. Từ ngoài cổng vào tận trước cửa nhà là một vệt chân trần nhỏ xíu, ướt đẫm đất đỏ - mà cả vùng này chỉ có một chỗ có thứ đất đó: trên dốc Gò Ô."
+    }
+  ]
+}

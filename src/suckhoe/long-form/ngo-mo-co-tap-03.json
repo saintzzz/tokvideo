@@ -1,0 +1,100 @@
+{
+  "id": "ngo-mo-co-tap-03",
+  "arc": "ngo-mo-co",
+  "arcTitle": "NGÔI MỘ CỔ",
+  "episode": 3,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "ngo-mo-co-tap-03",
+  "title": "Hòm Nghề Ông Nội Khóa Sáu Chục Năm - Đồng Vàng Nhận Từ Người Đã Khuất",
+  "description": "Tập 3 arc NGÔI MỘ CỔ: Bà Hai mở cái hòm nghề của ông nội để lại - bên trong là đồng vàng và tờ giấy hẹn đục bia cho cô Ba Sen mà ông nhận rồi chưa từng làm. Ba Thiện hiểu ra nợ của ông đã truyền tới đời mình, và đêm đó cô gái vào mơ dặn: đục đúng tên tôi. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #ngomoco",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "ngôi mộ cổ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "thumbnailSubjects": [
+    "an old wooden chest opened in a dark Vietnamese house revealing antique stone-carving tools and a cloth bundle, oil lamp light, photorealistic",
+    "a gold coin and a yellowed handwritten Vietnamese letter on dark cloth, candlelight, photorealistic",
+    "a ghostly young woman with long hair standing under a kapok tree at the edge of a cemetery in moonlit fog, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "old-trunk": "an old wooden chest opened in a dark Vietnamese rural house, antique stone-carving chisels and rulers inside, a cloth bundle at the bottom, oil lamp light, photorealistic",
+    "house-night": "inside a small Vietnamese rural house at night, a family altar with incense, dim oil lamp light, mother and son talking low, photorealistic",
+    "dream-kapok": "a tall kapok tree at the edge of an abandoned cemetery at night, a young woman with very long hair standing under it in moonlit fog, dreamlike, photorealistic horror",
+    "elder-house": "a very old Vietnamese man in a dark wooden house holding a faded letter up to the light, afternoon sun through wooden slats, photorealistic",
+    "stone-yard-night": "a Vietnamese stonemason yard at night, a half-carved stone stele on a workbench lit by a single lamp, chisels laid out, fog outside, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "old-trunk",
+      "caption": "Nắp hòm kêu một tiếng khô khốc",
+      "text": "Đêm đó bà Hai thắp nhang lên bàn thờ ông nội rồi mới chịu mở cái hòm gỗ cuối nhà. Nắp hòm kêu một tiếng khô khốc - bên trong toàn đục, đẽo, thước kẻ đã rỉ, và dưới đáy là một gói vải buộc dây thừng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-trunk",
+      "caption": "Đồng vàng và giấy hẹn",
+      "text": "Trong gói vải là một đồng vàng nặng trịch và một tờ giấy ố vàng. Giấy hẹn viết tay, nét chữ rất đẹp: bên này nhận của gia đình một đồng vàng, hứa đục bia mộ cho cô Ba Sen - chữ khắc do chính cô soạn sẵn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old-trunk",
+      "caption": "Bản nháp lem mực chỗ tên",
+      "text": "Kèm theo là bản nháp câu đối bia mộ do chính tay cô gái viết, giấy đã lem mực ướt. Phần họ tên loang hết, chỉ còn đọc được một chữ cuối - hình như là chữ Liên. Còn câu đối thì rõ ràng từng nét."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Ông nội giữ vàng tới lúc mất",
+      "text": "Bà Hai kể cho con nghe: năm đó ông nội nhận vàng định đục bia, nhưng chưa kịp đục thì nhà ông Hòe đi tản cư, loạn lạc không ai biết đường giao bia. Ông băn khoăn để đó - rồi thời gian trôi, ông giữ luôn đồng vàng tới lúc mất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Nợ ông con trả luôn",
+      "text": "Ba Thiện ngồi im một lúc lâu mới hiểu. Cô ấy hỏi trên nấm mộ không phải hỏi bừa - cô hỏi đúng cháu của người đã nhận tiền cô. Anh nói khẽ với má: nghề ông để lại cho con, thì nợ ông con trả luôn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dream-kapok",
+      "caption": "Cô gái dưới gốc cây gạo",
+      "text": "Đêm đó anh nằm mơ. Trong mơ anh đứng dưới gốc cây gạo đầu nghĩa địa, một cô gái tóc dài đứng cạnh, nhìn anh rất buồn rồi nói: đục cho đúng tên tôi nghe - sai một nét thôi là tôi không về được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "dream-kapok",
+      "caption": "Ba Sen hay chữ Liên",
+      "text": "Anh giật mình tỉnh lúc trời chưa sáng, trong tai vẫn văng vẳng câu nói đó. Nhưng vấn đề nằm ngay đây: cả làng gọi cô là cô Ba Sen, còn bản nháp của cô lại loang mực chỉ thấy chữ Liên - rốt cuộc tên cô là gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Con nhà giàu ai gọi tên thật",
+      "text": "Sáng sớm anh đem bản nháp qua hỏi cụ Chín. Cụ soi kỹ tờ giấy lắc đầu: cả làng đời đó chỉ gọi cô Ba Sen, tên khai sinh thì chẳng ai để ý - con nhà giàu, ai dám gọi tên thật. Cụ nói chữ Liên trên nháp chắc là tên thật của cô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Đục sai còn tệ hơn",
+      "text": "Nhưng cụ Chín cũng không dám chắc. Cụ khuyên: tên người mất đục sai thì tệ hơn không đục - vong bị gọi sai tên sẽ không tìm được đường về. Muốn biết chắc thì phải tìm giấy tờ, mà giấy tờ đời đó còn đâu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stone-yard-night",
+      "caption": "Chừa trống chỗ ghi tên",
+      "text": "Ba Thiện vẫn bắt tay vào việc - chọn tảng đá xanh đẹp nhất trong xưởng, đục phần hoa văn và câu đối trước, chừa trống nguyên chỗ ghi tên. Đêm đục đá trong xưởng vắng, anh nghe như có tiếng thở dài ngay sau lưng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "stone-yard-night",
+      "caption": "Tiếng đục vang tới sáng",
+      "text": "Quay lại chỉ có sương trắng lọt qua kẽ cửa. Anh nhìn chỗ trống trên mặt đá mà nói thầm: cô cho tôi thêm thời gian đi, tôi sẽ tìm ra tên cô. Đêm đó tiếng đục của anh vang tới sáng - lần đầu tiên trong đời, anh đục đá mà tay run."
+    }
+  ]
+}

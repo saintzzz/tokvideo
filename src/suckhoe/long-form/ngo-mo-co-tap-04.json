@@ -1,0 +1,101 @@
+{
+  "id": "ngo-mo-co-tap-04",
+  "arc": "ngo-mo-co",
+  "arcTitle": "NGÔI MỘ CỔ",
+  "episode": 4,
+  "locale": "vi",
+  "narrator": "vi-VN-NamMinhNeural",
+  "slug": "ngo-mo-co-tap-04",
+  "title": "Tấm Bia Đục Sai Một Chữ - Người Đàn Bà Trên Mộ Lần Đầu Quay Lại",
+  "description": "Tập 4 arc NGÔI MỘ CỔ: Đêm rằm Ba Thiện một mình khiêng tấm bia lên dốc Gò Ô dựng cho cô Ba Sen. Nhưng người đàn bà trên nấm mộ lần đầu quay lại nhìn anh - rồi lắc đầu, vì cái tên cả làng nhớ không phải tên để cô được gọi về. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #ngomoco",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "ngôi mộ cổ",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
+  "thumbnailSubjects": [
+    "a Vietnamese man carrying a stone grave stele on his back up a foggy hill path at night, full moon, photorealistic horror",
+    "a freshly carved stone stele standing at the head of an unmarked grave in a foggy cemetery, a pale woman's face barely visible in the mist, photorealistic horror",
+    "a stonemason kneeling exhausted beside a newly erected stele in a moonlit abandoned cemetery, photorealistic horror"
+  ],
+  "scenePrompts": {
+    "stone-yard": "a Vietnamese stonemason yard at day, a finished carved stone stele on the workbench, chisels and stone dust, tired young craftsman, photorealistic",
+    "hill-path-night": "a narrow dirt path up a cemetery hill at night under a full moon, a man carrying a heavy stone stele on his back, dense fog, photorealistic horror",
+    "graveyard-night": "an abandoned Vietnamese cemetery at night in dense fog, pale grave mounds looming in the mist, full moon behind clouds, photorealistic horror",
+    "woman-on-grave": "a woman with very long black hair sitting on an unmarked grave mound combing her hair in thick fog, slowly turning her pale sad face toward the viewer, photorealistic horror",
+    "house-night": "inside a small Vietnamese rural house at night, family altar with incense, a mother comforting her exhausted son, dim oil lamp, photorealistic",
+    "elder-house": "a very old Vietnamese man in a dark wooden house slapping his knee while remembering something, tea tray, afternoon light, photorealistic"
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "stone-yard",
+      "caption": "Đục theo tên cả làng nhớ",
+      "text": "Không tìm được giấy tờ nào khác, Ba Thiện đành quyết theo cái tên cả làng còn nhớ. Ba ngày ba đêm anh đục không nghỉ - mặt bia ghi cô Ba Sen, câu đối lấy đúng bản nháp của cô. Đục xong anh phủi tay, tự nhủ trả được nợ rồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hill-path-night",
+      "caption": "Khiêng bia lên dốc một mình",
+      "text": "Đêm rằm tháng đó anh một mình còng lưng khiêng tấm bia lên dốc Gò Ô. Bà Hai đứng dưới chân dốc cầm nắm nhang mà tay run - không ai cản được anh, cũng không ai dám lên theo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-night",
+      "caption": "Người đàn bà vẫn ngồi đó",
+      "text": "Nghĩa địa đêm rằm sương dày đặc, từng ngôi mộ loang loáng nhô lên như những cái lưng chồm. Nấm mộ không bia vẫn ở chính giữa - và người đàn bà vẫn ngồi đó chải tóc, y như đêm đầu tiên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Nhà cháu trả cô tấm bia",
+      "text": "Lần này Ba Thiện không chạy. Anh đặt tấm bia xuống, lạy ba lạy trước nấm mộ rồi nói to trong sương: cô Ba Sen ơi - ông nội cháu nhận vàng cô mà chưa đục bia, nay cháu đục trả cô, xin cô nhận cho."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Lần đầu cô quay lại",
+      "text": "Anh dựng bia lên đầu mộ, đóng cọc chôn chặt. Người đàn bà ngừng chải tóc - rồi lần đầu tiên, quay hẳn lại nhìn anh. Mặt cô trắng trong sương, đôi mắt buồn không tả nổi, và cô lắc đầu rất chậm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "woman-on-grave",
+      "caption": "Đó là tên mẹ tôi gọi",
+      "text": "Cô nói khẽ như hơi thở: đó là tên mẹ tôi gọi ở nhà - tên để tôi đi, tên để người ta gọi tôi về, không phải vậy. Anh chưa kịp hỏi tên thật là gì thì hình bóng cô đã nhạt đi, tan luôn vào sương trăng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-night",
+      "caption": "Sai ngay chữ quan trọng nhất",
+      "text": "Ba Thiện ngồi sụp xuống bên tấm bia mới đục. Ba ngày ba đêm công phu, đá đẹp chữ đẹp - mà sai ngay cái chữ quan trọng nhất. Đất trên nấm mộ vẫn tươi xốp, như chưa từng có chuyện gì xảy ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "house-night",
+      "caption": "Đã trả phải trả cho đúng",
+      "text": "Về nhà anh suy sụp mấy ngày. Bà Hai động viên con: đã trả thì phải trả cho đúng, trả sai còn tệ hơn không trả - ông nội mày nhận vàng của người ta, nhà mình không thể trả bằng một cái tên sai được."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Hòm sổ cũ trong đình",
+      "text": "Anh lại qua nhà cụ Chín. Nghe chuyện cô lắc đầu, cụ bóp trán nhớ mãi rồi chợt vỗ đùi: sổ hộ tịch cũ của làng - hồi đó cất trong hòm đình, đời đó ông trưởng làng giữ. Chắc trong đó ghi tên thật của cô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "elder-house",
+      "caption": "Mười lăm ngày tới rằm",
+      "text": "Nhưng cụ lắc đầu tiếp: hòm đình đó đóng mấy chục năm rồi, chìa khóa thất lạc, muốn mở phải có phép của ông trưởng làng đời nay. Ba Thiện nắm chặt tay - rằm tháng sau chỉ còn vỏn vẹn mười lăm ngày."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "graveyard-night",
+      "caption": "Cô đợi cháu thêm một rằm",
+      "text": "Đêm đó đi ngang chân dốc, anh dừng lại nhìn lên nấm mộ xa xa. Bóng người đàn bà vẫn ngồi đó lẻ loi giữa sương, mái tóc buông dài. Anh nói nhỏ như hứa: cô đợi cháu thêm một rằm nữa - lần này cháu đục đúng tên cô."
+    }
+  ]
+}

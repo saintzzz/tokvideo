@@ -65,6 +65,11 @@ import chiecKhanTrangTap02 from "./chiec-khan-trang-tap-02.json";
 import chiecKhanTrangTap03 from "./chiec-khan-trang-tap-03.json";
 import chiecKhanTrangTap04 from "./chiec-khan-trang-tap-04.json";
 import chiecKhanTrangTap05 from "./chiec-khan-trang-tap-05.json";
+import ngoMoCoTap01 from "./ngo-mo-co-tap-01.json";
+import ngoMoCoTap02 from "./ngo-mo-co-tap-02.json";
+import ngoMoCoTap03 from "./ngo-mo-co-tap-03.json";
+import ngoMoCoTap04 from "./ngo-mo-co-tap-04.json";
+import ngoMoCoTap05 from "./ngo-mo-co-tap-05.json";
 import { LongFormEpisode } from "./types";
 
 // Long-form (~20-60 min, landscape) Suc Khoe episodes — a separate format
@@ -185,4 +190,15 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   chiecKhanTrangTap03,
   chiecKhanTrangTap04,
   chiecKhanTrangTap05,
+  // Horror arc 11 (motif pool: ngo-mo-co): "Ngoi mo co" - an unmarked
+  // grave in an abandoned hillside cemetery whose soil never dries, and
+  // the woman combing her hair on it every full moon. Twist at tap 3-4:
+  // the stonemason's own grandfather took a gold coin to carve her stele
+  // sixty years ago and never did - and the name the whole village
+  // remembers is not the name she can be called home by.
+  ngoMoCoTap01,
+  ngoMoCoTap02,
+  ngoMoCoTap03,
+  ngoMoCoTap04,
+  ngoMoCoTap05,
 ] as LongFormEpisode[];
