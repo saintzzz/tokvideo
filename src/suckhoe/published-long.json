@@ -650,5 +650,18 @@
     "publishedAt": "2026-11-11T06:33:28.148Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "cay-da-tap-04": {
+    "videoId": "FwnfGllQKBg",
+    "publishedAt": "2026-11-11T12:43:50.955Z",
+    "locale": "vi",
+    "privacyStatus": "public"
+  },
+  "cay-da-tap-04-teaser": {
+    "videoId": "jzPENXqUNuo",
+    "publishedAt": "2026-11-11T12:44:43.786Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugzu3miyU_6HeEx0JE14AaABAg"
   }
 }
