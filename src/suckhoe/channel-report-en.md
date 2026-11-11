@@ -25,9 +25,9 @@ Net subscriber change: 0
 
 Videos under 15% avg retention: 5/5 — low % means viewers abandon early (hook problem), not a click problem.
 
-## Reach per video
+## Reach per video (impressions/CTR)
 
-(Reach report failed: YouTube Reporting API has not been used in project 1091975850136 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubereporting.googleapis.com/overview?project=1091975850136 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.)
+Reach report job c15498b5-8dd1-459e-a367-1274a81440ff scheduled — first CSV lands ~24-72h after creation.
 
 ## Most recent 14 videos
 

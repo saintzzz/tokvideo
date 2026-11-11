@@ -27,9 +27,9 @@ Net subscriber change: 16
 
 Videos under 15% avg retention: 5/7 — low % means viewers abandon early (hook problem), not a click problem.
 
-## Reach per video
+## Reach per video (impressions/CTR)
 
-(Reach report failed: YouTube Reporting API has not been used in project 1091975850136 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubereporting.googleapis.com/overview?project=1091975850136 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.)
+Reach report job a9fa15b7-b1a6-43ba-9524-b16c12b5ce39 scheduled — first CSV lands ~24-72h after creation.
 
 ## Most recent 25 videos
 
@@ -41,7 +41,7 @@ Videos under 15% avg retention: 5/7 — low % means viewers abandon early (hook 
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 3: Cô Gái Bị Cả Làng Vu Tội - Nợ Oan Ba Đời Chưa Trả | 1 | 1 | 1 | 2026-11-11 |
 | Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương Người | Cây Đa Đầu Làng #2 (xem trước) #Shorts | 24 | 2 | 1 | 2026-11-11 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 2: Lễ Tạ Cái Gốc Đa - Thầy Đào Được Thứ Không Phải Xương … | 4 | 0 | 1 | 2026-11-11 |
-| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 124 | 3 | 1 | 2026-11-10 |
+| Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết | Cây Đa Đầu Làng #1 (xem trước) #Shorts | 124 | 4 | 1 | 2026-11-10 |
 | Truyện Ma Có Thật | Cây Đa Đầu Làng - Tập 1: Cây Đa Ngàn Năm Chặn Cửa Làng - Ai Chặt Nhánh Nào Chết… | 1 | 0 | 1 | 2026-11-10 |
 | Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | Cầu Khỉ Đêm #5 (xem trước) #Shorts | 886 | 19 | 1 | 2026-11-10 |
 | Truyện Ma Có Thật | Cầu Khỉ Đêm - Tập 5: Cái Tai Nghe Được Người Chết Đuối - Di Sản Của Đêm Rằm | 3 | 0 | 1 | 2026-11-10 |
