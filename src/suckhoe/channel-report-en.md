@@ -1,4 +1,4 @@
-# Channel report — 2026-11-11
+# Channel report — 2026-11-12
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
@@ -7,7 +7,7 @@ Total videos: 14
 
 ## Last 28 days (channel-wide)
 
-Views: 17
+Views: 15
 Watch time (minutes): 0
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,17 +17,25 @@ Net subscriber change: 0
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
 |---|---|---|---|---|
-| 4qS5HKBB3-M | 8 | 0.0 | 8 | 13.4 |
-| dN9w4Ixoqes | 5 | 0.0 | 0 | 0.0 |
-| 1ook5C5HtBs | 2 | 0.0 | 0 | 0.0 |
+| dN9w4Ixoqes | 6 | 0.0 | 0 | 0.0 |
+| 4qS5HKBB3-M | 5 | 0.0 | 2 | 4.3 |
+| 1ook5C5HtBs | 1 | 0.0 | 0 | 0.0 |
 | pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
 | HiJsHfuE6o4 | 1 | 0.0 | 0 | 0.0 |
+| dElz6HMW_J0 | 1 | 0.0 | 0 | 0.0 |
 
-Videos under 15% avg retention: 5/5 — low % means viewers abandon early (hook problem), not a click problem.
+Videos under 15% avg retention: 6/6 — low % means viewers abandon early (hook problem), not a click problem.
 
 ## Reach per video (impressions/CTR)
 
-Reach report job c15498b5-8dd1-459e-a367-1274a81440ff scheduled — first CSV lands ~24-72h after creation.
+| videoId | Impressions | CTR% |
+|---|---|---|
+| 3dcnsv3-Aas | 21 | 0.00 |
+| 1ook5C5HtBs | 3 | 0.00 |
+| dElz6HMW_J0 | 3 | 0.00 |
+| dN9w4Ixoqes | 2 | 0.00 |
+
+Videos with zero impressions: 0/4 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
 
 ## Most recent 14 videos
 
