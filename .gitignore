@@ -53,3 +53,4 @@ blender/out
 
 # playwright-cli session artifacts (may contain tokens/sensitive data)
 .playwright-cli/
+scripts/queue-refill.log

@@ -126,13 +126,43 @@ try {
         title: v.snippet.title,
         views: num(v.statistics.viewCount),
         channel: v.snippet.channelTitle,
+        channelId: v.snippet.channelId,
+        videoId: v.id,
         publishedAt: v.snippet.publishedAt?.slice(0, 10),
       }))
       .sort((a, b) => b.views - a.views);
+
+    // Outlier score (SOP: video views / channel's recent median views).
+    // Raw view counts are dominated by big channels' built-in audience;
+    // a video beating its own channel's baseline is the real signal of
+    // what the algorithm is currently pushing.
+    const byChannel = new Map();
+    for (const t of marketTop.slice(0, 10)) {
+      if (!byChannel.has(t.channelId)) byChannel.set(t.channelId, []);
+      byChannel.get(t.channelId).push(t);
+    }
+    for (const [chId, vids] of byChannel) {
+      try {
+        const ch = await youtube.channels.list({ part: ["contentDetails"], id: [chId] });
+        const up = ch.data.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+        if (!up) continue;
+        const pl = await youtube.playlistItems.list({ part: ["contentDetails"], playlistId: up, maxResults: 6 });
+        const ids = (pl.data.items ?? []).map(i => i.contentDetails.videoId);
+        const vs = await youtube.videos.list({ part: ["statistics"], id: ids });
+        const counts2 = (vs.data.items ?? []).map(v => num(v.statistics.viewCount)).sort((a, b) => a - b);
+        const median = counts2[Math.floor(counts2.length / 2)] || 1;
+        for (const t of vids) t.outlier = t.views / median;
+      } catch { /* per-channel failure is non-fatal */ }
+    }
+    for (const t of marketTop) t.outlier = t.outlier ?? 1;
+    marketTop.sort((a, b) => (b.outlier - a.outlier) || (b.views - a.views));
+
     const counts = {};
+    // Weight motifs by outlier score, not raw presence — a motif in a
+    // 10x outlier matters more than in a big channel's average video.
     for (const t of marketTop) {
       const low = t.title.toLowerCase();
-      for (const kw of MOTIF_LEXICON) if (low.includes(kw)) counts[kw] = (counts[kw] ?? 0) + 1;
+      for (const kw of MOTIF_LEXICON) if (low.includes(kw)) counts[kw] = (counts[kw] ?? 0) + Math.min(t.outlier, 10);
     }
     motifHints = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 6).map(([kw]) => kw);
   }
@@ -140,17 +170,58 @@ try {
   console.warn(`market scan failed (non-fatal): ${err.message ?? err}`);
 }
 
+// ---- Content-gap mining ---------------------------------------------------
+// SOP step: scrape top comments on competitor outlier videos to find the
+// questions the audience keeps asking that nobody answered — that's a
+// ready-made story angle. commentThreads.list = 1 unit/call, order
+// "relevance" surfaces the most-liked comments. Bounded to the top 3
+// outlier videos to keep quota honest.
+let gapHints = [];
+try {
+  const topOutliers = marketTop.filter(t => (t.outlier ?? 1) >= 2).slice(0, 3);
+  const questions = [];
+  for (const t of topOutliers) {
+    try {
+      const c = await youtube.commentThreads.list({
+        part: ["snippet"], videoId: t.videoId, order: "relevance",
+        maxResults: 20, textFormat: "plainText",
+      });
+      for (const th of c.data.items ?? []) {
+        const txt = (th.snippet?.topLevelComment?.snippet?.textDisplay ?? "")
+          .replace(/\s+/g, " ").trim();
+        // Keep interrogative / request-shaped comments only.
+        if (/[?？]|không biết|tại sao|sao lại|ai là|tiếp đi|phần tiếp|tập sau|kể thêm/i.test(txt) && txt.length < 300) {
+          questions.push(txt);
+        }
+      }
+    } catch { /* comments disabled on that video — skip */ }
+  }
+  // Cluster crudely: motif keywords appearing inside audience questions
+  // become gap hints (what viewers actively ask for).
+  const qcounts = {};
+  for (const q of questions) {
+    const low = q.toLowerCase();
+    for (const kw of MOTIF_LEXICON) if (low.includes(kw)) qcounts[kw] = (qcounts[kw] ?? 0) + 1;
+  }
+  gapHints = Object.entries(qcounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([kw]) => kw);
+  console.log(`content-gap scan: ${questions.length} audience questions -> gaps: ${gapHints.join(", ") || "none"}`);
+} catch (err) {
+  console.warn(`gap scan failed (non-fatal): ${err.message ?? err}`);
+}
+
 const directives = {
   generatedAt: new Date().toISOString(),
   preferMotifs: ranking.slice(0, 3).filter(r => r.teaserViews > 0).map(r => r.arc),
   avoidMotifs: ranking.filter(r => r.episodes >= 3 && r.teaserViews < 5).map(r => r.arc),
   motifHints,
+  gapHints,
   notes: [],
 };
 if (ranking[0]) directives.notes.push(`Top motif: ${ranking[0].arc} (${ranking[0].teaserViews.toFixed(0)} avg teaser views)`);
 const dead = directives.avoidMotifs;
 if (dead.length) directives.notes.push(`Avoid: ${dead.join(", ")} - teasers averaging under 5 views`);
 if (motifHints.length) directives.notes.push(`Market hints (3w VN "truyện ma" meta): ${motifHints.join(", ")}`);
+if (gapHints.length) directives.notes.push(`Audience gap (top comments on outlier videos keep asking about): ${gapHints.join(", ")} - stories touching these answer real demand`);
 
 // Human report.
 let md = `# Channel Weekly Review - ${week}\n\n`;
@@ -161,15 +232,16 @@ for (const r of ranking) {
 }
 md += `\n## Market scan - top VN "truyện ma" videos last 21d\n\n`;
 if (marketTop.length) {
-  md += `| Title | Views | Channel | Published |\n|---|---|---|---|\n`;
+  md += `| Title | Views | Outlier x | Channel | Published |\n|---|---|---|---|---|\n`;
   for (const t of marketTop.slice(0, 12)) {
-    md += `| ${t.title.replace(/\|/g, "/")} | ${t.views} | ${t.channel} | ${t.publishedAt} |\n`;
+    md += `| ${t.title.replace(/\|/g, "/")} | ${t.views} | ${t.outlier.toFixed(1)}x | ${t.channel} | ${t.publishedAt} |\n`;
   }
-  md += `\nMotif signals extracted into directives.motifHints: ${motifHints.join(", ") || "none"}\n`;
+  md += `\nMotif signals (outlier-weighted) -> directives.motifHints: ${motifHints.join(", ") || "none"}\n`;
+  md += `Audience gap hints -> directives.gapHints: ${gapHints.join(", ") || "none"}\n`;
 } else {
   md += `(market scan unavailable this week)\n`;
 }
-md += `\n## Directives for next arcs\n- Prefer: ${directives.preferMotifs.join(", ") || "none yet"}\n- Avoid: ${directives.avoidMotifs.join(", ") || "none"}\n- Market hints: ${directives.motifHints.join(", ") || "none"}\n`;
+md += `\n## Directives for next arcs\n- Prefer: ${directives.preferMotifs.join(", ") || "none yet"}\n- Avoid: ${directives.avoidMotifs.join(", ") || "none"}\n- Market hints: ${directives.motifHints.join(", ") || "none"}\n- Audience gaps: ${directives.gapHints.join(", ") || "none"}\n`;
 md += `\nAuto-applied: motif steering into queue-refill writer prompt. Recommendations needing bigger changes are listed above for the weekly owner review.\n`;
 
 await writeFile(path.join(snapDir, `${week}.json`), JSON.stringify({ week, ranking, directives }, null, 2) + "\n");

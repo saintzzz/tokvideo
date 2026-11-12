@@ -148,3 +148,37 @@ channel that is already on probation.
 - New channel creation — Track B is a *decision point*, executed only
   after the 3-4 week rehabilitation window, and channel creation itself
   is a manual Google-account step.
+
+## 6. External SOP benchmark (2026-11-12, "Quy Trình Phát Triển Kênh YouTube")
+
+Cross-checked our loop against a professional data-driven SOP. Adopted:
+
+- **Outlier score over raw views** in the market scan — video views /
+  channel's recent median views. A 50k-view video on a 1k-avg channel
+  (50x) is a stronger format signal than 500k on a 5M channel. Weekly
+  review now ranks `marketTop` by outlier x and weights motifHints by it.
+- **Audience-gap mining** — top comments on the week's outlier videos
+  are scanned for question/request patterns; recurring motifs become
+  `directives.gapHints` (what viewers ask for and nobody answers).
+- **<15-word sentences in the first 30s** — added to the writer schema
+  note; matches our measured 13-34s drop-off.
+- **One-bottleneck Kaizen** — already our weekly improver's contract;
+  validated, unchanged.
+
+Deferred with reason:
+
+- **YouTube "Test & Compare" (native thumbnail A/B)** — Studio-only
+  feature, no API. Worth automating via Playwright once the reach CSVs
+  land and give us real CTR; until then there's no metric to A/B
+  against anyway.
+- **Competitor transcript scraping** (DownSub/Glasp/Apify) — captions
+  endpoint only serves own videos; third-party transcript tools are
+  manual. Comment mining covers most of the same gap-finding value.
+- **AutoCut/TimeBolt silence cutting** — already covered: voiceover
+  post-process does silence trim + loudnorm (`lib/audio-polish.mjs`).
+- **Mid-video pattern interrupts every 5-8s** — our beats already cut
+  scenes every ~5-15s; revisit only if retention dips mid-video in the
+  reach data.
+- Paid tools (1of10, Viewstats, NexLev, ElevenLabs, Storyblocks) — our
+  free equivalents (Data API scan, GCP TTS, Pixabay/IA) cover the same
+  functions at $0 until the channel monetizes.
