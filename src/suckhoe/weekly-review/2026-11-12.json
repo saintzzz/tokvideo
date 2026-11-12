@@ -1,0 +1,114 @@
+{
+  "week": "2026-11-12",
+  "ranking": [
+    {
+      "arc": "hu-ma-ga",
+      "teaserViews": 353,
+      "longViews": 0.2,
+      "teaserLikes": 7.6,
+      "longComments": 4,
+      "episodes": 5
+    },
+    {
+      "arc": "cau-khi",
+      "teaserViews": 247.4,
+      "longViews": 3.8,
+      "teaserLikes": 6.4,
+      "longComments": 3,
+      "episodes": 5
+    },
+    {
+      "arc": "loi-nguyen-gieng-cu",
+      "teaserViews": 189.8,
+      "longViews": 5.4,
+      "teaserLikes": 4,
+      "longComments": 4,
+      "episodes": 5
+    },
+    {
+      "arc": "cay-da",
+      "teaserViews": 85.6,
+      "longViews": 3,
+      "teaserLikes": 4.4,
+      "longComments": 2.6,
+      "episodes": 5
+    },
+    {
+      "arc": "quan-tai-troi",
+      "teaserViews": 71,
+      "longViews": 6.8,
+      "teaserLikes": 1.5,
+      "longComments": 3.2,
+      "episodes": 5
+    },
+    {
+      "arc": "hon-ma",
+      "teaserViews": 58,
+      "longViews": 3.4,
+      "teaserLikes": 2.4,
+      "longComments": 3,
+      "episodes": 5
+    },
+    {
+      "arc": "mieu-hoang",
+      "teaserViews": 6,
+      "longViews": 4.4,
+      "teaserLikes": 1,
+      "longComments": 3,
+      "episodes": 5
+    },
+    {
+      "arc": "dung-tra-loi",
+      "teaserViews": 2,
+      "longViews": 0.8,
+      "teaserLikes": 1,
+      "longComments": 4,
+      "episodes": 5
+    },
+    {
+      "arc": "chuyen-do-dem",
+      "teaserViews": 1.6,
+      "longViews": 1.4,
+      "teaserLikes": 1,
+      "longComments": 3,
+      "episodes": 5
+    },
+    {
+      "arc": "dem-kham-liem",
+      "teaserViews": 0.8,
+      "longViews": 0,
+      "teaserLikes": 1,
+      "longComments": 3.8,
+      "episodes": 5
+    }
+  ],
+  "directives": {
+    "generatedAt": "2026-11-12T15:06:20.405Z",
+    "preferMotifs": [
+      "hu-ma-ga",
+      "cau-khi",
+      "loi-nguyen-gieng-cu"
+    ],
+    "avoidMotifs": [
+      "dung-tra-loi",
+      "chuyen-do-dem",
+      "dem-kham-liem"
+    ],
+    "motifHints": [
+      "mộ",
+      "vong",
+      "làng",
+      "thầy",
+      "bùa"
+    ],
+    "gapHints": [
+      "mộ"
+    ],
+    "notes": [
+      "Top motif: hu-ma-ga (353 avg teaser views)",
+      "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views",
+      "Market hints (3w VN \"truyện ma\" meta): mộ, vong, làng, thầy, bùa",
+      "Audience gap (top comments on outlier videos keep asking about): mộ - stories touching these answer real demand"
+    ]
+  }
+}
