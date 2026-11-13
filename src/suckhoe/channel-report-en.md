@@ -1,13 +1,13 @@
-# Channel report — 2026-11-12
+# Channel report — 2026-11-13
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 26
+Total views: 28
 Total videos: 14
 
 ## Last 28 days (channel-wide)
 
-Views: 15
+Views: 11
 Watch time (minutes): 0
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,8 +17,8 @@ Net subscriber change: 0
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
 |---|---|---|---|---|
-| dN9w4Ixoqes | 6 | 0.0 | 0 | 0.0 |
 | 4qS5HKBB3-M | 5 | 0.0 | 2 | 4.3 |
+| dN9w4Ixoqes | 2 | 0.0 | 0 | 0.0 |
 | 1ook5C5HtBs | 1 | 0.0 | 0 | 0.0 |
 | pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
 | HiJsHfuE6o4 | 1 | 0.0 | 0 | 0.0 |
@@ -31,18 +31,19 @@ Videos under 15% avg retention: 6/6 — low % means viewers abandon early (hook 
 | videoId | Impressions | CTR% |
 |---|---|---|
 | 3dcnsv3-Aas | 21 | 0.00 |
-| 1ook5C5HtBs | 3 | 0.00 |
+| 1ook5C5HtBs | 9 | 0.00 |
+| dN9w4Ixoqes | 4 | 0.00 |
 | dElz6HMW_J0 | 3 | 0.00 |
-| dN9w4Ixoqes | 2 | 0.00 |
+| hU3zmJBJ3UM | 2 | 0.00 |
 
-Videos with zero impressions: 0/4 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
+Videos with zero impressions: 0/5 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
 
 ## Most recent 14 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
 | The horseman chased him to the bridge - all they found was a shattered pumpkin - Part 2 #Shorts | 1 | 0 | 0 | 2026-11-09 |
-| Sleepy Hollow, 1820 - the teacher who rode home at midnight and never arrived - Part 1 #Shorts | 0 | 0 | 0 | 2026-11-09 |
+| Sleepy Hollow, 1820 - the teacher who rode home at midnight and never arrived - Part 1 #Shorts | 2 | 0 | 0 | 2026-11-09 |
 | The Silver Bridge fell at rush hour - 46 people died - was it a warning? - Part 2 #Shorts | 1 | 0 | 0 | 2026-10-10 |
 | Point Pleasant 1966 - the red-eyed thing that warned the town - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-10 |
 | Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 6 | 0 | 0 | 2026-10-09 |
