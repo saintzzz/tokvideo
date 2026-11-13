@@ -10,6 +10,11 @@
 #
 set -uo pipefail
 cd "$(dirname "$0")/.."
+
+# Cron has a bare PATH — node lives in ~/n/bin (n), claude in
+# ~/.npm-global/bin. Without this the whole job has silently no-opped
+# with "node: command not found" since 2026-11-07.
+export PATH="$HOME/n/bin:$HOME/.npm-global/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 LOG=scripts/queue-refill.log
 echo "=== $(date '+%F %T %z') ===" >> "$LOG"
 

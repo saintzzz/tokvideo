@@ -1416,7 +1416,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/captions/ 2>/dev/null || true
+          # --ignore-errors: a pathspec that matched nothing aborts the
+          # whole add (observed 2026-11-13: series-playlists.json absent
+          # -> topped-up audio never staged -> rebase loop died silent).
+          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           for i in 1 2 3 4 5; do
             git fetch origin main
