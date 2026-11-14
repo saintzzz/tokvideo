@@ -175,15 +175,19 @@ const iaSearch = async (query, used) => {
     if (used.has(doc.identifier)) continue;
     const meta = await fetch(`https://archive.org/metadata/${doc.identifier}`);
     const mjson = await meta.json();
-    const mp4 = (mjson.files ?? []).find(
-      (f) => f.name.endsWith(".mp4") && !f.name.includes("thumbs")
+    // Items sorted by downloads are often full feature films — the first
+    // mp4 was 100-500MB of unrelated movie footage (observed 2026-11-14:
+    // a 1938 propaganda film inside a ghost story). Only accept real
+    // clips: smallest mp4 under 150MB, preferring derivative encodes.
+    const mp4s = (mjson.files ?? []).filter(
+      (f) => f.name.endsWith(".mp4") && !f.name.includes("thumbs") && Number(f.size ?? 0) < 150e6
     );
-    if (mp4) {
-      return {
-        url: `https://archive.org/download/${doc.identifier}/${mp4.name}`,
-        id: doc.identifier,
-      };
-    }
+    if (!mp4s.length) continue;
+    const mp4 = mp4s.sort((a, b) => Number(a.size ?? 0) - Number(b.size ?? 0))[0];
+    return {
+      url: `https://archive.org/download/${doc.identifier}/${mp4.name}`,
+      id: doc.identifier,
+    };
   }
   return null;
 };
