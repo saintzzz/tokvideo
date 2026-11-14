@@ -200,7 +200,18 @@ const teaserCandidates = Object.entries(ledger)
   .sort();
 
 let teasersDone = 0;
+// Upload-cap circuit breaker: during an upload-blocked window teaser
+// inserts die on uploadLimitExceeded too — skip the loop cleanly instead
+// of turning each attempt into a FAILED line that reds the run.
+const blockPath = path.join(root, "src", "suckhoe", "upload-blocked.json");
+const uploadBlocked =
+  existsSync(blockPath) &&
+  Date.now() < Date.parse(JSON.parse(await readFile(blockPath, "utf8")).resetAt ?? 0);
 for (const slug of teaserCandidates) {
+  if (uploadBlocked) {
+    findings.push(`Teaser backfill held: channel upload cap active (upload-blocked.json).`);
+    break;
+  }
   if (teasersDone >= MAX_TEASERS) {
     findings.push(`Teaser backlog: ${teaserCandidates.length - teasersDone} episodes still lack a teaser Short.`);
     break;

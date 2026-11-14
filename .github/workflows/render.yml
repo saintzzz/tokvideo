@@ -1133,7 +1133,7 @@ jobs:
           # before committing the episode JSON so the repo never references
           # files that only existed in this runner.
           node -e "const fs=require('fs');const p='src/suckhoe/long-form/${{ env.LONG_SLUG }}.json';const j=JSON.parse(fs.readFileSync(p,'utf8'));delete j.sceneVideos;fs.writeFileSync(p,JSON.stringify(j,null,2)+'\n')" || true
-          git add src/suckhoe/published-long.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ env.LONG_SLUG }}.json 2>/dev/null || true
+          git add src/suckhoe/published-long.json src/suckhoe/upload-blocked.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ env.LONG_SLUG }}.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ env.LONG_SLUG }} [skip ci]"
           # Unstaged tracked edits (e.g. sceneVideos paths the footage
           # step writes into episode JSONs) make every `git rebase`
@@ -1300,7 +1300,7 @@ jobs:
           # sceneVideos references gitignored public/videos/ paths — strip
           # before committing the episode JSON.
           node -e "const fs=require('fs');const p='src/suckhoe/long-form/${{ steps.pick.outputs.slug }}.json';if(fs.existsSync(p)){const j=JSON.parse(fs.readFileSync(p,'utf8'));delete j.sceneVideos;fs.writeFileSync(p,JSON.stringify(j,null,2)+'\n')}" || true
-          git add src/suckhoe/published-long.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ steps.pick.outputs.slug }}.json 2>/dev/null || true
+          git add src/suckhoe/published-long.json src/suckhoe/upload-blocked.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ steps.pick.outputs.slug }}.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ steps.pick.outputs.slug }} [skip ci]"
           git checkout -- . || true
           for i in 1 2 3 4 5; do
@@ -1569,7 +1569,7 @@ jobs:
           # --ignore-errors: a pathspec that matched nothing aborts the
           # whole add (observed 2026-11-13: series-playlists.json absent
           # -> topped-up audio never staged -> rebase loop died silent).
-          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json src/suckhoe/pending-delete.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
+          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/upload-blocked.json src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json src/suckhoe/pending-delete.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           git checkout -- . || true
           for i in 1 2 3 4 5; do

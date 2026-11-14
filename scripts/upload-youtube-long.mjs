@@ -203,7 +203,9 @@ try {
 
 console.log(`Uploading ${videoPath} as "${title}" (privacyStatus=${PRIVACY_STATUS})`);
 
-const res = await insertWithFallback({
+let res;
+try {
+res = await insertWithFallback({
   part: ["snippet", "status"],
   requestBody: {
     snippet: {
@@ -226,6 +228,24 @@ const res = await insertWithFallback({
     body: createReadStream(videoPath),
   },
 });
+} catch (e) {
+  if (/uploadLimitExceeded/i.test(`${e?.message} ${JSON.stringify(e?.errors ?? [])}`)) {
+    // Circuit breaker: the channel's daily upload cap is per-channel,
+    // not per-project — pool-2 cannot bypass it. YouTube resets at
+    // midnight Pacific. Stamp the blocked window so next-long-form-slug
+    // no-ops scheduled ticks until reset instead of burning a render
+    // and failing red every slot.
+    const resetAt = new Date();
+    resetAt.setUTCHours(24 + 7, 0, 0, 0); // 07:00 UTC next day = 00:00 PT (PST)
+    const blockPath = path.join(import.meta.dirname, "..", "src", "suckhoe", "upload-blocked.json");
+    await writeFile(
+      blockPath,
+      JSON.stringify({ blockedAt: new Date().toISOString(), resetAt: resetAt.toISOString() }, null, 2) + "\n",
+    );
+    console.error(`Channel upload cap hit — recorded upload-blocked.json until ${resetAt.toISOString()}`);
+  }
+  throw e;
+}
 
 console.log(`Uploaded: https://youtube.com/watch?v=${res.data.id}`);
 

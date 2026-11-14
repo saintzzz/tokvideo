@@ -22,6 +22,22 @@ const root = path.join(import.meta.dirname, "..");
 const longFormDir = path.join(root, "src", "suckhoe", "long-form");
 const ledgerPath = path.join(root, "src", "suckhoe", "published-long.json");
 
+// Upload-cap circuit breaker (2026-11-14): when upload-youtube-long hits
+// the channel's daily uploadLimitExceeded it stamps upload-blocked.json.
+// Scheduled ticks inside the blocked window must no-op — otherwise every
+// slot renders a full episode just to die red at videos.insert, burning
+// ~20min of compute and a failure email each time.
+const blockPath = path.join(root, "src", "suckhoe", "upload-blocked.json");
+if (existsSync(blockPath) && !process.env.IGNORE_UPLOAD_BLOCK) {
+  const block = JSON.parse(await readFile(blockPath, "utf8"));
+  if (Date.now() < Date.parse(block.resetAt ?? 0)) {
+    console.error(
+      `Channel upload cap active until ${block.resetAt} — tick no-ops (render+upload would fail anyway).`
+    );
+    process.exit(0);
+  }
+}
+
 const ledger = existsSync(ledgerPath)
   ? JSON.parse(await readFile(ledgerPath, "utf8"))
   : {};
