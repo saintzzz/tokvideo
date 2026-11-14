@@ -700,5 +700,12 @@
     "publishedAt": "2026-11-14T09:55:11.000Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "chiec-khan-trang-tap-03": {
+    "videoId": "gKXUdFM5I4M",
+    "publishedAt": "2026-11-14T14:04:27.868Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": true
   }
 }
