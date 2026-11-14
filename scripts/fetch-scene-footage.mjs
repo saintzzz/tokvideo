@@ -263,20 +263,35 @@ const iaSearch = async (query, used) => {
   return null;
 };
 
-// Chromium (the render engine) decodes h264/vp8/vp9/av1. Anything else —
-// old archive MPEG-2 encodes, odd HEVC profiles — loads forever inside
-// <Html5Video> and kills the render at a random frame (midwife-alone.mp4
-// froze frame 3671, 2026-11-14). Probe every download's codec with the
-// local ffmpeg build; unknown/absent ffmpeg = warn but keep.
-const SAFE_CODECS = new Set(["h264", "vp8", "vp9", "av1", "mpeg4"]);
-const probeCodec = (file) => {
+// Chromium (the render engine) stalls on more than just foreign codecs —
+// a valid h264 that is 4K/60fps or high-bitrate decodes slowly enough to
+// hang <Html5Video> for 75+ minutes inside a render (tap-02, 2026-11-14).
+// Normalize EVERY clip to light 720p24 h264 with the bundled ffmpeg; if
+// the transcode cannot run or fails, the clip is dropped and the scene
+// falls back to stills rather than gambling render-time on it.
+const transcodeForChrome = (src, dst) => {
   const ffmpeg = findFfmpeg();
-  if (!ffmpeg) return null;
-  const p = spawnSync(ffmpeg, ["-hide_banner", "-i", file], { encoding: "utf8" });
-  const m = (p.stderr ?? "").match(/Video:\s*([a-z0-9_]+)/i);
-  return m?.[1]?.toLowerCase() ?? null;
+  if (!ffmpeg) return false;
+  const p = spawnSync(
+    ffmpeg,
+    [
+      "-y", "-i", src,
+      "-vf", "scale='min(1280,iw)':-2,fps=24",
+      "-c:v", "libx264", "-preset", "veryfast", "-crf", "30",
+      "-pix_fmt", "yuv420p", "-an",
+      dst,
+    ],
+    { encoding: "utf8", timeout: 120_000 }
+  );
+  if (p.status !== 0 || !existsSync(dst)) {
+    console.warn(`transcode failed: ${(p.stderr ?? "").split("\n").slice(-3).join(" | ")}`);
+    return false;
+  }
+  return true;
 };
 
+// Downloads to a temp file, normalizes into <scene>.mp4 (always h264
+// regardless of source container — webm/ogv become mp4 on disk).
 const download = async (url, outFile) => {
   const res = await fetch(url, { signal: AbortSignal.timeout(180_000) });
   if (!res.ok) throw new Error(`download ${res.status}`);
@@ -285,11 +300,13 @@ const download = async (url, outFile) => {
   // A scene needs 5-20s of b-roll; anything past ~60MB is a movie, not a
   // clip (ThisChar1950's 79MB undecodable archive film, 2026-11-14).
   if (buf.length > 60e6) throw new Error(`clip too large (${(buf.length / 1e6).toFixed(0)}MB)`);
-  await writeFile(outFile, buf);
-  const codec = probeCodec(outFile);
-  if (codec && !SAFE_CODECS.has(codec)) {
+  const tmpFile = `${outFile}.raw${path.extname(url.split("?")[0]) || ".mp4"}`;
+  await writeFile(tmpFile, buf);
+  const ok = transcodeForChrome(tmpFile, outFile);
+  await unlink(tmpFile).catch(() => {});
+  if (!ok) {
     await unlink(outFile).catch(() => {});
-    throw new Error(`undecodable codec ${codec} — Chromium would stall mid-render`);
+    throw new Error("clip could not be normalized for the renderer");
   }
   return buf.length;
 };
@@ -343,9 +360,10 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
       console.warn(`no footage for ${ep.slug} [${scene}]`);
       continue;
     }
-    const ext = found.ext ?? "mp4";
-    const relExt = `videos/suckhoe-long/${ep.slug}/${scene}.${ext}`;
-    const outFileExt = path.join(outDir, `${scene}.${ext}`);
+    // Normalized output is always mp4 — the source container (webm/ogv)
+    // is discarded during transcode.
+    const relExt = `videos/suckhoe-long/${ep.slug}/${scene}.mp4`;
+    const outFileExt = path.join(outDir, `${scene}.mp4`);
     try {
       const bytes = await download(found.url, outFileExt);
       used.add(found.id);
