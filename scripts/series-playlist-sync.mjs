@@ -31,6 +31,31 @@ const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
 auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth });
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Freshly created playlists 404 on playlistItems.list for a few seconds
+// while they propagate — retry through it, and treat a persistent 404 as
+// "no items" so one stale id can't kill the whole sync (2026-11-14 crash).
+async function listItems(playlistId) {
+  const items = [];
+  let pageToken;
+  for (let attempt = 0; ; attempt++) {
+    try {
+      do {
+        const list = await youtube.playlistItems.list({
+          part: ["contentDetails"], playlistId, maxResults: 50, pageToken,
+        });
+        items.push(...(list.data.items ?? []));
+        pageToken = list.data.nextPageToken;
+      } while (pageToken);
+      return items;
+    } catch (e) {
+      const nf = e.code === 404 || e.errors?.[0]?.reason === "playlistNotFound";
+      if (!nf || attempt >= 4) { if (nf) return []; throw e; }
+      await sleep(2000 * (attempt + 1));
+    }
+  }
+}
+
 const ledger = JSON.parse(readFileSync(LEDGER, "utf8"));
 const map = existsSync(MAP_FILE) ? JSON.parse(readFileSync(MAP_FILE, "utf8")) : {};
 
@@ -92,20 +117,14 @@ for (const arc of Object.keys(arcs)) {
   }
   // Merge items from duplicate playlists into the keeper, then delete.
   for (const dupe of ranked.slice(1)) {
-    let pageToken;
-    do {
-      const list = await youtube.playlistItems.list({
-        part: ["contentDetails"], playlistId: dupe.id, maxResults: 50, pageToken,
-      });
-      for (const it of list.data.items ?? []) {
-        await youtube.playlistItems.insert({
-          part: ["snippet"],
-          requestBody: { snippet: { playlistId: keeper.id, resourceId: it.contentDetails.resourceId } },
-        }).catch(e => console.warn(`  merge ${it.contentDetails?.videoId} failed: ${e.message?.slice(0, 80)}`));
-      }
-      pageToken = list.data.nextPageToken;
-    } while (pageToken);
-    await youtube.playlists.delete({ id: dupe.id });
+    for (const it of await listItems(dupe.id)) {
+      await youtube.playlistItems.insert({
+        part: ["snippet"],
+        requestBody: { snippet: { playlistId: keeper.id, resourceId: it.contentDetails.resourceId } },
+      }).catch(e => console.warn(`  merge ${it.contentDetails?.videoId} failed: ${e.message?.slice(0, 80)}`));
+    }
+    await youtube.playlists.delete({ id: dupe.id })
+      .catch(e => console.warn(`  delete ${dupe.id} failed: ${e.message?.slice(0, 80)}`));
     channelPlaylists.splice(channelPlaylists.indexOf(dupe), 1);
     changed = true;
     console.log(`deleted duplicate playlist ${dupe.id} (${arc})`);
@@ -134,15 +153,7 @@ for (const [arc, eps] of Object.entries(arcs)) {
     console.log(`created playlist for ${arc}: ${playlistId}`);
   }
 
-  const existing = new Set();
-  let pageToken;
-  do {
-    const list = await youtube.playlistItems.list({
-      part: ["contentDetails"], playlistId, maxResults: 50, pageToken,
-    });
-    for (const it of list.data.items || []) existing.add(it.contentDetails.videoId);
-    pageToken = list.data.nextPageToken;
-  } while (pageToken);
+  const existing = new Set((await listItems(playlistId)).map(it => it.contentDetails.videoId));
 
   for (const { videoId } of eps) {
     if (existing.has(videoId)) continue;
