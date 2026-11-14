@@ -688,5 +688,19 @@
     "publishedAt": "2026-11-14T06:13:43.997Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "chiec-khan-trang-tap-02": {
+    "videoId": "yL9Ea6NBuSY",
+    "publishedAt": "2026-11-14T16:26:01.556Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": true
+  },
+  "chiec-khan-trang-tap-02-teaser": {
+    "videoId": "3SBNWooNd90",
+    "publishedAt": "2026-11-14T16:29:41.471Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgwJ6sSnIDlH3kXbDHx4AaABAg"
   }
 }
