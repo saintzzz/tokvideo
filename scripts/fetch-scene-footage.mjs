@@ -77,34 +77,14 @@ const SCENE_KEYWORDS = {
   "village-dawn": ["village sunrise mist", "fog morning village", "dawn river mist"],
 };
 
-// Fallback for scenes missing from SCENE_KEYWORDS: build queries from
-// the prompt's CONTENT words, not a raw prefix. "inside a dark old
-// Vietnamese house, white cloth strips hanging from every roof beam"
-// used to become "inside a dark old" — matching any dark stock at all
-// (an astronaut clip shipped, 2026-11-14). Strip articles/prepositions/
-// style-words and keep nouns + domain adjectives.
-const PROMPT_STOP = new Set([
-  "the", "and", "for", "with", "from", "into", "over", "under", "through",
-  "inside", "outside", "photorealistic", "realistic", "cinematic", "style",
-  "film", "scene", "shot", "video", "footage", "very", "every", "each",
-  "some", "any", "out", "its", "his", "her", "their", "they", "that",
-  "this", "these", "those", "there", "here", "when", "while", "then",
-]);
-const fallbackKeywords = (prompt) => {
-  const words = [
-    ...new Set(
-      prompt.toLowerCase().split(/[^a-z]+/).filter((w) => w.length > 2 && !PROMPT_STOP.has(w))
-    ),
-  ];
-  const queries = [];
-  for (let i = 0; i + 3 <= words.length && queries.length < 3; i += 3) {
-    queries.push(words.slice(i, i + 3).join(" "));
-  }
-  if (!queries.length && words.length) queries.push(words.slice(0, 3).join(" "));
-  return queries;
-};
 
-const keywordsFor = (scene, prompt) => SCENE_KEYWORDS[scene] ?? fallbackKeywords(prompt);
+// Horror channel rule (owner 2026-11-14, after a sunny SHEEP PASTURE
+// clip shipped inside a ghost story): a scene only gets motion footage
+// when it has a curated horror query in SCENE_KEYWORDS. Anything else
+// falls back to the episode's AI horror stills — Ken Burns on a ghost
+// image is always on-genre; stock "relevance" never was (astronaut,
+// sheep, 1938 feature films all passed keyword matching).
+const keywordsFor = (scene) => SCENE_KEYWORDS[scene] ?? [];
 
 // -- Pixabay (free API key) -----------------------------------------------
 // Pixabay fronts its API with Cloudflare bot checks that intermittently
@@ -123,6 +103,13 @@ const OFF_GENRE_TAGS = [
   "space", "astronaut", "eclipse", "galaxy", "nasa", "ufo", "alien",
   "robot", "cyber", "hologram", "sci-fi", "corporate", "office",
   "smartphone", "technology", "neon city", "futuristic",
+  // Daylight pastoral/livestock — a sunny sheep pasture shipped inside
+  // a ghost story 2026-11-14. Farm vocabulary is never horror b-roll.
+  "sheep", "lamb", "wool", "shepherd", "cattle", "cow", "goat", "pig",
+  "chicken", "horse", "livestock", "pasture", "grazing", "meadow",
+  "farm", "farmer", "agriculture", "harvest", "barn", "hay", "tractor",
+  "beach", "surf", "ocean wave", "sailing", "wedding", "birthday",
+  "christmas", "party", "festival", "concert", "sport", "football",
 ];
 // Every accepted clip must also tag at least one horror/rural-domain
 // word — the astronaut clip's tags (space/sun/light/sky) contained no
@@ -286,6 +273,22 @@ const transcodeForChrome = (src, dst) => {
   if (p.status !== 0 || !existsSync(dst)) {
     console.warn(`transcode failed: ${(p.stderr ?? "").split("\n").slice(-3).join(" | ")}`);
     return false;
+  }
+  // Brightness gate — horror b-roll is dark. A clip whose middle frame
+  // averages daylight-bright (sunny pastures, beaches, offices) cannot
+  // sit inside a ghost story no matter what its tags claimed. Scale to
+  // 1x1 gray and read the single pixel: mean luma >115/255 = too bright.
+  const probe = spawnSync(
+    ffmpeg,
+    ["-ss", "1", "-i", dst, "-frames:v", "1", "-vf", "scale=1:1", "-f", "rawvideo", "-pix_fmt", "gray", "-"],
+    { encoding: "buffer", timeout: 60_000, maxBuffer: 1 << 20 }
+  );
+  if (probe.status === 0 && probe.stdout?.length) {
+    const luma = probe.stdout[0];
+    if (luma > 115) {
+      console.warn(`rejected: mean luma ${luma} >115 (daylight clip)`);
+      return false;
+    }
   }
   return true;
 };
