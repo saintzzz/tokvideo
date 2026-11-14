@@ -1,4 +1,4 @@
-# Channel report — 2026-11-13
+# Channel report — 2026-11-14
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
@@ -7,7 +7,7 @@ Total videos: 14
 
 ## Last 28 days (channel-wide)
 
-Views: 11
+Views: 8
 Watch time (minutes): 0
 Subscribers gained: 0
 Subscribers lost: 0
@@ -17,7 +17,7 @@ Net subscriber change: 0
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
 |---|---|---|---|---|
-| 4qS5HKBB3-M | 5 | 0.0 | 2 | 4.3 |
+| 4qS5HKBB3-M | 2 | 0.0 | 0 | 0.0 |
 | dN9w4Ixoqes | 2 | 0.0 | 0 | 0.0 |
 | 1ook5C5HtBs | 1 | 0.0 | 0 | 0.0 |
 | pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
@@ -30,13 +30,15 @@ Videos under 15% avg retention: 6/6 — low % means viewers abandon early (hook 
 
 | videoId | Impressions | CTR% |
 |---|---|---|
-| 3dcnsv3-Aas | 21 | 0.00 |
-| 1ook5C5HtBs | 9 | 0.00 |
-| dN9w4Ixoqes | 4 | 0.00 |
-| dElz6HMW_J0 | 3 | 0.00 |
+| 3dcnsv3-Aas | 35 | 0.00 |
+| 1ook5C5HtBs | 16 | 0.00 |
+| dElz6HMW_J0 | 5 | 0.00 |
+| dN9w4Ixoqes | 5 | 0.00 |
 | hU3zmJBJ3UM | 2 | 0.00 |
+| Jr8ifVp_bjo | 1 | 0.00 |
+| W2b3hBVNfic | 1 | 0.00 |
 
-Videos with zero impressions: 0/5 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
+Videos with zero impressions: 0/7 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
 
 ## Most recent 14 videos
 
