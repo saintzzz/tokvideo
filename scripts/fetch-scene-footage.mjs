@@ -83,7 +83,18 @@ const keywordsFor = (scene, prompt) =>
 // Pixabay fronts its API with Cloudflare bot checks that intermittently
 // return the "Just a moment" HTML page (200, not an error status). Retry
 // a few times with backoff — the challenge window usually clears.
+// Pixabay returns loosely-related hits for multi-word queries — observed
+// 2026-11-14: "beam multi cloth" returned an astronaut + eclipse clip that
+// shipped inside a folk-horror episode. Gate each hit on tag overlap with
+// the query; zero overlap = unrelated stock, keep looking.
+const QUERY_STOP = new Set([
+  "the", "and", "for", "with", "from", "into", "over", "under", "through",
+]);
+const queryWords = (q) =>
+  q.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !QUERY_STOP.has(w));
+
 const pixabaySearch = async (query, used) => {
+  const qws = queryWords(query);
   for (let attempt = 0; attempt < 4; attempt++) {
     const res = await fetch(
       `https://pixabay.com/api/videos/?key=${PIXABAY_KEY}&q=${encodeURIComponent(query)}&per_page=10&safesearch=true`,
@@ -96,14 +107,21 @@ const pixabaySearch = async (query, used) => {
     }
     if (!res.ok) throw new Error(`pixabay ${res.status}`);
     const json = JSON.parse(text);
+    let best = null;
     for (const hit of json.hits ?? []) {
       if (hit.duration < 5 || hit.duration > 60) continue;
       const id = `pixabay-${hit.id}`;
       if (used.has(id)) continue;
+      const tags = (hit.tags ?? "").toLowerCase();
+      const overlap = qws.filter((w) => tags.includes(w)).length;
+      if (!overlap) continue;
+      if (!best || overlap > best.overlap) best = { hit, id, overlap };
+    }
+    if (best) {
       // Prefer medium quality — large is often needlessly heavy for a
       // background layer under captions/dim overlays.
-      const file = hit.videos?.medium ?? hit.videos?.large ?? hit.videos?.small;
-      if (file?.url) return { url: file.url, id };
+      const file = best.hit.videos?.medium ?? best.hit.videos?.large ?? best.hit.videos?.small;
+      if (file?.url) return { url: file.url, id: best.id };
     }
     return null;
   }

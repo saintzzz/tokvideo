@@ -278,15 +278,32 @@ try {
 // rejected thumbnail never fails the upload.
 const thumbPath = path.join(import.meta.dirname, "..", "out", `SucKhoeLong-${slug}-thumb.png`);
 if (existsSync(thumbPath)) {
-  try {
-    await youtube.thumbnails.set({
-      videoId: res.data.id,
-      media: { body: createReadStream(thumbPath) },
-    });
-    console.log("Custom thumbnail set.");
-  } catch (err) {
-    console.error(`Thumbnail upload failed (video stays up): ${err.message ?? err}`);
+  // YouTube rate-limits thumbnails.set per channel ("uploaded too many
+  // thumbnails recently") — it cleared in under a minute in every
+  // observed case, so retry a few times before giving up. A persistent
+  // failure marks the ledger entry thumbnailPending so the watchdog
+  // sweep retries on a later run instead of silently shipping a raw
+  // video frame as the thumbnail (observed 2026-11-14).
+  let thumbSet = false;
+  for (let attempt = 0; attempt < 4 && !thumbSet; attempt++) {
+    try {
+      await youtube.thumbnails.set({
+        videoId: res.data.id,
+        media: { body: createReadStream(thumbPath) },
+      });
+      thumbSet = true;
+      console.log("Custom thumbnail set.");
+    } catch (err) {
+      const msg = err.message ?? String(err);
+      const rateLimited = /too many thumbnails|rate.?limit|quota/i.test(msg);
+      console.error(`Thumbnail upload attempt ${attempt + 1}/4 failed: ${msg}`);
+      if (!rateLimited) break;
+      await new Promise((r) => setTimeout(r, 45_000));
+    }
   }
+  ledger[slug] = { ...ledger[slug], thumbnailPending: !thumbSet };
+  await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
+  if (!thumbSet) console.error("Custom thumbnail NOT applied — flagged thumbnailPending for watchdog sweep.");
 } else {
   console.log("No thumbnail file found — YouTube auto frame will be used.");
 }

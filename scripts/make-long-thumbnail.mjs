@@ -169,3 +169,14 @@ if (result.status !== 0 || !existsSync(thumbPath)) {
   process.exit(result.status ?? 1);
 }
 console.log(`Thumbnail written: ${thumbPath}`);
+
+// Also persist a committed copy next to thumb.jpg — out/ is gitignored,
+// so without this the watchdog's thumbnail repair path has nothing to
+// re-push when an upload-time thumbnails.set gets rate-limited.
+const committedDir = path.join(root, "public", "images", "suckhoe-long", slug);
+const committedPath = path.join(committedDir, "thumb-composed.jpg");
+await mkdir(committedDir, { recursive: true });
+const jpg = spawnSync(ffmpeg, ["-y", "-i", thumbPath, "-q:v", "3", committedPath]);
+if (jpg.status === 0 && existsSync(committedPath)) {
+  console.log(`Committed-copy thumbnail: ${committedPath}`);
+}

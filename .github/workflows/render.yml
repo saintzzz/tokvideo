@@ -1106,7 +1106,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/suckhoe/published-long.json 2>/dev/null || true
+          git add src/suckhoe/published-long.json public/images/suckhoe-long/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ env.LONG_SLUG }} [skip ci]"
           # Unstaged tracked edits (e.g. sceneVideos paths the footage
           # step writes into episode JSONs) make every `git rebase`
@@ -1246,7 +1246,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/suckhoe/published-long.json 2>/dev/null || true
+          git add src/suckhoe/published-long.json public/images/suckhoe-long/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ steps.pick.outputs.slug }} [skip ci]"
           git checkout -- . || true
           for i in 1 2 3 4 5; do
@@ -1421,6 +1421,12 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: node scripts/fix-teaser-titles.mjs
+
+      # System ffmpeg for thumbnail repair — the bundled Remotion build
+      # has no drawtext, so pending-thumbnail rebuilds here would emit
+      # plain frames without it.
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
       - name: Sync regenerated thumbnails to live videos
         continue-on-error: true
