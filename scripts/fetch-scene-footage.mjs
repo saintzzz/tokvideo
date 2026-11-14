@@ -85,11 +85,18 @@ const keywordsFor = (scene, prompt) =>
 // a few times with backoff — the challenge window usually clears.
 // Pixabay returns loosely-related hits for multi-word queries — observed
 // 2026-11-14: "beam multi cloth" returned an astronaut + eclipse clip that
-// shipped inside a folk-horror episode. Gate each hit on tag overlap with
-// the query; zero overlap = unrelated stock, keep looking.
+// shipped inside a folk-horror episode (tag overlap 1 on "beam"). Gate:
+// >=2 keyword overlaps for multi-word queries, plus an off-genre tag
+// blocklist so space/sci-fi/corporate stock can never land in a horror
+// episode regardless of wording.
 const QUERY_STOP = new Set([
   "the", "and", "for", "with", "from", "into", "over", "under", "through",
 ]);
+const OFF_GENRE_TAGS = [
+  "space", "astronaut", "eclipse", "galaxy", "nasa", "ufo", "alien",
+  "robot", "cyber", "hologram", "sci-fi", "corporate", "office",
+  "smartphone", "technology", "neon city", "futuristic",
+];
 const queryWords = (q) =>
   q.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !QUERY_STOP.has(w));
 
@@ -107,14 +114,16 @@ const pixabaySearch = async (query, used) => {
     }
     if (!res.ok) throw new Error(`pixabay ${res.status}`);
     const json = JSON.parse(text);
+    const minOverlap = Math.min(2, Math.max(1, qws.length));
     let best = null;
     for (const hit of json.hits ?? []) {
       if (hit.duration < 5 || hit.duration > 60) continue;
       const id = `pixabay-${hit.id}`;
       if (used.has(id)) continue;
       const tags = (hit.tags ?? "").toLowerCase();
+      if (OFF_GENRE_TAGS.some((t) => tags.includes(t) && !qws.some((w) => t.includes(w)))) continue;
       const overlap = qws.filter((w) => tags.includes(w)).length;
-      if (!overlap) continue;
+      if (overlap < minOverlap) continue;
       if (!best || overlap > best.overlap) best = { hit, id, overlap };
     }
     if (best) {
@@ -215,6 +224,9 @@ const download = async (url, outFile) => {
   if (!res.ok) throw new Error(`download ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
   if (buf.length < 100_000) throw new Error(`clip too small (${buf.length}B)`);
+  // A scene needs 5-20s of b-roll; anything past ~60MB is a movie, not a
+  // clip (ThisChar1950's 79MB undecodable archive film, 2026-11-14).
+  if (buf.length > 60e6) throw new Error(`clip too large (${(buf.length / 1e6).toFixed(0)}MB)`);
   await writeFile(outFile, buf);
   return buf.length;
 };
@@ -253,7 +265,12 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
         if (PIXABAY_KEY) found = await pixabaySearch(q, used);
         if (!found && PEXELS_KEY) found = await pexelsSearch(q, used);
         if (!found) found = await wmcSearch(q, used);
-        if (!found) found = await iaSearch(q, used);
+        // Internet Archive was removed from the chain on 2026-11-14:
+        // even with size filters it shipped TWO unrelated feature-film
+        // incidents (1938 propaganda movie, ThisChar1950) and a codec
+        // Chrome could not decode, killing the render mid-run. Stills
+        // fallback beats random archive footage every time.
+        // if (!found) found = await iaSearch(q, used);
         if (found) break;
       } catch (err) {
         console.warn(`search "${q}" failed: ${err.message}`);
