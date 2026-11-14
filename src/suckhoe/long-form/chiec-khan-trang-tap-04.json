@@ -8,7 +8,15 @@
   "slug": "chiec-khan-trang-tap-04",
   "title": "Khăn Trắng Phủ Kín Cả Gian Nhà - Đêm Con Cháu Tứ Xứ Kéo Về",
   "description": "Tập 4 arc CHIẾC KHĂN TRẮNG: Bà nội từ chối vào viện, chỉ muốn ở lại căn nhà của bà mụ và chờ con cháu tứ xứ về đủ. Mỗi người tới thêm một mạng, khăn trên xà lại thêm một dải - cho tới đêm đông đủ nhất, khi bà nội ngồi dậy được và kể cho cả nhà nghe chuyện bà được bà mụ đỡ ra đời. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "khăn trắng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "a big Vietnamese family crowding into an old rural house at night, motorbikes outside, warm light inside with white cloths hanging from beams, photorealistic",
     "an elderly Vietnamese woman in bed surrounded by her gathered family at night, peaceful expression, white cloths above, warm lamp light, photorealistic"
@@ -82,5 +90,13 @@
       "caption": "Khăn tự rời xuống xếp gọn trước bàn thờ",
       "text": "Lúc tang bắt đầu, cả nhà chứng kiến điều cuối cùng: mười sáu dải khăn trên xà cùng tự rời xuống, không bay loạn mà từ từ hạ xuống, xếp gọn thành một chồng trắng ngay ngắn trước bàn thờ bà nội - như bà mụ trả lại khăn cho một nhà có tang thật, nghề của bà tới đây là xong."
     }
-  ]
+  ],
+  "sceneImages": {
+    "grandma-bed": "images/suckhoe-long/chiec-khan-trang-tap-04/grandma-bed.jpg",
+    "phone-calls": "images/suckhoe-long/chiec-khan-trang-tap-04/phone-calls.jpg",
+    "family-arriving": "images/suckhoe-long/chiec-khan-trang-tap-04/family-arriving.jpg",
+    "crowded-house": "images/suckhoe-long/chiec-khan-trang-tap-04/crowded-house.jpg",
+    "grandma-sits": "images/suckhoe-long/chiec-khan-trang-tap-04/grandma-sits.jpg",
+    "cloth-release": "images/suckhoe-long/chiec-khan-trang-tap-04/cloth-release.jpg"
+  }
 }

@@ -29,6 +29,7 @@ import { existsSync } from "node:fs";
 import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { sanityCheckAudio } from "./lib/audio-probe.mjs";
 
 const root = path.join(import.meta.dirname, "..");
@@ -115,9 +116,7 @@ const shelvedIds = new Set(
     : []
 );
 if (CLIENT_ID && CLIENT_SECRET && REFRESH_TOKEN) {
-  const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
-  oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-  youtube = google.youtube({ version: "v3", auth: oauth2Client });
+  youtube = makeYoutube();
 }
 
 // -- Check 1+2: ledger <-> channel reconciliation ---------------------

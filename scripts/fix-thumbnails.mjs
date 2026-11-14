@@ -13,6 +13,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const STATE = path.join(ROOT, "src/suckhoe/thumb-sync.json");
@@ -21,9 +22,7 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
   console.log("Skipping: YouTube credentials not set.");
   process.exit(0);
 }
-const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
-auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth });
+const youtube = makeYoutube();
 
 const ledgerPath = path.join(ROOT, "src/suckhoe/published-long.json");
 const ledger = JSON.parse(readFileSync(ledgerPath, "utf8"));

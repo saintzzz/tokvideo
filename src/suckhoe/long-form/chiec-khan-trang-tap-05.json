@@ -8,7 +8,15 @@
   "slug": "chiec-khan-trang-tap-05",
   "title": "Nấm Mộ Không Bia Sau Vườn - Chiếc Khăn Cuối Cùng Treo Cho Bà Mụ",
   "description": "Tập 5 arc CHIẾC KHĂN TRẮNG: Đám tang bà nội đông đủ cả làng kéo tới, cụ Chính nói câu ai nghe cũng nghẹn. Sau tang, nhà anh Minh phát hiện nấm mộ không bia lún trong vườn - mộ bà mụ Tám Nước chôn vội mấy chục năm trước. Và lần này, có một chiếc khăn trắng được treo lên cho chính bà. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "khăn trắng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "a fresh white cloth hung on a small new village shrine before a restored grave, incense smoke, morning light, Vietnamese countryside, photorealistic",
     "a crowded Vietnamese village funeral at an old rural house, mourners in white headbands, warm daylight, photorealistic"
@@ -76,5 +84,13 @@
       "caption": "Chuyện khăn trắng hết rồi",
       "text": "Chuyện khăn trắng trên xà tới đây là hết - vì cái đáng sợ không phải khăn, mà là một người già nằm một mình không ai hay. Nhà bạn có người già ở xa không, bao lâu rồi bạn chưa gọi - kể Bà Tư nghe ở bình luận, và hôm nay về gọi cho họ một cuộc nhé."
     }
-  ]
+  ],
+  "sceneImages": {
+    "funeral-crowd": "images/suckhoe-long/chiec-khan-trang-tap-05/funeral-crowd.jpg",
+    "old-grave": "images/suckhoe-long/chiec-khan-trang-tap-05/old-grave.jpg",
+    "grave-digging": "images/suckhoe-long/chiec-khan-trang-tap-05/grave-digging.jpg",
+    "new-tomb": "images/suckhoe-long/chiec-khan-trang-tap-05/new-tomb.jpg",
+    "cloth-for-midwife": "images/suckhoe-long/chiec-khan-trang-tap-05/cloth-for-midwife.jpg",
+    "family-reunion": "images/suckhoe-long/chiec-khan-trang-tap-05/family-reunion.jpg"
+  }
 }

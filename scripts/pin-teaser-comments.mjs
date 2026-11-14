@@ -10,6 +10,7 @@ import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { arcDisplayName, playlistUrl } from "./lib/long-metadata.mjs";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 
@@ -27,9 +28,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const ledgerPath = path.join(root, "src", "suckhoe", "published-long.json");
 const ledger = JSON.parse(await readFile(ledgerPath, "utf8"));
 
-const oauth2 = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
-oauth2.setCredentials({ refresh_token: REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth: oauth2 });
+const youtube = makeYoutube();
 
 const requested = process.argv.slice(2);
 let dirty = false;

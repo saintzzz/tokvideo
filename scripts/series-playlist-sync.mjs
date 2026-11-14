@@ -16,6 +16,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const MAP_FILE = path.join(ROOT, "src/suckhoe/series-playlists.json");
@@ -27,9 +28,7 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
   process.exit(0);
 }
 
-const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
-auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth });
+const youtube = makeYoutube();
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Freshly created playlists 404 on playlistItems.list for a few seconds

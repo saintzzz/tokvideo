@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { findFfmpeg } from "./lib/ffmpeg.mjs";
 
 const daysArg = Number(process.argv.find((a) => a.startsWith("--days="))?.split("=")[1] ?? 14);
@@ -33,9 +34,7 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
   console.log("Skipping verify-live-quality: YouTube credentials not set.");
   process.exit(0);
 }
-const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
-auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth });
+const youtube = makeYoutube();
 
 // Domain tags a horror-story video must carry at least one of; junk
 // uploads leaked generic defaults ("camping", "fishing", "Proenneke").
