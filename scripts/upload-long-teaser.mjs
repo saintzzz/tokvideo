@@ -8,7 +8,7 @@
 // point of the teaser is reach, and its content is a slice of an
 // already-public video.
 
-import { createReadStream, existsSync } from "node:fs";
+import { createReadStream, existsSync, readFileSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -72,7 +72,15 @@ const premise = (episode.title || `Tập ${parseInt(epNum, 10) || "?"}`)
 const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} (xem trước) #Shorts`;
 const title = (premise.length > 100 - suffix.length ? premise.slice(0, 100 - suffix.length).replace(/\s+\S*$/, "") : premise) + suffix;
 
-const playlistId = playlistMap.vi?.["long-form"];
+// Prefer the arc's own playlist ("xem trọn bộ arc này") over the generic
+// long-form one — the arc list is what the sync actually maintains now.
+let playlistId;
+try {
+  const arc = slug.replace(/-tap-\d+$/, "");
+  const seriesMap = JSON.parse(readFileSync(new URL("../src/suckhoe/series-playlists.json", import.meta.url), "utf8"));
+  playlistId = seriesMap[arc]?.playlistId;
+} catch {}
+playlistId ??= playlistMap.vi?.["long-form"];
 const description = [
   longVideoId ? `Nghe trọn tập: ${videoUrl(longVideoId)}` : null,
   playlistId ? `Nghe trọn bộ: ${playlistUrl(playlistId)}` : null,
