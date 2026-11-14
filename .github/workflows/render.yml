@@ -1040,6 +1040,13 @@ jobs:
       - name: Render episode
         run: node scripts/render-suckhoe-long.mjs ${{ env.LONG_SLUG }}
 
+      # System ffmpeg BEFORE the thumbnail — the Remotion-bundled build
+      # has no drawtext, so a thumbnail made without this installed is a
+      # plain frame: no badge, no title, no gradient (every CI thumb was
+      # silently textless until 2026-11-13).
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
       # Thumbnail is nice-to-have — a failure here must never skip the
       # upload (observed 2026-10-09: missing drawtext on the runner's
       # ffmpeg killed the step and the whole publish).
@@ -1066,20 +1073,13 @@ jobs:
           YOUTUBE_LONG_PRIVACY_STATUS: ${{ env.PRIVACY_OVERRIDE || vars.YOUTUBE_LONG_PRIVACY_STATUS }}
         run: node scripts/upload-youtube-long.mjs ${{ env.LONG_SLUG }}
 
-      # 1-long-1-short rhythm (owner directive 2026-11-04): manual
-      # dispatches also carry their teaser immediately — same steps as
-      # the scheduled publish job.
-      - name: Install ffmpeg (for teaser build)
-        if: success()
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-
       - name: Build teaser Short for this episode
-        if: success()
+        if: success() && env.LONG_SLUG != ''
         continue-on-error: true
         run: node scripts/make-long-teaser.mjs ${{ env.LONG_SLUG }}
 
       - name: Upload teaser Short
-        if: success()
+        if: success() && env.LONG_SLUG != ''
         continue-on-error: true
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
@@ -1162,6 +1162,11 @@ jobs:
         if: steps.pick.outputs.slug != ''
         run: node scripts/render-suckhoe-long.mjs ${{ steps.pick.outputs.slug }}
 
+      # System ffmpeg BEFORE the thumbnail — bundled build has no
+      # drawtext, otherwise every CI thumbnail is a plain textless frame.
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
       # Thumbnail is nice-to-have — never blocks the upload.
       - name: Make thumbnail
         if: steps.pick.outputs.slug != ''
@@ -1193,23 +1198,19 @@ jobs:
       # 1-long-1-short rhythm (owner directive 2026-11-04): every
       # published episode gets its teaser Short immediately, alternating
       # long/short on the channel instead of batching teasers at night.
-      # The Remotion-bundled ffmpeg lacks filters the teaser graph needs
-      # (zoompan/boxblur/drawtext) — install the real binary.
-      - name: Install ffmpeg (for teaser build)
-        if: success()
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      # ffmpeg already installed above (thumbnail step needs it too).
 
       - name: Build teaser Short for this episode
-        if: success()
+        if: success() && steps.pick.outputs.slug != ''
         continue-on-error: true # teaser is bonus on top of the long-form
-        # upload — a build hiccup must never red the run; the nightly
-        # doctor retries missing teasers anyway
+        # upload — a build hiccup must never red the run; the watchdog
+        # pairs-check + retries missing teasers
         run: node scripts/make-long-teaser.mjs ${{ steps.pick.outputs.slug }}
 
       - name: Upload teaser Short
-        if: success()
+        if: success() && steps.pick.outputs.slug != ''
         continue-on-error: true # long-form already landed; a teaser
-        # hiccup must never red the run (doctor retries it nightly anyway)
+        # hiccup must never red the run (watchdog retries it anyway)
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1369,6 +1370,15 @@ jobs:
           GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/audio-topup.mjs
 
+      # Dedicated scary thumbnail stills for any episode missing one —
+      # gen-thumb-visuals skips episodes that already have thumb.jpg,
+      # so each run only pays for genuinely new arcs (it was never
+      # wired anywhere before 2026-11-13; every new arc fell back to a
+      # generic scenery still).
+      - name: Generate missing scary thumbnail stills
+        continue-on-error: true
+        run: node scripts/gen-thumb-visuals.mjs
+
       - name: Sync per-series playlists (Shorts -> long-form funnel)
         continue-on-error: true
         env:
@@ -1419,7 +1429,7 @@ jobs:
           # --ignore-errors: a pathspec that matched nothing aborts the
           # whole add (observed 2026-11-13: series-playlists.json absent
           # -> topped-up audio never staged -> rebase loop died silent).
-          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/captions/ 2>/dev/null || true
+          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           for i in 1 2 3 4 5; do
             git fetch origin main

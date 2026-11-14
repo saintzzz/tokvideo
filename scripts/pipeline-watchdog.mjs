@@ -147,6 +147,7 @@ for (const run of runs) {
 }
 
 const depth = queueDepth();
+let lastUploadMs = 0;
 
 // ----------------------------------------------------- missed slots ---
 // 2026-11-07 incident: the only daily tick allowed to START a new arc
@@ -159,7 +160,7 @@ const depth = queueDepth();
 try {
   const nextSlug = execSync("node scripts/next-long-form-slug.mjs", { cwd: ROOT, encoding: "utf8" }).trim();
   const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
-  const lastUpload = Math.max(0, ...Object.entries(ledger)
+  const lastUpload = lastUploadMs = Math.max(0, ...Object.entries(ledger)
     .filter(([k]) => !k.endsWith("-teaser"))
     .map(([, v]) => Date.parse(v.publishedAt || 0)));
   const staleMin = (Date.now() - lastUpload) / 60000;
@@ -215,6 +216,33 @@ try {
   findings.push(`- missed-slot check lỗi: ${e.message.slice(0, 140)}`);
 }
 if (depth < MIN_QUEUE) findings.unshift(`- **QUEUE LOW**: chỉ còn ${depth} tập chưa đăng (< ${MIN_QUEUE}) - queue-refill cần chạy`);
+
+// ----------------------------------------------------- teaser pairs ---
+// 1-long-1-short rhythm: every published episode needs its `-teaser`
+// ledger entry. Missing pairs are retried by the nightly doctor; report
+// them here so a persistent gap is visible in the report (and pairs
+// older than the stall window escalate via the stall check above).
+try {
+  const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
+  const missingTeasers = Object.keys(ledger)
+    .filter(k => !k.endsWith("-teaser") && !k.endsWith("-fb") && !ledger[`${k}-teaser`]);
+  if (missingTeasers.length) {
+    findings.push(`- ${missingTeasers.length} tập thiếu teaser Short: ${missingTeasers.slice(0, 8).join(", ")}${missingTeasers.length > 8 ? "..." : ""}`);
+  }
+} catch { /* ledger unreadable - the stall check already covers it */ }
+
+// ---------------------------------------------------- fail-loud stall ---
+// 2026-11-13 incident: 2 ngày không upload nào (mọi candidate thiếu audio
+// + commit step nuốt lỗi) mà mọi run vẫn xanh - findings chỉ nằm trong
+// file markdown không ai đọc. Owner: "đấy không phải auto healing".
+// Khi queue còn tập mà upload mới nhất đã quá STALL_ALERT_HOURS, pipeline
+// đã hết khả năng tự cứu -> FAIL run này để GitHub gửi email báo lỗi.
+const STALL_H = Number(process.env.STALL_ALERT_HOURS || 20);
+const stallH = (Date.now() - lastUploadMs) / 3600e3;
+const critical = depth > 0 && stallH > STALL_H;
+if (critical) {
+  findings.unshift(`- **STALL ${Math.round(stallH)}h**: còn ${depth} tập chưa đăng mà upload mới nhất đã ${Math.round(stallH)}h trước - auto-heal không cứu được, cần người xem`);
+}
 if (!actions.length && !findings.length) actions.push("- không có run nào fail trong 48h - pipeline sạch");
 
 const vn = new Date(Date.now() + 7 * 3600e3).toISOString().replace("T", " ").slice(0, 16);
@@ -230,3 +258,4 @@ ${findings.length ? findings.join("\n") : "- (trống)"}
 `;
 writeFileSync(REPORT, report);
 console.log(report);
+if (critical) process.exitCode = 1;

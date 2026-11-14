@@ -112,7 +112,7 @@ LUẬT BẮT BUỘC:
 - Retention audit 2026-11-11 (funnel 28 ngày: 5/7 video dưới 15% avg view, khán giả bỏ trong 30s đầu): BEAT 1 của mọi tập PHẢI mở bằng một hình ảnh hoặc sự kiện cụ thể, rùng mình - vật bị cấm, xác chết, tiếng động lạ, hoặc khoảnh khắc lời cấm đang bị phá. CẤM mở bằng: giới thiệu nghề/tên/tuổi người kể, "người ta đồn rằng", tả cảnh làng hay thời tiết chung chung.
 - Beat 2 nâng ngay thành một câu hỏi hoặc mối nguy cụ thể chưa có lời giải (ai/cái gì/tại sao). Bối cảnh, lai lịch, tên làng chỉ được ghép vào từ beat 3 trở đi.
 - 30 giây đầu (beat 1-3): câu NGẮN dưới 15 từ, nhịp dứt khoáy - mỗi câu là một hình ảnh hoặc một nhát dao vào bí mật, không câu ghép mô tả dài.
-- thumbnailSubjects: 2-3 gợi ý ảnh RIÊNG của tập này (cảnh/vật/nhân vật cụ thể xuất hiện trong tập), không lặp subject giữa các tập - tránh cận cảnh tối giống nhau.
+- thumbnailSubjects: 2-3 gợi ý ảnh RIÊNG của tập này - PHẢI là đối tượng rùng mình cụ thể trong tập (mặt/vật thể của ma, vật bị cấm, xác, món đồ nhuốm máu), KHÔNG phải phong cảnh chung chung (nhà, sông, cây không ai). Không lặp subject giữa các tập.
 - Tập nào cũng phải có hook mạnh trong 2 beat đầu, leo thang giữa, kết mở dẫn sang tập sau (trừ tập cuối kết trọn, trả nợ minh oan).
 - KHÔNG markdown, KHÔNG giải thích - output chỉ là JSON thuần của 1 episode.`;
 

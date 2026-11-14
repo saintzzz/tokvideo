@@ -43,17 +43,80 @@ for (const [key, v] of Object.entries(ledger)) {
   (arcs[m[1]] ??= []).push({ ep: Number(m[2]), videoId: v.videoId });
 }
 
+const arcTitleFor = (arc) => {
+  try {
+    const ep = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/long-form", `${arc}-tap-01.json`), "utf8"));
+    return ep.arcTitle || arc.toUpperCase();
+  } catch { return arc.toUpperCase(); }
+};
+
+// ---- Dedupe + adopt existing playlists ------------------------------------
+// 2026-11-13 incident: the map file was never committed (a dead git-add
+// pathspec), so every watchdog run saw an empty map and created a fresh
+// playlist per arc — the channel accumulated dozens of duplicates.
+// List ALL channel playlists once: adopt the best playlist per arc into
+// the map, merge stray items into it, delete the extras.
+const channelPlaylists = [];
+{
+  let pageToken;
+  do {
+    const res = await youtube.playlists.list({
+      part: ["snippet", "contentDetails"], mine: true, maxResults: 50, pageToken,
+    });
+    channelPlaylists.push(...(res.data.items ?? []));
+    pageToken = res.data.nextPageToken;
+  } while (pageToken);
+}
+const byId = new Map(channelPlaylists.map(p => [p.id, p]));
 let changed = false;
+for (const arc of Object.keys(arcs)) {
+  const wantTitle = `TRỌN BỘ ${arcTitleFor(arc)} | Truyện Ma Dài Kỳ`;
+  const mapped = map[arc]?.playlistId;
+  // Candidates: the mapped playlist (if still alive) + every playlist
+  // sharing this arc's canonical title.
+  const cands = new Map();
+  if (mapped && byId.has(mapped)) cands.set(mapped, byId.get(mapped));
+  for (const p of channelPlaylists) {
+    if (p.snippet?.title === wantTitle) cands.set(p.id, p);
+  }
+  if (!cands.size) continue; // nothing to adopt — create fresh below
+  // Keep the one holding the most items; tie-break to the mapped id.
+  const ranked = [...cands.values()].sort((a, b) =>
+    (b.contentDetails?.itemCount ?? 0) - (a.contentDetails?.itemCount ?? 0)
+    || (a.id === mapped ? -1 : 1));
+  const keeper = ranked[0];
+  if (map[arc]?.playlistId !== keeper.id) {
+    map[arc] = { playlistId: keeper.id };
+    changed = true;
+    console.log(`adopted playlist for ${arc}: ${keeper.id} (${keeper.contentDetails?.itemCount ?? 0} items)`);
+  }
+  // Merge items from duplicate playlists into the keeper, then delete.
+  for (const dupe of ranked.slice(1)) {
+    let pageToken;
+    do {
+      const list = await youtube.playlistItems.list({
+        part: ["contentDetails"], playlistId: dupe.id, maxResults: 50, pageToken,
+      });
+      for (const it of list.data.items ?? []) {
+        await youtube.playlistItems.insert({
+          part: ["snippet"],
+          requestBody: { snippet: { playlistId: keeper.id, resourceId: it.contentDetails.resourceId } },
+        }).catch(e => console.warn(`  merge ${it.contentDetails?.videoId} failed: ${e.message?.slice(0, 80)}`));
+      }
+      pageToken = list.data.nextPageToken;
+    } while (pageToken);
+    await youtube.playlists.delete({ id: dupe.id });
+    channelPlaylists.splice(channelPlaylists.indexOf(dupe), 1);
+    changed = true;
+    console.log(`deleted duplicate playlist ${dupe.id} (${arc})`);
+  }
+}
+
 for (const [arc, eps] of Object.entries(arcs)) {
   eps.sort((a, b) => a.ep - b.ep);
   let playlistId = map[arc]?.playlistId;
-  if (!playlistId) {
-    const arcTitle = (() => {
-      try {
-        const ep = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/long-form", `${arc}-tap-01.json`), "utf8"));
-        return ep.arcTitle || arc.toUpperCase();
-      } catch { return arc.toUpperCase(); }
-    })();
+  if (!playlistId || !byId.has(playlistId)) {
+    const arcTitle = arcTitleFor(arc);
     const res = await youtube.playlists.insert({
       part: ["snippet", "status"],
       requestBody: {
@@ -65,6 +128,7 @@ for (const [arc, eps] of Object.entries(arcs)) {
       },
     });
     playlistId = res.data.id;
+    byId.set(playlistId, res.data);
     map[arc] = { playlistId };
     changed = true;
     console.log(`created playlist for ${arc}: ${playlistId}`);

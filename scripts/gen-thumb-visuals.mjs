@@ -41,6 +41,14 @@ const ARC_SUBJECT = {
     "a massive ancient banyan tree at night with aerial roots hanging like ropes, a rotting ghost girl's face emerging from the bark, hollow black eyes, red cloth strips torn around the trunk, thin fog",
   "cau-khi":
     "a pale drowned woman in a soaked ao ba ba and checkered khan ran rising from black canal water under a bamboo monkey bridge at night, hollow eyes, wet hair dripping, hands reaching up",
+  "nguoi-di-dan-mua":
+    "a skeletal drowned fisherman in a torn rain cape rising from black canal water at night, rotting grey face, hollow black eyes, wet straw hat dripping dark water, a ghostly fishing net wrapped around his shoulders",
+  "ngo-mo-co":
+    "a ghost woman with floor-length wet black hair covering her face sitting on an ancient unmarked grave mound at night, combing her hair with a bone comb, pale rotting hands, fog, one hollow eye visible through the hair",
+  "chiec-khan-trang":
+    "a strip of white funeral cloth wrapped around a ghost's neck hanging from a wooden beam inside a dark old Vietnamese house, the ghost's swollen purple face just below the frame edge, bloodshot eyes staring down at the camera, moonlight through cracks",
+  "den-dau-xanh":
+    "a drowned ghost face lit from below by a ghostly blue-green flame at night over a dark flooded marsh, hollow black eyes, wet hair, the flame's cold light revealing rotting cheeks, faint silhouette of an old man with a lamp behind",
 };
 
 const THUMB_STYLE =
@@ -102,13 +110,18 @@ for (const file of files) {
     continue;
   }
 
-  // Per-episode subject first (2026-11-08: ARC_SUBJECT gave every
-  // episode in an arc the SAME prompt -> byte-identical thumbs on the
-  // channel). thumbnailSubjects[i] rotates so each tap gets its own
-  // frame; thumbPrompt / arc subject remain fallbacks.
+  // Scary anchor + per-episode variety (2026-11-08: one shared prompt
+  // gave byte-identical thumbs; 2026-11-13: pure thumbnailSubjects gave
+  // moody scenery, not scroll-stopping horror). Compose: the arc's
+  // frightening figure/face leads, the episode's own subject varies the
+  // scene — unique per tap AND still scary.
   const epIdx = Math.max(0, (parseInt(slug.match(/-tap-(\d+)$/)?.[1] ?? "1", 10) - 1));
   const subjects = Array.isArray(episode.thumbnailSubjects) ? episode.thumbnailSubjects : [];
-  const subject = subjects[epIdx % Math.max(subjects.length, 1)] ?? episode.thumbPrompt ?? ARC_SUBJECT[arcBase(slug)];
+  const epSubject = subjects[epIdx % Math.max(subjects.length, 1)] ?? episode.thumbPrompt;
+  const arcAnchor = ARC_SUBJECT[arcBase(slug)];
+  const subject = arcAnchor && epSubject
+    ? `${arcAnchor}, set within: ${epSubject}`
+    : epSubject ?? arcAnchor;
   if (!subject) {
     console.warn(`${slug}: no thumbnailSubjects, ARC_SUBJECT and no thumbPrompt — skipping`);
     continue;
