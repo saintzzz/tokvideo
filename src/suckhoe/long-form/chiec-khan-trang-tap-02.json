@@ -8,7 +8,15 @@
   "slug": "chiec-khan-trang-tap-02",
   "title": "Bà Nội Vừa Vào Sân Đã Tái Mặt - Cấm Ai Gỡ Khăn Trên Xà",
   "description": "Tập 2 arc CHIẾC KHĂN TRẮNG: Bà nội từ quê lên, vừa bước vào sân đã đứng sững nhìn cây xà chính rồi ra lệnh cấm tuyệt đối - vì bà sinh ra và lớn lên ở làng này, và căn nhà này ngày xưa là nhà của bà mụ Tám Nước, người đỡ đẻ cho ba đời con làng. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "khăn trắng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "an elderly Vietnamese woman standing frozen in a yard looking up at the roof beam of an old house, face pale, photorealistic",
     "flashback: an old Vietnamese midwife in dark clothes hanging a white cloth on a house beam at night, oil lamp, photorealistic"
@@ -82,5 +90,13 @@
       "caption": "Ai ở cũng thấy khăn, ai cũng chạy",
       "text": "Bà nội nói tới đó thì nghẹn: từ đó ai vào ở cũng thấy khăn trên xà - tưởng điềm dữ bỏ chạy hết, nhà hoang mấy chục năm. Nhưng con à, khăn không phải điềm - khăn vẫn làm đúng việc bà mụ làm cả đời: báo cho người thân về kịp. Đêm đó hai dải khăn trên xà, như ai đó đang gấp."
     }
-  ]
+  ],
+  "sceneImages": {
+    "grandma-arrives": "images/suckhoe-long/chiec-khan-trang-tap-02/grandma-arrives.jpg",
+    "beam-cloth": "images/suckhoe-long/chiec-khan-trang-tap-02/beam-cloth.jpg",
+    "yard-talk": "images/suckhoe-long/chiec-khan-trang-tap-02/yard-talk.jpg",
+    "midwife-memory": "images/suckhoe-long/chiec-khan-trang-tap-02/midwife-memory.jpg",
+    "white-signal": "images/suckhoe-long/chiec-khan-trang-tap-02/white-signal.jpg",
+    "midwife-alone": "images/suckhoe-long/chiec-khan-trang-tap-02/midwife-alone.jpg"
+  }
 }

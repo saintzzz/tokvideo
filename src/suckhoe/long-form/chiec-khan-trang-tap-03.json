@@ -8,7 +8,15 @@
   "slug": "chiec-khan-trang-tap-03",
   "title": "Bà Mụ Tám Nước Đỡ Ba Đời Con Làng - Chết Một Mình Không Ai Đến",
   "description": "Tập 3 arc CHIẾC KHĂN TRẮNG: Khăn trên xà cứ mỗi đêm thêm một dải, đứa nhỏ khóc đêm chỉ trỏ nói bà kia ngồi xổ tóc. Cụ Chính - thợ mộc già nhất làng, người vào lập liệm cho bà mụ năm xưa - kể nốt phần sự thật mà ông mang tội suốt đời. Rồi đêm đó bà nội đổ bệnh, và khăn trắng phủ kín cả gian nhà. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #khantrang",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "khăn trắng", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "khăn trắng",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "many strips of white cloth hanging from every roof beam inside a dark old Vietnamese house at night, a small child pointing up, photorealistic horror",
     "an old Vietnamese carpenter in a workshop telling a story with a guilty expression, wood shavings, dim light, photorealistic"
@@ -82,5 +90,13 @@
       "caption": "Bà nội nói được một câu",
       "text": "Người ta vốc xe định chở bà đi viện đêm. Bà nội lắc đầu, nắm chặt tay anh Minh, từng chữ lơ láo mà rõ nghĩa: khỏi viện - bà mụ gọi má rồi. Khăn treo nhiều vậy là gấp lắm - điện cho con cháu, đưa hết về đây cho má, về đông đủ đi con. Má muốn ở căn nhà này."
     }
-  ]
+  ],
+  "sceneImages": {
+    "beam-multi-cloth": "images/suckhoe-long/chiec-khan-trang-tap-03/beam-multi-cloth.jpg",
+    "child-point": "images/suckhoe-long/chiec-khan-trang-tap-03/child-point.jpg",
+    "carpenter-shop": "images/suckhoe-long/chiec-khan-trang-tap-03/carpenter-shop.jpg",
+    "funeral-memory": "images/suckhoe-long/chiec-khan-trang-tap-03/funeral-memory.jpg",
+    "grandma-collapse": "images/suckhoe-long/chiec-khan-trang-tap-03/grandma-collapse.jpg",
+    "house-night": "images/suckhoe-long/chiec-khan-trang-tap-03/house-night.jpg"
+  }
 }

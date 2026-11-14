@@ -22,6 +22,11 @@ const daysArg = Number(process.argv.find((a) => a.startsWith("--days="))?.split(
 const root = path.join(import.meta.dirname, "..");
 const ledgerPath = path.join(root, "src", "suckhoe", "published-long.json");
 const ledger = JSON.parse(readFileSync(ledgerPath, "utf8"));
+const thumbSyncPath = path.join(root, "src", "suckhoe", "thumb-sync.json");
+const thumbSync = existsSync(thumbSyncPath)
+  ? JSON.parse(readFileSync(thumbSyncPath, "utf8"))
+  : {};
+const deleteQueuePath = path.join(root, "src", "suckhoe", "pending-delete.json");
 
 const { YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN } = process.env;
 if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
@@ -112,6 +117,10 @@ for (const [slug, entry] of recent) {
   // a sunny sheep pasture was live as tap-03's thumbnail 2026-11-14.
   // Measure the served maxres frame's mean luma; daylight-bright thumbs
   // get flagged pending so the composed horror thumb replaces them.
+  // A NEAR-BLACK thumbnail on a video whose custom thumb was never pushed
+  // means the video content itself rendered black (2026-11-15 tap-02
+  // shipped black because the arc had scenePrompts but no sceneImages) —
+  // that video cannot be repaired; enqueue it for deletion + re-render.
   if (!slug.endsWith("-teaser") && !entry.thumbnailPending) {
     try {
       const buf = Buffer.from(
@@ -123,10 +132,23 @@ for (const [slug, entry] of recent) {
           ["-i", "pipe:0", "-vf", "scale=1:1", "-f", "rawvideo", "-pix_fmt", "gray", "-"],
           { input: buf, encoding: "buffer", timeout: 30_000, maxBuffer: 1 << 22 }
         );
-        if (probe.status === 0 && probe.stdout?.length && probe.stdout[0] > 115) {
+        const luma = probe.status === 0 && probe.stdout?.length ? probe.stdout[0] : null;
+        if (luma !== null && luma > 115) {
           entry.thumbnailPending = true;
           ledgerChangedFlag = true;
-          issues.push(`${slug}: live thumbnail daylight-bright (luma ${probe.stdout[0]}) — flagged pending`);
+          issues.push(`${slug}: live thumbnail daylight-bright (luma ${luma}) — flagged pending`);
+        } else if (luma !== null && luma < 20 && !thumbSync[slug]) {
+          // No custom thumb was ever pushed for this slug, so the served
+          // thumb IS an actual video frame — and it is black-level.
+          const q = JSON.parse(
+            existsSync(deleteQueuePath) ? readFileSync(deleteQueuePath, "utf8") : "{}"
+          );
+          q.delete = [...new Set([...(q.delete ?? []), entry.videoId])];
+          if (entry.teaserVideoId) q.delete = [...new Set([...q.delete, entry.teaserVideoId])];
+          writeFileSync(deleteQueuePath, JSON.stringify(q, null, 2) + "\n");
+          issues.push(
+            `${slug}: live thumbnail black-level (luma ${luma}) — video ${entry.videoId} queued for deletion + re-render`
+          );
         }
       }
     } catch (e) {

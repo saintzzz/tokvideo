@@ -1034,6 +1034,15 @@ jobs:
           GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ env.LONG_SLUG }}
 
+      # AI horror stills per scene — the REQUIRED visual layer (2026-11-14:
+      # shipped a near-black video because the arc had scenePrompts but this
+      # step was never wired into CI). Resumable; committed sceneImages make
+      # it a no-op. Transient quota failures are tolerated — the coverage
+      # gate below is what refuses a blind render.
+      - name: Generate scene visuals
+        continue-on-error: true
+        run: node scripts/generate-story-visuals.mjs --long ${{ env.LONG_SLUG }}
+
       # Real motion b-roll per scene (Pixabay/Pexels -> archive.org). An
       # enhancement, not a blocker — scenes without a clip keep their
       # still-image Ken-Burns background.
@@ -1051,8 +1060,19 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node scripts/fetch-scene-footage.mjs ${{ env.LONG_SLUG }}
 
+      # HARD GATE: every beat must resolve an image or a clip — a missing
+      # visual renders as the procedural dark background (= black video).
+      - name: Visual coverage gate
+        run: node scripts/verify-scene-visuals.mjs ${{ env.LONG_SLUG }}
+
       - name: Render episode
         run: node scripts/render-suckhoe-long.mjs ${{ env.LONG_SLUG }}
+
+      # HARD GATE: sample the rendered mp4 — if every sampled frame is
+      # black-level (YHIGH<25) the upload is refused. Catches cases where
+      # the JSON looked covered but the render still produced darkness.
+      - name: Post-render visual gate
+        run: node scripts/verify-scene-visuals.mjs ${{ env.LONG_SLUG }} --post-render out/SucKhoeLong-${{ env.LONG_SLUG }}.mp4
 
       # Thumbnail is nice-to-have — a failure here must never skip the
       # upload (observed 2026-10-09: missing drawtext on the runner's
@@ -1106,7 +1126,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/suckhoe/published-long.json public/images/suckhoe-long/ 2>/dev/null || true
+          # sceneVideos points at gitignored public/videos/ paths — strip it
+          # before committing the episode JSON so the repo never references
+          # files that only existed in this runner.
+          node -e "const fs=require('fs');const p='src/suckhoe/long-form/${{ env.LONG_SLUG }}.json';const j=JSON.parse(fs.readFileSync(p,'utf8'));delete j.sceneVideos;fs.writeFileSync(p,JSON.stringify(j,null,2)+'\n')" || true
+          git add src/suckhoe/published-long.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ env.LONG_SLUG }}.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ env.LONG_SLUG }} [skip ci]"
           # Unstaged tracked edits (e.g. sceneVideos paths the footage
           # step writes into episode JSONs) make every `git rebase`
@@ -1167,6 +1191,15 @@ jobs:
           GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ steps.pick.outputs.slug }}
 
+      # AI horror stills per scene — REQUIRED visual layer (2026-11-14
+      # incident: arc shipped with scenePrompts but no sceneImages and
+      # published a black video). Resumable; committed sceneImages make it
+      # a no-op. Coverage gate below enforces, not this step.
+      - name: Generate scene visuals
+        if: steps.pick.outputs.slug != ''
+        continue-on-error: true
+        run: node scripts/generate-story-visuals.mjs --long ${{ steps.pick.outputs.slug }}
+
       # System ffmpeg BEFORE footage fetch — bundled build cannot write
       # an mp4 at all (transcode normalize failed on every clip,
       # 2026-11-14) and lacks drawtext for the thumbnail.
@@ -1182,9 +1215,20 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node scripts/fetch-scene-footage.mjs ${{ steps.pick.outputs.slug }}
 
+      # HARD GATE: refuse to render when any beat has no visual at all —
+      # a missing visual becomes the procedural dark background.
+      - name: Visual coverage gate
+        if: steps.pick.outputs.slug != ''
+        run: node scripts/verify-scene-visuals.mjs ${{ steps.pick.outputs.slug }}
+
       - name: Render episode
         if: steps.pick.outputs.slug != ''
         run: node scripts/render-suckhoe-long.mjs ${{ steps.pick.outputs.slug }}
+
+      # HARD GATE: refuse upload when sampled frames are all black-level.
+      - name: Post-render visual gate
+        if: steps.pick.outputs.slug != ''
+        run: node scripts/verify-scene-visuals.mjs ${{ steps.pick.outputs.slug }} --post-render out/SucKhoeLong-${{ steps.pick.outputs.slug }}.mp4
 
       # Thumbnail is nice-to-have — never blocks the upload.
       - name: Make thumbnail
@@ -1247,7 +1291,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/suckhoe/published-long.json public/images/suckhoe-long/ 2>/dev/null || true
+          # sceneVideos references gitignored public/videos/ paths — strip
+          # before committing the episode JSON.
+          node -e "const fs=require('fs');const p='src/suckhoe/long-form/${{ steps.pick.outputs.slug }}.json';if(fs.existsSync(p)){const j=JSON.parse(fs.readFileSync(p,'utf8'));delete j.sceneVideos;fs.writeFileSync(p,JSON.stringify(j,null,2)+'\n')}" || true
+          git add src/suckhoe/published-long.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ steps.pick.outputs.slug }}.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ steps.pick.outputs.slug }} [skip ci]"
           git checkout -- . || true
           for i in 1 2 3 4 5; do
@@ -1382,6 +1429,22 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: node scripts/pipeline-watchdog.mjs
 
+      # Drain the targeted deletion queue FIRST — every later step spends
+      # API quota; no point repairing metadata on a video slated for
+      # deletion (2026-11-14: black-render tap-02 pair sat live because the
+      # local quota window was exhausted and no mechanism existed to remove
+      # it automatically).
+      - name: Drain pending deletions
+        continue-on-error: true
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID_2: ${{ secrets.YOUTUBE_CLIENT_ID_2 }}
+          YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
+          YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
+        run: node scripts/drain-deletes.mjs
+
       - name: Refill story queue when below 5 episodes
         continue-on-error: true
         env:
@@ -1474,7 +1537,7 @@ jobs:
           # --ignore-errors: a pathspec that matched nothing aborts the
           # whole add (observed 2026-11-13: series-playlists.json absent
           # -> topped-up audio never staged -> rebase loop died silent).
-          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
+          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json src/suckhoe/pending-delete.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           git checkout -- . || true
           for i in 1 2 3 4 5; do
