@@ -147,7 +147,15 @@ for (const run of runs) {
 }
 
 const depth = queueDepth();
+// Computed outside the try below: a picker crash must not zero this and
+// turn into a phantom "stalled forever" alarm.
 let lastUploadMs = 0;
+try {
+  const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
+  lastUploadMs = Math.max(0, ...Object.entries(ledger)
+    .filter(([k]) => !k.endsWith("-teaser") && !k.endsWith("-fb"))
+    .map(([, v]) => Date.parse(v.publishedAt || 0)));
+} catch { /* ledger unreadable */ }
 
 // ----------------------------------------------------- missed slots ---
 // 2026-11-07 incident: the only daily tick allowed to START a new arc
@@ -160,9 +168,7 @@ let lastUploadMs = 0;
 try {
   const nextSlug = execSync("node scripts/next-long-form-slug.mjs", { cwd: ROOT, encoding: "utf8" }).trim();
   const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
-  const lastUpload = lastUploadMs = Math.max(0, ...Object.entries(ledger)
-    .filter(([k]) => !k.endsWith("-teaser"))
-    .map(([, v]) => Date.parse(v.publishedAt || 0)));
+  const lastUpload = lastUploadMs;
   const staleMin = (Date.now() - lastUpload) / 60000;
   if (nextSlug && staleMin > 90) {
     if (!DRY) {
