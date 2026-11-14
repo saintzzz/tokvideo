@@ -13,8 +13,10 @@
 // Usage: node scripts/verify-live-quality.mjs [--days=14]
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { google } from "googleapis";
+import { findFfmpeg } from "./lib/ffmpeg.mjs";
 
 const daysArg = Number(process.argv.find((a) => a.startsWith("--days="))?.split("=")[1] ?? 14);
 const root = path.join(import.meta.dirname, "..");
@@ -53,6 +55,7 @@ const recent = Object.entries(ledger).filter(([slug, e]) => {
 
 const issues = [];
 const fixed = [];
+let ledgerChangedFlag = false;
 
 for (const [slug, entry] of recent) {
   const list = await youtube.videos.list({ part: ["snippet", "status"], id: [entry.videoId] });
@@ -105,8 +108,36 @@ for (const [slug, entry] of recent) {
   // 3. Surface pending thumbnails (fix-thumbnails applies the image)
   if (entry.thumbnailPending) issues.push(`${slug}: thumbnailPending — watchdog sweep will retry`);
 
+  // 4. Live thumbnail must look like horror, not a random bright frame —
+  // a sunny sheep pasture was live as tap-03's thumbnail 2026-11-14.
+  // Measure the served maxres frame's mean luma; daylight-bright thumbs
+  // get flagged pending so the composed horror thumb replaces them.
+  if (!slug.endsWith("-teaser") && !entry.thumbnailPending) {
+    try {
+      const buf = Buffer.from(
+        await (await fetch(`https://i.ytimg.com/vi/${entry.videoId}/maxresdefault.jpg`)).arrayBuffer()
+      );
+      if (buf.length > 5_000) {
+        const probe = spawnSync(
+          findFfmpeg() ?? "ffmpeg",
+          ["-i", "pipe:0", "-vf", "scale=1:1", "-f", "rawvideo", "-pix_fmt", "gray", "-"],
+          { input: buf, encoding: "buffer", timeout: 30_000, maxBuffer: 1 << 22 }
+        );
+        if (probe.status === 0 && probe.stdout?.length && probe.stdout[0] > 115) {
+          entry.thumbnailPending = true;
+          ledgerChangedFlag = true;
+          issues.push(`${slug}: live thumbnail daylight-bright (luma ${probe.stdout[0]}) — flagged pending`);
+        }
+      }
+    } catch (e) {
+      console.warn(`${slug}: thumb luma check skipped (${e.message})`);
+    }
+  }
+
   await new Promise((r) => setTimeout(r, 400));
 }
+
+if (ledgerChangedFlag) writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");
 
 for (const f of fixed) console.log(`FIXED ${f}`);
 for (const i of issues) console.log(`ISSUE ${i}`);
