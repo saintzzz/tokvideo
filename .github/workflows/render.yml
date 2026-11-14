@@ -1037,6 +1037,13 @@ jobs:
       # Real motion b-roll per scene (Pixabay/Pexels -> archive.org). An
       # enhancement, not a blocker — scenes without a clip keep their
       # still-image Ken-Burns background.
+      # System ffmpeg BEFORE footage fetch too — the Remotion-bundled
+      # build cannot even open an mp4 for writing (transcode normalize
+      # failed on every clip, 2026-11-14), and it has no drawtext for
+      # the thumbnail either.
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
       - name: Fetch scene footage
         continue-on-error: true
         env:
@@ -1046,13 +1053,6 @@ jobs:
 
       - name: Render episode
         run: node scripts/render-suckhoe-long.mjs ${{ env.LONG_SLUG }}
-
-      # System ffmpeg BEFORE the thumbnail — the Remotion-bundled build
-      # has no drawtext, so a thumbnail made without this installed is a
-      # plain frame: no badge, no title, no gradient (every CI thumb was
-      # silently textless until 2026-11-13).
-      - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
       # Thumbnail is nice-to-have — a failure here must never skip the
       # upload (observed 2026-10-09: missing drawtext on the runner's
@@ -1167,6 +1167,12 @@ jobs:
           GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
         run: node scripts/generate-voiceover.mjs suckhoe-long-${{ steps.pick.outputs.slug }}
 
+      # System ffmpeg BEFORE footage fetch — bundled build cannot write
+      # an mp4 at all (transcode normalize failed on every clip,
+      # 2026-11-14) and lacks drawtext for the thumbnail.
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
       # Real motion b-roll per scene — enhancement only; stills fallback.
       - name: Fetch scene footage
         if: steps.pick.outputs.slug != ''
@@ -1179,11 +1185,6 @@ jobs:
       - name: Render episode
         if: steps.pick.outputs.slug != ''
         run: node scripts/render-suckhoe-long.mjs ${{ steps.pick.outputs.slug }}
-
-      # System ffmpeg BEFORE the thumbnail — bundled build has no
-      # drawtext, otherwise every CI thumbnail is a plain textless frame.
-      - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
       # Thumbnail is nice-to-have — never blocks the upload.
       - name: Make thumbnail
