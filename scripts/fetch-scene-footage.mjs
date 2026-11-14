@@ -75,9 +75,34 @@ const SCENE_KEYWORDS = {
   "village-dawn": ["village sunrise mist", "fog morning village", "dawn river mist"],
 };
 
-const keywordsFor = (scene, prompt) =>
-  SCENE_KEYWORDS[scene] ??
-  [prompt.split(/\s+/).slice(0, 4).join(" "), prompt.split(/\s+/).slice(0, 3).join(" ")];
+// Fallback for scenes missing from SCENE_KEYWORDS: build queries from
+// the prompt's CONTENT words, not a raw prefix. "inside a dark old
+// Vietnamese house, white cloth strips hanging from every roof beam"
+// used to become "inside a dark old" — matching any dark stock at all
+// (an astronaut clip shipped, 2026-11-14). Strip articles/prepositions/
+// style-words and keep nouns + domain adjectives.
+const PROMPT_STOP = new Set([
+  "the", "and", "for", "with", "from", "into", "over", "under", "through",
+  "inside", "outside", "photorealistic", "realistic", "cinematic", "style",
+  "film", "scene", "shot", "video", "footage", "very", "every", "each",
+  "some", "any", "out", "its", "his", "her", "their", "they", "that",
+  "this", "these", "those", "there", "here", "when", "while", "then",
+]);
+const fallbackKeywords = (prompt) => {
+  const words = [
+    ...new Set(
+      prompt.toLowerCase().split(/[^a-z]+/).filter((w) => w.length > 2 && !PROMPT_STOP.has(w))
+    ),
+  ];
+  const queries = [];
+  for (let i = 0; i + 3 <= words.length && queries.length < 3; i += 3) {
+    queries.push(words.slice(i, i + 3).join(" "));
+  }
+  if (!queries.length && words.length) queries.push(words.slice(0, 3).join(" "));
+  return queries;
+};
+
+const keywordsFor = (scene, prompt) => SCENE_KEYWORDS[scene] ?? fallbackKeywords(prompt);
 
 // -- Pixabay (free API key) -----------------------------------------------
 // Pixabay fronts its API with Cloudflare bot checks that intermittently
@@ -97,6 +122,22 @@ const OFF_GENRE_TAGS = [
   "robot", "cyber", "hologram", "sci-fi", "corporate", "office",
   "smartphone", "technology", "neon city", "futuristic",
 ];
+// Every accepted clip must also tag at least one horror/rural-domain
+// word — the astronaut clip's tags (space/sun/light/sky) contained no
+// domain word but still passed pure overlap scoring.
+const DOMAIN_TAGS = new Set([
+  "night","dark","fog","mist","forest","rain","storm","village","house",
+  "hut","candle","lantern","lamp","door","window","wood","wooden","ghost",
+  "shadow","creepy","scary","horror","abandoned","moon","moonlight",
+  "river","water","tree","wind","cloth","fabric","curtain","silk","old",
+  "ancient","rural","field","cemetery","grave","temple","incense","fire",
+  "flame","smoke","silhouette","woman","man","people","child","cobweb",
+  "attic","kitchen","bedroom","corridor","wall","floor","roof","beam",
+  "paper","letter","box","chest","coffin","ritual","offering","asia",
+  "vietnam","countryside","rain","monsoon","mud","muddy","boat","rice",
+]);
+// Clips proven wrong for this channel — hard-blocked forever.
+const PIXABAY_DENY = new Set(["pixabay-203449"]);
 const queryWords = (q) =>
   q.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !QUERY_STOP.has(w));
 
@@ -114,16 +155,17 @@ const pixabaySearch = async (query, used) => {
     }
     if (!res.ok) throw new Error(`pixabay ${res.status}`);
     const json = JSON.parse(text);
-    const minOverlap = Math.min(2, Math.max(1, qws.length));
     let best = null;
     for (const hit of json.hits ?? []) {
       if (hit.duration < 5 || hit.duration > 60) continue;
       const id = `pixabay-${hit.id}`;
-      if (used.has(id)) continue;
+      if (used.has(id) || PIXABAY_DENY.has(id)) continue;
       const tags = (hit.tags ?? "").toLowerCase();
+      const tagSet = new Set(tags.split(",").map((t) => t.trim()));
       if (OFF_GENRE_TAGS.some((t) => tags.includes(t) && !qws.some((w) => t.includes(w)))) continue;
+      if (![...tagSet].some((t) => DOMAIN_TAGS.has(t) || [...DOMAIN_TAGS].some((d) => t.includes(d)))) continue;
       const overlap = qws.filter((w) => tags.includes(w)).length;
-      if (overlap < minOverlap) continue;
+      if (!overlap) continue;
       if (!best || overlap > best.overlap) best = { hit, id, overlap };
     }
     if (best) {
