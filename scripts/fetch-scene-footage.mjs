@@ -17,10 +17,12 @@
 //   PIXABAY_API_KEY=xxx node scripts/fetch-scene-footage.mjs <slug> [...]
 //   node scripts/fetch-scene-footage.mjs --keywords <slug>   # dry-run
 //   FORCE=1 ...                                            # re-download
-import { readFile, writeFile, mkdir, access } from "node:fs/promises";
+import { readFile, writeFile, mkdir, access, unlink } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { findFfmpeg } from "./lib/ffmpeg.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const longFormDir = path.join(root, "src", "suckhoe", "long-form");
@@ -261,6 +263,20 @@ const iaSearch = async (query, used) => {
   return null;
 };
 
+// Chromium (the render engine) decodes h264/vp8/vp9/av1. Anything else —
+// old archive MPEG-2 encodes, odd HEVC profiles — loads forever inside
+// <Html5Video> and kills the render at a random frame (midwife-alone.mp4
+// froze frame 3671, 2026-11-14). Probe every download's codec with the
+// local ffmpeg build; unknown/absent ffmpeg = warn but keep.
+const SAFE_CODECS = new Set(["h264", "vp8", "vp9", "av1", "mpeg4"]);
+const probeCodec = (file) => {
+  const ffmpeg = findFfmpeg();
+  if (!ffmpeg) return null;
+  const p = spawnSync(ffmpeg, ["-hide_banner", "-i", file], { encoding: "utf8" });
+  const m = (p.stderr ?? "").match(/Video:\s*([a-z0-9_]+)/i);
+  return m?.[1]?.toLowerCase() ?? null;
+};
+
 const download = async (url, outFile) => {
   const res = await fetch(url, { signal: AbortSignal.timeout(180_000) });
   if (!res.ok) throw new Error(`download ${res.status}`);
@@ -270,6 +286,11 @@ const download = async (url, outFile) => {
   // clip (ThisChar1950's 79MB undecodable archive film, 2026-11-14).
   if (buf.length > 60e6) throw new Error(`clip too large (${(buf.length / 1e6).toFixed(0)}MB)`);
   await writeFile(outFile, buf);
+  const codec = probeCodec(outFile);
+  if (codec && !SAFE_CODECS.has(codec)) {
+    await unlink(outFile).catch(() => {});
+    throw new Error(`undecodable codec ${codec} — Chromium would stall mid-render`);
+  }
   return buf.length;
 };
 
