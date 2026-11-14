@@ -1327,7 +1327,9 @@ jobs:
             git rebase --abort || true
             sleep $((i * 15))
           done
-          exit 0
+          # Same fail-loud rule as the watchdog: reconciliation that
+          # never reaches origin is work that never happened.
+          exit 1
 
   pipeline-watchdog:
     if: (github.event_name == 'schedule' && github.event.schedule == '13 */3 * * *') || github.event.inputs.video == 'pipeline-watchdog'
@@ -1444,7 +1446,11 @@ jobs:
             git rebase --abort || true
             sleep $((i * 15))
           done
-          exit 0
+          # Topped-up audio, playlist map, reports - all die on the
+          # runner if push never lands. exit 0 here was THE root cause
+          # behind the 2026-11-13 silent stall: every 3h the watchdog
+          # produced the fix and then lost it while staying green.
+          exit 1
 
   # Weekly self-evaluation (Sunday 20:00 VN): ranks arcs by real
   # per-video stats, writes strategy directives that steer the next
