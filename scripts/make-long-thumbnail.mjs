@@ -73,7 +73,32 @@ if (existsSync(thumbStillPath)) {
 const epNum = (slug.match(/tap-(\d+)/)?.[1] ?? "1").replace(/^0/, "");
 const badge = `TẬP ${epNum}`;
 const thumbTitle = episode.thumbTitle ?? episode.title.replace(/\s*\|\s*/g, " · ");
-const series = episode.title.split("|")[0]?.trim() ?? "";
+// Series line = the arc name, not the episode title (episodes without a
+// "|" made split()[0] echo the whole title, duplicating both lines).
+const series = (episode.arcTitle ?? episode.title.split("|")[0] ?? "").trim().toUpperCase();
+
+// Word-wrap the hook into <= 2 lines so it never bleeds off the right
+// edge at 56px on a 1280px canvas.
+const wrapTitle = (t, maxChars = 26, maxLines = 2) => {
+  const words = t.split(/\s+/);
+  const lines = [];
+  let cur = "";
+  for (const w of words) {
+    const next = cur ? `${cur} ${w}` : w;
+    if (next.length <= maxChars) { cur = next; continue; }
+    lines.push(cur); cur = w;
+    if (lines.length === maxLines - 1) break;
+  }
+  if (cur && lines.length < maxLines) lines.push(cur);
+  const used = lines.join(" ").length;
+  if (used < t.length) {
+    // Truncate the last line to make room for an ellipsis marker.
+    let last = lines[lines.length - 1];
+    while (last.length > 0 && last.length + 3 > maxChars) last = last.slice(0, last.lastIndexOf(" ") + 1 || last.length - 1).trim();
+    lines[lines.length - 1] = `${last}...`;
+  }
+  return lines.join("\n");
+};
 
 let font = null;
 let tmp = null;
@@ -111,7 +136,7 @@ if (font) {
   const titleFile = path.join(tmp, "title.txt");
   const seriesFile = path.join(tmp, "series.txt");
   await writeFile(badgeFile, badge, "utf8");
-  await writeFile(titleFile, thumbTitle, "utf8");
+  await writeFile(titleFile, wrapTitle(thumbTitle), "utf8");
   await writeFile(seriesFile, series, "utf8");
 
   // ffmpeg filtergraph treats `:` as an option separator — Windows drive
@@ -124,8 +149,8 @@ if (font) {
     "drawbox=x=44:y=44:w=170:h=66:color=0xB02A20@0.95:t=fill",
     `drawtext=fontfile='${fpath(font)}':textfile='${fpath(badgeFile)}':fontcolor=white:fontsize=36:x=60:y=56`,
     // series name in gold, then the big hook line
-    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(seriesFile)}':fontcolor=0xE8B84B:fontsize=34:x=60:y=h-236`,
-    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(titleFile)}':fontcolor=white:fontsize=56:x=60:y=h-180:borderw=3:bordercolor=black@0.85:line_spacing=8`,
+    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(seriesFile)}':fontcolor=0xE8B84B:fontsize=34:x=60:y=h-270`,
+    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(titleFile)}':fontcolor=white:fontsize=56:x=60:y=h-216:borderw=3:bordercolor=black@0.85:line_spacing=8`,
   );
 } else if (canDrawText) {
   console.warn("No usable font found for drawtext — plain-frame thumbnail.");
