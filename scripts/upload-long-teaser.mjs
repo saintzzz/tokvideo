@@ -86,6 +86,22 @@ const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
+// Quota pool 2 fallback for the 1600-unit videos.insert (weekend boost
+// 2026-11-14) - same VI channel account, second GCP project.
+const quotaErr = (e) => /quotaExceeded|uploadLimitExceeded/i.test(`${e.message} ${JSON.stringify(e.errors || [])}`);
+const insertWithFallback = async (params) => {
+  try {
+    return await youtube.videos.insert(params);
+  } catch (e) {
+    const { YOUTUBE_CLIENT_ID_2, YOUTUBE_CLIENT_SECRET_2, YOUTUBE_REFRESH_TOKEN_2 } = process.env;
+    if (!quotaErr(e) || !YOUTUBE_CLIENT_ID_2 || !YOUTUBE_CLIENT_SECRET_2 || !YOUTUBE_REFRESH_TOKEN_2) throw e;
+    console.warn(`Primary quota pool exhausted - retrying teaser insert on pool 2`);
+    const o = new google.auth.OAuth2(YOUTUBE_CLIENT_ID_2, YOUTUBE_CLIENT_SECRET_2);
+    o.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN_2 });
+    return await google.youtube({ version: "v3", auth: o }).videos.insert(params);
+  }
+};
+
 // Race-safe dedupe (same fix as upload-youtube-long): a second job can
 // pass the ledger check before the first commits - adopt the live
 // video with this exact title instead of double-uploading.
@@ -114,7 +130,7 @@ try {
 }
 
 console.log(`Uploading ${videoPath} as "${title}" (privacyStatus=${PRIVACY_STATUS})`);
-const res = await youtube.videos.insert({
+const res = await insertWithFallback({
   part: ["snippet", "status"],
   requestBody: {
     snippet: {

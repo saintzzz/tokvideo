@@ -93,6 +93,13 @@ on:
     # 3 long + 3 teaser) until channel-report shows teaser views back
     # above ~100/video consistently, then restore 6.
     - cron: "30 22,6,12 * * *"
+    # Weekend boost (owner directive 2026-11-14): viewers are off work
+    # Sat-Sun so two extra slots (09:30 + 16:30 VN) take weekends to
+    # 5 long + 5 teaser/day, evenly spaced ~4h apart to stay under the
+    # channel's daily-upload ceiling. Upload quota is pooled across two
+    # GCP projects (upload scripts fall back to *_2 creds on
+    # quotaExceeded) - 10 inserts/day needs more than one 10k pool.
+    - cron: "30 2,9 * * 6,0"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -1070,6 +1077,9 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID_2: ${{ secrets.YOUTUBE_CLIENT_ID_2 }}
+          YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
+          YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
           YOUTUBE_LONG_PRIVACY_STATUS: ${{ env.PRIVACY_OVERRIDE || vars.YOUTUBE_LONG_PRIVACY_STATUS }}
         run: node scripts/upload-youtube-long.mjs ${{ env.LONG_SLUG }}
 
@@ -1085,6 +1095,9 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID_2: ${{ secrets.YOUTUBE_CLIENT_ID_2 }}
+          YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
+          YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
           YOUTUBE_TEASER_PRIVACY_STATUS: public
         run: node scripts/upload-long-teaser.mjs ${{ env.LONG_SLUG }}
 
@@ -1116,7 +1129,7 @@ jobs:
   # scripts/next-long-form-slug.mjs and exits quietly when every
   # episode in src/suckhoe/long-form/ already has a ledger videoId.
   suckhoe-long-next:
-    if: github.event_name == 'schedule' && github.event.schedule == '30 22,6,12 * * *'
+    if: github.event_name == 'schedule' && (github.event.schedule == '30 22,6,12 * * *' || github.event.schedule == '30 2,9 * * 6,0')
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -1190,6 +1203,9 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_EN_REFRESH_TOKEN: ${{ secrets.YOUTUBE_EN_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID_2: ${{ secrets.YOUTUBE_CLIENT_ID_2 }}
+          YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
+          YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
           # Scheduled runs publish straight to public — private-by-default
           # only makes sense for manual dispatch reviews.
           YOUTUBE_LONG_PRIVACY_STATUS: public
@@ -1214,7 +1230,9 @@ jobs:
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID_2: ${{ secrets.YOUTUBE_CLIENT_ID_2 }}
+          YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
+          YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
           YOUTUBE_TEASER_PRIVACY_STATUS: public
         run: node scripts/upload-long-teaser.mjs ${{ steps.pick.outputs.slug }}
 

@@ -142,6 +142,35 @@ const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
+// Quota pool 2 (weekend boost 2026-11-14): 5 long + 5 teaser a day is
+// ~16k units, over one 10k project quota. A second GCP project's
+// *_2 creds serve as spillover - same channel account, different quota.
+// Only the 1600-unit videos.insert gets fallback; read calls stay on
+// pool 1. Never falls back for EN uploads (the _2 token is the VI
+// channel account).
+const quotaErr = (e) => /quotaExceeded|uploadLimitExceeded/i.test(`${e.message} ${JSON.stringify(e.errors || [])}`);
+let youtube2 = null;
+const fallbackPool = () => {
+  if (isEn) return null;
+  if (youtube2 !== null) return youtube2 || null;
+  const { YOUTUBE_CLIENT_ID_2, YOUTUBE_CLIENT_SECRET_2, YOUTUBE_REFRESH_TOKEN_2 } = process.env;
+  if (!YOUTUBE_CLIENT_ID_2 || !YOUTUBE_CLIENT_SECRET_2 || !YOUTUBE_REFRESH_TOKEN_2) { youtube2 = false; return null; }
+  const o = new google.auth.OAuth2(YOUTUBE_CLIENT_ID_2, YOUTUBE_CLIENT_SECRET_2);
+  o.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN_2 });
+  youtube2 = google.youtube({ version: "v3", auth: o });
+  return youtube2;
+};
+const insertWithFallback = async (params) => {
+  try {
+    return await youtube.videos.insert(params);
+  } catch (e) {
+    const fb = fallbackPool();
+    if (!fb || !quotaErr(e)) throw e;
+    console.warn(`Primary quota pool exhausted (${e.message?.slice(0, 80)}) - retrying insert on pool 2`);
+    return await fb.videos.insert(params);
+  }
+};
+
 // Race-safe dedupe: two concurrent jobs can BOTH pass the ledger check
 // above before either commits - the first upload's title is already
 // live when the second reaches here (observed 2026-11-09: dispatch +
@@ -174,7 +203,7 @@ try {
 
 console.log(`Uploading ${videoPath} as "${title}" (privacyStatus=${PRIVACY_STATUS})`);
 
-const res = await youtube.videos.insert({
+const res = await insertWithFallback({
   part: ["snippet", "status"],
   requestBody: {
     snippet: {
