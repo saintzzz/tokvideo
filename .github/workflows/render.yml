@@ -1108,6 +1108,11 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published-long.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ env.LONG_SLUG }} [skip ci]"
+          # Unstaged tracked edits (e.g. sceneVideos paths the footage
+          # step writes into episode JSONs) make every `git rebase`
+          # below refuse instantly - "cannot rebase: You have unstaged
+          # changes" forever (killed tap-01 + tap-02 ledger commits).
+          git checkout -- . || true
           for i in 1 2 3 4 5; do
             git fetch origin main
             if git rebase origin/main; then
@@ -1243,6 +1248,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/published-long.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ steps.pick.outputs.slug }} [skip ci]"
+          git checkout -- . || true
           for i in 1 2 3 4 5; do
             git fetch origin main
             if git rebase origin/main; then
@@ -1332,6 +1338,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/suckhoe/pipeline-doctor.md src/suckhoe/published-long.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline doctor report + ledger reconciliation [skip ci]"
+          git checkout -- . || true
           for i in 1 2 3 4 5; do
             git fetch origin main
             if git rebase origin/main; then
@@ -1451,6 +1458,7 @@ jobs:
           # -> topped-up audio never staged -> rebase loop died silent).
           git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
+          git checkout -- . || true
           for i in 1 2 3 4 5; do
             git fetch origin main
             if git rebase origin/main; then
