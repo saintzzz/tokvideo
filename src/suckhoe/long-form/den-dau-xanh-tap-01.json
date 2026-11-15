@@ -8,7 +8,15 @@
   "slug": "den-dau-xanh-tap-01",
   "title": "Ngọn Lửa Xanh Trên Bãi Tha Ma - Ba Lần Chớp Là Nó Gọi Tên",
   "description": "Tập 1 arc BÓNG ĐÈN DẦU XANH: Ấp Bãi Cau đêm nào cũng thấy ngọn lửa xanh lơ lửng trên bãi tha ma cũ, dân làng truyền ba điều cấm ai cũng thuộc lòng. Hai Chình cày khuya đi tắt qua bãi, thấy ngọn lửa dừng lại chớp ba lần - rồi nghe tiếng ông già gọi đúng tên mình. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "đèn dầu xanh",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "a ghostly blue-green flame hovering low over a dark flooded marsh at night, fog, a faint silhouette of an old man holding a lamp behind the flame, photorealistic horror",
     "a Vietnamese man on a muddy path between tall reeds at night looking back over his shoulder at a distant blue flame, moonlight, photorealistic horror"
@@ -82,5 +90,13 @@
       "caption": "Tiếng gõ cửa ba lần",
       "text": "Đêm đó Hai Chình không ngủ. Tới lúc gà xướng canh ba, anh nghe rõ tiếng gõ lên cánh cửa gỗ - ba tiếng, cách đều, nhẹ nhàng kiên nhẫn như người quen ghé thăm. Anh nằm im ôm chăn tới sáng. Hỏi má, bà Ba nói bà không nghe gì hết, nhưng nhang trên bàn thờ đêm đó cháy ngọn xanh."
     }
-  ]
+  ],
+  "sceneImages": {
+    "marsh-dusk": "images/suckhoe-long/den-dau-xanh-tap-01/marsh-dusk.jpg",
+    "village-lane": "images/suckhoe-long/den-dau-xanh-tap-01/village-lane.jpg",
+    "tractor-home": "images/suckhoe-long/den-dau-xanh-tap-01/tractor-home.jpg",
+    "blue-light-far": "images/suckhoe-long/den-dau-xanh-tap-01/blue-light-far.jpg",
+    "blue-light-close": "images/suckhoe-long/den-dau-xanh-tap-01/blue-light-close.jpg",
+    "house-night": "images/suckhoe-long/den-dau-xanh-tap-01/house-night.jpg"
+  }
 }
