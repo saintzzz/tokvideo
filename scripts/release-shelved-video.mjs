@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 
 // Releases exactly ONE already-uploaded-but-private video back to public,
 // then removes it from the shelf. Exists specifically to recover the 7
@@ -46,7 +47,7 @@ console.log(`Releasing shelved video: ${next.slug} (${next.videoId})`);
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth: oauth2Client });
+const youtube = makeYoutube() || google.youtube({ version: "v3", auth: oauth2Client });
 
 await youtube.videos.update({
   part: ["status"],

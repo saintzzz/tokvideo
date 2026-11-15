@@ -2,6 +2,7 @@ import { createReadStream } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 import { withRetry } from "./lib/retry.mjs";
 
@@ -195,7 +196,7 @@ const description = isStory
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-const youtube = google.youtube({ version: "v3", auth: oauth2Client });
+const youtube = makeYoutube() || google.youtube({ version: "v3", auth: oauth2Client });
 
 // Second dedupe layer: if the state file lost the record (missed commit,
 // force-pushed history), check the channel for an existing upload with

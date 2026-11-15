@@ -23,6 +23,7 @@ import { existsSync } from "node:fs";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DIR = path.join(ROOT, "src", "suckhoe");
@@ -33,7 +34,7 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
 }
 const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
 auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth });
+const youtube = makeYoutube() || google.youtube({ version: "v3", auth });
 
 const ledger = JSON.parse(await readFile(path.join(DIR, "published-long.json"), "utf8"));
 const idToKey = {};

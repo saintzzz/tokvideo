@@ -1,4 +1,5 @@
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -36,7 +37,7 @@ if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-const youtube = google.youtube({ version: "v3", auth: oauth2Client });
+const youtube = makeYoutube({ en: locale === "en" }) || google.youtube({ version: "v3", auth: oauth2Client });
 const youtubeAnalytics = google.youtubeAnalytics({
   version: "v2",
   auth: oauth2Client,

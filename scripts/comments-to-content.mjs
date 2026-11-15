@@ -11,6 +11,7 @@
 // Usage: node scripts/comments-to-content.mjs --locale=vi|en
 
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 
@@ -31,7 +32,7 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !REFRESH_TOKEN) {
 
 const oauth2 = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
 oauth2.setCredentials({ refresh_token: REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth: oauth2 });
+const youtube = makeYoutube() || google.youtube({ version: "v3", auth: oauth2 });
 
 const channelId = (await youtube.channels.list({ part: ["id"], mine: true })).data.items?.[0]?.id;
 if (!channelId) {

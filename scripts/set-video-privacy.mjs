@@ -1,4 +1,5 @@
 import { google } from "googleapis";
+import { makeYoutube } from "./lib/youtube-quota.mjs";
 
 // Sets privacyStatus on specific existing YouTube videos by ID. Manual/
 // incident-response tool — not part of the automated pipeline. Built to
@@ -32,7 +33,7 @@ if (!["private", "public", "unlisted"].includes(privacyStatus) || videoIds.lengt
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-const youtube = google.youtube({ version: "v3", auth: oauth2Client });
+const youtube = makeYoutube() || google.youtube({ version: "v3", auth: oauth2Client });
 
 let failures = 0;
 
