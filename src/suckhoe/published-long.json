@@ -764,27 +764,31 @@
     "publishedAt": "2026-11-15T06:48:28.175Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "UgyQmpWVs083BVXSUfF4AaABAg"
   },
   "chiec-khan-trang-tap-02-teaser": {
     "videoId": "mtI5K0rmwUs",
     "publishedAt": "2026-11-15T06:52:11.662Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugx6juI0PePtYhVy6dd4AaABAg"
   },
   "chiec-khan-trang-tap-03": {
     "videoId": "VrUoCH3Ol3E",
     "publishedAt": "2026-11-15T10:02:35.747Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwybuF2iLJ8U7e4tgZ4AaABAg"
   },
   "chiec-khan-trang-tap-04": {
     "videoId": "iRSkH375uUA",
     "publishedAt": "2026-11-15T10:34:30.064Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "Ugxb6-CRrkXMqfTId_B4AaABAg"
   },
   "chiec-khan-trang-tap-04-teaser": {
     "videoId": "9CTokmTngIQ",
@@ -805,7 +809,8 @@
     "publishedAt": "2026-11-15T12:23:22.683Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgxYSzM_0eg3IP_PCed4AaABAg"
   },
   "chiec-khan-trang-tap-05-teaser": {
     "videoId": "F-L3osrR87I",
