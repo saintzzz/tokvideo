@@ -1,21 +1,20 @@
-# Pipeline doctor — 2026-11-14
+# Pipeline doctor — 2026-11-15
 
 ## Queue
 
-Ready unpublished episodes: 19
+Ready unpublished episodes: 17
 
 ## Failed workflow runs (last 24h)
 
-- 2026-11-14T18:56 a4c2c98 https://github.com/saintzzz/tokvideo/actions/runs/43629354440
-- 2026-11-14T18:03 ba3879d https://github.com/saintzzz/tokvideo/actions/runs/43624429678
+- 2026-11-15T07:04 76b089b https://github.com/saintzzz/tokvideo/actions/runs/43688316634
+- 2026-11-14T20:56 a4c2c98 https://github.com/saintzzz/tokvideo/actions/runs/43640116591
 - 2026-11-14T11:01 3571807 https://github.com/saintzzz/tokvideo/actions/runs/43588040253
-- 2026-11-14T01:28 7a839f6 https://github.com/saintzzz/tokvideo/actions/runs/43540783576
 
 ## Findings
 
-- FAILED: Channel reconciliation failed: The request cannot be completed because you have exceeded your <a href="/youtube/data/getting-started#quota">quota</a>.
+- FAILED: Channel reconciliation failed: 'get' on proxy: property 'search' is a read-only and non-configurable data property on the proxy target but the proxy did not return its actual value (expected '#<Resource$Search>' but got '#<Resource$Search>')
 
 ## Actions taken
 
-None needed.
+- Built + uploaded teaser for "chiec-khan-trang-tap-03".
 
