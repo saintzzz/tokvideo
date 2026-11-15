@@ -2,13 +2,11 @@
 
 ## Queue
 
-Ready unpublished episodes: 16
+Ready unpublished episodes: 15
 
 ## Failed workflow runs (last 24h)
 
 - 2026-11-15T10:22 9376d73 https://github.com/saintzzz/tokvideo/actions/runs/43703790955
-- 2026-11-15T07:04 76b089b https://github.com/saintzzz/tokvideo/actions/runs/43688316634
-- 2026-11-14T20:56 a4c2c98 https://github.com/saintzzz/tokvideo/actions/runs/43640116591
 
 ## Findings
 
