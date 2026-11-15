@@ -241,6 +241,8 @@ async function main() {
             const imp = +cols[ii] || 0;
             const cur = byVideo.get(vid) ?? { imp: 0, ctrW: 0 };
             cur.imp += imp;
+            // The CSV's ctr field is a 0-1 ratio, not a percent — keep
+            // the impressions-weighted sum of ratios and scale at print.
             cur.ctrW += ci >= 0 ? (+cols[ci] || 0) * imp : 0;
             byVideo.set(vid, cur);
           }
@@ -258,7 +260,7 @@ async function main() {
           lines.push("|---|---|---|");
           for (const [vid, a] of agg) {
             lines.push(
-              `| ${vid} | ${a.imp} | ${a.imp ? (a.ctrW / a.imp).toFixed(2) : "0"} |`
+              `| ${vid} | ${a.imp} | ${a.imp ? ((a.ctrW / a.imp) * 100).toFixed(2) : "0"} |`
             );
           }
           lines.push("");

@@ -41,21 +41,24 @@ for (const [key, entry] of Object.entries(ledger)) {
   if (entry.pinnedCommentId) continue;
   const isTeaser = key.endsWith("-teaser");
   const slug = isTeaser ? key.replace(/-teaser$/, "") : key;
+  const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
+  let arcLabel = slug;
+  try {
+    if (existsSync(epPath)) arcLabel = arcDisplayName(JSON.parse(await readFile(epPath, "utf8")), slug);
+  } catch { /* fall back to slug */ }
   let text;
   if (isTeaser) {
     const ytId = ledger[slug]?.videoId;
     if (!ytId) continue;
+    const epNum = slug.match(/-tap-(\d+)$/)?.[1];
+    // Name the concrete episode - generic "trên kênh" converted ~0.3%
+    // of teaser views into long views (funnel 2026-11-14).
     text =
-      `Nghe TRỌN TẬP đầy đủ trên kênh 👉 https://youtu.be/${ytId}\n` +
+      `Nghe TRỌN TẬP "${arcLabel} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${ytId}\n` +
       `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`;
   } else {
     // Long-form videos get the playlist + engagement-question pin
     // (same copy upload-youtube-long posts at upload time).
-    const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
-    let arcLabel = slug;
-    try {
-      if (existsSync(epPath)) arcLabel = arcDisplayName(JSON.parse(await readFile(epPath, "utf8")), slug);
-    } catch { /* fall back to slug */ }
     text =
       `📌 Nghe trọn bộ ${arcLabel}: ${longPlaylistId ? playlistUrl(longPlaylistId) : "trên kênh"}\n` +
       `Tập mới lên mỗi ngày - nhấn chuông để không bỏ lỡ.\n` +

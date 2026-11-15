@@ -173,7 +173,7 @@ try {
         topLevelComment: {
           snippet: {
             textOriginal:
-              `Nghe TRỌN TẬP đầy đủ trên kênh 👉 https://youtu.be/${longVideoId ?? ""}\n` +
+              `Nghe TRỌN TẬP "${arcName} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${longVideoId ?? ""}\n` +
               `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
           },
         },

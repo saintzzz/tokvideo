@@ -1,5 +1,48 @@
 # Weekly Improver Log - Truyen Ma Dai Ky
 
+## 2026-11-15 (second run)
+
+**Data seen:**
+- channel-report-vi (28d): 5757 views (was 4118), 1115 watch-min (was 710),
+  +25 net subs (was +16), 283 subs. Trend up across the board.
+- Reach table landed for the first time (channel_reach_basic_a1 CSVs). Long
+  episodes get real impressions: cau-khi-tap-04 236, cay-da-tap-02 116,
+  cau-khi-tap-01 104, cay-da-tap-01 103, cau-khi-tap-05 68, cau-khi-tap-03 62.
+- Found a metric bug while reading it: the report's `CTR%` column prints the
+  CSV's raw 0-1 ratio unscaled - "0.05" reads as 0.05% but is actually 5%.
+  Verified: 236 imp x 0.05 = ~12 clicks ~ the video's 11 views;
+  103 x 0.01 = ~1 ~ its 1 view. True CTR is 1-5% - normal for this scale, so
+  no thumbnail emergency. The mislabel nearly produced a wrong diagnosis.
+- Teaser->long conversion still ~0.3%: cau-khi-tap-05-teaser 969 views vs
+  cau-khi-tap-05 long 3 views; chiec-khan-trang-tap-01-teaser 712 views in <1d.
+  The pinned comment is the only bridge and its copy was generic
+  ("Nghe TRON TAP day du tren kenh") with no episode identifier.
+- Long retention still weak (cau-khi/cay-da longs 1.3-24.5%) but every
+  measured episode predates last week's beat-1 hook fix - too early to judge.
+
+**Decision:** one theme - the teaser->long handoff. Fix the CTR metric that
+misreads the click surface, and name the concrete episode in the pinned
+comment so the only bridge tells viewers exactly what they get.
+
+**Changes:**
+- `scripts/channel-report.mjs`: CTR now displayed as a real percent (x100);
+  comment notes the CSV field is a 0-1 ratio.
+- `scripts/upload-long-teaser.mjs` + `scripts/pin-teaser-comments.mjs`:
+  teaser pinned comment now reads `Nghe TRON TAP "<Arc> - Tap N" tai day`
+  instead of generic "day du tren kenh". pin-teaser-comments hoists the
+  episode JSON read so both branches share arcLabel. Only new/unpinned
+  teasers get the new copy - existing pins untouched (no churn).
+
+**Not changed, and why:**
+- Hook rules / queue-refill: last week's beat-1 fix is in-flight only; all
+  measured longs were written before it. Re-tightening now = acting without
+  new evidence.
+- Cadence/render.yml: teaser views spiky (0-969), not the sustained >100
+  signal required to add slots; no upload-limit errors this week.
+- Thumbnails: true CTR 1-5% is acceptable on 60-236 impressions; one video
+  at 0% on 62 imp is too small a sample to conclude weakness.
+- Legacy/retired jobs untouched; ledgers only appended by upload scripts.
+
 ## 2026-11-11 (first run)
 
 **Data seen:**
