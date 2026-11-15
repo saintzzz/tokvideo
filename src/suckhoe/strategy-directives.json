@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-12T15:06:20.405Z",
+  "generatedAt": "2026-11-15T19:16:22.351Z",
   "preferMotifs": [
     "hu-ma-ga",
     "cau-khi",
-    "loi-nguyen-gieng-cu"
+    "chiec-khan-trang"
   ],
   "avoidMotifs": [
     "dung-tra-loi",
@@ -13,9 +13,10 @@
   "motifHints": [
     "mộ",
     "vong",
-    "làng",
+    "bóng",
     "thầy",
-    "bùa"
+    "bùa",
+    "miếu"
   ],
   "gapHints": [
     "mộ"
@@ -23,7 +24,7 @@
   "notes": [
     "Top motif: hu-ma-ga (353 avg teaser views)",
     "Avoid: dung-tra-loi, chuyen-do-dem, dem-kham-liem - teasers averaging under 5 views",
-    "Market hints (3w VN \"truyện ma\" meta): mộ, vong, làng, thầy, bùa",
+    "Market hints (3w VN \"truyện ma\" meta): mộ, vong, bóng, thầy, bùa, miếu",
     "Audience gap (top comments on outlier videos keep asking about): mộ - stories touching these answer real demand"
   ]
 }
