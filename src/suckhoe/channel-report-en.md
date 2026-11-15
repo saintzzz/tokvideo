@@ -1,8 +1,8 @@
-# Channel report — 2026-11-14
+# Channel report — 2026-11-15
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 28
+Total views: 29
 Total videos: 14
 
 ## Last 28 days (channel-wide)
@@ -17,10 +17,10 @@ Net subscriber change: 0
 
 | videoId | Views | WatchMin | AvgView(s) | AvgView% |
 |---|---|---|---|---|
-| 4qS5HKBB3-M | 2 | 0.0 | 0 | 0.0 |
 | dN9w4Ixoqes | 2 | 0.0 | 0 | 0.0 |
-| 1ook5C5HtBs | 1 | 0.0 | 0 | 0.0 |
+| 3dcnsv3-Aas | 2 | 0.0 | 0 | 0.0 |
 | pHDtvbWUM-Q | 1 | 0.0 | 0 | 1.1 |
+| 1ook5C5HtBs | 1 | 0.0 | 0 | 0.0 |
 | HiJsHfuE6o4 | 1 | 0.0 | 0 | 0.0 |
 | dElz6HMW_J0 | 1 | 0.0 | 0 | 0.0 |
 
@@ -30,22 +30,26 @@ Videos under 15% avg retention: 6/6 — low % means viewers abandon early (hook 
 
 | videoId | Impressions | CTR% |
 |---|---|---|
-| 3dcnsv3-Aas | 35 | 0.00 |
-| 1ook5C5HtBs | 16 | 0.00 |
+| 1ook5C5HtBs | 56 | 0.00 |
+| dN9w4Ixoqes | 36 | 0.00 |
+| 3dcnsv3-Aas | 34 | 0.00 |
+| pHDtvbWUM-Q | 11 | 0.00 |
 | dElz6HMW_J0 | 5 | 0.00 |
-| dN9w4Ixoqes | 5 | 0.00 |
-| hU3zmJBJ3UM | 2 | 0.00 |
+| hU3zmJBJ3UM | 5 | 0.00 |
+| W2b3hBVNfic | 2 | 0.00 |
+| Vf361_VAlJc | 2 | 0.00 |
 | Jr8ifVp_bjo | 1 | 0.00 |
-| W2b3hBVNfic | 1 | 0.00 |
+| A85bT7_67XM | 1 | 0.00 |
+| d8DI_8Iccig | 1 | 0.00 |
 
-Videos with zero impressions: 0/7 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
+Videos with zero impressions: 0/11 — 0 means YouTube never surfaced it (distribution problem), not a click problem.
 
 ## Most recent 14 videos
 
 | Title | Views | Likes | Comments | Published |
 |---|---|---|---|---|
 | The horseman chased him to the bridge - all they found was a shattered pumpkin - Part 2 #Shorts | 1 | 0 | 0 | 2026-11-09 |
-| Sleepy Hollow, 1820 - the teacher who rode home at midnight and never arrived - Part 1 #Shorts | 2 | 0 | 0 | 2026-11-09 |
+| Sleepy Hollow, 1820 - the teacher who rode home at midnight and never arrived - Part 1 #Shorts | 3 | 0 | 0 | 2026-11-09 |
 | The Silver Bridge fell at rush hour - 46 people died - was it a warning? - Part 2 #Shorts | 1 | 0 | 0 | 2026-10-10 |
 | Point Pleasant 1966 - the red-eyed thing that warned the town - Part 1 #Shorts | 0 | 0 | 0 | 2026-10-10 |
 | Vasilisa outsmarts Baba Yaga - the skull-lanterns burn - Part 2 #Shorts | 6 | 0 | 0 | 2026-10-09 |
