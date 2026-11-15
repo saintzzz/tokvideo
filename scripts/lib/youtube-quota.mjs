@@ -35,23 +35,48 @@ export function makeYoutube({ en = false } = {}) {
   if (!secondary) return primary;
 
   let swapped = false;
+  const fallback = (orig, fbFn) =>
+    async (...args) => {
+      if (swapped && fbFn) return await fbFn(...args);
+      try {
+        return await orig(...args);
+      } catch (e) {
+        if (!isQuota(e) || !fbFn) throw e;
+        swapped = true;
+        console.log("quota pool 1 exhausted - switched to pool 2");
+        return await fbFn(...args);
+      }
+    };
+  // Resources like `search` are non-configurable non-writable data
+  // properties - a proxy can't wrap them (invariant violation). Their
+  // methods on the resource object itself are usually writable though,
+  // so patch fallback in place; skip silently where even that fails.
+  for (const name of ["search"]) {
+    const res = primary[name], fbRes = secondary[name];
+    if (!res || !fbRes) continue;
+    for (const k of Object.getOwnPropertyNames(res)) {
+      const orig = res[k];
+      if (typeof orig !== "function" || typeof fbRes[k] !== "function") continue;
+      const d = Object.getOwnPropertyDescriptor(res, k);
+      if (d && "value" in d && d.configurable === false && d.writable === false) continue;
+      try { res[k] = fallback(orig.bind(res), fbRes[k].bind(fbRes)); } catch { /* frozen */ }
+    }
+  }
   const wrap = (obj, fb) =>
     new Proxy(obj, {
       get(target, prop) {
         const val = target[prop];
+        // Proxy invariant: a non-configurable, non-writable data property
+        // must be returned verbatim (googleapis exposes `search` this
+        // way). Wrapping it throws "proxy did not return its actual
+        // value" — return raw; its methods were fallback-patched above.
+        const d = Object.getOwnPropertyDescriptor(target, prop);
+        if (d && "value" in d && d.configurable === false && d.writable === false) {
+          return val;
+        }
         if (typeof val === "function") {
-          return async (...args) => {
-            const fbFn = fb?.[prop];
-            if (swapped && fbFn) return await fbFn.apply(fb, args);
-            try {
-              return await val.apply(target, args);
-            } catch (e) {
-              if (!isQuota(e) || !fbFn) throw e;
-              swapped = true;
-              console.log("quota pool 1 exhausted - switched to pool 2");
-              return await fbFn.apply(fb, args);
-            }
-          };
+          const fbFn = fb?.[prop];
+          return fallback(val.bind(target), fbFn ? fbFn.bind(fb) : null);
         }
         if (val && typeof val === "object") return wrap(val, fb?.[prop]);
         return val;
