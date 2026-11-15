@@ -799,5 +799,19 @@
     "locale": "vi",
     "privacyStatus": "public",
     "pinnedCommentId": "UgzxEibJuWf9a_lLrQZ4AaABAg"
+  },
+  "chiec-khan-trang-tap-05": {
+    "videoId": "0lc7z-B-kyM",
+    "publishedAt": "2026-11-15T12:23:22.683Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
+  },
+  "chiec-khan-trang-tap-05-teaser": {
+    "videoId": "F-L3osrR87I",
+    "publishedAt": "2026-11-15T12:24:00.469Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgyCKPObfYEOpZNSAi14AaABAg"
   }
 }
