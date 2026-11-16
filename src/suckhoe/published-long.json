@@ -838,7 +838,8 @@
     "publishedAt": "2026-11-16T06:57:00.803Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "Ugx3puQLCaRLtls1BCt4AaABAg"
   },
   "den-dau-xanh-tap-02-teaser": {
     "videoId": "4s9roNZrZfA",
@@ -852,7 +853,8 @@
     "publishedAt": "2026-11-16T16:38:12.042Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgydY1LXS8N-GddA7MV4AaABAg"
   },
   "den-dau-xanh-tap-03-teaser": {
     "videoId": "MVTAhtLiKH4",
