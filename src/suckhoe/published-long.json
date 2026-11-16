@@ -764,20 +764,23 @@
     "publishedAt": "2026-11-15T06:48:28.175Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "Ugw-eJiBJtIfbPtfPXh4AaABAg"
   },
   "chiec-khan-trang-tap-02-teaser": {
     "videoId": "mtI5K0rmwUs",
     "publishedAt": "2026-11-15T06:52:11.662Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgzP3rkGDyviZ46KY494AaABAg"
   },
   "chiec-khan-trang-tap-03": {
     "videoId": "VrUoCH3Ol3E",
     "publishedAt": "2026-11-15T10:02:35.747Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwyykLCcq8ji1uN56t4AaABAg"
   },
   "chiec-khan-trang-tap-04": {
     "videoId": "iRSkH375uUA",
@@ -797,7 +800,8 @@
   "chiec-khan-trang-tap-03-teaser": {
     "videoId": "XnVBpaOL-Oo",
     "publishedAt": "2026-11-15T10:37:58Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "Ugzk2Zrbmku80LV9NVV4AaABAg"
   },
   "chiec-khan-trang-tap-05": {
     "videoId": "0lc7z-B-kyM",
@@ -819,7 +823,8 @@
     "publishedAt": "2026-11-15T23:11:00.228Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "UgwAPxPcZ4uYBdXR7IF4AaABAg"
   },
   "den-dau-xanh-tap-01-teaser": {
     "videoId": "lMIaOkyIIrA",
