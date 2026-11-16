@@ -8,7 +8,15 @@
   "slug": "den-dau-xanh-tap-03",
   "title": "Bức Thư Thú Tội Của Ông Nội - Kẻ Phóng Hỏa Thật Sự Năm Xưa",
   "description": "Tập 3 arc BÓNG ĐÈN DẦU XANH: Bà Ba lục hòm ông nội mở bức thư giấu mấy chục năm - lời thú tội của người làm chứng dối. Kẻ phóng hỏa kho lúa thật sự không phải ông Canh Đèn. Đêm đó Hai Chình mơ thấy ông già xách đèn đứng giữa bãi, chỉ tay về phía cột đèn cũ đã đổ. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "đèn dầu xanh",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "an old yellowed handwritten letter held by trembling hands beside an oil lamp in a dark Vietnamese house, photorealistic",
     "a dream scene: an old man holding a lamp standing in a foggy marsh at night pointing toward a fallen wooden post, photorealistic horror"
@@ -82,5 +90,13 @@
       "caption": "Cụ dặn một việc duy nhất",
       "text": "Cụ Năm cầm tay Hai Chình, dặn một việc duy nhất: cột đèn cũ trong mơ là thiệt - nó đổ ngày dân làng đốn, nằm lại chân bãi tới giờ. Rằm tháng này nước ròng, đi tìm cái cột đó. Tìm được thì mày sẽ biết ông Canh Đèn muốn gì - ông ấy chưa bao giờ muốn làng trả nợ bằng máu."
     }
-  ]
+  ],
+  "sceneImages": {
+    "old-trunk": "images/suckhoe-long/den-dau-xanh-tap-03/old-trunk.jpg",
+    "night-watch-memory": "images/suckhoe-long/den-dau-xanh-tap-03/night-watch-memory.jpg",
+    "land-deal": "images/suckhoe-long/den-dau-xanh-tap-03/land-deal.jpg",
+    "dream-marsh": "images/suckhoe-long/den-dau-xanh-tap-03/dream-marsh.jpg",
+    "house-night": "images/suckhoe-long/den-dau-xanh-tap-03/house-night.jpg",
+    "elder-house": "images/suckhoe-long/den-dau-xanh-tap-03/elder-house.jpg"
+  }
 }
