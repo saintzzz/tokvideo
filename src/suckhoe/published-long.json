@@ -764,23 +764,20 @@
     "publishedAt": "2026-11-15T06:48:28.175Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true,
-    "pinnedCommentId": "Ugw-eJiBJtIfbPtfPXh4AaABAg"
+    "thumbnailPending": true
   },
   "chiec-khan-trang-tap-02-teaser": {
     "videoId": "mtI5K0rmwUs",
     "publishedAt": "2026-11-15T06:52:11.662Z",
     "locale": "vi",
-    "privacyStatus": "public",
-    "pinnedCommentId": "UgzP3rkGDyviZ46KY494AaABAg"
+    "privacyStatus": "public"
   },
   "chiec-khan-trang-tap-03": {
     "videoId": "VrUoCH3Ol3E",
     "publishedAt": "2026-11-15T10:02:35.747Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false,
-    "pinnedCommentId": "UgwyykLCcq8ji1uN56t4AaABAg"
+    "thumbnailPending": false
   },
   "chiec-khan-trang-tap-04": {
     "videoId": "iRSkH375uUA",
@@ -800,8 +797,7 @@
   "chiec-khan-trang-tap-03-teaser": {
     "videoId": "XnVBpaOL-Oo",
     "publishedAt": "2026-11-15T10:37:58Z",
-    "locale": "vi",
-    "pinnedCommentId": "Ugzk2Zrbmku80LV9NVV4AaABAg"
+    "locale": "vi"
   },
   "chiec-khan-trang-tap-05": {
     "videoId": "0lc7z-B-kyM",
@@ -823,8 +819,7 @@
     "publishedAt": "2026-11-15T23:11:00.228Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true,
-    "pinnedCommentId": "UgwAPxPcZ4uYBdXR7IF4AaABAg"
+    "thumbnailPending": true
   },
   "den-dau-xanh-tap-01-teaser": {
     "videoId": "lMIaOkyIIrA",
@@ -835,18 +830,13 @@
   },
   "den-dau-xanh-tap-02": {
     "videoId": "8EbSFtOlozY",
-    "publishedAt": "2026-11-16T06:57:00.803Z",
-    "locale": "vi",
-    "privacyStatus": "public",
-    "thumbnailPending": true,
-    "pinnedCommentId": "Ugx3puQLCaRLtls1BCt4AaABAg"
+    "publishedAt": "2026-11-16T06:57:30Z",
+    "locale": "vi"
   },
   "den-dau-xanh-tap-02-teaser": {
     "videoId": "4s9roNZrZfA",
-    "publishedAt": "2026-11-16T07:00:35.343Z",
-    "locale": "vi",
-    "privacyStatus": "public",
-    "pinnedCommentId": "UgxC4MNclNIRhkp57pB4AaABAg"
+    "publishedAt": "2026-11-16T07:00:59Z",
+    "locale": "vi"
   },
   "den-dau-xanh-tap-03": {
     "videoId": "JXes9S_hDqo",
