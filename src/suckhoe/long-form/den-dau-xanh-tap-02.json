@@ -8,7 +8,15 @@
   "slug": "den-dau-xanh-tap-02",
   "title": "Ông Canh Đèn Giữ Đèn Ba Mươi Năm - Bị Đuổi Khỏi Làng Vì Vụ Cháy Kho",
   "description": "Tập 2 arc BÓNG ĐÈN DẦU XANH: Sau đêm gặp lửa xanh Hai Chình phát bệnh, má anh đành dẫn đi gặp cụ Năm - người cuối cùng còn nhớ chuyện ông Canh Đèn, người ba mươi năm treo đèn soi đường qua bãi rồi bị cả làng đuổi đi vì vụ cháy kho lúa nhà địa chủ. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "đèn dầu xanh",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "a very old Vietnamese man in a dark rural house speaking under a single oil lamp, deep wrinkles, solemn eyes, photorealistic",
     "a young sick Vietnamese man lying on a wooden bed covered with a blanket at night, a blue flame glow coming through the window, photorealistic horror"
@@ -82,5 +90,13 @@
       "caption": "Ông nội là người làm chứng năm đó",
       "text": "Về tới nhà bà Ba mới mở miệng, giọng run: người đứng ra làm chứng thấy ông Canh Đèn xách dầu ngang kho lúa năm đó - chính là ông nội của Hai Chình, ông Ba Chình. Ông nội mất đã mười mấy năm, nhưng trước khi đi ông có giấu lại một thứ trong hòm, dặm má anh tuyệt đối đừng mở."
     }
-  ]
+  ],
+  "sceneImages": {
+    "house-night": "images/suckhoe-long/den-dau-xanh-tap-02/house-night.jpg",
+    "sick-bed": "images/suckhoe-long/den-dau-xanh-tap-02/sick-bed.jpg",
+    "elder-house": "images/suckhoe-long/den-dau-xanh-tap-02/elder-house.jpg",
+    "lamppost-memory": "images/suckhoe-long/den-dau-xanh-tap-02/lamppost-memory.jpg",
+    "burnt-granary": "images/suckhoe-long/den-dau-xanh-tap-02/burnt-granary.jpg",
+    "marsh-dawn": "images/suckhoe-long/den-dau-xanh-tap-02/marsh-dawn.jpg"
+  }
 }
