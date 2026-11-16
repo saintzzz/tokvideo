@@ -8,7 +8,15 @@
   "slug": "den-dau-xanh-tap-04",
   "title": "Chiếc Đèn Đồng Dưới Bãi Lầy - Thư Của Ông Canh Đèn Sau Bốn Chục Năm",
   "description": "Tập 4 arc BÓNG ĐÈN DẦU XANH: Đêm rằm Hai Chình một mình vào bãi tìm cột đèn cũ. Ngọn lửa xanh dẫn đường anh tới chiếc đèn đồng chôn dưới gốc cột - bên trong là lá thư ông Canh Đèn để lại bốn chục năm trước, và một lời nhắn khiến cụ Năm phải khóc. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "đèn dầu xanh",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "a Vietnamese man kneeling in a dark marsh at night digging mud with bare hands, a blue flame hovering above lighting the spot, photorealistic horror",
     "an old brass oil lamp half-buried in black mud, a small blue flame still on its wick, fog, photorealistic horror"
@@ -83,5 +91,14 @@
       "caption": "Bóng đèn xanh đứng giữa sân đình",
       "text": "Tin chiếc đèn tìm được lan ra cả ấp. Cụ Năm quyết định phải họp bà con - phải trả. Đêm trước ngày họp, chuyện chưa từng có xảy ra: bóng đèn xanh rời khỏi bãi, bay vào tận trong ấp, đứng yên giữa sân đình một khắc trước mặt mấy chục người đang chực nhìn, rồi mới từ từ bay về - như ông Canh Đèn đích thân tới nghe xem làng định làm gì."
     }
-  ]
+  ],
+  "sceneImages": {
+    "marsh-night": "images/suckhoe-long/den-dau-xanh-tap-04/marsh-night.jpg",
+    "guided-path": "images/suckhoe-long/den-dau-xanh-tap-04/guided-path.jpg",
+    "fallen-post": "images/suckhoe-long/den-dau-xanh-tap-04/fallen-post.jpg",
+    "digging-lamp": "images/suckhoe-long/den-dau-xanh-tap-04/digging-lamp.jpg",
+    "letter-lamp": "images/suckhoe-long/den-dau-xanh-tap-04/letter-lamp.jpg",
+    "elder-cry": "images/suckhoe-long/den-dau-xanh-tap-04/elder-cry.jpg",
+    "dinh-yard": "images/suckhoe-long/den-dau-xanh-tap-04/dinh-yard.jpg"
+  }
 }
