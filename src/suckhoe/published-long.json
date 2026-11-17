@@ -796,5 +796,19 @@
     "locale": "vi",
     "privacyStatus": "public",
     "pinnedCommentId": "UgxUqxSxXR0kUxvChu54AaABAg"
+  },
+  "den-dau-xanh-tap-05": {
+    "videoId": "hPJ4A_YY2X8",
+    "publishedAt": "2026-11-17T04:18:14.734Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": true
+  },
+  "den-dau-xanh-tap-05-teaser": {
+    "videoId": "B6O6bfOOLTs",
+    "publishedAt": "2026-11-17T04:21:56.132Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugx3gEjZHnQJfjeUHzJ4AaABAg"
   }
 }

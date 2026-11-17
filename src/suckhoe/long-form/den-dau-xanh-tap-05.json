@@ -8,7 +8,15 @@
   "slug": "den-dau-xanh-tap-05",
   "title": "Đêm Lửa Xanh Đổi Màu Vàng - Làng Trả Danh Dự Cho Người Giữ Đèn",
   "description": "Tập 5 arc BÓNG ĐÈN DẦU XANH: Giữa sân đình, bà Ba đứng ra đọc lời thú tội của ông nội trước cả làng. Làng lập lại cột đèn và miếu thờ ông Canh Đèn - và đêm cúng đó, trước mắt cả trăm người, ngọn lửa xanh lần cuối đổi sang màu vàng rồi tắt hẳn. Truyện ma dân gian kể bởi Bà Tư. #truyenma #kechuyen #truyendangian #dendauxanh",
-  "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện ma", "đèn dầu xanh", "ma quê", "bà tư kể chuyện", "truyện ma dài tập"],
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện ma",
+    "đèn dầu xanh",
+    "ma quê",
+    "bà tư kể chuyện",
+    "truyện ma dài tập"
+  ],
   "thumbnailSubjects": [
     "a Vietnamese village crowd at night watching a small blue flame transform into warm golden light above a new wooden lamppost, photorealistic",
     "a small village shrine beside a lamppost at dusk with a warm oil lamp burning, incense smoke, peaceful countryside, photorealistic"
@@ -82,5 +90,13 @@
       "caption": "Chuyện bãi Ông Đèn hết rồi",
       "text": "Chuyện ma bãi tha ma từ đó hết - vì nó vốn không phải chuyện ma dọa người, mà là chuyện một người tử tế bị quên quá lâu. Bà Tư kể tới đây thôi. Nhà bạn có bãi đồng, có cây cầu nào cũng có cái bóng đèn như vậy không - kể cho Bà Tư nghe ở dưới phần bình luận nhé."
     }
-  ]
+  ],
+  "sceneImages": {
+    "dinh-meeting": "images/suckhoe-long/den-dau-xanh-tap-05/dinh-meeting.jpg",
+    "new-shrine": "images/suckhoe-long/den-dau-xanh-tap-05/new-shrine.jpg",
+    "ceremony-night": "images/suckhoe-long/den-dau-xanh-tap-05/ceremony-night.jpg",
+    "flame-gold": "images/suckhoe-long/den-dau-xanh-tap-05/flame-gold.jpg",
+    "lamp-keeper": "images/suckhoe-long/den-dau-xanh-tap-05/lamp-keeper.jpg",
+    "marsh-peace": "images/suckhoe-long/den-dau-xanh-tap-05/marsh-peace.jpg"
+  }
 }
