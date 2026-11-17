@@ -757,7 +757,6 @@
     "pinnedCommentId": "Ugw9xSqJPrGYdSvCEMd4AaABAg"
   },
   "den-dau-xanh-tap-02": {
-    "videoId": "8EbSFtOlozY",
     "publishedAt": "2026-11-16T06:57:30Z",
     "locale": "vi",
     "pinnedCommentId": "Ugy_rT2sCCIejlgtzdh4AaABAg"
@@ -773,7 +772,8 @@
     "publishedAt": "2026-11-17T04:51:33.708Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "UgzYtUZB_J-iZhcPf_F4AaABAg"
   },
   "den-dau-xanh-tap-03-teaser": {
     "videoId": "MVTAhtLiKH4",
@@ -802,7 +802,8 @@
     "publishedAt": "2026-11-17T04:18:14.734Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "UgwZfBks9nPlp8NKlzR4AaABAg"
   },
   "den-dau-xanh-tap-05-teaser": {
     "videoId": "B6O6bfOOLTs",
