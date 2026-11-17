@@ -687,20 +687,23 @@
     "publishedAt": "2026-11-15T06:48:28.175Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "UgxszfmPHe1H0Gq0MAR4AaABAg"
   },
   "chiec-khan-trang-tap-02-teaser": {
     "videoId": "mtI5K0rmwUs",
     "publishedAt": "2026-11-15T06:52:11.662Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgwxJkaXbIOJflv9ZHd4AaABAg"
   },
   "chiec-khan-trang-tap-03": {
     "videoId": "VrUoCH3Ol3E",
     "publishedAt": "2026-11-15T10:02:35.747Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzZsIo6iaERULNWfDd4AaABAg"
   },
   "chiec-khan-trang-tap-04": {
     "videoId": "iRSkH375uUA",
@@ -720,7 +723,8 @@
   "chiec-khan-trang-tap-03-teaser": {
     "videoId": "XnVBpaOL-Oo",
     "publishedAt": "2026-11-15T10:37:58Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "UgzI6HdmpuAZNg5fkCh4AaABAg"
   },
   "chiec-khan-trang-tap-05": {
     "videoId": "0lc7z-B-kyM",
@@ -742,7 +746,8 @@
     "publishedAt": "2026-11-15T23:11:00.228Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "thumbnailPending": true,
+    "pinnedCommentId": "Ugz6HRaASIQwEnXQiup4AaABAg"
   },
   "den-dau-xanh-tap-01-teaser": {
     "videoId": "lMIaOkyIIrA",
@@ -754,15 +759,16 @@
   "den-dau-xanh-tap-02": {
     "videoId": "8EbSFtOlozY",
     "publishedAt": "2026-11-16T06:57:30Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "Ugy_rT2sCCIejlgtzdh4AaABAg"
   },
   "den-dau-xanh-tap-02-teaser": {
     "videoId": "4s9roNZrZfA",
     "publishedAt": "2026-11-16T07:00:59Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "Ugxiih0QhU4XtuBdvsB4AaABAg"
   },
   "den-dau-xanh-tap-03": {
-    "videoId": "JXes9S_hDqo",
     "publishedAt": "2026-11-16T16:38:12.042Z",
     "locale": "vi",
     "privacyStatus": "public",
@@ -781,7 +787,8 @@
     "publishedAt": "2026-11-16T20:14:21.527Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwL_Y90445bmrJEKLh4AaABAg"
   },
   "den-dau-xanh-tap-04-teaser": {
     "videoId": "l9QTPi5dqFA",
