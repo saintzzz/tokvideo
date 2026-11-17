@@ -133,11 +133,20 @@ if (font) {
   // Vietnamese punctuation (colons, apostrophes).
   tmp = await mkdtemp(path.join(tmpdir(), "thumb-"));
   const badgeFile = path.join(tmp, "badge.txt");
-  const titleFile = path.join(tmp, "title.txt");
   const seriesFile = path.join(tmp, "series.txt");
   await writeFile(badgeFile, badge, "utf8");
-  await writeFile(titleFile, wrapTitle(thumbTitle), "utf8");
   await writeFile(seriesFile, series, "utf8");
+  // One text file per wrapped line — some ffmpeg drawtext builds render
+  // the literal \n inside a textfile as a missing-glyph tofu box in
+  // addition to breaking the line (seen on the Ubuntu CI thumb for
+  // den-dau-xanh-tap-02). Per-line files + per-line drawtext avoid it.
+  const titleLines = wrapTitle(thumbTitle).split("\n");
+  const titleFiles = [];
+  for (let i = 0; i < titleLines.length; i++) {
+    const f = path.join(tmp, `title-${i}.txt`);
+    await writeFile(f, titleLines[i], "utf8");
+    titleFiles.push(f);
+  }
 
   // ffmpeg filtergraph treats `:` as an option separator — Windows drive
   // letters ("C:/...") must have it escaped, and backslashes turned to /.
@@ -150,7 +159,10 @@ if (font) {
     `drawtext=fontfile='${fpath(font)}':textfile='${fpath(badgeFile)}':fontcolor=white:fontsize=36:x=60:y=56`,
     // series name in gold, then the big hook line
     `drawtext=fontfile='${fpath(font)}':textfile='${fpath(seriesFile)}':fontcolor=0xE8B84B:fontsize=34:x=60:y=h-270`,
-    `drawtext=fontfile='${fpath(font)}':textfile='${fpath(titleFile)}':fontcolor=white:fontsize=56:x=60:y=h-216:borderw=3:bordercolor=black@0.85:line_spacing=8`,
+    ...titleFiles.map(
+      (f, i) =>
+        `drawtext=fontfile='${fpath(font)}':textfile='${fpath(f)}':fontcolor=white:fontsize=56:x=60:y=h-${216 - i * 64}:borderw=3:bordercolor=black@0.85`,
+    ),
   );
 } else if (canDrawText) {
   console.warn("No usable font found for drawtext — plain-frame thumbnail.");
