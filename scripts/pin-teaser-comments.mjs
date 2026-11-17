@@ -37,6 +37,9 @@ const longPlaylistId = playlistMap.vi?.["long-form"];
 
 for (const [key, entry] of Object.entries(ledger)) {
   if (!entry?.videoId) continue;
+  // `-fb` ledger keys hold Facebook reel ids - not YouTube videos, so
+  // commentThreads.insert always 404s on them (quota + log spam).
+  if (key.endsWith("-fb")) continue;
   if (requested.length && !requested.includes(key)) continue;
   if (entry.pinnedCommentId) continue;
   const isTeaser = key.endsWith("-teaser");
