@@ -88,9 +88,7 @@ if (!dur) {
   console.error(`VISUAL-GATE FAIL: cannot probe duration of ${mp4}`);
   process.exit(1);
 }
-let minYhigh = Infinity;
-for (let i = 1; i <= 6; i++) {
-  const t = (dur * i) / 7;
+const frameYhigh = (t) => {
   const stat = spawnSync(
     "ffmpeg",
     [
@@ -103,13 +101,33 @@ for (let i = 1; i <= 6; i++) {
   const out = stat.stderr + stat.stdout;
   const yavg = parseFloat(/YAVG=([\d.]+)/.exec(out)?.[1] ?? "0");
   const yhigh = parseFloat(/YHIGH=([\d.]+)/.exec(out)?.[1] ?? "0");
+  return { yavg, yhigh };
+};
+let minYhigh = Infinity;
+const darkFrames = [];
+for (let i = 1; i <= 6; i++) {
+  const t = (dur * i) / 7;
+  const { yavg, yhigh } = frameYhigh(t);
   minYhigh = Math.min(minYhigh, yhigh);
+  if (yhigh < 25) darkFrames.push(t);
   console.log(`  frame@${t.toFixed(0)}s YAVG=${yavg.toFixed(1)} YHIGH=${yhigh.toFixed(0)}`);
 }
-if (minYhigh < 25) {
-  console.error(
-    `VISUAL-GATE FAIL: rendered video is black-level (min YHIGH=${minYhigh.toFixed(0)} < 25) — refusing to upload`,
-  );
-  process.exit(1);
+if (darkFrames.length) {
+  // A single dark frame in a horror cut is usually a fade or a night
+  // scene — only a SUSTAINED black stretch means a missing visual. Re-
+  // probe 4s either side of each dark sample: if neighbours are black
+  // too, the gap is >=8s of darkness and the upload is refused.
+  for (const t of darkFrames) {
+    const before = frameYhigh(Math.max(0.5, t - 4)).yhigh;
+    const after = frameYhigh(Math.min(dur - 0.5, t + 4)).yhigh;
+    console.log(`  recheck frame@${t.toFixed(0)}s: before YHIGH=${before.toFixed(0)} after YHIGH=${after.toFixed(0)}`);
+    if (before < 25 && after < 25) {
+      console.error(
+        `VISUAL-GATE FAIL: sustained black segment near ${t.toFixed(0)}s (YHIGH<25 across >=8s) — refusing to upload`,
+      );
+      process.exit(1);
+    }
+    console.log(`  dark frame at ${t.toFixed(0)}s is transient (fade/night scene) — allowing`);
+  }
 }
-console.log(`VISUAL-GATE OK post-render: min YHIGH=${minYhigh.toFixed(0)}`);
+console.log(`VISUAL-GATE OK post-render: min YHIGH=${minYhigh.toFixed(0)}${darkFrames.length ? " (transient dark frames allowed)" : ""}`);

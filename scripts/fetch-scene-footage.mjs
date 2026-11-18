@@ -263,9 +263,19 @@ const transcodeForChrome = (src, dst) => {
     ffmpeg,
     [
       "-y", "-i", src,
-      "-vf", "scale='min(1280,iw)':-2,fps=24",
+      // Scenes need 5-20s of b-roll; clamp at 40s so a long source does
+      // not tax Chrome's decoder mid-render.
+      "-t", "40",
+      // setpts+vsync cfr: sources with odd first-frame PTS made Chrome's
+      // <Html5Video> wait forever at time 0 (delayRender stall killing
+      // renders 2026-11-18 — ffmpeg decodes such clips fine, Chrome does
+      // not). Rewriting PTS from 0 with CFR makes output always start at
+      // t=0 with uniform frames.
+      "-vf", "scale='min(1280,iw)':-2,fps=24,setpts=PTS-STARTPTS",
+      "-vsync", "cfr",
       "-c:v", "libx264", "-preset", "veryfast", "-crf", "30",
       "-pix_fmt", "yuv420p", "-an",
+      "-movflags", "+faststart",
       dst,
     ],
     { encoding: "utf8", timeout: 120_000 }
