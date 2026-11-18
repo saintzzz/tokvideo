@@ -259,10 +259,31 @@ const iaSearch = async (query, used) => {
 const transcodeForChrome = (src, dst) => {
   const ffmpeg = findFfmpeg();
   if (!ffmpeg) return false;
+  const headLuma = (t) => {
+    const pr = spawnSync(
+      ffmpeg,
+      ["-ss", String(t), "-i", src, "-frames:v", "1", "-vf", "scale=1:1", "-f", "rawvideo", "-pix_fmt", "gray", "-"],
+      { encoding: "buffer", timeout: 30_000, maxBuffer: 1 << 20 }
+    );
+    return pr.status === 0 && pr.stdout?.length ? pr.stdout[0] : 255;
+  };
+  // Dark-intro trim: stock clips commonly fade in from black, and each
+  // beat restarts the clip at t=0 — so a ~8s black head becomes an ~8s
+  // black hole inside every scene that uses the clip (coffin-closeup
+  // pixabay-94003 blacked out beat 17, 2026-11-18). Scan forward and
+  // start the usable window at the first bright-enough frame; luma
+  // read failures default to 255 so an unprobeable source is never
+  // trimmed blind.
+  let headTrim = 0;
+  for (const t of [0.5, 2, 4, 7, 11, 15]) {
+    if (headLuma(t) >= 35) { headTrim = t === 0.5 ? 0 : t; break; }
+  }
+  if (headTrim > 0) console.log(`trim dark intro: start at ${headTrim}s`);
   const p = spawnSync(
     ffmpeg,
     [
-      "-y", "-i", src,
+      "-y",
+      ...(headTrim ? ["-ss", String(headTrim), "-i", src] : ["-i", src]),
       // Scenes need 5-20s of b-roll; clamp at 40s so a long source does
       // not tax Chrome's decoder mid-render.
       "-t", "40",
