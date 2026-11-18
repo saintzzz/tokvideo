@@ -1,9 +1,10 @@
-# Pipeline Watchdog - 2026-11-18 07:58 VN
+# Pipeline Watchdog - 2026-11-18 18:44 VN
 
 Tự động quét mỗi 3h bởi job `pipeline-watchdog`. Queue chưa đăng: **23 tập**.
 
 ## Đã tự xử lý
-- tick bị drop/delay: upload mới nhất đã 501 phút trước - tự dispatch `quan-tai-troi-tap-01`
+- run 44212186303 job suckhoe-long: lỗi tạm thời (TTS/mạng/asset-vừa-fix) - rerun failed jobs
+- ngày trống (tick sáng bị drop): tự dispatch arc-start `quan-tai-troi-tap-01` dù ngoài khung giờ
 
 ## Cần người xem
 - (trống)
