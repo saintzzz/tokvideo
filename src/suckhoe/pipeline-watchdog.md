@@ -1,10 +1,11 @@
-# Pipeline Watchdog - 2026-11-18 18:44 VN
+# Pipeline Watchdog - 2026-11-19 03:32 VN
 
-Tự động quét mỗi 3h bởi job `pipeline-watchdog`. Queue chưa đăng: **23 tập**.
+Tự động quét mỗi 3h bởi job `pipeline-watchdog`. Queue chưa đăng: **22 tập**.
 
 ## Đã tự xử lý
-- run 44212186303 job suckhoe-long: lỗi tạm thời (TTS/mạng/asset-vừa-fix) - rerun failed jobs
-- ngày trống (tick sáng bị drop): tự dispatch arc-start `quan-tai-troi-tap-01` dù ngoài khung giờ
+- run 44321020890 job suckhoe-long: lỗi tạm thời (TTS/mạng/asset-vừa-fix) - rerun failed jobs
+- run 44288703672 job suckhoe-long: lỗi tạm thời (TTS/mạng/asset-vừa-fix) - rerun failed jobs
+- picker chờ quan-tai-troi-tap-02, upload gần nhất 78 phút - nhịp bình thường
 
 ## Cần người xem
-- (trống)
+- run 44297387751 job suckhoe-long: asset còn thiếu `public/videos/suckhoe-long/quan-tai-troi-tap-01/hieu-house.mp4` - cần commit file (không tự sửa được)

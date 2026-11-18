@@ -672,7 +672,6 @@
     "publishedAt": "2026-11-14T06:13:43.997Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true,
     "pinnedCommentId": "UgwBgpo2P0NlqV2IBvp4AaABAg"
   },
   "chiec-khan-trang-tap-01-teaser": {
@@ -687,7 +686,6 @@
     "publishedAt": "2026-11-15T06:48:28.175Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true,
     "pinnedCommentId": "UgxszfmPHe1H0Gq0MAR4AaABAg"
   },
   "chiec-khan-trang-tap-02-teaser": {
@@ -820,6 +818,7 @@
     "publishedAt": "2026-11-18T19:14:25.467Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwOB8HBio6p7GZRCoJ4AaABAg"
   }
 }
