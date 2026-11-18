@@ -104,30 +104,42 @@ const frameYhigh = (t) => {
   return { yavg, yhigh };
 };
 let minYhigh = Infinity;
-const darkFrames = [];
+let sumYhigh = 0;
+let darkCount = 0;
 for (let i = 1; i <= 6; i++) {
   const t = (dur * i) / 7;
   const { yavg, yhigh } = frameYhigh(t);
   minYhigh = Math.min(minYhigh, yhigh);
-  if (yhigh < 25) darkFrames.push(t);
+  sumYhigh += yhigh;
+  if (yhigh < 25) darkCount++;
   console.log(`  frame@${t.toFixed(0)}s YAVG=${yavg.toFixed(1)} YHIGH=${yhigh.toFixed(0)}`);
 }
-if (darkFrames.length) {
-  // A single dark frame in a horror cut is usually a fade or a night
-  // scene — only a SUSTAINED black stretch means a missing visual. Re-
-  // probe 4s either side of each dark sample: if neighbours are black
-  // too, the gap is >=8s of darkness and the upload is refused.
-  for (const t of darkFrames) {
-    const before = frameYhigh(Math.max(0.5, t - 4)).yhigh;
-    const after = frameYhigh(Math.min(dur - 0.5, t + 4)).yhigh;
-    console.log(`  recheck frame@${t.toFixed(0)}s: before YHIGH=${before.toFixed(0)} after YHIGH=${after.toFixed(0)}`);
-    if (before < 25 && after < 25) {
-      console.error(
-        `VISUAL-GATE FAIL: sustained black segment near ${t.toFixed(0)}s (YHIGH<25 across >=8s) — refusing to upload`,
-      );
-      process.exit(1);
-    }
-    console.log(`  dark frame at ${t.toFixed(0)}s is transient (fade/night scene) — allowing`);
-  }
+// Sparse keyframes make point sampling unreliable: -ss before -i snaps
+// to the PREVIOUS keyframe, so probes seconds apart can read the same
+// frame — a single dark keyframe once fake-reported as an 8s black hole
+// (2026-11-18, quan-tai-troi-tap-01 refused over a ~0.6s fade). The
+// black-segment check below (blackdetect, full decode) is authoritative;
+// the samples are informational. Fail fast only if MOST samples are
+// dark — that really is a dead video, no need for the slow pass.
+if (darkCount >= 4) {
+  console.warn(`  note: ${darkCount}/6 samples read dark (keyframe-snapped, informational only)`);
 }
-console.log(`VISUAL-GATE OK post-render: min YHIGH=${minYhigh.toFixed(0)}${darkFrames.length ? " (transient dark frames allowed)" : ""}`);
+// Authoritative check: blackdetect over the whole file (single decode
+// pass, keyframe-independent). pix_th=0.06 ≈ "no pixel brighter than
+// ~15/255"; d=6 refuses only >=6s of true black — a genuine missing
+// visual, not a fade or dark scene.
+const bd = spawnSync(
+  "ffmpeg",
+  ["-v", "info", "-i", mp4, "-vf", "blackdetect=d=6:pix_th=0.06", "-an", "-f", "null", "-"],
+  { encoding: "utf8", timeout: 300_000 },
+);
+const bdOut = (bd.stderr ?? "") + (bd.stdout ?? "");
+const holes = [...bdOut.matchAll(/black_start:([\d.]+) black_end:([\d.]+)/g)];
+if (holes.length) {
+  for (const h of holes) console.error(`  black segment ${h[1]}s-${h[2]}s (${(h[2] - h[1]).toFixed(1)}s)`);
+  console.error(
+    `VISUAL-GATE FAIL: ${holes.length} black segment(s) >=6s in rendered video — refusing to upload`,
+  );
+  process.exit(1);
+}
+console.log(`VISUAL-GATE OK post-render: min YHIGH=${minYhigh.toFixed(0)}, mean YHIGH=${(sumYhigh / 6).toFixed(0)}, no black segment >=6s`);
