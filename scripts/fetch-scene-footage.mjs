@@ -126,7 +126,7 @@ const DOMAIN_TAGS = new Set([
   "vietnam","countryside","rain","monsoon","mud","muddy","boat","rice",
 ]);
 // Clips proven wrong for this channel — hard-blocked forever.
-const PIXABAY_DENY = new Set(["pixabay-203449"]);
+const PIXABAY_DENY = new Set(["pixabay-203449", "pixabay-380033"]);
 const queryWords = (q) =>
   q.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !QUERY_STOP.has(w));
 
@@ -283,12 +283,18 @@ const transcodeForChrome = (src, dst) => {
     ["-ss", "1", "-i", dst, "-frames:v", "1", "-vf", "scale=1:1", "-f", "rawvideo", "-pix_fmt", "gray", "-"],
     { encoding: "buffer", timeout: 60_000, maxBuffer: 1 << 20 }
   );
-  if (probe.status === 0 && probe.stdout?.length) {
-    const luma = probe.stdout[0];
-    if (luma > 115) {
-      console.warn(`rejected: mean luma ${luma} >115 (daylight clip)`);
-      return false;
-    }
+  // An output ffmpeg cannot decode back is exactly the file that stalls
+  // Chrome's <Html5Video> at render time (pixabay-380033: 0.7MB h264,
+  // transcode "passed", delayRender timeout, run died 2026-11-18). Treat
+  // probe failure as rejection, never as "skip the gate".
+  if (probe.status !== 0 || !probe.stdout?.length) {
+    console.warn("rejected: normalized output not decodable");
+    return false;
+  }
+  const luma = probe.stdout[0];
+  if (luma > 115) {
+    console.warn(`rejected: mean luma ${luma} >115 (daylight clip)`);
+    return false;
   }
   return true;
 };
@@ -342,8 +348,16 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
       console.log(`${ep.slug} [${scene}]: ${kws.join(" | ")}`);
       continue;
     }
-    let found = null;
+    // Normalized output is always mp4 — the source container (webm/ogv)
+    // is discarded during transcode.
+    const relExt = `videos/suckhoe-long/${ep.slug}/${scene}.mp4`;
+    const outFileExt = path.join(outDir, `${scene}.mp4`);
+    // Search -> download -> on failure blacklist that clip and try the
+    // NEXT keyword/candidate. Before 2026-11-18 a failed download ended
+    // the scene entirely, and the same deterministic pick (an undecodable
+    // pixabay-380033) re-stalled every retry.
     for (const q of kws) {
+      let found = null;
       try {
         if (PIXABAY_KEY) found = await pixabaySearch(q, used);
         if (!found && PEXELS_KEY) found = await pexelsSearch(q, used);
@@ -354,26 +368,24 @@ for (const file of (await files(longFormDir)).filter((f) => f.endsWith(".json"))
         // Chrome could not decode, killing the render mid-run. Stills
         // fallback beats random archive footage every time.
         // if (!found) found = await iaSearch(q, used);
-        if (found) break;
       } catch (err) {
         console.warn(`search "${q}" failed: ${err.message}`);
       }
+      if (!found) continue;
+      try {
+        const bytes = await download(found.url, outFileExt);
+        used.add(found.id);
+        sceneVideos[scene] = relExt;
+        console.log(`wrote ${relExt} (${(bytes / 1e6).toFixed(1)}MB) <- ${found.id ?? found.url.slice(0, 60)}`);
+        break;
+      } catch (err) {
+        console.warn(`download failed ${scene}: ${err.message}`);
+        if (found.id) used.add(found.id);
+      }
+      await new Promise((r) => setTimeout(r, 2000));
     }
-    if (!found) {
+    if (!sceneVideos[scene]) {
       console.warn(`no footage for ${ep.slug} [${scene}]`);
-      continue;
-    }
-    // Normalized output is always mp4 — the source container (webm/ogv)
-    // is discarded during transcode.
-    const relExt = `videos/suckhoe-long/${ep.slug}/${scene}.mp4`;
-    const outFileExt = path.join(outDir, `${scene}.mp4`);
-    try {
-      const bytes = await download(found.url, outFileExt);
-      used.add(found.id);
-      sceneVideos[scene] = relExt;
-      console.log(`wrote ${relExt} (${(bytes / 1e6).toFixed(1)}MB) <- ${found.id ?? found.url.slice(0, 60)}`);
-    } catch (err) {
-      console.warn(`download failed ${scene}: ${err.message}`);
     }
     await new Promise((r) => setTimeout(r, 2000));
   }
