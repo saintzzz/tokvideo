@@ -6,7 +6,7 @@ on:
       video:
         description: "Which video to render (leave as auto on push to only render what changed). Pick 'set-video-privacy' to use the fields below instead."
         type: choice
-        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, channel-report, set-video-privacy, suckhoe-long, english-arena, pipeline-doctor, pipeline-watchdog, channel-review]
+        options: [auto, all, gia-cat-luong, churchill, hippocrates, ideverray, ammuu, suckhoe, channel-report, set-video-privacy, suckhoe-long, suckhoe-teaser-ahead, english-arena, pipeline-doctor, pipeline-watchdog, channel-review]
         default: auto
       privacy_status:
         description: "set-video-privacy only: private, public, or unlisted"
@@ -100,6 +100,14 @@ on:
     # GCP projects (upload scripts fall back to *_2 creds on
     # quotaExceeded) - 10 inserts/day needs more than one 10k pool.
     - cron: "30 2,9 * * 6,0"
+    # Teaser-ahead (owner directive 2026-11-19): the Shorts feed is the
+    # channel's only reliable discovery surface (~800 views/short vs ~3
+    # for longs), but teasers only existed as a side-effect of long
+    # uploads — when the long queue stalled, the feed starved for 2
+    # days. This slot uploads the teaser Short of an unpublished episode
+    # BEFORE its long lands, 3x/day at 10:30/16:30/22:30 VN — interleaved
+    # with the long slots so Shorts keep flowing even on render-fail days.
+    - cron: "30 3,9,15 * * *"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -1318,6 +1326,81 @@ jobs:
             node scripts/merge-long-ledger.mjs
             git add src/suckhoe/published-long.json
             # Non-ledger conflicts resolve to upstream — regenerated next run.
+            git diff --name-only --diff-filter=U -z | xargs -0 -r git checkout --ours -- 2>/dev/null || true
+            git add -A
+            if GIT_EDITOR=true git rebase --continue; then
+              git push && exit 0
+            fi
+            git rebase --abort || true
+            sleep $((i * 15))
+          done
+          exit 1
+
+  # Teaser-ahead: publishes the teaser Short of an unpublished episode
+  # before its long lands, so the Shorts feed (the channel's growth
+  # engine) keeps producing even when the long queue is backed up.
+  # Pure-ffmpeg teaser build + upload only — under a minute of compute.
+  suckhoe-teaser-ahead:
+    if: (github.event_name == 'schedule' && github.event.schedule == '30 3,9,15 * * *') || github.event.inputs.video == 'suckhoe-teaser-ahead'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: suckhoe-long-publish
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Pick next episode missing its teaser Short
+        id: pick
+        run: |
+          SLUG=$(node scripts/next-teaser-ahead-slug.mjs | sed 's/^slug=//')
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          if [ -z "$SLUG" ]; then echo "Every episode has a teaser Short."; fi
+
+      - name: Build teaser Short
+        if: steps.pick.outputs.slug != ''
+        run: node scripts/make-long-teaser.mjs ${{ steps.pick.outputs.slug }}
+
+      - name: Upload teaser Short
+        if: steps.pick.outputs.slug != ''
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID_2: ${{ secrets.YOUTUBE_CLIENT_ID_2 }}
+          YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
+          YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
+          YOUTUBE_TEASER_PRIVACY_STATUS: public
+        run: node scripts/upload-long-teaser.mjs ${{ steps.pick.outputs.slug }}
+
+      - name: Commit teaser ledger
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/suckhoe/published-long.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Record teaser-ahead upload ${{ steps.pick.outputs.slug }} [skip ci]"
+          git checkout -- . || true
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              git push && exit 0
+            fi
+            node scripts/merge-long-ledger.mjs
+            git add src/suckhoe/published-long.json
             git diff --name-only --diff-filter=U -z | xargs -0 -r git checkout --ours -- 2>/dev/null || true
             git add -A
             if GIT_EDITOR=true git rebase --continue; then
