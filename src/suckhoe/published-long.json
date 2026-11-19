@@ -744,7 +744,6 @@
     "publishedAt": "2026-11-15T23:11:00.228Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true,
     "pinnedCommentId": "Ugz6HRaASIQwEnXQiup4AaABAg"
   },
   "den-dau-xanh-tap-01-teaser": {
@@ -814,7 +813,6 @@
     "pinnedCommentId": "Ugx3gEjZHnQJfjeUHzJ4AaABAg"
   },
   "quan-tai-troi-tap-01": {
-    "videoId": "PS4CfQqC-5s",
     "publishedAt": "2026-11-18T19:14:25.467Z",
     "locale": "vi",
     "privacyStatus": "public",
@@ -826,6 +824,7 @@
     "publishedAt": "2026-11-19T02:17:48.008Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "Ugw6O41gdE2PKKgVb9B4AaABAg"
   }
 }
