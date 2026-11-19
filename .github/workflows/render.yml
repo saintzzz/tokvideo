@@ -1346,7 +1346,7 @@ jobs:
     permissions:
       contents: write
     concurrency:
-      group: suckhoe-long-publish
+      group: suckhoe-teaser-publish
     steps:
       - name: Checkout
         uses: actions/checkout@v4
