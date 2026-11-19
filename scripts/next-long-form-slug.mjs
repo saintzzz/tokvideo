@@ -52,6 +52,11 @@ for (const f of files) {
   // Same isStory rule as upload-youtube-long.mjs.
   const episode = JSON.parse(await readFile(path.join(longFormDir, f), "utf8"));
   if (!episode.beats?.every((b) => b.speaker === "narrator")) continue;
+  // Dead-stub guard (2026-11-19): an episode with neither scenePrompts
+  // nor sceneImages can never pass the visual-coverage gate — picking it
+  // wastes a full render cycle and dies red. ba-ngay-truoc-dam-cuoi +
+  // 3-days-before-the-wedding are such stubs.
+  if (!episode.scenePrompts && !episode.sceneImages) continue;
   candidates.push({ slug, priority: episode.queuePriority ?? 99, episode });
 }
 // queuePriority (lower first) overrides filename order — the Giếng Củ
