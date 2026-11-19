@@ -1,12 +1,14 @@
-# Pipeline doctor — 2026-11-17
+# Pipeline doctor — 2026-11-19
 
 ## Queue
 
-Ready unpublished episodes: 21
+Ready unpublished episodes: 20
 
 ## Failed workflow runs (last 24h)
 
-None — all runs green.
+- 2026-11-18T14:08 de38036 https://github.com/saintzzz/tokvideo/actions/runs/44321020890
+- 2026-11-18T11:44 2b5acfa https://github.com/saintzzz/tokvideo/actions/runs/44297387751
+- 2026-11-18T10:47 2b5acfa https://github.com/saintzzz/tokvideo/actions/runs/44288703672
 
 ## Findings
 
