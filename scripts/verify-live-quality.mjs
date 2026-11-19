@@ -137,16 +137,18 @@ for (const [slug, entry] of recent) {
           ledgerChangedFlag = true;
           issues.push(`${slug}: live thumbnail daylight-bright (luma ${luma}) — flagged pending`);
         } else if (luma !== null && luma < 20 && !thumbSync[slug]) {
-          // No custom thumb was ever pushed for this slug, so the served
-          // thumb IS an actual video frame — and it is black-level.
-          const q = JSON.parse(
-            existsSync(deleteQueuePath) ? readFileSync(deleteQueuePath, "utf8") : "{}"
-          );
-          q.delete = [...new Set([...(q.delete ?? []), entry.videoId])];
-          if (entry.teaserVideoId) q.delete = [...new Set([...q.delete, entry.teaserVideoId])];
-          writeFileSync(deleteQueuePath, JSON.stringify(q, null, 2) + "\n");
+          // A dark served thumbnail is NOT proof the video is black —
+          // YouTube auto-picks a frame, and horror content legitimately
+          // has dark frames/fades (2026-11-19: quan-tai-troi-tap-01 was
+          // deleted and re-rendered over a luma-19 auto-frame while the
+          // video itself had zero black segments). The rendered video's
+          // own blackdetect gate is the only real check; a dark thumb
+          // only means the composed horror thumb should replace the
+          // auto-picked frame. Flag pending, never delete.
+          entry.thumbnailPending = true;
+          ledgerChangedFlag = true;
           issues.push(
-            `${slug}: live thumbnail black-level (luma ${luma}) — video ${entry.videoId} queued for deletion + re-render`
+            `${slug}: live thumbnail black-level (luma ${luma}) — flagged pending for composed thumb`
           );
         }
       }
