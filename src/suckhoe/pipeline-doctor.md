@@ -1,13 +1,15 @@
-# Pipeline doctor — 2026-11-19
+# Pipeline doctor — 2026-11-20
 
 ## Queue
 
-Ready unpublished episodes: 19
+Ready unpublished episodes: 17
 
 ## Failed workflow runs (last 24h)
 
-- 2026-11-19T20:39 07d75a7 https://github.com/saintzzz/tokvideo/actions/runs/44610828221
-- 2026-11-19T16:14 a55dbac https://github.com/saintzzz/tokvideo/actions/runs/44563771645
+- 2026-11-20T11:40 bdedc43 https://github.com/saintzzz/tokvideo/actions/runs/44729556085
+- 2026-11-20T11:39 bdedc43 https://github.com/saintzzz/tokvideo/actions/runs/44729383284
+- 2026-11-20T03:39 0e23f9c https://github.com/saintzzz/tokvideo/actions/runs/44669234331
+- 2026-11-20T02:19 c3091e0 https://github.com/saintzzz/tokvideo/actions/runs/44659938053
 
 ## Findings
 
