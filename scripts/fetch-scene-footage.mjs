@@ -327,6 +327,25 @@ const transcodeForChrome = (src, dst) => {
     console.warn(`rejected: mean luma ${luma} >115 (daylight clip)`);
     return false;
   }
+  // Interior black-hole check: the dark-intro trim only fixes the clip
+  // HEAD — a clip with a black stretch in the middle becomes a black
+  // hole inside every beat that loops it (toolbox-attic pixabay-122004
+  // burned 2x24s holes into quan-tai-troi-tap-03, 2026-11-20). Same
+  // blackdetect semantics as the post-render gate; d=4 (not 6) because a
+  // 4s hole in a <=40s clip is proportionally worse than in a full video.
+  const bd = spawnSync(
+    ffmpeg,
+    ["-v", "info", "-i", dst, "-vf", "blackdetect=d=4:pix_th=0.06", "-an", "-f", "null", "-"],
+    { encoding: "utf8", timeout: 60_000 }
+  );
+  const bdOut = (bd.stderr ?? "") + (bd.stdout ?? "");
+  const holes = [...bdOut.matchAll(/black_start:([\d.]+) black_end:([\d.]+)/g)];
+  if (holes.length) {
+    console.warn(
+      `rejected: ${holes.length} interior black segment(s) >=4s (worst ${holes.map((h) => (h[2] - h[1]).toFixed(0) + "s").join(",")})`
+    );
+    return false;
+  }
   return true;
 };
 
