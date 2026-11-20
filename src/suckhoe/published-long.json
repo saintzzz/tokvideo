@@ -844,13 +844,15 @@
     "publishedAt": "2026-11-20T14:36:07.750Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgxHpP-sPe6xlC-_6Yd4AaABAg"
   },
   "quan-tai-troi-tap-04": {
     "videoId": "KO_L37QThRs",
     "publishedAt": "2026-11-20T16:42:44.005Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzYeYgIP7zpRWOaF6F4AaABAg"
   }
 }
