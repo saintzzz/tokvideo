@@ -1,1 +1,8 @@
-{}
+{
+  "quan-tai-troi-tap-03": {
+    "kind": "black-gate",
+    "fails": 1,
+    "lastRunId": 44729556085,
+    "lastFailAt": "2026-11-21T18:38:25.671Z"
+  }
+}
