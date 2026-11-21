@@ -163,27 +163,34 @@ ledger[teaserKey] = {
 // Pinned comment right at upload - the only clickable bridge from the
 // Shorts feed to the full episode (audit funnel 2026-11-06). Failure
 // must not fail the job; the watchdog's pin-teaser-comments sweep
-// backfills any miss on its next run.
-try {
-  const cmt = await youtube.commentThreads.insert({
-    part: ["snippet"],
-    requestBody: {
-      snippet: {
-        videoId: res.data.id,
-        topLevelComment: {
-          snippet: {
-            textOriginal:
-              `Nghe TRỌN TẬP "${arcName} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${longVideoId ?? ""}\n` +
-              `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
+// backfills any miss on its next run. For teaser-ahead uploads where
+// the long has not landed yet, SKIP pinning: a youtu.be/ link with an
+// empty id is a dead link, and leaving pinnedCommentId unset lets the
+// sweep pin the correct link once the episode is live.
+if (longVideoId) {
+  try {
+    const cmt = await youtube.commentThreads.insert({
+      part: ["snippet"],
+      requestBody: {
+        snippet: {
+          videoId: res.data.id,
+          topLevelComment: {
+            snippet: {
+              textOriginal:
+                `Nghe TRỌN TẬP "${arcName} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${longVideoId}\n` +
+                `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
+            },
           },
         },
       },
-    },
-  });
-  ledger[teaserKey].pinnedCommentId = cmt.data.id;
-  console.log(`Pinned comment: ${cmt.data.id}`);
-} catch (e) {
-  console.warn(`Pinned comment failed (watchdog sweep will retry): ${e.message}`);
+    });
+    ledger[teaserKey].pinnedCommentId = cmt.data.id;
+    console.log(`Pinned comment: ${cmt.data.id}`);
+  } catch (e) {
+    console.warn(`Pinned comment failed (watchdog sweep will retry): ${e.message}`);
+  }
+} else {
+  console.log("No long videoId yet - pin deferred to watchdog sweep once the episode is live.");
 }
 
 await writeFile(ledgerPath, JSON.stringify(ledger, null, 2) + "\n");

@@ -41,9 +41,48 @@ for (const [key, entry] of Object.entries(ledger)) {
   // commentThreads.insert always 404s on them (quota + log spam).
   if (key.endsWith("-fb")) continue;
   if (requested.length && !requested.includes(key)) continue;
-  if (entry.pinnedCommentId) continue;
   const isTeaser = key.endsWith("-teaser");
   const slug = isTeaser ? key.replace(/-teaser$/, "") : key;
+  // Stale-link repair (2026-11-21): teasers of re-uploaded arcs still
+  // carry a pinned comment pointing at the OLD deleted videoId — a dead
+  // link that silently kills the Shorts→long funnel. If the ledger's
+  // current long videoId differs from what the pinned comment links to,
+  // rewrite the comment text in place.
+  if (entry.pinnedCommentId) {
+    if (!isTeaser) continue;
+    const ytId = ledger[slug]?.videoId;
+    if (!ytId) continue;
+    try {
+      const got = await youtube.comments.list({
+        part: ["snippet"],
+        id: entry.pinnedCommentId,
+      });
+      const cmt = got.data.items?.[0];
+      if (cmt && !(cmt.snippet.textOriginal ?? "").includes(ytId)) {
+        const epNum = slug.match(/-tap-(\d+)$/)?.[1];
+        const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
+        let arcLabel = slug;
+        try {
+          if (existsSync(epPath)) arcLabel = arcDisplayName(JSON.parse(await readFile(epPath, "utf8")), slug);
+        } catch { /* fall back to slug */ }
+        await youtube.comments.update({
+          part: ["snippet"],
+          requestBody: {
+            id: entry.pinnedCommentId,
+            snippet: {
+              textOriginal:
+                `Nghe TRỌN TẬP "${arcLabel} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${ytId}\n` +
+                `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
+            },
+          },
+        });
+        console.log(`${key}: pinned comment re-pointed to ${ytId}`);
+      }
+    } catch (e) {
+      console.warn(`${key}: stale-link check skipped (${e.message})`);
+    }
+    continue;
+  }
   const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
   let arcLabel = slug;
   try {
