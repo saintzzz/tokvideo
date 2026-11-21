@@ -108,6 +108,9 @@ on:
     # BEFORE its long lands, 3x/day at 10:30/16:30/22:30 VN — interleaved
     # with the long slots so Shorts keep flowing even on render-fail days.
     - cron: "30 3,9,15 * * *"
+    # Weekend shorts boost — two extra teaser slots (07:30 + 14:30 VN)
+    # take Sat/Sun to 5 shorts/day to match the 5-long weekend cadence.
+    - cron: "30 0,7 * * 6,0"
     # Three times daily — releases exactly one shelved (privated) video
     # back to public, so the 7 legitimate episodes caught by the
     # 2026-08-22 mass-upload incident get out to the audience gradually
@@ -1341,7 +1344,7 @@ jobs:
   # engine) keeps producing even when the long queue is backed up.
   # Pure-ffmpeg teaser build + upload only — under a minute of compute.
   suckhoe-teaser-ahead:
-    if: (github.event_name == 'schedule' && github.event.schedule == '30 3,9,15 * * *') || github.event.inputs.video == 'suckhoe-teaser-ahead'
+    if: (github.event_name == 'schedule' && (github.event.schedule == '30 3,9,15 * * *' || github.event.schedule == '30 0,7 * * 6,0')) || github.event.inputs.video == 'suckhoe-teaser-ahead'
     runs-on: ubuntu-latest
     permissions:
       contents: write

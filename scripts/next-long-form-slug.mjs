@@ -71,8 +71,15 @@ const arcStartsToday = () => {
   // drops/delays the sole arc-start tick — use via workflow_dispatch
   // only, never on the schedule.
   if (process.env.ALLOW_ARC_ANYTIME === "1") return true;
-  const vnHour = (new Date().getUTCHours() + 7) % 24;
-  return vnHour >= 5 && vnHour < 9;
+  const now = new Date();
+  const vnHour = (now.getUTCHours() + 7) % 24;
+  const vnDay = (now.getUTCDay() + ((now.getUTCHours() + 7) >= 24 ? 1 : 0)) % 7;
+  // Weekend output target is 5 longs/day (owner directive): a 4-5 episode
+  // arc started by ~14:30 VN still lands entirely the same day, so the
+  // start window widens Sat/Sun. Weekdays keep the tight morning window
+  // so a new arc never straddles two days.
+  const lastStartHour = vnDay === 0 || vnDay === 6 ? 15 : 9;
+  return vnHour >= 5 && vnHour < lastStartHour;
 };
 
 // Readiness gate (2026-10-15): an episode is only pickable when every
