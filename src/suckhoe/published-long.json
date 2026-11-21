@@ -860,5 +860,12 @@
     "publishedAt": "2026-11-20T22:19:01.292Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "cau-khi-tap-01": {
+    "videoId": "Ugpn5_nqrWo",
+    "publishedAt": "2026-11-21T03:34:28.891Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
