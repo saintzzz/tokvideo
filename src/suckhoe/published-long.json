@@ -866,13 +866,15 @@
     "publishedAt": "2026-11-21T03:34:28.891Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwcyasGzJBAeVfRDTR4AaABAg"
   },
   "cau-khi-tap-02": {
     "videoId": "ceuphQTLkNI",
     "publishedAt": "2026-11-21T10:20:03.447Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwIW4V9snexfXqrGxt4AaABAg"
   }
 }
