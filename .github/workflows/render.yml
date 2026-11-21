@@ -1692,7 +1692,7 @@ jobs:
           # --ignore-errors: a pathspec that matched nothing aborts the
           # whole add (observed 2026-11-13: series-playlists.json absent
           # -> topped-up audio never staged -> rebase loop died silent).
-          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/upload-blocked.json src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json src/suckhoe/pending-delete.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
+          git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/upload-blocked.json src/suckhoe/quarantine.json src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json src/suckhoe/pending-delete.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           git checkout -- . || true
           for i in 1 2 3 4 5 6 7 8; do

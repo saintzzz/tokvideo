@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { sanityCheckAudio } from "./lib/audio-probe.mjs";
 import { freshLongLedger } from "./lib/fresh-ledger.mjs";
+import { loadQuarantine, isBlocked } from "./lib/quarantine.mjs";
 
 // Prints the next unpublished long-form slug to stdout (empty output =
 // queue drained). "Published" means present in published-long.json with
@@ -42,12 +43,17 @@ if (existsSync(blockPath) && !process.env.IGNORE_UPLOAD_BLOCK) {
 // Fresh ledger from origin/main — a delayed cron's checkout SHA can
 // predate another run's just-published commit (2026-11-19 incident).
 const ledger = freshLongLedger();
+// Watchdog blocklist: deterministic per-slug failures (post-render
+// gate, coverage) stop the picker from re-picking a poisoned episode
+// and burning every slot on it.
+const quarantine = loadQuarantine();
 
 const files = (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort();
 const candidates = [];
 for (const f of files) {
   const slug = f.replace(/\.json$/, "");
   if (ledger[slug]?.videoId) continue;
+  if (isBlocked(quarantine, slug, path.join(longFormDir, f))) continue;
   // Skip the legacy remedy fact-check format (grandma/granddaughter
   // dialogue) — the channel publishes narrator-only story arcs now.
   // Same isStory rule as upload-youtube-long.mjs.

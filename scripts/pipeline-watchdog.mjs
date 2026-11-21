@@ -8,6 +8,12 @@
 // Remediation table (per failed run, newest first, max MAX_RUNS):
 //   transient (TTS 403, ETIMEDOUT, 429, 5xx, EAI_AGAIN, push conflict)
 //       -> rerun failed jobs (attempt < 3)
+//   deterministic (post-render black gate, coverage, audio, quota)
+//       -> count failures in quarantine.json; >=2 (or coverage/audio
+//          immediately) BLOCKS the slug in every picker so it stops
+//          burning slots. Unblocked automatically once resolved.
+//   stuck in_progress runs (teaser >60min, long >270min)
+//       -> cancel; the missed-slot dispatch re-picks the slug.
 //   MEDIA_ELEMENT_ERROR / 404 on a public/ asset
 //       -> if the file now exists and is git-tracked: rerun; else FINDING
 //   "Could not resolve" / Composition not found for a slug whose JSON
@@ -26,15 +32,18 @@
 //        node scripts/pipeline-watchdog.mjs --dry-run   (no reruns)
 
 import { execSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { sanityCheckAudio } from "./lib/audio-probe.mjs";
+import { loadQuarantine, saveQuarantine, isBlocked, blockSlug } from "./lib/quarantine.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const LONG_DIR = path.join(ROOT, "src/suckhoe/long-form");
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const REPO = process.env.GH_REPO || "saintzzz/tokvideo";
 const DRY = process.argv.includes("--dry-run");
-const MAX_RUNS = 8;
+const MAX_RUNS = 12;
 const REPORT = path.join(ROOT, "src/suckhoe/pipeline-watchdog.md");
 const MIN_QUEUE = Number(process.env.MIN_QUEUE || 5);
 
@@ -59,9 +68,32 @@ async function jobLog(jobId) {
   return (await r.text()).slice(-60000); // tail is where the error lives
 }
 
-const TRANSIENT = /edge-tts|edge_tts|HTTP 403|ETIMEDOUT|ECONNRESET|EAI_AGAIN|429|50[0-9] |rate limit|send-pack|rebase|could not push|Connection|timed out|uploadLimitExceeded|quota/i;
+const TRANSIENT = /edge-tts|edge_tts|HTTP 403|ETIMEDOUT|ECONNRESET|EAI_AGAIN|429|50[0-9] |rate limit|send-pack|rebase|could not push|Connection|timed out|apt-get|EAI_AGAIN/i;
 const ASSET_404 = /MEDIA_ELEMENT_ERROR|Format error|404|ENOENT|no such file/i;
 const UNREGISTERED = /Could not resolve|Composition.*not found|does not exist|Cannot find module/i;
+// Deterministic signatures — a rerun CANNOT fix these, so the episode
+// is quarantined after a bounded retry instead of letting the picker
+// re-pick it forever and burn every slot (fail-loop, 2026-11-21).
+const DETERMINISTIC = [
+  ["quota", /uploadLimitExceeded|dailyUploadLimit|quotaExceeded/i],
+  ["black-gate", /black_start|blackdetect|post-render visual gate|black segment/i],
+  ["coverage", /coverage gate|visual coverage|no valid visual|Coverage FAIL/i],
+  ["audio", /committed audio incomplete|audio incomplete|beat-\d+\.mp3.*(?:missing|0 bytes|sanity)/i],
+];
+const NON_SLUG_WORDS = new Set(["form", "next", "publish", "teaser", "render", "video"]);
+
+function extractSlug(job, log) {
+  const hay = `${job.name}\n${log}`;
+  const m =
+    hay.match(/long_form_slug["']?\s*[:=]\s*"?([a-z0-9-]+)/i) ||
+    hay.match(/suckhoe-long-([a-z0-9-]+?)(?=[\s"']|$)/) ||
+    hay.match(/\b([a-z0-9]+(?:-[a-z0-9]+)*-tap-\d+)\b/);
+  const slug = m?.[1];
+  if (!slug || NON_SLUG_WORDS.has(slug)) return null;
+  // Only accept slugs that are real episodes — log paths like
+  // "suckhoe-long-form" must not resolve to a phantom slug.
+  return existsSync(path.join(LONG_DIR, `${slug}.json`)) ? slug : null;
+}
 
 async function rerun(runId) {
   if (DRY) return "(dry-run)";
@@ -99,7 +131,11 @@ function unpublishedSlugs() {
   const published = new Set(Object.keys(ledger));
   const src = readFileSync(path.join(ROOT, "src/suckhoe/long-form/index.ts"), "utf8");
   return [...src.matchAll(/from "\.\/([a-z0-9-]+)\.json"/g)]
-    .map(m => m[1]).filter(s => !published.has(s) && !s.endsWith("-teaser"));
+    .map(m => m[1])
+    .filter(s => !published.has(s) && !s.endsWith("-teaser"))
+    // Effective depth: a quarantined slug is dead weight, not inventory —
+    // QUEUE LOW / STALL must see through it or the refill never fires.
+    .filter(s => !isBlocked(quarantine, s, epPath(s)));
 }
 
 const queueDepth = () => unpublishedSlugs().length;
@@ -107,6 +143,65 @@ const queueDepth = () => unpublishedSlugs().length;
 // -------------------------------------------------------------- main ---
 const now = new Date();
 if (!TOKEN) { console.error("GITHUB_TOKEN/GH_TOKEN required"); process.exit(1); }
+
+const quarantine = loadQuarantine();
+let quarantineDirty = false;
+const audioDir = (slug) => path.join(ROOT, "public", "audio", "suckhoe-long", slug);
+const epPath = (slug) => path.join(LONG_DIR, `${slug}.json`);
+const readEp = (slug) => {
+  try { return JSON.parse(readFileSync(epPath(slug), "utf8")); } catch { return null; }
+};
+
+// ---- Early-clear resolved quarantine -------------------------------------
+// A blocked slug re-enters the queue the moment its root cause is gone:
+// audio topped up, scene images committed, the episode JSON edited, or
+// the entry simply expired. Checking at scan start means self-heal work
+// from earlier steps (audio-topup, gen-thumb-visuals) takes effect at
+// the very next tick instead of waiting out the TTL.
+for (const [slug, e] of Object.entries(quarantine)) {
+  if (!e?.blocked) continue;
+  const ep = readEp(slug);
+  const p = epPath(slug);
+  let resolved = Date.parse(e.expiresAt ?? 0) < now;
+  try { if (statSync(p).mtimeMs > (e.epMtime ?? 0)) resolved = true; } catch { /* file gone */ }
+  if (!resolved && e.kind === "audio" && ep?.beats) {
+    resolved = ep.beats.every((_, i) => sanityCheckAudio(path.join(audioDir(slug), `beat-${i}.mp3`)).ok);
+  }
+  if (!resolved && e.kind === "coverage" && ep) {
+    const imgDir = path.join(ROOT, "public", "images", "suckhoe-long", slug);
+    const sceneVals = Object.values(ep.sceneImages ?? {});
+    resolved =
+      Object.keys(ep.scenePrompts ?? {}).length > 0 ||
+      (sceneVals.length > 0 && sceneVals.some(v => existsSync(path.join(imgDir, path.basename(v))))) ||
+      existsSync(path.join(imgDir, "hook.jpg"));
+  }
+  if (resolved) {
+    delete quarantine[slug];
+    quarantineDirty = true;
+    actions.push(`- gỡ quarantine \`${slug}\` (${e.kind}) - nguyên nhân đã hết, tập quay lại queue`);
+  }
+}
+
+// ---- Stuck-run reaper ----------------------------------------------------
+// A run that hangs (render stuck, runner wedged) holds its slot forever
+// and nothing new dispatches behind it. Kill runs far past their
+// expected duration; the missed-slot dispatch below re-picks the slug.
+try {
+  const inProg = (await api(`/repos/${REPO}/actions/runs?per_page=20&status=in_progress`)).workflow_runs ?? [];
+  for (const r of inProg) {
+    const ageMin = (now - new Date(r.started_at ?? r.created_at)) / 60000;
+    if (ageMin < 45) continue; // young runs and this watchdog's own run
+    const jobs = (await api(`/repos/${REPO}/actions/runs/${r.id}/jobs?per_page=10`)).jobs ?? [];
+    const names = jobs.map(j => j.name).join(" ");
+    const capMin = /teaser/.test(names) ? 60 : /long|publish/.test(names) ? 270 : 120;
+    if (ageMin > capMin) {
+      if (!DRY) await api(`/repos/${REPO}/actions/runs/${r.id}/cancel`, { method: "POST" }).catch(() => {});
+      actions.push(`- giết run treo ${r.id} (${Math.round(ageMin)}p > cap ${capMin}p: ${names.slice(0, 60)}) - missed-slot sẽ dispatch lại`);
+    }
+  }
+} catch (e) {
+  findings.push(`- stuck-run reaper lỗi: ${String(e.message).slice(0, 120)}`);
+}
 
 const runs = (await api(`/repos/${REPO}/actions/runs?per_page=40`)).workflow_runs
   .filter(r => r.conclusion === "failure" || r.conclusion === "timed_out")
@@ -118,20 +213,47 @@ for (const run of runs) {
   const jobs = (await api(`/repos/${REPO}/actions/runs/${run.id}/jobs?per_page=30`)).jobs
     .filter(j => j.conclusion === "failure");
   if (!jobs.length) continue;
-  for (const job of jobs.slice(0, 2)) {
+  for (const job of jobs.slice(0, 3)) {
     const log = await jobLog(job.id).catch(() => "");
     const label = `run ${run.id} job ${job.name}`;
     if (/LONG_SLUG:\s*$/m.test(log) || /suckhoe-long-\s*$/m.test(log)) {
       findings.push(`- ${label}: dispatch với slug rỗng - input sai, bỏ qua (không rerun)`);
       continue;
     }
-    const slugM = log.match(/suckhoe-long-([a-z0-9-]+?)(?:\s|$|")/) || log.match(/tap-\d+/g);
+    const slug = extractSlug(job, log);
+    const slugM = slug ? [slug] : null;
     const asset = ASSET_404.test(log) ? assetFixed(log) : null;
     if (asset && !asset.ok) {
       findings.push(`- ${label}: asset còn thiếu \`${asset.path}\` - cần commit file (không tự sửa được)`);
       continue;
     }
-    if (UNREGISTERED.test(log) && slugM && tryAutoRegister(slugM[0].replace("suckhoe-long-", ""))) {
+    // Deterministic failure: a rerun cannot fix it, and leaving the
+    // slug pickable re-picks it every tick - a fail-loop that uploads
+    // nothing while healthy episodes starve behind it.
+    const detKind = DETERMINISTIC.find(([, re]) => re.test(log))?.[0];
+    if (detKind && slug) {
+      const prev = quarantine[slug] ?? {};
+      const fails = (prev.fails ?? 0) + 1;
+      // coverage/audio can never self-heal by rerunning (audio-topup
+      // fixes audio out-of-band); quota is channel-level, not the
+      // slug's fault - count it but never block on it.
+      const blockNow = detKind === "coverage" || detKind === "audio" || fails >= 2;
+      quarantine[slug] = { ...prev, kind: detKind, fails, lastRunId: run.id, lastFailAt: now.toISOString() };
+      if (blockNow && detKind !== "quota") {
+        blockSlug(quarantine, slug, detKind, epPath(slug), { fails, lastRunId: run.id });
+        findings.push(`- ${label}: lỗi cố định \`${detKind}\` lần ${fails} ở \`${slug}\` - ĐÃ QUARANTINE, picker bỏ qua tới khi hết nguyên nhân`);
+      } else {
+        actions.push(`- ${label}: lỗi cố định \`${detKind}\` lần ${fails} ở \`${slug}\` - rerun ${detKind === "quota" ? "vô ích (đợi quota reset)" : "thử 1 lần"}`);
+        if (detKind !== "quota" && run.run_attempt < 3) await rerun(run.id);
+      }
+      quarantineDirty = true;
+      continue;
+    }
+    if (detKind) {
+      findings.push(`- ${label}: lỗi cố định \`${detKind}\` nhưng không trích được slug - xem log`);
+      continue;
+    }
+    if (UNREGISTERED.test(log) && slugM && tryAutoRegister(slugM[0])) {
       actions.push(`- ${label}: đã tự đăng ký composition cho ${slugM[0]} vào index.ts + rerun`);
       await rerun(run.id);
       continue;
@@ -156,6 +278,14 @@ try {
     .filter(([k]) => !k.endsWith("-teaser") && !k.endsWith("-fb"))
     .map(([, v]) => Date.parse(v.publishedAt || 0)));
 } catch { /* ledger unreadable */ }
+
+// Persist quarantine BEFORE the missed-slot dispatch — the picker runs
+// as a subprocess and must see freshly-blocked slugs skipped, otherwise
+// the self-heal dispatch re-picks the very slug we just quarantined.
+if (quarantineDirty && !DRY) {
+  saveQuarantine(quarantine);
+  quarantineDirty = false;
+}
 
 // ----------------------------------------------------- missed slots ---
 // 2026-11-07 incident: the only daily tick allowed to START a new arc
@@ -221,6 +351,38 @@ try {
 } catch (e) {
   findings.push(`- missed-slot check lỗi: ${e.message.slice(0, 140)}`);
 }
+
+// ------------------------------------------------- teaser missed slots ---
+// 2026-11-20 incident: Shorts (the growth engine) produced ZERO videos
+// for 2 days because teaser uploads were coupled to long renders. The
+// teaser-ahead job decoupled them, but had no stall detector — a dropped
+// cron or a failing teaser job silently starves the Shorts feed again.
+// Cadence is 3-5 teasers/day; >8h without one means a slot was lost.
+try {
+  const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
+  const lastTeaserMs = Math.max(0, ...Object.entries(ledger)
+    .filter(([k]) => k.endsWith("-teaser"))
+    .map(([, v]) => Date.parse(v.publishedAt || 0)));
+  const teaserStaleMin = (Date.now() - lastTeaserMs) / 60000;
+  if (teaserStaleMin > 8 * 60) {
+    const tslug = execSync("node scripts/next-teaser-ahead-slug.mjs", { cwd: ROOT, encoding: "utf8" })
+      .trim().match(/slug=(\S+)/)?.[1] ?? "";
+    if (tslug) {
+      if (!DRY) {
+        await api(`/repos/${REPO}/actions/workflows/render.yml/dispatches`, {
+          method: "POST",
+          body: JSON.stringify({ ref: "main", inputs: { video: "suckhoe-teaser-ahead" } }),
+        });
+      }
+      actions.push(`- Shorts stall ${Math.round(teaserStaleMin / 60)}h: tự dispatch teaser-ahead cho \`${tslug}\` (cron teaser bị drop)`);
+    } else {
+      findings.push(`- Shorts stall ${Math.round(teaserStaleMin / 60)}h nhưng teaser-ahead picker trả rỗng - mọi tập chưa đăng đã có teaser; cần arc mới từ queue-refill`);
+    }
+  }
+} catch (e) {
+  findings.push(`- teaser missed-slot check lỗi: ${e.message.slice(0, 140)}`);
+}
+
 if (depth < MIN_QUEUE) findings.unshift(`- **QUEUE LOW**: chỉ còn ${depth} tập chưa đăng (< ${MIN_QUEUE}) - queue-refill cần chạy`);
 
 // ----------------------------------------------------- teaser pairs ---

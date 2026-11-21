@@ -8,10 +8,12 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { freshLongLedger } from "./lib/fresh-ledger.mjs";
+import { loadQuarantine, isBlocked } from "./lib/quarantine.mjs";
 
 const ROOT = path.join(import.meta.dirname, "..");
 const LONG_DIR = path.join(ROOT, "src", "suckhoe", "long-form");
 const ledger = freshLongLedger();
+const quarantine = loadQuarantine();
 
 const slugs = readdirSync(LONG_DIR)
   .filter((f) => f.endsWith(".json"))
@@ -20,6 +22,7 @@ const slugs = readdirSync(LONG_DIR)
 const candidates = [];
 for (const slug of slugs) {
   if (ledger[`${slug}-teaser`]?.videoId) continue;
+  if (isBlocked(quarantine, slug, path.join(LONG_DIR, `${slug}.json`))) continue;
 
   const ep = JSON.parse(readFileSync(path.join(LONG_DIR, `${slug}.json`), "utf8"));
   if (ep.locale !== "vi") continue;
