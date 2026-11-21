@@ -1,9 +1,9 @@
-# Pipeline Watchdog - 2026-11-21 18:02 VN
+# Pipeline Watchdog - 2026-11-21 21:29 VN
 
 Tự động quét mỗi 3h bởi job `pipeline-watchdog`. Queue chưa đăng: **17 tập**.
 
 ## Đã tự xử lý
-- picker chờ cau-khi-tap-04, upload gần nhất 43 phút - nhịp bình thường
+- tick bị drop/delay: upload mới nhất đã 250 phút trước - tự dispatch `cau-khi-tap-04`
 
 ## Cần người xem
 - run 44729556085 job suckhoe-long: lỗi tạm thời nhưng đã rerun 3 lần - cần xem tay
