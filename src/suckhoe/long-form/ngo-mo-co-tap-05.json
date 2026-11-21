@@ -98,5 +98,15 @@
       "caption": "Chuyện cô gái đợi được gọi tên",
       "text": "Chuyện nấm mộ đất tươi tới đây là hết - vì nó vốn không phải chuyện ma dọa người, mà là chuyện một cô gái đợi được gọi đúng tên mình suốt sáu chục năm. Nhà bạn có nấm mộ cổ nào lâu không ai quét không - kể cho Bà Tư nghe ở dưới phần bình luận nhé."
     }
-  ]
+  ],
+  "sceneImages": {
+    "dinh-yard": "images/suckhoe-long/ngo-mo-co-tap-05/dinh-yard.jpg",
+    "registry-book": "images/suckhoe-long/ngo-mo-co-tap-05/registry-book.jpg",
+    "stone-yard-night": "images/suckhoe-long/ngo-mo-co-tap-05/stone-yard-night.jpg",
+    "graveyard-night": "images/suckhoe-long/ngo-mo-co-tap-05/graveyard-night.jpg",
+    "woman-on-grave": "images/suckhoe-long/ngo-mo-co-tap-05/woman-on-grave.jpg",
+    "graveyard-dawn": "images/suckhoe-long/ngo-mo-co-tap-05/graveyard-dawn.jpg",
+    "village-day": "images/suckhoe-long/ngo-mo-co-tap-05/village-day.jpg"
+  },
+  "thumbTitle": "GỌI TÊN TRONG MỘ"
 }

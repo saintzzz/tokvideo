@@ -97,5 +97,14 @@
       "caption": "Cô đợi cháu thêm một rằm",
       "text": "Đêm đó đi ngang chân dốc, anh dừng lại nhìn lên nấm mộ xa xa. Bóng người đàn bà vẫn ngồi đó lẻ loi giữa sương, mái tóc buông dài. Anh nói nhỏ như hứa: cô đợi cháu thêm một rằm nữa - lần này cháu đục đúng tên cô."
     }
-  ]
+  ],
+  "sceneImages": {
+    "stone-yard": "images/suckhoe-long/ngo-mo-co-tap-04/stone-yard.jpg",
+    "hill-path-night": "images/suckhoe-long/ngo-mo-co-tap-04/hill-path-night.jpg",
+    "graveyard-night": "images/suckhoe-long/ngo-mo-co-tap-04/graveyard-night.jpg",
+    "woman-on-grave": "images/suckhoe-long/ngo-mo-co-tap-04/woman-on-grave.jpg",
+    "house-night": "images/suckhoe-long/ngo-mo-co-tap-04/house-night.jpg",
+    "elder-house": "images/suckhoe-long/ngo-mo-co-tap-04/elder-house.jpg"
+  },
+  "thumbTitle": "ĐÊM RẰM NGHĨA ĐỊA"
 }

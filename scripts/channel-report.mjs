@@ -119,6 +119,34 @@ async function main() {
     lines.push(`Subscribers lost: ${totals.subsLost}`);
     lines.push(`Net subscriber change: ${totals.subsGained - totals.subsLost}`);
     lines.push("");
+
+    // YPP monetization tracker (90-day goal framing): the channel needs
+    // 1,000 subs + 4,000 public watch-hours in the trailing 365 days, OR
+    // 10M Shorts views in 90 days. Report both trajectories at the
+    // current 28-day rate so the milestone date is visible, not guessed.
+    try {
+      const yr = new Date(end);
+      yr.setDate(yr.getDate() - 365);
+      const watch365 = await youtubeAnalytics.reports.query({
+        ids: "channel==MINE",
+        startDate: fmtDate(yr),
+        endDate: fmtDate(end),
+        metrics: "estimatedMinutesWatched",
+      });
+      const hours365 = (watch365.data.rows?.[0]?.[1] ?? 0) / 60;
+      const subs = +stats.subscriberCount || 0;
+      const subsPerDay = (totals.subsGained - totals.subsLost) / 28;
+      const hoursPerDay = totals.minutesWatched / 60 / 28;
+      const daysTo = (cur, target, rate) =>
+        cur >= target ? "ĐẠT" : rate > 0 ? `~${Math.ceil((target - cur) / rate)} ngày` : "chưa đủ tốc độ";
+      lines.push(`## YPP monetization tracker`);
+      lines.push("");
+      lines.push(`Subscribers: ${subs}/1000 — ${daysTo(subs, 1000, subsPerDay)} (net ${subsPerDay.toFixed(2)}/ngày)`);
+      lines.push(`Watch hours 365d: ${Math.round(hours365)}/4000 — ${daysTo(hours365, 4000, hoursPerDay)} (${hoursPerDay.toFixed(1)} giờ/ngày)`);
+      lines.push("");
+    } catch (e) {
+      console.warn(`YPP tracker skipped: ${e.message}`);
+    }
   } catch (err) {
     lines.push(
       `## Last 28 days (channel-wide)\n\n(Analytics query failed: ${err.message ?? err} — likely too little data yet for a brand-new channel, or the token needs the yt-analytics.readonly scope.)`
@@ -151,7 +179,7 @@ async function main() {
           startDate: fmtDate(start),
           endDate: fmtDate(end),
           metrics:
-            "views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage",
+            "views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,subscribersGained",
           dimensions: "video",
           filters: `video==${videoIds.join(",")}`,
           sort: "-views",
@@ -160,11 +188,11 @@ async function main() {
         if (rows.length > 0) {
           lines.push(`## Funnel per video (last 28 days)`);
           lines.push("");
-          lines.push("| videoId | Views | WatchMin | AvgView(s) | AvgView% |");
-          lines.push("|---|---|---|---|---|");
+          lines.push("| videoId | Views | WatchMin | AvgView(s) | AvgView% | Subs+ |");
+          lines.push("|---|---|---|---|---|---|");
           for (const r of rows) {
             lines.push(
-              `| ${r[0]} | ${r[1]} | ${(+r[2]).toFixed(1)} | ${Math.round(r[3])} | ${(+r[4]).toFixed(1)} |`
+              `| ${r[0]} | ${r[1]} | ${(+r[2]).toFixed(1)} | ${Math.round(r[3])} | ${(+r[4]).toFixed(1)} | ${r[5]} |`
             );
           }
           lines.push("");

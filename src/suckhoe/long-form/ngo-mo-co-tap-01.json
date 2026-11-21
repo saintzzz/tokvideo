@@ -97,5 +97,15 @@
       "caption": "Vệt chân đất đỏ trước sân",
       "text": "Sáng hôm sau má anh ra sân sớm thì đứng sững. Từ ngoài cổng vào tận trước cửa nhà là một vệt chân trần nhỏ xíu, ướt đẫm đất đỏ - mà cả vùng này chỉ có một chỗ có thứ đất đó: trên dốc Gò Ô."
     }
-  ]
+  ],
+  "sceneImages": {
+    "hill-graveyard-dusk": "images/suckhoe-long/ngo-mo-co-tap-01/hill-graveyard-dusk.jpg",
+    "village-dusk": "images/suckhoe-long/ngo-mo-co-tap-01/village-dusk.jpg",
+    "stone-yard": "images/suckhoe-long/ngo-mo-co-tap-01/stone-yard.jpg",
+    "woman-on-grave": "images/suckhoe-long/ngo-mo-co-tap-01/woman-on-grave.jpg",
+    "graveyard-night": "images/suckhoe-long/ngo-mo-co-tap-01/graveyard-night.jpg",
+    "house-night": "images/suckhoe-long/ngo-mo-co-tap-01/house-night.jpg",
+    "yard-morning": "images/suckhoe-long/ngo-mo-co-tap-01/yard-morning.jpg"
+  },
+  "thumbTitle": "NGÔI MỘ KHÔNG BIA"
 }

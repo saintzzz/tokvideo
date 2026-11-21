@@ -35,6 +35,7 @@ if (!YOUTUBE_CLIENT_ID || !YOUTUBE_CLIENT_SECRET || !YOUTUBE_REFRESH_TOKEN) {
 const auth = new google.auth.OAuth2(YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET);
 auth.setCredentials({ refresh_token: YOUTUBE_REFRESH_TOKEN });
 const youtube = makeYoutube() || google.youtube({ version: "v3", auth });
+const youtubeAnalytics = google.youtubeAnalytics({ version: "v2", auth });
 
 const ledger = JSON.parse(await readFile(path.join(DIR, "published-long.json"), "utf8"));
 const idToKey = {};
@@ -210,6 +211,47 @@ try {
   console.warn(`gap scan failed (non-fatal): ${err.message ?? err}`);
 }
 
+// ---- Retention drop-point analysis ---------------------------------------
+// SOP step: knowing viewers drop "early" is not actionable — knowing the
+// segment is. Pull audienceWatchRatio curves for the 3 most recent long
+// uploads and locate the first sustained drop below ~0.5 relative
+// retention; that segment becomes a concrete writer directive
+// (e.g. "viewers leave at ~40% - mid-episode stalls, tighten pacing").
+let dropNote = "";
+try {
+  const recent = Object.entries(ledger)
+    .filter(([k, e]) => !k.endsWith("-teaser") && !k.endsWith("-fb") && e?.videoId && e.publishedAt)
+    .sort((a, b) => String(b[1].publishedAt).localeCompare(String(a[1].publishedAt)))
+    .slice(0, 3);
+  const end = new Date(), start = new Date(end);
+  start.setDate(start.getDate() - 28);
+  const fmt = (d) => d.toISOString().slice(0, 10);
+  const drops = [];
+  for (const [key, e] of recent) {
+    try {
+      const r = await youtubeAnalytics.reports.query({
+        ids: "channel==MINE",
+        startDate: fmt(start), endDate: fmt(end),
+        metrics: "audienceWatchRatio",
+        dimensions: "elapsedVideoTimeRatio",
+        filters: `video==${e.videoId}`,
+        sort: "elapsedVideoTimeRatio",
+      });
+      const rows = r.data.rows ?? [];
+      // First point where relative retention stays <0.5 for >=10% of runtime.
+      for (let j = 0; j + 10 < rows.length; j++) {
+        if (rows[j][1] < 0.5 && rows[j + 10][1] < 0.5) {
+          drops.push(`${key} ~${Math.round(rows[j][0] * 100)}%`);
+          break;
+        }
+      }
+    } catch { /* video lacks retention data — skip */ }
+  }
+  if (drops.length) dropNote = `Retention cliff: ${drops.join("; ")} - tighten pacing at that segment`;
+} catch (err) {
+  console.warn(`retention drop scan failed (non-fatal): ${err.message ?? err}`);
+}
+
 const directives = {
   generatedAt: new Date().toISOString(),
   preferMotifs: ranking.slice(0, 3).filter(r => r.teaserViews > 0).map(r => r.arc),
@@ -223,6 +265,7 @@ const dead = directives.avoidMotifs;
 if (dead.length) directives.notes.push(`Avoid: ${dead.join(", ")} - teasers averaging under 5 views`);
 if (motifHints.length) directives.notes.push(`Market hints (3w VN "truyện ma" meta): ${motifHints.join(", ")}`);
 if (gapHints.length) directives.notes.push(`Audience gap (top comments on outlier videos keep asking about): ${gapHints.join(", ")} - stories touching these answer real demand`);
+if (dropNote) directives.notes.push(dropNote);
 
 // Human report.
 let md = `# Channel Weekly Review - ${week}\n\n`;

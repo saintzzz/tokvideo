@@ -97,6 +97,7 @@ const SCHEMA_NOTE = `Mỗi episode là 1 file JSON object với đúng các fiel
   "id": "<slug>", "arc": "<arc>", "arcTitle": "<ARC TITLE>", "episode": <1-5>,
   "slug": "<slug>",
   "title": "<tiêu đề tập, tiếng Việt có dấu, kết thúc bằng yếu tố gây tò mò>",
+  "thumbTitle": "<2-5 từ in trên thumbnail, cực ngắn, gây ám ảnh - VD 'QUAN TÀI ĐỨNG DẬY'>",
   "description": "<2-3 câu tóm tắt + #truyenma #kechuyen #truyendangian>",
   "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện", "<arc>"],
   "narrator": "vi-VN-NamMinhNeural",
@@ -210,6 +211,17 @@ function normalizeEpisode(raw, motif, i) {
     narrator: "vi-VN-NamMinhNeural",
     locale: "vi", // required by upload-long-teaser (rejects locale!=vi)
     thumbnailSubjects: Array.isArray(raw.thumbnailSubjects) ? raw.thumbnailSubjects : [],
+    // thumbTitle drives the big thumbnail text — must read at feed size
+    // (shorts-vs-long CTR audit 2026-11-14: long titles wrap to 4 lines
+    // and vanish). Writer provides it; fallback = the hook clause after
+    // the last ":", capped at ~5 words.
+    thumbTitle: (() => {
+      const t = String(raw.thumbTitle ?? "").trim();
+      if (t && t.length <= 40) return t;
+      const clause = (String(raw.title ?? "").split(":").pop() ?? "").trim();
+      const words = clause.split(/\s+/).slice(0, 5).join(" ");
+      return words || undefined;
+    })(),
     scenePrompts: raw.scenePrompts && typeof raw.scenePrompts === "object" ? raw.scenePrompts : {},
     beats: [],
   };

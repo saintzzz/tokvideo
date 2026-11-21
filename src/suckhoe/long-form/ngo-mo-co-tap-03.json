@@ -96,5 +96,13 @@
       "caption": "Tiếng đục vang tới sáng",
       "text": "Quay lại chỉ có sương trắng lọt qua kẽ cửa. Anh nhìn chỗ trống trên mặt đá mà nói thầm: cô cho tôi thêm thời gian đi, tôi sẽ tìm ra tên cô. Đêm đó tiếng đục của anh vang tới sáng - lần đầu tiên trong đời, anh đục đá mà tay run."
     }
-  ]
+  ],
+  "sceneImages": {
+    "old-trunk": "images/suckhoe-long/ngo-mo-co-tap-03/old-trunk.jpg",
+    "house-night": "images/suckhoe-long/ngo-mo-co-tap-03/house-night.jpg",
+    "dream-kapok": "images/suckhoe-long/ngo-mo-co-tap-03/dream-kapok.jpg",
+    "elder-house": "images/suckhoe-long/ngo-mo-co-tap-03/elder-house.jpg",
+    "stone-yard-night": "images/suckhoe-long/ngo-mo-co-tap-03/stone-yard-night.jpg"
+  },
+  "thumbTitle": "BIA ĐỤC SAI CHỮ"
 }
