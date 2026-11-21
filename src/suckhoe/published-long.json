@@ -883,5 +883,12 @@
     "locale": "vi",
     "privacyStatus": "public",
     "pinnedCommentId": "UgyTsnb8PJ5hMnfxAud4AaABAg"
+  },
+  "cau-khi-tap-04": {
+    "videoId": "WcZqUH30z48",
+    "publishedAt": "2026-11-21T14:44:43.101Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
