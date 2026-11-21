@@ -58,30 +58,39 @@ for (const [key, entry] of Object.entries(ledger)) {
         id: entry.pinnedCommentId,
       });
       const cmt = got.data.items?.[0];
-      if (cmt && !(cmt.snippet.textOriginal ?? "").includes(ytId)) {
-        const epNum = slug.match(/-tap-(\d+)$/)?.[1];
-        const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
-        let arcLabel = slug;
-        try {
-          if (existsSync(epPath)) arcLabel = arcDisplayName(JSON.parse(await readFile(epPath, "utf8")), slug);
-        } catch { /* fall back to slug */ }
-        await youtube.comments.update({
-          part: ["snippet"],
-          requestBody: {
-            id: entry.pinnedCommentId,
-            snippet: {
-              textOriginal:
-                `Nghe TRỌN TẬP "${arcLabel} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${ytId}\n` +
-                `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
+      if (!cmt) {
+        // Comment was deleted on YouTube — clear the stale id and fall
+        // through to the pin path below so it re-posts right now.
+        entry.pinnedCommentId = null;
+        dirty = true;
+        console.log(`${key}: pinned comment gone on channel - re-pinning`);
+      } else {
+        if (!(cmt.snippet.textOriginal ?? "").includes(ytId)) {
+          const epNum = slug.match(/-tap-(\d+)$/)?.[1];
+          const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
+          let arcLabel = slug;
+          try {
+            if (existsSync(epPath)) arcLabel = arcDisplayName(JSON.parse(await readFile(epPath, "utf8")), slug);
+          } catch { /* fall back to slug */ }
+          await youtube.comments.update({
+            part: ["snippet"],
+            requestBody: {
+              id: entry.pinnedCommentId,
+              snippet: {
+                textOriginal:
+                  `Nghe TRỌN TẬP "${arcLabel} - Tập ${parseInt(epNum, 10) || "?"}" tại đây 👉 https://youtu.be/${ytId}\n` +
+                  `Trọn bộ câu chuyện trong playlist - ghim bình luận này để quay lại nghe tiếp nhé.`,
+              },
             },
-          },
-        });
-        console.log(`${key}: pinned comment re-pointed to ${ytId}`);
+          });
+          console.log(`${key}: pinned comment re-pointed to ${ytId}`);
+        }
+        continue;
       }
     } catch (e) {
       console.warn(`${key}: stale-link check skipped (${e.message})`);
+      continue;
     }
-    continue;
   }
   const epPath = path.join(root, "src", "suckhoe", "long-form", `${slug}.json`);
   let arcLabel = slug;

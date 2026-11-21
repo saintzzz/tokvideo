@@ -4,6 +4,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { google } from "googleapis";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
+import { freshLongLedger } from "./lib/fresh-ledger.mjs";
 import {
   longFormTitle,
   longFormDescription,
@@ -91,10 +92,10 @@ if ([...title].length > 100) {
 // this one (binge-session chaining — same pattern update-long-metadata
 // applies retroactively).
 const ledgerPath = path.join(import.meta.dirname, "..", "src", "suckhoe", "published-long.json");
-let ledger = {};
-if (existsSync(ledgerPath)) {
-  ledger = JSON.parse(await readFile(ledgerPath, "utf8"));
-}
+// Fresh ledger from origin/main — delayed cron runs check out a SHA that
+// can predate another run's just-published commit (2026-11-19 incident);
+// the double-dispatch guard below is only as good as the ledger is fresh.
+let ledger = freshLongLedger();
 // Watchdog can dispatch the same slug a delayed cron also picks — bail
 // early when the ledger already has this episode so double-dispatch is
 // a no-op instead of a duplicate upload (2026-11-07 missed-tick fix).
@@ -178,13 +179,32 @@ const insertWithFallback = async (params) => {
 // delayed cron tick double-uploaded longs and teasers). Check the
 // channel's own recent uploads for this exact title; if present,
 // adopt its videoId into the ledger instead of double-uploading.
+// Embed a durable episode marker in the description — the title match
+// below is the fast path, but metadata-fixers can rewrite titles later;
+// ep:<slug> survives that and makes re-upload detection exact.
+const markedDescription = `${description}\n\nep:${slug}`;
+
 try {
   const ch = await youtube.channels.list({ part: ["contentDetails"], mine: true });
   const uploadsId = ch.data.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
   if (uploadsId) {
-    const recent = await youtube.playlistItems.list({ part: ["snippet"], playlistId: uploadsId, maxResults: 25 });
-    const dup = (recent.data.items || []).find(
-      (i) => (i.snippet.title || "").normalize("NFC") === title.normalize("NFC")
+    // Paginate the FULL uploads playlist — a channel publishing several
+    // items/day plus teasers pushes an upload older than ~3 days out of
+    // any small "recent" page, and a missed match means a duplicate.
+    const marker = `ep:${slug}`;
+    const items = [];
+    let pageToken;
+    do {
+      const page = await youtube.playlistItems.list({
+        part: ["snippet"], playlistId: uploadsId, maxResults: 50, pageToken,
+      });
+      items.push(...(page.data.items || []));
+      pageToken = page.data.nextPageToken;
+    } while (pageToken);
+    const dup = items.find(
+      (i) =>
+        (i.snippet.title || "").normalize("NFC") === title.normalize("NFC") ||
+        (i.snippet.description || "").includes(marker)
     );
     if (dup) {
       const vid = dup.snippet.resourceId.videoId;
@@ -211,7 +231,7 @@ res = await insertWithFallback({
   requestBody: {
     snippet: {
       title,
-      description,
+      description: markedDescription,
       tags: isStory
         ? longFormTags(episode)
         : isEn

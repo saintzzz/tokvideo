@@ -2,6 +2,7 @@ import { readdir, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { sanityCheckAudio } from "./lib/audio-probe.mjs";
+import { freshLongLedger } from "./lib/fresh-ledger.mjs";
 
 // Prints the next unpublished long-form slug to stdout (empty output =
 // queue drained). "Published" means present in published-long.json with
@@ -38,9 +39,9 @@ if (existsSync(blockPath) && !process.env.IGNORE_UPLOAD_BLOCK) {
   }
 }
 
-const ledger = existsSync(ledgerPath)
-  ? JSON.parse(await readFile(ledgerPath, "utf8"))
-  : {};
+// Fresh ledger from origin/main — a delayed cron's checkout SHA can
+// predate another run's just-published commit (2026-11-19 incident).
+const ledger = freshLongLedger();
 
 const files = (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort();
 const candidates = [];

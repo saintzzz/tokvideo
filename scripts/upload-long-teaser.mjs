@@ -14,6 +14,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { google } from "googleapis";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
+import { freshLongLedger } from "./lib/fresh-ledger.mjs";
 import { arcDisplayName, videoUrl, playlistUrl } from "./lib/long-metadata.mjs";
 
 const slug = process.argv[2];
@@ -40,7 +41,9 @@ if (episode.locale !== "vi") {
 }
 
 const ledgerPath = path.join(repoRoot, "src", "suckhoe", "published-long.json");
-const ledger = existsSync(ledgerPath) ? JSON.parse(await readFile(ledgerPath, "utf8")) : {};
+// Fresh ledger from origin/main — stale checkouts under delayed crons
+// double-uploaded once already (2026-11-19 incident).
+const ledger = freshLongLedger();
 const longVideoId = ledger[slug]?.videoId ?? null;
 
 const teaserKey = `${slug}-teaser`;
@@ -113,13 +116,27 @@ const insertWithFallback = async (params) => {
 // Race-safe dedupe (same fix as upload-youtube-long): a second job can
 // pass the ledger check before the first commits - adopt the live
 // video with this exact title instead of double-uploading.
+const markedDescription = `${description}\n\nep:${teaserKey}`;
+
 try {
   const ch = await youtube.channels.list({ part: ["contentDetails"], mine: true });
   const uploadsId = ch.data.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
   if (uploadsId) {
-    const recent = await youtube.playlistItems.list({ part: ["snippet"], playlistId: uploadsId, maxResults: 25 });
-    const dup = (recent.data.items || []).find(
-      (i) => (i.snippet.title || "").normalize("NFC") === title.normalize("NFC")
+    // Full pagination + ep:<key> description marker — see upload-youtube-long.
+    const marker = `ep:${teaserKey}`;
+    const items = [];
+    let pageToken;
+    do {
+      const page = await youtube.playlistItems.list({
+        part: ["snippet"], playlistId: uploadsId, maxResults: 50, pageToken,
+      });
+      items.push(...(page.data.items || []));
+      pageToken = page.data.nextPageToken;
+    } while (pageToken);
+    const dup = items.find(
+      (i) =>
+        (i.snippet.title || "").normalize("NFC") === title.normalize("NFC") ||
+        (i.snippet.description || "").includes(marker)
     );
     if (dup) {
       const vid = dup.snippet.resourceId.videoId;
@@ -143,7 +160,7 @@ const res = await insertWithFallback({
   requestBody: {
     snippet: {
       title,
-      description,
+      description: markedDescription,
       tags: ["truyện ma", "truyện ma có thật", "nghe truyện", "shorts"],
       categoryId: "24",
     },

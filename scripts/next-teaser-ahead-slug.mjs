@@ -7,13 +7,11 @@
 
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { freshLongLedger } from "./lib/fresh-ledger.mjs";
 
 const ROOT = path.join(import.meta.dirname, "..");
 const LONG_DIR = path.join(ROOT, "src", "suckhoe", "long-form");
-const ledgerPath = path.join(ROOT, "src", "suckhoe", "published-long.json");
-const ledger = existsSync(ledgerPath)
-  ? JSON.parse(readFileSync(ledgerPath, "utf8"))
-  : {};
+const ledger = freshLongLedger();
 
 const slugs = readdirSync(LONG_DIR)
   .filter((f) => f.endsWith(".json"))

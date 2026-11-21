@@ -1071,7 +1071,13 @@ jobs:
       # failed on every clip, 2026-11-14), and it has no drawtext for
       # the thumbnail either.
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && exit 0
+            echo "apt ffmpeg attempt $i failed - retrying in 20s (transient mirror flakes killed a run on 2026-11-19)"
+            sleep 20
+          done
+          exit 1
 
       - name: Fetch scene footage
         continue-on-error: true
@@ -1157,7 +1163,7 @@ jobs:
           # below refuse instantly - "cannot rebase: You have unstaged
           # changes" forever (killed tap-01 + tap-02 ledger commits).
           git checkout -- . || true
-          for i in 1 2 3 4 5; do
+          for i in 1 2 3 4 5 6 7 8; do
             git fetch origin main
             if git rebase origin/main; then
               git push && exit 0
@@ -1171,7 +1177,7 @@ jobs:
               git push && exit 0
             fi
             git rebase --abort || true
-            sleep $((i * 15))
+            sleep $((i * 20))
           done
           exit 1
 
@@ -1227,7 +1233,13 @@ jobs:
       # an mp4 at all (transcode normalize failed on every clip,
       # 2026-11-14) and lacks drawtext for the thumbnail.
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && exit 0
+            echo "apt ffmpeg attempt $i failed - retrying in 20s (transient mirror flakes killed a run on 2026-11-19)"
+            sleep 20
+          done
+          exit 1
 
       # Real motion b-roll per scene — enhancement only; stills fallback.
       - name: Fetch scene footage
@@ -1321,7 +1333,7 @@ jobs:
           git add src/suckhoe/published-long.json src/suckhoe/upload-blocked.json public/images/suckhoe-long/ src/suckhoe/long-form/${{ steps.pick.outputs.slug }}.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record long-form upload ${{ steps.pick.outputs.slug }} [skip ci]"
           git checkout -- . || true
-          for i in 1 2 3 4 5; do
+          for i in 1 2 3 4 5 6 7 8; do
             git fetch origin main
             if git rebase origin/main; then
               git push && exit 0
@@ -1335,7 +1347,7 @@ jobs:
               git push && exit 0
             fi
             git rebase --abort || true
-            sleep $((i * 15))
+            sleep $((i * 20))
           done
           exit 1
 
@@ -1364,7 +1376,13 @@ jobs:
         run: npm ci
 
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && exit 0
+            echo "apt ffmpeg attempt $i failed - retrying in 20s (transient mirror flakes killed a run on 2026-11-19)"
+            sleep 20
+          done
+          exit 1
 
       - name: Pick next episode missing its teaser Short
         id: pick
@@ -1397,7 +1415,7 @@ jobs:
           git add src/suckhoe/published-long.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Record teaser-ahead upload ${{ steps.pick.outputs.slug }} [skip ci]"
           git checkout -- . || true
-          for i in 1 2 3 4 5; do
+          for i in 1 2 3 4 5 6 7 8; do
             git fetch origin main
             if git rebase origin/main; then
               git push && exit 0
@@ -1410,7 +1428,7 @@ jobs:
               git push && exit 0
             fi
             git rebase --abort || true
-            sleep $((i * 15))
+            sleep $((i * 20))
           done
           exit 1
 
@@ -1445,7 +1463,13 @@ jobs:
       # --disable-filters (no boxblur/overlay/zoompan/drawtext/afade) —
       # teaser + FB reel builds need the full-featured Ubuntu binary.
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && exit 0
+            echo "apt ffmpeg attempt $i failed - retrying in 20s (transient mirror flakes killed a run on 2026-11-19)"
+            sleep 20
+          done
+          exit 1
 
       - name: Run pipeline doctor
         env:
@@ -1492,7 +1516,7 @@ jobs:
           git add src/suckhoe/pipeline-doctor.md src/suckhoe/published-long.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline doctor report + ledger reconciliation [skip ci]"
           git checkout -- . || true
-          for i in 1 2 3 4 5; do
+          for i in 1 2 3 4 5 6 7 8; do
             git fetch origin main
             if git rebase origin/main; then
               git push && exit 0
@@ -1508,7 +1532,7 @@ jobs:
               git push && exit 0
             fi
             git rebase --abort || true
-            sleep $((i * 15))
+            sleep $((i * 20))
           done
           # Same fail-loud rule as the watchdog: reconciliation that
           # never reaches origin is work that never happened.
@@ -1606,7 +1630,13 @@ jobs:
       # has no drawtext, so pending-thumbnail rebuilds here would emit
       # plain frames without it.
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && exit 0
+            echo "apt ffmpeg attempt $i failed - retrying in 20s (transient mirror flakes killed a run on 2026-11-19)"
+            sleep 20
+          done
+          exit 1
 
       - name: Sync regenerated thumbnails to live videos
         continue-on-error: true
@@ -1665,7 +1695,7 @@ jobs:
           git add --ignore-errors src/suckhoe/pipeline-watchdog.md src/suckhoe/upload-blocked.json src/suckhoe/long-form/ src/suckhoe/series-playlists.json src/suckhoe/thumb-sync.json src/suckhoe/published-long.json src/suckhoe/published.json src/suckhoe/pending-delete.json public/audio/suckhoe-long/ public/images/suckhoe-long/ public/captions/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Pipeline watchdog report + queue refill [skip ci]"
           git checkout -- . || true
-          for i in 1 2 3 4 5; do
+          for i in 1 2 3 4 5 6 7 8; do
             git fetch origin main
             if git rebase origin/main; then
               git push && exit 0
@@ -1679,7 +1709,7 @@ jobs:
               git push && exit 0
             fi
             git rebase --abort || true
-            sleep $((i * 15))
+            sleep $((i * 20))
           done
           # Topped-up audio, playlist map, reports - all die on the
           # runner if push never lands. exit 0 here was THE root cause
