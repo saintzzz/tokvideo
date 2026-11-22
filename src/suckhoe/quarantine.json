@@ -1,12 +1,8 @@
 {
   "quan-tai-troi-tap-03": {
     "kind": "black-gate",
-    "fails": 2,
+    "fails": 1,
     "lastRunId": 44729556085,
-    "lastFailAt": "2026-11-21T19:17:36.808Z",
-    "blocked": true,
-    "epMtime": 1795288601750.41,
-    "quarantinedAt": "2026-11-21T19:17:38.919Z",
-    "expiresAt": "2026-11-24T19:17:38.919Z"
+    "lastFailAt": "2026-11-22T01:20:23.711Z"
   }
 }
