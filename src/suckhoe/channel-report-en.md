@@ -1,4 +1,4 @@
-# Channel report — 2026-11-21
+# Channel report — 2026-11-22
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
@@ -13,13 +13,18 @@ Subscribers gained: 0
 Subscribers lost: 0
 Net subscriber change: 0
 
+## YPP monetization tracker
+
+Subscribers: 0/1000 — chưa đủ tốc độ (net 0.00/ngày)
+Watch hours 365d: 0/4000 — chưa đủ tốc độ (0.0 giờ/ngày)
+
 ## Funnel per video (last 28 days)
 
-| videoId | Views | WatchMin | AvgView(s) | AvgView% |
-|---|---|---|---|---|
-| 3dcnsv3-Aas | 4 | 0.0 | 1 | 1.9 |
-| dN9w4Ixoqes | 2 | 0.0 | 0 | 0.0 |
-| dElz6HMW_J0 | 1 | 0.0 | 0 | 0.0 |
+| videoId | Views | WatchMin | AvgView(s) | AvgView% | Subs+ |
+|---|---|---|---|---|---|
+| 3dcnsv3-Aas | 4 | 0.0 | 1 | 1.9 | 0 |
+| dN9w4Ixoqes | 2 | 0.0 | 0 | 0.0 | 0 |
+| dElz6HMW_J0 | 1 | 0.0 | 0 | 0.0 | 0 |
 
 Videos under 15% avg retention: 3/3 — low % means viewers abandon early (hook problem), not a click problem.
 
@@ -55,7 +60,7 @@ Videos with zero impressions: 0/10 — 0 means YouTube never surfaced it (distri
 | They met in the middle of the field, each with a sack on his shoulder - Part 2 #Shorts | 10 | 0 | 0 | 2026-09-28 |
 | Two brothers split the harvest in half - then the piles stopped making sense - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-28 |
 | Why a turnip became a pumpkin - the end of Stingy Jack - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
-| Stingy Jack tricked the Devil himself - Part 1 #Shorts | 1 | 0 | 0 | 2026-09-27 |
+| Stingy Jack tricked the Devil himself - Part 1 #Shorts | 2 | 0 | 0 | 2026-09-27 |
 | By square 40 the treasurers went pale - the math of the rice chessboard - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
 | The inventor asked for 'just rice' - the whole court laughed - Part 1 #Shorts | 2 | 0 | 0 | 2026-09-27 |
 
