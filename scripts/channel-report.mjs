@@ -209,11 +209,13 @@ async function main() {
         lines.push("");
       }
 
-      // Shorts -> long conversion: long videos get ~0 browse/suggested
-      // impressions on a small channel, so the Shorts feed is their ONLY
-      // discovery path. Counts SHORTS-sourced views per long video so the
-      // weekly review can see whether pinned comments + desc links pull
-      // anyone across — the metric the whole 1:1 pair strategy lives on.
+      // Teaser -> long conversion. Counts SHORTS-sourced views per long
+      // video, but note the blind spot: long videos are not distributed
+      // in the Shorts feed, and taps on pinned-comment/description links
+      // attribute to other source types (YT_OTHER_PAGE, YT_PLAYLIST...),
+      // so the Shorts column stays ~0 even when the bridge works. Reach
+      // data (2026-11-22) shows longs DO get browse/suggested impressions
+      // - the per-source breakdown below shows where views actually enter.
       try {
         const ledger = JSON.parse(
           await readFile(
@@ -241,28 +243,34 @@ async function main() {
               filters: `video==${vid}`,
             });
             for (const [source, views] of src.data.rows ?? []) {
-              const b = (byVideo[vid] ??= { total: 0, shorts: 0 });
+              const b = (byVideo[vid] ??= { total: 0, shorts: 0, sources: {} });
               b.total += views;
               if (/shorts/i.test(String(source))) b.shorts += views;
+              b.sources[String(source)] = (b.sources[String(source)] ?? 0) + views;
             }
           }
           const vids = Object.keys(byVideo);
           if (vids.length > 0) {
             lines.push(`## Shorts -> Long funnel (last 28 days)`);
             lines.push("");
-            lines.push("| videoId | Total views | From Shorts | Funnel % |");
-            lines.push("|---|---|---|---|");
+            lines.push("| videoId | Total views | From Shorts | Funnel % | Top sources |");
+            lines.push("|---|---|---|---|---|");
             let tViews = 0, tShorts = 0;
             for (const vid of vids) {
               const b = byVideo[vid];
               tViews += b.total;
               tShorts += b.shorts;
               const pct = b.total > 0 ? ((b.shorts / b.total) * 100).toFixed(1) : "0.0";
-              lines.push(`| ${vid} | ${b.total} | ${b.shorts} | ${pct}% |`);
+              const top = Object.entries(b.sources)
+                .sort((a, z) => z[1] - a[1])
+                .slice(0, 3)
+                .map(([s, v]) => `${s} ${b.total > 0 ? ((v / b.total) * 100).toFixed(0) : 0}%`)
+                .join(", ");
+              lines.push(`| ${vid} | ${b.total} | ${b.shorts} | ${pct}% | ${top} |`);
             }
             lines.push("");
             const pct = tViews > 0 ? ((tShorts / tViews) * 100).toFixed(1) : "0.0";
-            lines.push(`Funnel total: ${tShorts}/${tViews} (${pct}%) of long-video views arrived via the Shorts feed — pin comments and teaser links are the only lever on this number.`);
+            lines.push(`Funnel total: ${tShorts}/${tViews} (${pct}%) of long-video views arrived via the Shorts feed. Pinned-comment and description-link taps land under other source types, so watch the Top sources column - not this number - to see whether the teaser bridge pulls anyone across.`);
             lines.push("");
           }
         }

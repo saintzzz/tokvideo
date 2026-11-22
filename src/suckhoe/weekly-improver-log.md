@@ -1,5 +1,62 @@
 # Weekly Improver Log - Truyen Ma Dai Ky
 
+## 2026-11-22 (third run)
+
+**Data seen:**
+- channel-report-vi (28d): 9292 views (was 5757), 1631 watch-min (was 1115),
+  +39 net subs (was +25), 294 subs. Third consecutive week up.
+- Retention recovered: 3/13 videos under 15% avg (was 5/7 last week). The
+  2026-11-11 beat-1 hook fix is landing - den-dau-xanh teasers hold 21-36%,
+  quan-tai-troi longs 15.6-21.9% at 110-132s avg view. No further hook
+  tightening warranted.
+- New bottleneck is long-form CTR. Longs now get real browse/suggested
+  impressions (quan-tai-troi-tap-01 2911, tap-02 1752, den-dau-xanh-tap-02
+  825, tap-01 368) but convert at 0.0-1.7% while teasers sit at 2.5-8.5%.
+- Root cause found on inspection: the live long thumbnails for the two
+  arcs with the most impressions carry a visible tofu box (missing glyph)
+  at the end of headline line 1 - "Bai Tha[]", "Ong[]", "Doi[]", "Vang[]".
+  The drawtext fix (per-line textfiles, 7734ed4, 2026-11-18) postdates all
+  these uploads; only den-dau-xanh-tap-02 was ever re-rendered. Confirmed
+  defect on 8 thumbs: den-dau-xanh taps 01/03/04/05, chiec-khan-trang taps
+  02/03/04/05.
+- The "Shorts -> Long funnel" metric is structurally blind: it counts
+  SHORTS-sourced views on longs, but longs are never distributed in the
+  Shorts feed and pinned-comment taps attribute to other source types.
+  Its own premise comment ("long videos get ~0 browse/suggested
+  impressions") is now contradicted by the reach data. The query already
+  fetches every source type but threw the breakdown away.
+
+**Decision:** one theme - long-form discovery. Repair the visibly broken
+thumbnails that sit on the highest-impression videos, and make the funnel
+table report where long views actually enter so next week's data is
+actionable.
+
+**Changes:**
+- Regenerated `thumb-composed.jpg` locally (full ffmpeg + Arial) for the 8
+  confirmed-defect thumbs with the current make-long-thumbnail.mjs. All 8
+  verified visually - identical layout, boxes gone. The watchdog's
+  fix-thumbnails md5-diff picks these up and pushes them to YouTube on its
+  next tick (<=6 pushes/run, ~2 watchdog cycles to cover all 8).
+- `scripts/channel-report.mjs`: funnel block now keeps the full
+  insightTrafficSourceType breakdown it already fetched and prints a
+  "Top sources" column per long video; summary line explains the Shorts
+  column's blind spot; stale "only discovery path" comment updated.
+
+**Not changed, and why:**
+- Titles: keyword-first format ("Truyen Ma Co Thay | ...") vs premise-first
+  is a plausible CTR factor, but teaser-vs-long CTR comparison is confounded
+  by different impression surfaces (feed vs browse). Fix the unambiguous
+  rendering defect first; revisit title order only if CTR stays <1% after
+  repaired thumbs have had a week in the field.
+- Hooks/retention: improving on its own (3/13 vs 5/7 under 15%).
+- Cadence/render.yml: teaser views still spiky (0-943), subs rising, no
+  upload-limit errors - no evidence for a slot change.
+- quan-tai-troi-tap-01's murky abstract still (2911 imp, 0.58% CTR - worst
+  of all) has no tofu but a weak subject; changing gen-thumb-visuals
+  guidance without more data is premature. Note it for next week.
+- Retired jobs untouched; ledgers only appended by upload scripts;
+  thumb-sync.json left alone (watchdog owns it).
+
 ## 2026-11-15 (second run)
 
 **Data seen:**
