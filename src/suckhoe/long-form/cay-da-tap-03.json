@@ -30,7 +30,8 @@
     "jar-sealing": "a shaman sealing a large terracotta jar with black wax and talisman papers at night, villagers standing back terrified, photorealistic horror",
     "planting-tree": "men planting a small banyan sapling over a burial pit at dawn, solemn faces, photorealistic",
     "wealthy-house": "a large prosperous village house at dusk, an old patriarch silhouette in the doorway, photorealistic",
-    "council-dark": "men whispering in a dark corner of the communal house at night, conspiratorial, photorealistic"
+    "council-dark": "men whispering in a dark corner of the communal house at night, conspiratorial, photorealistic",
+    "banyan-night": "a massive old banyan tree at night, a buried earthen jar half-exposed at its twisted roots, torn red cloth and scattered talisman papers on freshly sunken earth, cold moonlight, photorealistic horror"
   },
   "beats": [
     {
@@ -118,7 +119,8 @@
     "jar-sealing": "images/suckhoe-long/cay-da-tap-03/jar-sealing.jpg",
     "planting-tree": "images/suckhoe-long/cay-da-tap-03/planting-tree.jpg",
     "wealthy-house": "images/suckhoe-long/cay-da-tap-03/wealthy-house.jpg",
-    "council-dark": "images/suckhoe-long/cay-da-tap-03/council-dark.jpg"
+    "council-dark": "images/suckhoe-long/cay-da-tap-03/council-dark.jpg",
+    "banyan-night": "images/suckhoe-long/cay-da-tap-03/banyan-night.jpg"
   },
   "locale": "vi",
   "thumbTitle": "BÓNG TRONG CÂY"
