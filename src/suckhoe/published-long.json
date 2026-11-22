@@ -903,14 +903,16 @@
     "publishedAt": "2026-11-22T01:43:27.056Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzbtPkWVJ_1n3sS2V14AaABAg"
   },
   "cay-da-tap-02": {
     "videoId": "zY7OmJfOoGM",
     "publishedAt": "2026-11-22T02:52:36.014Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgxfRWPZoORD-fImF-x4AaABAg"
   },
   "nguoi-di-dan-mua-tap-01-teaser": {
     "videoId": "8TFs-MCHo9A",
@@ -923,6 +925,7 @@
     "publishedAt": "2026-11-22T10:32:11.087Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "Ugz7_J-wwiZJcK4m_R94AaABAg"
   }
 }
