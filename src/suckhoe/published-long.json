@@ -927,5 +927,12 @@
     "privacyStatus": "public",
     "thumbnailPending": false,
     "pinnedCommentId": "Ugz7_J-wwiZJcK4m_R94AaABAg"
+  },
+  "cay-da-tap-04": {
+    "videoId": "CoW_SFCFMNU",
+    "publishedAt": "2026-11-22T11:41:43.260Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
