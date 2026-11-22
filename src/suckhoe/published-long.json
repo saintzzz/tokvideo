@@ -897,5 +897,12 @@
     "publishedAt": "2026-11-21T20:58:49.361Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "cay-da-tap-01": {
+    "videoId": "GlPSHFR7NJ8",
+    "publishedAt": "2026-11-22T01:43:27.056Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
