@@ -959,13 +959,15 @@
     "publishedAt": "2026-11-23T01:54:42.356Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzT6oPv0HmjBX24iN54AaABAg"
   },
   "ngo-mo-co-tap-02": {
     "videoId": "u6ibslhQgoo",
     "publishedAt": "2026-11-23T03:09:37.875Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgyQizml1yy5Eafu5mV4AaABAg"
   }
 }
