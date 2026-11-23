@@ -1,8 +1,8 @@
-# Channel report — 2026-11-22
+# Channel report — 2026-11-23
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
-Total views: 30
+Total views: 31
 Total videos: 14
 
 ## Last 28 days (channel-wide)
@@ -32,13 +32,13 @@ Videos under 15% avg retention: 3/3 — low % means viewers abandon early (hook 
 
 | videoId | Impressions | CTR% |
 |---|---|---|
-| 3dcnsv3-Aas | 115 | 1.74 |
-| 1ook5C5HtBs | 36 | 0.00 |
-| dElz6HMW_J0 | 27 | 0.00 |
+| 3dcnsv3-Aas | 96 | 2.08 |
+| 1ook5C5HtBs | 34 | 0.00 |
+| dElz6HMW_J0 | 24 | 0.00 |
 | dN9w4Ixoqes | 19 | 0.00 |
 | Vf361_VAlJc | 11 | 0.00 |
+| e1PQlrGSovM | 6 | 0.00 |
 | W2b3hBVNfic | 4 | 0.00 |
-| e1PQlrGSovM | 4 | 0.00 |
 | 4qS5HKBB3-M | 2 | 0.00 |
 | hU3zmJBJ3UM | 2 | 0.00 |
 | Jr8ifVp_bjo | 1 | 0.00 |
