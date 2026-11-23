@@ -953,5 +953,12 @@
     "publishedAt": "2026-11-22T21:09:37.943Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "ngo-mo-co-tap-01": {
+    "videoId": "cbRy2BQjGw0",
+    "publishedAt": "2026-11-23T01:54:42.356Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
