@@ -859,7 +859,8 @@
     "videoId": "QeWqBs4zqL4",
     "publishedAt": "2026-11-20T22:19:01.292Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugxs3zNa1gbfK8_bmQd4AaABAg"
   },
   "cau-khi-tap-01": {
     "videoId": "Ugpn5_nqrWo",
@@ -981,14 +982,14 @@
     "publishedAt": "2026-11-23T12:54:10.065Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "pinnedCommentId": "UgzGA5GoI7gPBikSzP54AaABAg"
   },
   "ngo-mo-co-tap-04": {
     "videoId": "DIMpYwMEZQg",
     "publishedAt": "2026-11-23T18:52:44.884Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": true
+    "pinnedCommentId": "UgwI63A5tCstBhtiPEV4AaABAg"
   },
   "ngo-mo-co-tap-05": {
     "videoId": "Fi2g3xjInOU",
