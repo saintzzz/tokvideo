@@ -897,7 +897,8 @@
     "videoId": "Fi2g3xjInOU",
     "publishedAt": "2026-11-21T20:58:49.361Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgwWnyom7ZUxbD4ZBHR4AaABAg"
   },
   "cay-da-tap-01": {
     "videoId": "GlPSHFR7NJ8",
@@ -919,7 +920,8 @@
     "videoId": "8TFs-MCHo9A",
     "publishedAt": "2026-11-22T07:14:17.376Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgzGFSGgN0W1wP17sPp4AaABAg"
   },
   "cay-da-tap-03": {
     "videoId": "-5JNIO9PZd8",
@@ -994,11 +996,13 @@
   "ngo-mo-co-tap-05": {
     "videoId": "Fi2g3xjInOU",
     "publishedAt": "2026-11-21T20:59:19Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "UgxQ07ejcuUr-3OseaN4AaABAg"
   },
   "nguoi-di-dan-mua-tap-01": {
     "videoId": "8TFs-MCHo9A",
     "publishedAt": "2026-11-22T07:14:45Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "Ugy8Wl9bzo54Gg7tr0V4AaABAg"
   }
 }
