@@ -93,6 +93,12 @@ on:
     # 3 long + 3 teaser) until channel-report shows teaser views back
     # above ~100/video consistently, then restore 6.
     - cron: "30 22,6,12 * * *"
+    # Backup arc-start slot (2026-11-24: GitHub dropped the 22:30 cron
+    # twice in 2 weeks — the second time cost the whole morning window
+    # and the arc started ~10h late). Fires at 06:45 VN, still inside
+    # the weekday arc-start window; the pick step below stands down
+    # whenever the primary slot actually produced a run.
+    - cron: "45 22 * * *"
     # Weekend boost (owner directive 2026-11-14): viewers are off work
     # Sat-Sun so two extra slots (09:30 + 16:30 VN) take weekends to
     # 5 long + 5 teaser/day, evenly spaced ~4h apart to stay under the
@@ -1187,10 +1193,11 @@ jobs:
   # scripts/next-long-form-slug.mjs and exits quietly when every
   # episode in src/suckhoe/long-form/ already has a ledger videoId.
   suckhoe-long-next:
-    if: github.event_name == 'schedule' && (github.event.schedule == '30 22,6,12 * * *' || github.event.schedule == '30 2,9 * * 6,0')
+    if: github.event_name == 'schedule' && (github.event.schedule == '30 22,6,12 * * *' || github.event.schedule == '30 2,9 * * 6,0' || github.event.schedule == '45 22 * * *')
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
     concurrency:
       group: suckhoe-long-publish
     steps:
@@ -1208,7 +1215,26 @@ jobs:
 
       - name: Pick next unpublished long-form episode
         id: pick
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SCHEDULE: ${{ github.event.schedule }}
         run: |
+          # Backup slot only: the 22:30 primary was either dropped or
+          # fired — any render.yml run created since 21:45 UTC answers
+          # which (delay is always <75min; only this cron lives in the
+          # 21:45-23:45 window). A dropped slot yields an empty list.
+          if [ "$SCHEDULE" = "45 22 * * *" ]; then
+            SINCE=$(date -u -d 'today 21:45' +%FT%TZ)
+            OTHER=$(gh run list -w render.yml -L 15 --json createdAt,databaseId \
+              --jq --arg s "$SINCE" --arg me "$GITHUB_RUN_ID" \
+              '[.[] | select(.databaseId != ($me | tonumber) and .createdAt > $s)] | length')
+            if [ "$OTHER" -gt 0 ]; then
+              echo "Backup slot: primary 22:30 run fired - standing down."
+              echo "slug=" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Backup slot: no 22:30 run exists - acting as arc-start."
+          fi
           SLUG=$(node scripts/next-long-form-slug.mjs)
           echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
           if [ -z "$SLUG" ]; then echo "No unpublished long-form episode left."; fi
