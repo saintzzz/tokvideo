@@ -201,10 +201,13 @@ try {
       items.push(...(page.data.items || []));
       pageToken = page.data.nextPageToken;
     } while (pageToken);
+    // Whole-line match: ep:<slug> is a prefix of ep:<slug>-teaser, so a
+    // substring test ledgers the teaser Short as the long (2026-11-25:
+    // nguoi-di-dan-mua tap-01..04 swallowed by their own teasers).
     const dup = items.find(
       (i) =>
         (i.snippet.title || "").normalize("NFC") === title.normalize("NFC") ||
-        (i.snippet.description || "").includes(marker)
+        (i.snippet.description || "").split(/\r?\n/).some((l) => l.trim() === marker)
     );
     if (dup) {
       const vid = dup.snippet.resourceId.videoId;

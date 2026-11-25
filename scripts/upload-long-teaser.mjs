@@ -133,10 +133,12 @@ try {
       items.push(...(page.data.items || []));
       pageToken = page.data.nextPageToken;
     } while (pageToken);
+    // Whole-line match — same substring hazard as the long uploader
+    // (ep:<slug> inside ep:<slug>-teaser).
     const dup = items.find(
       (i) =>
         (i.snippet.title || "").normalize("NFC") === title.normalize("NFC") ||
-        (i.snippet.description || "").includes(marker)
+        (i.snippet.description || "").split(/\r?\n/).some((l) => l.trim() === marker)
     );
     if (dup) {
       const vid = dup.snippet.resourceId.videoId;
