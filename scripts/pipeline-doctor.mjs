@@ -140,6 +140,17 @@ if (youtube) {
           ledgerDirty = true;
           fixed.push(`Removed dead ledger entry "${key}" — episode re-queues on next tick.`);
         }
+      } else if (!isFbKey(key) && isTeaserKey(key) !== (s.title || "").includes("#Shorts")) {
+        // Ledger entry points at the wrong kind of video — the dedupe
+        // substring bug recorded a long's videoId from its own teaser
+        // Short (ngo-mo-co-tap-05, nguoi-di-dan-mua-tap-01..04) or a
+        // teaser's from the long. The real upload never happened, so
+        // drop the entry and let the picker re-queue it.
+        findings.push(`Ledger "${key}" -> ${entry.videoId} is a ${s.title?.includes("#Shorts") ? "Short" : "long-form"} video — ledger type mismatch.`);
+        delete ledger[key];
+        deletedKeys.add(key);
+        ledgerDirty = true;
+        fixed.push(`Removed mis-typed ledger entry "${key}" (${entry.videoId}) — episode re-queues on next tick.`);
       } else if (s.privacy !== "public" && !isTeaserKey(key) && !isFbKey(key)) {
         findings.push(`Ledger "${key}" -> ${entry.videoId} is ${s.privacy}, not public.`);
         // Self-heal: episodes uploaded before the public-by-default var
