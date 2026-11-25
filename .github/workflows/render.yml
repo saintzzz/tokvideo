@@ -1614,6 +1614,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           AI_MODEL: ${{ vars.AI_MODEL }}
+          # Keep ~2 arcs in reserve so the teaser-ahead pool never runs
+          # dry between arcs — the 2026-11-24/25 Shorts gap happened
+          # because every unpublished episode already had a live teaser.
+          MIN_QUEUE: "10"
         run: node scripts/queue-refill.mjs --write
 
       - name: Top up missing beat audio for unpublished episodes
