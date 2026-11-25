@@ -991,5 +991,12 @@
     "publishedAt": "2026-11-21T20:59:19Z",
     "locale": "vi",
     "pinnedCommentId": "UgxQ07ejcuUr-3OseaN4AaABAg"
+  },
+  "nguoi-di-dan-mua-tap-01": {
+    "videoId": "T9QK8aXsDBw",
+    "publishedAt": "2026-11-25T15:25:37.872Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
