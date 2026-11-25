@@ -1596,6 +1596,7 @@ jobs:
       # it automatically).
       - name: Drain pending deletions
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1607,6 +1608,7 @@ jobs:
 
       - name: Refill story queue when below 5 episodes
         continue-on-error: true
+        if: always()
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -1616,6 +1618,7 @@ jobs:
 
       - name: Top up missing beat audio for unpublished episodes
         continue-on-error: true
+        if: always()
         env:
           RESUME: "1"
           GCP_TTS_API_KEY: ${{ secrets.GCP_TTS_API_KEY }}
@@ -1628,10 +1631,12 @@ jobs:
       # generic scenery still).
       - name: Generate missing scary thumbnail stills
         continue-on-error: true
+        if: always()
         run: node scripts/gen-thumb-visuals.mjs
 
       - name: Sync per-series playlists (Shorts -> long-form funnel)
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1643,6 +1648,7 @@ jobs:
 
       - name: Repair damaged live teaser titles
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1656,6 +1662,7 @@ jobs:
       # has no drawtext, so pending-thumbnail rebuilds here would emit
       # plain frames without it.
       - name: Install ffmpeg
+        if: always()
         run: |
           for i in 1 2 3; do
             sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && exit 0
@@ -1666,6 +1673,7 @@ jobs:
 
       - name: Sync regenerated thumbnails to live videos
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1677,6 +1685,7 @@ jobs:
 
       - name: Pin comments on videos missing them
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1691,6 +1700,7 @@ jobs:
       # nothing verified live metadata. Repaired in place where safe.
       - name: Verify live upload quality
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
@@ -1702,6 +1712,7 @@ jobs:
 
       - name: Delete duplicate uploads not in the ledger
         continue-on-error: true
+        if: always()
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
