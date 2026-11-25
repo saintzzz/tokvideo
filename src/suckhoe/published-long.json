@@ -930,7 +930,8 @@
     "videoId": "IjIO_bkPuT8",
     "publishedAt": "2026-11-22T11:45:03.029Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgytG9kq-yuORFidXSp4AaABAg"
   },
   "nguoi-di-dan-mua-tap-03-teaser": {
     "videoId": "Cq_eUS5HYdM",
@@ -985,7 +986,8 @@
     "publishedAt": "2026-11-25T15:25:37.872Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "Ugz6853yN-_2Y3xWcfN4AaABAg"
   },
   "chuong-chua-tap-01-teaser": {
     "videoId": "dmvhYvJV8h8",
@@ -1003,7 +1005,8 @@
     "publishedAt": "2026-11-25T17:49:11.419Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwT82rDP5eLUlDQf6R4AaABAg"
   },
   "quan-tai-troi-tap-03-teaser": {
     "videoId": "GpOab4-0PJ4",
