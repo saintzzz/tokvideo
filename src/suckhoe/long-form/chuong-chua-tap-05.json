@@ -1,0 +1,133 @@
+{
+  "id": "chuong-chua-tap-05",
+  "arc": "chuong-chua",
+  "arcTitle": "CHUÔNG CHÙA ĐÊM",
+  "episode": 5,
+  "slug": "chuong-chua-tap-05",
+  "title": "Chuông Chùa Đêm - Tập 5: Hồi Chuông Cuối Gọi Đúng Tên Ai?",
+  "description": "Giữa sân chùa lúc nửa đêm, Thảo mở cuốn sổ công đức, buộc ông Phúc đối chất trước những người từng vu oan mẹ mình. Khi lời thú tội được nói ra và món nợ cứu đói được trả lại, người đàn bà ôm gà mới chờ được ngày mang tên mình trên bia mộ. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "chuong-chua"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "An elderly Vietnamese man's terrified open mouth with wet black chicken feathers caught between his lips",
+    "A bloodied fingertip pinning an old charity ledger as black grave mud seeps through its handwritten pages",
+    "A spectral Vietnamese mother's muddy hands opening to release a translucent hen"
+  ],
+  "thumbTitle": "GỌI ĐÚNG TÊN TÔI",
+  "scenePrompts": {
+    "ledger": "Photorealistic cinematic close-up of an aged Vietnamese charity ledger spread on broken red courtyard bricks at midnight, black mud seeping between handwritten pages, a Vietnamese woman's bloodied fingertip pinning one page, trembling oil lamp illumination, blurred elderly man kneeling opposite, rural Vietnamese folk horror, realistic textures, restrained supernatural atmosphere, 16:9, no overlay text.",
+    "mud_feet": "Photorealistic cinematic low-angle shot in a ruined rural Vietnamese pagoda courtyard at midnight, an elderly Vietnamese man kneeling as black mud rises around his wooden clogs and knees, behind him stand the muddy bare feet of a spectral woman in a faded brown blouse holding a hen, surrounding bricks remain dry, oil lamp lighting, realistic anatomy, 16:9, no text.",
+    "witnesses": "Photorealistic cinematic medium shot of elderly Vietnamese villagers confronting an old accusation document in a ruined pagoda courtyard, an elderly woman leaning on a bamboo cane kneels beside another elderly woman holding an oil lamp, a Vietnamese woman in her early thirties holds the papers, deeply ashamed faces, midnight folk horror atmosphere, 16:9, no overlay text.",
+    "nail": "Photorealistic cinematic macro shot of a long rusty iron nail resting across an old handwritten accusation document, an elderly Vietnamese woman's wrinkled fingers beside it, her bamboo cane and dark brown sleeve visible, warm oil lamp light against cold midnight shadows, rural Vietnamese pagoda rubble, 16:9, no overlay text.",
+    "confession": "Photorealistic cinematic close portrait of a frightened elderly Vietnamese man confessing on his knees, mud staining his trousers, a resolute Vietnamese daughter in her early thirties sitting at his eye level, a faded brown female apparition holding a hen barely visible behind his shoulder, realistic weathered faces, oil lamp chiaroscuro, 16:9, no text.",
+    "bell": "Photorealistic cinematic ground-level view of a large old bronze Buddhist bell lying among collapsed red bricks and broken timber, the bell has no striker, villagers and a young Vietnamese man recording testimony on paper in the background, a plainly dressed commune official witnessing the confession, midnight oil lamps, rural Vietnam, 16:9, no text.",
+    "restitution": "Photorealistic cinematic interior of a rural Vietnamese communal house in morning light, elderly villagers publicly returning money and recording names in a ledger, a grieving Vietnamese daughter seated beside a commune official, an elderly woman opening a betel pouch containing gold earrings, a pot of mung bean rice porridge nearby, sober natural lighting, 16:9, no overlay text.",
+    "grave": "Photorealistic cinematic scene beside a newly built modest grave in rural Vietnam, a Vietnamese daughter in her early thirties kneeling and reading a signed statement, an elderly female storyteller shielding a candle, a plate of mung bean sticky rice, clear water and red ixora flowers on the grave, villagers standing behind in remorse, engraved headstone without legible lettering, 16:9, no overlay text.",
+    "release": "Photorealistic cinematic supernatural farewell beside a collapsed Vietnamese pagoda bell tower, a spectral Vietnamese mother in a faded brown blouse gently lowering a translucent brown hen onto broken courtyard bricks, her wooden clogs beneath her, both figures dissolving softly into the air, her adult daughter watching from beside a fresh grave, quiet intimate composition, 16:9, no text.",
+    "silent_bell": "Photorealistic cinematic final night inside a modest rural Vietnamese home, a woman in her early thirties asleep beside her mother's memorial portrait and a small bowl of rice, an elderly Vietnamese woman gently closing the wooden door, distant bronze pagoda bell visible beneath a temporary shelter through the window, peaceful natural darkness, warm candlelight, 16:9, no text."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "ledger",
+      "caption": "Cuốn sổ bật mở giữa bùn",
+      "text": "Cuốn sổ trước mặt ông Phúc bật mở, trào ra bùn đen lạnh ngắt. Từ đống gạch, quả chuông mất dùi bỗng ngân rung từng chiếc răng tôi. Thảo ghì trang giấy, móng tay bật máu ngay trước hàng người quỳ lạy. Dưới chân chị, dấu chân gà ướt hiện thành vòng quanh ông Phúc."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mud_feet",
+      "caption": "Ai đang đứng sau lưng ông?",
+      "text": "Ai đang đứng sau ông Phúc, sao những người quỳ bỗng cúi rạp xuống? Tôi thấy hai bàn chân bùn thò dưới vạt áo nâu bạc phếch. Thảo hỏi ngay: trước khi chuông dứt, ông còn chối chuyện giết mẹ? Ông Phúc há miệng, nhưng tiếng gà nghẹn lại giữa cổ họng nhăn nhúm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "witnesses",
+      "caption": "Bà nội bước ra nhận tội",
+      "text": "Bà nội Lâm chống gậy bước khỏi đám người làng Đông, quỳ cạnh tôi. Bà đặt chiếc đinh khóa gác xuống trang sổ đang run trên gạch. Tôi choàng tay đỡ, nghe tiếng nấc nghẹn giữa hai hàm răng móm mém. Thảo nghiêng ngọn đèn dầu sát những chữ ký vu oan mẹ mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ledger",
+      "caption": "Chữ ký không thể chối",
+      "text": "Tôi cầm ngọn đèn cho Thảo lật tới trang tiền cứu đói, chỗ tên ông Phúc nằm ngay dưới hàng người góp của. Chị đọc khoản nào, bác Năm từng coi kho lại đứng lên xác nhận khoản ấy, rồi chỉ sang tờ giấy tố Hạnh có chữ ký của mình. Ông Phúc bảo giấy mục dễ bị sửa, nhưng dấu tay đỏ của ông còn nguyên dưới cả hai tờ, nằm cạnh nét chữ mà người trong làng đều nhận ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "witnesses",
+      "caption": "Bát gạo đổi lấy im lặng",
+      "text": "Bác Năm kéo vạt áo che mặt, thú nhận đã nhận hai thúng gạo để khai rằng mình trông thấy Hạnh lấy tiền. Tôi nghe bà Sáu bán bánh ú nói tiếp, bữa ấy bà chỉ thấy Hạnh ôm gà đi xin gạo, nhưng vẫn điểm chỉ vì ông Phúc dọa đòi món nợ mùa giáp hạt. Những người còn lại lần lượt bước ra, chẳng ai dám núp sau câu không biết nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nail",
+      "caption": "Chiếc đinh của bà nội",
+      "text": "Bà nội Lâm nắm lấy tay tôi, bàn tay khô đến nỗi cạnh móng cấn đau cả da. Bà nói mình nghe Hạnh kêu cứu dưới gác, còn nghe tiếng ông Phúc dặn cứ về đi, nhưng sáng sau vẫn đóng đinh khóa cửa theo lời ông. Thảo hỏi sao bà không gọi người cứu mẹ, bà cúi xuống nhận rằng mình sợ mất phần gạo dành cho đứa con đang đói, rồi im luôn ba mươi năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mud_feet",
+      "caption": "Bùn đã chạm đến đầu gối",
+      "text": "Tôi nhìn xuống thì bùn đã ngập đôi guốc ông Phúc, dù sân chùa chỗ chúng tôi đứng vẫn khô rang. Mỗi lần ông lắc đầu, bùn lại dâng thêm một chút, còn con gà trong tay bóng đàn bà cứ mổ vào khoảng không trước ngực ông. Thảo ngồi xuống ngang mặt ông, bảo những người còn sống đều đã nói rồi, giờ ông phải trả lời mẹ chị đã chết thế nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession",
+      "caption": "Ông phải gọi đúng tên bà",
+      "text": "Ông Phúc thều thào nhận đã giữ tiền cứu đói, nhưng vẫn gọi Hạnh là con đàn bà ăn cắp đến quấy chùa. Một tiếng chuông dội lên khiến tôi phải ôm lấy tai, còn Thảo gạt tay ông khỏi mép cuốn sổ, bắt ông gọi đúng tên mẹ mình. Mãi lúc đôi bàn chân bùn phía sau dịch sát tới, ông mới bật ra hai tiếng cô Hạnh, rồi khóc mà chẳng có giọt nước mắt nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession",
+      "caption": "Con gà mái cuối cùng",
+      "text": "Tôi nghe ông kể Hạnh mang con gà mái cuối cùng tới đổi phần gạo cho Thảo, khi con bé đã đói lả hai ngày. Hạnh thấy cuốn sổ, hỏi vì sao có tiền mà kho vẫn khóa, rồi nhất quyết đòi gọi dân làng tới. Ông nhận chính mình đã giết Hạnh trong lúc ngăn cô ra sân, giấu xác dưới nền gác, rồi lấy chuyện mất tiền làm cớ vu cho cô ăn trộm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bell",
+      "caption": "Lời nhận trước hồi chuông cuối",
+      "text": "Ông Phúc chắp tay về phía Thảo, nhận đã dựng chuyện đuổi Hạnh khỏi làng để không ai tìm người dưới nền chùa. Tôi nghe ông nói hết câu chính tôi giết cô Hạnh thì tiếng chuông đang dồn bỗng chậm lại, bùn quanh đầu gối cũng thôi sủi. Lâm ghi từng lời, để ông cùng những người làm chứng ký nhận trước mặt cán bộ xã được mời tới, ngay khi dư âm cuối còn rung dưới gạch."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "restitution",
+      "caption": "Trả lại từng phần cứu đói",
+      "text": "Sáng ấy, tôi đem nồi cháo đậu xanh ra đình, thấy Thảo ngồi bên cán bộ ghi lại từng lời khai của đêm trước. Ông Phúc bị đưa đi, còn gia đình ông phải kê phần tiền đã chiếm; những nhà từng nhận gạo đổi lời khai cũng góp trả phần mình. Bà nội Lâm mang cả đôi bông tai cất trong túi trầu, nhưng Thảo chỉ xin bà đứng trước dân làng nói lại sự thật, đừng giấu thêm điều gì."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "restitution",
+      "caption": "Những cái tên được đọc lại",
+      "text": "Tôi ngồi dưới mái đình nghe bà nội Lâm đọc rõ tên Hạnh, rồi nhận từng lời khai năm xưa là giả trước mặt con cháu các nhà. Số tiền thu hồi được ghi công khai, chia trả cho những người bị mất phần cứu đói; nhà nào đã khuất thì trao tận tay người thân. Bà Sáu bưng bát cháo tới trước Thảo, khóc xin lỗi, còn chị chỉ đỡ bát bằng hai tay, mãi mới nuốt nổi một thìa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave",
+      "caption": "Trên bia đã có tên mẹ",
+      "text": "Đến ngày đưa hài cốt Hạnh về ngôi mộ mới, tôi theo Thảo mang một đĩa xôi đậu, chén nước trong và nhành bông trang hái bên hàng rào. Chiếc vòng còn mắc nơi cổ tay được đặt theo bà, còn tên trên bia do chính Thảo dò từng dấu cho người thợ khắc. Những người từng ký giấy vu oan đứng đủ trước mộ, bà nội Lâm cũng chống gậy tới, tự tay vun nắm đất đầu tiên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave",
+      "caption": "Thảo đọc lời minh oan",
+      "text": "Tôi che ngọn nến cho Thảo mở tờ lời chứng đã có đủ chữ ký, đọc rành rọt rằng mẹ chị chưa từng lấy tiền chùa. Chị đọc cả chuyện con gà mái, phần gạo bị giữ và cái chết oan dưới gác chuông, không lược tên một người có lỗi nào. Đọc xong, chị quỳ sát bia, gọi mẹ ơi, từ nay con được cúng cơm mẹ bằng đúng tên rồi, khiến tôi phải quay mặt lau nước mắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "release",
+      "caption": "Bà buông con gà xuống",
+      "text": "Từ dưới gác chuông đổ vang lên một tiếng gà cục tác, rõ đến nỗi tôi nghe cả tiếng móng cào trên gạch. Bóng Hạnh đứng đó, vạt áo nâu đã thôi nhỏ bùn, hai tay chậm rãi hạ con gà xuống khoảng sân trống. Nó rũ cánh bước qua đôi guốc của bà, rồi cả con vật lẫn bóng người nhạt dần; Thảo gọi mẹ lần nữa, chỉ còn mùi đất mới theo gió tới bên mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "silent_bell",
+      "caption": "Đêm ấy, chuông đã được yên",
+      "text": "Những đêm sau, tôi vẫn thức qua nửa đêm cùng Thảo, nghe chị xới một chén cơm đặt trước di ảnh mẹ. Quả chuông nằm dưới mái che tạm ngoài chùa im suốt, những dấu chân gà cũng chẳng trở lại bất cứ nhà nào. Một bữa, chị ngủ thiếp bên bàn, bàn tay còn giữ chiếc khăn lau bia; tôi khép cửa thật khẽ, để chén cơm cúng nguội dần trong căn nhà đã thôi chờ mẹ về."
+    }
+  ]
+}

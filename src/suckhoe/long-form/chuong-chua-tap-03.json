@@ -1,0 +1,134 @@
+{
+  "id": "chuong-chua-tap-03",
+  "arc": "chuong-chua",
+  "arcTitle": "CHUÔNG CHÙA ĐÊM",
+  "episode": 3,
+  "slug": "chuong-chua-tap-03",
+  "title": "CHUÔNG CHÙA ĐÊM - Tập 3: Ai còn nợ người chết?",
+  "description": "Lâm cùng chị Thảo tìm thấy cuốn sổ công đức trong hốc xà, hé lộ khoản cứu đói nằm trong tay ông Phúc nhưng chưa từng đến với dân làng. Nửa đêm, người đàn bà ôm gà xuất hiện tại những nhà từng ký giấy vu oan cho Hạnh, và một lời xin lỗi vẫn chưa đủ làm tiếng chuông ngừng lại. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "chuong-chua"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "A mud-caked female hand gripping a young man's wrist inside a sealed timber cavity",
+    "An ancient donation ledger wrapped in long wet black hair, stained with a dark red thumbprint",
+    "A spectral woman's muddy fingertip being pecked by a torn-combed brown hen"
+  ],
+  "thumbTitle": "AI NỢ NGƯỜI ĐÃ CHẾT",
+  "scenePrompts": {
+    "hoc-xa": "Photorealistic cinematic Vietnamese folk horror, extreme close-up inside a decaying wooden pagoda bell loft in rural Vietnam. Lam, a young Vietnamese man wearing a faded indigo cotton shirt, has his wrist gripped by five muddy female fingers emerging from a narrow hollow in a blackened roof beam. An old Vietnamese woman in a brown ao ba ba catches his shirt beside broken floorboards. A swollen paper ledger tangled in wet black hair is partly visible inside the cavity. Oil lantern illumination, realistic skin and timber textures, claustrophobic framing, restrained supernatural dread, no gore, no text, 16:9.",
+    "so-cong-duc": "Photorealistic cinematic close-up of a thirty-year-old Vietnamese pagoda donation ledger spread across rough wooden floorboards. Yellowed handwritten columns, several blank distribution rows, a dark red thumbprint and damp black hair caught in the binding. Thao, a Vietnamese woman in her mid-thirties wearing a faded gray blouse with her hair tied low, steadies the page with trembling fingers. Lam's indigo sleeve and an old woman's oil lantern appear at the edges. Shallow depth of field, amber light against deep shadow, illegible handwriting, no added text, 16:9.",
+    "anh-me": "Photorealistic cinematic Vietnamese folk horror, Thao, a Vietnamese woman in her mid-thirties with tied-back black hair and a faded gray blouse, kneels on the weathered floor of an abandoned pagoda bell loft. She holds a small old monochrome portrait of her missing mother Hanh, a young rural Vietnamese woman. Tears fall onto the portrait beside a cloth bundle and a modest offering of sticky rice and tea. An elderly Vietnamese woman in a brown ao ba ba watches nearby. Intimate framing, natural grief, soft oil lantern light, no text, 16:9.",
+    "cua-gac": "Photorealistic cinematic detail inside an abandoned rural Vietnamese pagoda bell loft. A recently opened plank door shows a rusty nail hole; near a hollow roof beam lie three fresh incense stems and a scrap of betel wrapping. A narrow wet mud streak unnaturally climbs the timber grain toward the ceiling. Lam, a young Vietnamese man in a faded indigo shirt, examines the offerings while Thao wraps an old ledger in a plain cloth. Late afternoon light through broken shutters, tactile realism, quiet menace, no text, 16:9.",
+    "bep-ba": "Photorealistic cinematic rural Vietnamese kitchen, an elderly grandmother sits hunched beside a clay stove with a simmering pot of thin sweet-potato porridge. Her weathered hands cover her face. An old donation ledger rests beside a kerosene lamp on a wooden table. Another elderly woman in a brown ao ba ba stands with Lam in an indigo shirt and Thao in a faded gray blouse. Soot-darkened walls, woven bamboo utensils, restrained amber lighting, shame and apprehension, no text, 16:9.",
+    "chuong-ga-dau": "Photorealistic cinematic Vietnamese folk horror at midnight, viewed through the slats of a small bamboo chicken coop. The ghost of Hanh, a barefoot Vietnamese woman wearing a mud-stained dark brown blouse with long wet black hair covering her face, sits motionless in a straw nest holding a brown hen with a torn comb. The hen pecks her muddy fingertip. Live chickens crowd the rafters above her; the exterior wooden latch remains fastened. Weak kerosene lantern light through bamboo, damp straw, oppressive stillness, no gore, no text, 16:9.",
+    "chuong-ga-tan": "Photorealistic cinematic Vietnamese folk horror, a frightened Vietnamese man in his sixties stands outside his bamboo chicken coop at midnight. Inside, the ghost of Hanh in a mud-stained dark brown blouse holds a torn-combed brown hen, her wet black hair hiding her face. In the neighboring yard beyond a low fence, another identical spectral silhouette is barely visible beside a woman collapsing onto rice husks. Rural household courtyards, handheld oil lamps, believable darkness, uncanny simultaneous apparitions, no text, 16:9.",
+    "giay-vu-oan": "Photorealistic cinematic close-up in a rural Vietnamese bedroom. An elderly woman named Dau unfolds a brittle accusation paper creased into eight panels over an open wooden wedding chest containing faded ceremonial clothes. Several old signatures and thumbprints mark the bottom, with handwriting kept illegible. The elderly narrator holds a kerosene lamp while Thao watches from beside a wooden rice mortar. Dau's trembling hands, flaking plaster, tense faces, realistic aged materials, no added text, 16:9.",
+    "loi-thu": "Photorealistic cinematic Vietnamese folk horror, elderly Dau crouches on the packed-earth floor beside a wooden rice mortar, weeping as she confesses. Thao, a Vietnamese woman in a faded gray blouse, faces her holding an old accusation paper; the elderly narrator stands close with a kerosene lamp. Through the bamboo coop behind them, a spectral woman cradling a brown hen watches in silence. A small empty rice measuring tin lies near Dau's hands. Intimate low-angle composition, amber and cold shadow, no gore, no text, 16:9.",
+    "san-nha-phuc": "Photorealistic cinematic rural Vietnamese courtyard just before dawn. Phuc, a sturdy Vietnamese man in his late sixties wearing a dark buttoned shirt, recoils at his doorway after dropping a small ceramic tea cup. Thao stands opposite him holding a cloth-wrapped ledger and a folded old document, accompanied by Lam in a faded indigo shirt and an elderly Vietnamese woman in a brown ao ba ba. Broken tea cup on brick paving, cracked earthen wall, precise expressions of recognition and fear, muted natural light, no text, 16:9.",
+    "riu-duoi-xa": "Photorealistic cinematic Vietnamese folk horror inside an abandoned pagoda bell tower at dusk. Phuc's adult son stands on the lower stairs with a bright steel axe pressed into a blackened wooden beam with a hollow cavity. Thao in a faded gray blouse blocks the foot of the stairs, clutching a cloth-wrapped ledger against her chest. Lam and an elderly Vietnamese woman watch in alarm. An ancient bronze bell hangs overhead without a striker, dust falling from the first axe mark, shadowed hollow suggesting a hidden presence, no gore, no text, 16:9."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "hoc-xa",
+      "caption": "Có bàn tay giữ trong hốc xà",
+      "text": "Từ hốc xà kín mít, năm ngón tay bết bùn thò ra chậm chạp. Chúng bấu chặt cổ tay Lâm, kéo sát vào mảng gỗ mục đen nhánh. Tôi chụp được vạt áo thằng cháu nhỏ ngay sát mép sàn thủng. Trong hốc tối, tiếng móng cào bỗng chuyển thành tiếng lật giấy ướt nhẹp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hoc-xa",
+      "caption": "Ai giữ cuốn sổ trên đầu chúng tôi?",
+      "text": "Ai đang siết cổ tay nó trong hốc xà bịt kín từ phía ngoài? Lâm giằng mạnh, lôi ra cuốn sổ quấn trong mớ tóc dài bết bùn. Năm vết ngón tay còn hằn tím trên làn da trắng bệch lạnh ngắt. Tôi ngước nhìn khoảng gỗ vừa khoét, thấy một con mắt trắng khép lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "so-cong-duc",
+      "caption": "Tên ông Phúc dưới khoản cứu đói",
+      "text": "Trang sổ tự bung, lộ dòng tiền cứu đói chưa từng phát xuống làng. Bên dưới, tên ông Phúc nằm ngay cạnh dấu điểm chỉ đỏ sẫm màu. Thảo khóc, nước mắt rơi xuống tấm ảnh thờ người mẹ từng mất tích. Tôi nhận ra nét chữ thầy trụ trì đời trước của làng Cồn Trâm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "anh-me",
+      "caption": "Con gái người bị vu oan",
+      "text": "Thảo là con gái cô Hạnh, hôm ấy mới về nhận hài cốt mẹ dưới nền gác chuông. Tôi theo chị với Lâm lên tìm di vật, chỉ mang nắm xôi đậu và chai nước chè; vậy mà chưa kịp đặt lễ đã nghe cào trên xà. Chị vuốt tấm ảnh cũ, nói ngày mẹ mất, chị còn bé đến nỗi cứ tưởng người lớn đưa mẹ đi đong gạo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "so-cong-duc",
+      "caption": "Tiền còn, vì sao dân phải đói?",
+      "text": "Tôi kê ngọn đèn sát cuốn sổ cho Lâm đọc từng khoản, từng ngày. Tiền công đức dành mua gạo cứu đói đã giao đủ cho ông Phúc giữ, nhưng phần phát cho các nhà vẫn để trắng; cuối trang còn dòng thầy nhắc chưa nhận được giấy giao gạo. Thảo đặt ngón tay lên tên mẹ trong danh sách chờ nhận, ngay cạnh hai chữ nuôi con."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cua-gac",
+      "caption": "Có người vẫn lên đây thay lễ",
+      "text": "Lâm tìm quanh hốc xà, nhặt được ba chân nhang còn thơm và một mẩu giấy gói trầu mới. Tôi nhớ bà nội nó đã đóng đinh khóa gác suốt ba mươi năm, mà cánh cửa chỉ vừa được mở lại mấy hôm nay. Thảo không nói, lặng lẽ gói sổ vào khăn; phía sau chị, một vệt bùn từ dưới xà chảy ngược lên trên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bep-ba",
+      "caption": "Bà nội nhận ra những người ký",
+      "text": "Về tới bếp, tôi đặt sổ bên nồi cháo khoai đang sôi lục bục. Bà nội Lâm nhìn tên ông Phúc rồi úp mặt vào hai bàn tay, bảo đêm ấy bà chỉ dám nghe Hạnh kêu, còn mấy nhà khác đã ký giấy xác nhận Hạnh lấy tiền. Bà đọc tên bà Dậu, ông Tấn, vợ chồng lão Mão, đọc đến đâu lại lấy vạt áo chùi miệng đến đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chuong-ga-dau",
+      "caption": "Người đàn bà ngồi giữa ổ gà",
+      "text": "Đúng nửa đêm, tiếng chuông dội sang từ chùa hoang, làm bát nước trên bàn rung thành vòng. Bà Dậu ở sát vách nhà tôi bỗng kêu thất thanh, chúng tôi chạy qua thì thấy cửa chuồng gà vẫn cài bên ngoài. Qua khe phên, một người đàn bà tóc phủ mặt đang ngồi giữa ổ rơm, ôm con gà mái có chiếc mào rách."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chuong-ga-tan",
+      "caption": "Một bóng người ở ba chuồng gà",
+      "text": "Chưa ai kịp mở then, con trai ông Tấn chạy tới bảo trong chuồng nhà nó cũng có người ôm gà. Từ ngõ bên kia, vợ lão Mão gọi tên Hạnh rồi ngã quỵ trước đống trấu; tôi quay lại vẫn thấy bóng đàn bà sau phên nhà bà Dậu. Ba nhà đều có tên trong lời bà nội Lâm, mà tiếng chuông mỗi lúc một dồn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chuong-ga-dau",
+      "caption": "Mẹ quay mặt khỏi tiếng con gọi",
+      "text": "Thảo quỳ xuống trước cửa chuồng, gọi một tiếng mẹ nghe đứt cả hơi. Tôi thấy người đàn bà chậm rãi nghiêng đầu, nhưng mái tóc chỉ quay về phía bà Dậu đang nép sau cối giã gạo. Con gà trong lòng bóng ấy rỉa mãi một đầu ngón tay bùn, còn đàn gà thật dồn lên xà, chen nhau đến bật cả máu chân."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "giay-vu-oan",
+      "caption": "Tờ giấy chôn dưới đáy hòm",
+      "text": "Bà Dậu lùi vào buồng, lôi từ đáy hòm áo cưới một tờ giấy đã gấp thành tám. Tôi đỡ đèn cho bà mở, thấy tên Hạnh dưới lời buộc tội lấy tiền chùa, phía dưới là những cái tên bà nội Lâm vừa đọc. Bà run rẩy bảo mình không biết gì, chỉ ký theo người ta; tiếng chuông liền nện mạnh đến rơi mảnh vôi trên đầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "loi-thu",
+      "caption": "Tôi đã đổi lời khai lấy gạo",
+      "text": "Thảo cầm tờ giấy, hỏi bà có tận mắt thấy mẹ chị lấy tiền không. Bà Dậu lắc đầu, rồi bật khóc thú nhận ông Phúc đã cho bà một thúng gạo để ký, dặn cứ nói trông thấy Hạnh mở hòm công đức. Tôi còn nhớ mùa đói ấy nhà bà vẫn có khói bếp mỗi chiều, trong khi những đứa trẻ bên cạnh chỉ được húp nước rau."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "loi-thu",
+      "caption": "Nửa lon gạo vay chưa từng trả",
+      "text": "Chuông vẫn ngân, dù bà Dậu đã dập đầu xin lỗi đến khản tiếng. Bà nhìn con gà sau phên, chợt ôm ngực nói trước đó còn vay Hạnh nửa lon gạo cho cháu ốm, hẹn hôm sau trả mà chẳng trả bao giờ. Tôi nghe bà nức nở nhận chính người mình mang ơn đã bị mình ký giấy vu oan, chỉ để giữ lại thúng gạo ông Phúc cho."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chuong-ga-dau",
+      "caption": "Lời nhận nợ làm chuông tắt",
+      "text": "Chữ cuối vừa ra khỏi miệng bà Dậu, tiếng chuông đang kéo dài bỗng tắt ngang. Tôi còn nghe rõ tiếng đèn dầu lép bép, rồi đàn gà trên xà lần lượt đáp xuống nền; sau phên chỉ còn một hõm rơm ướt. Người từ nhà ông Tấn và lão Mão chạy sang, nói bóng đàn bà bên họ cũng vừa biến mất, để nguyên dấu chân bùn quanh ổ trứng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "san-nha-phuc",
+      "caption": "Ông Phúc nhận ra chiếc khăn",
+      "text": "Gần sáng, tôi cùng Lâm đưa Thảo qua nhà ông Phúc, mang theo sổ và tờ giấy bà Dậu giao lại. Ông chỉ liếc chiếc khăn bọc sổ đã đánh rơi chén trà, gặng hỏi đứa nào trèo lên hốc xà; Thảo hỏi lại sao ông biết chỗ giấu. Ông đóng sầm cửa, nhưng qua vách đất tôi nghe ông gọi con trai, giọng nhỏ mà rít từng tiếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "riu-duoi-xa",
+      "caption": "Lưỡi rìu tìm đúng chỗ giấu sổ",
+      "text": "Ông dặn con trai phải hạ gác chuông trước khi trời tối, nhất là cây xà có hốc rỗng. Chiều đó tôi trở lại chùa cùng Lâm, thấy con ông đã đứng dưới gác với chiếc rìu lưỡi sáng, còn Thảo ôm sổ chắn ngang chân thang. Nhát đầu vừa chạm gỗ, từ trong xà vang lên tiếng đàn bà hỏi rất khẽ: còn phần gạo của con tôi đâu?"
+    }
+  ]
+}

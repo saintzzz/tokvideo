@@ -1,0 +1,134 @@
+{
+  "id": "chuong-chua-tap-04",
+  "arc": "chuong-chua",
+  "arcTitle": "CHUÔNG CHÙA ĐÊM",
+  "episode": 4,
+  "slug": "chuong-chua-tap-04",
+  "title": "CHUÔNG CHÙA ĐÊM - Tập 4: Phá Gác Chuông, Ai Đang Gõ Dưới Gạch?",
+  "description": "Ông Phúc sai con phá gác chùa, nhưng tiếng chuông vẫn ngân dưới đống gạch và bùn huyệt mộ bắt đầu trồi giữa nền nhà ông. Khi những người từng ký giấy vu oan kéo tới chỉ mặt, bí mật về con gà mái cuối cùng của cô Hạnh bật ra. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "chuong-chua"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "Black grave mud gripping an elderly Vietnamese man's ankles through red floor tiles",
+    "An ancient bronze bell buried mouth-down beneath broken bricks, visibly vibrating without a striker",
+    "A mud-stained bronze bracelet standing upright among fresh temple rubble"
+  ],
+  "thumbTitle": "BÙN RỊN DƯỚI CHÂN",
+  "scenePrompts": {
+    "demolition": "Photorealistic cinematic Vietnamese folk horror, rural northern Vietnam, an adult Vietnamese man in a faded work shirt gripping a cracked sledgehammer above freshly demolished temple bricks, a muddy bronze bracelet inexplicably standing upright in the rubble, his elderly father in a dark brown shirt watching in alarm, elderly Vietnamese woman narrator at the edge of frame, airborne dust, natural muted daylight, realistic textures, vertical 9:16 composition, no text, no gore.",
+    "buried-bell": "Photorealistic cinematic close shot of an ancient Vietnamese bronze temple bell trapped mouth-down beneath dense soil, shattered red bricks and broken roof tiles, no striker, fine dust trembling on its surface with each mysterious toll, narrow lantern light against deep midnight darkness, grounded supernatural folk horror, vertical 9:16 composition, no text.",
+    "temple-yard": "Photorealistic cinematic Vietnamese folk horror, ruined village Buddhist temple courtyard, elderly Vietnamese woman in a brown blouse holding the wrist of a young Vietnamese man, an adult Vietnamese daughter clutching an old ledger wrapped in dark brown cloth by the gate, wary villagers watching collapsed masonry, worn stone threshold, muted colors, restrained dread, vertical 9:16 composition, no text.",
+    "bracelet": "Photorealistic cinematic macro shot of a muddy bronze bracelet rolling uphill out of a woven bamboo basket filled with excavated dark soil, stopping against an elderly Vietnamese man's worn shoe, broken temple bricks behind it, unsettling realistic movement implied by displaced grit, low afternoon light, shallow depth of field, vertical 9:16 composition, no text.",
+    "seeping-floor": "Photorealistic cinematic interior of a traditional Vietnamese village house at midnight, thick black grave mud slowly seeping through joints between otherwise dry red terracotta floor tiles beneath a carved wooden platform bed, an elderly Vietnamese man recoiling above it, oil lantern held by an elderly woman, oppressive shadows, realistic damp textures, vertical 9:16 composition, no text.",
+    "mud-tracks": "Photorealistic cinematic Vietnamese folk horror detail, fresh chicken footprints appearing in black mud around a carved wooden platform bed, a bowl of white rice porridge turning dark with soil on a nearby meal tray, an adult man's hand holding a water dipper frozen in hesitation, low oil lamp lighting, vertical 9:16 composition, no text.",
+    "accusers": "Photorealistic cinematic scene inside a rural Vietnamese house at night, three elderly villagers with muddy feet confronting an elderly man beside a wooden platform bed, one trembling villager pointing an accusing finger, an elderly grandmother wringing the hem of her brown blouse in the doorway, witness-like framing, lantern light, realistic weathered faces, vertical 9:16 composition, no text.",
+    "ledger": "Photorealistic cinematic close shot of an adult Vietnamese woman's trembling hands opening a yellowed charitable donation ledger on a small wooden stool, columns of faded handwritten ink without legible wording, an elderly woman holding an oil lamp beside it, black mud creeping across terracotta floor below, intimate historical mystery atmosphere, vertical 9:16 composition, no added text.",
+    "hen-memory": "Photorealistic cinematic historical flashback in a rural Vietnamese temple thirty years earlier, a gaunt Vietnamese mother in a patched brown blouse holding her last living hen, its feet loosely bound with a strip of bamboo fiber, pleading before a village official guarding famine relief rice sacks, a small empty cloth rice bag in her hand, sorrowful restrained composition, smoky oil lamp light, vertical 9:16, no text, no gore.",
+    "confession": "Photorealistic cinematic Vietnamese folk horror, elderly Vietnamese man collapsed beside a carved wooden platform bed confessing in terror, dark grave mud clinging to his sandals, elderly grandmother standing before him with a devastated expression, adult daughter holding her mother's old ledger, elderly woman narrator supporting the grandmother, claustrophobic lantern-lit interior, vertical 9:16 composition, no text, no gore.",
+    "waiting-ghost": "Photorealistic cinematic Vietnamese female apparition standing at a traditional house threshold at midnight, soaked muddy brown blouse dripping black earth onto the stone step, holding a pale hen with its head tucked under one wing and feet suspended, her fixed eyes directed into the house, grieving human features, restrained supernatural realism, oil lamp backlight, vertical 9:16 composition, no text, no gore."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "demolition",
+      "caption": "Đập gác, chuông vẫn ngân",
+      "text": "Nhát búa bổ xuống, chiếc vòng đồng trong đống gạch bỗng dựng đứng. Tôi thấy bàn tay thằng Dũng cứng đờ trên cán búa nứt toác. Dưới chân nó, quả chuông vùi kín vẫn ngân từng tiếng nghẹn đặc. Ông Phúc giật chiếc vòng khỏi gạch, nhưng ngón tay lập tức rướm bùn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "buried-bell",
+      "caption": "Ai đang gõ dưới gạch?",
+      "text": "Dũng hỏi cha, giọng thảng thốt: ai đang gõ dưới đống gạch kia? Tôi cúi xuống, thấy miệng chuông bị đất lấp đặc chẳng còn kẽ hở. Chiếc dùi mất tích, vậy tiếng ngân rền rĩ đang thoát từ chỗ nào? Ông Phúc thúc con lấp tiếp, ngay trên tiếng đàn bà rên rỉ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple-yard",
+      "caption": "Ông muốn chôn thứ gì?",
+      "text": "Tôi nắm chặt tay Lâm, kéo nó tránh khỏi bức tường đang rạn nứt. Chị Thảo đứng sát cổng, ôm cuốn sổ trong chiếc khăn nâu sẫm cũ. Dân làng Đông Hạ kéo tới, chẳng ai dám bước qua bậc cửa chùa. Ông Phúc quát phá tiếp, mắt cứ dán vào nền gác chuông vừa sập."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "demolition",
+      "caption": "Lệnh phá lúc chưa sáng",
+      "text": "Trước đó, lúc tôi vừa nhóm bếp nấu cháo khoai, Lâm đã chạy sang báo ông Phúc đem người tới chùa. Ông bảo gác mục sắp đổ, nhưng lại đuổi hết dân ra và bắt Dũng đập đúng khoảnh nền từng giấu hài cốt Hạnh. Xương cốt đã được đưa sang gian bên hương khói, còn ông vẫn sai con cào cả đất dưới chỗ ấy đổ xuống ao."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bracelet",
+      "caption": "Chiếc vòng không chịu đi",
+      "text": "Chiếc vòng đã được chị Thảo cất cạnh hài cốt mẹ từ hôm khai quật, vậy mà giờ nó nằm giữa gạch vỡ. Tôi nhìn sang gian bên, thấy mảnh vải bọc vòng vẫn thắt nguyên nút trên bàn nhang. Ông Phúc ném nó vào chiếc thúng đất, miệng chửi ai bày trò dọa người, nhưng chiếc vòng lại lăn ngược dốc, dừng ngay trước mũi giày ông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "buried-bell",
+      "caption": "Phá xong vẫn tới giờ",
+      "text": "Đến xế chiều, gác chuông chỉ còn một đống gạch ngói lẫn xà cháy đen, quả chuông kẹt sâu chẳng ai kéo nổi. Tôi ngồi bên Thảo thắp nhang cho Hạnh, nghe Dũng nói cha nó đã khóa cổng, cấm ai bén mảng tới nữa. Đúng nửa đêm, tiếng ngân bật lên dưới đất, làm chén nước cúng trước mặt tôi nổi những vòng sóng nhỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "seeping-floor",
+      "caption": "Bùn trồi giữa nền khô",
+      "text": "Tiếng chuông thứ hai vừa dội qua ngõ, Dũng đã đập cửa gọi tôi sang nhà nó. Giữa nền gạch tàu nhà ông Phúc, bùn đen đang rịn lên quanh chân chiếc sập gụ, dù sân ngoài khô rang mấy bữa liền. Tôi vừa bước vào đã nhận ra mùi tanh ngai ngái dưới huyệt Hạnh, cái mùi bám trên vạt áo Lâm hôm đưa xương cốt lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mud-tracks",
+      "caption": "Dấu gà vây chiếc sập",
+      "text": "Tôi lấy đèn soi xuống, thấy từng dấu chân gà lõm dần trong lớp bùn mới trồi, đi vòng quanh chiếc sập ông Phúc đang ngồi. Trên mâm cơm chưa dọn, bát cháo trắng của ông bỗng sẫm lại như bị ai trộn đất. Dũng cầm gáo định tạt nước rửa nền, nhưng từ dưới sập vọng ra tiếng gà mái cục tác, khàn đặc như mắc nghẹn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "accusers",
+      "caption": "Những người ký giấy tới",
+      "text": "Ngoài cửa, ông Bảy Định với hai người từng ký giấy tố Hạnh đứng túm tụm, chân ai cũng lấm thứ bùn ấy. Ông Bảy chỉ thẳng vào Phúc, nói hồi đó chính ông ta bảo ký xong sẽ được lĩnh gạo, còn chuyện Hạnh lấy tiền thì chẳng ai tận mắt thấy. Tôi thấy bà nội Lâm đứng cuối hàng, hai bàn tay xoắn vạt áo đến trắng bệch."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ledger",
+      "caption": "Tên ông nằm trong sổ",
+      "text": "Thảo đặt cuốn sổ công đức lên chiếc ghế đẩu, lật đúng trang ghi tiền cứu đói giao cho ông Phúc giữ. Tôi soi đèn cho chị đọc từng khoản, còn ông Bảy run run nhận nét chữ xác nhận đã lĩnh gạo là do mình viết theo lời Phúc. Ông Phúc chồm tới giật sổ, nhưng bùn dưới chân dính chặt đôi dép, kéo ông ngã quỵ bên sập."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hen-memory",
+      "caption": "Một bát gạo cho con",
+      "text": "Thảo hỏi mẹ chị đã làm gì mà phải nằm dưới nền chùa suốt ba mươi năm, ông Phúc bỗng bật ra rằng Hạnh chỉ tới xin gạo. Tôi nghe ông kể cô ôm theo con gà mái cuối cùng, xin đổi lấy ít gạo nấu cháo cho đứa con đói lả ở nhà. Ông còn nhớ chân gà buộc bằng sợi lạt, vậy mà vừa nãy vẫn chối chưa từng gặp Hạnh đêm ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession",
+      "caption": "Tiếng kêu dưới gác chuông",
+      "text": "Bà nội Lâm bước lên, nói đêm ấy bà nghe Hạnh kêu cứu trong gác, sau đó nghe chính giọng Phúc dọa ai hé miệng sẽ mất phần cứu đói. Tôi đỡ lấy bà khi ông Phúc gào rằng Hạnh đã thấy ông cất tiền riêng, còn đòi mang sổ ra đình. Ông nói mình đánh Hạnh ngã rồi bịt miệng đến khi cô nằm im, giọng nhỏ dần như hụt hơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession",
+      "caption": "Bùn lấp cùng lời vu oan",
+      "text": "Ông Phúc ôm đầu, thú nhận đã vùi Hạnh dưới nền gác lúc trời chưa sáng, con gà mái vẫn mắc sợi lạt bên cổ tay cô. Tôi nghe rõ từng lời ông kể chuyện tung tin Hạnh trộm tiền bỏ trốn, rồi ép những nhà trông phần gạo ký giấy làm chứng. Ông Bảy ngồi thụp xuống, cứ lặp đi lặp lại rằng họ đã đổi mạng người lấy mấy đấu gạo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "accusers",
+      "caption": "Cửa chùa khép ba mươi năm",
+      "text": "Tôi hỏi vì sao chùa phải bỏ hoang, ông Phúc nói mình vin chuyện mất tiền để cắt người trông coi, dọa nền gác có ma cho dân tránh xa. Bà nội Lâm khóc, nhận đã nghe lời dọa mà đóng đinh khóa cửa, để tiếng kêu đêm đó theo mình mấy chục năm. Thảo đứng lặng bên cuốn sổ, bàn tay giữ mép giấy run đến nỗi tôi phải đặt đèn xuống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "waiting-ghost",
+      "caption": "Ngoài thềm có người đợi",
+      "text": "Dũng bỗng lùi sát vách, mắt nhìn trân trân qua vai tôi ra cửa, nơi một người đàn bà ôm gà đang đứng. Bùn từ gấu áo bà nhỏ xuống thềm, còn con gà giấu đầu dưới cánh cứ cào chân vào khoảng không trước ngực. Tôi níu Thảo lại khi chị toan bước ra, bởi đôi mắt người đàn bà vẫn ghim vào Phúc, và tiếng chuông lại thúc thêm một hồi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple-yard",
+      "caption": "Mang sổ ra sân chùa",
+      "text": "Thảo bọc cuốn sổ lại, bảo trước nửa đêm mai, ông Phúc phải tới sân chùa nói hết trước những người còn sống. Tôi đỡ bà nội Lâm ra ngõ, nghe ông Bảy gọi từng nhà từng ký giấy cùng đi, ai nấy cúi đầu chẳng còn tránh mặt. Sau lưng tôi, ông Phúc vừa vịn cửa đứng lên thì bùn níu tận mắt cá, còn bóng Hạnh đã đứng chờ ngoài cổng."
+    }
+  ]
+}

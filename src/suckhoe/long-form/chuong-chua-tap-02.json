@@ -1,0 +1,133 @@
+{
+  "id": "chuong-chua-tap-02",
+  "arc": "chuong-chua",
+  "arcTitle": "CHUÔNG CHÙA ĐÊM",
+  "episode": 2,
+  "slug": "chuong-chua-tap-02",
+  "title": "Chuông Chùa Đêm - Tập 2: Dấu Chân Gà Dẫn Tới Người Nằm Dưới Gác",
+  "description": "Mỗi hồi chuông nửa đêm lại để lại dấu chân gà từ một giường ngủ tới chùa hoang. Lần theo những dấu bùn xuất hiện dưới giường mình, Lâm tìm thấy bộ hài cốt cùng chiếc vòng quen thuộc và nghe bà nội thú nhận chuyện đã giấu suốt ba mươi năm. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "chuong-chua"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "A muddy three-toed chicken footprint pressed into a sleeping man's pillow",
+    "An ancient silver bracelet with a chipped flower clasp around a skeletal wrist",
+    "An elderly Vietnamese woman's trembling hand gripping a long rusted iron nail"
+  ],
+  "thumbTitle": "VÒNG TRÊN XƯƠNG TRẮNG",
+  "scenePrompts": {
+    "giuong-ong-bay": "Photorealistic cinematic Vietnamese folk horror, close view of wet three-toed chicken tracks emerging beneath an occupied wooden bed, muddy footprints crossing a dry brick bedroom floor, a frightened elderly Vietnamese man lifting his feet, kerosene lamp lighting, rural southern Vietnam, restrained colors, realistic textures, 16:9, no text.",
+    "chuong-nua-dem": "Photorealistic cinematic Vietnamese folk horror, an ancient bronze temple bell without a striker hanging inside an abandoned wooden bell tower, its lower rim visibly vibrating, empty darkness beneath the bell, dusty rafters and cracked plaster, cold moonlight, realistic rural Vietnamese architecture, 16:9, no text.",
+    "bep-ba-noi": "Photorealistic cinematic rural Vietnamese kitchen, an elderly Vietnamese grandmother in a faded brown blouse seated beside an untouched bowl of rice porridge, her fingers gripping prayer beads, young Vietnamese man Lam watching her, warm oil lamp light and oppressive dark doorway, intimate folk horror atmosphere, 16:9, no text.",
+    "anh-cu-chiec-vong": "Photorealistic cinematic macro shot of a faded Vietnamese family photograph held in young male hands, a young Vietnamese mother wearing a distinctive silver bracelet with a five-petal flower clasp and one chipped petal, old wooden drawer and folded cotton fabric underneath, soft daylight, 16:9, no readable text.",
+    "giuong-lam": "Photorealistic cinematic Vietnamese folk horror, Lam a slim young Vietnamese man with short black hair wearing a faded gray cotton shirt, kneeling beside his bamboo bed, fresh muddy chicken tracks on a pillow beside a clear human head impression, the tracks continue down the bed leg, dim kerosene light, 16:9, no text.",
+    "duong-dau-chan": "Photorealistic cinematic low-angle tracking view of wet chicken footprints crossing a dry rural Vietnamese lane toward an abandoned temple gate, Lam in a faded gray shirt following with a small flashlight, no living chicken visible, bamboo fences and closed village doors, midnight darkness, 16:9, no text.",
+    "nen-gac-chuong": "Photorealistic cinematic interior at the ground level beneath an abandoned Vietnamese temple bell tower, muddy chicken tracks ending around one sunken square brick, Lam in a faded gray shirt crouching with a flashlight, rotten timber stairs at the side, ancient bronze bell overhead, claustrophobic shadows, 16:9, no text.",
+    "hai-cot-chiec-vong": "Photorealistic cinematic respectful archaeological discovery beneath an old Vietnamese temple floor, partially uncovered adult female skeletal remains curled in dark damp earth, a tarnished silver bracelet still encircling the wrist with a five-petal flower clasp and one chipped petal, Lam's trembling flashlight beam, no blood or gore, 16:9, no text.",
+    "loi-thu-cay-dinh": "Photorealistic cinematic close-up of an elderly Vietnamese grandmother's deeply lined face and trembling hand gripping a long rusted iron nail on a wooden table, Lam in a faded gray shirt seated opposite her, dawn light through bamboo blinds, grief and shame, realistic skin detail, 16:9, no text.",
+    "tieng-go-tren-xa": "Photorealistic cinematic Vietnamese folk horror inside an abandoned temple bell tower at night, Lam in a faded gray shirt looking upward, flashlight illuminating an old wooden roof beam with a narrow dark cavity, a faint muddy handprint on the timber, bronze bell motionless nearby, ominous restrained composition, 16:9, no text."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "giuong-ong-bay",
+      "caption": "Dấu chân bò ra từ giường ngủ",
+      "text": "Những dấu chân gà ướt bò ra dưới giường ông Bảy. Tôi nhìn từng ngón bùn hiện lên trên nền gạch khô. Trên giường, ông co chân khỏi chỗ vợ vừa nằm xuống. Ngoài chùa, quả chuông không dùi ngân đúng mười hai tiếng đồng hồ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "giuong-ong-bay",
+      "caption": "Ai vừa nằm cạnh ông Bảy?",
+      "text": "Vợ ông Bảy đã về bên ngoại từ chiều hôm trước. Vậy ai vừa nằm cạnh ông sau tấm màn buông kín? Tôi rọi đèn xuống chiếc gối còn lõm nguyên hình đầu. Một dấu chân gà đen ngòm nằm ngay giữa vết lõm ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chuong-nua-dem",
+      "caption": "Mỗi đêm, một chiếc giường",
+      "text": "Sáng ấy, tôi theo dấu bùn tới cổng chùa làng Vĩnh An. Đêm sau, chúng xuất hiện dưới giường nhà bác Năm Được. Đêm kế nữa, thím Sáu thấy dấu gà trên mùng ngủ. Tôi đứng ngoài cửa, nghe thím khóc sau tiếng chuông vừa dứt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bep-ba-noi",
+      "caption": "Bà nội đếm những nhà có dấu",
+      "text": "Tôi tên Lâm, chính tay đã nhổ cây đinh khóa cửa gác chuông bữa trước. Từ hôm đó, cứ nghe chuông là bà nội bỏ dở chén cháo cá, ngồi đếm bằng những đốt ngón tay khẳng khiu. Tôi kể tên ba nhà có dấu chân gà, bà lập tức giấu bàn tay xuống vạt áo, hỏi nhỏ coi đã tới nhà mình chưa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "anh-cu-chiec-vong",
+      "caption": "Chiếc vòng trong tấm ảnh cũ",
+      "text": "Má tôi lấy trong rương ra tấm ảnh chụp hồi chùa còn phát cháo ngày rằm, chỉ người đàn bà đứng bồng đứa nhỏ sát mép hình. Đó là cô Hạnh, người có đôi guốc bùn xuất hiện trước cửa nhà tôi sáng nọ. Cổ tay cô đeo chiếc vòng bạc, khóa hình bông mai bị sứt một cánh; má nói cô vẫn đeo cả lúc xuống ruộng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bep-ba-noi",
+      "caption": "Bà dặn đừng trả lời tiếng gọi",
+      "text": "Tôi hỏi sao cô Hạnh bỏ đi mà chẳng mang theo đôi guốc, má chỉ kéo tấm ảnh sát ngọn đèn rồi lặng thinh. Bà nội từ bếp bước lên, úp ngay tấm hình xuống mặt bàn. Bà dặn tôi đêm nay nghe ai gọi cũng đừng thưa, rồi lấy tro bếp rắc kín chân giường, như thể bà đã biết thứ gì sắp bước vô."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "giuong-lam",
+      "caption": "Dấu bùn đã tới đầu tôi",
+      "text": "Nửa đêm, tôi thức vì có thứ gì lạnh ngắt chạm sát vành tai, kèm tiếng gà cục tác rất khẽ. Ngọn đèn vừa sáng, tôi thấy một dấu chân bùn in trên gối, cách chỗ đầu mình nằm chưa đầy gang tay. Dưới đất, lớp tro bà rắc bị xuyên thủng thành một hàng ba ngón, kéo từ chân giường ra tận cửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "duong-dau-chan",
+      "caption": "Bùn ướt trên con đường khô",
+      "text": "Tôi xỏ dép, cầm đèn pin đi theo, bụng cứ nhớ lời bà dặn đừng thưa tiếng gọi. Con hẻm khô rang mà những dấu bùn vẫn bóng nước, qua mỗi ngã rẽ lại hiện thêm một dấu mới. Tới hàng rào nhà ông Bảy, tôi nghe tiếng then cửa cài vội sau lưng; có người nhìn thấy tôi, nhưng chẳng ai chịu bước ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nen-gac-chuong",
+      "caption": "Dấu chân khoanh một viên gạch",
+      "text": "Dấu gà đưa tôi qua cửa chùa, vòng khỏi chân cầu thang rồi dừng dưới nền gác chuông. Chúng xếp quanh một viên gạch lún, cả ba đầu ngón đều chĩa vào giữa, như có con gà đứng đó bới mãi một chỗ. Tôi cúi xuống thì nghe từ dưới gạch vọng lên ba tiếng cào, chậm rãi đến nỗi tôi nghe rõ từng hạt cát rơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nen-gac-chuong",
+      "caption": "Dưới gạch có người gõ lại",
+      "text": "Tôi nhặt thanh sắt gỉ cạnh cầu thang, nạy thử mép gạch đã bong vữa, vừa nhấc lên thì mùi bùn tù xộc thẳng vô mũi. Phía dưới là đất đen mềm nhão, khác hẳn nền đất khô xung quanh. Tôi mới gạt được một nắm đã chạm vật tròn nhẵn; rọi đèn sát lại, tôi thấy mấy chiếc răng còn dính trên một mảnh xương hàm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hai-cot-chiec-vong",
+      "caption": "Người nằm co dưới gác chuông",
+      "text": "Tôi chạy ra cổng gọi tới khản tiếng, mãi mới có ông Bảy cùng hai người cầm đèn sang. Dưới lớp gạch được nhấc rộng, bộ hài cốt hiện ra trong tư thế nằm co, một cánh tay gập sát trước ngực. Tôi buột miệng nói có người bị chôn ở đây, ông Bảy liền chụp cổ tay tôi, bàn tay ông lạnh chẳng khác đất dưới hố."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hai-cot-chiec-vong",
+      "caption": "Bông mai bạc còn thiếu một cánh",
+      "text": "Ở cổ tay còn mắc chiếc vòng bạc đen xỉn, nhỏ đến mức tôi chẳng hiểu sao nó chưa tuột khỏi xương. Tôi rọi nghiêng ngọn đèn, thấy khóa bông mai sứt đúng một cánh như trong tấm ảnh má vừa cho coi. Ông Bảy cũng nhận ra, miệng mấp máy tên Hạnh; trên đầu chúng tôi, tiếng chuông đang ngân bỗng tắt ngang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "loi-thu-cay-dinh",
+      "caption": "Bà biết người dưới nền gác",
+      "text": "Trời vừa hửng, người trong xóm đã báo xã, còn tôi về lấy tấm ảnh cho má đem tới chùa. Bà nội ngồi chờ bên bàn, trước mặt là cây đinh tôi nhổ khỏi cửa gác hôm trước, được bà nhặt về từ sân. Nghe tôi kể chiếc vòng, bà ôm miệng khóc, nói bà biết Hạnh chưa từng bước ra khỏi chùa đêm ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "loi-thu-cay-dinh",
+      "caption": "Chính bà đã đóng cây đinh",
+      "text": "Bà nói ba mươi năm trước, bà nghe Hạnh kêu cứu từ phía gác, tiếng gọi đứt quãng lẫn trong tiếng gà đập cánh. Bà đã tới chân thang, nhưng nghe tiếng chân người trên đó thì lùi ra, núp sau cửa tới gần sáng. Sau đêm ấy, chính bà đóng cây đinh khóa gác, rồi bảo người làng rằng gỗ mục, leo lên sẽ sập."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bep-ba-noi",
+      "caption": "Bà sợ đến lượt nhà mình",
+      "text": "Tôi hỏi sao bà nghe người ta cầu cứu mà còn khóa cửa, bà cúi gằm, lần mãi một hạt chuỗi đã nứt. Bà thú nhận sợ bị kéo vào chuyện tiền chùa, sợ người ta làm hại ba tôi hồi đó còn nhỏ, nên ai hỏi cũng nói chẳng nghe gì. Tôi nhìn chén cháo cá nguội trên bàn, lần đầu không sao gọi nổi một tiếng bà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "tieng-go-tren-xa",
+      "caption": "Tiếng gõ chuyển lên xà gỗ",
+      "text": "Chiều ấy, má nhờ người nhắn cho chị Thảo, con gái cô Hạnh, còn tôi trở lại chùa chỉ chỗ tìm thấy chiếc vòng. Vừa bước dưới gác, tôi nghe ba tiếng gõ quen thuộc, lần này phát ra trên đầu. Đèn pin soi tới hốc xà đen ngòm; từ trong đó, tiếng đàn bà khàn đặc rỉ xuống, gọi đúng tên tôi rồi bảo: còn nữa."
+    }
+  ]
+}

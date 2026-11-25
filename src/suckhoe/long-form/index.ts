@@ -76,6 +76,11 @@ import { LongFormEpisode } from "./types";
 // from the Shorts pipeline, one continuous story per episode instead of
 // independent scenes. Add a new one: create `long-form/<slug>.json` with
 // the same shape, import it here, add it to this list.
+import ChuongChuaTap01 from "./chuong-chua-tap-01.json";
+import ChuongChuaTap02 from "./chuong-chua-tap-02.json";
+import ChuongChuaTap03 from "./chuong-chua-tap-03.json";
+import ChuongChuaTap04 from "./chuong-chua-tap-04.json";
+import ChuongChuaTap05 from "./chuong-chua-tap-05.json";
 export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   baNgayTruocDamCuoi,
   threeDaysBeforeTheWedding,
@@ -201,4 +206,9 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   ngoMoCoTap03,
   ngoMoCoTap04,
   ngoMoCoTap05,
+  ChuongChuaTap01,
+  ChuongChuaTap02,
+  ChuongChuaTap03,
+  ChuongChuaTap04,
+  ChuongChuaTap05,
 ] as LongFormEpisode[];
