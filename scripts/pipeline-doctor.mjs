@@ -134,11 +134,11 @@ if (youtube) {
       const s = status.get(entry.videoId);
       if (!s) {
         findings.push(`Ledger "${key}" -> ${entry.videoId} no longer exists on channel.`);
-        if (!isTeaserKey(key) && !isFbKey(key)) {
+        if (!isFbKey(key)) {
           delete ledger[key];
           deletedKeys.add(key);
           ledgerDirty = true;
-          fixed.push(`Removed dead ledger entry "${key}" — episode re-queues on next tick.`);
+          fixed.push(`Removed dead ledger entry "${key}" — ${isTeaserKey(key) ? "teaser re-uploads via teaser-ahead" : "episode re-queues on next tick"}.`);
         }
       } else if (!isFbKey(key) && isTeaserKey(key) !== (s.title || "").includes("#Shorts")) {
         // Ledger entry points at the wrong kind of video — the dedupe
