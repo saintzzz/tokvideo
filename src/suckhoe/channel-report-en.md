@@ -1,4 +1,4 @@
-# Channel report — 2026-11-24
+# Channel report — 2026-11-25
 
 Channel: Grandma's Home Remedies
 Subscribers: 0
@@ -61,7 +61,7 @@ Videos with zero impressions: 0/10 — 0 means YouTube never surfaced it (distri
 | They met in the middle of the field, each with a sack on his shoulder - Part 2 #Shorts | 10 | 0 | 0 | 2026-09-28 |
 | Two brothers split the harvest in half - then the piles stopped making sense - Part 1 #Shorts | 0 | 0 | 0 | 2026-09-28 |
 | Why a turnip became a pumpkin - the end of Stingy Jack - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
-| Stingy Jack tricked the Devil himself - Part 1 #Shorts | 2 | 0 | 0 | 2026-09-27 |
+| Stingy Jack tricked the Devil himself - Part 1 #Shorts | 3 | 0 | 0 | 2026-09-27 |
 | By square 40 the treasurers went pale - the math of the rice chessboard - Part 2 #Shorts | 0 | 0 | 0 | 2026-09-27 |
 | The inventor asked for 'just rice' - the whole court laughed - Part 1 #Shorts | 2 | 0 | 0 | 2026-09-27 |
 
