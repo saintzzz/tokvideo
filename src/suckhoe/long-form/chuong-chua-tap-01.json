@@ -131,5 +131,19 @@
       "caption": "Bùn đang rịn dưới cửa buồng",
       "text": "Bà nội Lâm đứng sau lưng từ lúc nào, chộp tấm ảnh úp xuống bàn, dặn đừng đem đôi guốc trả về chùa. Tôi hỏi bà vì sao, nhưng bà chỉ kéo ghế ngồi chắn cửa buồng cháu, mắt không rời hai vệt bùn trên thềm. Ngay lúc ấy, từ dưới cánh cửa buồng đang khép, một dấu chân gà ướt chậm rãi in ra, ba ngón hướng thẳng về phía đôi guốc."
     }
-  ]
+  ],
+  "sceneImages": {
+    "dinh-cua": "images/suckhoe-long/chuong-chua-tap-01/dinh-cua.jpg",
+    "khe-cua": "images/suckhoe-long/chuong-chua-tap-01/khe-cua.jpg",
+    "duong-chua": "images/suckhoe-long/chuong-chua-tap-01/duong-chua.jpg",
+    "mam-chao": "images/suckhoe-long/chuong-chua-tap-01/mam-chao.jpg",
+    "chuong-rong": "images/suckhoe-long/chuong-chua-tap-01/chuong-rong.jpg",
+    "nen-gac": "images/suckhoe-long/chuong-chua-tap-01/nen-gac.jpg",
+    "cau-thang": "images/suckhoe-long/chuong-chua-tap-01/cau-thang.jpg",
+    "bong-san": "images/suckhoe-long/chuong-chua-tap-01/bong-san.jpg",
+    "chan-thang": "images/suckhoe-long/chuong-chua-tap-01/chan-thang.jpg",
+    "cua-nha": "images/suckhoe-long/chuong-chua-tap-01/cua-nha.jpg",
+    "guoc-bun": "images/suckhoe-long/chuong-chua-tap-01/guoc-bun.jpg",
+    "anh-cu": "images/suckhoe-long/chuong-chua-tap-01/anh-cu.jpg"
+  }
 }
