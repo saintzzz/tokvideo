@@ -62,7 +62,19 @@ function unpublishedSlugs() {
   const published = new Set(Object.keys(ledger));
   const src = readFileSync(INDEX_TS, "utf8");
   const slugs = [...src.matchAll(/from "\.\/([a-z0-9-]+)\.json"/g)].map(m => m[1]);
-  return slugs.filter(s => !published.has(s) && !s.endsWith("-teaser"));
+  return slugs.filter(s => {
+    if (published.has(s) || s.endsWith("-teaser")) return false;
+    // Unpickable episodes are not inventory (same gates as
+    // next-long-form-slug.mjs): legacy dialogue format and dead stubs
+    // without scenePrompts/sceneImages. ba-ngay-truoc-dam-cuoi +
+    // 3-days-before-the-wedding inflated the count to 7 for two weeks
+    // and suppressed the refill while the real queue was empty.
+    try {
+      const ep = loadJson(path.join(LONG_DIR, `${s}.json`));
+      if (!ep.beats?.every((b) => b.speaker === "narrator")) return false;
+      return !!(ep.scenePrompts || ep.sceneImages);
+    } catch { return false; }
+  });
 }
 
 function existingArcs() {

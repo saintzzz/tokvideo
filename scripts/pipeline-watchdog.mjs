@@ -135,7 +135,18 @@ function unpublishedSlugs() {
     .filter(s => !published.has(s) && !s.endsWith("-teaser"))
     // Effective depth: a quarantined slug is dead weight, not inventory —
     // QUEUE LOW / STALL must see through it or the refill never fires.
-    .filter(s => !isBlocked(quarantine, s, epPath(s)));
+    .filter(s => !isBlocked(quarantine, s, epPath(s)))
+    // Same unpickable gates as next-long-form-slug.mjs: legacy
+    // dialogue-format episodes and dead stubs (no scenePrompts AND no
+    // sceneImages) can never be rendered, so they must not inflate the
+    // queue count — ba-ngay-truoc-dam-cuoi + 3-days-before-the-wedding
+    // sat here for weeks masking a near-empty queue.
+    .filter(s => {
+      const ep = readEp(s);
+      if (!ep) return false;
+      if (!ep.beats?.every((b) => b.speaker === "narrator")) return false;
+      return !!(ep.scenePrompts || ep.sceneImages);
+    });
 }
 
 const queueDepth = () => unpublishedSlugs().length;
