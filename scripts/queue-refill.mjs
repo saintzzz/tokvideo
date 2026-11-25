@@ -108,7 +108,7 @@ const SCHEMA_NOTE = `Mỗi episode là 1 file JSON object với đúng các fiel
 {
   "id": "<slug>", "arc": "<arc>", "arcTitle": "<ARC TITLE>", "episode": <1-5>,
   "slug": "<slug>",
-  "title": "<tiêu đề tập, tiếng Việt có dấu, kết thúc bằng yếu tố gây tò mò>",
+  "title": "<hook thuần của tập, KHÔNG kèm tên arc hay 'Tập N' - VD 'Đôi Guốc Của Người Mất Tích - Chuông Tự Ngân Giữa Đêm'>",
   "thumbTitle": "<2-5 từ in trên thumbnail, cực ngắn, gây ám ảnh - VD 'QUAN TÀI ĐỨNG DẬY'>",
   "description": "<2-3 câu tóm tắt + #truyenma #kechuyen #truyendangian>",
   "tags": ["truyện ma", "truyện ma dân gian", "kể chuyện", "<arc>"],
