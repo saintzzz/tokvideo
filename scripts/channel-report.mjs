@@ -133,7 +133,10 @@ async function main() {
         endDate: fmtDate(end),
         metrics: "estimatedMinutesWatched",
       });
-      const hours365 = (watch365.data.rows?.[0]?.[1] ?? 0) / 60;
+      // No `dimensions` on this query -> each row is a bare metric
+      // array ([value]), not [day, value] like the 28d query above.
+      // Reading column 1 here reported 0/4000 for weeks.
+      const hours365 = (watch365.data.rows?.[0]?.at(-1) ?? 0) / 60;
       const subs = +stats.subscriberCount || 0;
       const subsPerDay = (totals.subsGained - totals.subsLost) / 28;
       const hoursPerDay = totals.minutesWatched / 60 / 28;
