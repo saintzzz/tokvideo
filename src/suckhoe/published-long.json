@@ -1048,5 +1048,12 @@
     "videoId": "UUljpXdbnbY",
     "publishedAt": "2026-11-26T11:59:32.151Z",
     "locale": "vi"
+  },
+  "chuong-chua-tap-01": {
+    "videoId": "LzFoMrVOd6k",
+    "publishedAt": "2026-11-26T12:17:18.538Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
