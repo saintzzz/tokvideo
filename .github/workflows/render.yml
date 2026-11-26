@@ -1225,9 +1225,12 @@ jobs:
           # 21:45-23:45 window). A dropped slot yields an empty list.
           if [ "$SCHEDULE" = "45 22 * * *" ]; then
             SINCE=$(date -u -d 'today 21:45' +%FT%TZ)
+            # gh run list --jq takes no --arg flags (its jq has no arg
+            # injection) — pipe to real jq instead. The 2026-11-26 04:24
+            # run died on this the first time the backup slot fired.
             OTHER=$(gh run list -w render.yml -L 15 --json createdAt,databaseId \
-              --jq --arg s "$SINCE" --arg me "$GITHUB_RUN_ID" \
-              '[.[] | select(.databaseId != ($me | tonumber) and .createdAt > $s)] | length')
+              | jq --arg s "$SINCE" --argjson me "$GITHUB_RUN_ID" \
+                '[.[] | select(.databaseId != $me and .createdAt > $s)] | length')
             if [ "$OTHER" -gt 0 ]; then
               echo "Backup slot: primary 22:30 run fired - standing down."
               echo "slug=" >> "$GITHUB_OUTPUT"
