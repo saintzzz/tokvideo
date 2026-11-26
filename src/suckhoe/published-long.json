@@ -944,7 +944,8 @@
     "videoId": "x-F78KLS0pI",
     "publishedAt": "2026-11-22T21:09:37.943Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugx7RXQCWL-zLTiW2T94AaABAg"
   },
   "ngo-mo-co-tap-01": {
     "videoId": "cbRy2BQjGw0",
@@ -966,7 +967,8 @@
     "videoId": "flBkkFodY4Q",
     "publishedAt": "2026-11-23T12:44:59.471Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugx_fx-XnMzTFtS9ZrB4AaABAg"
   },
   "ngo-mo-co-tap-03": {
     "videoId": "OkbndS2bH9U",
@@ -994,12 +996,14 @@
     "videoId": "dmvhYvJV8h8",
     "publishedAt": "2026-11-25T16:07:25.018Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugzmjxwod2z2yp5fWkx4AaABAg"
   },
   "ngo-mo-co-tap-05-teaser": {
     "videoId": "Fi2g3xjInOU",
     "publishedAt": "2026-11-21T20:59:19Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "UgxVXfQjz4aD90y3GLF4AaABAg"
   },
   "nguoi-di-dan-mua-tap-02": {
     "videoId": "eCarCBGDzPY",
@@ -1035,26 +1039,30 @@
     "publishedAt": "2026-11-26T03:55:59.847Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "Ugzk7BC4mmc8UCYq2hV4AaABAg"
   },
   "nguoi-di-dan-mua-tap-05": {
     "videoId": "gXlMzktqI3w",
     "publishedAt": "2026-11-26T04:41:21.826Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzuN6THK-9_-xM5yed4AaABAg"
   },
   "ngo-mo-co-tap-05": {
     "videoId": "UUljpXdbnbY",
     "publishedAt": "2026-11-26T11:59:32.151Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "UgwqWjjrXUPUbkpewnl4AaABAg"
   },
   "chuong-chua-tap-01": {
     "videoId": "LzFoMrVOd6k",
     "publishedAt": "2026-11-26T12:17:18.538Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzjcH2SVPee0wPlfyB4AaABAg"
   },
   "chuong-chua-tap-03-teaser": {
     "videoId": "xLIH4h9yhdU",
