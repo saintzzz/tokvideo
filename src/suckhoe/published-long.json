@@ -1029,5 +1029,12 @@
     "publishedAt": "2026-11-25T23:44:53.783Z",
     "locale": "vi",
     "privacyStatus": "public"
+  },
+  "nguoi-di-dan-mua-tap-04": {
+    "videoId": "Wt6T3-v5yA4",
+    "publishedAt": "2026-11-26T03:55:59.847Z",
+    "locale": "vi",
+    "privacyStatus": "public",
+    "thumbnailPending": false
   }
 }
