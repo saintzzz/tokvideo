@@ -129,5 +129,17 @@
       "caption": "Tiếng gõ chuyển lên xà gỗ",
       "text": "Chiều ấy, má nhờ người nhắn cho chị Thảo, con gái cô Hạnh, còn tôi trở lại chùa chỉ chỗ tìm thấy chiếc vòng. Vừa bước dưới gác, tôi nghe ba tiếng gõ quen thuộc, lần này phát ra trên đầu. Đèn pin soi tới hốc xà đen ngòm; từ trong đó, tiếng đàn bà khàn đặc rỉ xuống, gọi đúng tên tôi rồi bảo: còn nữa."
     }
-  ]
+  ],
+  "sceneImages": {
+    "giuong-ong-bay": "images/suckhoe-long/chuong-chua-tap-02/giuong-ong-bay.jpg",
+    "chuong-nua-dem": "images/suckhoe-long/chuong-chua-tap-02/chuong-nua-dem.jpg",
+    "bep-ba-noi": "images/suckhoe-long/chuong-chua-tap-02/bep-ba-noi.jpg",
+    "anh-cu-chiec-vong": "images/suckhoe-long/chuong-chua-tap-02/anh-cu-chiec-vong.jpg",
+    "giuong-lam": "images/suckhoe-long/chuong-chua-tap-02/giuong-lam.jpg",
+    "duong-dau-chan": "images/suckhoe-long/chuong-chua-tap-02/duong-dau-chan.jpg",
+    "nen-gac-chuong": "images/suckhoe-long/chuong-chua-tap-02/nen-gac-chuong.jpg",
+    "hai-cot-chiec-vong": "images/suckhoe-long/chuong-chua-tap-02/hai-cot-chiec-vong.jpg",
+    "loi-thu-cay-dinh": "images/suckhoe-long/chuong-chua-tap-02/loi-thu-cay-dinh.jpg",
+    "tieng-go-tren-xa": "images/suckhoe-long/chuong-chua-tap-02/tieng-go-tren-xa.jpg"
+  }
 }

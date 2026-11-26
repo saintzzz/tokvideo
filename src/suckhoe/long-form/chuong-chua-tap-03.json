@@ -130,5 +130,18 @@
       "caption": "Lưỡi rìu tìm đúng chỗ giấu sổ",
       "text": "Ông dặn con trai phải hạ gác chuông trước khi trời tối, nhất là cây xà có hốc rỗng. Chiều đó tôi trở lại chùa cùng Lâm, thấy con ông đã đứng dưới gác với chiếc rìu lưỡi sáng, còn Thảo ôm sổ chắn ngang chân thang. Nhát đầu vừa chạm gỗ, từ trong xà vang lên tiếng đàn bà hỏi rất khẽ: còn phần gạo của con tôi đâu?"
     }
-  ]
+  ],
+  "sceneImages": {
+    "hoc-xa": "images/suckhoe-long/chuong-chua-tap-03/hoc-xa.jpg",
+    "so-cong-duc": "images/suckhoe-long/chuong-chua-tap-03/so-cong-duc.jpg",
+    "anh-me": "images/suckhoe-long/chuong-chua-tap-03/anh-me.jpg",
+    "cua-gac": "images/suckhoe-long/chuong-chua-tap-03/cua-gac.jpg",
+    "bep-ba": "images/suckhoe-long/chuong-chua-tap-03/bep-ba.jpg",
+    "chuong-ga-dau": "images/suckhoe-long/chuong-chua-tap-03/chuong-ga-dau.jpg",
+    "chuong-ga-tan": "images/suckhoe-long/chuong-chua-tap-03/chuong-ga-tan.jpg",
+    "giay-vu-oan": "images/suckhoe-long/chuong-chua-tap-03/giay-vu-oan.jpg",
+    "loi-thu": "images/suckhoe-long/chuong-chua-tap-03/loi-thu.jpg",
+    "san-nha-phuc": "images/suckhoe-long/chuong-chua-tap-03/san-nha-phuc.jpg",
+    "riu-duoi-xa": "images/suckhoe-long/chuong-chua-tap-03/riu-duoi-xa.jpg"
+  }
 }

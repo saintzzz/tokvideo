@@ -130,5 +130,18 @@
       "caption": "Mang sổ ra sân chùa",
       "text": "Thảo bọc cuốn sổ lại, bảo trước nửa đêm mai, ông Phúc phải tới sân chùa nói hết trước những người còn sống. Tôi đỡ bà nội Lâm ra ngõ, nghe ông Bảy gọi từng nhà từng ký giấy cùng đi, ai nấy cúi đầu chẳng còn tránh mặt. Sau lưng tôi, ông Phúc vừa vịn cửa đứng lên thì bùn níu tận mắt cá, còn bóng Hạnh đã đứng chờ ngoài cổng."
     }
-  ]
+  ],
+  "sceneImages": {
+    "demolition": "images/suckhoe-long/chuong-chua-tap-04/demolition.jpg",
+    "buried-bell": "images/suckhoe-long/chuong-chua-tap-04/buried-bell.jpg",
+    "temple-yard": "images/suckhoe-long/chuong-chua-tap-04/temple-yard.jpg",
+    "bracelet": "images/suckhoe-long/chuong-chua-tap-04/bracelet.jpg",
+    "seeping-floor": "images/suckhoe-long/chuong-chua-tap-04/seeping-floor.jpg",
+    "mud-tracks": "images/suckhoe-long/chuong-chua-tap-04/mud-tracks.jpg",
+    "accusers": "images/suckhoe-long/chuong-chua-tap-04/accusers.jpg",
+    "ledger": "images/suckhoe-long/chuong-chua-tap-04/ledger.jpg",
+    "hen-memory": "images/suckhoe-long/chuong-chua-tap-04/hen-memory.jpg",
+    "confession": "images/suckhoe-long/chuong-chua-tap-04/confession.jpg",
+    "waiting-ghost": "images/suckhoe-long/chuong-chua-tap-04/waiting-ghost.jpg"
+  }
 }

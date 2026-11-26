@@ -129,5 +129,17 @@
       "caption": "Đêm ấy, chuông đã được yên",
       "text": "Những đêm sau, tôi vẫn thức qua nửa đêm cùng Thảo, nghe chị xới một chén cơm đặt trước di ảnh mẹ. Quả chuông nằm dưới mái che tạm ngoài chùa im suốt, những dấu chân gà cũng chẳng trở lại bất cứ nhà nào. Một bữa, chị ngủ thiếp bên bàn, bàn tay còn giữ chiếc khăn lau bia; tôi khép cửa thật khẽ, để chén cơm cúng nguội dần trong căn nhà đã thôi chờ mẹ về."
     }
-  ]
+  ],
+  "sceneImages": {
+    "ledger": "images/suckhoe-long/chuong-chua-tap-05/ledger.jpg",
+    "mud_feet": "images/suckhoe-long/chuong-chua-tap-05/mud_feet.jpg",
+    "witnesses": "images/suckhoe-long/chuong-chua-tap-05/witnesses.jpg",
+    "nail": "images/suckhoe-long/chuong-chua-tap-05/nail.jpg",
+    "confession": "images/suckhoe-long/chuong-chua-tap-05/confession.jpg",
+    "bell": "images/suckhoe-long/chuong-chua-tap-05/bell.jpg",
+    "restitution": "images/suckhoe-long/chuong-chua-tap-05/restitution.jpg",
+    "grave": "images/suckhoe-long/chuong-chua-tap-05/grave.jpg",
+    "release": "images/suckhoe-long/chuong-chua-tap-05/release.jpg",
+    "silent_bell": "images/suckhoe-long/chuong-chua-tap-05/silent_bell.jpg"
+  }
 }
