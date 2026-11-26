@@ -105,5 +105,15 @@
       "text": "Chuyện người đi đánh mưa tới đây là hết. Bà con nghe xong nhớ một điều thôi: người chết đuối không đòi hỏi gì nhiều - họ không cần vàng mã, không cần lễ lớn, họ chỉ cần một người còn sống chịu đứng dưới mưa mà gọi tên mình về. Còn được gọi tên là còn được về nhà."
     }
   ],
-  "thumbTitle": "NGƯỜI MƯA CUỐI CÙNG"
+  "thumbTitle": "NGƯỜI MƯA CUỐI CÙNG",
+  "sceneImages": {
+    "net-struggle": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/net-struggle.jpg",
+    "soul-release": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/soul-release.jpg",
+    "name-call": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/name-call.jpg",
+    "bank-dawn": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/bank-dawn.jpg",
+    "funeral": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/funeral.jpg",
+    "temple-records": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/temple-records.jpg",
+    "ut-boat-rain": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/ut-boat-rain.jpg",
+    "village-epilogue": "images/suckhoe-long/nguoi-di-dan-mua-tap-05/village-epilogue.jpg"
+  }
 }
