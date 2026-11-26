@@ -937,7 +937,8 @@
     "videoId": "Cq_eUS5HYdM",
     "publishedAt": "2026-11-22T15:32:56.056Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugyz_nj_nZXO0kftui94AaABAg"
   },
   "nguoi-di-dan-mua-tap-04-teaser": {
     "videoId": "x-F78KLS0pI",
@@ -1020,7 +1021,8 @@
     "publishedAt": "2026-11-25T19:35:21.036Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwYxX-dBjGIPe1_Sot4AaABAg"
   },
   "chuong-chua-tap-02-teaser": {
     "videoId": "dCL6rTL6w08",
