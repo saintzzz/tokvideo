@@ -1092,24 +1092,28 @@
     "videoId": "8fVwCRDNcb0",
     "publishedAt": "2026-11-26T23:57:46.399Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "UgxQFIu7Df8sk9ElUTp4AaABAg"
   },
   "chuong-chua-tap-04": {
     "videoId": "wqwe5Dz9CGY",
     "publishedAt": "2026-11-27T02:10:16.734Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgzEqYZo6f5Ll96vmRR4AaABAg"
   },
   "chuong-chua-tap-05-teaser": {
     "videoId": "A0r5P3CGcrg",
     "publishedAt": "2026-11-27T04:42:34.696Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugx0FW56by47kyJu3QZ4AaABAg"
   },
   "chuong-chua-tap-05": {
     "videoId": "H0kePGXlcEA",
     "publishedAt": "2026-11-27T04:42:41Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "Ugzyv7Lj5A-n1U_yG7d4AaABAg"
   }
 }
