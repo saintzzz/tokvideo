@@ -1,0 +1,134 @@
+{
+  "id": "ghe-mua-lu-tap-02",
+  "arc": "ghe-mua-lu",
+  "arcTitle": "GHE MÙA LŨ",
+  "episode": 2,
+  "slug": "ghe-mua-lu-tap-02",
+  "title": "Xác Cô Lành Dưới Sàn Ghe - Chiếc Còi Tự Thổi",
+  "description": "Mỗi lần nước dâng, ghe Nhẫn lại đón một người khách không chịu nói quê quán và chẳng bao giờ xuống bến làng. Lần theo tiếng gõ dưới chân, Nhẫn cạy tấm ván đóng kín, tìm thấy cô Lành mất tích hai mươi năm trước cùng chiếc còi đồng của ông nội bị kết tội làm chìm ghe. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ghe-mua-lu"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "Pale face of a drowned Vietnamese woman beneath lifted boat floorboards, wet black hair, faded purple floral blouse, eyes closed",
+    "Chipped antique brass whistle resting inside a dead woman's uncurling fingers, damp purple fabric, ominous lantern reflection",
+    "Silent female ghost with black river mud packed between her lips, rigid fingers gripping a wooden boat gunwale"
+  ],
+  "thumbTitle": "XÁC DƯỚI SÀN GHE",
+  "scenePrompts": {
+    "van-doi": "Photorealistic cinematic Vietnamese folk horror, close low angle inside an old wooden Mekong Delta ferry at night, a silent Vietnamese woman sitting with bare feet suspended above rotten floorboards, black mud droplets rising unnaturally from the boards toward her soles, one pale fingertip pushing through a narrow plank seam, elderly Vietnamese aunt Tu holding an oil lantern, worn dark brown ao ba ba, amber lantern light and deep shadows, realistic aged wood, restrained supernatural horror, no gore, no text, widescreen 16:9.",
+    "khach-ngam-bun": "Photorealistic cinematic Vietnamese folk horror, cramped wooden river ferry at night, silent female passenger with black silt pressed between closed lips, ten rigid fingers gripping the gunwale, young adult Vietnamese boatman Nhan in a faded charcoal ao ba ba looking down as a gray hand emerges from floodwater around his ankle, elderly aunt Tu holding a trembling oil lantern beside him, muddy water reflections, intimate unsettling framing, no gore, no text, widescreen 16:9.",
+    "ve-trong-ao": "Photorealistic cinematic close-up inside a weathered Vietnamese wooden ferry, young boatman Nhan wearing a damp faded charcoal ao ba ba, a brittle yellowed ferry ticket tucked visibly into his shirt pocket, elderly Vietnamese aunt Tu gripping his forearm, black water hyacinth roots tangled around his bare ankle, warm oil lantern light against dark floodwater, authentic rural Mekong Delta details, ticket markings indistinct, no readable text, widescreen 16:9.",
+    "noi-chao": "Photorealistic cinematic Vietnamese village flood scene at dusk, elderly aunt Tu in a worn dark brown ao ba ba carrying a blackened pot of snakehead fish rice porridge beside a small ferry shelter, young boatman Nhan preparing his wooden boat, a silent elderly male passenger in a wet brown ao ba ba standing at the end of a narrow landing, abandoned sandals on the planks, rising floodwater touching an old notch on a mooring post, ominous natural lighting, no text, widescreen 16:9.",
+    "ben-khong-xuong": "Photorealistic cinematic Vietnamese folk horror, old wooden ferry tied at a deserted flooded village landing at night, elderly male passenger sitting motionless with a tiny cloth bundle clenched between both hands, young boatman Nhan waiting beside the mooring rope, elderly aunt Tu holding a lantern at the bow, raised wooden doorways disappearing into darkness behind them, damp textures, prolonged silence conveyed through still composition, no text, widescreen 16:9.",
+    "khach-dem": "Photorealistic cinematic Vietnamese folk horror, narrow wooden ferry beneath a low woven canopy at night, a silent adult Vietnamese man wearing a soaked checkered khan ran scarf sitting at the stern with his face lowered and one finger touching a cracked floorboard seam, a worn betel mortar and oversized wooden clogs lying nearby, young boatman Nhan and elderly aunt Tu watching warily from the bow, amber oil lantern light, realistic river silt and wet clothing, no gore, no text, widescreen 16:9.",
+    "muoi-rang": "Photorealistic cinematic Vietnamese rural drama with folk horror tension, elderly woman Muoi Rang with silver hair in a tight bun and a faded indigo ao ba ba kneeling beside a ferry mooring post, dropped betel leaf and lime-stained fingers, elderly aunt Tu confronting her quietly, young boatman Nhan beside an open boat compartment partly covered with a clean reed mat, gray dawn light over muddy floodwater, authentic Mekong Delta village setting, no gore, no text, widescreen 16:9.",
+    "cay-van": "Photorealistic cinematic close-up of young Vietnamese boatman Nhan prying up an ancient ferry floorboard with an iron tool, rusted nail heads lifting from the upper surface, old resin seal cracking, deep human fingernail scratches visible on the underside of the raised plank, elderly aunt Tu holding an oil lantern close while covering her mouth with a scarf, dark confined wooden bilge below, tense realistic detail, no gore, no text, widescreen 16:9.",
+    "lanh-duoi-san": "Photorealistic cinematic Vietnamese folk horror, overhead close view into a narrow compartment beneath lifted wooden ferry floorboards, body of an adult Vietnamese woman named Lanh lying face upward in unnaturally clear shallow water, pale intact face, closed eyes, wet black hair curled around her neck, faded purple floral blouse with a distinctive leaf-shaped shoulder patch, one hand slowly uncurling against her chest, elderly aunt Tu and young Nhan partially visible at the edges with an oil lantern, solemn frightening atmosphere, non-graphic, no blood, no text, widescreen 16:9.",
+    "coi-dong": "Photorealistic cinematic macro shot of an antique tarnished brass whistle with a clearly chipped mouthpiece and a wet cloth cord, held just above a young Vietnamese boatman's open palm, faint droplets vibrating around its opening as though sounding by itself, faded purple floral fabric and a pale motionless hand beneath it, oil lantern highlights on aged brass, dark wooden ferry interior, disturbing supernatural realism, no text, widescreen 16:9.",
+    "choi-giua-nuoc": "Photorealistic cinematic Vietnamese folk horror, view from the bow of an old wooden ferry approaching a barely visible abandoned timber hut surrounded by floodwater at night, elderly aunt Tu lifting an oil lantern in the foreground, young boatman Nhan watching a chipped brass whistle on a dry cloth, a single wet human hand protruding around the hut wall and knocking on its weathered boards, no chicken visible, thin rain, restrained moonlight, realistic rural Mekong Delta atmosphere, no text, widescreen 16:9."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "van-doi",
+      "caption": "Bùn đang chảy ngược",
+      "text": "Dưới ghế Nhẫn, hai bàn chân trần đang nhỏ ngược bùn đen lên trên. Người đàn bà ngồi bất động vẫn treo chân khỏi mặt ván mục. Tôi cúi ngọn đèn dầu sát xuống, bùn vẫn rịn ngược từng giọt tròn. Giữa hai dấu gót lấm lem, một ngón tay trắng nhợt đội ván lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "khach-ngam-bun",
+      "caption": "Miệng người khách đầy bùn",
+      "text": "Nhẫn hỏi quê quán, người khách chỉ ngậm chặt cái miệng đầy bùn đen. Anh đưa ghe sát bến, bà ta bấu cứng mười ngón vào thành ghe. Ai đang gõ dưới sàn, đúng chỗ đôi bàn chân lạnh ngắt vừa chạm? Tôi nhìn xuống dòng nước, một bàn tay xám ngoét đang nắm chân Nhẫn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ve-trong-ao",
+      "caption": "Chiếc vé vẫn còn trong túi",
+      "text": "Nhẫn giật mạnh chân, bàn tay tan thành đám rễ lục bình đen sì. Tôi ghì lấy cháu, chẳng dám nhìn xuống khoang ghe tối om lần nữa. Từ đêm bà Hường mất dạng, nước lũ lại tràn bến làng Vàm Tràm. Chiếc vé cũ mang tên ông nội Nhẫn vẫn kẹp trong túi áo ướt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "noi-chao",
+      "caption": "Nước vừa dâng, khách đã đợi",
+      "text": "Chiều hôm sau, tôi đem nồi cháo cá lóc xuống chòi, tính giữ Nhẫn ăn rồi nghỉ một chuyến cho lại sức. Cháo chưa kịp rắc hành thì nước chạm vạch cũ trên cọc neo, một ông già mặc áo bà ba đã đứng đợi ngoài đầu ván. Nhẫn vừa chống sào, ổng bước lên ghe, để nguyên đôi dép trên bờ, hỏi quê ở đâu cũng chỉ cúi mặt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ben-khong-xuong",
+      "caption": "Chẳng người nào chịu xuống",
+      "text": "Tôi ngồi ở mũi, cầm đèn cho Nhẫn ghé từng nhà có sàn còn cao hơn mặt nước, vậy mà hỏi bến nào ông già cũng im. Tới bến làng, Nhẫn buộc dây rồi chờ đến tê chân, ổng vẫn ngồi yên, hai tay giữ cái khăn gói chẳng lớn hơn nắm cơm. Chỉ khi tiếng mõ công phu bên chùa vọng tới, tôi chớp mắt một cái, chỗ ổng ngồi đã trống trơn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "khach-dem",
+      "caption": "Mỗi con nước lại thêm một người",
+      "text": "Ba đêm liền, tôi theo Nhẫn vì sợ để cháu đi một mình, đêm gặp người đàn ông ôm cái cối trầu, đêm gặp đứa nhỏ xách đôi guốc của người lớn. Cứ nước nhích qua vạch cọc là thêm một người tới, ai cũng né câu hỏi quê quán, chẳng ai chịu xuống bến làng. Mỗi bận khách mất dạng, dưới sàn lại thêm một tiếng gõ, như họ còn ngồi ở trong đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "van-doi",
+      "caption": "Tiếng gõ nằm dưới gót chân",
+      "text": "Đến đêm thứ tư, tôi lấy nhúm tro bếp rắc lên sàn, chỗ phát ra tiếng gõ thì úp chiếc chén sành để đánh dấu. Ghe không chở khách mà chiếc chén cứ dịch từng chút về phía lái, để lại vệt tro dài bằng gang tay. Nhẫn nhìn vệt ấy rồi bảo tôi, tấm ván bên dưới đã đóng kín từ đời ông nội, cha anh chỉ trám dầu chai quanh mép mỗi mùa nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "muoi-rang",
+      "caption": "Bà Mười nhận ra nhịp gõ",
+      "text": "Sáng ra, tôi mời bà Mười Rạng tới, bởi hồi trận lũ cũ bả từng đi lo cơm nước cho những nhà có người mất. Vừa nghe Nhẫn gõ thử ba tiếng lên sàn, bả đánh rơi miếng trầu đang têm, hỏi ai dạy nó gọi kiểu đó. Tôi chưa kịp đáp, bả đã níu tay tôi dặn đừng cạy ván, rồi lội về, bỏ cả đôi dép bên nồi cháo nguội."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "khach-dem",
+      "caption": "Khách chỉ tay vào tấm ván",
+      "text": "Tối ấy, một người đàn ông quấn khăn rằn bước lên, gấu quần vắt nước mà mặt ghe dưới chân lại khô rang. Tôi hỏi có biết bà Hường không, ổng quay đầu nhìn xuống sàn, ngón tay cứ miết vào đường trám dầu chai đã nứt. Nhẫn chống sào ghé bờ, người khách lập tức cúi rạp xuống, hai tay ôm đầu, rồi dưới ván vang lên một tiếng đàn bà kêu nghẹn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cay-van",
+      "caption": "Đinh bị đóng từ phía trên",
+      "text": "Tôi giữ đèn, Nhẫn lấy cây nạy sửa mui lách vào mép ván, mỗi lần nhích tay là tiếng kêu dưới chân lại nhỏ đi. Hàng đinh sét bật lên từng chiếc, đầu đinh đều nằm phía trên, còn mặt dưới có những vết cào chạy dồn về một góc. Mùi dầu chai cũ trộn với mùi bùn kín hơi xộc lên, khiến tôi phải ngậm chặt vạt khăn mới khỏi ói."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lanh-duoi-san",
+      "caption": "Cô Lành nằm dưới sàn ghe",
+      "text": "Tấm ván vừa nghiêng, tôi thấy một khuôn mặt đàn bà ngửa lên trong khoang hẹp, tóc quấn quanh cổ như rong mắc cọc. Chiếc áo bông tím bạc còn nguyên miếng vá hình lá trầu nơi vai trái, miếng vá chính tay tôi từng đính cho con Lành trước mùa lũ hai mươi năm về trước. Tôi gọi tên nó, bàn tay đang co trước ngực chầm chậm buông ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lanh-duoi-san",
+      "caption": "Hai mươi năm, áo vẫn còn ướt",
+      "text": "Nhẫn lùi mạnh đến nỗi lưng đập vào mui, hỏi sao người mất tích trước khi anh biết nói lại nằm trong chiếc ghe mình vẫn chèo mỗi bữa. Tôi chẳng trả lời nổi, chỉ thấy nước quanh xác con Lành trong veo, còn nước ngoài mạn đỏ quạch phù sa. Dưới những ngón tay vừa mở, có sợi dây vải buộc một chiếc còi đồng, nằm gọn trên vạt áo bông ướt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coi-dong",
+      "caption": "Chiếc còi của người bị kết tội",
+      "text": "Tôi nhận ra cái còi bởi một bên miệng đã mẻ, chỗ ông nội Nhẫn đánh rơi xuống cối đá hồi còn đưa đò cho làng. Ngày ấy, trước mỗi chuyến cứu người ổng thổi hai hơi ngắn, một hơi dài, tiếng còi nghe qua mấy vạt dừa nước. Vậy mà sau trận chìm ghe, làng kết tội ổng làm chìm ghe chở người chạy lũ, đến chết cũng chẳng ai chịu nghe ổng phân trần."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "coi-dong",
+      "caption": "Tiếng còi chẳng cần người thổi",
+      "text": "Nhẫn gỡ chiếc còi khỏi dây vải, chưa đưa lên miệng nó đã ré lên hai hơi ngắn rồi kéo dài một hơi, làm tôi buốt tận chân răng. Người khách quấn khăn rằn vẫn ngồi cuối ghe bỗng ngẩng đầu, môi mấp máy, tôi chỉ nghe được mấy chữ đừng ghé bến làng. Rồi ổng tan vào bóng mui, để lại bàn tay bùn in đúng chỗ mặt dưới tấm ván có vết cào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "muoi-rang",
+      "caption": "Bà Mười không dám nhìn mặt",
+      "text": "Tôi không cho Nhẫn lấp ván lại, lấy tấm chiếu sạch phủ con Lành, rồi nhờ cháu gọi bà Mười sang nhận mặt trước khi trình làng. Bả tới lúc trời hửng, thấy miếng vá tím thì quỵ xuống cọc neo, miệng cứ bảo hồi đó người ta ghi nó trôi ra biển rồi. Tôi hỏi người ta là ai, bả nhìn quanh bến, kéo chiếu che kín mặt con Lành mà không đáp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "choi-giua-nuoc",
+      "caption": "Tiếng gà gọi từ căn chòi",
+      "text": "Đêm sau, tôi ở lại giữ con Lành, còn Nhẫn đặt chiếc còi lên mảnh vải khô trước mũi ghe, quyết tìm chỗ nó muốn dẫn về. Vừa tháo neo, còi tự kêu một hơi, ngoài dòng liền có tiếng gà đáp lại giữa khoảng nước chẳng thấy bờ. Tôi nâng đèn, một căn chòi bỏ hoang hiện sau màn mưa, trên vách có bàn tay ướt đang gõ đúng ba tiếng."
+    }
+  ]
+}

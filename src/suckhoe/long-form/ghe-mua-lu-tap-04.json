@@ -1,0 +1,133 @@
+{
+  "id": "ghe-mua-lu-tap-04",
+  "arc": "ghe-mua-lu",
+  "arcTitle": "GHE MÙA LŨ",
+  "episode": 4,
+  "slug": "ghe-mua-lu-tap-04",
+  "title": "Đốt Sổ Người Chết - Chín Bóng Khách Đòi Gọi Tên",
+  "description": "Bảy Khang sai Tám Rỡ đốt cuốn sổ thu nợ, rồi ép Nhẫn nhận tội giết cô Lành bằng một tờ khai chuẩn bị sẵn. Giữa chín bóng khách đứng kín mạn ghe, bà Mười Rạng thú nhận chuyện giấu xác, sửa danh sách người mất tích và chỉ nơi chôn chiếc hòm mà ông Bảy chưa tìm được. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ghe-mua-lu"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "A waterlogged woman's pale hand emerging from a burning debt ledger and gripping a man's wrist",
+    "Ownerless mud-filled sandals facing an elderly man's bare feet beneath a polished wooden platform"
+  ],
+  "thumbTitle": "ĐỐT SỔ GỌI VONG",
+  "scenePrompts": {
+    "burning-ledger": "Photorealistic cinematic Vietnamese folk horror, close-up of a handwritten debt ledger burning inside a small charcoal brazier beside an ancestral altar, a pale waterlogged female hand emerging between the charred pages and gripping the wrist of a stocky Vietnamese man in a dark brown shirt, black fingernails, ash and droplets suspended in warm firelight, rural Mekong Delta wooden interior, realistic skin and paper textures, restrained supernatural detail, no gore, no text overlay, 16:9.",
+    "forged-confession": "Photorealistic cinematic close-up of a prepared handwritten confession on yellowed paper with an old red village seal and an empty fingerprint space, a gaunt elderly Vietnamese man's wrinkled hand pushing it toward a young ferryman in a faded indigo shirt, an elderly Vietnamese woman in a dark brown ao ba ba watching beside him, oil lamp lighting, tense rural wooden interior, shallow depth of field, no legible typography required, no text overlay, 16:9.",
+    "high-house": "Photorealistic cinematic Vietnamese rural flood horror, a gaunt elderly former village chief with thin white hair sitting barefoot on an elevated polished hardwood platform inside a dry timber house, one hand gripping a wooden cane, a steaming bowl of white bean sweet soup and sealed papers beside him, floodwater visible below the outer steps through the open doorway, ancestral altar in the background, warm interior against cold reflected water, no text overlay, 16:9.",
+    "escape-walkway": "Photorealistic cinematic night scene on a narrow wooden walkway above dark floodwater in a Vietnamese river village, a young ferryman in a faded indigo shirt helping an elderly woman in a dark brown ao ba ba hurry toward a small wooden ferry, another elderly woman in a faded gray blouse waiting with a dented metal food carrier slipping from her hands, lamplight spilling from a raised house, realistic wet planks and movement, no text overlay, 16:9.",
+    "ghost-passengers": "Photorealistic cinematic Vietnamese folk horror aboard a narrow wooden ferry at night, nine drowned adult passengers in old rural ao ba ba clothing standing tightly along both gunwales, dripping hems and muddy hair, all facing an empty space in the center, an elderly woman in a gray blouse kneeling between a young ferryman and an elderly female witness, low oil lantern, unnaturally level boat, cold blue water, no gore, no text overlay, 16:9.",
+    "retreating-enforcer": "Photorealistic cinematic Vietnamese supernatural horror, a stocky middle-aged man in a dark brown shirt recoiling with a flaming torch on a raised wooden landing, fresh wet footprints appearing across otherwise dry planks toward his feet, ghostly ferry passengers in the background turning their heads together, black mud clinging to their napes, dramatic practical firelight, realistic anatomy, no gore, no text overlay, 16:9.",
+    "confession-aboard": "Photorealistic cinematic intimate scene aboard an old Vietnamese wooden ferry, an elderly woman in a faded gray blouse kneeling and clutching an elderly female witness's wrist, her weathered face contorted with shame and fear, behind her a drowned woman with mud-matted hair holding a soaked sheet covered in smeared handwritten entries, other passengers partially visible along the gunwale, oil lantern and cold water reflections, no gore, no text overlay, 16:9.",
+    "relief-warehouse": "Photorealistic cinematic flashback inside a rural Vietnamese flood relief warehouse twenty years earlier, stacked burlap rice sacks, a frightened young Vietnamese woman holding land receipts near a rough timber doorway, a stocky man pulling her into the shadows while an older village chief stands inside, a small wooden boat stored behind them with one loose floorboard, dim kerosene lamp, oppressive realistic atmosphere, non-graphic, no text overlay, 16:9.",
+    "altered-register": "Photorealistic cinematic Vietnamese folk horror insert, an elderly woman's trembling hands beside two conflicting handwritten village registers, old land transfer receipts, gold payment acknowledgments, a red seal and an ink pad on a rough wooden surface, damp paper edges and black fingerprints, a small dented tin chest nearby in shadow, isolated kerosene lamplight, realistic archival materials, no legible typography required, no text overlay, 16:9.",
+    "buried-chest-marker": "Photorealistic cinematic ominous view of a submerged grave landing in the Vietnamese Mekong Delta at night, opaque floodwater covering the base of a low old burial mound, a chipped porcelain incense bowl near the southern edge of a weathered grave, faint silhouette of a wooden mooring post with three iron bands beneath the murky water, no chest visible, lantern reflection trembling across the surface, grounded rural detail, no text overlay, 16:9.",
+    "waiting-sandals": "Photorealistic cinematic Vietnamese folk horror, low-angle close-up of a pair of ownerless mud-filled rubber sandals on the dry threshold of a raised timber house, their toes pointing inward toward the bare feet of a gaunt elderly man seated on a polished hardwood platform, his cane lifted motionless above the floor, distant ferry lantern visible through the doorway, cold wet footprints ending at the sandals, no gore, no text overlay, 16:9."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "burning-ledger",
+      "caption": "Bàn tay thò khỏi sổ cháy",
+      "text": "Bàn tay ướt thò khỏi trang sổ cháy đang quặp lấy cổ tay Tám. Từng ngón trắng bợt siết chặt khiến hắn quỵ xuống trước cửa buồng thờ. Tôi giằng thằng Nhẫn lùi lại khi những móng tay đen bắt đầu cào. Trong đống giấy đỏ lửa, chín tiếng người cùng gọi tên ông Bảy Khang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forged-confession",
+      "caption": "Tờ nhận tội đã viết sẵn",
+      "text": "Tại sao tên thằng Nhẫn xuất hiện trong bản nhận tội đóng dấu đỏ? Tôi thấy bên cạnh tên Nhẫn là hàng chữ nhận tội giết cô Lành. Nhẫn còn chưa kịp đọc thì ngoài cửa đã vang tiếng chân người chạy. Tám Rỡ dùng chiếc khăn che cổ tay mang đủ năm vết thâm tím."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "high-house",
+      "caption": "Ông Bảy ra lệnh đốt tiếp",
+      "text": "Bảy Khang vẫn ngồi trên bộ ván gõ cao nhất làng Cồn Sậy. Dưới chân ông, nước ngập chỉ vừa chạm tới bậc tam cấp ngoài sân. Tôi nhìn chén chè đậu trắng còn bốc khói cạnh xấp giấy đóng dấu. Ông gõ cây gậy xuống nền, bảo Tám đốt luôn những trang còn lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "burning-ledger",
+      "caption": "Lời hẹn minh oan là cái bẫy",
+      "text": "Chỉ mới lúc nãy, chính Bảy Khang sai người mời chúng tôi tới, nói sẽ đưa giấy cũ minh oan cho ông nội Nhẫn. Tôi vừa đặt cuốn sổ thu nợ lên bàn thì Tám Rỡ đã giật lấy, nhét vào lò than hơ trầu bên cửa. Nhẫn chụp được góc bìa, nhưng đầu gậy của ông già nện xuống tay nó, còn tôi chỉ kịp nghe tiếng giấy nổ lách tách."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forged-confession",
+      "caption": "Sao ông biết chỗ giấu xác?",
+      "text": "Bảy Khang đẩy tờ khai về phía Nhẫn, nói chỉ cần nó điểm chỉ thì chuyện cái xác dưới ghe sẽ được thu xếp. Tôi đọc thấy cả lời nhận tội mà nó chưa từng nói, bên dưới chừa sẵn chỗ cho hai người làm chứng. Nhẫn hỏi sao ông biết xác Lành nằm dưới tấm ván nào, ông bèn úp bàn tay nhăn nheo lên miệng chiếc chuông gọi người."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "escape-walkway",
+      "caption": "Bà Mười chờ dưới cầu ván",
+      "text": "Tám Rỡ vừa mở miệng la bắt kẻ giết người, tôi đã hất cái ghế đẩu chắn ngang cửa buồng. Nhẫn dìu tôi chạy xuống cầu ván, bỏ lại sau lưng tiếng Bảy Khang kêu làng xóm tới coi tang chứng. Cuối cầu, bà Mười Rạng đang ôm cà mèn cháo trắng chờ sẵn, nhưng vừa thấy tro dính trên tay Nhẫn, bả buông luôn cà mèn xuống nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghost-passengers",
+      "caption": "Chín bóng khách chừa một chỗ",
+      "text": "Tôi bước xuống ghe trước, bàn chân lập tức chạm phải một gót chân lạnh ngắt mà mắt chẳng thấy ai. Đến khi Nhẫn kéo bà Mười qua mạn, chín bóng khách mới hiện lên, đứng chen kín hai bên, áo bà ba nhỏ nước đều đều. Ghe nặng thêm ngần ấy người mà vẫn nổi ngang mặt ván cũ, chỉ khoảng giữa chừa đúng một chỗ trống trước mặt bà Mười."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "retreating-enforcer",
+      "caption": "Dấu chân ướt đuổi ngược lên cầu",
+      "text": "Tám Rỡ cầm đuốc chạy theo ra cầu, miệng vẫn gào rằng Nhẫn giết Lành rồi bắt thêm bà Mười bịt miệng. Tôi định lên tiếng thì những bóng khách đồng loạt quay đầu, để lộ sau gáy từng người một vệt bùn đen. Tám lùi phắt lại khi trên cầu khô xuất hiện những dấu chân ướt đi tới chỗ hắn, còn trong ghe không một bàn chân nào nhúc nhích."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession-aboard",
+      "caption": "Chính tui đã phụ giấu xác",
+      "text": "Bà Mười quỳ sụp xuống chỗ trống, hai bàn tay lần tìm vạt áo như kiếm khăn bịt mặt. Tôi đỡ vai thì bả níu lấy cổ tay tôi, nói hồi đó chính bả phụ giấu xác con Lành, cũng chính bả chép lại danh sách người mất tích. Ngoài mạn, một người đàn bà tóc bết bùn giơ lên trang giấy ướt, chỗ tên tuổi chỉ còn những vệt mực bị quệt ngang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "relief-warehouse",
+      "caption": "Lành mang giấy tới đòi lại của",
+      "text": "Bả nói Lành từng phụ ghi sổ phát gạo, nên biết chín nhà đã giao ruộng cùng vàng cho Bảy Khang để đổi một chuyến ghe cứu mạng. Đêm nước lớn, Lành ôm xấp giấy tới đòi trả lại của cho những nhà có người chết, rồi bị Tám kéo vào kho. Tôi hỏi bả có thấy ai ra tay không, bả lắc đầu, chỉ nói lúc cửa mở thì con nhỏ đã nằm im dưới chân ông Bảy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "relief-warehouse",
+      "caption": "Ba tiếng gõ dưới lớp ván đáy",
+      "text": "Theo lời bà Mười, Tám bắt bả phụ đưa Lành xuống chiếc ghe nhỏ cất trong kho, rồi ép bả đậy lớp ván đáy lên. Chiếc ghe ấy nằm xó bãi suốt nhiều năm, trước khi Nhẫn đem về trám lại để chở khách mùa nước. Tôi nhìn khe ván dưới chân mình, nghe ba tiếng gõ rất nhẹ vọng lên, còn bà Mười cứ lặp đi lặp lại rằng bả đã nghe đúng tiếng ấy đêm giấu xác."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "altered-register",
+      "caption": "Ba giạ gạo đổi lấy im lặng",
+      "text": "Sau đó Bảy Khang bắt bả bỏ tên Lành khỏi bản kê chết đuối, chép sang tờ người bỏ làng và giả dấu tay ở cuối trang. Chín người không về được thì ghi thành tự ý lên ghe ông nội Nhẫn, không hề giao tiền cho làng cứu hộ. Tôi hỏi sao bả chịu làm, bả cúi đầu nói nhà chỉ còn đứa con nhỏ, rồi nhận chính bả đã lấy ba giạ gạo để giữ miệng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "altered-register",
+      "caption": "Bản gốc còn trong chiếc hòm thiếc",
+      "text": "Nhẫn nắm cây sào chặt đến trắng tay, hỏi cuốn sổ cháy rồi thì còn lấy gì bắt người sống chịu nhận. Bà Mười lắc đầu, bảo hồi thay danh sách, bả giữ lại bản đầu có dấu làng cùng giấy giao ruộng, biên nhận vàng của chín nhà. Bả gói tất cả vào chiếc hòm thiếc, giấu khỏi mắt Tám; trong đó còn tờ lệnh giữ hàng cứu trợ mang chữ ký ông Bảy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "buried-chest-marker",
+      "caption": "Dưới chân cọc có ba khoanh sắt",
+      "text": "Bà Mười chỉ về Mộ Gò Gà, bảo chiếc hòm được chôn dưới chân cọc buộc ghe cũ, ngay mé nam ngôi mộ có chén sứt cắm nhang. Tôi nhớ chỗ đó còn chìm sâu, bả bảo phải đợi nước rút mới thấy được đầu cọc, trên thân có ba khoanh sắt. Nhẫn vừa hỏi vì sao chôn tận đó, bả đã khóc, nói ngày xưa ghe lớn mắc lại dưới gò, bả tưởng người chết sẽ giữ giùm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "confession-aboard",
+      "caption": "Gọi đúng tên tụi tui",
+      "text": "Tôi chưa kịp hỏi thêm thì một bóng khách đặt bàn tay bùn lên đầu gối bà Mười, để lại nguyên dấu năm ngón. Bả run rẩy xin mai cúng cháo, nhưng từ hai mạn ghe bật lên cùng một câu, nghe như người nói dưới đáy lu: gọi đúng tên tụi tui. Nhẫn đưa tấm áo khô cho bả, bảo bả phải sống mà kể lại trước mặt làng, không được đem chuyện này giấu dưới đất thêm lần nữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "waiting-sandals",
+      "caption": "Chỗ sau lái dành cho ông Bảy",
+      "text": "Từ căn nhà cao, tiếng Bảy Khang vọng xuống, hứa thưởng vàng cho ai giữ được Nhẫn trước khi trời sáng. Tôi quay lại thì thấy trước thềm ông đã có một đôi dép bùn, mũi dép hướng thẳng vào bộ ván gõ. Nhẫn chống sào xoay ghe về cầu, chừa trống chỗ ngồi sau lái rồi gọi ông Bảy xuống nhận mặt khách, trong khi chín bóng người cùng ngước lên đợi."
+    }
+  ]
+}

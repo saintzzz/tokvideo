@@ -1,0 +1,128 @@
+{
+  "id": "ghe-mua-lu-tap-05",
+  "arc": "ghe-mua-lu",
+  "arcTitle": "GHE MÙA LŨ",
+  "episode": 5,
+  "slug": "ghe-mua-lu-tap-05",
+  "title": "Chín Bóng Ma Đòi Ông Bảy Nhận Tội",
+  "description": "Giữa đỉnh lũ, Nhẫn đưa ông Bảy Khang đến Mộ Gò Gà, nơi xác ghe cũ và chiếc hòm chứng cứ trồi lên. Trước chín vong khách, ông phải nhận tội, trả lại đất và gọi đúng tên từng người. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ghe-mua-lu"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "An elderly village chief with bloody fingernails gripping a ferry gunwale, nine ghostly passengers reflected in the floodwater",
+    "A rusted iron evidence chest emerging beside the half-buried wreck of an old wooden ferry",
+    "A water-stained debt ledger opened beneath a brass boat whistle, muddy fingerprints covering the pages"
+  ],
+  "thumbTitle": "CHÍN BÓNG ĐÒI NỢ",
+  "scenePrompts": {
+    "khang_ghe": "Photorealistic cinematic Vietnamese folk horror, an elderly former village chief gripping the wet gunwale of a small wooden ferry at peak flood, bloody broken fingernails, nine indistinct drowned passengers reflected in black water, cold lantern light, natural textures, restrained supernatural dread, no text.",
+    "bong_khach": "Photorealistic cinematic night scene on a Vietnamese flood ferry, nine soaked ghostly passengers standing silently along both sides, faces pale and waterlogged, an old chief surrounded at the center, dim oil lamp, realistic rural details, eerie restraint, no text.",
+    "nhan_cheo": "Photorealistic cinematic Vietnamese folk horror, a determined young boatman steering a narrow wooden ferry through a flooded village at night, rain-darkened shirt, old lantern swinging, shadowy passengers behind him, moody natural lighting, no text.",
+    "mo_go_ga": "Photorealistic cinematic view of Mộ Gò Gà, a small flooded Vietnamese village burial mound surrounded by receding brown water, old grave markers emerging, dawn haze and distant fields, somber folk-horror atmosphere, no people in foreground, no text.",
+    "ghe_cu": "Photorealistic cinematic close view of a wrecked old Vietnamese ferry surfacing from receding floodwater beside a burial mound, broken ribs of wood, torn mooring rope, river silt and weeds, pale dawn light, no text.",
+    "hom_sat": "Photorealistic cinematic close-up of a rusted iron evidence chest surfacing beside a submerged wooden ferry, muddy water streaming from its seams, a corroded lock and old rope, dramatic dawn reflections, Vietnamese folk horror, no text.",
+    "so_no": "Photorealistic cinematic close-up of an old water-stained debt ledger opened beside a brass boat whistle and faded land deeds, muddy fingerprints on handwritten Vietnamese pages, lantern glow, realistic aged paper, no readable text.",
+    "loi_nhan": "Photorealistic cinematic Vietnamese folk horror, an elderly man confessing beside a half-open evidence chest while nine drowned villagers watch in silence, trembling hands, wet old clothes, muted dawn light, emotionally grounded, no text.",
+    "tra_dat": "Photorealistic cinematic rural Vietnamese village gathering after a flood, an elderly former chief returning old land deeds and compensation to grieving families, simple wooden table, villagers watching solemnly, soft overcast daylight, no text.",
+    "mo_chung": "Photorealistic cinematic scene of villagers building one shared grave at a small Vietnamese burial mound, nine simple name tablets arranged carefully, incense smoke rising in pale dawn, humble rural details, reverent folk atmosphere, no text.",
+    "ga_sang": "Photorealistic cinematic dawn on a quiet Vietnamese river, an empty wooden ferry resting near the village bank as nine translucent passengers step onto a misty path, a rooster silhouetted on a far fence, gentle golden light, no text."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "khang_ghe",
+      "caption": "Móng tay ông Bảy bật khỏi mạn ghe",
+      "text": "Giữa đỉnh lũ, móng tay ông Bảy bật khỏi mạn ghe, để lại vệt đỏ. Máu đen rịn ra, loang trên ván thành hình một chiếc ghe chìm. Chín bóng khách đồng loạt quay mặt, áo quần rỏ nước lạnh xuống sàn. Tôi nghe họ hỏi: “Ông còn nhớ tên chúng tôi, hay chỉ nhớ món nợ?”"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bong_khach",
+      "caption": "Ai đang nắm chân ông dưới nước?",
+      "text": "Ông Bảy cúi nhìn, dưới nước có bàn tay đang giữ chặt cổ chân. Bàn tay ấy mang chiếc nhẫn ông từng chôn cùng xác ghe. Nhẫn kéo ông khỏi mép mạn, nhưng chín bóng khách đã khép vòng. Tôi tự hỏi: ai trong số họ sẽ kéo ông xuống trước khi ghe chạm bến?"
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nhan_cheo",
+      "caption": "Nhẫn đưa ông Bảy đến Mộ Gò Gà",
+      "text": "Tôi nghe bà Mười Rạng kể, Nhẫn cầm mái chèo hướng về Mộ Gò Gà. Nước lũ phủ gần kín những ngọn tre, còn ông Bảy ngồi co rúm ở cuối ghe. Dọc hai mạn, chín vị khách không nói một lời. Mỗi lần mái chèo khua xuống, một tiếng gà lại vọng lên giữa dòng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mo_go_ga",
+      "caption": "Nước rút, mộ cũ hiện ra",
+      "text": "Đến chân gò, nước bỗng rút nhanh như có ai tháo nút dưới lòng sông. Mộ đất hiện ra, quanh đó còn cắm mấy cọc tre người làng dựng để tránh lũ. Tôi thấy Nhẫn nêm ghe vào bờ, rồi chỉ tay xuống vệt nước đục. Dưới lớp bùn vừa trôi, một mái chèo cũ đang nhô lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ghe_cu",
+      "caption": "Xác ghe cũ trồi lên khỏi bùn",
+      "text": "Cả xác ghe năm ấy trồi khỏi bùn, sườn gỗ gãy như những khúc xương sẫm màu. Một đầu dây neo bị cắt gọn, không phải tự mục vì nước lũ. Ông Bảy nhìn thấy nút thắt quen thuộc, mặt trắng bệch, môi run mà không ra tiếng. Chín bóng khách cùng bước khỏi ghe của Nhẫn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hom_sat",
+      "caption": "Chiếc hòm chứng cứ nổi lên",
+      "text": "Từ dưới khoang ghe cũ, chiếc hòm sắt đội bùn nổi lên lềnh bềnh. Nhẫn kéo nó lên bờ, dùng sống dao nạy chiếc khóa đã gỉ đỏ. Tôi nghe trong hòm có tiếng kim loại chạm nhau, khô khốc như ai gõ cửa. Khi nắp bật mở, mùi giấy ẩm trộn với mùi bùn lâu năm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "so_no",
+      "caption": "Sổ nợ và danh sách giả",
+      "text": "Trong hòm có cuốn sổ thu nợ, chín tờ giao ruộng và danh sách người mất tích bị sửa tên. Chiếc còi đồng nằm sát đáy, cạnh một mảnh giấy ghi ngày cắt dây ghe. Nhẫn đặt từng món trước mặt ông Bảy. Tôi thấy ông già nhìn chúng như nhìn lại chính bàn tay mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "loi_nhan",
+      "caption": "Ông Bảy thú nhận trước chín vong",
+      "text": "Nhẫn không đánh, cũng chẳng cần quát, chỉ hỏi ai đã cắt dây neo. Trước mặt chín vong khách, ông Bảy cúi đầu nhận chính mình sai Tám Rỡ làm việc đó. Ông khai đã giấu hàng cứu trợ, ép chín nhà giao ruộng vàng, rồi để người đi đò mang tiếng bỏ mặc khách. Lời thú tội tan vào tiếng nước ròng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bong_khach",
+      "caption": "Cô Lành bước ra khỏi hàng khách",
+      "text": "Cô Lành bước lên trước, tóc dài dính bùn, chiếc còi đồng lạnh ngắt trong tay. Bà Mười Rạng từng thú nhận đã giúp giấu xác, nay cũng đứng bên bờ, cúi mặt trước cô. Ông Bảy nói tên Lành, rồi nhận mình đã vu oan cho ông nội Nhẫn. Bấy giờ, tiếng gà thứ nhất mới cất lên."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "loi_nhan",
+      "caption": "Từng tội được gọi đúng tên",
+      "text": "Ông Bảy nói rõ từng tội, không bỏ sót việc chiếm ruộng, giấu vàng cứu hộ và làm giả danh sách. Ông cũng nhận chuyện đã đổ tội cho người lái đò để làng thôi truy hỏi. Nhẫn đặt tấm vé cũ mang tên ông nội bên cuốn sổ. Tôi nghe ông Bảy xin lỗi, nhưng chín người khách vẫn chưa rời đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "tra_dat",
+      "caption": "Đất được trả về cho các nhà",
+      "text": "Sáng hôm sau, ông Bảy đem giấy tờ về đình làng, trước mặt hương chức và bà con. Ông trả lại phần ruộng đã chiếm cho những nhà còn con cháu, rồi bán tài sản để bồi hoàn món nợ cứu hộ. Mấy bà gánh xôi đậu ngồi chờ từ sớm, nghe từng khoản được ghi vào sổ mới, có người vừa khóc vừa ký."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mo_chung",
+      "caption": "Chín cái tên trên mộ chung",
+      "text": "Bà con góp tre, gạch, vôi, dựng một ngôi mộ chung trên gò. Tôi nghe Nhẫn đọc đủ chín cái tên: bà Hường, cô Lành, ông Tư Được, bà Hai Sương, anh Ba Lẫm, chị Sáu Vân, bé Út Mùi, ông Chín Định và bà Năm Thoa. Mỗi cái tên được khắc lên một tấm gỗ, không còn dòng chữ mất tích."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ga_sang",
+      "caption": "Khách lần lượt rời khỏi ghe",
+      "text": "Khi nén nhang đầu tiên cháy hết, tiếng gà gáy vang từ bờ bên kia. Bà Hường rời ghe trước, rồi đến cô Lành; tám bóng còn lại cũng bước theo, nhẹ như khói bếp. Chỗ họ đứng chỉ còn vài giọt nước trong. Tôi nhìn mái chèo nằm yên, nghe dòng sông lần đầu thôi gọi khách."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "tra_dat",
+      "caption": "Dòng họ Nhẫn được minh oan",
+      "text": "Ông Bảy giao cuốn sổ cùng lời nhận tội cho làng giữ, không xin xé bỏ một trang nào. Người ta rửa tấm bia ông nội Nhẫn, khắc lại tên và ghi rõ ông không bỏ mặc khách đò. Nhẫn trở về căn nhà cũ, đặt chiếc vé cũ lên bàn thờ. Tôi nghe từ ngoài sông vọng lại tiếng chèo, nhưng sáng ấy không có ai gọi đò."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mo_go_ga",
+      "caption": "Mộ Gò Gà yên tiếng gọi",
+      "text": "Từ đó, dân làng vẫn kiêng nhận khách sau tiếng gà thứ ba, nhưng không còn ai thấy bóng người đứng đợi giữa lũ. Mộ Gò Gà có chín nén nhang được thay mỗi ngày rằm, khi nhà nào cũng nấu chén cháo trắng cúng người khuất. Tôi kể đến đây thì thôi, món nợ đã trả, tiếng gọi trên sông cũng đã lặng."
+    }
+  ]
+}

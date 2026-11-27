@@ -81,6 +81,11 @@ import ChuongChuaTap02 from "./chuong-chua-tap-02.json";
 import ChuongChuaTap03 from "./chuong-chua-tap-03.json";
 import ChuongChuaTap04 from "./chuong-chua-tap-04.json";
 import ChuongChuaTap05 from "./chuong-chua-tap-05.json";
+import GheMuaLuTap01 from "./ghe-mua-lu-tap-01.json";
+import GheMuaLuTap02 from "./ghe-mua-lu-tap-02.json";
+import GheMuaLuTap03 from "./ghe-mua-lu-tap-03.json";
+import GheMuaLuTap04 from "./ghe-mua-lu-tap-04.json";
+import GheMuaLuTap05 from "./ghe-mua-lu-tap-05.json";
 export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   baNgayTruocDamCuoi,
   threeDaysBeforeTheWedding,
@@ -211,4 +216,9 @@ export const LONG_FORM_EPISODES: LongFormEpisode[] = [
   ChuongChuaTap03,
   ChuongChuaTap04,
   ChuongChuaTap05,
+  GheMuaLuTap01,
+  GheMuaLuTap02,
+  GheMuaLuTap03,
+  GheMuaLuTap04,
+  GheMuaLuTap05,
 ] as LongFormEpisode[];

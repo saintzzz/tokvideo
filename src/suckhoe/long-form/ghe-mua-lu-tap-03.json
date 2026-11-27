@@ -1,0 +1,133 @@
+{
+  "id": "ghe-mua-lu-tap-03",
+  "arc": "ghe-mua-lu",
+  "arcTitle": "GHE MÙA LŨ",
+  "episode": 3,
+  "slug": "ghe-mua-lu-tap-03",
+  "title": "Cuốn Sổ Chín Dấu Tay - Tiếng Gà Gáy Dưới Sàn",
+  "description": "Tiếng gà gáy giữa dòng dẫn Nhẫn tới căn chòi bỏ hoang, nơi cuốn sổ thu nợ vẫn còn nguyên chín dấu tay của người mất tích. Những trang giấy hé lộ ruộng đất, vàng cứu mạng và tội oan đè lên ông nội anh suốt hai mươi năm. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ghe-mua-lu"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "An ancient debt ledger bearing nine muddy human handprints",
+    "A severed black mooring rope clenched in a waterlogged spectral hand",
+    "A drowned woman's pale fingertip pointing at a red fingerprint"
+  ],
+  "thumbTitle": "CHÍN DẤU TAY CHẾT",
+  "scenePrompts": {
+    "underwater-rooster": "Photorealistic cinematic Vietnamese folk horror, close view from a narrow wooden ferry at night, a bloated pale human hand breaking the black floodwater beside a suspended brass whistle, concentric ripples, kerosene lantern light, rural Mekong Delta, restrained supernatural dread, realistic textures, no text, no watermark.",
+    "bow-passenger": "Photorealistic cinematic Vietnamese folk horror, a spectral Vietnamese woman in a soaked brown blouse seated at the bow of an old wooden ferry, her bare feet facing backward toward the stern, a young Vietnamese ferryman holding an oar behind her, black floodwater, dim amber lantern, no gore, no text.",
+    "abandoned-hut": "Photorealistic cinematic night scene, abandoned flood relief hut on decaying wooden stilts in rural southern Vietnam, a narrow ferry touching its ladder, muddy wet footprints ascending otherwise dry steps, young Vietnamese ferryman in a faded indigo shirt holding a kerosene lantern, eerie realism, no text.",
+    "hidden-ledger": "Photorealistic cinematic macro shot inside an abandoned Vietnamese wooden hut, an old clothbound debt ledger concealed beneath an overturned clay rice jar, decayed woven mat, dry paper surrounded by wet wood, trembling hand and warm lantern light, ominous shadows, no readable text.",
+    "nine-handprints": "Photorealistic cinematic overhead close-up of an antique debt ledger on rough timber, nine separate muddy human handprints across yellowed pages, faded handwritten columns and red fingerprints without legible lettering, water droplets, lantern glow, Vietnamese folk horror, no added typography.",
+    "relief-cache": "Photorealistic cinematic interior of a derelict flood relief storage hut in the Mekong Delta, torn burlap rice sacks, rusted kerosene tins and collapsed bamboo baskets concealed behind a woven partition, rotten grain on wet floorboards, lantern light, sober unsettling realism, no text.",
+    "cut-rope": "Photorealistic cinematic extreme close-up of an old thick blackened mooring rope with a sharply severed end, wrapped in decaying oilcloth beside a handwritten notebook on rough wooden planks, a brass whistle nearby, damp Vietnamese riverside hut, dramatic amber side lighting, no readable text.",
+    "false-accusation": "Photorealistic cinematic close-up of a young Vietnamese ferryman's distressed face above an old ledger, faded indigo shirt, weathered hands gripping yellowed paper bearing indistinct handwriting and red seals, kerosene lamp reflected in wet eyes, dark abandoned wooden hut, no readable text.",
+    "lanh-finger": "Photorealistic cinematic Vietnamese supernatural horror, a pale waterlogged woman's fingertip emerging through a gap between wooden floorboards and pointing toward a red fingerprint on an open ledger, wet black hair barely visible below the floor, amber lantern glow, restrained non-graphic horror, no text.",
+    "approaching-boat": "Photorealistic cinematic view through broken bamboo slats of an abandoned Vietnamese flood hut, a second small wooden boat approaching through black water, a stocky middle-aged Vietnamese man holding a hooded oil lamp and a metal fuel can, foreground hand hiding a clothbound ledger under an indigo shirt, tense night atmosphere, no text."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "underwater-rooster",
+      "caption": "Tiếng gà gáy từ bàn tay nổi",
+      "text": "Một bàn tay trương trắng trồi sát mạn ghe, chụm đủ năm ngón. Tiếng gà gáy bật ra ngay giữa lòng bàn tay đầy bùn ấy. Tôi giật chiếc còi đồng lên, sợi dây cứa rách kẽ ngón tay. Bàn tay lật úp, để lộ vết chém sâu ngang cổ tay trắng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bow-passenger",
+      "caption": "Ai đang giữ ghe giữa dòng?",
+      "text": "Ai giữ đáy ghe, khiến tôi chống sào hoài vẫn đứng nguyên chỗ? Một bóng đàn bà ngồi đầu mũi, hai chân quay về phía lái. Bóng ấy chỉ xuống nước, ngay chỗ bàn tay vừa chìm mất hút. Tôi cúi nhìn, thấy chín khuôn mặt chen nhau dưới một tấm ván."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "abandoned-hut",
+      "caption": "Dấu chân leo lên căn chòi",
+      "text": "Tiếng gà lại vọng lên từ căn chòi phía Mộ Gò Gà. Tôi chèo theo, ngang miếu Ông Tà của xóm Bưng Tràm đang ngập. Chín dấu chân ướt hiện lần lượt trên chiếc thang khô mục ấy. Tôi vừa đặt chân lên, cái bóng đầu mũi ghe liền đứng dậy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "abandoned-hut",
+      "caption": "Chòi cứu lụt bị bỏ quên",
+      "text": "Tôi nhận ra cái chòi nhờ hàng cột đóng bằng thân tràm, chỗ hồi nhỏ má từng chỉ rồi kéo tôi đi thật lẹ. Chòi ấy trước dùng phát gạo cứu lụt, bỏ hoang từ năm cô Lành mất tích, vậy mà nền bên trong vẫn cao hơn ngọn nước đêm nay một gang. Tôi gọi thử một tiếng, trong góc có tiếng muỗng gõ vào miệng chén, đúng ba cái như người giục ăn cơm."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-ledger",
+      "caption": "Cuốn sổ dưới khạp gạo",
+      "text": "Trong góc chỉ có cái khạp úp trên manh chiếu rách, bên cạnh là chén cháo trắng đã đóng một lớp váng đen. Tôi nhấc khạp, thấy cuốn sổ bọc vải dầu nằm gọn dưới đáy, khô rang giữa đám ván rịn nước. Trang đầu đề tên Bảy Khang, trưởng làng, nét móc chữ K cong như lưỡi câu mà tôi từng thấy trên tờ biên nhận thu tô của nhà mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nine-handprints",
+      "caption": "Chín nhà đã nộp của cứu mạng",
+      "text": "Tôi lật ra, từng hàng ghi tên chủ nhà, số người chờ cứu, rồi đến ruộng và vàng đã nhận để dành chỗ ghe. Có nhà giao ba công đất, có nhà đưa đôi bông cưới, một bà góa nộp cả chiếc kiềng dành cưới vợ cho con. Đủ chín gia đình, mỗi hàng một dấu tay đỏ, dưới cùng có chữ nhận của ông Bảy Khang và ngày tháng đúng trận lũ hai mươi năm trước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nine-handprints",
+      "caption": "Dấu tay còn ướt trong sổ",
+      "text": "Tên bà Hường nằm ở hàng thứ bảy, sát bên ghi một giỏ nữ trang đã cân nhận, khiến tôi nhớ chiếc giỏ tre bà ôm trên ghe. Tôi đưa ngón tay chạm vào dấu tay của bả, bùn lạnh liền trào lên khỏi giấy, phủ kín móng tôi. Ngoài cửa có tiếng đàn bà hỏi nhỏ rằng vàng đã đưa đủ rồi, sao ghe còn chưa chịu đón đứa nhỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "relief-cache",
+      "caption": "Gạo cứu trợ sau tấm phên",
+      "text": "Tôi lần theo mùi gạo mốc tới tấm phên cuối chòi, kéo ra thì bao bố mục đổ rào xuống chân. Phía sau còn những thùng dầu hỏa hoen rỉ, rổ muối và mấy bó vải đã dính thành cục, tất cả đều bị chèn kín bằng những cây tràm ngang cửa. Một trang sổ kẹp bằng vỏ cau ghi số gạo cứu trợ đem giấu tại đây, chờ nước rút mới chuyển sang kho riêng của ông Khang."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hidden-ledger",
+      "caption": "Cô Lành từng giữ cuốn sổ",
+      "text": "Ở mép trang ấy có hàng chữ khác, nhỏ và nghiêng, ghi người coi kho là Lành, đã đếm thiếu sáu bao gạo so với danh sách phát cho dân. Tôi nhớ dì Lành hồi còn sống hay viết giùm thư cho mấy bà bán cá, chữ nào cũng có cái đuôi kéo dài xuống dưới. Trong sổ còn ghi dì xin đem gạo ra gò, nơi người già với con nít đã nhịn đói hai bữa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cut-rope",
+      "caption": "Dây neo bị chặt một nhát",
+      "text": "Bìa sau cuốn sổ phồng lên, giấu một gói vải dầu bằng bàn tay, trong đó có đoạn dây neo đen quánh. Đầu dây bằng phẳng, sợi gai bị xén gọn chứ không tưa như dây đứt vì nước xiết; tờ giấy quấn quanh ghi lời cô Lành rằng bả nhặt nó ở cọc bến sau khi ghe trôi. Tôi cầm đoạn dây lên thì tiếng người gọi cứu bật ra từ trong những sợi gai."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "false-accusation",
+      "caption": "Tên ông nội trong lời vu cáo",
+      "text": "Trang kế tiếp là bản kê gửi lên tổng, nói ông nội tôi nhận vàng của chín nhà rồi bỏ hành khách giữa dòng để trốn đi. Nhưng ngay trang trước, ông Khang đã ghi chính tay mình giữ toàn bộ số vàng, còn tiền công chèo của nội vẫn để mục chưa trả. Tôi ngồi bệt xuống, nhớ những bữa cúng giỗ má phải khép cửa vì sợ người ta đứng ngoài chửi người chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nine-handprints",
+      "caption": "Lệnh cắt dây mang tên ai?",
+      "text": "Tôi soi đèn sát sống sổ, thấy hai tờ bị dán lại bằng hồ cơm, ở giữa lộ đầu một chữ đỏ. Gỡ từng chút, tôi đọc được dòng dặn cắt dây ghe khi người đã lên đủ, rồi báo rằng người lái tự tháo neo; cuối dòng là dấu tay ông Khang, trùng vết khuyết trên dấu nhận vàng. Bên dưới còn ghi giữ giấy ruộng, xóa khoản nợ cứu hộ sau khi lập danh sách mất tích."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "lanh-finger",
+      "caption": "Ngón tay chỉ vào dòng cuối",
+      "text": "Ngọn đèn chợt thấp xuống, một ngón tay trắng bệch luồn qua khe ván, đặt ngay dưới dòng tên người chứng kiến. Tôi nhận ra sợi chỉ đỏ buộc ở cổ tay cô Lành, đúng sợi chỉ còn dính trên cái xác dưới sàn ghe, nhưng lần này bả chỉ chạm giấy rồi rút xuống. Chỗ ngón tay vừa đặt hiện ra hai chữ Mười Rạng, phía sau có nét gạch xóa chưa che hết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "false-accusation",
+      "caption": "Phần sổ bị xé mất",
+      "text": "Tới mục bàn giao giấy ruộng và vàng, cuốn sổ mất liền ba tờ, chỉ còn chân giấy răng cưa với một góc dấu đỏ. Tôi úp bàn tay mình lên bìa cho khỏi run, hiểu chừng này đủ lần ra chuyện cũ nhưng món của cướp cùng giấy gốc vẫn nằm ở đâu đó. Từ dưới sàn, giọng cô Lành rịn lên rằng phải giữ sổ, người còn sống sẽ biết chỗ tìm phần bị xé."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "approaching-boat",
+      "caption": "Tám Rỡ đến giữa đêm",
+      "text": "Đúng lúc tôi giắt sổ vào bụng áo, ngoài sông vang tiếng mái chèo khua hai nhịp rồi ngưng, thứ nhịp của người muốn ghé mà không cho ai hay. Qua khe phên, tôi nhận ra Tám Rỡ, người vẫn coi đất cho ông Khang, đang nhấc cái can thiếc lên thang. Hắn gọi vào bóng tối rằng ông Bảy bảo chòi này mọt hết rồi, đêm nay phải đốt cho sạch."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "approaching-boat",
+      "caption": "Có người vừa gọi tên tôi",
+      "text": "Tôi ôm cuốn sổ, lùi về cửa sau, dưới chân nghe tiếng chín người cùng nhích ghế trên chiếc ghe đang đợi. Chưa kịp bước xuống, một bàn tay khô gầy từ sau tấm phên nắm chặt cổ áo tôi, kéo sát vào mùi trầu cay quen thuộc. Bà Mười Rạng bịt miệng tôi, thì thào rằng đừng gọi, thằng Rỡ đang tìm cuốn sổ, và nó đã biết Nhẫn có mặt trên chòi."
+    }
+  ]
+}

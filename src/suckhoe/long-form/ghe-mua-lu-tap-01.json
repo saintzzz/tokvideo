@@ -1,0 +1,133 @@
+{
+  "id": "ghe-mua-lu-tap-01",
+  "arc": "ghe-mua-lu",
+  "arcTitle": "GHE MÙA LŨ",
+  "episode": 1,
+  "slug": "ghe-mua-lu-tap-01",
+  "title": "Bảy Dấu Chân Đi Ngược",
+  "description": "Sau tiếng gà thứ ba, Nhẫn phá lệ nhận bà khách ôm chiếc giỏ tre ướt sũng, rồi bà biến mất giữa đêm trên ghe. Sáng ra, bảy dấu chân bùn dẫn về phía lái và tấm vé cũ mang tên ông nội anh. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ghe-mua-lu"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "Seven muddy footprints stamped backward across a wooden ferry deck toward the stern",
+    "A waterlogged woven bamboo basket with dark mud leaking through its gaps",
+    "An old yellow ferry ticket bearing a faded handwritten name"
+  ],
+  "thumbTitle": "BẢY DẤU CHÂN",
+  "scenePrompts": {
+    "crow_third_call": "Photorealistic cinematic Vietnamese folk horror, a lone wooden ferry drifting at night as a rooster silhouette calls from a distant burial mound, dim oil lantern, humid flood mist, deep shadows, no text, widescreen composition.",
+    "broken_anchor": "Photorealistic cinematic close-up of a freshly snapped braided mooring rope on a small wooden Vietnamese ferry, black river mud caught in the fibers, lantern glow, floodwater at night, no text.",
+    "village_ban": "Photorealistic cinematic rural Vietnamese river village during flood season, a weathered ferry operator beside a moored wooden boat, a small ancestral altar visible inside a humble home, restrained folk horror mood, no text.",
+    "wet_basket": "Photorealistic cinematic close-up of a soaked woven bamboo basket on a wooden ferry floor, faded red cloth over its lid, dark water dripping through the weave, oil-lamp light, no text.",
+    "river_current": "Photorealistic cinematic night river in rural Vietnam, a small wooden ferry pushed against the current toward a distant burial mound, water hyacinths brushing the hull, eerie lantern glow, no text.",
+    "rice_meal": "Photorealistic cinematic close-up of a banana-leaf wrapped meal opened on a wooden boat, a piece of braised fish marked by a tiny muddy handprint, warm lantern light, unsettling folk horror, no text.",
+    "widow_face": "Photorealistic cinematic portrait of an eerie elderly Vietnamese woman in a brown áo bà ba beneath a conical hat, a river weed root caught between her teeth, still expression, low lantern light, no text.",
+    "grave_jetty": "Photorealistic cinematic flooded Vietnamese grave landing at night, a broken old mooring post and a muddy hand gripping a rope beneath the waterline, mist and weak lantern light, no text.",
+    "mud_footprints": "Photorealistic cinematic overhead view of seven distinct muddy footprints crossing a wooden ferry deck backward toward the stern, dawn light, empty boat, rural Vietnamese flood setting, no text.",
+    "old_ticket": "Photorealistic cinematic close-up of an ancient yellow ferry ticket with a punched corner and faded handwritten Vietnamese name, lying beside a trembling hand on a wooden boat, soft dawn light, no text."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "crow_third_call",
+      "caption": "Tiếng gà thứ ba, dây neo đứt",
+      "text": "Tiếng gà thứ ba vừa vọng lên từ phía Mộ Gò Gà. Tôi vẫn kéo ghe, đỡ bà Hường ôm giỏ tre bước xuống. Chiếc giỏ ướt sũng nhỏ nước đen lên bàn chân trần của tôi. Dưới ngọn đèn dầu, sợi dây neo bỗng đứt ngang như bị cắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "broken_anchor",
+      "caption": "Ghe quay về bến mộ",
+      "text": "Bà Hường chỉ nói muốn xuống bến mộ rồi ngồi im lìm. Sao dây vừa đứt, ghe đã quay mũi về phía nghĩa địa? Tôi chống sào xuống, đầu sào chạm một thứ mềm như tóc. Dưới chỗ bà ngồi, có tiếng móng tay cào đều từng nhịp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village_ban",
+      "caption": "Lệ cấm sau ba tiếng gà",
+      "text": "Tôi là Nhẫn, tên đủ trong sổ làng là Lê Văn Nhẫn. Người làng Cồn Sậy vẫn nhờ tôi chở gạo qua mùa nước nổi. Bữa đó, má gói cơm cá kho, dặn tôi về trước canh khuya. Tôi nhớ lời má, nhưng bà Hường đang đứng khóc ngoài bến."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village_ban",
+      "caption": "Tôi đã nghe tiếng gà đầu tiên",
+      "text": "Thiệt tình, tôi đã định quay về ngay lúc nghe tiếng gà đầu tiên từ Mộ Gò Gà, cái gò chôn người chết giữa đồng trũng. Má tôi vẫn giữ lệ ông bà truyền lại: nghe đủ ba tiếng từ phía ấy thì cột ghe, có ai gọi cũng đừng nhận khách. Vậy mà bà Hường bữa đó mặc đúng chiếc áo bà ba nâu từng bưng cháo qua cho má hồi đau nặng, làm tôi chẳng nỡ bỏ bà giữa nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wet_basket",
+      "caption": "Chiếc giỏ cứ rỉ nước đen",
+      "text": "Tôi nhận ra cả miếng vá hình tam giác bên khuỷu tay bà, nhưng lúc đỡ người xuống ghe mới thấy tay lạnh như cái lu ngâm ngoài mưa. Bà ôm chiếc giỏ tre sát bụng, trên nắp phủ một miếng vải điều đã bạc màu, nước cứ rỉ qua nan mà chẳng hề vơi. Tôi hỏi bà qua mộ thăm ai, bà chỉ nhìn xuống lòng ghe, hai môi mím lại đến trắng bệch."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "broken_anchor",
+      "caption": "Đầu dây dính bùn dưới mộ",
+      "text": "Tôi kéo phần dây neo còn lại lên xem, bụng mong nó mục sẵn nên mới đứt, chớ dây ấy chính tay tôi vừa thay hồi sáng. Đầu dây phẳng lì, những sợi bố còn mới quấn chặt lấy một nhúm bùn đen tanh nồng, thứ bùn chỉ có dưới chân gò mả. Tôi quay sang tính hỏi bà có mang dao không, thì thấy miếng vải điều trên giỏ đang phồng lên chậm rãi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river_current",
+      "caption": "Ghe trôi ngược dòng lũ",
+      "text": "Tôi lấy hết sức bẻ chèo về bến làng, nơi ngọn đèn nhà má còn vàng như hạt đậu trên mặt nước. Ghe cứ lùi ngược, còn nước hai bên vẫn chảy xuôi, đám lục bình trôi qua nhanh đến nỗi tôi nghe rõ từng cọng rễ quẹt vào ván. Mỗi lần tôi ngừng chèo, dưới giỏ lại có tiếng gõ ba cái, rồi chiếc ghe nhích thêm một quãng về phía bến mộ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rice_meal",
+      "caption": "Bùn in bàn tay nhỏ lên cá",
+      "text": "Tôi mở gói cơm má đưa để lấy chút muối mè rắc quanh chỗ đứng, làm theo cách người già trong xóm vẫn dùng khi đi đường tối. Cơm còn nguyên mùi lá chuối, vậy mà miếng cá kho vừa lộ ra đã có một lớp bùn phủ kín, in đúng vết năm đầu ngón tay bé xíu. Bà Hường vẫn ngồi trước mặt tôi, hai bàn tay bà chưa từng rời quai giỏ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "widow_face",
+      "caption": "Rễ lục bình mắc ngang chân răng",
+      "text": "Tôi nuốt khan, gọi bà Hường lần nữa, lần này nhắc món cháo đậu xanh bà từng nấu cho má để mong bà chịu đáp lời. Bà chậm rãi ngẩng mặt, vành nón nhấc lên vừa đủ cho tôi thấy một sợi rễ lục bình mắc ngang chân răng. Bà không nói thêm tiếng nào, chỉ đưa ngón tay trỏ về khoảng tối trước mũi ghe, nơi một cây cọc bến vừa nhô lên khỏi nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave_jetty",
+      "caption": "Bàn tay giữ đầu dây dưới nước",
+      "text": "Tôi nhớ bến mộ chỉ còn cái cọc cụt, người làng đã bỏ từ trận lũ hai mươi năm trước, hồi ông nội tôi mất ngoài sông. Vậy mà đêm ấy, sợi dây buộc cọc còn mới, vòng dây thòng xuống ngang mặt nước như có người vừa sửa soạn đón ghe. Tôi cúi xuống nhìn và thấy dưới đó một bàn tay đang giữ chặt đầu dây, móng tay đóng đầy bùn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "wet_basket",
+      "caption": "Vệt bùn dừng ở ván mục",
+      "text": "Tôi giật lùi về lái, bàn chân đạp trúng cái dầm làm nó rơi xuống sàn, nhưng dưới ghe lại vang lên tiếng một vật nặng rớt xuống nước. Ngay sau tiếng động, chiếc giỏ trên đùi bà Hường bắt đầu rỉ bùn qua từng khe nan, kéo thành vệt dài đến sát chân tôi. Tôi cầm đèn soi theo, thấy vệt bùn dừng đúng ở tấm ván mục giữa lòng ghe."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "river_current",
+      "caption": "Tiếng gọi vọng lên từ dưới sàn",
+      "text": "Tôi chẳng biết ghe đi được bao lâu, chỉ nhớ bấc đèn đã cháy cụt mà ngọn lửa cứ cao bằng đốt tay, xanh nhợt như lửa đốt muối. Tôi bấu mạn ghe gọi má đến khản tiếng, nghe tiếng mình vọng lại từ dưới tấm ván mục, nhỏ hơn và trễ một nhịp. Mắt tôi cay xè rồi sụp xuống, trong tai vẫn còn tiếng nan giỏ kẽo kẹt như ai đang cố chui ra."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mud_footprints",
+      "caption": "Bà Hường biến mất trước bình minh",
+      "text": "Tôi tỉnh dậy khi tiếng người gọi nhau xúc lúa chạy lũ vang bên bờ, mặt trời vừa hửng sau rặng bần sát đình làng. Ghe đã nằm ngang bến cũ, bà Hường cùng chiếc giỏ biến đâu mất, hai mạn còn nguyên nên tôi biết chưa hề có ai bước qua đó. Tôi nhìn xuống sàn và thấy bảy dấu chân bùn, từng ngón hằn sâu trên gỗ như vừa được ai ấn xuống."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "mud_footprints",
+      "caption": "Bảy dấu chân đi về phía lái",
+      "text": "Tôi đếm đi đếm lại đúng bảy dấu, bắt đầu từ chỗ bà Hường ngồi rồi kéo ngược về phía lái ghe, nơi đầu tôi đã gục suốt đêm. Các mũi chân đều hướng về bến mộ, còn vệt gót lại lê về phía tôi, như người ấy vừa đi lùi vừa nhìn một thứ dưới nước. Ngay dấu cuối cùng, sát đầu ngón chân cái, có một mảnh giấy gấp đôi sạch ráo."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old_ticket",
+      "caption": "Vé cũ mang tên ông nội",
+      "text": "Tôi mở ra mới hay đó là tấm vé đò cũ, giấy vàng giòn, một góc bấm lỗ, bên trên còn dấu mực ghi chuyến qua Mộ Gò Gà. Dòng tên hành khách viết rõ Lê Văn Được, tên ông nội tôi, dưới đó đề đúng ngày trận lũ hai mươi năm trước. Tôi đem vé lên cho má coi, bà vừa nhìn đã đánh rơi chén nước cúng trên bàn thờ ông."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "old_ticket",
+      "caption": "Ghe trĩu xuống khi nước dâng",
+      "text": "Tôi nghe má hỏi ai đưa lại tấm vé đã liệm trong túi áo ông nội, rồi bà kéo tôi lùi khỏi mép bến, tay run đến bấm đau cả cổ tay tôi. Ngoài kia, nước vừa dâng qua nấc cọc đầu tiên thì chiếc ghe trĩu xuống, như có thêm một người bước vào chỗ bà Hường từng ngồi. Tôi cúi nhìn theo bảy dấu chân, thấy dưới tấm ván mục bắt đầu rịn ra một giọt nước đen."
+    }
+  ]
+}
