@@ -124,5 +124,18 @@
       "caption": "Mộ Gò Gà yên tiếng gọi",
       "text": "Từ đó, dân làng vẫn kiêng nhận khách sau tiếng gà thứ ba, nhưng không còn ai thấy bóng người đứng đợi giữa lũ. Mộ Gò Gà có chín nén nhang được thay mỗi ngày rằm, khi nhà nào cũng nấu chén cháo trắng cúng người khuất. Tôi kể đến đây thì thôi, món nợ đã trả, tiếng gọi trên sông cũng đã lặng."
     }
-  ]
+  ],
+  "sceneImages": {
+    "khang_ghe": "images/suckhoe-long/ghe-mua-lu-tap-05/khang_ghe.jpg",
+    "bong_khach": "images/suckhoe-long/ghe-mua-lu-tap-05/bong_khach.jpg",
+    "nhan_cheo": "images/suckhoe-long/ghe-mua-lu-tap-05/nhan_cheo.jpg",
+    "mo_go_ga": "images/suckhoe-long/ghe-mua-lu-tap-05/mo_go_ga.jpg",
+    "ghe_cu": "images/suckhoe-long/ghe-mua-lu-tap-05/ghe_cu.jpg",
+    "hom_sat": "images/suckhoe-long/ghe-mua-lu-tap-05/hom_sat.jpg",
+    "so_no": "images/suckhoe-long/ghe-mua-lu-tap-05/so_no.jpg",
+    "loi_nhan": "images/suckhoe-long/ghe-mua-lu-tap-05/loi_nhan.jpg",
+    "tra_dat": "images/suckhoe-long/ghe-mua-lu-tap-05/tra_dat.jpg",
+    "mo_chung": "images/suckhoe-long/ghe-mua-lu-tap-05/mo_chung.jpg",
+    "ga_sang": "images/suckhoe-long/ghe-mua-lu-tap-05/ga_sang.jpg"
+  }
 }

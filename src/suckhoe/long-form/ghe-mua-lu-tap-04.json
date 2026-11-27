@@ -129,5 +129,18 @@
       "caption": "Chỗ sau lái dành cho ông Bảy",
       "text": "Từ căn nhà cao, tiếng Bảy Khang vọng xuống, hứa thưởng vàng cho ai giữ được Nhẫn trước khi trời sáng. Tôi quay lại thì thấy trước thềm ông đã có một đôi dép bùn, mũi dép hướng thẳng vào bộ ván gõ. Nhẫn chống sào xoay ghe về cầu, chừa trống chỗ ngồi sau lái rồi gọi ông Bảy xuống nhận mặt khách, trong khi chín bóng người cùng ngước lên đợi."
     }
-  ]
+  ],
+  "sceneImages": {
+    "burning-ledger": "images/suckhoe-long/ghe-mua-lu-tap-04/burning-ledger.jpg",
+    "forged-confession": "images/suckhoe-long/ghe-mua-lu-tap-04/forged-confession.jpg",
+    "high-house": "images/suckhoe-long/ghe-mua-lu-tap-04/high-house.jpg",
+    "escape-walkway": "images/suckhoe-long/ghe-mua-lu-tap-04/escape-walkway.jpg",
+    "ghost-passengers": "images/suckhoe-long/ghe-mua-lu-tap-04/ghost-passengers.jpg",
+    "retreating-enforcer": "images/suckhoe-long/ghe-mua-lu-tap-04/retreating-enforcer.jpg",
+    "confession-aboard": "images/suckhoe-long/ghe-mua-lu-tap-04/confession-aboard.jpg",
+    "relief-warehouse": "images/suckhoe-long/ghe-mua-lu-tap-04/relief-warehouse.jpg",
+    "altered-register": "images/suckhoe-long/ghe-mua-lu-tap-04/altered-register.jpg",
+    "buried-chest-marker": "images/suckhoe-long/ghe-mua-lu-tap-04/buried-chest-marker.jpg",
+    "waiting-sandals": "images/suckhoe-long/ghe-mua-lu-tap-04/waiting-sandals.jpg"
+  }
 }

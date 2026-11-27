@@ -129,5 +129,17 @@
       "caption": "Ghe trĩu xuống khi nước dâng",
       "text": "Tôi nghe má hỏi ai đưa lại tấm vé đã liệm trong túi áo ông nội, rồi bà kéo tôi lùi khỏi mép bến, tay run đến bấm đau cả cổ tay tôi. Ngoài kia, nước vừa dâng qua nấc cọc đầu tiên thì chiếc ghe trĩu xuống, như có thêm một người bước vào chỗ bà Hường từng ngồi. Tôi cúi nhìn theo bảy dấu chân, thấy dưới tấm ván mục bắt đầu rịn ra một giọt nước đen."
     }
-  ]
+  ],
+  "sceneImages": {
+    "crow_third_call": "images/suckhoe-long/ghe-mua-lu-tap-01/crow_third_call.jpg",
+    "broken_anchor": "images/suckhoe-long/ghe-mua-lu-tap-01/broken_anchor.jpg",
+    "village_ban": "images/suckhoe-long/ghe-mua-lu-tap-01/village_ban.jpg",
+    "wet_basket": "images/suckhoe-long/ghe-mua-lu-tap-01/wet_basket.jpg",
+    "river_current": "images/suckhoe-long/ghe-mua-lu-tap-01/river_current.jpg",
+    "rice_meal": "images/suckhoe-long/ghe-mua-lu-tap-01/rice_meal.jpg",
+    "widow_face": "images/suckhoe-long/ghe-mua-lu-tap-01/widow_face.jpg",
+    "grave_jetty": "images/suckhoe-long/ghe-mua-lu-tap-01/grave_jetty.jpg",
+    "mud_footprints": "images/suckhoe-long/ghe-mua-lu-tap-01/mud_footprints.jpg",
+    "old_ticket": "images/suckhoe-long/ghe-mua-lu-tap-01/old_ticket.jpg"
+  }
 }

@@ -129,5 +129,17 @@
       "caption": "Có người vừa gọi tên tôi",
       "text": "Tôi ôm cuốn sổ, lùi về cửa sau, dưới chân nghe tiếng chín người cùng nhích ghế trên chiếc ghe đang đợi. Chưa kịp bước xuống, một bàn tay khô gầy từ sau tấm phên nắm chặt cổ áo tôi, kéo sát vào mùi trầu cay quen thuộc. Bà Mười Rạng bịt miệng tôi, thì thào rằng đừng gọi, thằng Rỡ đang tìm cuốn sổ, và nó đã biết Nhẫn có mặt trên chòi."
     }
-  ]
+  ],
+  "sceneImages": {
+    "underwater-rooster": "images/suckhoe-long/ghe-mua-lu-tap-03/underwater-rooster.jpg",
+    "bow-passenger": "images/suckhoe-long/ghe-mua-lu-tap-03/bow-passenger.jpg",
+    "abandoned-hut": "images/suckhoe-long/ghe-mua-lu-tap-03/abandoned-hut.jpg",
+    "hidden-ledger": "images/suckhoe-long/ghe-mua-lu-tap-03/hidden-ledger.jpg",
+    "nine-handprints": "images/suckhoe-long/ghe-mua-lu-tap-03/nine-handprints.jpg",
+    "relief-cache": "images/suckhoe-long/ghe-mua-lu-tap-03/relief-cache.jpg",
+    "cut-rope": "images/suckhoe-long/ghe-mua-lu-tap-03/cut-rope.jpg",
+    "false-accusation": "images/suckhoe-long/ghe-mua-lu-tap-03/false-accusation.jpg",
+    "lanh-finger": "images/suckhoe-long/ghe-mua-lu-tap-03/lanh-finger.jpg",
+    "approaching-boat": "images/suckhoe-long/ghe-mua-lu-tap-03/approaching-boat.jpg"
+  }
 }
