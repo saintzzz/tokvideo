@@ -130,5 +130,18 @@
       "caption": "Tiếng gà gọi từ căn chòi",
       "text": "Đêm sau, tôi ở lại giữ con Lành, còn Nhẫn đặt chiếc còi lên mảnh vải khô trước mũi ghe, quyết tìm chỗ nó muốn dẫn về. Vừa tháo neo, còi tự kêu một hơi, ngoài dòng liền có tiếng gà đáp lại giữa khoảng nước chẳng thấy bờ. Tôi nâng đèn, một căn chòi bỏ hoang hiện sau màn mưa, trên vách có bàn tay ướt đang gõ đúng ba tiếng."
     }
-  ]
+  ],
+  "sceneImages": {
+    "van-doi": "images/suckhoe-long/ghe-mua-lu-tap-02/van-doi.jpg",
+    "khach-ngam-bun": "images/suckhoe-long/ghe-mua-lu-tap-02/khach-ngam-bun.jpg",
+    "ve-trong-ao": "images/suckhoe-long/ghe-mua-lu-tap-02/ve-trong-ao.jpg",
+    "noi-chao": "images/suckhoe-long/ghe-mua-lu-tap-02/noi-chao.jpg",
+    "ben-khong-xuong": "images/suckhoe-long/ghe-mua-lu-tap-02/ben-khong-xuong.jpg",
+    "khach-dem": "images/suckhoe-long/ghe-mua-lu-tap-02/khach-dem.jpg",
+    "muoi-rang": "images/suckhoe-long/ghe-mua-lu-tap-02/muoi-rang.jpg",
+    "cay-van": "images/suckhoe-long/ghe-mua-lu-tap-02/cay-van.jpg",
+    "lanh-duoi-san": "images/suckhoe-long/ghe-mua-lu-tap-02/lanh-duoi-san.jpg",
+    "coi-dong": "images/suckhoe-long/ghe-mua-lu-tap-02/coi-dong.jpg",
+    "choi-giua-nuoc": "images/suckhoe-long/ghe-mua-lu-tap-02/choi-giua-nuoc.jpg"
+  }
 }
