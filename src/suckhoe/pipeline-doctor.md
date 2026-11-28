@@ -1,12 +1,12 @@
-# Pipeline doctor — 2026-11-27
+# Pipeline doctor — 2026-11-28
 
 ## Queue
 
-Ready unpublished episodes: 2
+Ready unpublished episodes: 4
 
 ## Failed workflow runs (last 24h)
 
-- 2026-11-26T04:24 8404825 https://github.com/saintzzz/tokvideo/actions/runs/45754957007
+None — all runs green.
 
 ## Findings
 
@@ -18,7 +18,7 @@ Ready unpublished episodes: 2
 - Ledger "loi-nguyen-gieng-cu-tap-02-fb" -> 1153591567318579 no longer exists on channel.
 - Ledger "chuyen-do-dem-tap-02-fb" -> 1118955610723284 no longer exists on channel.
 - Ledger "chuyen-do-dem-tap-03-fb" -> 2659591444472347 no longer exists on channel.
-- Queue below one full arc (2/5 ready) — write the next arc before the channel goes quiet.
+- Queue below one full arc (4/5 ready) — write the next arc before the channel goes quiet.
 
 ## Actions taken
 
