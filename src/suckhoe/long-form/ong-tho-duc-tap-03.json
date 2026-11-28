@@ -129,5 +129,17 @@
       "caption": "Ai đang đợi bên ngoài ánh đèn?",
       "text": "Tôi nắm được cổ tay Hạnh ngay bậc cửa, lạnh đến mức tưởng đang cầm chiếc vòng vừa moi dưới đất. Ngoài quầng đèn, một bóng đàn bà đứng quay lưng, bàn tay chậm rãi ngoắc về phía ngôi mộ. Hạnh vẫn nhắm mắt, ghé sát tai tôi thì thào: \"Bà cầm cuốc theo... sáng ra, ông Bính sẽ tới trước mình.\""
     }
-  ]
+  ],
+  "sceneImages": {
+    "dead_rooster": "images/suckhoe-long/ong-tho-duc-tap-03/dead_rooster.jpg",
+    "sealed_statue": "images/suckhoe-long/ong-tho-duc-tap-03/sealed_statue.jpg",
+    "sleeping_hanh": "images/suckhoe-long/ong-tho-duc-tap-03/sleeping_hanh.jpg",
+    "bronze_bracelet": "images/suckhoe-long/ong-tho-duc-tap-03/bronze_bracelet.jpg",
+    "debt_voice": "images/suckhoe-long/ong-tho-duc-tap-03/debt_voice.jpg",
+    "cold_kiln_memory": "images/suckhoe-long/ong-tho-duc-tap-03/cold_kiln_memory.jpg",
+    "land_deed": "images/suckhoe-long/ong-tho-duc-tap-03/land_deed.jpg",
+    "confession": "images/suckhoe-long/ong-tho-duc-tap-03/confession.jpg",
+    "threshold_footprints": "images/suckhoe-long/ong-tho-duc-tap-03/threshold_footprints.jpg",
+    "grave_call": "images/suckhoe-long/ong-tho-duc-tap-03/grave_call.jpg"
+  }
 }

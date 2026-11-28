@@ -129,5 +129,17 @@
       "caption": "Dưới nền lò có người chờ",
       "text": "Tôi quay lại, thấy lớp tro trước lò đội lên một đường mảnh, như có móng tay đang rạch từ dưới đất. Phúc vội lấy chân gạt phẳng, nhưng vừa nhấc gót, đường ấy lại nổi lên đúng chỗ cũ. Ngoài sân, con gà gáy thêm một hồi dưới bàn tay cái bóng không đầu; dưới chân tôi, giọng đàn bà đáp lại: \"Đào tôi lên\"."
     }
-  ]
+  ],
+  "sceneImages": {
+    "turned_head": "images/suckhoe-long/ong-tho-duc-tap-01/turned_head.jpg",
+    "sealed_mouth": "images/suckhoe-long/ong-tho-duc-tap-01/sealed_mouth.jpg",
+    "evening_meal": "images/suckhoe-long/ong-tho-duc-tap-01/evening_meal.jpg",
+    "temple_commission": "images/suckhoe-long/ong-tho-duc-tap-01/temple_commission.jpg",
+    "red_blindfold": "images/suckhoe-long/ong-tho-duc-tap-01/red_blindfold.jpg",
+    "forbidden_chisel": "images/suckhoe-long/ong-tho-duc-tap-01/forbidden_chisel.jpg",
+    "cold_furnace": "images/suckhoe-long/ong-tho-duc-tap-01/cold_furnace.jpg",
+    "barred_door": "images/suckhoe-long/ong-tho-duc-tap-01/barred_door.jpg",
+    "headless_rooster": "images/suckhoe-long/ong-tho-duc-tap-01/headless_rooster.jpg",
+    "ash_floor": "images/suckhoe-long/ong-tho-duc-tap-01/ash_floor.jpg"
+  }
 }

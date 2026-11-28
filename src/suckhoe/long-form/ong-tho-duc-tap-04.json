@@ -130,5 +130,18 @@
       "caption": "Chuông miếu gọi người sống dậy",
       "text": "Tôi kéo chuông miếu lúc trời còn tối, từng nhà xách đèn tới, hỏi ai chết mà đánh dồn như vậy. Ông Phúc đặt bọc xương cùng chiếc tráp xuống thềm, còn Hạnh mở sẵn cuốn sổ chờ Bính bị người làng dẫn sang. Giữa tiếng xôn xao, con nhỏ nắm cổ tay tôi, nói bằng giọng chị Lành: \"Gọi cả con trai tôi đến, đừng để nó nghe chuyện mẹ sau cùng\"."
     }
-  ]
+  ],
+  "sceneImages": {
+    "shadow_at_door": "images/suckhoe-long/ong-tho-duc-tap-04/shadow_at_door.jpg",
+    "hand_in_floor": "images/suckhoe-long/ong-tho-duc-tap-04/hand_in_floor.jpg",
+    "false_grave": "images/suckhoe-long/ong-tho-duc-tap-04/false_grave.jpg",
+    "chest_under_stone": "images/suckhoe-long/ong-tho-duc-tap-04/chest_under_stone.jpg",
+    "ledger_evidence": "images/suckhoe-long/ong-tho-duc-tap-04/ledger_evidence.jpg",
+    "binh_watching": "images/suckhoe-long/ong-tho-duc-tap-04/binh_watching.jpg",
+    "foundry_fire": "images/suckhoe-long/ong-tho-duc-tap-04/foundry_fire.jpg",
+    "underground_crowing": "images/suckhoe-long/ong-tho-duc-tap-04/underground_crowing.jpg",
+    "turning_bronze_head": "images/suckhoe-long/ong-tho-duc-tap-04/turning_bronze_head.jpg",
+    "nape_and_skull": "images/suckhoe-long/ong-tho-duc-tap-04/nape_and_skull.jpg",
+    "temple_bell_before_dawn": "images/suckhoe-long/ong-tho-duc-tap-04/temple_bell_before_dawn.jpg"
+  }
 }
