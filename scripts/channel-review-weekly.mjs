@@ -24,6 +24,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { google } from "googleapis";
 import { makeYoutube } from "./lib/youtube-quota.mjs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DIR = path.join(ROOT, "src", "suckhoe");
@@ -49,7 +50,7 @@ for (let i = 0; i < ids.length; i += 50) {
   for (const v of r.data.items || []) stats[v.id] = v;
 }
 
-const arcOf = (k) => k.replace(/-teaser$/, "").replace(/-tap-\d+$/, "");
+const arcOf = (k) => k.replace(/-teaser\d*$/, "").replace(/-tap-\d+$/, "");
 const num = (x) => parseInt(x ?? "0", 10);
 
 const arcs = {};
@@ -59,7 +60,7 @@ for (const [id, v] of Object.entries(stats)) {
   const arc = arcOf(key);
   (arcs[arc] ??= { long: [], teaser: [] });
   const s = { views: num(v.statistics.viewCount), likes: num(v.statistics.likeCount), comments: num(v.statistics.commentCount), publishedAt: v.snippet.publishedAt, key };
-  arcs[arc][key.endsWith("-teaser") ? "teaser" : "long"].push(s);
+  arcs[arc][isTeaserKey(key) ? "teaser" : "long"].push(s);
 }
 
 const avg = (arr, f) => (arr.length ? (arr.reduce((a, b) => a + f(b), 0) / arr.length) : 0);
@@ -220,7 +221,7 @@ try {
 let dropNote = "";
 try {
   const recent = Object.entries(ledger)
-    .filter(([k, e]) => !k.endsWith("-teaser") && !k.endsWith("-fb") && e?.videoId && e.publishedAt)
+    .filter(([k, e]) => !isTeaserKey(k) && !k.endsWith("-fb") && e?.videoId && e.publishedAt)
     .sort((a, b) => String(b[1].publishedAt).localeCompare(String(a[1].publishedAt)))
     .slice(0, 3);
   const end = new Date(), start = new Date(end);

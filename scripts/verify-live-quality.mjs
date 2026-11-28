@@ -18,6 +18,7 @@ import path from "node:path";
 import { google } from "googleapis";
 import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { findFfmpeg } from "./lib/ffmpeg.mjs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 
 const daysArg = Number(process.argv.find((a) => a.startsWith("--days="))?.split("=")[1] ?? 14);
 const root = path.join(import.meta.dirname, "..");
@@ -120,7 +121,7 @@ for (const [slug, entry] of recent) {
   // means the video content itself rendered black (2026-11-15 tap-02
   // shipped black because the arc had scenePrompts but no sceneImages) —
   // that video cannot be repaired; enqueue it for deletion + re-render.
-  if (!slug.endsWith("-teaser") && !entry.thumbnailPending) {
+  if (!isTeaserKey(slug) && !entry.thumbnailPending) {
     try {
       const buf = Buffer.from(
         await (await fetch(`https://i.ytimg.com/vi/${entry.videoId}/maxresdefault.jpg`)).arrayBuffer()

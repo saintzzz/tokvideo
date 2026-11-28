@@ -1,5 +1,6 @@
 import { google } from "googleapis";
 import { makeYoutube } from "./lib/youtube-quota.mjs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -228,7 +229,7 @@ async function main() {
         );
         const longIds = new Set(
           Object.entries(ledger)
-            .filter(([k, e]) => !k.endsWith("-teaser") && !k.endsWith("-fb") && e?.videoId)
+            .filter(([k, e]) => !isTeaserKey(k) && !k.endsWith("-fb") && e?.videoId)
             .map(([, e]) => e.videoId)
         );
         const targets = videoIds.filter((id) => longIds.has(id));

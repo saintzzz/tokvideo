@@ -55,8 +55,8 @@ const deletedKeys = new Set();
 
 // ---------- helpers ----------
 
-const arcOf = (slug) => slug.replace(/-tap-\d+$/, "").replace(/-teaser$/, "");
-const isTeaserKey = (key) => key.endsWith("-teaser");
+const arcOf = (slug) => slug.replace(/-tap-\d+$/, "").replace(/-teaser\d*$/, "");
+const isTeaserKey = (key) => /-teaser\d*$/.test(key); // -teaser2 climax cuts count too
 // `-fb` ledger keys hold Facebook Reel video IDs — the videoId lives on
 // Facebook, not YouTube, so channel reconciliation must never touch them.
 const isFbKey = (key) => key.endsWith("-fb");

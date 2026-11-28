@@ -19,6 +19,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { sanityCheckAudio } from "./lib/audio-probe.mjs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SLUG_CAP = Number(process.env.SLUG_CAP || 3);
@@ -30,7 +31,7 @@ function unpublished() {
   const published = new Set(Object.keys(ledger));
   const src = readFileSync(path.join(ROOT, "src/suckhoe/long-form/index.ts"), "utf8");
   return [...src.matchAll(/from "\.\/([a-z0-9-]+)\.json"/g)]
-    .map(m => m[1]).filter(s => !published.has(s) && !s.endsWith("-teaser"));
+    .map(m => m[1]).filter(s => !published.has(s) && !isTeaserKey(s));
 }
 
 function audioHealth(slug) {

@@ -116,7 +116,7 @@ const latest = Object.entries(ledger)
   // if one is the newest publishedAt the arc match below breaks and
   // every mid-arc episode gets held as a "new arc" (first seen
   // 2026-11-05 after the interleaved publish added teaser keys).
-  .filter(([k, e]) => !/-(teaser|fb)$/.test(k) && e?.videoId && e.publishedAt)
+  .filter(([k, e]) => !/-(teaser\d*|fb)$/.test(k) && e?.videoId && e.publishedAt)
   .sort((a, b) => String(a[1].publishedAt).localeCompare(String(b[1].publishedAt)))
   .at(-1)?.[1];
 const lastSlug = Object.entries(ledger).find(([, v]) => v === latest)?.[0];

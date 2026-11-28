@@ -3,7 +3,10 @@
 // feed is the discovery funnel while the channel's browse distribution
 // recovers. Same auth pattern as upload-youtube-long.mjs.
 //
-// Usage: node scripts/upload-long-teaser.mjs <slug>
+// Usage: node scripts/upload-long-teaser.mjs <slug> [variant=1]
+// Variant 2 uploads the mid-episode "climax cut" (make-long-teaser
+// variant 2) under the `${slug}-teaser2` ledger key — a second Short
+// per episode with a different beat window + title suffix.
 // Privacy: YOUTUBE_TEASER_PRIVACY_STATUS, default "public" — the whole
 // point of the teaser is reach, and its content is a slice of an
 // already-public video.
@@ -16,15 +19,21 @@ import { google } from "googleapis";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 import { freshLongLedger } from "./lib/fresh-ledger.mjs";
 import { arcDisplayName, videoUrl, playlistUrl } from "./lib/long-metadata.mjs";
+import { teaserKeyFor } from "./lib/teaser-keys.mjs";
 
 const slug = process.argv[2];
+const variant = Math.max(1, Number(process.argv[3] || 1));
 if (!slug) {
-  console.error("Usage: node scripts/upload-long-teaser.mjs <episode-slug>");
+  console.error("Usage: node scripts/upload-long-teaser.mjs <episode-slug> [variant=1]");
   process.exit(1);
 }
 
 const repoRoot = path.join(import.meta.dirname, "..");
-const videoPath = path.join(repoRoot, "out", `teaser-${slug}.mp4`);
+const videoPath = path.join(
+  repoRoot,
+  "out",
+  `teaser${variant > 1 ? variant : ""}-${slug}.mp4`,
+);
 if (!existsSync(videoPath)) {
   console.error(`Missing teaser file: ${videoPath} — run make-long-teaser.mjs first.`);
   process.exit(1);
@@ -46,7 +55,7 @@ const ledgerPath = path.join(repoRoot, "src", "suckhoe", "published-long.json");
 const ledger = freshLongLedger();
 const longVideoId = ledger[slug]?.videoId ?? null;
 
-const teaserKey = `${slug}-teaser`;
+const teaserKey = teaserKeyFor(slug, variant);
 if (ledger[teaserKey]?.videoId) {
   console.log(`Teaser already uploaded for ${slug}: ${ledger[teaserKey].videoId}`);
   process.exit(0);
@@ -72,7 +81,9 @@ const premise = (episode.title || `Tập ${parseInt(epNum, 10) || "?"}`)
   .replace(/\s*[-–—]\s*Tập\s*\d+.*$/i, "")
   .replace(/\s*\|.*$/, "")
   .trim();
-const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} (xem trước) #Shorts`;
+// Variant suffix stays in the title — dedupe + fix-teaser-titles derive
+// the variant back from it, and "(cao trào)" is honest CTR copy anyway.
+const suffix = ` | ${arcName} #${parseInt(epNum, 10) || "?"} ${variant > 1 ? "(cao trào)" : "(xem trước)"} #Shorts`;
 const title = (premise.length > 100 - suffix.length ? premise.slice(0, 100 - suffix.length).replace(/\s+\S*$/, "") : premise) + suffix;
 
 // Prefer the arc's own playlist ("xem trọn bộ arc này") over the generic

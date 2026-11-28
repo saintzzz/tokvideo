@@ -21,6 +21,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { google } from "googleapis";
 import { makeYoutube } from "./lib/youtube-quota.mjs";
+import { teaserKeyFor } from "./lib/teaser-keys.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const APPLY = process.argv.includes("--apply");
@@ -106,8 +107,10 @@ const matchSlug = (title) => {
     if (!n || !epTitle) continue;
     const premise = norm(epTitle.split("|")[0].split(" - ")[0].trim());
     if (!premise || premise.length < 8 || !t.includes(premise)) continue;
-    const isTeaser = /#shorts|xem trước/i.test(title);
-    const key = isTeaser ? `${slug}-teaser` : slug;
+    const isTeaser = /#shorts|xem trước|cao trào/i.test(title);
+    const key = isTeaser
+      ? teaserKeyFor(slug, /cao trào/i.test(title) ? 2 : 1)
+      : slug;
     const numRe = new RegExp(`(Tập\\s*|#)0?${Number(n)}\\b`);
     if (numRe.test(title)) return key;
     premiseHit ??= key;

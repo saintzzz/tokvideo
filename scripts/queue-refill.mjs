@@ -28,6 +28,7 @@ import { execFileSync, execSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const LONG_DIR = path.join(ROOT, "src/suckhoe/long-form");
@@ -63,7 +64,7 @@ function unpublishedSlugs() {
   const src = readFileSync(INDEX_TS, "utf8");
   const slugs = [...src.matchAll(/from "\.\/([a-z0-9-]+)\.json"/g)].map(m => m[1]);
   return slugs.filter(s => {
-    if (published.has(s) || s.endsWith("-teaser")) return false;
+    if (published.has(s) || isTeaserKey(s)) return false;
     // Unpickable episodes are not inventory (same gates as
     // next-long-form-slug.mjs): legacy dialogue format and dead stubs
     // without scenePrompts/sceneImages. ba-ngay-truoc-dam-cuoi +

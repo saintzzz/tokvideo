@@ -37,6 +37,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { sanityCheckAudio } from "./lib/audio-probe.mjs";
 import { loadQuarantine, saveQuarantine, isBlocked, blockSlug } from "./lib/quarantine.mjs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const LONG_DIR = path.join(ROOT, "src/suckhoe/long-form");
@@ -132,7 +133,7 @@ function unpublishedSlugs() {
   const src = readFileSync(path.join(ROOT, "src/suckhoe/long-form/index.ts"), "utf8");
   return [...src.matchAll(/from "\.\/([a-z0-9-]+)\.json"/g)]
     .map(m => m[1])
-    .filter(s => !published.has(s) && !s.endsWith("-teaser"))
+    .filter(s => !published.has(s) && !isTeaserKey(s))
     // Effective depth: a quarantined slug is dead weight, not inventory —
     // QUEUE LOW / STALL must see through it or the refill never fires.
     .filter(s => !isBlocked(quarantine, s, epPath(s)))
@@ -286,7 +287,7 @@ let lastUploadMs = 0;
 try {
   const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
   lastUploadMs = Math.max(0, ...Object.entries(ledger)
-    .filter(([k]) => !k.endsWith("-teaser") && !k.endsWith("-fb"))
+    .filter(([k]) => !isTeaserKey(k) && !k.endsWith("-fb"))
     .map(([, v]) => Date.parse(v.publishedAt || 0)));
 } catch { /* ledger unreadable */ }
 
@@ -372,7 +373,7 @@ try {
 try {
   const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
   const lastTeaserMs = Math.max(0, ...Object.entries(ledger)
-    .filter(([k]) => k.endsWith("-teaser"))
+    .filter(([k]) => isTeaserKey(k))
     .map(([, v]) => Date.parse(v.publishedAt || 0)));
   const teaserStaleMin = (Date.now() - lastTeaserMs) / 60000;
   if (teaserStaleMin > 8 * 60) {
@@ -404,7 +405,7 @@ if (depth < MIN_QUEUE) findings.unshift(`- **QUEUE LOW**: chỉ còn ${depth} t�
 try {
   const ledger = JSON.parse(readFileSync(path.join(ROOT, "src/suckhoe/published-long.json"), "utf8"));
   const missingTeasers = Object.keys(ledger)
-    .filter(k => !k.endsWith("-teaser") && !k.endsWith("-fb") && !ledger[`${k}-teaser`]);
+    .filter(k => !isTeaserKey(k) && !k.endsWith("-fb") && !ledger[`${k}-teaser`]);
   if (missingTeasers.length) {
     findings.push(`- ${missingTeasers.length} tập thiếu teaser Short: ${missingTeasers.slice(0, 8).join(", ")}${missingTeasers.length > 8 ? "..." : ""}`);
   }

@@ -13,6 +13,7 @@
 //   (needs YOUTUBE_CLIENT_ID/SECRET + YOUTUBE_REFRESH_TOKEN)
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { google } from "googleapis";
@@ -61,7 +62,7 @@ const map = existsSync(MAP_FILE) ? JSON.parse(readFileSync(MAP_FILE, "utf8")) : 
 // Group published long-form episodes by arc (skip teasers).
 const arcs = {};
 for (const [key, v] of Object.entries(ledger)) {
-  if (!v?.videoId || key.endsWith("-teaser")) continue;
+  if (!v?.videoId || isTeaserKey(key)) continue;
   const m = key.match(/^(.+)-tap-(\d+)$/);
   if (!m) continue;
   (arcs[m[1]] ??= []).push({ ep: Number(m[2]), videoId: v.videoId });

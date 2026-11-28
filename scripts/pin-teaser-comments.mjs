@@ -12,6 +12,7 @@ import path from "node:path";
 import { google } from "googleapis";
 import { makeYoutube } from "./lib/youtube-quota.mjs";
 import { arcDisplayName, playlistUrl } from "./lib/long-metadata.mjs";
+import { isTeaserKey, teaserSlug } from "./lib/teaser-keys.mjs";
 import playlistMap from "../src/suckhoe/playlist-map.json" with { type: "json" };
 
 const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN } = {
@@ -41,8 +42,8 @@ for (const [key, entry] of Object.entries(ledger)) {
   // commentThreads.insert always 404s on them (quota + log spam).
   if (key.endsWith("-fb")) continue;
   if (requested.length && !requested.includes(key)) continue;
-  const isTeaser = key.endsWith("-teaser");
-  const slug = isTeaser ? key.replace(/-teaser$/, "") : key;
+  const isTeaser = isTeaserKey(key);
+  const slug = isTeaser ? teaserSlug(key) : key;
   // Stale-link repair (2026-11-21): teasers of re-uploaded arcs still
   // carry a pinned comment pointing at the OLD deleted videoId — a dead
   // link that silently kills the Shorts→long funnel. If the ledger's

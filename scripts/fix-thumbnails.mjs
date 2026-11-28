@@ -14,6 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { google } from "googleapis";
 import { makeYoutube } from "./lib/youtube-quota.mjs";
+import { isTeaserKey } from "./lib/teaser-keys.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const STATE = path.join(ROOT, "src/suckhoe/thumb-sync.json");
@@ -38,7 +39,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let pushes = 0;
 
 for (const [slug, entry] of Object.entries(ledger)) {
-  if (slug.endsWith("-teaser") || !entry?.videoId) continue;
+  if (isTeaserKey(slug) || !entry?.videoId) continue;
   // Prefer the COMPOSED thumbnail (badge + series + title overlay)
   // persisted by make-long-thumbnail.mjs; fall back to the raw still.
   const dir = path.join(ROOT, "public/images/suckhoe-long", slug);

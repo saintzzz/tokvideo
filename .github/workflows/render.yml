@@ -1416,13 +1416,17 @@ jobs:
       - name: Pick next episode missing its teaser Short
         id: pick
         run: |
-          SLUG=$(node scripts/next-teaser-ahead-slug.mjs | sed 's/^slug=//')
+          OUT=$(node scripts/next-teaser-ahead-slug.mjs)
+          SLUG=$(echo "$OUT" | grep -o 'slug=[^ ]*' | cut -d= -f2)
+          VARIANT=$(echo "$OUT" | grep -o 'variant=[^ ]*' | cut -d= -f2)
           echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
-          if [ -z "$SLUG" ]; then echo "Every episode has a teaser Short."; fi
+          echo "variant=${VARIANT:-1}" >> "$GITHUB_OUTPUT"
+          echo "$OUT"
+          if [ -z "$SLUG" ]; then echo "Every episode has both teaser Shorts."; fi
 
       - name: Build teaser Short
         if: steps.pick.outputs.slug != ''
-        run: node scripts/make-long-teaser.mjs ${{ steps.pick.outputs.slug }}
+        run: node scripts/make-long-teaser.mjs ${{ steps.pick.outputs.slug }} ${{ steps.pick.outputs.variant }}
 
       - name: Upload teaser Short
         if: steps.pick.outputs.slug != ''
@@ -1434,7 +1438,7 @@ jobs:
           YOUTUBE_CLIENT_SECRET_2: ${{ secrets.YOUTUBE_CLIENT_SECRET_2 }}
           YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
           YOUTUBE_TEASER_PRIVACY_STATUS: public
-        run: node scripts/upload-long-teaser.mjs ${{ steps.pick.outputs.slug }}
+        run: node scripts/upload-long-teaser.mjs ${{ steps.pick.outputs.slug }} ${{ steps.pick.outputs.variant }}
 
       - name: Commit teaser ledger
         if: always()
