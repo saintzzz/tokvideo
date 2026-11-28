@@ -777,7 +777,7 @@ jobs:
           YOUTUBE_REFRESH_TOKEN_2: ${{ secrets.YOUTUBE_REFRESH_TOKEN_2 }}
         run: node scripts/drain-deletes.mjs
 
-      - name: Refill story queue when below 5 episodes
+      - name: Refill story queue when below 10 episodes
         continue-on-error: true
         if: always()
         env:
@@ -785,11 +785,24 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           AI_MODEL: ${{ vars.AI_MODEL }}
+          CODEX_API_KEY: ${{ secrets.CODEX_API_KEY }}
           # Keep ~2 arcs in reserve so the teaser-ahead pool never runs
           # dry between arcs — the 2026-11-24/25 Shorts gap happened
           # because every unpublished episode already had a live teaser.
           MIN_QUEUE: "10"
-        run: node scripts/queue-refill.mjs --write
+        run: |
+          set -e
+          if [ -n "${CODEX_API_KEY:-}" ]; then
+            # Gateway accepts coding clients only (Codex CLI), so write a
+            # minimal config and drive the refill through `codex exec`
+            # instead of raw API calls (chat/completions is disabled).
+            npm install -g @openai/codex@0.163.0 --silent
+            mkdir -p "$HOME/.codex"
+            printf 'model_provider = "OpenAI"\nmodel = "gpt-6.1-sol"\n\n[model_providers.OpenAI]\nbase_url = "https://api.xingchiapi.com/v1"\nwire_api = "responses"\nrequires_openai_auth = false\nexperimental_bearer_token = "%s"\n' "$CODEX_API_KEY" > "$HOME/.codex/config.toml"
+            node scripts/queue-refill.mjs --write --agent codex
+          else
+            node scripts/queue-refill.mjs --write
+          fi
 
       - name: Top up missing beat audio for unpublished episodes
         continue-on-error: true
