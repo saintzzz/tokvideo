@@ -1,9 +1,9 @@
-# Pipeline Watchdog - 2026-11-28 14:50 VN
+# Pipeline Watchdog - 2026-11-29 00:34 VN
 
-Tự động quét mỗi 3h bởi job `pipeline-watchdog`. Queue chưa đăng: **8 tập**.
+Tự động quét mỗi 3h bởi job `pipeline-watchdog`. Queue chưa đăng: **5 tập**.
 
 ## Đã tự xử lý
-- tick bị drop/delay: upload mới nhất đã 188 phút trước - tự dispatch `ghe-mua-lu-tap-03`
+- không có run nào fail trong 48h - pipeline sạch
 
 ## Cần người xem
 - (trống)

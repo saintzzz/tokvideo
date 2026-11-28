@@ -1150,7 +1150,8 @@
     "videoId": "ssHMtLP5UjA",
     "publishedAt": "2026-11-28T05:03:52.177Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugy2tNOmQVl5ZlxY74V4AaABAg"
   },
   "chuong-chua-tap-01-teaser2": {
     "videoId": "IyXJGJBTh_0",
@@ -1162,32 +1163,37 @@
   "ghe-mua-lu-tap-03": {
     "videoId": "OBig6J8QvkE",
     "publishedAt": "2026-11-28T05:03:53Z",
-    "locale": "vi"
+    "locale": "vi",
+    "pinnedCommentId": "UgwPmOKDXtUNwxlLcdt4AaABAg"
   },
   "ghe-mua-lu-tap-04-teaser": {
     "videoId": "1WLyYXuVGs0",
     "publishedAt": "2026-11-28T08:15:59.924Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugwnxg3E1XUVKR3vCbB4AaABAg"
   },
   "ghe-mua-lu-tap-04": {
     "videoId": "g-Zn1kR8vfc",
     "publishedAt": "2026-11-28T11:10:38.174Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgxodHl2hLzSCBZYxVd4AaABAg"
   },
   "ghe-mua-lu-tap-05-teaser": {
     "videoId": "44EWLbQOb9s",
     "publishedAt": "2026-11-28T12:04:10.728Z",
     "locale": "vi",
-    "privacyStatus": "public"
+    "privacyStatus": "public",
+    "pinnedCommentId": "Ugw79peW_RkxcPXcFQp4AaABAg"
   },
   "ghe-mua-lu-tap-05": {
     "videoId": "35hHFQYDC2Q",
     "publishedAt": "2026-11-28T16:02:15.977Z",
     "locale": "vi",
     "privacyStatus": "public",
-    "thumbnailPending": false
+    "thumbnailPending": false,
+    "pinnedCommentId": "UgwML7fSJuot2gAYRpl4AaABAg"
   }
 }
