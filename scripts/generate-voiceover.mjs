@@ -8,76 +8,6 @@ import { withRetry } from "./lib/retry.mjs";
 import { probeDurationSeconds, sanityCheckAudio } from "./lib/audio-probe.mjs";
 import { writeAlignedCaptions } from "./lib/captions.mjs";
 import { polishVoiceover } from "./lib/audio-polish.mjs";
-import giaCatLuongNarration from "../src/narration.json" with { type: "json" };
-import churchillNarration from "../src/narration.churchill.json" with { type: "json" };
-import hippocratesNarration from "../src/narration.hippocrates.json" with { type: "json" };
-import ideverrayNarration from "../src/narration.ideverray.json" with { type: "json" };
-import ammuuNarration from "../src/narration.ammuu.json" with { type: "json" };
-
-// Suc Khoe (health channel) episodes — each is its own video id
-// (`suckhoe-<slug>`), its own audio subfolder, and its own JSON file
-// under src/suckhoe/episodes/. Adding a new episode is just adding a new
-// JSON file there — this reads the directory instead of a hardcoded list,
-// so nothing here needs to change.
-const episodesDir = path.join(
-  import.meta.dirname,
-  "..",
-  "src",
-  "suckhoe",
-  "episodes"
-);
-const episodeFiles = (await readdir(episodesDir)).filter((f) =>
-  f.endsWith(".json")
-);
-const SUCKHOE_EPISODES = await Promise.all(
-  episodeFiles.map(async (file) => {
-    const url = pathToFileURL(path.join(episodesDir, file));
-    const mod = await import(url, { with: { type: "json" } });
-    return mod.default;
-  })
-);
-
-// Spoken narration is derived from the same structured content the on
-// screen text uses, so there is only one place to edit per episode.
-// locale routes to different connector phrasing — "en" episodes are
-// written in English from the start (culturally-appropriate Western home
-// remedies, not translations), so their narration needs English
-// connectors too, not just a different TTS voice.
-const buildSucKhoeNarration = (episode) => {
-  // Story episodes (CR-001 pivot): hook = cold open, one part-N.mp3 per
-  // storyPart (each gets its own scene in SucKhoeVideo), and the moral
-  // (if any) is spoken right before the CTA.
-  if (episode.kind === "story") {
-    const narration = { hook: episode.hook };
-    (episode.storyParts ?? []).forEach((part, i) => {
-      narration[`part-${i}`] = part;
-    });
-    narration.cta = episode.moral ? `${episode.moral} ${episode.cta}` : episode.cta;
-    return narration;
-  }
-  if (episode.locale === "en") {
-    return {
-      hook: episode.hook,
-      remedy: episode.remedy,
-      steps: `Here's all it takes. ${episode.steps
-        .map((step, i) => `Step ${i + 1}, ${step}`)
-        .join(". ")}.`,
-      cta: episode.caution
-        ? `${episode.cta}. One quick note: ${episode.caution.toLowerCase()}.`
-        : episode.cta,
-    };
-  }
-  return {
-    hook: episode.hook,
-    remedy: episode.remedy,
-    steps: `Cách làm rất đơn giản. ${episode.steps
-      .map((step, i) => `Bước ${i + 1}, ${step}`)
-      .join(". ")}.`,
-    cta: episode.caution
-      ? `${episode.cta}. Lưu ý, ${episode.caution.toLowerCase()}.`
-      : episode.cta,
-  };
-};
 
 // Free Microsoft Edge "Read Aloud" voices, no API key required.
 // Other good Vietnamese options: "vi-VN-HoaiMyNeural" (female).
@@ -119,33 +49,7 @@ const LONG_FORM_VOICES = {
 
 const publicDir = path.join(import.meta.dirname, "..", "public", "audio");
 
-const VIDEOS = {
-  "gia-cat-luong": { audioDir: publicDir, narration: giaCatLuongNarration },
-  churchill: {
-    audioDir: path.join(publicDir, "churchill"),
-    narration: churchillNarration,
-  },
-  hippocrates: {
-    audioDir: path.join(publicDir, "hippocrates"),
-    narration: hippocratesNarration,
-  },
-  ideverray: {
-    audioDir: path.join(publicDir, "ideverray"),
-    narration: ideverrayNarration,
-  },
-  ammuu: {
-    audioDir: path.join(publicDir, "ammuu"),
-    narration: ammuuNarration,
-  },
-};
-
-for (const episode of SUCKHOE_EPISODES) {
-  VIDEOS[`suckhoe-${episode.slug}`] = {
-    audioDir: path.join(publicDir, "suckhoe", episode.slug),
-    narration: buildSucKhoeNarration(episode),
-    voice: episode.locale === "en" ? VOICE_EN : VOICE_VI,
-  };
-}
+const VIDEOS = {};
 
 // Long-form (~20 min) episodes — each beat of dialogue is its own audio
 // file (beat-<index>.mp3), voiced according to which recurring character
@@ -192,122 +96,15 @@ for (const episode of LONG_FORM_EPISODES) {
   };
 }
 
-// "Nha Ba Tu" animated-film series (src/animated-film/) — a much larger
-// cast than the long-form dialogue pairs above, but Edge TTS only has one
-// realistic Vietnamese voice per gender, so every character is
-// differentiated by prosody (rate/pitch/volume) on top of just 2 base
-// voices, same technique as LONG_FORM_VOICES.
-const ANIMATED_FILM_VOICES = {
-  narrator: { voice: VOICE_VI, prosody: { rate: "+0%", pitch: "+0%", volume: "+10%" } },
-  ba_tu: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "-6%", pitch: "-4%", volume: "+12%" } },
-  mai: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+10%", pitch: "+8%", volume: "+14%" } },
-  huy: { voice: VOICE_VI, prosody: { rate: "+2%", pitch: "-2%", volume: "+12%" } },
-  co_sau: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+6%", pitch: "+2%", volume: "+16%" } },
-  chu_bay: { voice: VOICE_VI, prosody: { rate: "-10%", pitch: "-8%", volume: "+12%" } },
-  be_tom: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+18%", pitch: "+18%", volume: "+14%" } },
-  bac_si_long: { voice: VOICE_VI, prosody: { rate: "-2%", pitch: "+0%", volume: "+10%" } },
-  y_ta_hoa: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+4%", pitch: "-2%", volume: "+12%" } },
-  chi_ngoc: { voice: "vi-VN-HoaiMyNeural", prosody: { rate: "+8%", pitch: "+4%", volume: "+12%" } },
-};
-
-const animatedFilmDir = path.join(
-  import.meta.dirname,
-  "..",
-  "src",
-  "animated-film",
-  "episodes"
-);
-let ANIMATED_FILM_EPISODES = [];
-try {
-  const animatedFilmFiles = (await readdir(animatedFilmDir)).filter((f) =>
-    f.endsWith(".json")
-  );
-  ANIMATED_FILM_EPISODES = await Promise.all(
-    animatedFilmFiles.map(async (file) => {
-      const url = pathToFileURL(path.join(animatedFilmDir, file));
-      const mod = await import(url, { with: { type: "json" } });
-      return { slug: file.replace(/\.json$/, ""), ...mod.default };
-    })
-  );
-} catch {
-  // Directory doesn't exist yet if no episode script has been written.
-}
-
-for (const episode of ANIMATED_FILM_EPISODES) {
-  const narration = {};
-  episode.beats.forEach((beat, i) => {
-    const { voice, prosody } =
-      ANIMATED_FILM_VOICES[beat.speaker] ?? ANIMATED_FILM_VOICES.narrator;
-    narration[`beat-${i}`] = { text: beat.text, voice, prosody };
-  });
-  VIDEOS[`animated-film-${episode.slug}`] = {
-    audioDir: path.join(publicDir, "animated-film", episode.slug),
-    narration,
-  };
-}
-
-// English Arena marketing ads (src/english-arena/episodes/) — hook +
-// part-N per beat + cta, all Vietnamese. Female voice (HoaiMy) reads
-// warmer for the parent audience than the default NamMinh ad voice.
-const eaDir = path.join(
-  import.meta.dirname,
-  "..",
-  "src",
-  "english-arena",
-  "episodes"
-);
-let EA_EPISODES = [];
-try {
-  const eaFiles = (await readdir(eaDir)).filter((f) => f.endsWith(".json"));
-  EA_EPISODES = await Promise.all(
-    eaFiles.map(async (file) => {
-      const url = pathToFileURL(path.join(eaDir, file));
-      const mod = await import(url, { with: { type: "json" } });
-      return mod.default;
-    })
-  );
-} catch {
-  // Directory doesn't exist yet before the first ad is written.
-}
-const VOICE_EA = process.env.EDGE_TTS_VOICE_EA ?? "vi-VN-HoaiMyNeural";
-for (const episode of EA_EPISODES) {
-  const narration = { hook: episode.hook };
-  (episode.parts ?? []).forEach((part, i) => {
-    narration[`part-${i}`] = part.text;
-  });
-  narration.cta = episode.cta;
-  VIDEOS[`ea-${episode.slug}`] = {
-    audioDir: path.join(publicDir, "english-arena", episode.slug),
-    narration,
-    voice: VOICE_EA,
-  };
-}
-
-// Pass one or more video ids as CLI args to generate only those. The bare
-// id "suckhoe" expands to every "suckhoe-<slug>" Short episode (NOT the
-// long-form ones — those are ~20 minutes each and far too expensive to
-// bundle into the "render everything for review" path unnoticed), so CI
-// doesn't need updating when a new episode is added. "suckhoe-long"
-// expands to every long-form episode. With no args, generates every video
-// (used for local dev — this DOES include long-form, since that's an
-// explicit, deliberate local run).
+// Pass one or more video ids as CLI args to generate only those.
+// "suckhoe-long" expands to every long-form episode; with no args,
+// generates everything (deliberate local run).
 const requested = process.argv.slice(2);
 const ids =
   requested.length > 0
     ? requested.flatMap((id) => {
-        if (id === "suckhoe") {
-          return Object.keys(VIDEOS).filter(
-            (key) => key.startsWith("suckhoe-") && !key.startsWith("suckhoe-long-")
-          );
-        }
         if (id === "suckhoe-long") {
           return Object.keys(VIDEOS).filter((key) => key.startsWith("suckhoe-long-"));
-        }
-        if (id === "animated-film") {
-          return Object.keys(VIDEOS).filter((key) => key.startsWith("animated-film-"));
-        }
-        if (id === "ea" || id === "english-arena") {
-          return Object.keys(VIDEOS).filter((key) => key.startsWith("ea-"));
         }
         return [id];
       })

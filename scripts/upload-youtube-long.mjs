@@ -30,7 +30,7 @@ if (!slug) {
 
 // Reads the JSON directly rather than importing the .ts index — plain
 // Node ESM can't import .ts files without a transpiler, same reason every
-// other script here reads src/suckhoe/episodes/*.json off disk instead.
+// other script here reads src/suckhoe/long-form/*.json off disk instead.
 const longFormDir = path.join(import.meta.dirname, "..", "src", "suckhoe", "long-form");
 const longFormFile = path.join(longFormDir, `${slug}.json`);
 let episode;

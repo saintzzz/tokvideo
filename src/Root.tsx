@@ -1,30 +1,12 @@
 import "./index.css";
-import { MyComposition } from "./Composition";
-import { ChurchillComposition } from "./ChurchillComposition";
-import { HippocratesComposition } from "./HippocratesComposition";
-import { IdeverrayComposition } from "./IdeverrayComposition";
-import { AmMuuComposition } from "./AmMuuComposition";
-import { SucKhoeCompositions } from "./SucKhoeComposition";
 import { SucKhoeLongCompositions } from "./SucKhoeLongComposition";
-import { EnglishArenaCompositions } from "./EnglishArenaComposition";
-import { AvatarCompositions } from "./AvatarComposition";
-import { BannerCompositions } from "./BannerComposition";
-import { CartoonShortCompositions } from "./cartoon/CartoonShortComposition";
 
+// Truyen Ma Dai Ky long-form pipeline is the only live channel —
+// all other channel compositions were removed 2026-11-28.
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      <MyComposition />
-      <ChurchillComposition />
-      <HippocratesComposition />
-      <IdeverrayComposition />
-      <AmMuuComposition />
-      <SucKhoeCompositions />
       <SucKhoeLongCompositions />
-      <EnglishArenaCompositions />
-      <AvatarCompositions />
-      <BannerCompositions />
-      <CartoonShortCompositions />
     </>
   );
 };

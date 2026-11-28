@@ -267,88 +267,6 @@ const freshLedger = existsSync(ledgerPath)
 Object.assign(ledger, freshLedger);
 for (const k of deletedKeys) delete ledger[k];
 
-// -- Check 3b: Facebook reels -------------------------------------------
-// Same published vi episodes get an FB-optimized reel (zoom + burned-in
-// title, captions link-free) + a first comment carrying the YT link.
-// Ledger key `<slug>-fb`. Without FB creds the reel is still built so the
-// posting sheet can ship it as an artifact.
-const FB_ENABLED = !!process.env.ENABLE_FB; // YouTube-only mode (2026-11-03):
-// FB page token kept dying on session invalidation — owner dropped all
-// non-YouTube platforms. Set ENABLE_FB=1 to restore reels/comments.
-const fbCandidates = !FB_ENABLED ? [] : Object.entries(ledger)
-  .filter(([k, v]) => !isTeaserKey(k) && !isFbKey(k) && v?.videoId)
-  .filter(([slug]) => !ledger[`${slug}-fb`]?.videoId)
-  .map(([slug]) => slug)
-  .sort();
-const MAX_FB = parseInt(process.env.DOCTOR_MAX_FB_REELS || "3", 10);
-// Golden slots for VN horror-story audience (UTC+7): lunch + late evening.
-const VN_OFFSET_MS = 7 * 3600e3;
-const FB_SLOT_HHMM = [[12, 30], [19, 30], [22, 30]];
-const nextFbSlotTs = (i) => {
-  const [h, m] = FB_SLOT_HHMM[i % FB_SLOT_HHMM.length];
-  const vn = new Date(Date.now() + VN_OFFSET_MS);
-  let d = Date.UTC(vn.getUTCFullYear(), vn.getUTCMonth(), vn.getUTCDate(), h, m) - VN_OFFSET_MS;
-  if (d <= Date.now() + 600e3) d += 86400e3; // slot passed -> tomorrow
-  return Math.floor(d / 1000);
-};
-let fbDone = 0;
-for (const slug of fbCandidates) {
-  if (fbDone >= MAX_FB) {
-    findings.push(`FB reel backlog: ${fbCandidates.length - fbDone} episodes still lack an FB reel.`);
-    break;
-  }
-  const epPath = path.join(longFormDir, `${slug}.json`);
-  if (!existsSync(epPath)) continue;
-  const ep = JSON.parse(await readFile(epPath, "utf8"));
-  if (ep.locale !== "vi" || !ep.beats?.every((b) => b.speaker === "narrator")) continue;
-  try {
-    execFileSync("node", ["scripts/build-fb-reel.mjs", slug], { cwd: root, stdio: "inherit" });
-    const postOut = execFileSync("node", ["scripts/post-fb-reel.mjs", slug], {
-      cwd: root,
-      encoding: "utf8",
-      env: { ...process.env, FB_SCHEDULE_TS: String(nextFbSlotTs(fbDone)) },
-    });
-    if (postOut.includes("ledger updated")) {
-      fbDone++;
-      fixed.push(`Built + posted FB reel for "${slug}".`);
-    } else {
-      findings.push(`FB reel "${slug}" built but post skipped (${postOut.trim().split("\n").pop()}).`);
-      break; // no creds — the rest would skip the same way
-    }
-  } catch (err) {
-    failed.push(`FB reel for "${slug}" failed: ${String(err.message ?? err).slice(0, 200)}`);
-  }
-}
-// Re-read ledger after FB posts.
-const freshLedger2 = existsSync(ledgerPath)
-  ? JSON.parse(await readFile(ledgerPath, "utf8"))
-  : ledger;
-Object.assign(ledger, freshLedger2);
-for (const k of deletedKeys) delete ledger[k];
-
-// Retry first-comments on scheduled FB reels that have since gone live.
-const FB_API = `https://graph.facebook.com/${process.env.FB_API_VERSION || "v21.0"}`;
-if (FB_ENABLED && process.env.FB_PAGE_ACCESS_TOKEN) {
-  for (const [k, v] of Object.entries(ledger)) {
-    if (!k.endsWith("-fb") || !v?.ytCommentPending || !v?.videoId) continue;
-    if (v.scheduledFor && Date.parse(v.scheduledFor) > Date.now()) continue;
-    const ytId = ledger[k.slice(0, -3)]?.videoId;
-    if (!ytId) continue;
-    try {
-      const u = new URL(`${FB_API}/${v.videoId}/comments`);
-      u.searchParams.set("message", `Nghe trọn tập trên YouTube: https://youtu.be/${ytId}`);
-      u.searchParams.set("access_token", process.env.FB_PAGE_ACCESS_TOKEN);
-      const res = await fetch(u, { method: "POST" });
-      const json = await res.json().catch(() => ({}));
-      if (res.ok && !json.error) {
-        delete v.ytCommentPending;
-        ledgerDirty = true;
-        fixed.push(`FB first-comment posted on ${k} (${v.videoId}).`);
-      }
-    } catch { /* next run retries */ }
-  }
-}
-
 // -- Check 4: queue depth ----------------------------------------------
 const files = (await readdir(longFormDir)).filter((f) => f.endsWith(".json")).sort();
 let readyCount = 0;
@@ -376,15 +294,13 @@ if (readyCount < 5) {
 lines.push("");
 
 // -- Posting sheet -------------------------------------------------------
-// For every published episode that now has a teaser file under
-// out/teaser-<slug>.mp4 (built this run or before), emit one row the
-// operator can paste straight into TikTok/FB Reels: caption + the
-// long-form URL it should point at. CI uploads out/teaser-*.mp4 as an
-// artifact, so the pack is self-contained.
+// For every published episode with a teaser file under out/teaser-<slug>.mp4
+// (built this run or before), emit one row: caption + the long-form URL it
+// should point at. CI uploads out/teaser-*.mp4 as an artifact.
 const sheet = [];
 sheet.push(`# Teaser posting sheet — ${new Date().toISOString().slice(0, 10)}`);
 sheet.push("");
-sheet.push("Post each clip to TikTok + FB Reels, then reply/pin the long-form link.");
+sheet.push("Post each clip to YouTube Shorts, then reply/pin the long-form link.");
 sheet.push("");
 for (const [slug, entry] of Object.entries(ledger).sort()) {
   if (isTeaserKey(slug) || isFbKey(slug) || !entry?.videoId) continue;
@@ -393,14 +309,12 @@ for (const [slug, entry] of Object.entries(ledger).sort()) {
   const ep = JSON.parse(await readFile(epPath, "utf8"));
   if (ep.locale !== "vi" || !ep.beats?.every((b) => b.speaker === "narrator")) continue;
   const ytTeaser = path.join(root, "out", `teaser-${slug}.mp4`);
-  const fbReel = path.join(root, "out", `fb-reel-${slug}.mp4`);
-  if (!existsSync(ytTeaser) && !existsSync(fbReel)) continue;
+  if (!existsSync(ytTeaser)) continue;
   sheet.push(`## ${slug}`);
-  if (existsSync(ytTeaser)) sheet.push(`- youtube/tiktok clip: out/teaser-${slug}.mp4`);
-  if (existsSync(fbReel)) sheet.push(`- facebook clip: out/fb-reel-${slug}.mp4`);
+  sheet.push(`- clip: out/teaser-${slug}.mp4`);
   sheet.push(`- caption: ${ep.thumbTitle ?? ep.title}`);
   sheet.push(`- first comment / link: https://youtube.com/watch?v=${entry.videoId}`);
-  sheet.push(`- tags: #truyenma #kechuyendem #truyencotich #reels #xuhuong`);
+  sheet.push(`- tags: #truyenma #kechuyendem #truyencotich #shorts #xuhuong`);
   sheet.push("");
 }
 await mkdir(path.join(root, "out"), { recursive: true });

@@ -26,7 +26,7 @@ Allowed targets (only these, and only when data justifies):
 
 ## Hard constraints — violating any of these is a failure
 
-- NEVER re-enable or call the retired paths: `publish-next-suckhoe`, `publish-next-suckhoe-en`, `release-shelved-suckhoe`, `check-and-catchup-publish.mjs`, or anything under `src/suckhoe/episodes/` publishing. They stay `if: false` / no-op.
+- The short-form pipeline (`src/suckhoe/episodes/`) was deleted 2026-11-28 — long-form (`src/suckhoe/long-form/`) is the only content path. Never resurrect short-form code.
 - Only `suckhoe-long`, `suckhoe-long-next`, `pipeline-watchdog`, `pipeline-doctor`, `channel-review`, `channel-report` may touch YouTube.
 - NEVER touch secrets, `.env*`, tokens, or print credential values.
 - Vietnamese copy: hyphen `-` only, never em/en dashes.
