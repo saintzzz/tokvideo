@@ -1,0 +1,133 @@
+{
+  "id": "ong-tho-duc-tap-05",
+  "arc": "ong-tho-duc",
+  "arcTitle": "ÔNG THỢ ĐÚC",
+  "episode": 5,
+  "slug": "ong-tho-duc-tap-05",
+  "title": "Hàm Răng Người Chết Gõ Trước Miếu - Kẻ Giết Người Quỳ Xuống",
+  "description": "Trước sân miếu, hài cốt chị Lành cùng chiếc tráp và cuốn sổ buộc kẻ giết người phải mở miệng. Ông Phúc trả lại món lợi từng mua sự im lặng của mình, nhưng chỉ khi người chết được trả lại tên sạch, pho tượng mới chịu nhìn về phía sáng. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ong-tho-duc"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "A woman's exhumed skull with a deep occipital dent resting on white burial cloth",
+    "A terrified elderly temple keeper kneeling beside an open bronze donation chest",
+    "A bronze deity's backward-facing head with a matching dent in its nape"
+  ],
+  "thumbTitle": "HÀI CỐT ĐÒI TÊN",
+  "scenePrompts": {
+    "skull_on_altar": "Photorealistic cinematic close-up inside a rural Vietnamese communal shrine, an exhumed woman's skull resting respectfully on white burial cloth upon a low wooden table, lower jaw slightly displaced, small bronze bracelet beside the bones, trembling oil lamp illumination, villagers blurred behind, restrained supernatural horror, no gore, no text, no watermark, 16:9.",
+    "temple_door": "Photorealistic cinematic scene at the doorway of a rural Vietnamese village shrine before dawn, elderly Vietnamese male temple keeper Binh in a dark brown traditional tunic gripping a wooden doorpost, terrified expression, villagers blocking the entrance, a headless female shadow stretched across the threshold, warm oil lamps and deep shadows, no gore, no text, no watermark, 16:9.",
+    "village_witnesses": "Photorealistic cinematic wide shot of a traditional northern Vietnamese village shrine courtyard at night, elderly female storyteller in a plain brown blouse among solemn villagers, elderly bronze caster Phuc with soot-stained hands standing beside his adult daughter Hanh, low ceremonial table, incense smoke, bamboo baskets and oil lamps, historically grounded rural atmosphere, no text, no watermark, 16:9.",
+    "chest_and_ledger": "Photorealistic cinematic detail of an old bronze donation chest opened on a wooden shrine table, aged coins, a weathered handwritten accounting ledger with indistinct illegible entries, clay oil lamp, elderly Vietnamese hands carefully turning brittle pages, dramatic realistic textures, ominous shadows, no readable text, no watermark, 16:9.",
+    "turning_statue": "Photorealistic cinematic medium shot of a solid bronze Vietnamese guardian deity statue inside a village shrine, its torso facing forward while its head turns impossibly toward an elderly temple keeper, a deep dent visible in the bronze nape, villagers recoiling in the background, flickering oil lamp light, no gore, no text, no watermark, 16:9.",
+    "binh_confession": "Photorealistic cinematic scene of an elderly Vietnamese temple keeper kneeling on worn red brick tiles before a low table bearing respectfully wrapped human remains, his hands shaking and face wet with tears, silent villagers watching, bronze deity looming behind him, oppressive oil lamp lighting, no gore, no text, no watermark, 16:9.",
+    "land_restitution": "Photorealistic cinematic intimate scene in a modest rural Vietnamese house, elderly bronze caster Phuc offering folded land documents to a middle-aged Vietnamese man with weathered hands, adult daughter Hanh and an elderly female witness seated nearby, simple tea bowls and boiled sweet potatoes on a wooden table, remorseful solemn atmosphere, no readable text, no watermark, 16:9.",
+    "forge_sale": "Photorealistic cinematic scene inside an old Vietnamese bronze foundry, elderly craftsman Phuc handing a heavy iron workshop key to a buyer, cold furnace behind him, worn casting tools arranged on a workbench, his adult daughter holding a folded white mourning cloth, muted natural light, quiet emotional realism, no text, no watermark, 16:9.",
+    "reburial": "Photorealistic cinematic rural Vietnamese reburial ceremony at a village cemetery, small ceramic ossuary beside a newly prepared grave, middle-aged son wearing a white mourning headband, elderly bronze caster bowing deeply with incense, adult daughter and elderly female storyteller standing nearby, dignified ancestral customs, no exposed body, no text, no watermark, 16:9.",
+    "grave_and_dawn": "Photorealistic cinematic predawn scene at a newly finished rural Vietnamese grave, clean stone marker with softly blurred illegible engraved Vietnamese characters, incense and a bowl of plain rice with a boiled egg, an elderly woman watching a peaceful female silhouette dissolve beyond the grave, first warm light touching the stone, restrained supernatural atmosphere, no readable text, no watermark, 16:9."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "skull_on_altar",
+      "caption": "Hàm răng gõ trước bàn thờ",
+      "text": "Hàm răng chị Lành gõ lạch cạch ngay trên chiếc mâm trước mặt tôi. Tấm vải liệm tự tuột, phơi vết lõm đen sau hộp sọ. Ông Bính vừa bước tới, chiếc vòng đồng liền dựng đứng cạnh bát nhang. Từ bụng tượng, tiếng gà nghẹn lại như bị bàn tay bóp cổ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple_door",
+      "caption": "Ai đang giữ chân ông Bính?",
+      "text": "Ai giữ chân Bính khi cả sân miếu chẳng người nào chạm tới? Tôi thấy gót ông ta nhấc mãi chẳng qua nổi ngạch cửa gỗ. Cái bóng đàn bà không đầu nằm chắn ngang hai bàn chân trần. Hạnh bỗng hỏi nhỏ: \"Ông còn định bảo má tôi trốn nữa sao?\""
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village_witnesses",
+      "caption": "Ba mươi năm phải nói đêm nay",
+      "text": "Tôi đặt đèn xuống cạnh mâm xương giữa đám người làng Đông Khê. Ông Phúc kéo Hạnh về sau, tự bước tới trước mặt ông Bính. Ông trải cuốn sổ lấy dưới bia mộ giả lên chiếu cúng. Rồi ông nói rõ: \"Ba mươi năm trước, chính tôi thấy ông giấu xác.\""
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chest_and_ledger",
+      "caption": "Cuốn sổ không chịu cháy",
+      "text": "Bính chối, bảo cha con ông Phúc đào mộ để vu oan cho mình, còn chiếc tráp thì ai đem chôn chẳng được. Tôi giữ ngọn đèn cho cụ từ cũ đọc từng khoản thu trong sổ, đối với những tờ biên nhận dân làng còn cất. Tiền góp mua đồng, tiền sửa mái miếu đều đủ dấu nhận của Bính, nhưng những khoản chi mua gỗ lại mang tên người đã chết trước ngày dựng miếu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village_witnesses",
+      "caption": "Người con bị cướp cả tiếng má",
+      "text": "Giữa lúc ấy, một người đàn ông áo vá bước khỏi đám đông, nhìn chiếc vòng rồi quỳ sụp xuống trước mâm xương. Tôi nhận ra Tín, đứa bé ngày xưa bị chúng bạn gọi là con đàn bà ăn trộm, sau phải theo cậu sang làng khác sống. Anh chỉ vào đường hàn lệch trên vòng, nói hồi nhỏ mình đánh rơi làm nó nứt, chính ông Phúc đã hàn lại cho má."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "turning_statue",
+      "caption": "Vết lõm quay về phía kẻ sống",
+      "text": "Bính bất thần hất đổ đèn, nhào tới giật cuốn sổ, nhưng ông Phúc ôm chặt lấy nó trước ngực. Sau lưng tôi, đồng nghiến lên ken két, đầu tượng quay từng chút theo bước chân ông ta. Khi gáy tượng hướng ra cửa, ai cũng thấy một vết lõm bằng đầu ngón tay cái, đúng hình vết thương trên sọ chị Lành đang nằm dưới ánh đèn còn lại."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "binh_confession",
+      "caption": "Tiếng gà vang dưới đầu gối",
+      "text": "Tiếng gà bỗng gáy ngay dưới nền gạch chỗ Bính đứng, mỗi hồi lại gần hơn, như có thứ đang đội đất bò lên. Ông ta quỵ xuống, hai tay che gáy, miệng lắp bắp xin chị đừng gõ nữa. Tôi nghe trong mâm xương ba tiếng cộc thật khô, rồi Bính bật khóc: \"Tôi đánh có một cái, tôi tưởng chị ấy chỉ ngất thôi.\""
+    },
+    {
+      "speaker": "narrator",
+      "scene": "binh_confession",
+      "caption": "Chị Lành chưa từng bỏ trốn",
+      "text": "Bính khai đêm ấy chị Lành phát hiện tiền công đức bị rút, giấu tráp cùng sổ vào hốc sau miếu để sáng trình các cụ. Ông ta đuổi theo, dùng chiếc chày đồng chặn cửa đánh vào gáy chị, rồi kéo xác về chôn dưới nền lò nguội. Sau đó, Bính lấy lại tráp, chôn dưới ngôi mộ dựng giả cho chị bên ngoại làng, rồi tung chuyện chị cuỗm tiền bỏ trốn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "village_witnesses",
+      "caption": "Ông Phúc cũng phải nhận tội",
+      "text": "Ông Phúc quỳ xuống cạnh mâm xương, thú nhận mình đã thấy Bính kéo xác vào lò nhưng vẫn nhận ruộng để ngậm miệng. Tôi nhìn đôi bàn tay đúc được bao nhiêu tượng thờ của ông cứ run trên đầu gối, chẳng dám chạm chiếc vòng mình làm. Ông xin các cụ ghi cả lời mình vào bản khai, nói rõ chị Lành chịu oan cũng bởi ba mươi năm ông hèn nhát."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chest_and_ledger",
+      "caption": "Lời thú nhận được ghi thành giấy",
+      "text": "Tôi ngồi giữ đèn tới khi cụ lý ghi xong lời khai, đọc lại từng việc cho dân làng cùng nghe rồi lấy dấu tay hai người. Chiếc tráp và cuốn sổ được gói riêng, giao người canh giữ để sáng giải Bính lên quan huyện. Tín ôm mâm xương của má, không đánh cũng chẳng chửi, chỉ hỏi Bính có nhớ suốt những năm ấy mình đã thắp nhang cầu điều gì không."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "land_restitution",
+      "caption": "Trả thửa ruộng mua sự im lặng",
+      "text": "Sau buổi trình quan, ông Phúc mời tôi sang làm chứng việc giao lại thửa ruộng bãi cho Tín, kèm giấy nhượng và phần thóc vừa gặt. Tín không đưa tay nhận ngay, hỏi sao một mạng người lại đổi được bằng mấy sào đất. Ông Phúc cúi đầu đáp ruộng vốn được mua bằng tiền miếu Bính lấy cắp, ông phải trả, còn tội với má anh thì chẳng tờ giấy nào xóa nổi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forge_sale",
+      "caption": "Bán lò để đưa chị về đất sạch",
+      "text": "Ông Phúc bán cả lò đúc cho một người họ hàng bên huyện, lấy tiền mua tiểu sành, đất cải táng và trả công khắc bia. Hôm giao chìa khóa, tôi đem sang rổ khoai luộc, thấy ông đứng rất lâu trước cái lò đã nuôi cả nhà mà cũng giữ kín một người chết. Hạnh gói chiếc áo thợ cho cha, còn ông để lại bộ khuôn, chỉ mang theo bàn tay đã thôi giấu chuyện."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "reburial",
+      "caption": "Làng đưa người bị oan trở về",
+      "text": "Ngày đưa chị Lành về nghĩa địa làng, những nhà từng mắng chị ăn trộm đều cử người đi theo, chẳng ai dám nói chuyện lớn tiếng. Tôi bày bát cơm, quả trứng và đĩa muối theo lệ quê mình, còn Tín chít khăn tang đứng đầu huyệt mới. Ông Phúc đọc lời nhận tội trước bà con một lần nữa, đến câu đã để con chị chịu nhục thì giọng vỡ hẳn."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave_and_dawn",
+      "caption": "Khắc lại tên người lương thiện",
+      "text": "Việc cải táng xong từ chiều, riêng tấm bia được thợ ngồi sửa lại đến gần sáng vì gia đình xin ghi đủ lời minh oan. Tôi cầm đèn cho Tín nhìn từng nét tên má hiện dưới mũi đục, bên dưới ghi chị bị sát hại khi giữ tiền công đức cho miếu. Anh lấy khăn lau bụi đá, gọi một tiếng má thật nhỏ, như sợ người nằm dưới còn chưa tin là mình được về."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "turning_statue",
+      "caption": "Tượng nhìn về đúng tiếng gà sáng",
+      "text": "Hạnh từ miếu chạy sang báo đúng lúc nét cuối trên bia vừa khắc xong, con gà đầu xóm đã cất tiếng gáy sáng. Giữa hồi gáy ấy, đầu tượng chậm rãi quay về chính diện, tiếng đồng khép lại nghe nhẹ như ai đặt xuống một món đồ nặng. Tôi cùng mọi người trở về nhìn tận mắt, thấy gáy tượng vẫn còn vết lõm, nhưng dưới chân không nổi thêm dấu nước nào."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "grave_and_dawn",
+      "caption": "Người chết đã được gọi đúng tên",
+      "text": "Sáng ấy, tôi trở ra mộ thắp thêm nén nhang, thoáng thấy một người đàn bà đeo vòng đồng đứng bên Tín rồi tan trong khói. Hạnh ngủ yên từ đó, không còn gọi cha bằng giọng người đã khuất, còn ông Phúc sống nhờ sửa cuốc rèn dao, đến kỳ vẫn sang giẫy cỏ mộ chị. Trên bia, tên chị Lành nằm ngay ngắn dưới nắng, và lần đầu sau ba mươi năm, người làng đọc lên mà không kèm một lời nhơ nhuốc."
+    }
+  ]
+}

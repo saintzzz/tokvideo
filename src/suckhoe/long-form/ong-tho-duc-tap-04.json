@@ -1,0 +1,134 @@
+{
+  "id": "ong-tho-duc-tap-04",
+  "arc": "ong-tho-duc",
+  "arcTitle": "ÔNG THỢ ĐÚC",
+  "episode": 4,
+  "slug": "ong-tho-duc-tap-04",
+  "title": "Chiếc Tráp Dưới Bia Mộ - Đầu Tượng Quay Theo Kẻ Đốt Lò",
+  "description": "Hạnh theo bóng người đàn bà đến ngôi mộ giả, tìm thấy chiếc tráp tiền công đức cùng cuốn sổ bị chôn kín dưới bia. Khi Bính tìm cách thiêu rụi lò đúc, đầu tượng bất ngờ quay theo từng bước chân ông ta, phơi ra dấu vết của một cái chết oan. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ong-tho-duc"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "Solid bronze deity head turned backward, a deep blunt indentation in its nape",
+    "Mud-covered wooden donation chest beneath a tilted gravestone, blackened silver coins inside",
+    "A woman's wet shadow pointing one unnaturally long finger at a buried ledger"
+  ],
+  "thumbTitle": "GÁY TƯỢNG LÕM XUỐNG",
+  "scenePrompts": {
+    "shadow_at_door": "Photorealistic cinematic Vietnamese folk horror, rural northern Vietnam in the early twentieth century, a young Vietnamese woman named Hanh in a faded brown blouse stands barefoot and motionless at a bronze foundry doorway, an unnaturally elongated female shadow stretches from her heels across the threshold, elderly Vietnamese woman Ba Tu holding an oil lamp, damp footprints in white ash, low amber light, restrained supernatural dread, no text, no modern objects, 16:9.",
+    "hand_in_floor": "Photorealistic cinematic Vietnamese folk horror, close low angle of barefoot young Vietnamese woman Hanh on old brick flooring, a flat black hand-shaped shadow wraps around her ankle without breaking the bricks, elderly Ba Tu grips the hem of her brown blouse, oil lamp illumination, realistic skin and brick textures, ominous darkness, no text, no modern objects, 16:9.",
+    "false_grave": "Photorealistic cinematic Vietnamese folk horror, an old low earthen grave beyond a village communal house, weathered stone marker tilted forward, young Vietnamese woman Hanh with closed eyes points at the stone base, elderly bronze caster Phuc with gray hair and elderly Ba Tu with an oil lamp approach, a female shadow lies across the grave against the direction of the lamplight, no readable writing, no modern objects, 16:9.",
+    "chest_under_stone": "Photorealistic cinematic close-up, an elderly Vietnamese craftsman's muddy hands uncover a small iron-bound wooden chest directly beneath a displaced grave marker, compact clay, rotten protective cloth and corroded latch, oil lamp light reveals a carved lotus on the chest lid, realistic rural Vietnamese period setting, no text, no modern objects, 16:9.",
+    "ledger_evidence": "Photorealistic cinematic overhead close-up inside an old Vietnamese bronze foundry, blackened silver coins and a cloth-wrapped accounting ledger removed from a muddy wooden donation chest, a young woman's hands carefully separate aged handwritten pages, elderly craftsman's trembling hand beside a chipped tea bowl, warm oil lamp light, handwriting indistinct, no modern objects, 16:9.",
+    "binh_watching": "Photorealistic cinematic Vietnamese folk horror, elderly temple keeper Binh with a narrow face wearing a dark traditional tunic, half concealed behind a bamboo gate, watching a foundry doorway, one hand grips an earthenware oil jug, tense expression, a shallow wooden bowl of sweet potato porridge visible inside the doorway, realistic period rural Vietnam, no text, 16:9.",
+    "foundry_fire": "Photorealistic cinematic Vietnamese folk horror, inside a traditional bronze foundry, temple keeper Binh stands beyond a wooden door secured from outside, orange flames spread across dry fuel near the threshold, elderly caster Phuc shields his daughter Hanh, elderly Ba Tu clutches a cloth-wrapped ledger and a wooden chest, life-sized bronze deity statue beside a cold brick furnace, smoke and practical firelight, no text, 16:9.",
+    "underground_crowing": "Photorealistic cinematic Vietnamese folk horror, low angle across a cold foundry floor, fine gray ash trembles outward in concentric rings around a bronze deity statue pedestal, nearby flames bend and flicker, young Vietnamese woman Hanh listens with her palm near the ground, elderly Ba Tu holding evidence behind her, oppressive supernatural atmosphere, no visible rooster, no text, 16:9.",
+    "turning_bronze_head": "Photorealistic cinematic Vietnamese folk horror, life-sized solid bronze deity statue with fixed torso and head unnaturally rotated toward a frightened temple keeper crossing the foundry yard, bronze neck under torsion, firelight reflecting on cold patinated metal, realistic traditional Vietnamese foundry, elderly caster visible near a side opening, no text, no modern objects, 16:9.",
+    "nape_and_skull": "Photorealistic cinematic Vietnamese folk horror, rear close-up of a bronze deity head exposing a deep blunt indentation in its nape, elderly Vietnamese caster holds an opened white burial cloth containing an aged human skull with a matching healed-looking dark fracture depression at the back, non-graphic dry skeletal remains, trembling lamplight and distant fire glow, no text, 16:9.",
+    "temple_bell_before_dawn": "Photorealistic cinematic Vietnamese folk horror, elderly Vietnamese woman Ba Tu pulling the alarm rope of a village temple bell before dawn, elderly caster Phuc and young Hanh arrive carrying a white cloth bundle and an iron-bound wooden chest, worried villagers approach with oil lamps, foundry smoke in the far background, tense unresolved confrontation, no readable writing, no modern objects, 16:9."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "shadow_at_door",
+      "caption": "Cái bóng kéo Hạnh ra khỏi cửa",
+      "text": "Cái bóng đàn bà đen kéo dài từ gót Hạnh tới tận bậc cửa. Tôi chụp cây đèn chập chờn, thấy hai chân con nhỏ vẫn đứng nguyên. Ngoài sân, bàn chân ướt in ngược trên lớp tro trắng lạnh ngắt. Hạnh nhắm nghiền mắt, bước theo tiếng móng tay cào lạo xạo dưới đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "hand_in_floor",
+      "caption": "Đừng để hắn chôn tôi nữa",
+      "text": "Ai đang gọi Hạnh ra chỗ chôn người giữa canh ba thế này? Tôi níu chặt vạt áo nâu, con nhỏ bỗng chỉ xuống chân mình. Một bàn tay đen nhẫy đang nắm cổ chân nó qua nền gạch. Giọng đàn bà khàn đặc bật khỏi miệng Hạnh: \"Đừng để hắn chôn tôi nữa\"."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "false_grave",
+      "caption": "Bia mộ tự bật nghiêng",
+      "text": "Tôi đánh thức ông Phúc bằng tiếng gọi nghẹn sát bên tai run rẩy. Ông ôm bọc xương chị Lành, lật đật chạy theo đứa con gái. Qua đình làng Đông hoang vắng, bóng đàn bà dừng trước ngôi mộ thấp. Tấm bia rêu ghi tên chị Lành bật nghiêng ngay dưới ngọn đèn dầu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "false_grave",
+      "caption": "Ngôi mộ chẳng có ngày giỗ",
+      "text": "Tôi nhận ra ngôi mộ Bính cho đắp sau khi rêu rao chị Lành trốn làng, chết dọc đường tha phương. Hồi đó, chính tôi từng đặt lên đây bát chè kho ngày thanh minh, còn nhà miếu chẳng cúng chị một ngày giỗ nào. Hạnh quỳ xuống, cào đúng chân bia rồi nói bằng giọng chị: \"Hắn để của ở đây, còn thân tôi nằm dưới tro\"."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "chest_under_stone",
+      "caption": "Chiếc tráp nằm dưới chân bia",
+      "text": "Ông Phúc lấy thanh sắt mang theo bẩy lớp đất sát chân bia, tôi đứng che đèn cho ông nhìn. Chưa xuống hết một gang tay, mũi sắt chạm vật cứng đánh cộc, lộ chiếc tráp gỗ bọc vải mục. Ông vừa gạt bùn khỏi nắp đã khựng lại: bông sen khắc lệch một cánh là dấu chiếc tráp tiền miếu ông từng sửa bản lề."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ledger_evidence",
+      "caption": "Tiền công đức chưa từng mất",
+      "text": "Về tới lò, tôi trải chiếc chiếu cói rồi cùng Hạnh mở tráp, để bọc hài cốt ngay cạnh ngọn đèn. Bên trong còn những đồng bạc đen, túi tiền buộc lạt và cuốn sổ bọc nhiều lớp vải đã ngấm mùi đất. Hạnh biết chữ, giở từng trang thật nhẹ; dưới tên người góp tiền dựng miếu là những khoản Bính ghi nhận đủ."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ledger_evidence",
+      "caption": "Một thửa ruộng trong cuốn sổ",
+      "text": "Tới những trang cuối, Hạnh đọc ra các khoản rút riêng, có cả tiền mua thửa ruộng giao cho ông Phúc. Tôi thấy ông co bàn tay đầy sẹo vào lòng, mắt cứ dán xuống dòng chữ có tên mình. Ông bảo nét móc ở cuối chữ Phúc đúng là tay Bính, rồi xin con gái đọc tiếp, đừng vì thương cha mà bỏ sót một hàng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "binh_watching",
+      "caption": "Có người đứng ngoài cổng",
+      "text": "Tôi bưng bát cháo khoai mang sang từ chập tối, giục Hạnh ăn lấy hai thìa cho tỉnh người. Con nhỏ vừa đón bát thì ngoài cổng tre có tiếng gót guốc miết trên đất, rồi một mùi dầu hỏa lùa vào. Qua khe liếp, tôi thấy Bính nhìn chiếc tráp trên chiếu; khi chạm mắt tôi, ông ta lùi ngay vào chỗ tối."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "foundry_fire",
+      "caption": "Bính cài cửa rồi châm lửa",
+      "text": "Ông Phúc vừa bước tới cửa thì thanh ngang bên ngoài sập xuống, liền sau đó lửa bén đỏ đống củi sát vách. Bính đứng ngoài gọi rằng tượng đã nhập tà, phải đốt sạch cả lò mới cứu được làng, nhưng tay vẫn ghì chặt then cửa. Tôi nghe ông ta quát Hạnh đưa cuốn sổ qua khe, bằng không cha con sẽ nằm lại với đống đồng ấy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "foundry_fire",
+      "caption": "Khói tràn kín chỗ giấu xương",
+      "text": "Tôi cuộn sổ vào vạt áo, đẩy tráp sát bọc hài cốt, còn ông Phúc dùng búa đập vách gỗ phía sau. Lửa chưa đủ nung chảy tượng đồng, nhưng đã liếm tới xà tre và hun khói đặc chỗ chúng tôi đang cúi tránh. Hạnh bỗng buông tay áo cha, áp bàn tay xuống nền rồi bảo tôi nghe, dưới chân mình có con gà đang gáy."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "underground_crowing",
+      "caption": "Tiếng gà nổi từ dưới đất",
+      "text": "Tiếng gáy đội qua lớp gạch nghe nghèn nghẹn, đúng cái giọng con trống đã bị vặn cổ ngoài sân. Tôi thấy tro quanh chân tượng rung thành từng vòng, còn Bính ở ngoài lập tức nín bặt. Mỗi hồi gáy dứt, trong cổ tượng lại bật một tiếng khục nặng như ai xoay cối đá, khiến ông ta bỏ then cửa, chạy giật lùi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "turning_bronze_head",
+      "caption": "Đầu tượng đếm từng bước chạy",
+      "text": "Qua lỗ vách ông Phúc vừa phá, tôi nhìn thấy Bính chạy vòng sang sân bên, định chặn đường chúng tôi thoát. Ông ta bước tới đâu, đầu tượng quay theo tới đó, trong khi hai vai đồng vẫn đứng nguyên trên bệ. Bính đổi hướng hai lần, cái đầu cũng giật hai lần, mắt tượng cứ giữ đúng mặt ông ta giữa những vệt lửa."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nape_and_skull",
+      "caption": "Sau gáy tượng có vết lõm",
+      "text": "Khi Bính chạy ngang giếng, đầu tượng ngoặt hẳn, phơi gáy ra trước ngọn đèn tôi đang cầm. Trên mặt đồng vừa mới nhẵn chiều qua hiện một chỗ lõm sâu, mép vết hằn nghiêng như bị vật nặng bổ xuống. Ông Phúc nhìn nó rồi run tay mở bọc xương, kê phần sọ chị Lành lên tấm vải cho tôi soi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "nape_and_skull",
+      "caption": "Hai dấu lõm trùng một chỗ",
+      "text": "Tôi đưa đèn sát hơn, thấy sau sọ chị cũng khuyết một miếng đúng bên ấy, cùng một đường méo ở mép trên. Ông Phúc thều thào rằng bàn tay ông đúc cái gáy liền lặn, chưa từng để lại vết này. Bính nhìn qua ô cửa cháy, bỗng ôm gáy mình mà ngồi thụp xuống, miệng mấp máy gọi tên chị Lành rồi lại cắn chặt môi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "foundry_fire",
+      "caption": "Mang cả món nợ ra khỏi lò",
+      "text": "Ông Phúc kéo bung thêm tấm vách đã mục, đưa Hạnh ra trước rồi chuyền tráp và bọc xương cho tôi. Mấy nhà gần lò nghe tiếng hô cháy chạy tới gánh nước, vừa dập lửa vừa gọi Bính mà ông ta cứ lẩn sau thành giếng. Tôi giục ông Phúc mang sổ ra miếu ngay; ông cúi nhặt cả trang ghi thửa ruộng, ép nó vào cuốn sổ trước khi đi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple_bell_before_dawn",
+      "caption": "Chuông miếu gọi người sống dậy",
+      "text": "Tôi kéo chuông miếu lúc trời còn tối, từng nhà xách đèn tới, hỏi ai chết mà đánh dồn như vậy. Ông Phúc đặt bọc xương cùng chiếc tráp xuống thềm, còn Hạnh mở sẵn cuốn sổ chờ Bính bị người làng dẫn sang. Giữa tiếng xôn xao, con nhỏ nắm cổ tay tôi, nói bằng giọng chị Lành: \"Gọi cả con trai tôi đến, đừng để nó nghe chuyện mẹ sau cùng\"."
+    }
+  ]
+}

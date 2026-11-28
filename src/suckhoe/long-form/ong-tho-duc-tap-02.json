@@ -1,0 +1,133 @@
+{
+  "id": "ong-tho-duc-tap-02",
+  "arc": "ong-tho-duc",
+  "arcTitle": "ÔNG THỢ ĐÚC",
+  "episode": 2,
+  "slug": "ong-tho-duc-tap-02",
+  "title": "Con Gà Bới Trúng Hài Cốt - Chiếc Vòng Trong Đống Tro",
+  "description": "Mỗi lần đầu tượng quay, một dấu chân ướt lại hiện trên nền lò, dẫn tới chỗ con gà trống bới mãi không thôi. Dưới lớp tro ông Phúc đổ ba mươi năm trước, chiếc vòng đồng trên bộ hài cốt đàn bà khơi lại chuyện một người mang tiếng trộm tiền dựng miếu rồi bỏ trốn. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ong-tho-duc"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "An ancient green-patinated bronze bracelet encircling a buried skeletal wrist",
+    "A wet female footprint seeping black water through a bone-dry clay floor",
+    "A living rooster clawing ash away from an exposed human finger bone"
+  ],
+  "thumbTitle": "VÒNG ĐỒNG ÔM XƯƠNG",
+  "scenePrompts": {
+    "wet-footprint": "Photorealistic cinematic Vietnamese folk horror, extreme close-up of a single barefoot adult woman's footprint mysteriously depressing into a bone-dry pale clay foundry floor, black water beading around individual toe impressions, charcoal dust untouched nearby, warm oil lamp reflection, deep shadows, rural Vietnam before electricity, vertical composition, no text, no watermark.",
+    "turning-statue": "Photorealistic cinematic Vietnamese folk horror inside an old bronze foundry, a solid bronze male guardian deity statue seated on a low wooden pedestal, torso facing the doorway while its head turns unnaturally backward toward an ash-covered corner, an elderly Vietnamese artisan in a faded brown tunic frozen beside it, low oil lamp lighting, realistic aged bronze, vertical composition, no text, no watermark.",
+    "rooster-ash": "Photorealistic cinematic Vietnamese folk horror, a living dark red rooster fiercely scratching a compacted patch of old charcoal ash beside a cold brick furnace, pale claws scraped raw, an elderly Vietnamese woman's hand holding an oil lamp in the foreground, ash scattered across dry earth, tense close framing, rural Vietnam before electricity, vertical composition, no text, no watermark.",
+    "untouched-meal": "Photorealistic cinematic rural Vietnamese interior before electricity, an elderly Vietnamese bronze caster with a gaunt face and gray hair sitting beside an untouched bowl of rice porridge and a small dish of salted eggplant, his adult daughter wearing a faded indigo blouse standing near the shuttered foundry doorway, an older Vietnamese woman with a charcoal-gray headscarf watching, restrained dread, oil lamp lighting, vertical composition, no text, no watermark.",
+    "footprint-trail": "Photorealistic cinematic Vietnamese folk horror, three wet female footprints crossing a completely dry clay foundry floor toward an ash-filled corner, the third footprint much deeper and filled with black water, a rough wooden measuring stick beside them, an adult Vietnamese woman in an indigo blouse crouching at a safe distance, cold brick furnace behind her, vertical composition, no text, no watermark.",
+    "binh-doorway": "Photorealistic cinematic Vietnamese village foundry before electricity, a middle-aged male shrine caretaker in a dark traditional tunic standing rigidly in the doorway, one hand gripping a wooden doorframe, his eyes fixed on scattered ash and a scratching rooster, an elderly artisan partly visible in the foreground, harsh daylight outside and dim interior shadows, grounded psychological horror, vertical composition, no text, no watermark.",
+    "digging-floor": "Photorealistic cinematic Vietnamese folk horror, an elderly Vietnamese artisan in a faded brown tunic and his adult daughter in an indigo blouse carefully opening the clay floor beside a cold brick furnace, dark compacted ash beneath broken clay, an older woman in a charcoal-gray headscarf holding an oil lamp, realistic hand tools and tense expressions, rural Vietnam before electricity, vertical composition, no text, no watermark.",
+    "buried-bones": "Photorealistic cinematic archaeological discovery in an old rural Vietnamese bronze foundry, partially unearthed adult human skeletal remains curled on one side beneath a layer of charcoal ash, fragile remnants of dark brown fabric, one skeletal wrist still enclosed by a green-patinated bronze bracelet, respectful non-graphic depiction, narrow oil lamp beam, vertical composition, no text, no watermark.",
+    "bracelet-memory": "Photorealistic cinematic macro shot of an old handmade bronze bracelet still surrounding a delicate skeletal wrist in dark ash, a small rice-grain-shaped casting flaw and three finely engraved bamboo leaves visible on the bracelet, an elderly Vietnamese artisan's trembling fingers stopping just short of touching it, shallow depth of field, warm oil lamp light, respectful non-graphic depiction, vertical composition, no text, no watermark.",
+    "covered-remains": "Photorealistic cinematic Vietnamese folk horror inside an old bronze foundry at night, a clean woven mat respectfully covering an excavated grave beside a cold brick furnace, a small bowl of rice and three incense sticks nearby, an adult Vietnamese daughter in an indigo blouse kneeling with an oil lamp, a living dark red rooster standing silently at the doorway, bronze guardian statue looming behind her, vertical composition, no text, no watermark."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "wet-footprint",
+      "caption": "Dấu chân trồi giữa nền lò",
+      "text": "Dấu chân đàn bà vừa trồi lên giữa nền lò khô trắng. Tôi nhìn từng ngón chân lõm xuống, nước đen trào quanh mép. Trên bệ, đầu tượng đồng chậm chạp vặn ngược về phía đống tro. Con gà trống cào bật lớp đất cứng ngay dưới mũi chân tượng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rooster-ash",
+      "caption": "Dưới chỗ ấy có người sao?",
+      "text": "Ai vừa bước qua trước mặt tôi mà chẳng để lộ thân người? Hạnh kéo cha lùi lại, mắt vẫn dán vào vũng nước đen ngòm. Dưới chân con gà, tiếng gõ cộc cộc vọng lên từng nhịp một. Ông Phúc bịt miệng con gái trước khi nó kịp gọi thành lời."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "untouched-meal",
+      "caption": "Bát cháo nguội bên cửa lò",
+      "text": "Bát cháo tôi mang từ xóm Đông đã đóng váng từ chập tối. Nhà tôi cách lò ông Phúc một hàng rào dâm bụt thưa thớt. Hạnh chạy sang gọi tôi khi cha nó nhất quyết khóa cửa lò. Con nhỏ dúi chìa khóa lạnh ngắt vào giữa lòng bàn tay tôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "turning-statue",
+      "caption": "Mỗi đêm lại quay thêm một lần",
+      "text": "Tôi vừa mở cửa thì chứng kiến cái đầu đồng quay thêm lần nữa, sau đêm ông Phúc phạm lời cấm khai nhãn. Ông lấy than đánh một vạch trên bệ, ngay dưới hướng mặt tượng đang nhìn, rồi ngồi canh tới sáng. Suốt buổi ấy, con gà chẳng chịu ăn hột thóc nào, chỉ đứng chờ cạnh chỗ tro bị bới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "footprint-trail",
+      "caption": "Dấu chân thứ hai tiến gần",
+      "text": "Đêm kế, tôi ngồi cùng Hạnh vá lại chiếc bao đựng than thì nghe đồng nghiến ken két. Mặt tượng rời khỏi vạch cũ, còn dấu chân thứ hai từ từ sẫm lên trên nền đất, cách dấu đầu đúng một bước. Hạnh đặt cây thước mộc bên cạnh, sáng ra chỗ ấy vẫn ướt dù cả lò nóng hầm hập."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "rooster-ash",
+      "caption": "Con gà chỉ bới một chỗ",
+      "text": "Hạnh bưng thúng úp con gà lại, sợ nó cào hỏng hết nền lò của cha. Tôi nghe móng nó quệt trên nan tre suốt buổi, tới khi thả ra, nó chạy thẳng về chỗ cũ, bỏ cả đĩa cơm nguội trộn cám. Lần này nó bới được một mảnh vải nâu mục, kéo lên chừng gang tay thì mắc cứng dưới đất."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "untouched-meal",
+      "caption": "Chỗ tro của ba mươi năm trước",
+      "text": "Ông Phúc giật mảnh vải khỏi mỏ gà, bàn tay đen nhẻm bỗng run tới mức không nắm lại được. Tôi hỏi dưới đó chôn thứ gì, ông chỉ bảo chỗ ấy từng là hố vét lò, chính ông đổ tro xuống rồi lấp kín ba mươi năm trước. Hạnh hỏi sao cha còn nhớ rõ, ông cúi xuống nhặt từng hột cơm rơi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "binh-doorway",
+      "caption": "Ông quản miếu đứng ngoài cửa",
+      "text": "Gần trưa, ông Bính quản miếu sang giục chuyển tượng, đôi guốc dừng ngay ngoài ngạch cửa. Thấy con gà bới tro, ông hỏi ai cho đào nền, dù lúc ấy chưa có lấy một nhát cuốc nào. Tôi đứng sát bên nên thấy rõ ông Phúc giấu mảnh vải vào lưng quần, còn Hạnh nhìn từ tay cha sang mặt ông Bính."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "footprint-trail",
+      "caption": "Dấu chân dừng ngay hố tro",
+      "text": "Tối đó, dấu chân thứ ba hiện ra sát chỗ mảnh vải bị kéo lên, sâu hơn hai dấu trước. Tôi soi đèn xuống, thấy nước rịn qua lớp tro thành từng bọt nhỏ, nghe lép bép như có người thở trong bùn. Hạnh quỳ cạnh cha, nói nếu dưới ấy có người thì phải đưa lên, đừng để con gà đào trúng mặt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging-floor",
+      "caption": "Nhát cuốc đầu tiên xuống nền",
+      "text": "Tôi mang qua ba nén nhang với bát gạo, đặt ở góc khô rồi xin người nằm dưới cho động đất. Ông Phúc tự tay bổ nhát đầu, Hạnh hốt từng mảng nền vỡ vào rổ, còn tôi giữ ngọn đèn khỏi tắt. Lớp đất trên cứng như nung, vậy mà vừa chạm tầng tro đen, lưỡi cuốc đã lún xuống một quãng dài."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "digging-floor",
+      "caption": "Có thứ mắc dưới bàn tay Hạnh",
+      "text": "Đào sâu gần tới khuỷu tay, Hạnh bỗng rụt người, bảo có thứ níu đầu ngón tay nó. Tôi ghé đèn lại mới thấy sợi vải mục quấn quanh một đốt xương nhỏ, nằm lẫn giữa than vụn và đất sét. Ông Phúc buông cuốc, lấy miếng tre vót mỏng gạt đất từng chút, hơi thở phả xuống ngọn lửa rung bần bật."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "buried-bones",
+      "caption": "Người đàn bà dưới lớp tro",
+      "text": "Tới khi phần vai cùng khung xương chậu lộ ra, tôi phải bám vào thành lò mới đứng vững. Một bộ hài cốt nằm nghiêng, hai đầu gối co lại, chẳng có ván quan tài hay mảnh chiếu nào bên dưới. Chỗ cổ tay còn mắc một chiếc vòng đồng xanh rỉ, và ông Phúc cứ nhìn nó, quên cả phủi tro đang rơi xuống mắt."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bracelet-memory",
+      "caption": "Chiếc vòng ông Phúc từng đúc",
+      "text": "Ông xin tôi đưa đèn sát hơn rồi chỉ vào ba lá trúc khắc bên mép vòng, cạnh một vết đúc nổi bằng hột gạo. Tôi nhớ ông nói nhỏ lắm, rằng hồi ấy chị Lành nhất quyết giữ vết lỗi vì sợ sửa lại sẽ hao đồng. Chiếc vòng này chính tay ông đúc cho chị, từ trước ngày người làng kéo tới nhà đòi tiền."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "bracelet-memory",
+      "caption": "Chị Lành chưa từng đi khỏi làng",
+      "text": "Tôi biết chị Lành, người vẫn gánh bánh ít qua xóm Đông vào mỗi buổi chợ phiên. Ba mươi năm trước, làng mất khoản tiền góp dựng miếu, rồi đâu đâu cũng bảo chị lấy trộm, ôm tiền bỏ trốn giữa đêm. Tôi từng tin lời ấy, từng quay mặt khi con trai chị xin bát nước, giờ nhìn chiếc vòng mà cổ nghẹn cứng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "covered-remains",
+      "caption": "Đừng để chị nằm dưới tro nữa",
+      "text": "Hạnh trải tấm vải sạch cạnh hố, đỡ từng phần xương theo tay cha rồi nhờ tôi phủ chiếu lên. Tôi hỏi ông Phúc có chắc là chị Lành không, ông gật đầu, hai bàn tay vẫn giữ nguyên tư thế nâng chiếc vòng. Con nhỏ nghe vậy mới bật khóc, hỏi sao người ta bảo chị trốn mà lại tìm thấy chị ngay dưới nền lò nhà mình."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "turning-statue",
+      "caption": "Tiếng gà vọng từ bụng tượng",
+      "text": "Ông Phúc chưa trả lời thì dưới bụng tượng vang lên một tiếng gà gáy nghẹn, kéo dài như mắc trong đồng đặc. Tôi quay phắt ra cửa, con gà trống vẫn đứng đó, mỏ ngậm kín, hai chân lùi khỏi mép chiếu. Hạnh đang nấc bỗng im bặt, còn cha nó chắp tay trước bộ hài cốt, lẩm bẩm mãi một câu xin đừng gọi tên."
+    }
+  ]
+}

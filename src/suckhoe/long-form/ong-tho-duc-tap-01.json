@@ -1,0 +1,133 @@
+{
+  "id": "ong-tho-duc-tap-01",
+  "arc": "ong-tho-duc",
+  "arcTitle": "ÔNG THỢ ĐÚC",
+  "episode": 1,
+  "slug": "ong-tho-duc-tap-01",
+  "title": "Đầu Tượng Quay Ngược - Tiếng Đàn Bà Trong Đồng Đặc",
+  "description": "Ông Phúc phạm lời cấm khai nhãn tượng thần trước tiếng gà sáng, khiến cái đầu đồng đặc tự quay về phía lò nguội. Tôi tận mắt thấy thứ đang khiến con gà ngoài sân cất tiếng, còn dưới nền lò, một tiếng gọi bắt đầu vọng lên. #truyenma #kechuyen #truyendangian",
+  "tags": [
+    "truyện ma",
+    "truyện ma dân gian",
+    "kể chuyện",
+    "ong-tho-duc"
+  ],
+  "narrator": "vi-VN-NamMinhNeural",
+  "locale": "vi",
+  "thumbnailSubjects": [
+    "Solid bronze deity head twisted backward with freshly chiseled eyes",
+    "Headless female apparition pressing a hand onto a crowing red rooster",
+    "Sealed bronze lips leaking wet ash"
+  ],
+  "thumbTitle": "ĐÀO TÔI LÊN",
+  "scenePrompts": {
+    "turned_head": "Photorealistic cinematic Vietnamese folk horror, rural northern Vietnam in the late 1990s, a newly cast solid bronze village deity statue seated upright on a low wooden platform, its head impossibly rotated backward toward a cold charcoal furnace while its torso faces forward, fresh chisel marks around its eyes, elderly Vietnamese bronze caster Phuc recoiling with a dropped wooden mallet, oil lamp lighting, realistic bronze texture, oppressive shadows, no text, no watermark, widescreen.",
+    "sealed_mouth": "Photorealistic cinematic macro shot of the closed cast bronze lips of a Vietnamese village deity statue, a thin trace of damp gray ash emerging from the sealed mouth, freshly polished bronze cheeks, flickering amber oil lamp reflections, unnerving physical realism, rural bronze workshop background out of focus, no text, no watermark, widescreen.",
+    "evening_meal": "Photorealistic cinematic interior of a modest Vietnamese rural bronze caster household in the late 1990s, elderly Vietnamese woman narrator Ba Tu with gray hair in a low bun and a dark brown cotton blouse sharing sweet potato and rice porridge with elderly bronze caster Phuc and his adult daughter Hanh in an indigo blouse, ceramic bowls on a bamboo tray, bronze workshop visible beyond doorway, intimate oil lamp lighting, no text, no watermark, widescreen.",
+    "temple_commission": "Photorealistic cinematic Vietnamese village bronze workshop at dusk, elderly temple steward Binh in a dark buttoned tunic placing a red cloth bundle beside an unfinished bronze deity statue, elderly caster Phuc listening uneasily, adult daughter Hanh in an indigo blouse standing nearby, soot stained clay walls and traditional casting tools, subdued earthy palette, no text, no watermark, widescreen.",
+    "red_blindfold": "Photorealistic cinematic close view of an unfinished Vietnamese bronze deity statue with its eyes covered by a tightly knotted faded red cotton strip, a small offering plate with betel leaves and three incense sticks at its feet, traditional chisels arranged on coarse cloth, elderly caster's weathered hands hovering nearby, ominous amber lamplight, no text, no watermark, widescreen.",
+    "forbidden_chisel": "Photorealistic cinematic Vietnamese folk horror, elderly bronze caster Phuc leaning close to a seated bronze deity statue inside a traditional rural workshop at night, faded red eye covering removed and hanging from one wrist, narrow steel chisel touching the unfinished bronze eyelid, wooden mallet raised, adult daughter Hanh watching from behind, tense realistic anatomy, oil lamp chiaroscuro, no text, no watermark, widescreen.",
+    "cold_furnace": "Photorealistic cinematic low angle inside a traditional Vietnamese bronze workshop, old cold clay furnace with a soot black opening and an iron hatch trembling slightly, intact packed earth floor scattered with dry charcoal and rice husks, elderly woman Ba Tu holding an oil lamp close to the opening, darkness seemingly pressing outward, no visible fire, no text, no watermark, widescreen.",
+    "barred_door": "Photorealistic cinematic Vietnamese folk horror, adult Vietnamese woman Hanh in an indigo cotton blouse struggling with a thick wooden door bar inside a rural bronze workshop at night, elderly woman Ba Tu holding her wrist, a dark wet handprint appearing on the inner wooden door at shoulder height, bronze statue blurred behind them, realistic oil lamp lighting, no text, no watermark, widescreen.",
+    "headless_rooster": "Photorealistic cinematic Vietnamese folk horror in a small rural courtyard at night, a red rooster standing unnaturally rigid on a bamboo coop, a headless female apparition in a faded mud stained brown blouse standing immediately behind it, one pale hand pressing down on the rooster's back, empty darkness above the apparition's shoulders, no blood or exposed wounds, faint amber light spilling from a workshop doorway, no text, no watermark, widescreen.",
+    "ash_floor": "Photorealistic cinematic close low view of an intact packed earth floor directly before a cold Vietnamese bronze casting furnace, a shallow scatter of pale ash lifting into a narrow ridge as though something beneath the earth is pushing upward, elderly bronze caster's trembling bare feet at the edge of frame, dropped chisel and oil lamp glow, ominous realistic detail, no bones visible, no text, no watermark, widescreen."
+  },
+  "beats": [
+    {
+      "speaker": "narrator",
+      "scene": "turned_head",
+      "caption": "Đầu đồng quay ngược",
+      "text": "Mũi đục vừa chạm mắt tượng, cái đầu đồng bỗng quay ngược. Từ chiếc miệng còn kín, tiếng đàn bà bật lên: \"Đào tôi lên\". Tôi thấy ông Phúc đánh rơi búa, bàn tay run trên đống trấu. Sau lưng tượng, cửa lò nguội khẽ rung như có người đạp."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sealed_mouth",
+      "caption": "Ai đang nói trong đồng đặc?",
+      "text": "Tượng đúc đồng đặc, vậy tiếng người ấy chui ra từ đâu? Tôi bịt miệng Hạnh, nhưng tiếng gọi vẫn rịn qua môi tượng. Ngoài sân, con gà trống bỗng gáy, cổ kéo dài đến cứng đờ. Ông Phúc chụp cổ tay tôi, móng bấm sâu như cầu cứu."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "evening_meal",
+      "caption": "Bữa cháo trước giờ phạm cấm",
+      "text": "Chập tối ấy, tôi mang cháo khoai sang nhà Phúc, làng Đông Xá. Hạnh bẻ cho tôi miếng cà, còn cha nó chẳng chịu ăn. Ông cứ nhìn dải vải đỏ buộc ngang đôi mắt pho tượng. Bên mâm, ngọn đèn dầu cháy đứng, chẳng ai nghe tiếng gà."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple_commission",
+      "caption": "Tượng phải kịp ngày rước",
+      "text": "Pho tượng ấy do ông Bính quản miếu đặt đúc, hẹn sáng mai đưa sang làm lễ an vị. Tôi có mặt lúc ông ta tới giục, đặt gói trầu cau xuống rồi lấy ngón tay miết thử mặt đồng. Thấy đôi mắt còn nguyên lớp đồng thô, ông ta cau mặt, bảo cả làng đã sửa soạn cỗ bàn, đừng vì một nhát đục mà lỡ ngày rước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "red_blindfold",
+      "caption": "Chưa gà sáng, chưa được mở mắt",
+      "text": "Ông Phúc chỉ dải vải đỏ, nhắc lời thầy truyền nghề: tượng ngủ trong lò, phải đợi gà sáng mới được khai nhãn. Tôi còn nhớ ông nói rất nhỏ, như sợ chính pho tượng nghe thấy. Bính cười nhạt, đáp rằng đồng do tay người nấu thì cứ để tay người sửa, rồi quay đi trước khi Hạnh kịp mời bát nước."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "temple_commission",
+      "caption": "Đừng động tới nền lò cũ",
+      "text": "Ra đến cửa, Bính bỗng dừng lại khi thấy Hạnh cầm chổi quét tro trước miệng lò cũ. Ông ta bảo nền chỗ ấy yếu, chỉ được quét mặt, chớ lấy cuốc nện xuống kẻo sụt chân tượng. Tôi thấy Phúc cúi xuống nhặt mãi một sợi rơm chẳng có ở đâu, còn Hạnh đứng chờ cha giải thích mà ông cứ im."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "red_blindfold",
+      "caption": "Dải vải đỏ cứ thấm ướt",
+      "text": "Ăn xong, tôi phụ Hạnh rửa bát rồi quay vào xem tượng, định đợi cha con nó xong việc mới về. Dải vải che mắt đã sẫm một khoanh, ướt như vừa nhúng nước, dù mái bên trên khô ráo. Hạnh lấy khăn chấm thử, đưa lên cho tôi ngửi, mùi bùn ao lạnh tanh lẫn trong mùi đồng mới."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forbidden_chisel",
+      "caption": "Ông Phúc tháo vải che mắt",
+      "text": "Phúc nhìn chiếc đồng hồ quả quýt rồi bảo sửa mí mắt bây giờ, đến gà sáng mới làm lễ, chắc chẳng phạm gì. Tôi níu tay áo ông, nhắc rằng lời cấm có phân biệt sửa hay mở đâu. Nhưng ông đã tháo nút vải, để lộ đôi mắt chưa thành hình, rồi nhờ Hạnh giữ đèn sát hơn một chút."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "forbidden_chisel",
+      "caption": "Nhát đục không cần tới búa",
+      "text": "Ông chưa kịp hạ búa thì mũi đục tự trượt sâu, phát ra một tiếng cạch như chạm răng người. Tôi thấy dưới chân tượng rơi xuống một hạt đồng tròn, lăn ngược lên mép bệ rồi đứng lại. Phúc buông tay, nhưng cây đục vẫn mắc ngang mí mắt, chầm chậm xoay theo cái đầu đang quay về phía lò."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "turned_head",
+      "caption": "Cổ liền khối vẫn xoay được",
+      "text": "Bấy giờ mới xảy ra chuyện tôi kể lúc đầu, cái đầu quay gần nửa vòng trong khi hai vai đứng nguyên. Tôi từng thấy Phúc dỡ khuôn, biết cổ với thân liền một khối, chẳng hề có chốt nối. Vậy mà nơi cổ đồng nổi lên những nếp nhăn mềm, hệt da người già đang ngoái lại nhìn ai sau lưng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "sealed_mouth",
+      "caption": "Giọng đàn bà gọi từ phía lò",
+      "text": "Tiếng \"Đào tôi lên\" vừa dứt, một vệt tro ướt rịn ra giữa hai môi đồng vẫn mím chặt. Phúc quỳ thụp xuống, miệng lắp bắp rằng ông chỉ sửa mắt, chưa hề đọc lời khai nhãn. Tôi hỏi ông đang thưa với ai, ông liền lắc đầu, nhưng hai bàn tay đã chắp về phía cửa lò chứ không hướng lên tượng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "cold_furnace",
+      "caption": "Lò nguội có tiếng móng cào",
+      "text": "Tôi giằng lấy đèn, soi vào cái lò đã nguội từ chiều, chỉ thấy xỉ đồng đóng đen quanh miệng. Tiếng cào vang lên ba lượt, mỗi lượt kéo dài từ trong lò xuống tận dưới chân tôi. Hạnh hỏi có con chó nào mắc kẹt không, nhưng nhà nó chẳng nuôi chó từ ngày con vàng bỏ ăn rồi chết."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "barred_door",
+      "caption": "Dấu tay ướt trên cửa trong",
+      "text": "Hạnh lao ra cửa gọi hàng xóm, nhấc mãi không nổi thanh then mà ban chiều tôi còn tự tay gác được. Ngay cạnh má nó, một dấu bàn tay ướt từ từ in trên mặt gỗ phía trong. Tôi kéo nó lùi lại, thấy nước từ những đầu ngón chảy xuống, đen quánh như nước ngâm tro, dù chẳng có người đứng đó."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "headless_rooster",
+      "caption": "Tiếng gáy bị ép khỏi cổ gà",
+      "text": "Đúng lúc ấy, con gà ngoài sân lại gáy, nhưng mỗi hồi đều đứt ngang như bị ai bóp cổ. Tôi ghé mắt qua khe cửa, thấy nó đứng trên nắp bu, hai chân duỗi thẳng, cánh ép sát sườn. Trên lưng nó có một bàn tay đàn bà trắng bợt, cứ ấn xuống một lần là cổ gà lại bật lên một tiếng."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "headless_rooster",
+      "caption": "Cái bóng ngoài sân không có đầu",
+      "text": "Tôi nâng đèn lên khe cửa, lần theo cánh tay tới một người mặc áo nâu bạc, vạt áo dính đầy bùn. Từ hai vai trở lên chẳng có đầu, chỉ một khoảng tối khiến tôi nhìn rõ cả hàng rào phía sau. Bàn tay ấy vẫn vuốt lưng gà, còn bàn tay kia chầm chậm giơ lên, chỉ thẳng vào nền lò sau lưng chúng tôi."
+    },
+    {
+      "speaker": "narrator",
+      "scene": "ash_floor",
+      "caption": "Dưới nền lò có người chờ",
+      "text": "Tôi quay lại, thấy lớp tro trước lò đội lên một đường mảnh, như có móng tay đang rạch từ dưới đất. Phúc vội lấy chân gạt phẳng, nhưng vừa nhấc gót, đường ấy lại nổi lên đúng chỗ cũ. Ngoài sân, con gà gáy thêm một hồi dưới bàn tay cái bóng không đầu; dưới chân tôi, giọng đàn bà đáp lại: \"Đào tôi lên\"."
+    }
+  ]
+}
